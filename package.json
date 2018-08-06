@@ -1,0 +1,10 @@
+{
+  "name": "bytecode-website",
+  "version": "1.0.0",
+  "description": "Website for Bytecode Digital Agency B.V.",
+  "main": "server.js",
+  "repository": "https://github.com/BytecodeBV",
+  "author": "Luciano Nooijen <luciano@bytecode.nl>",
+  "license": "UNLICENCED",
+  "private": false
+}
