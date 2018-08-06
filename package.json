@@ -7,6 +7,11 @@
   "author": "Luciano Nooijen <luciano@bytecode.nl>",
   "license": "UNLICENCED",
   "private": false,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
     "next": "^6.1.1",
     "react": "^16.4.2",
