@@ -1,0 +1,28 @@
+language: node_js
+
+node_js:
+  - "stable"
+  - "node"
+  - "lts/*"
+  - "9"
+  - "8"
+
+notifications:
+  email:
+    receipients:
+      - info@bytecode.nl
+
+# before_install:
+
+install:
+  - yarn
+
+# before_script:
+
+script:
+  - yarn run build
+
+cache:
+  yarn: true
+  directories:
+    - node_modules

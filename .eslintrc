@@ -1,0 +1,24 @@
+{
+    "extends": "airbnb",
+    "env": {
+        "es6": true
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+        "jquery",
+        "react",
+        "prettier"
+    ],
+    "rules": {
+        "strict": 1,
+        "eol-last": 1,
+        "no-else-return": 1,
+        "max-len": [1, 80, 2],
+        "prefer-arrow-callback": 1,
+        "prefer-template": 2,
+        "prettier/prettier": "error",
+        "indent": [1, 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
+        "no-loop-func": 0,
+        "no-nested-ternary": 1
+    }
+}
