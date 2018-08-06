@@ -8,9 +8,10 @@
   "license": "UNLICENCED",
   "private": false,
   "scripts": {
+    "start": "next start",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "export": "next build && next export"
   },
   "dependencies": {
     "next": "^6.1.1",
