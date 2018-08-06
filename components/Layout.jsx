@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import Navbar from './Navbar';
 
-const Layout = props => (
+const Layout = ({children, title='Bytecode Digital Agency B.V.'}) => (
     <div>
         <Head>
-            <title></title>
+            <title>{title}</title>
         </Head>
         <Navbar/>
-        <div className="main">
-            {props.children}
-        </div>
+        <main className="main">
+            {children}
+        </main>
     </div>
 );
 
