@@ -1,5 +1,1 @@
-export default () => (
-    <div>
-        <h1>Hello World</h1>
-    </div>
-);
+module.exports = require('./home');
