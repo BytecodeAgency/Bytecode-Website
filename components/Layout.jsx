@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Layout = ({children, title='Bytecode Digital Agency B.V.', description, keywords}) => (
     <div>
@@ -12,6 +13,7 @@ const Layout = ({children, title='Bytecode Digital Agency B.V.', description, ke
         <main className="main">
             {children}
         </main>
+        <Footer/>
     </div>
 );
 export default Layout;
