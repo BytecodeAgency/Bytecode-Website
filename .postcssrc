@@ -1,9 +1,0 @@
-{
-  "plugins": {
-    "autoprefixer": {
-      "grid": true,
-      "browsers": [">1%", "last 5 versions", "Firefox ESR", "not ie < 9"],
-      "flexbox": "no-2009"
-    }
-  }
-}
