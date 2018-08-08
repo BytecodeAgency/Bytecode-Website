@@ -17,7 +17,6 @@
         "prefer-template": 2,
         "prettier/prettier": ["error", { "singleQuote": true }],
         "indent": [1, 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
-        "jsx-quotes": ["error", "prefer-single"],
         "react/jsx-indent": [1, 4],
         "react/jsx-indent-props": [1, 4],
         "react/react-in-jsx-scope": "off",
