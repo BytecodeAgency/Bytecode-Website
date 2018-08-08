@@ -9,6 +9,7 @@
         "prettier"
     ],
     "rules": {
+        "arrow-parens": ["error", "as-needed"],
         "strict": 1,
         "eol-last": 1,
         "no-else-return": 1,
@@ -21,8 +22,9 @@
         "react/jsx-indent-props": [1, 4],
         "react/react-in-jsx-scope": "off",
         "react/jsx-one-expression-per-line": "off",
+        "react/prop-types": 0,
         "no-loop-func": 0,
         "no-nested-ternary": 1,
-        "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }]
+        "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
     }
 }

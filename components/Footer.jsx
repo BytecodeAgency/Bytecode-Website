@@ -1,6 +1,7 @@
 const Footer = () => (
     <footer>
-        &copy; {new Date().getFullYear()} Bytecode Digital Agency B.V. - All Rights Reserved
+        &copy; {new Date().getFullYear()}
+        Bytecode Digital Agency B.V. - All Rights Reserved
     </footer>
 );
 

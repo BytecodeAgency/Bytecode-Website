@@ -1,7 +1,13 @@
 import Layout from '../components/Layout';
 
+const pageSettings = {
+    title: 'Cases',
+    description: 'Hier de omschrijving',
+    keywords: 'tag1,tag2',
+};
+
 const Contact = () => (
-    <Layout title='Contact' description='Hier de omschrijving' keywords='tag1,tag2'>
+    <Layout pageSettings={pageSettings}>
         <div>
             <h1>Hello Contact</h1>
         </div>
