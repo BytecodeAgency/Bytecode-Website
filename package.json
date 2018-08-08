@@ -5,7 +5,7 @@
   "main": "server.js",
   "repository": "https://github.com/BytecodeBV",
   "author": "Luciano Nooijen <luciano@bytecode.nl>",
-  "license": "UNLICENCED",
+  "license": "LicenseRef-LICENSE",
   "private": false,
   "scripts": {
     "start": "next start",
