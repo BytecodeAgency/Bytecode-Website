@@ -12,6 +12,7 @@ build/
 dist/
 docs/
 .next/
+.out/
 .cache/
 .env
 
