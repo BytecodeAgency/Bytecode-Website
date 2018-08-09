@@ -29,11 +29,12 @@ const extrabold = 900;
 // Bytecode theme
 const bytecode = {
     colors: {
+        primary: green,
+        secondary: darkgray,
+        tertiary: red,
         black,
-        darkgray,
-        green,
+        mediumgray,
         lightgray,
-        red,
         white,
     },
     typography: {
