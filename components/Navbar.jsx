@@ -5,7 +5,7 @@ import Link from 'next/link';
 const NavbarItem = ({ href, text }) => (
     <li>
         <Link href={href}>
-            <a>{text}</a>
+            <a className="menuitem">{text}</a>
         </Link>
     </li>
 );

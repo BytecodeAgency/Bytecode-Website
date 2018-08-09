@@ -18,7 +18,7 @@ const menu = 'Space Mono';
 const regular = 400;
 const bold = 700;
 const medium = bold;
-const extraBold = 900;
+const extrabold = 900;
 
 /**
  * Used font combinations:
@@ -42,7 +42,7 @@ const bytecode = {
             height: '1.05em',
             spacing: '0.02em',
             font: heading,
-            weight: extraBold,
+            weight: extrabold,
             color: white,
         },
         h2: {
@@ -85,6 +85,14 @@ const bytecode = {
             weight: regular,
             color: lightgray,
         },
+        text: {
+            size: '1.8rem',
+            height: '1.2em',
+            spacing: '0.16em',
+            font: paragraph,
+            weight: regular,
+            color: lightgray,
+        },
         subtitle: {
             size: '1.6rem',
             height: '1.2em',
@@ -101,7 +109,7 @@ const bytecode = {
             weight: bold,
             color: red,
         },
-        menu: {
+        menuitem: {
             size: '1.6rem',
             height: '1.2em',
             spacing: '0.17em',
