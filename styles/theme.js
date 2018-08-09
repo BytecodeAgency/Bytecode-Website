@@ -5,7 +5,7 @@ const black = '#0f0f0f';
 const darkgray = '#1a1a1a';
 const green = '#6ca57b';
 const lightgray = '#c1c1c1';
-const mediumgray = '#656565';
+const mediumgray = '#303030';
 const red = '#df5252';
 const white = '#ffffff';
 
@@ -29,8 +29,9 @@ const extrabold = 900;
 // Bytecode theme
 const bytecode = {
     colors: {
+        background: darkgray,
         primary: green,
-        secondary: darkgray,
+        secondary: mediumgray,
         tertiary: red,
         black,
         mediumgray,
