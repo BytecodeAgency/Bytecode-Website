@@ -1,5 +1,7 @@
 # Bytecode Website
 
+[![Build Status](https://travis-ci.com/BytecodeBV/Bytecode-Website.svg?token=ujgzXA5sTBHvAWKnQtZQ&branch=master)](https://travis-ci.com/BytecodeBV/Bytecode-Website)
+
 Website for Bytecode Digital Agency B.V. built with NextJS (server-side rendered React) and Styled Components.
 
 ## Dependencies
