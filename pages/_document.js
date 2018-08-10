@@ -10,7 +10,7 @@ export default class SiteDocument extends Document {
         const main = sheet.collectStyles(<Main />);
         const styleTags = sheet.getStyleElement();
         return (
-            <html>
+            <html lang="nl">
                 <Head>
                     <meta charSet="UTF-8" />
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,6 +18,7 @@ export default class SiteDocument extends Document {
                     <meta name="robots" content="index, follow"/>
                     <meta name="revisit-after" content="1 day"/>
                     <meta name="googlebot" content="noodp"/>
+                    <meta name="theme-color" content="#6ca57b"/>
                     <link rel="shortcut icon" href="/static/icons/favicon.png" />
                     <link rel="apple-touch-icon" href="/static/icons/favicon.png" />
                     <link rel="manifest" href="/static/manifest.json" />
