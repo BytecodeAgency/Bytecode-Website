@@ -5,8 +5,20 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import theme from '../styles/theme';
 
+const NavbarContainer = styled.nav`
+    @media (max-width: ${theme.breakpointMobileMenu}) {
+        height: 7rem;
+        background: ${theme.colors.black};
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+`;
+
 /* eslint-disable */
-const NavbarContent = styled.nav`
+const NavbarContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,9 +28,10 @@ const NavbarContent = styled.nav`
         width: 30rem;
         height: 100vh;
         position: fixed;
-        right: ${props => props.menuIsOpen ? 0 : '-30rem'};
+        right: ${props => (props.menuIsOpen ? 0 : '-30rem')};
         top: 0;
         bottom: 0;
+        padding-top: 6rem;
         transition: all 0.4s ease;
         background: ${theme.colors.secondary};
     }
@@ -89,6 +102,32 @@ const Logo = styled.img`
     }
 `;
 
+const MobileNavLogo = styled.img`
+    height: 4.5rem;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    color: white;
+    display: none;
+    @media (max-width: ${theme.breakpointMobileMenu}) {
+        display: block;
+    }
+`;
+
+const MenuButton = styled.a`
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: white;
+    align-items: center;
+    display: none;
+    @media (max-width: ${theme.breakpointMobileMenu}) {
+        display: flex;
+    }
+`;
+
 class Navbar extends React.Component {
     constructor() {
         super();
@@ -110,16 +149,26 @@ class Navbar extends React.Component {
     render() {
         const { menuIsOpen } = this.state;
         return (
-            <div>
-                <a href="#" onClick={this.openMenu} style={{ color: 'white' }}>
-                    Open menu
-                </a>
+            <NavbarContainer>
+                <MobileNavLogo src="/static/img/logo-min.svg" />
+                <MenuButton href="#" onClick={this.openMenu}>
+                    <img
+                        src="/static/img/close-menu.svg"
+                        alt="Close menu"
+                        width="100%"
+                    />
+                </MenuButton>
                 <NavbarContent menuIsOpen={menuIsOpen}>
                     <Logo src="/static/img/logo-min.svg" alt="Bytecode logo" />
+                    {/* // TODO: Link Logo to homepage */}
                     <NavbarItems>
-                        <a href="#" onClick={this.closeMenu} style={{ color: 'white' }}>
-                            Close menu
-                        </a>
+                        <MenuButton href="#" onClick={this.closeMenu}>
+                            <img
+                                src="/static/img/close-menu.svg"
+                                alt="Close menu"
+                                width="100%"
+                            />
+                        </MenuButton>
                         <NavbarItem href="/" text="Home" />
                         <NavbarItem href="/services" text="Services" />
                         <NavbarItem href="/over" text="Over" />
@@ -127,9 +176,9 @@ class Navbar extends React.Component {
                         <NavbarItem href="/contact" text="Contact" />
                     </NavbarItems>
                 </NavbarContent>
-            </div>
+            </NavbarContainer>
         );
-    };
-};
+    }
+}
 
 export default Navbar;
