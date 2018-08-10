@@ -18,22 +18,33 @@ const Paragraph = styled.p`
     /* Custom styling here */
 `;
 
-const getButton = (href, button) => {
+const getButton = (href, button, useNextLink) => {
     if (href && button) {
-        return <Button href={href}>{button}</Button>;
+        return (
+            <Button href={href} useNextLink={useNextLink}>
+                {button}
+            </Button>
+        );
     }
     return '';
 };
 
 const TextBlock = props => {
-    // eslint-disable-next-line object-curly-newline
-    const { subtitle, title, href = null, button = null, children } = props;
+    const {
+        subtitle,
+        title,
+        href = null,
+        button = null,
+        useNextLink,
+        children,
+    } = props;
+
     return (
         <div>
             <Subtitle>{subtitle}</Subtitle>
             <Title>{title}</Title>
             <Paragraph>{children}</Paragraph>
-            {getButton(href, button)}
+            {getButton(href, button, useNextLink)}
         </div>
     );
 };
@@ -43,6 +54,7 @@ TextBlock.propTypes = {
     title: PropTypes.string.isRequired,
     href: PropTypes.string,
     button: PropTypes.string,
+    useNextLink: PropTypes.bool,
 };
 
 export default TextBlock;
