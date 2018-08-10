@@ -20,6 +20,7 @@ export default class SiteDocument extends Document {
                     <meta name="googlebot" content="noodp"/>
                     <link rel="shortcut icon" href="/static/icons/favicon.png" />
                     <link rel="apple-touch-icon" href="/static/icons/favicon.png" />
+                    <link rel="manifest" href="/static/manifest.json" />
                     {styleTags}
                 </Head>
                 <body>
