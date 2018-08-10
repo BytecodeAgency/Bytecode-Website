@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import styled from 'styled-components';
+import theme from '../styles/theme';
 
 const NavbarContent = styled.nav`
     display: flex;
@@ -16,6 +17,25 @@ const NavbarItems = styled.ul`
 
 const Anchor = styled.a`
     text-transform: none;
+    position: relative;
+    transition: all 0.2s ease;
+    &::after {
+        content: '';
+        position: absolute;
+        border-bottom: solid 0.2rem ${theme.colors.primary};
+        bottom: -0.5rem;
+        left: 50%;
+        right: 50%;
+        transition: all 0.2s ease;
+    }
+    &:hover {
+        cursor: pointer;
+        color: ${theme.colors.primary};
+        &::after {
+            left: 0;
+            right: 0;
+        }
+    }
 `;
 
 const NavbarItemBase = ({ className, ...props }) => {
