@@ -25,6 +25,12 @@ const Button = styled(ButtonBase)`
     border-style: solid;
     border-width: 0.1rem;
     border-radius: 10rem;
+    transition: all 0.2s ease;
+    &:hover {
+        color: ${theme.colors.white};
+        background: ${theme.colors.primary};
+        border-color: ${theme.colors.primary};
+    }
 `;
 
 export default Button;
