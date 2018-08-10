@@ -16,12 +16,11 @@ notifications:
 
 install:
   - yarn
-  - yarn run export
 
 # before_script:
 
 script:
-  - yarn run start
+  - yarn run export
 
 cache:
   yarn: true
