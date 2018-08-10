@@ -11,6 +11,8 @@ const addStylingExceptions = element => {
     switch (element) {
         case 'subtitle':
             return 'text-transform: uppercase;';
+        case 'button':
+            return 'text-decoration: none;';
         default:
             return '';
     }
@@ -42,10 +44,7 @@ const typographyClassStyling = typographyClasses.map(
 
 injectGlobal`
     ${styleUtils.reset()}
-    html {
-        font-size: 62.5%;
-        background: ${theme.colors.background}
-    }
+    html { font-size: 62.5%; background: ${theme.colors.background} }
     ${typographyElementStyling}
     ${typographyClassStyling}
 `;

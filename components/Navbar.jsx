@@ -1,11 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import Link from 'next/link';
+import styled from 'styled-components';
+
+const Anchor = styled.a`
+    text-transform: none;
+`;
 
 const NavbarItem = ({ href, text }) => (
     <li>
         <Link href={href}>
-            <a className="menuitem">{text}</a>
+            <Anchor className="menuitem">{text}</Anchor>
         </Link>
     </li>
 );
