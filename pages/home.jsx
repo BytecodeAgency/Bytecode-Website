@@ -9,13 +9,10 @@ const pageSettings = {
 
 const Home = () => (
     <Layout pageSettings={pageSettings}>
-        <div>
-            <h1>Hello Home</h1>
-        </div>
         <div style={{ margin: '10rem', maxWidth: '40rem' }}>
             <TextBlock
-                subtitle="De subtitel"
-                title="De titel"
+                subtitle="De subtitel komt hier"
+                title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
                 href="//google.com"
                 button="Call to action"
             >
@@ -23,9 +20,7 @@ const Home = () => (
                 nostrum architecto cum exercitationem, numquam commodi quasi
                 voluptatem adipisci cumque sed, rerum molestias eius dicta
                 aliquam tempora facere laudantium deserunt reprehenderit
-                quibusdam. A, corrupti nemo libero molestias aliquam fugiat
-                suscipit unde ut neque consequuntur expedita beatae ex cum
-                numquam quas vel rem est assumenda nam optio in placeat!
+                quibusdam.
             </TextBlock>
         </div>
     </Layout>

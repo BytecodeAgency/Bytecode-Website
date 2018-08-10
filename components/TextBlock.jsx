@@ -7,23 +7,27 @@ const SubtitleBase = ({ className, children }) => (
 );
 
 const Subtitle = styled(SubtitleBase)`
-    /* Custom styling here */
+    margin-bottom: 2rem;
 `;
 
 const Title = styled.h1`
-    /* Custom styling here */
+    margin-bottom: 4rem;
 `;
 
 const Paragraph = styled.p`
-    /* Custom styling here */
+    margin: 0.5rem 0;
+`;
+
+const StyledButton = styled(Button)`
+    margin-top: 6rem;
 `;
 
 const getButton = (href, button, useNextLink) => {
     if (href && button) {
         return (
-            <Button href={href} useNextLink={useNextLink}>
+            <StyledButton href={href} useNextLink={useNextLink}>
                 {button}
-            </Button>
+            </StyledButton>
         );
     }
     return '';
