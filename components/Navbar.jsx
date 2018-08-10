@@ -128,6 +128,20 @@ const MenuButton = styled.a`
     }
 `;
 
+const BlackOverlay = styled.div`
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    transition: all 0.5s ease;
+    @media (max-width: ${theme.breakpointMobileMenu}) {
+        display: block;
+        opacity: ${props => props.menuIsOpen ? 0.5 : 0};
+    }
+`;
+
 class Navbar extends React.Component {
     constructor() {
         super();
@@ -151,6 +165,7 @@ class Navbar extends React.Component {
         return (
             <NavbarContainer>
                 <MobileNavLogo src="/static/img/logo-min.svg" />
+                <BlackOverlay menuIsOpen={menuIsOpen}/>
                 <MenuButton href="#" onClick={this.openMenu}>
                     <img
                         src="/static/img/close-menu.svg"
