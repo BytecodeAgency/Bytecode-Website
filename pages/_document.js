@@ -26,6 +26,7 @@ export default class SiteDocument extends Document {
                 <body>
                     <div className="root">{main}</div>
                     <NextScript />
+                    <script src="/static/register-service-worker.js"/>
                 </body>
             </html>
         );
