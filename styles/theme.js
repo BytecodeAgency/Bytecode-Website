@@ -108,7 +108,7 @@ const bytecode = {
             height: '1.2em',
             spacing: 'normal',
             font: paragraph,
-            weight: bold,
+            weight: regular,
             color: red,
         },
         menuitem: {

@@ -23,6 +23,8 @@
         "react/react-in-jsx-scope": "off",
         "react/jsx-one-expression-per-line": "off",
         "react/prop-types": 0,
+        "react/require-default-props": 0,
+        "react/jsx-boolean-value": 0,
         "no-loop-func": 0,
         "no-nested-ternary": 1,
         "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }]
