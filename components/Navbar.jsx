@@ -136,9 +136,11 @@ const BlackOverlay = styled.div`
     left: 0;
     background: #000;
     transition: all 0.5s ease;
+    opacity: 0;
+    display: none;
     @media (max-width: ${theme.breakpointMobileMenu}) {
-        display: block;
-        opacity: ${props => props.menuIsOpen ? 0.5 : 0};
+        display: ${props => (props.menuIsOpen ? 'block' : 'none')};
+        opacity: ${props => (props.menuIsOpen ? 0.5 : 0)};
     }
 `;
 
@@ -165,7 +167,10 @@ class Navbar extends React.Component {
         return (
             <NavbarContainer>
                 <MobileNavLogo src="/static/img/logo-min.svg" />
-                <BlackOverlay menuIsOpen={menuIsOpen}/>
+                <BlackOverlay
+                    menuIsOpen={menuIsOpen}
+                    onClick={this.closeMenu}
+                />
                 <MenuButton href="#" onClick={this.openMenu}>
                     <img
                         src="/static/img/close-menu.svg"
