@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import { injectGlobal } from 'styled-components';
-import styleUtils from '../lib/style-utils';
+import { reset, debug } from 'styled-components-style-utils';
 import theme from './theme';
 
 const typographyElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'p'];
@@ -42,8 +42,10 @@ const typographyClassStyling = typographyClasses.map(
     }`,
 );
 
+const enableCssReset = false;
 injectGlobal`
-    ${styleUtils.reset()}
+    ${reset()}
+    ${enableCssReset ? debug() : ''}
     html { font-size: 62.5%; background: ${theme.colors.background} }
     ${typographyElementStyling}
     ${typographyClassStyling}
