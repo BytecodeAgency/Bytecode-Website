@@ -120,6 +120,7 @@ const bytecode = {
             color: lightgray,
         },
     },
+    breakpointMobileMenu: '60rem',
 };
 
 const theme = bytecode;
