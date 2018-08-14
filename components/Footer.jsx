@@ -1,9 +1,11 @@
+import { Container, Row, Col } from '../lib/Grid';
+
 const Footer = () => (
     <footer>
-        <div className="text">
+        <Container className="text">
             &copy; {new Date().getFullYear()}
             &nbsp;Bytecode Digital Agency B.V. - All Rights Reserved
-        </div>
+        </Container>
     </footer>
 );
 
