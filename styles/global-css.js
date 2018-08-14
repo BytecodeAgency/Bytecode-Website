@@ -52,5 +52,4 @@ injectGlobal`
     ${typographyClassStyling}
 `;
 
-const containerWidths = [540, 750, 960, 1400];
-setConfiguration({ containerWidths });
+setConfiguration({ containerWidths: theme.containerWidths });

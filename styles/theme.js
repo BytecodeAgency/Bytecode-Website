@@ -121,6 +121,7 @@ const bytecode = {
         },
     },
     breakpointMobileMenu: '60rem',
+    containerWidths: [540, 750, 960, 1400],
 };
 
 const theme = bytecode;
