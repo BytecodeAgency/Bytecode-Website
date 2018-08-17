@@ -3,7 +3,7 @@
 // Colors
 const black = '#0f0f0f';
 const darkgray = '#1a1a1a';
-const green = '#6ca57b';
+const green = '#23be87';
 const lightgray = '#c1c1c1';
 const mediumgray = '#303030';
 const red = '#df5252';
