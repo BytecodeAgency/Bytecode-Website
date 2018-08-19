@@ -58,6 +58,8 @@ export default class SiteDocument extends Document {
                     <link rel="shortcut icon" href="/static/icons/favicon.png" />
                     <link rel="apple-touch-icon" href="/static/icons/favicon.png" />
                     <link rel="manifest" href="/static/manifest.json" />
+                    <link rel="stylesheet" href="https://use.typekit.net/kcu2skl.css"/>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono"/>
                     {styleTags}
                     {getDriftCode()}
                 </Head>
