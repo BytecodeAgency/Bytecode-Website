@@ -17,7 +17,7 @@ const menu = 'Space Mono';
 // Font weights
 const regular = 400;
 const bold = 700;
-const medium = bold;
+const medium = 500;
 const extrabold = 900;
 
 /**

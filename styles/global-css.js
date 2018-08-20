@@ -48,6 +48,7 @@ injectGlobal`
     ${reset()}
     ${enableCssReset ? debug() : ''}
     html { font-size: 62.5%; background: ${theme.colors.background} }
+    a { color: inherit; }
     ${typographyElementStyling}
     ${typographyClassStyling}
 `;
