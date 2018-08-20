@@ -2,6 +2,7 @@
 
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import theme from '../styles/theme';
 import '../styles/global-css';
 
 // The contents of the Drift code cannot be reused under AGPL license, please remove.
@@ -54,7 +55,7 @@ export default class SiteDocument extends Document {
                     <meta name="robots" content="index, follow"/>
                     <meta name="revisit-after" content="1 day"/>
                     <meta name="googlebot" content="noodp"/>
-                    <meta name="theme-color" content="#6ca57b"/>
+                    <meta name="theme-color" content={theme.colors.primary}/>
                     <link rel="shortcut icon" href="/static/icons/favicon.png" />
                     <link rel="apple-touch-icon" href="/static/icons/favicon.png" />
                     <link rel="manifest" href="/static/manifest.json" />
