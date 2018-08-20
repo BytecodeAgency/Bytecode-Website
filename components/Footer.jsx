@@ -22,7 +22,7 @@ const FooterLink = styled.a`
 `;
 
 const FooterHeadingContainer = styled.div`
-    height: 2.8rem;
+    height: 3.2rem;
 `;
 
 const FooterButton = styled(Button)`
@@ -34,7 +34,7 @@ const FooterText = styled.p`
 `;
 
 const FooterSpacer = styled.div`
-    height: 4rem;
+    height: 3.4rem;
 `;
 
 const Copyright = styled.p`
@@ -55,6 +55,8 @@ const Footer = () => (
                         <FooterLink href="tel:+31152024222">
                             015-2024222
                         </FooterLink>
+                        <br />
+                        Social Icons
                     </FooterLinkContainer>
                 </FooterCol>
                 <FooterCol>
@@ -67,19 +69,24 @@ const Footer = () => (
                         Onze deur staat altijd open, maar een afspraak plannen
                         is wel gewenst
                     </p>
-                    <FooterButton href="#">Plan een afspraak</FooterButton>;
+                    <FooterButton href="https://calendly.com/bytecode">
+                        Plan een afspraak
+                    </FooterButton>
                 </FooterCol>
                 <FooterCol>
                     <FooterHeadingContainer>
                         <p className="subtitle">Open Source</p>
                     </FooterHeadingContainer>
-                    <FooterText>
+                    <p>
                         Wij dragen graag bij aan open source projecten en vrije
                         software. Om de daad bij het woord te voegen hebben wij
                         de broncode van deze website onder AGPL-3.0 licentie
                         vrijgegeven.
-                    </FooterText>
-                    <FooterButton href="#">Bekijk broncode</FooterButton>;
+                    </p>
+                    <FooterButton href="https://github.com/BytecodeBV/Bytecode-Website">
+                        Bekijk broncode
+                    </FooterButton>
+                    ;
                 </FooterCol>
                 <FooterCol>
                     <FooterHeadingContainer>
@@ -96,11 +103,11 @@ const Footer = () => (
                         <p className="subtitle">Legal</p>
                     </FooterHeadingContainer>
                     <FooterText>
-                        <FooterLink href="#">KvK: 71497560</FooterLink>
-                        <FooterLink href="#">BTW: NL858738703B01</FooterLink>
-                        <FooterLink href="#">
-                            IBAN: NL77 BUNQ 2206 3628 13
-                        </FooterLink>
+                        KvK: 71497560
+                        <br />
+                        BTW: NL858738703B01
+                        <br />
+                        IBAN: NL77 BUNQ 2206 3628 13
                     </FooterText>
                 </FooterCol>
             </Row>
