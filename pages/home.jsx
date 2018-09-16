@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import TextBlock from '../components/TextBlock';
 import { Container, Row, Col } from '../lib/Grid';
+import { IconThumbnail } from '../components/Thumbnails';
+import CheckItem, { Check } from '../components/Check';
 
 const pageSettings = {
     title: 'Home',
@@ -24,18 +26,82 @@ const Home = () => (
     <Layout pageSettings={pageSettings}>
         <StyledContainer>
             <Row>
-                <Col md={6} lg={7} />
                 <Col md={6} lg={4}>
                     <TextBlock
                         subtitle="De subtitel komt hier"
                         title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
-                        href="//google.com"
-                        button="Call to action"
+                        href="//richardhotline.nl"
+                        button="more"
                     >
                         {TextBlockContent}
                     </TextBlock>
                 </Col>
+                <Col md={6} lg={7} >
+                    <img src="/static/img/header/web.svg"/>
+                </Col>
             </Row>
+        </StyledContainer>
+        <StyledContainer>
+            <Row>
+                <Col md={6} lg={7} >
+                    <Row>
+                        <Col xs={6} >
+                            < IconThumbnail />
+                        </Col>
+                        <Col xs={6} >
+                            < IconThumbnail />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs={6} >
+                            < IconThumbnail />
+                        </Col>
+                        <Col xs={6} >
+                            < IconThumbnail />
+                        </Col>
+                    </Row>
+                </Col>
+                <Col md={6} lg={4}>
+                    <TextBlock
+                        subtitle="De subtitel komt hier"
+                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
+                        href="//richardhotline.nl"
+                        button="more"
+                    >
+                        {TextBlockContent}
+                    </TextBlock>
+                </Col>
+                
+            </Row>   
+        </StyledContainer>
+        <StyledContainer>
+            <Row>
+                <Col md={6} lg={7} >
+                    <Row>
+                    <TextBlock
+                        subtitle="De subtitel komt hier"
+                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
+                        href="//richardhotline.nl"
+                        button="more"
+                    >
+                        {TextBlockContent}
+                    </TextBlock>
+                    </Row>
+                    <Row>
+                        <ul>
+                            <CheckItem/>
+                            <CheckItem/>
+                            <CheckItem/>
+                        </ul>
+                    </Row>
+                </Col>
+                <Col md={6} lg={4}>
+                    <figure>
+                        <img src="/static/img/content/interior.png" alt="This is us"/>
+                    </figure>
+                </Col>
+                
+            </Row>   
         </StyledContainer>
     </Layout>
 );

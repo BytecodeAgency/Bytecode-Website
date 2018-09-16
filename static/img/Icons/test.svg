@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="138px" height="142px" viewBox="0 0 138 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/test</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="elements/service-thumbnail" transform="translate(-171.000000, -165.000000)" stroke="#70C197">
+            <g id="Icons/test" transform="translate(172.000000, 166.000000)">
+                <g id="Group">
+                    <ellipse id="Oval" cx="68" cy="70" rx="68" ry="70"></ellipse>
+                    <ellipse id="Oval-Copy" cx="67.5" cy="70.5" rx="41.5" ry="42.5"></ellipse>
+                    <ellipse id="Oval-Copy-2" cx="68" cy="70.5" rx="53" ry="54.5"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
