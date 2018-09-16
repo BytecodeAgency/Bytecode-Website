@@ -19,6 +19,7 @@ const addStylingExceptions = element => {
     }
 };
 
+
 const typographyElementStyling = typographyElements.map(
     element => `${element} {
         font-size: ${theme.typography[element].size}
@@ -49,6 +50,7 @@ injectGlobal`
     ${enableCssReset ? debug() : ''}
     html { font-size: 62.5%; background: ${theme.colors.background} }
     a { color: inherit; }
+    img { width: 100%; height: auto; margin:0; padding: 0}
     ${typographyElementStyling}
     ${typographyClassStyling}
 `;
