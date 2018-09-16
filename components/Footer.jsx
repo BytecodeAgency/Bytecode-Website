@@ -2,9 +2,13 @@ import styled from 'styled-components';
 import { Container, Row, Col } from '../lib/Grid';
 import Button from './Button';
 
+const FooterColInnerContainer = styled.div`
+    margin-bottom: 5rem;
+`;
+
 const FooterCol = ({ props, children }) => (
-    <Col {...props} md={6} lg={6} xl={3} style={{ marginBottom: '5rem' }}>
-        {children}
+    <Col {...props} md={6} lg={6} xl={3}>
+        <FooterColInnerContainer>{children}</FooterColInnerContainer>
     </Col>
 );
 
@@ -23,6 +27,10 @@ const FooterLink = styled.a`
 
 const FooterHeadingContainer = styled.div`
     height: 3.2rem;
+`;
+
+const TopPaddedParagraph = styled.p`
+    margin-top: 1.4rem;
 `;
 
 const FooterButton = styled(Button)`
@@ -65,10 +73,10 @@ const Footer = () => (
                     </FooterHeadingContainer>
                     <h4>Verlengde Spiegelmakerstraat 13</h4>
                     <h4>2645LZ Delfgauw, Nederland</h4>
-                    <p style={{ marginTop: '1.4rem' }}>
+                    <TopPaddedParagraph>
                         Onze deur staat altijd open, maar een afspraak plannen
                         is wel gewenst
-                    </p>
+                    </TopPaddedParagraph>
                     <FooterButton href="https://calendly.com/bytecode">
                         Plan een afspraak
                     </FooterButton>
@@ -112,10 +120,8 @@ const Footer = () => (
                 </FooterCol>
             </Row>
             <Copyright>
-                <p>
-                    &copy; {new Date().getFullYear()}
-                    &nbsp;Bytecode Digital Agency B.V. - All Rights Reserved
-                </p>
+                &copy; {new Date().getFullYear()}
+                &nbsp;Bytecode Digital Agency B.V. - All Rights Reserved
             </Copyright>
         </Container>
     </footer>
