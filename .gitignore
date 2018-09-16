@@ -13,6 +13,7 @@ dist/
 docs/
 .next/
 .out/
+out/
 .cache/
 .env
 

@@ -76,7 +76,7 @@ const Home = () => (
         </StyledContainer>
         <StyledContainer>
             <Row>
-                <Col md={6} lg={7} >
+                <Col md={6} lg={5} >
                     <Row>
                     <TextBlock
                         subtitle="De subtitel komt hier"
@@ -95,12 +95,67 @@ const Home = () => (
                         </ul>
                     </Row>
                 </Col>
-                <Col md={6} lg={4}>
-                    <figure>
-                        <img src="/static/img/content/interior.png" alt="This is us"/>
+                <Col md={6} lg={7}>
+                    <figure >
+                        <img width="700" src="/static/img/content/group.jpg" alt="This is a photo of us :)"/>
                     </figure>
                 </Col>
                 
+            </Row>   
+        </StyledContainer>
+        <StyledContainer>
+            <Row>
+                <Col md={4}>
+                    <Row>
+                        <figure >
+                            <img width="300" src="/static/img/content/group.jpg" alt="This is a photo of us :)"/>
+                        </figure>
+                    </Row>
+                    <Row>
+                    <TextBlock
+                        subtitle="De subtitel komt hier"
+                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
+                        href="//richardhotline.nl"
+                        button=""
+                    >
+                        {TextBlockContent}
+                    </TextBlock>
+                    </Row>
+                </Col>
+                <Col md={4}>
+                    <Row>
+                        <figure >
+                            <img width="300" src="/static/img/content/group.jpg" alt="This is a photo of us :)"/>
+                        </figure>
+                    </Row>
+                    <Row>
+                    <TextBlock
+                        subtitle="De subtitel komt hier"
+                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
+                        href="//richardhotline.nl"
+                        button="more"
+                    >
+                        {TextBlockContent}
+                    </TextBlock>
+                    </Row>
+                </Col>
+                <Col md={4}>
+                    <Row>
+                        <figure >
+                            <img width="300" src="/static/img/content/group.jpg" alt="This is a photo of us :)"/>
+                        </figure>
+                    </Row>
+                    <Row>
+                    <TextBlock
+                        subtitle="De subtitel komt hier"
+                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
+                        href="//richardhotline.nl"
+                        button="more"
+                    >
+                        {TextBlockContent}
+                    </TextBlock>
+                    </Row>
+                </Col>                    
             </Row>   
         </StyledContainer>
     </Layout>

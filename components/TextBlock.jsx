@@ -33,6 +33,17 @@ const getButton = (href, button, useNextLink) => {
     return '';
 };
 
+// const getHeader = (href, button, useNextLink) => {
+//     if (href && button) {
+//         return (
+//             <StyledButton href={href} useNextLink={useNextLink}>
+//                 {button}
+//             </StyledButton>
+//         );
+//     }
+//     return '';
+// };
+
 const TextBlock = props => {
     const {
         subtitle,

@@ -4,7 +4,7 @@ import { reset, debug } from 'styled-components-style-utils';
 import { setConfiguration } from 'react-grid-system';
 import theme from './theme';
 
-const typographyElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'p'];
+const typographyElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'body'];
 
 const typographyClasses = ['text', 'subtitle', 'button', 'menuitem'];
 

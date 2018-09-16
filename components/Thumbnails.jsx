@@ -7,7 +7,7 @@ const Div = styled.div`
         height: 20vw;
         background-image: url(./static/img/content/interior.png);
         background-size: cover;
-        background-blend-mode: multiply;
+        background-blend-mode: overlay;
         background-color: #1a1a1a;
         display: flex;
         align-items: center;

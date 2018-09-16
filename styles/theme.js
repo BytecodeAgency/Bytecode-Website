@@ -39,6 +39,14 @@ const bytecode = {
         white,
     },
     typography: {
+        body: {
+            size: '1.8rem',
+            height: '1.2em',
+            spacing: '0.16em',
+            font: paragraph,
+            weight: regular,
+            color: lightgray,
+        },
         h1: {
             size: '5.4rem',
             height: '1.0em',
