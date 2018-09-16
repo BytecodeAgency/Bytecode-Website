@@ -3,7 +3,7 @@ import { Container, Row, Col } from '../lib/Grid';
 import Button from './Button';
 
 const FooterCol = ({ props, children }) => (
-    <Col {...props} md={6} lg={3}>
+    <Col {...props} md={6} lg={6} xl={3} style={{ marginBottom: '5rem' }}>
         {children}
     </Col>
 );
@@ -38,7 +38,7 @@ const FooterSpacer = styled.div`
 `;
 
 const Copyright = styled.p`
-    margin: 6rem 0 4rem;
+    margin: 1rem 0 2rem;
     text-align: center;
 `;
 

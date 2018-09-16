@@ -9,6 +9,8 @@ import styled from 'styled-components';
 import theme from '../styles/theme';
 
 const NavbarContainer = styled.nav`
+    position: relative;
+    z-index: 10000;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         height: 7rem;
         background: ${theme.colors.black};
@@ -36,6 +38,7 @@ const NavbarContent = styled.div`
         padding-top: 6rem;
         transition: all 0.4s ease;
         background: ${theme.colors.secondary};
+        opacity: 1;
     }
 `;
 
