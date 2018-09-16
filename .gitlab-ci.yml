@@ -1,0 +1,14 @@
+image: node:8-alpine
+
+cache:
+  paths:
+  - node_modules/
+
+before_script:
+  - npm i -g yarn
+  - yarn
+
+build:
+  script:
+    - yarn run build
+    - yarn run export
