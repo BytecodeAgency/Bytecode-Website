@@ -14,6 +14,7 @@ const FooterCol = ({ props, children }) => (
 
 const FooterLogo = styled.img`
     height: 6rem;
+    width: auto;
 `;
 
 const FooterLinkContainer = styled.h4`
@@ -91,6 +92,7 @@ const Footer = () => (
                         de broncode van deze website onder AGPL-3.0 licentie
                         vrijgegeven.
                     </p>
+                    {/* eslint-disable-next-line max-len */}
                     <FooterButton href="https://github.com/BytecodeBV/Bytecode-Website">
                         Bekijk broncode
                     </FooterButton>

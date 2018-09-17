@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="49px" viewBox="0 0 49 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/check</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Elements/check" transform="translate(-24.000000, -29.000000)">
+            <g id="Icons/check" transform="translate(25.000000, 30.000000)">
+                <g id="Group">
+                    <circle id="Oval" stroke="#70C197" cx="23.5" cy="23.5" r="23.5"></circle>
+                    <polyline id="Path-2" stroke="#979797" points="31 16 21.3026573 31 15 25.0327082"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

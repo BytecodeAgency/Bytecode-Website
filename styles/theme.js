@@ -39,10 +39,18 @@ const bytecode = {
         white,
     },
     typography: {
+        body: {
+            size: '1.8rem',
+            height: '1.2em',
+            spacing: '0.16em',
+            font: paragraph,
+            weight: regular,
+            color: lightgray,
+        },
         h1: {
-            size: '4.8rem',
-            height: '1.05em',
-            spacing: '0.02em',
+            size: '5.4rem',
+            height: '1.0em',
+            spacing: '0.05em',
             font: heading,
             weight: extrabold,
             color: white,
@@ -82,7 +90,7 @@ const bytecode = {
         p: {
             size: '1.8rem',
             height: '1.2em',
-            spacing: '0.16em',
+            spacing: '0.05em',
             font: paragraph,
             weight: regular,
             color: lightgray,
@@ -98,7 +106,7 @@ const bytecode = {
         subtitle: {
             size: '1.6rem',
             height: '1.2em',
-            spacing: '0.31em',
+            spacing: '0.45em',
             font: paragraph,
             weight: bold,
             color: green,

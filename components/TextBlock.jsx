@@ -6,11 +6,21 @@ const SubtitleBase = ({ className, children }) => (
     <div className={`subtitle ${className}`}>{children}</div>
 );
 
+const Figure = styled.figure`
+    position: relative;
+    width: 100%;
+    margin-bottom: 4rem;
+`;
+
 const Subtitle = styled(SubtitleBase)`
     margin-bottom: 2rem;
 `;
 
-const Title = styled.h1`
+const H1 = styled.h1`
+    margin-bottom: 4rem;
+`;
+
+const H2 = styled.h2`
     margin-bottom: 4rem;
 `;
 
@@ -21,6 +31,17 @@ const Paragraph = styled.p`
 const StyledButton = styled(Button)`
     margin-top: 6rem;
 `;
+
+const getImage = (src, alt) => {
+    if (src) {
+        return (
+            <Figure>
+                <img src={src} alt={alt} />
+            </Figure>
+        );
+    }
+    return '';
+};
 
 const getButton = (href, button, useNextLink) => {
     if (href && button) {
@@ -33,10 +54,23 @@ const getButton = (href, button, useNextLink) => {
     return '';
 };
 
+const getTitle = (type, title) => {
+    if (type === 'h1') {
+        return <H1>{title}</H1>;
+    }
+    if (type === 'h2') {
+        return <H2>{title}</H2>;
+    }
+    return <H1>{title}</H1>;
+};
+
 const TextBlock = props => {
     const {
+        image,
+        alt,
         subtitle,
         title,
+        headingType,
         href = null,
         button = null,
         useNextLink,
@@ -45,8 +79,9 @@ const TextBlock = props => {
 
     return (
         <div>
+            {getImage(image, alt)}
             <Subtitle>{subtitle}</Subtitle>
-            <Title>{title}</Title>
+            {getTitle(headingType, title)}
             <Paragraph>{children}</Paragraph>
             {getButton(href, button, useNextLink)}
         </div>
