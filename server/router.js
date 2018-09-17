@@ -1,6 +1,5 @@
-const { parse } = require ('url');
+const { parse } = require('url');
 const routes = require('./routes');
-
 
 const router = (req, res, app, handle) => {
     const parsedUrl = parse(req.url, true);

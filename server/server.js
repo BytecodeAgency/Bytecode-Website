@@ -12,7 +12,7 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
     const server = express();
-    server.use(bodyParser.json())
+    server.use(bodyParser.json());
     server.get('*', (req, res) => {
         router(req, res, app, handle);
     });
@@ -23,6 +23,7 @@ app.prepare().then(() => {
 
     server.listen(port, err => {
         if (err) throw err;
-        console.log(`Server running on port ${port}`); // eslint-disable-line no-console
+        // eslint-disable-next-line no-console
+        console.log(`Server running on port ${port}`);
     });
 });
