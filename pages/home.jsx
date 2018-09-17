@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import TextBlock from '../components/TextBlock';
 import { Container, Row, Col } from '../lib/Grid';
-import { IconThumbnail } from '../components/Thumbnails';
+import Thumbnail from '../components/Thumbnail';
 import CheckItem from '../components/Check';
 
 const pageSettings = {
@@ -37,6 +37,7 @@ const Home = () => (
                     </TextBlock>
                 </Col>
                 <Col md={6} lg={7}>
+                    {/* TODO: Make this image display good on all devices */}
                     <img alt="" src="/static/img/header/web.svg" />
                 </Col>
             </Row>
@@ -46,18 +47,18 @@ const Home = () => (
                 <Col md={6} lg={7}>
                     <Row>
                         <Col xs={6}>
-                            <IconThumbnail />
+                            <Thumbnail />
                         </Col>
                         <Col xs={6}>
-                            <IconThumbnail />
+                            <Thumbnail />
                         </Col>
                     </Row>
                     <Row>
                         <Col xs={6}>
-                            <IconThumbnail />
+                            <Thumbnail />
                         </Col>
                         <Col xs={6}>
-                            <IconThumbnail />
+                            <Thumbnail />
                         </Col>
                     </Row>
                 </Col>
