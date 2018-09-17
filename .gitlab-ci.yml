@@ -10,5 +10,6 @@ before_script:
 
 build:
   script:
+    - yarn run lint
     - yarn run build
     - yarn run export
