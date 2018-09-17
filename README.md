@@ -41,6 +41,12 @@ to start the server.
 
 If you want to export the project to static HTML/CSS/JS, run `yarn run export`.
 
+### Routes
+
+All `GET`-routes are defined in `server/routes.js`.
+
+The `POST`-route is `/post`.
+
 ## License and restrictions
 
 This project is AGPL-3.0 licenced with certain restrictions for commercial use. These restrictions are as follows:
