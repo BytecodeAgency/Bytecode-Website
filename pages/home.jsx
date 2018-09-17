@@ -6,6 +6,7 @@ import TextBlock from '../components/TextBlock';
 import { Container, Row, Col } from '../lib/Grid';
 import Thumbnail from '../components/Thumbnail';
 import CheckItem from '../components/Check';
+import ContactForm from '../components/ContactForm';
 
 const pageSettings = {
     title: 'Home',
@@ -149,6 +150,9 @@ const Home = () => (
                     </TextBlock>
                 </Col>
             </Row>
+        </StyledContainer>
+        <StyledContainer>
+            <ContactForm />
         </StyledContainer>
     </Layout>
 );

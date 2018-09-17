@@ -15,6 +15,7 @@
     "lint": "eslint --ext .jsx,.js ."
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-plugin-styled-components": "^1.5.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
@@ -28,7 +29,6 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "axios": "^0.18.0",
     "babel-eslint": "^8.2.6",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
