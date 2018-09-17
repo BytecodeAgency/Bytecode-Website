@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import TextBlock from '../components/TextBlock';
 import { Container, Row, Col } from '../lib/Grid';
 import { IconThumbnail } from '../components/Thumbnails';
-import CheckItem, { Check } from '../components/Check';
+import CheckItem from '../components/Check';
 
 const pageSettings = {
     title: 'Home',
@@ -36,28 +36,28 @@ const Home = () => (
                         {TextBlockContent}
                     </TextBlock>
                 </Col>
-                <Col md={6} lg={7} >
-                    <img src="/static/img/header/web.svg"/>
+                <Col md={6} lg={7}>
+                    <img alt="" src="/static/img/header/web.svg" />
                 </Col>
             </Row>
         </StyledContainer>
         <StyledContainer>
             <Row>
-                <Col md={6} lg={7} >
+                <Col md={6} lg={7}>
                     <Row>
-                        <Col xs={6} >
-                            < IconThumbnail />
+                        <Col xs={6}>
+                            <IconThumbnail />
                         </Col>
-                        <Col xs={6} >
-                            < IconThumbnail />
+                        <Col xs={6}>
+                            <IconThumbnail />
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={6} >
-                            < IconThumbnail />
+                        <Col xs={6}>
+                            <IconThumbnail />
                         </Col>
-                        <Col xs={6} >
-                            < IconThumbnail />
+                        <Col xs={6}>
+                            <IconThumbnail />
                         </Col>
                     </Row>
                 </Col>
@@ -71,37 +71,40 @@ const Home = () => (
                         {TextBlockContent}
                     </TextBlock>
                 </Col>
-                
-            </Row>   
+            </Row>
         </StyledContainer>
         <StyledContainer>
             <Row>
-                <Col md={6} lg={5} >
+                <Col md={6} lg={5}>
                     <Row>
-                    <TextBlock
-                        subtitle="De subtitel komt hier"
-                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
-                        href="//richardhotline.nl"
-                        button="more"
-                    >
-                        {TextBlockContent}
-                    </TextBlock>
+                        <TextBlock
+                            subtitle="De subtitel komt hier"
+                            title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
+                            href="//richardhotline.nl"
+                            button="more"
+                        >
+                            {TextBlockContent}
+                        </TextBlock>
                     </Row>
                     <Row>
                         <ul>
-                            <CheckItem/>
-                            <CheckItem/>
-                            <CheckItem/>
+                            <CheckItem />
+                            <CheckItem />
+                            <CheckItem />
                         </ul>
                     </Row>
                 </Col>
                 <Col md={6} lg={7}>
-                    <figure >
-                        <img width="700" src="/static/img/content/group.jpg" alt="This is a photo of us :)"/>
+                    <figure>
+                        <img
+                            // TODO: Make a dynamic way of setting the width with REM
+                            width="700"
+                            src="/static/img/content/group.jpg"
+                            alt="The Bytecode team"
+                        />
                     </figure>
                 </Col>
-                
-            </Row>   
+            </Row>
         </StyledContainer>
         <StyledContainer>
             <Row>
@@ -143,8 +146,8 @@ const Home = () => (
                     >
                         {TextBlockContent}
                     </TextBlock>
-                </Col>              
-            </Row>   
+                </Col>
+            </Row>
         </StyledContainer>
     </Layout>
 );

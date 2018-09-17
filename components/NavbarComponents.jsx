@@ -100,6 +100,7 @@ const NavbarItem = styled(NavbarItemBase)`
 const Logo = styled.img`
     height: 80%;
     max-height: 6rem;
+    width: auto;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         display: none;
     }

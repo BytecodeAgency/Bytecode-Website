@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-expressions */
+/* eslint-disable no-unused-expressions, function-paren-newline */
 import { injectGlobal } from 'styled-components';
 import { reset, debug } from 'styled-components-style-utils';
 import { setConfiguration } from 'react-grid-system';
@@ -18,7 +18,6 @@ const addStylingExceptions = element => {
             return '';
     }
 };
-
 
 const typographyElementStyling = typographyElements.map(
     element => `${element} {
