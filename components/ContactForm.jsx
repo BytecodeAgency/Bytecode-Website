@@ -118,14 +118,12 @@ class ContactForm extends React.Component {
     sendData(sendData) {
         axios
             .post('/post', sendData)
-            .then(res => {
+            .then(() => {
                 this.clearNotifications();
                 this.addNotification('success', 'Bericht succesvol verzonden!');
-                console.log(res); // eslint-disable-line
             })
-            .catch(err => {
+            .catch(() => {
                 this.addNotification('error', 'Er ging iets fout...');
-                console.log(err); // eslint-disable-line
             });
     }
 
