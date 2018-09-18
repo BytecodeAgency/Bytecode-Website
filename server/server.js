@@ -13,14 +13,8 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
     const server = express();
     server.use(bodyParser.json());
-    server.get('*', (req, res) => {
-        router(req, res, app, handle);
-    });
-
-    server.post('/post', (req, res) => {
-        handlePost(req, res);
-    });
-
+    server.get('*', (req, res) => router(req, res, app, handle));
+    server.post('/post', (req, res) => handlePost(req, res));
     server.listen(port, err => {
         if (err) throw err;
         // eslint-disable-next-line no-console
