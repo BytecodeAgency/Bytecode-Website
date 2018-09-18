@@ -89,7 +89,6 @@ class ContactForm extends React.Component {
         const value = this.state[inputFieldName];
         return (
             <InputField
-                required
                 type={inputFieldType}
                 name={inputFieldName}
                 placeholder={inputFieldPlaceholder}
@@ -138,7 +137,6 @@ class ContactForm extends React.Component {
                 {this.generateInputField('email', 'email', 'Emailadres')}
                 {this.generateInputField('tel', 'phone', 'Telefoonnummer')}
                 <InputTextArea
-                    required
                     name="contents"
                     placeholder="Bericht"
                     onChange={this.handleInput}
