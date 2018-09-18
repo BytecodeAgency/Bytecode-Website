@@ -96,7 +96,6 @@ const Footer = () => (
                     <FooterButton href="https://github.com/BytecodeBV/Bytecode-Website">
                         Bekijk broncode
                     </FooterButton>
-                    ;
                 </FooterCol>
                 <FooterCol>
                     <FooterHeadingContainer>
