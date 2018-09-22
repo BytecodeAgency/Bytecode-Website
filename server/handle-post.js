@@ -12,9 +12,9 @@ const handleError = res => {
     res.status(500).send({ error: 'Er ging iets fout op onze server' });
 };
 
-const createMessage = (contact, email, phone, contents) => {
+const createMessage = (contact, email, phone, contents) =>
 /* eslint-disable */
-return `@channel *Goed nieuws!*
+`@channel *Goed nieuws!*
 Er is een nieuw bericht via het Bytecode.nl contactformulier!
 
 Naam: ${contact}
@@ -23,7 +23,6 @@ Telefoon: ${phone}
 
 Bericht:
 ${contents}`;
-};
 /* eslint-enable */
 
 const validateDataAndSendMessage = async (req, res) => {
@@ -32,10 +31,9 @@ const validateDataAndSendMessage = async (req, res) => {
         return;
     }
 
-    const webhookUrl = 'hook'; //eslint-disable-line
+    const webhookUrl = process.env.CONTACT_FORM_WEBHOOK;
     const payload = { text: createMessage(contact, email, phone, contents) };
     try {
-        console.log(payload);
         const messageToWebhook = await axios.post(webhookUrl, payload);
         res.sendStatus(messageToWebhook.status);
     } catch (e) {

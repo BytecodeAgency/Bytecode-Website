@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const bodyParser = require('body-parser');
 const express = require('express');
 const helmet = require('helmet');
@@ -5,7 +7,7 @@ const next = require('next');
 const router = require('./router');
 const handlePost = require('./handle-post');
 
-const dev = process.env.NODE_ENV !== 'production'; // TODO: Add .env support
+const dev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 4000;
 
 const app = next({ dev });
