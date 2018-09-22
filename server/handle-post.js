@@ -25,6 +25,23 @@ Bericht:
 ${contents}`;
 /* eslint-enable */
 
+const logMessageLocal = payload => {
+    console.log(payload); // eslint-disable-line no-console
+    return new Promise(resolve => {
+        resolve({
+            status: 200,
+        });
+    });
+};
+
+const makeRequestToWebhook = async (webhookUrl, payload) => {
+    const persistToWebhook = process.env.PERSIST_CONTACT_FORM_TO_WEBHOOK;
+    if (persistToWebhook === 'true') {
+        return axios.post(webhookUrl, payload);
+    }
+    return logMessageLocal(payload);
+};
+
 const validateDataAndSendMessage = async (req, res) => {
     const { contact, email, phone, contents } = req.body; // eslint-disable-line
     if (validateHandlePost(contact, email, phone, contents, res) === false) {
@@ -34,8 +51,8 @@ const validateDataAndSendMessage = async (req, res) => {
     const webhookUrl = process.env.CONTACT_FORM_WEBHOOK;
     const payload = { text: createMessage(contact, email, phone, contents) };
     try {
-        const messageToWebhook = await axios.post(webhookUrl, payload);
-        res.sendStatus(messageToWebhook.status);
+        const webhookResponse = await makeRequestToWebhook(webhookUrl, payload);
+        res.sendStatus(webhookResponse.status);
     } catch (e) {
         handleError(res);
     }
