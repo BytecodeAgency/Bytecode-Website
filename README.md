@@ -11,6 +11,10 @@ To run this develop environment, you need the follow dependencies:
 
 To install all dependencies after cloning the Git repo, run `yarn`. Otherwise the project will not run.
 
+## Setup
+
+To setup the .env system, run `cp .env.example .env`, and set the desired variables.
+
 ## Development
 
 To run the development environment, run:
