@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-    width: 20vw;
-    height: 20vw;
+    width: 100%;
+    height: auto;
     background-image: url('/static/img/content/interior.png');
     background-size: cover;
     background-blend-mode: overlay;
@@ -11,11 +11,14 @@ const StyledDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3rem;
+    
 `;
 
 const Icon = styled.figure`
-    width: 7.5vw;
-    height: 7.5vw;
+    width: 40%;
+    height: auto;
+    overflown: hidden;
 `;
 
 const Thumbnail = () => (

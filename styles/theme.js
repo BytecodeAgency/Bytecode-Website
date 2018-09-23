@@ -5,7 +5,7 @@ const black = '#0f0f0f';
 const darkgray = '#1a1a1a';
 const green = '#23be87';
 const lightgray = '#c1c1c1';
-const mediumgray = '#303030';
+const mediumgray = '#252525';
 const red = '#df5252';
 const white = '#ffffff';
 
@@ -126,6 +126,14 @@ const bytecode = {
             font: menu,
             weight: regular,
             color: lightgray,
+        },
+        form: {
+            size: '2.4rem',
+            height: '2.7em',
+            spacing: 'normal',
+            font: paragraph,
+            weight: regular,
+            color: white,
         },
     },
     breakpointMobileMenu: '60rem',

@@ -1,4 +1,4 @@
-import Layout from '../components/Layout';
+ximport Layout from '../components/Layout';
 
 const pageSettings = {
     title: 'Cases',
