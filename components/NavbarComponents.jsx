@@ -13,7 +13,7 @@ const NavbarContainer = styled.nav`
     position: relative;
     z-index: 10000;
     padding: 1rem 10%;
-    background: ${transparentize(.3, theme.colors.black)};
+    background: ${transparentize(0.3, theme.colors.black)};
     @media (max-width: ${theme.breakpointMobileMenu}) {
         height: 7rem;
         width: 100vw;

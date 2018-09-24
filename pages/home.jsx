@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
-import { Container, Row, Col, Hidden } from '../lib/Grid';
+import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
 import Thumbnail from '../components/Thumbnail';
 import CheckItem from '../components/Check';
 import ContactForm from '../components/ContactForm';
