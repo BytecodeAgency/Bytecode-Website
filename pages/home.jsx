@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
-import { Container, Row, Col } from '../lib/Grid';
+import { Container, Row, Col, Hidden } from '../lib/Grid';
 import Thumbnail from '../components/Thumbnail';
 import CheckItem from '../components/Check';
 import ContactForm from '../components/ContactForm';
@@ -33,6 +33,12 @@ const AbsoluteCol = styled(Col)`
     right: 0px;
 `;
 
+const HeaderImage = styled.img`
+    position: absolute;
+    right: -20rem;
+    bottom: -5rem;
+`;
+
 const ContentBlockWrapper = styled.section`
     background-color: ${theme.colors.mediumgray};
     margin: 5% 0% 5% 5%;
@@ -54,8 +60,12 @@ const Home = () => (
                     </TextBlock>
                 </Col>
                 <AbsoluteCol md={6} lg={7}>
-                    {/* TODO: Make this image display good on all devices */}
-                    <img alt="" src="/static/img/header/web.svg" />
+                    <Hidden xs sm>
+                        <HeaderImage
+                            alt="Bytecode web"
+                            src="/static/img/header/web.svg"
+                        />
+                    </Hidden>
                 </AbsoluteCol>
             </Row>
         </StyledContainer>
