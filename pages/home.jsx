@@ -16,7 +16,11 @@ const pageSettings = {
 };
 
 const TextBlockContent = `
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores itaque inventore sequi tempora amet dolore voluptas? Natus eius repellendus tempora reiciendis ea tempore dolorum temporibus quisquam fuga magni. Quis quam, recusandae, iste, deleniti cum esse distinctio omnis sequi nemo iusto tempore nobis hic nesciunt perspiciatis sunt laboriosam corrupti a mollitia?
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores itaque
+inventore sequi tempora amet dolore voluptas? Natus eius repellendus tempora
+reiciendis ea tempore dolorum temporibus quisquam fuga magni. Quis quam,
+recusandae, iste, deleniti cum esse distinctio omnis sequi nemo iusto tempore
+nobis hic nesciunt perspiciatis sunt laboriosam corrupti a mollitia?
 `;
 
 const StyledContainer = styled(Container)`
@@ -24,7 +28,7 @@ const StyledContainer = styled(Container)`
 `;
 
 const AbsoluteCol = styled(Col)`
-    postion: absolute;
+    position: absolute;
     top: 0px;
     right: 0px;
 `;
@@ -33,12 +37,11 @@ const ContentBlockWrapper = styled.section`
     background-color: ${theme.colors.mediumgray};
     margin: 5% 0% 5% 5%;
     padding: 7.5% 5%;
-    margin: 5% 0% 5% 5%;
 `;
 
 const Home = () => (
     <Layout pageSettings={pageSettings}>
-        <StyledContainer >
+        <StyledContainer>
             <Row>
                 <Col md={6} lg={4}>
                     <TextBlock
@@ -56,10 +59,10 @@ const Home = () => (
                 </AbsoluteCol>
             </Row>
         </StyledContainer>
-        <StyledContainer >
+        <StyledContainer>
             <Row>
-                <Col  md={6}>
-                    <Thumbnail/>
+                <Col md={6}>
+                    <Thumbnail />
                 </Col>
                 <Col md={6} lg={6}>
                     <TextBlock
@@ -73,7 +76,7 @@ const Home = () => (
                 </Col>
             </Row>
         </StyledContainer>
-        <StyledContainer >
+        <StyledContainer>
             <Row>
                 <Col md={6} lg={5}>
                     <Row>
@@ -107,7 +110,7 @@ const Home = () => (
             </Row>
         </StyledContainer>
         <ContentBlockWrapper>
-            <StyledContainer >
+            <StyledContainer>
                 <Row>
                     <Col md={4}>
                         <TextBlock
@@ -158,7 +161,7 @@ const Home = () => (
                 headingType="h2"
                 title="Stuur ons een berichtje"
             />
-            <ContactForm/>
+            <ContactForm />
         </ContentBlockWrapper>
     </Layout>
 );

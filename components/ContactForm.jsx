@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import theme from '../styles/theme';
-import Button from '../components/Button';
-
 
 const ContactFormContainer = styled.div`
     background: none;
@@ -108,7 +106,8 @@ class ContactForm extends React.Component {
         // eslint-disable-next-line react/destructuring-assignment
         const value = this.state[inputFieldName];
         return (
-            <InputField className="form"
+            <InputField
+                className="form"
                 type={inputFieldType}
                 name={inputFieldName}
                 placeholder={inputFieldPlaceholder}
@@ -161,7 +160,9 @@ class ContactForm extends React.Component {
                     value={this.state.contents} // eslint-disable-line
                     className="form"
                 />
-                <SendButton className="button" onClick={this.handleSend}>Verzenden</SendButton>
+                <SendButton className="button" onClick={this.handleSend}>
+                    Verzenden
+                </SendButton>
             </ContactFormContainer>
         );
     }

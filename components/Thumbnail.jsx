@@ -12,13 +12,12 @@ const StyledDiv = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 3rem;
-    
 `;
 
 const Icon = styled.figure`
     width: 40%;
     height: auto;
-    overflown: hidden;
+    overflow: hidden;
 `;
 
 const Thumbnail = () => (

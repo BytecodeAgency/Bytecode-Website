@@ -26,7 +26,8 @@ const ContentPageHeaderRow = styled(Row)`
     flex-shrink: 1 !important;
 `;
 
-const TextBlockContent = 
+// eslint-disable-next-line
+const TextBlockContent =
     'rem ipsum dolor sit amet consectetur adipisicing elit. Asperio';
 
 const ContentPageHeader = () => (
@@ -36,7 +37,8 @@ const ContentPageHeader = () => (
                 <Col md={6}>
                     <TextBlock
                         subtitle="De subtitel komt hier"
-                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
+                        title="De titel maar dan een hele erge fucking lange
+                        titel waar geen einde aan lijkt te komen"
                         href="//richardhotline.nl"
                         button="more"
                     >
