@@ -6,7 +6,8 @@
     "parser": "babel-eslint",
     "plugins": [
         "react",
-        "prettier"
+        "prettier",
+        "security"
     ],
     "rules": {
         "arrow-parens": ["error", "as-needed"],
