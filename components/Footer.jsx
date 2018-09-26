@@ -53,7 +53,7 @@ const Copyright = styled.p`
 
 const Footer = () => (
     <footer>
-        <Container>
+        <Container fluid="true">
             <Row>
                 <FooterCol>
                     <FooterLogo src="/static/img/logo.svg" alt="Bytecode" />

@@ -6,7 +6,7 @@ import theme from './theme';
 
 const typographyElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'body'];
 
-const typographyClasses = ['text', 'subtitle', 'button', 'menuitem'];
+const typographyClasses = ['text', 'subtitle', 'button', 'menuitem', 'form'];
 
 const addStylingExceptions = element => {
     switch (element) {

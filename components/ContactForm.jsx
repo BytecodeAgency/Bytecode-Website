@@ -1,40 +1,58 @@
 import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import theme from '../styles/theme';
 
 const ContactFormContainer = styled.div`
-    background: darkgreen;
-    margin: 2rem;
-    width: 100%;
+    background: none;
+    @media (max-width: ${theme.containerWidths[3]}) {
+        max-width: 18vw;
+    }
 `;
 
 const InputField = styled.input`
-    background: darkorange;
-    margin: 2rem;
-    width: 100%;
-`;
-
-const InputTextArea = styled.textarea`
-    background: darkblue;
-    color: white;
-    margin: 2rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid ${theme.colors.lightgray};
+    margin-bottom: 1.5rem;
     width: 100%;
 `;
 
 const SendButton = styled.button`
-    background: red;
+    display: inline-block;
+    background: transparent;
+    padding: 0.8rem 3.6rem;
+    border-color: ${theme.colors.tertiary};
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 10rem;
+    transition: all 0.2s ease;
+    margin-top: 3rem;
+    &:hover {
+        color: ${theme.colors.white};
+        background: ${theme.colors.primary};
+        border-color: ${theme.colors.primary};
+    }
+`;
+
+const InputTextArea = styled.textarea`
+    background: none;
+    border: none;
+    border-bottom: 2px solid ${theme.colors.white};
     color: white;
-    padding: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    min-height: 20rem;
 `;
 
 const StyledNotification = styled.div`
     color: white;
-    padding: 4rem;
+    padding: 3rem;
     &.success {
-        background: green;
+        background: ${theme.colors.primary};
     }
     &.error {
-        background: red;
+        background: ${theme.colors.tertiary};
     }
 `;
 
@@ -89,6 +107,7 @@ class ContactForm extends React.Component {
         const value = this.state[inputFieldName];
         return (
             <InputField
+                className="form"
                 type={inputFieldType}
                 name={inputFieldName}
                 placeholder={inputFieldPlaceholder}
@@ -139,8 +158,11 @@ class ContactForm extends React.Component {
                     placeholder="Bericht"
                     onChange={this.handleInput}
                     value={this.state.contents} // eslint-disable-line
+                    className="form"
                 />
-                <SendButton onClick={this.handleSend}>Verzenden</SendButton>
+                <SendButton className="button" onClick={this.handleSend}>
+                    Verzenden
+                </SendButton>
             </ContactFormContainer>
         );
     }

@@ -2,8 +2,9 @@
 
 import styled from 'styled-components';
 import Layout from '../components/Layout';
+import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
-import { Container, Row, Col } from '../lib/Grid';
+import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
 import Thumbnail from '../components/Thumbnail';
 import CheckItem from '../components/Check';
 import ContactForm from '../components/ContactForm';
@@ -15,12 +16,33 @@ const pageSettings = {
 };
 
 const TextBlockContent = `
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores itaque inventore sequi tempora amet dolore voluptas? Natus eius repellendus tempora reiciendis ea tempore dolorum temporibus quisquam fuga magni. Quis quam, recusandae, iste, deleniti cum esse distinctio omnis sequi nemo iusto tempore nobis hic nesciunt perspiciatis sunt laboriosam corrupti a mollitia?
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores itaque
+inventore sequi tempora amet dolore voluptas? Natus eius repellendus tempora
+reiciendis ea tempore dolorum temporibus quisquam fuga magni. Quis quam,
+recusandae, iste, deleniti cum esse distinctio omnis sequi nemo iusto tempore
+nobis hic nesciunt perspiciatis sunt laboriosam corrupti a mollitia?
 `;
 
 const StyledContainer = styled(Container)`
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin: 5% 0;
+`;
+
+const AbsoluteCol = styled(Col)`
+    position: absolute;
+    top: 0px;
+    right: 0px;
+`;
+
+const HeaderImage = styled.img`
+    position: absolute;
+    right: -20rem;
+    bottom: -5rem;
+`;
+
+const ContentBlockWrapper = styled.section`
+    background-color: ${theme.colors.mediumgray};
+    margin: 5% 0% 5% 5%;
+    padding: 7.5% 5%;
 `;
 
 const Home = () => (
@@ -37,33 +59,22 @@ const Home = () => (
                         {TextBlockContent}
                     </TextBlock>
                 </Col>
-                <Col md={6} lg={7}>
-                    {/* TODO: Make this image display good on all devices */}
-                    <img alt="" src="/static/img/header/web.svg" />
-                </Col>
+                <AbsoluteCol md={6} lg={7}>
+                    <Hidden xs sm>
+                        <HeaderImage
+                            alt="Bytecode web"
+                            src="/static/img/header/web.svg"
+                        />
+                    </Hidden>
+                </AbsoluteCol>
             </Row>
         </StyledContainer>
         <StyledContainer>
             <Row>
-                <Col md={6} lg={7}>
-                    <Row>
-                        <Col xs={6}>
-                            <Thumbnail />
-                        </Col>
-                        <Col xs={6}>
-                            <Thumbnail />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={6}>
-                            <Thumbnail />
-                        </Col>
-                        <Col xs={6}>
-                            <Thumbnail />
-                        </Col>
-                    </Row>
+                <Col md={6}>
+                    <Thumbnail />
                 </Col>
-                <Col md={6} lg={4}>
+                <Col md={6} lg={6}>
                     <TextBlock
                         subtitle="De subtitel komt hier"
                         title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
@@ -108,52 +119,60 @@ const Home = () => (
                 </Col>
             </Row>
         </StyledContainer>
-        <StyledContainer>
-            <Row>
-                <Col md={4}>
-                    <TextBlock
-                        image="/static/img/content/group.jpg"
-                        alt="This is us :)"
-                        subtitle="Stap 1"
-                        headingType="h2"
-                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
-                        href="//richardhotline.nl"
-                        button=""
-                    >
-                        {TextBlockContent}
-                    </TextBlock>
-                </Col>
-                <Col md={4}>
-                    <TextBlock
-                        image="/static/img/content/group.jpg"
-                        alt="This is us :)"
-                        subtitle="Stap 2"
-                        headingType="h2"
-                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
-                        href="//richardhotline.nl"
-                        button=""
-                    >
-                        {TextBlockContent}
-                    </TextBlock>
-                </Col>
-                <Col md={4}>
-                    <TextBlock
-                        image="/static/img/content/group.jpg"
-                        alt="This is us :)"
-                        subtitle="Stap 3"
-                        headingType="h2"
-                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
-                        href="//richardhotline.nl"
-                        button=""
-                    >
-                        {TextBlockContent}
-                    </TextBlock>
-                </Col>
-            </Row>
-        </StyledContainer>
-        <StyledContainer>
+        <ContentBlockWrapper>
+            <StyledContainer>
+                <Row>
+                    <Col md={4}>
+                        <TextBlock
+                            image="/static/img/content/group.jpg"
+                            alt="This is us :)"
+                            subtitle="Stap 1"
+                            headingType="h2"
+                            title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
+                            href="//richardhotline.nl"
+                            button=""
+                        >
+                            {TextBlockContent}
+                        </TextBlock>
+                    </Col>
+                    <Col md={4}>
+                        <TextBlock
+                            image="/static/img/content/group.jpg"
+                            alt="This is us :)"
+                            subtitle="Stap 2"
+                            headingType="h2"
+                            title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
+                            href="//richardhotline.nl"
+                            button=""
+                        >
+                            {TextBlockContent}
+                        </TextBlock>
+                    </Col>
+                    <Col md={4}>
+                        <TextBlock
+                            image="/static/img/content/group.jpg"
+                            alt="This is us :)"
+                            subtitle="Stap 3"
+                            headingType="h2"
+                            title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
+                            href="//richardhotline.nl"
+                            button=""
+                        >
+                            {TextBlockContent}
+                        </TextBlock>
+                    </Col>
+                </Row>
+            </StyledContainer>
+        </ContentBlockWrapper>
+
+        <ContentBlockWrapper>
+            <TextBlock
+                subtitle="Contact us"
+                headingType="h2"
+                title="Stuur ons een berichtje"
+            />
             <ContactForm />
-        </StyledContainer>
+        </ContentBlockWrapper>
     </Layout>
 );
 

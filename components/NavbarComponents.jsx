@@ -6,14 +6,16 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { transparentize } from 'polished';
 import theme from '../styles/theme';
 
 const NavbarContainer = styled.nav`
     position: relative;
     z-index: 10000;
+    padding: 1rem 10%;
+    background: ${transparentize(0.3, theme.colors.black)};
     @media (max-width: ${theme.breakpointMobileMenu}) {
         height: 7rem;
-        background: ${theme.colors.black};
         width: 100vw;
         position: fixed;
         top: 0;
