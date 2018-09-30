@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledDiv = styled.div`
     width: 100%;
-    height: auto;
+    height: 40rem;
     background-image: url('/static/img/content/interior.png');
     background-size: cover;
     background-blend-mode: overlay;
@@ -24,6 +24,7 @@ const Thumbnail = () => (
     <StyledDiv>
         <Icon>
             <img src="/static/icons/services/api.svg" alt="APIs" />
+            <p>Service</p>
         </Icon>
     </StyledDiv>
 );

@@ -5,8 +5,9 @@ import theme from '../styles/theme';
 
 const ContactFormContainer = styled.div`
     background: none;
-    @media (max-width: ${theme.containerWidths[3]}) {
-        max-width: 18vw;
+
+    @media (min-width: ${theme.containerWidths[0]}px) {
+        max-width: 80%;
     }
 `;
 
