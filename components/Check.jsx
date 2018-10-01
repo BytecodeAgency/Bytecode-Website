@@ -8,6 +8,7 @@ const Content = styled.div`
     align-items: center;
     padding: 1.5rem 0;
     margin-left: 1.75rem;
+    max-width: 80%;
 `;
 
 const Label = styled.p`

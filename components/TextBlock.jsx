@@ -29,7 +29,7 @@ const Paragraph = styled.p`
 `;
 
 const StyledButton = styled(Button)`
-    margin-top: 6rem;
+    margin-top: 5rem;
 `;
 
 const getImage = (src, alt) => {
