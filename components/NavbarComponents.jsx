@@ -17,9 +17,11 @@ const NavbarContainer = styled.nav`
         height: 7rem;
         width: 100vw;
         position: fixed;
+        padding: 1rem 0;
         top: 0;
         left: 0;
         right: 0;
+        background: ${transparentize(0.3, theme.colors.black)};
     }
 `;
 
@@ -110,12 +112,13 @@ const Logo = styled.img`
 const MobileNavLogo = styled.img`
     height: 4.5rem;
     position: absolute;
-    top: 1.25rem;
-    left: 1.25rem;
+    top: 0.4rem;
+    left: 0;
     color: white;
     display: none;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         display: block;
+        width: auto;
     }
 `;
 
@@ -123,8 +126,8 @@ const MenuButton = styled.a`
     height: 3rem;
     width: 3rem;
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 1.3rem;
+    right: 0;
     color: white;
     align-items: center;
     display: none;

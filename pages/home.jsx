@@ -149,14 +149,13 @@ const Home = () => (
                             button="more"
                         >
                             {TextBlockContent}
-                            <ul>
-                                <CheckItem />
-                                <CheckItem />
-                                <CheckItem />
-                            </ul>
                         </TextBlock>
+                        <ul>
+                            <CheckItem />
+                            <CheckItem />
+                            <CheckItem />
+                        </ul>
                     </Row>
-                    <Row />
                 </Col>
             </Row>
         </StyledContainer>
