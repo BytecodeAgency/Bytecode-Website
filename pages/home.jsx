@@ -6,22 +6,15 @@ import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
 import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
 import Thumbnail from '../components/Thumbnail';
-import CheckItem from '../components/Check';
 import ContactForm from '../components/ContactForm';
 
 const pageSettings = {
-    title: 'Home',
-    description: 'Hier de omschrijving',
-    keywords: 'tag1,tag2',
+    title: 'Vind de weg naar jouw digitale succes - Bytecode Digital Agency',
+    description: `Ons gepassioneerde team van ervaren experts helpt je dolgraag
+        met het analyseren, bedenken en ontwikkelen van alles wat jij nodig hebt
+        om je digitaal volledig te ontplooien`,
+    keywords: 'bytecode',
 };
-
-const TextBlockContent = `
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores itaque
-inventore sequi tempora amet dolore voluptas? Natus eius repellendus tempora
-reiciendis ea tempore dolorum temporibus quisquam fuga magni. Quis quam,
-recusandae, iste, deleniti cum esse distinctio omnis sequi nemo iusto tempore
-nobis hic nesciunt perspiciatis sunt laboriosam corrupti a mollitia?
-`;
 
 const HeaderContainer = styled.section`
     background-color: ${theme.colors.mediumgray};
@@ -64,9 +57,13 @@ const ContentBlockWrapper = styled.section`
     padding: 7.5% 5%;
 `;
 
-const EqualHeightImage = styled.img`
+const ProcessStepImage = styled.img`
     height: 60rem;
-    margin-bottom: 10rem;
+    max-height: 30vh;
+    margin-bottom: 5rem;
+    @media (max-width: ${theme.breakpoints[2]}px) {
+        margin-top: 10rem;
+    }
 `;
 
 const Home = () => (
@@ -85,14 +82,14 @@ const Home = () => (
             <Row>
                 <Col md={6} lg={4}>
                     <TextBlock
-                        subtitle="Wij zijn bytecode"
-                        title="Vind je weg naar jouw digitale success"
+                        subtitle="Welkom bij Bytecode"
+                        title="Vind de weg naar jouw digitale succes"
                         href="//richardhotline.nl"
-                        button="Lean more"
+                        button="Lees verder"
                     >
-                        Ons gepassioneerde team helpt je graag met het bedenken,
-                        analyseren en ontwikkelen van alles wat je nodig hebt om
-                        je online volledig te ontplooien
+                        Ons gepassioneerde team helpt je dolgraag met het
+                        analyseren, bedenken en ontwikkelen van alles wat jij
+                        nodig hebt om je digitaal volledig te ontplooien.
                     </TextBlock>
                 </Col>
             </Row>
@@ -117,19 +114,44 @@ const Home = () => (
                 </Col>
                 <Col offset={{ lg: 1 }} md={12} lg={5}>
                     <TextBlock
-                        subtitle="De subtitel komt hier"
-                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
+                        subtitle="Hoe Bytecode kan helpen"
+                        title="Samen halen we alles uit jouw digitale zelf"
                         href="//richardhotline.nl"
                         button="more"
                     >
-                        {TextBlockContent}
+                        Wij maken uitgebreide analyses en strategieën van alles
+                        wat je nodigt hebt om je online ijzersterk te
+                        presenteren en profileren. In combinatie met onze
+                        expertise op het gebied van alle maatwerk
+                        webontwikkeling en IT-automatisering, zorgt dit ervoor
+                        dat je bij ons echt alles uit je digitale zelf kunt
+                        halen.
                     </TextBlock>
                 </Col>
             </Row>
         </StyledContainer>
         <StyledContainer>
             <Row>
-                <Col offset={{ lg: 0 }} md={5} lg={5}>
+                <Col offset={{ lg: 0 }} md={4} lg={4}>
+                    <Row>
+                        <TextBlock
+                            subtitle="Wie wij zijn"
+                            title="Kennis en kwaliteit met een no-bullshit mentaliteit"
+                            href="//richardhotline.nl"
+                            button="more"
+                        >
+                            Wij staan voor een eerlijke en open samenwerking. We
+                            werken mèt elkaar, niet langs elkaar. Ons zul je
+                            nooit om de zaken heen zien draaien; wij vertellen
+                            je hoe het zit en niet anders. Onze kennis en
+                            kwaliteit gebruiken we niet om met moeilijke termen
+                            te smijten, maar in het volledig vervullen van al je
+                            digitale wensen, om zo een kwalitatief hoogstaand en
+                            optimaal functionerend product op te leveren.
+                        </TextBlock>
+                    </Row>
+                </Col>
+                <Col offset={{ lg: 1 }} md={5} lg={5}>
                     <figure>
                         <img
                             // TODO: Make a dynamic way of setting the width with REM
@@ -139,82 +161,63 @@ const Home = () => (
                         />
                     </figure>
                 </Col>
-
-                <Col offset={{ lg: 1 }} md={4} lg={4}>
-                    <Row>
-                        <TextBlock
-                            subtitle="De subtitel komt hier"
-                            title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
-                            href="//richardhotline.nl"
-                            button="more"
-                        >
-                            {TextBlockContent}
-                        </TextBlock>
-                        <ul>
-                            <CheckItem />
-                            <CheckItem />
-                            <CheckItem />
-                        </ul>
-                    </Row>
-                </Col>
             </Row>
         </StyledContainer>
         <ContentBlockWrapper>
             <Row>
                 <Col md={4} lg={3}>
-                    <EqualHeightImage
-                        src="/static/img/content/workflow/analyse.svg"
-                        alt="analyzing..."
+                    <ProcessStepImage
+                        src="/static/img/content/workflow/analyze.svg"
+                        alt="Analyze"
                     />
-                </Col>
-                <Col offset={{ lg: 1 }} md={4} lg={3}>
-                    <EqualHeightImage
-                        src="/static/img/content/workflow/strategise.svg"
-                        alt="analyzing..."
-                    />
-                </Col>
-                <Col offset={{ lg: 1 }} md={4} lg={3}>
-                    <EqualHeightImage
-                        src="/static/img/content/workflow/execute.svg"
-                        alt="analyzing..."
-                    />
-                </Col>
-            </Row>
-
-            <Row>
-                <Col md={4} lg={3}>
                     <TextBlock
                         subtitle="Stap 1"
                         headingType="h2"
-                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
-                        href="//richardhotline.nl"
-                        button=""
+                        title="Analyze"
                     >
-                        {TextBlockContent}
+                        Voordat we starten met ontwikkelen, maken we eerst een
+                        gedetailleerde analyse. Dit stelt ons in staat om een
+                        helder en volledig overzicht te krijgen van de huidige
+                        situatie. Hierdoor kunnen wij de pijnpunten in beeld
+                        brengen en analyseren welke punten het meeste prioriteit
+                        hebben.
                     </TextBlock>
                 </Col>
-
                 <Col offset={{ lg: 1 }} md={4} lg={3}>
+                    <ProcessStepImage
+                        src="/static/img/content/workflow/strategize.svg"
+                        alt="Strategize"
+                    />
                     <TextBlock
                         subtitle="Stap 2"
                         headingType="h2"
-                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
-                        href="//richardhotline.nl"
-                        button=""
+                        title="Strategize"
                     >
-                        {TextBlockContent}
+                        Vervolgens maken wij een duidelijke strategie, waarin we
+                        uiteenzetten welke punten we aan gaan pakken en vooral
+                        op welke manier we dat doen. Bij het ontwikkelen van
+                        deze strategie wegen we de verschillende opties af,
+                        zodat we het best haalbare resultaat met het oog op de
+                        toekomst gaan halen.
                     </TextBlock>
                 </Col>
-
                 <Col offset={{ lg: 1 }} md={4} lg={3}>
+                    <ProcessStepImage
+                        src="/static/img/content/workflow/realize.svg"
+                        alt="Realize"
+                    />
                     <TextBlock
                         subtitle="Stap 3"
                         headingType="h2"
-                        title="De titel maar dan een hele erge fucking lange titel waar geen einde aan lijkt te komen"
-                        href="//richardhotline.nl"
-                        button=""
+                        title="Realize"
                     >
-                        {TextBlockContent}
+                        Nadat we alles helemaal hebben geanalyseerd en gepland,
+                        is het tijd om de handen uit de mouwen te steken en het
+                        plan te realiseren. Hierbij werken we volgens de
+                        scrum-methode. Op het moment dat het plan uitgevoerd is,
+                        is het tijd om het resultaat te analyzeren en om te
+                        kijken hoe het nóg beter kan. We blijven dus verbeteren
+                        en doorontwikkelen.
                     </TextBlock>
                 </Col>
             </Row>
@@ -222,7 +225,7 @@ const Home = () => (
 
         <ContentBlockWrapper>
             <TextBlock
-                subtitle="Contact us"
+                subtitle="We staan voor je klaar"
                 headingType="h2"
                 title="Stuur ons een berichtje"
             />

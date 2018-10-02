@@ -15,6 +15,7 @@ const FooterCol = ({ props, children }) => (
 const FooterLogo = styled.img`
     height: 6rem;
     width: auto;
+    margin-left: -3.4rem;
 `;
 
 const FooterLinkContainer = styled.h4`
@@ -53,7 +54,7 @@ const Copyright = styled.p`
 
 const Footer = () => (
     <footer>
-        <Container fluid={true}>
+        <Container>
             <Row>
                 <FooterCol>
                     <FooterLogo src="/static/img/logo.svg" alt="Bytecode" />
@@ -72,7 +73,7 @@ const Footer = () => (
                     <FooterHeadingContainer>
                         <p className="subtitle">Kom langs</p>
                     </FooterHeadingContainer>
-                    <h4>Verlengde Spiegelmakerstraat 13</h4>
+                    <h4>Verl. Spiegelmakerstraat 13</h4>
                     <h4>2645LZ Delfgauw, Nederland</h4>
                     <TopPaddedParagraph>
                         Onze deur staat altijd open, maar een afspraak plannen

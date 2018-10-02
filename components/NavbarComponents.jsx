@@ -12,7 +12,7 @@ import theme from '../styles/theme';
 const NavbarContainer = styled.nav`
     position: relative;
     z-index: 10000;
-    padding: 1rem 10%;
+    padding: 1rem 0;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         height: 7rem;
         width: 100vw;
