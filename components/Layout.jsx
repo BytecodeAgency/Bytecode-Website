@@ -27,7 +27,7 @@ const Layout = ({ children, pageSettings }) => (
             { description(pageSettings.description) }
             { keywords(pageSettings.keywords) }
         </Head>
-        {/* <Navbar /> */}
+        <Navbar />
         <main className="main">{children}</main>
         <Footer />
     </div>
