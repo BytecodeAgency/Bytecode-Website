@@ -1,7 +1,7 @@
 /* eslint-disable consistent-return, prettier/prettier, max-len */
 
 import Head from 'next/head';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import Footer from './Footer';
 
 const description = descriptionInput => {
@@ -27,7 +27,7 @@ const Layout = ({ children, pageSettings }) => (
             { description(pageSettings.description) }
             { keywords(pageSettings.keywords) }
         </Head>
-        <Navbar />
+        {/* <Navbar /> */}
         <main className="main">{children}</main>
         <Footer />
     </div>
