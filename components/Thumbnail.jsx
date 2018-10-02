@@ -18,7 +18,6 @@ const StyledDiv = styled.div`
 const Icon = styled.figure`
     width: 80%;
     height: auto;
-    overflow: hidden;
     display: flex;
     align-items: center;
     flex-direction: column;

@@ -102,24 +102,28 @@ const Home = () => (
                             <Thumbnail
                                 serviceName="Websites, Webshops en Webapps"
                                 serviceIcon="/static/icons/services/mobile.svg"
+                                backgroundImage="/static/img/services/mobile.jpg"
                             />
                         </Col>
                         <Col sm={6}>
                             <Thumbnail
                                 serviceName="Cloud en Automatisering"
                                 serviceIcon="/static/icons/services/cloud.svg"
+                                backgroundImage="/static/img/services/servers.jpg"
                             />
                         </Col>
                         <Col sm={6}>
                             <Thumbnail
                                 serviceName="Mobile- en API-ontwikkeling"
                                 serviceIcon="/static/icons/services/api.svg"
+                                backgroundImage="/static/img/services/code.jpeg"
                             />
                         </Col>
                         <Col sm={6}>
                             <Thumbnail
                                 serviceName="Branding, Design en Marketing"
                                 serviceIcon="/static/icons/services/design.svg"
+                                backgroundImage="/static/img/services/design.jpg"
                             />
                         </Col>
                     </Row>
