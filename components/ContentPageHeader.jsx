@@ -39,7 +39,7 @@ const ContentPageHeader = () => (
                         subtitle="De subtitel komt hier"
                         title="De titel maar dan een hele erge fucking lange
                         titel waar geen einde aan lijkt te komen"
-                        href="//richardhotline.nl"
+                        href="//bytecode.nl"
                         button="more"
                     >
                         {TextBlockContent}

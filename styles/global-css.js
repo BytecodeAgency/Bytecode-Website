@@ -52,6 +52,8 @@ injectGlobal`
     img { width: 100%; height: auto; margin:0; padding: 0}
     ${typographyElementStyling}
     ${typographyClassStyling}
+    @media (max-width: ${theme.breakpoints[0]}px) { h1 { font-size: 4rem; } }
+    body { overflow-x: hidden; }
 `;
 
 setConfiguration({ containerWidths: theme.containerWidths });
