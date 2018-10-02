@@ -66,15 +66,15 @@ const Footer = () => (
                             015-2024222
                         </FooterLink>
                         <br />
-                        Social Icons
+                        {/* TODO: Add Social Icons */}
                     </FooterLinkContainer>
                 </FooterCol>
                 <FooterCol>
                     <FooterHeadingContainer>
                         <p className="subtitle">Kom langs</p>
                     </FooterHeadingContainer>
-                    <h4>Verl. Spiegelmakerstraat 13</h4>
-                    <h4>2645LZ Delfgauw, Nederland</h4>
+                    <h4>Verl. Spiegelmakerstr.</h4>
+                    <h4>13, Delfgauw, Nederland</h4>
                     <TopPaddedParagraph>
                         Onze deur staat altijd open, maar een afspraak plannen
                         is wel gewenst
@@ -103,10 +103,14 @@ const Footer = () => (
                         <p className="subtitle">Documenten</p>
                     </FooterHeadingContainer>
                     <FooterText>
+                        {/* TODO: Add documents
                         <FooterLink href="#">Algemene Voorwaarden</FooterLink>
                         <FooterLink href="#">Privacy Policy</FooterLink>
                         <FooterLink href="#">Cookie Policy</FooterLink>
-                        <FooterLink href="#">Security Policy</FooterLink>
+                        */}
+                        <FooterLink href="https://security.bytecode.nl">
+                            Security Policy
+                        </FooterLink>
                     </FooterText>
                     <FooterSpacer />
                     <FooterHeadingContainer>

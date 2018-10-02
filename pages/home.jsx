@@ -84,7 +84,7 @@ const Home = () => (
                     <TextBlock
                         subtitle="Welkom bij Bytecode"
                         title="Vind de weg naar jouw digitale succes"
-                        href="//richardhotline.nl"
+                        href="//bytecode.nl"
                         button="Lees verder"
                     >
                         Ons gepassioneerde team helpt je dolgraag met het
@@ -98,17 +98,33 @@ const Home = () => (
             <Row>
                 <Col md={12} lg={5}>
                     <Row>
-                        <Col md={6}>
-                            <Thumbnail />
+                        <Col sm={6}>
+                            <Thumbnail
+                                serviceName="Websites, Webshops en Webapps"
+                                serviceIcon="/static/icons/services/mobile.svg"
+                                backgroundImage="/static/img/services/mobile.jpg"
+                            />
                         </Col>
-                        <Col md={6}>
-                            <Thumbnail />
+                        <Col sm={6}>
+                            <Thumbnail
+                                serviceName="Cloud en Automatisering"
+                                serviceIcon="/static/icons/services/cloud.svg"
+                                backgroundImage="/static/img/services/servers.jpg"
+                            />
                         </Col>
-                        <Col md={6}>
-                            <Thumbnail />
+                        <Col sm={6}>
+                            <Thumbnail
+                                serviceName="Mobile- en API-ontwikkeling"
+                                serviceIcon="/static/icons/services/api.svg"
+                                backgroundImage="/static/img/services/code.jpeg"
+                            />
                         </Col>
-                        <Col md={6}>
-                            <Thumbnail />
+                        <Col sm={6}>
+                            <Thumbnail
+                                serviceName="Branding, Design en Marketing"
+                                serviceIcon="/static/icons/services/design.svg"
+                                backgroundImage="/static/img/services/design.jpg"
+                            />
                         </Col>
                     </Row>
                 </Col>
@@ -116,7 +132,7 @@ const Home = () => (
                     <TextBlock
                         subtitle="Hoe Bytecode kan helpen"
                         title="Samen halen we alles uit jouw digitale zelf"
-                        href="//richardhotline.nl"
+                        href="//bytecode.nl"
                         button="more"
                     >
                         Wij maken uitgebreide analyses en strategieën van alles
@@ -137,7 +153,7 @@ const Home = () => (
                         <TextBlock
                             subtitle="Wie wij zijn"
                             title="Kennis en kwaliteit met een no-bullshit mentaliteit"
-                            href="//richardhotline.nl"
+                            href="//bytecode.nl"
                             button="more"
                         >
                             Wij staan voor een eerlijke en open samenwerking. We
