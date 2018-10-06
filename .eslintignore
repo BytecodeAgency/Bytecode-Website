@@ -6,3 +6,4 @@
 /docs/**
 /jsdoc/**
 .next/**
+ecosystem.config.js
