@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Container, Row, Col } from '../lib/Grid';
 import Button from './Button';
+import AllSocials from '../lib/Socials';
 
 const FooterColInnerContainer = styled.div`
     margin-bottom: 5rem;
@@ -66,7 +67,7 @@ const Footer = () => (
                             015-2024222
                         </FooterLink>
                         <br />
-                        {/* TODO: Add Social Icons */}
+                        <AllSocials />
                     </FooterLinkContainer>
                 </FooterCol>
                 <FooterCol>
