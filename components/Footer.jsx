@@ -15,12 +15,8 @@ const FooterCol = ({ props, children }) => (
 );
 
 const FooterIcon = styled.img`
-    height: 5rem;
+    height: 4.5rem;
     width: auto;
-`;
-
-const OpenSourceIcon = styled(FooterIcon)`
-    height: 3.2rem;
 `;
 
 const FooterLogo = styled(FooterIcon)`
@@ -37,9 +33,13 @@ const FooterLink = styled.a`
 `;
 
 const FooterHeadingContainer = styled.div`
-    height: 5rem;
+    height: 10rem;
     display: flex;
     align-items: center;
+`;
+
+const TopPaddedParagraph = styled.p`
+    margin-top: 1.4rem;
 `;
 
 const FooterButton = styled(Button)`
@@ -86,11 +86,10 @@ const Footer = () => (
                     <FooterHeadingContainer>
                         <p className="subtitle">Kom langs</p>
                     </FooterHeadingContainer>
-                    <h4>Verlengde Spiegelmakerstraat 13, <br/>Delfgauw, Nederland</h4>
                     <TopPaddedParagraph>
                         <FooterText>
-                            Onze deur staat altijd open, maar een afspraak plannen
-                        is wel gewenst
+                            Onze deur staat altijd open, maar een afspraak
+                            plannen is wel gewenst
                         </FooterText>
                     </TopPaddedParagraph>
                     <FooterButton href="https://calendly.com/bytecode">
@@ -99,7 +98,7 @@ const Footer = () => (
                 </FooterCol>
                 <FooterCol>
                     <FooterHeadingContainer>
-                        <OpenSourceIcon
+                        <FooterIcon
                             src="/static/icons/social/open-source.svg"
                             alt="Open source"
                         />
@@ -151,4 +150,3 @@ const Footer = () => (
 );
 
 export default Footer;
-

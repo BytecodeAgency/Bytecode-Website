@@ -11,6 +11,8 @@ import { Container, Row, Col } from '../lib/Grid';
 const StyledContainer = styled(Container)`
     margin-top: 10rem;
     margin-bottom: 10rem;
+    max-width: none !important;
+    margin: 10rem 0rem;
 `;
 
 const pageSettings = {
@@ -25,19 +27,27 @@ const ContentBlockWrapper = styled.section`
     margin: 5% 0% 5% 5%;
 `;
 
-const loremipsum = `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Asperiores itaque inventore sequi tempora amet dolore voluptas? Natus eius
-repellendus tempora reiciendis ea tempore dolorum temporibus quisquam fuga
-magni. Quis quam, recusandae, iste, deleniti cum esse distinctio omnis sequi
-nemo iusto tempore nobis hic nesciunt perspiciatis sunt laboriosam corrupti a
-mollitia? `;
+const PaddedColumn = styled(Col)`
+    padding: 12% 0 15% 0;
+`;
+
+const loremipsum = `Lorem ipsum dolor sit 
+amet consectetur adipisicing elit.Asperiores 
+itaque inventore sequi tempora amet dolore 
+voluptas? Natus eius repellendus tempora 
+reiciendis ea tempore dolorum temporibus 
+quisquam fuga magni. Quis quam, recusandae, 
+iste, deleniti cum esse distinctio omnis sequi
+nemo iusto tempore nobis hic nesciunt 
+perspiciatis sunt laboriosam corrupti 
+amollitia? `;
 
 const Over = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader />
         <StyledContainer>
             <Row>
-                <Col md={6}>
+                <PaddedColumn xl={4} lg={5} md={6}>
                     <TextBlock
                         title="De titel maar dan een hele erge fucking lange
                         titel waar geen einde aan lijkt te komen"
@@ -45,7 +55,7 @@ const Over = () => (
                     >
                         {loremipsum}
                     </TextBlock>
-                </Col>
+                </PaddedColumn>
             </Row>
         </StyledContainer>
         <ImageBlock src="/static/img/content/interior.png" alt="Funny stuff" />
@@ -64,7 +74,7 @@ const Over = () => (
                         </TextBlock>
                     </Col>
                 </Row>
-                <StyledContainer>
+                <Container fluid={true}>
                     <Row>
                         <Col md={3} xs={6}>
                             <TeamMember
@@ -115,7 +125,7 @@ const Over = () => (
                             />
                         </Col>
                     </Row>
-                </StyledContainer>
+                </Container>
             </StyledContainer>
         </ContentBlockWrapper>
     </Layout>

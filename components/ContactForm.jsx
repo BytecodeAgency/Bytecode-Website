@@ -6,9 +6,9 @@ import theme from '../styles/theme';
 const ContactFormContainer = styled.div`
     background: none;
 
-    @media (min-width: ${theme.containerWidths[0]}px) {
+    /* @media (min-width: ${theme.containerWidths[0]}px) {
         max-width: 80%;
-    }
+    } */
 `;
 
 const InputField = styled.input`

@@ -52,10 +52,7 @@ class Navbar extends React.Component {
                     </MenuButton>
                     <NavbarContent menuIsOpen={menuIsOpen}>
                         {/* TODO: Link Logo to homepage */}
-                        <Logo
-                            src="/static/img/logo-min.svg"
-                            alt="Bytecode logo"
-                        />
+                        <Logo src="/static/img/logo.svg" alt="Bytecode logo" />
                         <NavbarItems>
                             <MenuButton href="#" onClick={this.closeMenu}>
                                 <img

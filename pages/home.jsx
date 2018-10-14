@@ -33,6 +33,10 @@ const AbsoluteCol = styled(Col)`
     position: absolute;
 `;
 
+const CenterAlignedRow = styled(Row)`
+    align-items: center;
+`;
+
 const HeaderFigure = styled.figure`
     position: absolute;
     right: 10vw;
@@ -147,9 +151,8 @@ const Home = () => (
             </Row>
         </StyledContainer>
         <StyledContainer>
-            <Row>
+            <CenterAlignedRow>
                 <Col offset={{ lg: 0 }} md={4} lg={4}>
-                    <Row>
                         <TextBlock
                             subtitle="Wie wij zijn"
                             title="Kennis en kwaliteit met een no-bullshit mentaliteit"
@@ -165,7 +168,6 @@ const Home = () => (
                             digitale wensen, om zo een kwalitatief hoogstaand en
                             optimaal functionerend product op te leveren.
                         </TextBlock>
-                    </Row>
                 </Col>
                 <Col offset={{ lg: 1 }} md={5} lg={5}>
                     <figure>
@@ -177,7 +179,7 @@ const Home = () => (
                         />
                     </figure>
                 </Col>
-            </Row>
+            </CenterAlignedRow>
         </StyledContainer>
         <ContentBlockWrapper>
             <Row>
