@@ -15,9 +15,13 @@ const FooterCol = ({ props, children }) => (
 );
 
 const FooterIcon = styled.img`
-    height: 4.5rem;
+    height: 5rem;
     width: auto;
-`
+`;
+
+const OpenSourceIcon = styled(FooterIcon)`
+    height: 3.2rem;
+`;
 
 const FooterLogo = styled(FooterIcon)`
     margin-left: -3.4rem;
@@ -27,20 +31,15 @@ const FooterLinkContainer = styled.h4`
     margin: 1rem 0;
 `;
 
-
 const FooterLink = styled.a`
     display: block;
     text-decoration: none;
 `;
 
 const FooterHeadingContainer = styled.div`
-    height: 10rem;
+    height: 5rem;
     display: flex;
     align-items: center;
-`;
-
-const TopPaddedParagraph = styled.p`
-    margin-top: 1.4rem;
 `;
 
 const FooterButton = styled(Button)`
@@ -87,21 +86,24 @@ const Footer = () => (
                     <FooterHeadingContainer>
                         <p className="subtitle">Kom langs</p>
                     </FooterHeadingContainer>
-                    <h4>Verlengde Spiegelmakerstraat 13, <br/>Delfgauw, Nederland</h4>
-                    <h4></h4>
-                    <TopPaddedParagraph>
-                        <FooterText>
-                            Onze deur staat altijd open, maar een afspraak plannen
-                        is wel gewenst
-                        </FooterText>
-                    </TopPaddedParagraph>
+                    <FooterText>
+                        Onze deur staat altijd open, maar een afspraak plannen
+                        is wel gewenst.
+                        <br />
+                        <br />
+                        Ons adres is Verlengde Spiegelmakerstraat 13, 2645LZ
+                        Delfgauw.
+                    </FooterText>
                     <FooterButton href="https://calendly.com/bytecode">
                         Plan een afspraak
                     </FooterButton>
                 </FooterCol>
                 <FooterCol>
                     <FooterHeadingContainer>
-                        <FooterIcon src="/static/icons/social/open-source.svg" alt="Open source" />
+                        <OpenSourceIcon
+                            src="/static/icons/social/open-source.svg"
+                            alt="Open source"
+                        />
                     </FooterHeadingContainer>
                     <FooterText>
                         Wij dragen graag bij aan open source projecten en vrije
