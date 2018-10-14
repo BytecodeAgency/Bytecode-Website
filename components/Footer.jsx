@@ -15,9 +15,13 @@ const FooterCol = ({ props, children }) => (
 );
 
 const FooterIcon = styled.img`
-    height: 4.5rem;
+    height: 5rem;
     width: auto;
-`
+`;
+
+const OpenSourceIcon = styled(FooterIcon)`
+    height: 3.2rem;
+`;
 
 const FooterLogo = styled(FooterIcon)`
     margin-left: -3.4rem;
@@ -27,20 +31,15 @@ const FooterLinkContainer = styled.h4`
     margin: 1rem 0;
 `;
 
-
 const FooterLink = styled.a`
     display: block;
     text-decoration: none;
 `;
 
 const FooterHeadingContainer = styled.div`
-    height: 10rem;
+    height: 5rem;
     display: flex;
     align-items: center;
-`;
-
-const TopPaddedParagraph = styled.p`
-    margin-top: 1.4rem;
 `;
 
 const FooterButton = styled(Button)`
@@ -100,7 +99,10 @@ const Footer = () => (
                 </FooterCol>
                 <FooterCol>
                     <FooterHeadingContainer>
-                        <FooterIcon src="/static/icons/social/open-source.svg" alt="Open source" />
+                        <OpenSourceIcon
+                            src="/static/icons/social/open-source.svg"
+                            alt="Open source"
+                        />
                     </FooterHeadingContainer>
                     <FooterText>
                         Wij dragen graag bij aan open source projecten en vrije

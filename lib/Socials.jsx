@@ -76,10 +76,19 @@ export const SocialIcon = ({ url, social }) => (
 
 const AllSocials = () => (
     <div>
-        <SocialIcon url="#" social="facebook" />
-        <SocialIcon url="#" social="twitter" />
-        <SocialIcon url="#" social="instagram" />
-        <SocialIcon url="#" social="linkedin" />
+        <SocialIcon
+            url="https://www.facebook.com/bytecodeagency"
+            social="facebook"
+        />
+        <SocialIcon url="https://twitter.com/bytecodeagency" social="twitter" />
+        <SocialIcon
+            url="https://www.instagram.com/bytecodeagency"
+            social="instagram"
+        />
+        <SocialIcon
+            url="https://www.linkedin.com/company/bytecodeagency"
+            social="linkedin"
+        />
     </div>
 );
 
