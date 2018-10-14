@@ -88,7 +88,6 @@ const Footer = () => (
                         <p className="subtitle">Kom langs</p>
                     </FooterHeadingContainer>
                     <h4>Verlengde Spiegelmakerstraat 13, <br/>Delfgauw, Nederland</h4>
-                    <h4></h4>
                     <TopPaddedParagraph>
                         <FooterText>
                             Onze deur staat altijd open, maar een afspraak plannen
@@ -150,3 +149,4 @@ const Footer = () => (
 );
 
 export default Footer;
+
