@@ -27,6 +27,7 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-grid-system": "^4.1.7",
+    "sqreen": "^1.26.0",
     "styled-components": "^3.4.1",
     "styled-components-style-utils": "^1.2.0",
     "url": "^0.11.0"
