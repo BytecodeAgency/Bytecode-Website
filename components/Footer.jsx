@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import { Container, Row, Col } from '../lib/Grid';
 import Button from './Button';
 import AllSocials from '../lib/Socials';
+import theme from '../styles/theme';
 
 const FooterColInnerContainer = styled.div`
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 `;
 
 const FooterCol = ({ props, children }) => (
@@ -13,9 +14,16 @@ const FooterCol = ({ props, children }) => (
     </Col>
 );
 
-const FooterLogo = styled.img`
-    height: 6rem;
+const FooterIcon = styled.img`
+    height: 5rem;
     width: auto;
+`;
+
+const OpenSourceIcon = styled(FooterIcon)`
+    height: 3.2rem;
+`;
+
+const FooterLogo = styled(FooterIcon)`
     margin-left: -3.4rem;
 `;
 
@@ -29,15 +37,15 @@ const FooterLink = styled.a`
 `;
 
 const FooterHeadingContainer = styled.div`
-    height: 3.2rem;
-`;
-
-const TopPaddedParagraph = styled.p`
-    margin-top: 1.4rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
 `;
 
 const FooterButton = styled(Button)`
     margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 2.5rem;
 `;
 
 const FooterText = styled.p`
@@ -49,8 +57,10 @@ const FooterSpacer = styled.div`
 `;
 
 const Copyright = styled.p`
-    margin: 1rem 0 2rem;
+    margin: 2rem 2rem;
     text-align: center;
+    font-size: 1rem;
+    color: ${theme.colors.white};
 `;
 
 const Footer = () => (
@@ -58,7 +68,9 @@ const Footer = () => (
         <Container>
             <Row>
                 <FooterCol>
-                    <FooterLogo src="/static/img/logo.svg" alt="Bytecode" />
+                    <FooterHeadingContainer>
+                        <FooterLogo src="/static/img/logo.svg" alt="Bytecode" />
+                    </FooterHeadingContainer>
                     <FooterLinkContainer>
                         <FooterLink href="mailto:info@bytecode.nl">
                             info@bytecode.nl
@@ -74,26 +86,31 @@ const Footer = () => (
                     <FooterHeadingContainer>
                         <p className="subtitle">Kom langs</p>
                     </FooterHeadingContainer>
-                    <h4>Verl. Spiegelmakerstr.</h4>
-                    <h4>13, Delfgauw, Nederland</h4>
-                    <TopPaddedParagraph>
+                    <FooterText>
                         Onze deur staat altijd open, maar een afspraak plannen
-                        is wel gewenst
-                    </TopPaddedParagraph>
+                        is wel gewenst.
+                        <br />
+                        <br />
+                        Ons adres is Verlengde Spiegelmakerstraat 13, 2645LZ
+                        Delfgauw.
+                    </FooterText>
                     <FooterButton href="https://calendly.com/bytecode">
                         Plan een afspraak
                     </FooterButton>
                 </FooterCol>
                 <FooterCol>
                     <FooterHeadingContainer>
-                        <p className="subtitle">Open Source</p>
+                        <OpenSourceIcon
+                            src="/static/icons/social/open-source.svg"
+                            alt="Open source"
+                        />
                     </FooterHeadingContainer>
-                    <p>
+                    <FooterText>
                         Wij dragen graag bij aan open source projecten en vrije
                         software. Om de daad bij het woord te voegen hebben wij
                         de broncode van deze website onder AGPL-3.0 licentie
                         vrijgegeven.
-                    </p>
+                    </FooterText>
                     {/* eslint-disable-next-line max-len */}
                     <FooterButton href="https://github.com/BytecodeBV/Bytecode-Website">
                         Bekijk broncode
