@@ -38,7 +38,7 @@ class Navbar extends React.Component {
         return (
             <NavbarContainer>
                 <Container>
-                    <MobileNavLogo src="/static/img/logo-min.svg" />
+                    <MobileNavLogo src="/static/img/logo.svg" />
                     <BlackOverlay
                         menuIsOpen={menuIsOpen}
                         onClick={this.closeMenu}
