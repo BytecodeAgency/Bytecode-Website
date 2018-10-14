@@ -1,4 +1,10 @@
+// Load env vars
 require('dotenv').config();
+
+// Setup Sqreen
+if (process.env.ENABLE_SQREEN === 'true' && process.env.SQREEN_TOKEN) {
+    require('sqreen'); // eslint-disable-line global-require
+}
 
 const bodyParser = require('body-parser');
 const express = require('express');
