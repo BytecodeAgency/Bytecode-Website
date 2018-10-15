@@ -113,10 +113,18 @@ export const socialIcons = {
     `,
 };
 
+// eslint-disable-next-line arrow-parens
+export const getMinifiedSocial = social => {
+    const socialHtml = socialIcons[social];
+    const twoOrMoreWhitespaceRegex = /\s{2,}/g;
+    const minifiedHtml = socialHtml.replace(twoOrMoreWhitespaceRegex, ' ');
+    return minifiedHtml;
+};
+
 /* eslint-disable react/no-danger */
 export const SocialIcon = ({ url, social }) => (
     <FooterSocialIcon href={url}>
-        <span dangerouslySetInnerHTML={{ __html: socialIcons[social] }} />
+        <span dangerouslySetInnerHTML={{ __html: getMinifiedSocial(social) }} />
     </FooterSocialIcon>
 );
 
