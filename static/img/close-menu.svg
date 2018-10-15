@@ -1,14 +1,17 @@
-<svg width="32px" height="19px" viewBox="0 0 32 19" version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs></defs>
-    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD-Copy-2" transform="translate(-18.000000, -26.000000)" fill="#FFFFFF">
-            <g id="Menu-Mobile" transform="translate(0.000000, -1.000000)">
-                <g id="Buttons/menu_mobile" transform="translate(18.000000, 27.000000)">
-                    <rect id="Rectangle-3" x="0" y="0" width="32" height="1"></rect>
-                    <rect id="Rectangle-3-Copy" x="0" y="9" width="32" height="1"></rect>
-                    <rect id="Rectangle-3-Copy-2" x="0" y="18" width="32" height="1"></rect>
+<svg width="32" height="19"
+    xmlns="http://www.w3.org/2000/svg">
+
+    <g>
+        <title>background</title>
+        <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+    </g>
+    <g>
+        <title>Layer 1</title>
+        <g fill-rule="evenodd" fill="none" id="Home">
+            <g fill="#FFFFFF" id="Desktop-HD-Copy-2">
+                <g id="Menu-Mobile">
+                    <rect stroke="null" x="4.062489" transform="rotate(-44.70132827758789 15.785093307495112,9.417304039001463) " height="1" width="23.44521" y="8.917303" id="Rectangle-3-Copy"/>
+                    <rect stroke="null" x="4.062489" transform="rotate(45 15.785093307495117,9.41730213165283) " height="1" width="23.44521" y="8.917303" id="svg_1"/>
                 </g>
             </g>
         </g>

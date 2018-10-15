@@ -2,16 +2,17 @@
 
 import React from 'react';
 import NavbarComponents from './NavbarComponents';
-import { Container } from '../lib/Grid';
 
 const {
     NavbarContainer,
+    InnerNavbarContainer,
     NavbarContent,
     NavbarItems,
     NavbarItem,
     Logo,
     MobileNavLogo,
     MenuButton,
+    CloseMenuButton,
     BlackOverlay,
 } = NavbarComponents;
 
@@ -37,15 +38,15 @@ class Navbar extends React.Component {
         const { menuIsOpen } = this.state;
         return (
             <NavbarContainer>
-                <Container>
-                    <MobileNavLogo src="/static/img/logo.svg" />
+                <InnerNavbarContainer>
+                    <MobileNavLogo src="/static/img/logo-min.svg" />
                     <BlackOverlay
                         menuIsOpen={menuIsOpen}
                         onClick={this.closeMenu}
                     />
                     <MenuButton href="#" onClick={this.openMenu}>
                         <img
-                            src="/static/img/close-menu.svg"
+                            src="/static/img/hamburger-menu.svg"
                             alt="Close menu"
                             width="100%"
                         />
@@ -54,13 +55,13 @@ class Navbar extends React.Component {
                         {/* TODO: Link Logo to homepage */}
                         <Logo src="/static/img/logo.svg" alt="Bytecode logo" />
                         <NavbarItems>
-                            <MenuButton href="#" onClick={this.closeMenu}>
+                            <CloseMenuButton href="#" onClick={this.closeMenu}>
                                 <img
                                     src="/static/img/close-menu.svg"
                                     alt="Close menu"
                                     width="100%"
                                 />
-                            </MenuButton>
+                            </CloseMenuButton>
                             <NavbarItem href="/" text="Home" />
                             <NavbarItem href="/services" text="Services" />
                             <NavbarItem href="/over" text="Over" />
@@ -68,7 +69,7 @@ class Navbar extends React.Component {
                             <NavbarItem href="/contact" text="Contact" />
                         </NavbarItems>
                     </NavbarContent>
-                </Container>
+                </InnerNavbarContainer>
             </NavbarContainer>
         );
     }
