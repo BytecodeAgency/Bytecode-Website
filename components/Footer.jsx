@@ -15,16 +15,16 @@ const FooterCol = ({ props, children }) => (
 );
 
 const FooterIcon = styled.img`
-    height: 5rem;
+    height: 4.5rem;
     width: auto;
+`;
+
+const FooterLogo = styled(FooterIcon)`
+    margin-left: -3.1rem;
 `;
 
 const OpenSourceIcon = styled(FooterIcon)`
     height: 3.2rem;
-`;
-
-const FooterLogo = styled(FooterIcon)`
-    margin-left: -3.4rem;
 `;
 
 const FooterLinkContainer = styled.h4`
@@ -45,7 +45,7 @@ const FooterHeadingContainer = styled.div`
 const FooterButton = styled(Button)`
     margin-top: 2rem;
     font-size: 1.2rem;
-    padding: 0.5rem 2.5rem;
+    padding: 0.7rem 2.5rem;
 `;
 
 const FooterText = styled.p`
@@ -88,9 +88,7 @@ const Footer = () => (
                     </FooterHeadingContainer>
                     <FooterText>
                         Onze deur staat altijd open, maar een afspraak plannen
-                        is wel gewenst.
-                        <br />
-                        <br />
+                        is wel gewenst. <br /> <br />
                         Ons adres is Verlengde Spiegelmakerstraat 13, 2645LZ
                         Delfgauw.
                     </FooterText>

@@ -54,6 +54,7 @@ injectGlobal`
     ${typographyClassStyling}
     @media (max-width: ${theme.breakpoints[0]}px) { h1 { font-size: 4rem; } }
     body { overflow-x: hidden; }
+    textarea { resize: vertical; }
 `;
 
 setConfiguration({ containerWidths: theme.containerWidths });
