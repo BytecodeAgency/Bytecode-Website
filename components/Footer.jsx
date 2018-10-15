@@ -20,7 +20,7 @@ const FooterIcon = styled.img`
 `;
 
 const FooterLogo = styled(FooterIcon)`
-    margin-left: -3.4rem;
+    margin-left: -3.1rem;
 `;
 
 const OpenSourceIcon = styled(FooterIcon)`
@@ -45,7 +45,7 @@ const FooterHeadingContainer = styled.div`
 const FooterButton = styled(Button)`
     margin-top: 2rem;
     font-size: 1.2rem;
-    padding: 0.5rem 2.5rem;
+    padding: 0.7rem 2.5rem;
 `;
 
 const FooterText = styled.p`
