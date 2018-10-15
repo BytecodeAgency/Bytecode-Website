@@ -19,15 +19,8 @@ export const socialIcons = {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.5 58.5">
             <defs>
                 <style>
-                    .cls-1 {
-                        fill: ${socialIconFillColor};
-                    }
-                    .cls-2 {
-                        fill: none;
-                        stroke: ${socialIconFillColor};
-                        stroke-miterlimit: 10;
-                        stroke-width: 1.5px;
-                    }
+                    .cls-1 { fill: ${socialIconFillColor}; }
+                    .cls-2 { fill: none; stroke: ${socialIconFillColor}; stroke-miterlimit: 10; stroke-width: 1.5px; }
                 </style>
             </defs>
             <title>Facebook</title>
@@ -43,15 +36,8 @@ export const socialIcons = {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.5 58.5">
             <defs>
                 <style>
-                    .cls-1 {
-                        fill: ${socialIconFillColor};
-                    }
-                    .cls-2 {
-                        fill: none;
-                        stroke: ${socialIconFillColor};
-                        stroke-miterlimit: 10;
-                        stroke-width: 1.5px;
-                    }
+                    .cls-1 { fill: ${socialIconFillColor}; }
+                    .cls-2 { fill: none; stroke: ${socialIconFillColor}; stroke-miterlimit: 10; stroke-width: 1.5px; }
                 </style>
             </defs>
             <title>Asset 75</title>
@@ -67,15 +53,8 @@ export const socialIcons = {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.5 58.5">
             <defs>
                 <style>
-                    .cls-1 {
-                        fill: ${socialIconFillColor};
-                    }
-                    .cls-2 {
-                        fill: none;
-                        stroke: ${socialIconFillColor};
-                        stroke-miterlimit: 10;
-                        stroke-width: 1.5px;
-                    }
+                    .cls-1 { fill: ${socialIconFillColor}; }
+                    .cls-2 { fill: none; stroke: ${socialIconFillColor}; stroke-miterlimit: 10; stroke-width: 1.5px; }
                 </style>
             </defs>
             <title>Asset 74</title>
@@ -91,15 +70,8 @@ export const socialIcons = {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.5 58.5">
             <defs>
                 <style>
-                    .cls-1 {
-                        fill: ${socialIconFillColor};
-                    }
-                    .cls-2 {
-                        fill: none;
-                        stroke: ${socialIconFillColor};
-                        stroke-miterlimit: 10;
-                        stroke-width: 1.5px;
-                    }
+                    .cls-1 { fill: ${socialIconFillColor}; }
+                    .cls-2 { fill: none; stroke: ${socialIconFillColor}; stroke-miterlimit: 10; stroke-width: 1.5px; }
                 </style>
             </defs>
             <title>Asset 73</title>

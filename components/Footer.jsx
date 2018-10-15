@@ -92,7 +92,6 @@ const Footer = () => (
                         Ons adres is Verlengde Spiegelmakerstraat 13, 2645LZ
                         Delfgauw.
                     </FooterText>
-
                     <FooterButton href="https://calendly.com/bytecode">
                         Plan een afspraak
                     </FooterButton>
