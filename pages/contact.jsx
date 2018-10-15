@@ -20,7 +20,7 @@ const HeaderContainer = styled.section`
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     margin: 0% 0% 5% 5%;
-    padding: 25vh 2% 25vh 5%;
+    padding: 20vh 2% 20vh 5%;
 `;
 
 const AbsoluteCol = styled(Col)`
@@ -71,21 +71,17 @@ const Contact = () => (
                 </Hidden>
             </AbsoluteCol>
             <Row>
-                <Col md={6} lg={4}>
+                <Col md={8} lg={4}>
                     <TextBlock
                         subtitle="Contact us"
-                        title="Heeey makker, kom jij eens even
-                        smakelijk kopje koffie drinken"
-                        href="//bytecode.nl"
-                        button="Lees verder"
+                        title="Een keertje langskomen op kantoor? Gezellig!"
+                        href="https://calendly.com/bytecode"
+                        button="Plan een afspraak"
                     >
-                        Nadat we alles helemaal hebben geanalyseerd en gepland,
-                        is het tijd om de handen uit de mouwen te steken en het
-                        plan te realiseren. Hierbij werken we volgens de
-                        scrum-methode. Op het moment dat het plan uitgevoerd is,
-                        is het tijd om het resultaat te analyzeren en om te
-                        kijken hoe het nóg beter kan. We blijven dus verbeteren
-                        en doorontwikkelen.
+                        Geef ons een belletje of stuur een mailtje en het is zo
+                        geregeld. De koffie, thee en koekjes staan al klaar. Bij
+                        wijze van spreken, natuurlijk. Koffie en thee moeten
+                        warm zijn. Dat weten wij ook wel.
                     </TextBlock>
                 </Col>
             </Row>
@@ -110,7 +106,7 @@ const Contact = () => (
                     <ContactHeading>
                         Zin om samen te werken? Stuur een berichtje naar&nbsp;
                         <a href="mailto:info@bytecode.nl">info@bytecode.nl</a>
-                        &nbsp;of bel ons op
+                        &nbsp;of bel ons op&nbsp;
                         <a href="tel:0152024222">015-2024222</a>
                     </ContactHeading>
                     <ContactHeading>
