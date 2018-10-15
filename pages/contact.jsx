@@ -7,9 +7,10 @@ import TextBlock from '../components/TextBlock';
 import Button from '../components/Button';
 
 const pageSettings = {
-    title: 'Cases',
-    description: 'Hier de omschrijving',
-    keywords: 'tag1,tag2',
+    title: 'Neem contact met ons op - Bytecode Digital Agency',
+    description: `Je bent altijd van harte welkom om langs te komen bij
+        Bytecode. Een mailtje sturen of even bellen kan natuurlijk ook`,
+    keywords: 'bytecode,contact',
 };
 
 const HeaderContainer = styled.section`
@@ -47,7 +48,7 @@ const HeaderImage = styled.img`
     height: 100%;
 `;
 
-const ContactH3 = styled.h3`
+const ContactHeading = styled.h3`
     margin: 1.5em 0;
     line-height: 1.4em;
 `;
@@ -106,22 +107,24 @@ const Contact = () => (
                     md={12}
                     xs={12}
                 >
-                    <ContactH3>
-                        Zin om samen te werken? Stuur een berichtje naar{' '}
-                        <a href="mailto:info@bytecode.nl">info@bytecode.nl</a>{' '}
+                    <ContactHeading>
+                        Zin om samen te werken? Stuur een berichtje naar
+                        <a href="mailto:info@bytecode.nl">info@bytecode.nl</a>
                         of bel ons op <a href="tel:015-2024222">015-2024222</a>
-                    </ContactH3>
-                    <ContactH3>
-                        Bezoek ons anders op de{' '}
+                    </ContactHeading>
+                    <ContactHeading>
+                        Bezoek ons anders op de
                         <a
-                            target="_blanc"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             href="https://goo.gl/maps/9P6in4Qf6i62"
                         >
                             Verlengde Spiegelmakerstraat 13, Delftgauw
                         </a>
-                    </ContactH3>
+                    </ContactHeading>
                     <Button
-                        target="_blanc"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         href="https://goo.gl/maps/9P6in4Qf6i62"
                     >
                         Routebeschrijving

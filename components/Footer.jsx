@@ -23,6 +23,10 @@ const FooterLogo = styled(FooterIcon)`
     margin-left: -3.4rem;
 `;
 
+const OpenSourceIcon = styled(FooterIcon)`
+    height: 3.2rem;
+`;
+
 const FooterLinkContainer = styled.h4`
     margin: 1rem 0;
 `;
@@ -33,13 +37,9 @@ const FooterLink = styled.a`
 `;
 
 const FooterHeadingContainer = styled.div`
-    height: 10rem;
+    height: 5rem;
     display: flex;
     align-items: center;
-`;
-
-const TopPaddedParagraph = styled.p`
-    margin-top: 1.4rem;
 `;
 
 const FooterButton = styled(Button)`
@@ -86,19 +86,20 @@ const Footer = () => (
                     <FooterHeadingContainer>
                         <p className="subtitle">Kom langs</p>
                     </FooterHeadingContainer>
-                    <TopPaddedParagraph>
-                        <FooterText>
-                            Onze deur staat altijd open, maar een afspraak
-                            plannen is wel gewenst
-                        </FooterText>
-                    </TopPaddedParagraph>
+                    <FooterText>
+                        Onze deur staat altijd open, maar een afspraak plannen
+                        is wel gewenst. <br /> <br />
+                        Ons adres is Verlengde Spiegelmakerstraat 13, 2645LZ
+                        Delfgauw.
+                    </FooterText>
+
                     <FooterButton href="https://calendly.com/bytecode">
                         Plan een afspraak
                     </FooterButton>
                 </FooterCol>
                 <FooterCol>
                     <FooterHeadingContainer>
-                        <FooterIcon
+                        <OpenSourceIcon
                             src="/static/icons/social/open-source.svg"
                             alt="Open source"
                         />

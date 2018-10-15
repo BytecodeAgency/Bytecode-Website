@@ -153,21 +153,21 @@ const Home = () => (
         <StyledContainer>
             <CenterAlignedRow>
                 <Col offset={{ lg: 0 }} md={4} lg={4}>
-                        <TextBlock
-                            subtitle="Wie wij zijn"
-                            title="Kennis en kwaliteit met een no-bullshit mentaliteit"
-                            href="//bytecode.nl"
-                            button="more"
-                        >
-                            Wij staan voor een eerlijke en open samenwerking. We
-                            werken mèt elkaar, niet langs elkaar. Ons zul je
-                            nooit om de zaken heen zien draaien; wij vertellen
-                            je hoe het zit en niet anders. Onze kennis en
-                            kwaliteit gebruiken we niet om met moeilijke termen
-                            te smijten, maar in het volledig vervullen van al je
-                            digitale wensen, om zo een kwalitatief hoogstaand en
-                            optimaal functionerend product op te leveren.
-                        </TextBlock>
+                    <TextBlock
+                        subtitle="Wie wij zijn"
+                        title="Kennis en kwaliteit met een no-bullshit mentaliteit"
+                        href="//bytecode.nl"
+                        button="more"
+                    >
+                        Wij staan voor een eerlijke en open samenwerking. We
+                        werken met elkaar, niet langs elkaar. Ons zul je nooit
+                        om de zaken heen zien draaien; wij vertellen je hoe het
+                        zit en niet anders. Onze kennis en kwaliteit gebruiken
+                        we niet om met moeilijke termen te smijten, maar in het
+                        volledig vervullen van al je digitale wensen, om zo een
+                        kwalitatief hoogstaand en optimaal functionerend product
+                        op te leveren.
+                    </TextBlock>
                 </Col>
                 <Col offset={{ lg: 1 }} md={5} lg={5}>
                     <figure>
