@@ -108,26 +108,28 @@ const Contact = () => (
                     xs={12}
                 >
                     <ContactHeading>
-                        Zin om samen te werken? Stuur een berichtje naar
+                        Zin om samen te werken? Stuur een berichtje naar&nbsp;
                         <a href="mailto:info@bytecode.nl">info@bytecode.nl</a>
-                        of bel ons op <a href="tel:015-2024222">015-2024222</a>
+                        &nbsp;of bel ons op
+                        <a href="tel:0152024222">015-2024222</a>
                     </ContactHeading>
                     <ContactHeading>
-                        Bezoek ons anders op de
+                        Of kom een keertje (of afspraak) langs bij ons op
+                        kantoor aan de de&nbsp;
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://goo.gl/maps/9P6in4Qf6i62"
                         >
-                            Verlengde Spiegelmakerstraat 13, Delftgauw
+                            Verlengde Spiegelmakerstraat 13, Delfgauw
                         </a>
                     </ContactHeading>
                     <Button
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://goo.gl/maps/9P6in4Qf6i62"
+                        href="https://calendly.com/bytecode"
                     >
-                        Routebeschrijving
+                        Plan een afspraak
                     </Button>
                 </Col>
             </PaddedRow>
