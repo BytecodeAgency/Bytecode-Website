@@ -33,6 +33,10 @@ const AbsoluteCol = styled(Col)`
     position: absolute;
 `;
 
+const CenterAlignedRow = styled(Row)`
+    align-items: center;
+`;
+
 const HeaderFigure = styled.figure`
     position: absolute;
     right: 10vw;
@@ -55,6 +59,12 @@ const ContentBlockWrapper = styled.section`
     background-color: ${theme.colors.mediumgray};
     margin: 5% 0% 5% 5%;
     padding: 7.5% 5%;
+`;
+
+const GroupImage = styled.img`
+    margin-top: 4rem;
+    width: 70rem;
+    max-width: 100%;
 `;
 
 const ProcessStepImage = styled.img`
@@ -84,8 +94,9 @@ const Home = () => (
                     <TextBlock
                         subtitle="Welkom bij Bytecode"
                         title="Vind de weg naar jouw digitale succes"
-                        // href="//bytecode.nl"
-                        // button="Lees verder"
+                        href="/contact"
+                        useNextLink={true}
+                        button="Neem contact op"
                     >
                         Ons gepassioneerde team helpt je dolgraag met het
                         analyseren, bedenken en ontwikkelen van alles wat jij
@@ -132,8 +143,9 @@ const Home = () => (
                     <TextBlock
                         subtitle="Hoe Bytecode kan helpen"
                         title="Samen halen we alles uit jouw digitale zelf"
-                        // href="//bytecode.nl"
-                        // button="more"
+                        href="/contact"
+                        useNextLink={true}
+                        button="Neem contact op"
                     >
                         Wij maken uitgebreide analyses en strategieën van alles
                         wat je nodigt hebt om je online ijzersterk te
@@ -147,37 +159,33 @@ const Home = () => (
             </Row>
         </StyledContainer>
         <StyledContainer>
-            <Row>
+            <CenterAlignedRow>
                 <Col offset={{ lg: 0 }} md={4} lg={4}>
-                    <Row>
-                        <TextBlock
-                            subtitle="Wie wij zijn"
-                            title="Kennis en kwaliteit met een no-bullshit mentaliteit"
-                            // href="//bytecode.nl"
-                            // button="more"
-                        >
-                            Wij staan voor een eerlijke en open samenwerking. We
-                            werken mèt elkaar, niet langs elkaar. Ons zul je
-                            nooit om de zaken heen zien draaien; wij vertellen
-                            je hoe het zit en niet anders. Onze kennis en
-                            kwaliteit gebruiken we niet om met moeilijke termen
-                            te smijten, maar in het volledig vervullen van al je
-                            digitale wensen, om zo een kwalitatief hoogstaand en
-                            optimaal functionerend product op te leveren.
-                        </TextBlock>
-                    </Row>
+                    <TextBlock
+                        subtitle="Wie wij zijn"
+                        title="Kennis en kwaliteit met een no-bullshit mentaliteit"
+                        href="/contact"
+                        useNextLink={true}
+                        button="Neem contact op"
+                    >
+                        Wij staan voor een eerlijke en open samenwerking. We
+                        werken met elkaar, niet langs elkaar. Ons zul je nooit
+                        om de zaken heen zien draaien; wij vertellen je hoe het
+                        zit en niet anders. Onze kennis en kwaliteit gebruiken
+                        we niet om met moeilijke termen te smijten, maar in het
+                        volledig vervullen van al je digitale wensen, om zo een
+                        kwalitatief hoogstaand en optimaal functionerend product
+                        op te leveren.
+                    </TextBlock>
                 </Col>
                 <Col offset={{ lg: 1 }} md={5} lg={5}>
-                    <figure>
-                        <img
-                            // TODO: Make a dynamic way of setting the width with REM
-                            width="700"
-                            src="/static/img/content/group.jpg"
-                            alt="The Bytecode team"
-                        />
-                    </figure>
+                    <GroupImage
+                        width="700"
+                        src="/static/img/content/group.jpg"
+                        alt="Onze mindset"
+                    />
                 </Col>
-            </Row>
+            </CenterAlignedRow>
         </StyledContainer>
         <ContentBlockWrapper>
             <Row>

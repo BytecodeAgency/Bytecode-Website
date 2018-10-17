@@ -2,16 +2,17 @@
 
 import React from 'react';
 import NavbarComponents from './NavbarComponents';
-import { Container } from '../lib/Grid';
 
 const {
     NavbarContainer,
+    InnerNavbarContainer,
     NavbarContent,
     NavbarItems,
     NavbarItem,
     Logo,
     MobileNavLogo,
     MenuButton,
+    CloseMenuButton,
     BlackOverlay,
 } = NavbarComponents;
 
@@ -37,7 +38,7 @@ class Navbar extends React.Component {
         const { menuIsOpen } = this.state;
         return (
             <NavbarContainer>
-                <Container>
+                <InnerNavbarContainer>
                     <MobileNavLogo src="/static/img/logo-min.svg" />
                     <BlackOverlay
                         menuIsOpen={menuIsOpen}
@@ -45,33 +46,27 @@ class Navbar extends React.Component {
                     />
                     <MenuButton href="#" onClick={this.openMenu}>
                         <img
-                            src="/static/img/close-menu.svg"
+                            src="/static/img/hamburger-menu.svg"
                             alt="Close menu"
                             width="100%"
                         />
                     </MenuButton>
                     <NavbarContent menuIsOpen={menuIsOpen}>
                         {/* TODO: Link Logo to homepage */}
-                        <Logo
-                            src="/static/img/logo-min.svg"
-                            alt="Bytecode logo"
-                        />
+                        <Logo src="/static/img/logo.svg" alt="Bytecode logo" />
                         <NavbarItems>
-                            <MenuButton href="#" onClick={this.closeMenu}>
+                            <CloseMenuButton href="#" onClick={this.closeMenu}>
                                 <img
                                     src="/static/img/close-menu.svg"
                                     alt="Close menu"
                                     width="100%"
                                 />
-                            </MenuButton>
+                            </CloseMenuButton>
                             <NavbarItem href="/" text="Home" />
-                            <NavbarItem href="/services" text="Services" />
-                            <NavbarItem href="/over" text="Over" />
-                            <NavbarItem href="/cases" text="Cases" />
                             <NavbarItem href="/contact" text="Contact" />
                         </NavbarItems>
                     </NavbarContent>
-                </Container>
+                </InnerNavbarContainer>
             </NavbarContainer>
         );
     }

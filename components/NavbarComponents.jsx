@@ -8,6 +8,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { transparentize } from 'polished';
 import theme from '../styles/theme';
+import { Container } from '../lib/Grid';
 
 const NavbarContainer = styled.nav`
     position: relative;
@@ -17,11 +18,16 @@ const NavbarContainer = styled.nav`
         height: 7rem;
         width: 100vw;
         position: fixed;
-        padding: 1rem 0;
         top: 0;
         left: 0;
         right: 0;
         background: ${transparentize(0.3, theme.colors.black)};
+    }
+`;
+
+const InnerNavbarContainer = styled(Container)`
+    @media (max-width: ${theme.breakpointMobileMenu}) {
+        margin: 0 !important;
     }
 `;
 
@@ -110,10 +116,10 @@ const Logo = styled.img`
 `;
 
 const MobileNavLogo = styled.img`
-    height: 4.5rem;
+    height: 3.5rem;
     position: absolute;
-    top: 0.4rem;
-    left: 0;
+    top: 0.8rem;
+    left: 2rem;
     color: white;
     display: none;
     @media (max-width: ${theme.breakpointMobileMenu}) {
@@ -126,14 +132,23 @@ const MenuButton = styled.a`
     height: 3rem;
     width: 3rem;
     position: absolute;
-    top: 1.3rem;
-    right: 0;
+    top: 1.1rem;
+    right: 4rem;
     color: white;
     align-items: center;
     display: none;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         display: flex;
     }
+`;
+
+// TODO: Clean this, as it is a hack at the moment to make it work
+// TODO: Create new button SVG
+const CloseMenuButton = styled(MenuButton)`
+    top: 1.5rem;
+    right: 1.5rem;
+    height: 4.5rem;
+    width: 4.5rem;
 `;
 
 const BlackOverlay = styled.div`
@@ -154,11 +169,13 @@ const BlackOverlay = styled.div`
 
 export default {
     NavbarContainer,
+    InnerNavbarContainer,
     NavbarContent,
     NavbarItems,
     NavbarItem,
     Logo,
     MobileNavLogo,
     MenuButton,
+    CloseMenuButton,
     BlackOverlay,
 };
