@@ -13,7 +13,7 @@ const next = require('next');
 const router = require('./router');
 const handlePost = require('./handle-post');
 
-const dev = process.env.NODE_ENV !== 'production';
+const dev = process.env.NODE_ENV !== 'PRODUCTION';
 const port = process.env.PORT || 4000;
 
 const app = next({ dev });
