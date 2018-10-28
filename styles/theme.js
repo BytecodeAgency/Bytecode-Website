@@ -136,7 +136,7 @@ const bytecode = {
             color: white,
         },
     },
-    breakpointMobileMenu: '60rem',
+    breakpointMobileMenu: '63rem',
     breakpoints: [540, 750, 960, 1400],
     containerWidths: [540, 750, 960, 1400],
 };
