@@ -7,7 +7,6 @@ import TextBlock from '../components/TextBlock';
 import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
 import ContactForm from '../components/ContactForm';
 import ImageBlock from '../components/ImageBlock';
-import IconTextHorizontal from '../components/IconTextHorizontal';
 
 const HeaderContainer = styled.section`
     margin: 10rem 5% 5% 5%;
@@ -94,10 +93,7 @@ const Over = () => (
                         subtitle="Services"
                         title="It’s not about technique. Not about certain
                         frameworks nor features nor platforms. It is about
-                        setting you up for te best results. Constantly
-                        analyzing and refining the strategy. Connecting
-                        and reconnecting the dots. Just for that maximum
-                        result. So you can do what you like best."
+                        setting you up for te best results."
                     />
                 </Col>
             </Row>
@@ -177,33 +173,25 @@ const Over = () => (
             <Row>
                 <Col offset={{ xl: 1 }} lg={5} md={6}>
                     <Row>
-                    <Col lg={3}>
-                        <Icon
-                            src="/static/icons/services/website.svg"
-                            alt="Websites & Webapps"
-                        />
-                    </Col>
+                        <Col lg={3}>
+                            <Icon
+                                src="/static/icons/services/website.svg"
+                                alt="Websites & Webapps"
+                            />
+                        </Col>
 
-                    <Col lg={9}>
-                        <TextBlock title="Websites & Webapps" headingType="h3">
-                            Ons gepassioneerde team helpt je dolgraag met het
-                            bedenken en ontwikkelen van alles wat jij nodig hebt
-                            om je digitaal volledig te ontplooien.
-                        </TextBlock>
-                    </Col>
+                        <Col lg={9}>
+                            <TextBlock
+                                title="Websites & Webapps"
+                                headingType="h3"
+                            >
+                                Ons gepassioneerde team helpt je dolgraag met
+                                het bedenken en ontwikkelen van alles wat jij
+                                nodig hebt om je digitaal volledig te
+                                ontplooien.
+                            </TextBlock>
+                        </Col>
                     </Row>
-                    {/* <IconTextHorizontal
-                        icon="/static/icons/services/website.svg"
-                        alt="websites"
-                        title="Websites & webapps"
-                        headingType="h3"
-                        subtitle=""
-                        content="Ons gepassioneerde team helpt je dolgraag met
-                        het bedenken en ontwikkelen van alles wat jij
-                        nodig hebt om je digitaal volledig te
-                        ontplooien."
-                        margin=""
-                    /> */}
                 </Col>
 
                 <Col offset={{ lg: 1 }} lg={5} md={6}>
