@@ -28,6 +28,10 @@ const Paragraph = styled.p`
     margin: 0.5rem 0;
 `;
 
+const H3 = styled.h3`
+    margin-bottom: 0rem;
+`;
+
 const StyledButton = styled(Button)`
     margin-top: 5rem;
 `;
@@ -61,6 +65,9 @@ const getTitle = (type, title) => {
     if (type === 'h2') {
         return <H2>{title}</H2>;
     }
+    if (type === 'h3') {
+        return <H3>{title}</H3>;
+    }
     return <H1>{title}</H1>;
 };
 
@@ -89,7 +96,7 @@ const TextBlock = props => {
 };
 
 TextBlock.propTypes = {
-    subtitle: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
     title: PropTypes.string.isRequired,
     href: PropTypes.string,
     button: PropTypes.string,
