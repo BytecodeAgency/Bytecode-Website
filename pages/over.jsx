@@ -31,15 +31,15 @@ const PaddedColumn = styled(Col)`
     padding: 12% 0 15% 0;
 `;
 
-const loremipsum = `Lorem ipsum dolor sit 
-amet consectetur adipisicing elit.Asperiores 
-itaque inventore sequi tempora amet dolore 
-voluptas? Natus eius repellendus tempora 
-reiciendis ea tempore dolorum temporibus 
-quisquam fuga magni. Quis quam, recusandae, 
+const loremipsum = `Lorem ipsum dolor sit
+amet consectetur adipisicing elit.Asperiores
+itaque inventore sequi tempora amet dolore
+voluptas? Natus eius repellendus tempora
+reiciendis ea tempore dolorum temporibus
+quisquam fuga magni. Quis quam, recusandae,
 iste, deleniti cum esse distinctio omnis sequi
-nemo iusto tempore nobis hic nesciunt 
-perspiciatis sunt laboriosam corrupti 
+nemo iusto tempore nobis hic nesciunt
+perspiciatis sunt laboriosam corrupti
 amollitia? `;
 
 const Over = () => (
@@ -79,7 +79,7 @@ const Over = () => (
                         <Col md={3} xs={6}>
                             <TeamMember
                                 name="Jeroen van Steijn"
-                                title="Co-founder & full-stack developer"
+                                title="Co-founder &amp; full-stack developer"
                                 img="/static/img/team/Jeroen.png"
                                 alt="A photo of Jeroen van steijn"
                             />
@@ -87,7 +87,7 @@ const Over = () => (
                         <Col md={3} xs={6}>
                             <TeamMember
                                 name="Jeroen van Steijn"
-                                title="Co-founder & full-stack developer"
+                                title="Co-founder &amp; full-stack developer"
                                 img="/static/img/team/Jeroen.png"
                                 alt="A photo of Jeroen van steijn"
                             />
@@ -95,7 +95,7 @@ const Over = () => (
                         <Col md={3} xs={6}>
                             <TeamMember
                                 name="Jeroen van Steijn"
-                                title="Co-founder & full-stack developer"
+                                title="Co-founder &amp; full-stack developer"
                                 img="/static/img/team/Jeroen.png"
                                 alt="A photo of Jeroen van steijn"
                             />
@@ -103,7 +103,7 @@ const Over = () => (
                         <Col md={3} xs={6}>
                             <TeamMember
                                 name="Jeroen van Steijn"
-                                title="Co-founder & full-stack developer"
+                                title="Co-founder &amp; full-stack developer"
                                 img="/static/img/team/Jeroen.png"
                                 alt="A photo of Jeroen van steijn"
                             />
@@ -111,7 +111,7 @@ const Over = () => (
                         <Col md={3} xs={6}>
                             <TeamMember
                                 name="Jeroen van Steijn"
-                                title="Co-founder & full-stack developer"
+                                title="Co-founder &amp; full-stack developer"
                                 img="/static/img/team/Jeroen.png"
                                 alt="A photo of Jeroen van steijn"
                             />
@@ -119,7 +119,7 @@ const Over = () => (
                         <Col md={3} xs={6}>
                             <TeamMember
                                 name="Jeroen van Steijn"
-                                title="Co-founder & full-stack developer"
+                                title="Co-founder &amp; full-stack developer"
                                 img="/static/img/team/Jeroen.png"
                                 alt="A photo of Jeroen van steijn"
                             />

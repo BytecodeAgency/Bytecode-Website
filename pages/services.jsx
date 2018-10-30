@@ -95,7 +95,7 @@ const Over = () => (
         <StyledContainer>
             <Row>
                 <Col lg={5} md={6}>
-                    <TextBlock title="Web & mobiel" headingType="h2">
+                    <TextBlock title="Web &amp; mobiel" headingType="h2">
                         Ons gepassioneerde team helpt je dolgraag met het
                         bedenken en ontwikkelen van alles wat jij nodig hebt om
                         je digitaal volledig te ontplooien.
@@ -111,13 +111,13 @@ const Over = () => (
                         <Col lg={3}>
                             <Icon
                                 src="/static/icons/services/website.svg"
-                                alt="Websites & Webapps"
+                                alt="Websites &amp; Webapps"
                             />
                         </Col>
 
                         <Col lg={9}>
                             <TextBlock
-                                title="Websites & Webapps"
+                                title="Websites &amp; Webapps"
                                 headingType="h3"
                             >
                                 Ons gepassioneerde team helpt je dolgraag met
@@ -197,7 +197,7 @@ const Over = () => (
         <StyledContainer>
             <Row>
                 <Col lg={5} md={6}>
-                    <TextBlock title="Web & mobiel" headingType="h2">
+                    <TextBlock title="Web &amp; mobiel" headingType="h2">
                         Ons gepassioneerde team helpt je dolgraag met het
                         bedenken en ontwikkelen van alles wat jij nodig hebt om
                         je digitaal volledig te ontplooien. Ons gepassioneerde
@@ -241,7 +241,7 @@ const Over = () => (
 
                         <Col lg={9}>
                             <TextBlock
-                                title="Devops & cloudcomputing"
+                                title="Devops &amp; cloudcomputing"
                                 headingType="h3"
                             >
                                 Ons gepassioneerde team helpt je dolgraag met
@@ -285,7 +285,7 @@ const Over = () => (
         <StyledContainer>
             <Row>
                 <Col lg={5} md={6}>
-                    <TextBlock title="Branding & Design" headingType="h2">
+                    <TextBlock title="Branding &amp; Design" headingType="h2">
                         Ons gepassioneerde team helpt je dolgraag met het
                         bedenken en ontwikkelen van alles wat jij nodig hebt om
                         je digitaal volledig te ontplooien.
@@ -307,7 +307,7 @@ const Over = () => (
 
                         <Col lg={9}>
                             <TextBlock
-                                title="Graphic Design & Branding"
+                                title="Graphic Design &amp; Branding"
                                 headingType="h3"
                             >
                                 Ons gepassioneerde team helpt je dolgraag met
