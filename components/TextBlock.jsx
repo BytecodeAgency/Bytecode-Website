@@ -96,7 +96,7 @@ const TextBlock = props => {
 };
 
 TextBlock.propTypes = {
-    subtitle: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
     title: PropTypes.string.isRequired,
     href: PropTypes.string,
     button: PropTypes.string,
