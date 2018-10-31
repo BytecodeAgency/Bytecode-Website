@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions, function-paren-newline */
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { reset, debug } from 'styled-components-style-utils';
 import { setConfiguration } from 'react-grid-system';
 import theme from './theme';
@@ -44,7 +44,7 @@ const typographyClassStyling = typographyClasses.map(
 );
 
 const enableCssReset = false;
-injectGlobal`
+export const GlobalStyles = createGlobalStyle`
     ${reset()}
     ${enableCssReset ? debug() : ''}
     html { font-size: 62.5%; background: ${theme.colors.background} }
@@ -57,4 +57,6 @@ injectGlobal`
     textarea { resize: vertical; }
 `;
 
-setConfiguration({ containerWidths: theme.containerWidths });
+export const setContainerWidths = () => {
+    setConfiguration({ containerWidths: theme.containerWidths });
+};
