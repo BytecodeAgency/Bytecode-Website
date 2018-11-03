@@ -35,7 +35,7 @@ const Button = styled(ButtonBase)`
     padding: 0.8rem 3.6rem;
     border-color: ${theme.colors.tertiary};
     border-style: solid;
-    border-width: 0.1rem;
+    border-width: 0.15rem;
     border-radius: 10rem;
     transition: all 0.2s ease;
     &:hover {
