@@ -2,9 +2,9 @@
 
 console.log('Service worker file opened!');
 
-const CACHE_NAME = 'bytecode-static-dev';
-// const urlsToCache = ['/', '/over', '/services', '/cases', '/contact'];
-const urlsToCache = [''];
+const CACHE_NAME = 'bytecode';
+const urlsToCache = ['/', '/over', '/services', '/cases', '/contact'];
+// const urlsToCache = [''];
 
 self.addEventListener('install', event => {
     console.log('Service worker installing...');

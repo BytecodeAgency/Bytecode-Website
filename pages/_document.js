@@ -20,12 +20,13 @@ export default class SiteDocument extends Document {
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                     <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                     <meta name="robots" content="index, follow"/>
+                    <link type="text/plain" rel="author" href="/humans.txt" />
                     <meta name="revisit-after" content="1 day"/>
                     <meta name="googlebot" content="noodp"/>
                     <meta name="theme-color" content={theme.colors.primary}/>
                     <link rel="shortcut icon" href="/static/icons/favicon.png" />
                     <link rel="apple-touch-icon" href="/static/icons/favicon.png" />
-                    <link rel="manifest" href="/static/manifest.json" />
+                    <link rel="manifest" href="/manifest.json" />
                     <link rel="stylesheet" href="https://use.typekit.net/kcu2skl.css"/>
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono"/>
                     <GlobalStyles/>
@@ -36,7 +37,7 @@ export default class SiteDocument extends Document {
                     { getNoscriptTag() }
                     <div className="root">{main}</div>
                     <NextScript />
-                    <script src="/static/register-service-worker.js"/>
+                    <script src="/register-service-worker.js"/>
                 </body>
             </html>
         );

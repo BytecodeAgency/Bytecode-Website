@@ -2,8 +2,8 @@
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-        .register('/static/service-worker.js', {
-            scope: '/static/',
+        .register('/service-worker.js', {
+            scope: '/',
         })
         .then(reg => console.log(`Service worker registered. Scope is ${reg.scope}`))
         .catch(err => `Error while registering service worker: ${err}`);
