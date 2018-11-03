@@ -1,4 +1,4 @@
-const getRoutes = () => require('./server/router');
+const getRoutes = () => require('./server/router'); // eslint-disable-line
 
 module.exports = {
     pageExtensions: ['jsx', 'js'],
