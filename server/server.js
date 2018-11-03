@@ -12,6 +12,7 @@ const helmet = require('helmet');
 const next = require('next');
 const router = require('./router');
 const handlePost = require('./handle-post');
+const sitemapGenerator = require('./sitemap-generator');
 
 const dev = process.env.NODE_ENV !== 'PRODUCTION';
 const port = process.env.PORT || 4000;
@@ -27,7 +28,6 @@ const rootFileRouter = server => {
         'manifest.json',
         'register-service-worker.js',
         'service-worker.js',
-        'sitemap.xml',
     ];
     rootFileRoutes.forEach(file => {
         server.get(`/${file}`, (req, res) => res.sendFile(`${__dirname}/files/${file}`));
@@ -40,6 +40,7 @@ app.prepare().then(() => {
     server.use(bodyParser.json());
     server.use(helmet());
     rootFileRouter(server);
+    server.get('/sitemap.xml', (req, res) => sitemapGenerator(req, res));
     server.get('*', (req, res) => router(req, res, app, handle));
     server.post('/post', (req, res) => handlePost(req, res));
     server.listen(port, err => {
