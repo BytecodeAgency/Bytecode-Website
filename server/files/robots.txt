@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /post
 Disallow: /api
-Sitemap: http://bytecode.nl/sitemap.xml
+Sitemap: https://bytecode.nl/sitemap.xml
