@@ -150,7 +150,7 @@ const Home = () => (
         </StyledContainer>
         <StyledContainer>
             <CenterAlignedRow>
-                <Col offset={{ lg: 0 }} md={4} lg={4}>
+                <Col offset={{ lg: 0 }} md={7} lg={4}>
                     <TextBlock
                         subtitle="Wie wij zijn"
                         title="Kennis en kwaliteit met een no-bullshit mentaliteit"
