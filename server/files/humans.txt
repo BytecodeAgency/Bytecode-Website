@@ -16,10 +16,13 @@ Copywriter: Thomas Bodlaender
 Site: https://bytecode.nl
 Location: Rotterdam, The Netherlands
 
+SEO and marketing: Nick Broekarts
+Site: https://myosmarketing.nl/
+Location: Delft, The Netherlands
+
 /* SITE */
 Language: Dutch
 Doctype: HTML5
 Standards: HTML5, CSS3, ESNext
 Components: NextJS, Styled Components
 Software: NodeJS
-
