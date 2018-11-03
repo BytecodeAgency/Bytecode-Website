@@ -92,7 +92,10 @@ const Footer = () => (
                         Ons adres is Verlengde Spiegelmakerstraat 13, 2645LZ
                         Delfgauw.
                     </FooterText>
-                    <FooterButton href="https://calendly.com/bytecode">
+                    <FooterButton
+                        href="https://calendly.com/bytecode"
+                        target="_blank"
+                    >
                         Plan een afspraak
                     </FooterButton>
                 </FooterCol>
@@ -110,7 +113,10 @@ const Footer = () => (
                         vrijgegeven.
                     </FooterText>
                     {/* eslint-disable-next-line max-len */}
-                    <FooterButton href="https://github.com/BytecodeBV/Bytecode-Website">
+                    <FooterButton
+                        href="https://github.com/BytecodeBV/Bytecode-Website"
+                        target="_blank"
+                    >
                         Bekijk broncode
                     </FooterButton>
                 </FooterCol>

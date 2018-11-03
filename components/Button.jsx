@@ -6,17 +6,19 @@ import styled from 'styled-components';
 import theme from '../styles/theme';
 
 const ButtonBase = ({ className, children, ...props }) => {
-    const { href, useNextLink } = props;
-    if (useNextLink) {
+    const { href, usenextlink } = props;
+    if (usenextlink) {
         return (
             <Link href={href}>
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid  */}
-                <a className={`button ${className}`}>{children}</a>
+                <a className={`button ${className}`} {...props}>
+                    {children}
+                </a>
             </Link>
         );
     }
     return (
-        <a href={href} className={`button ${className}`}>
+        <a href={href} className={`button ${className}`} {...props}>
             {children}
         </a>
     );
@@ -24,7 +26,7 @@ const ButtonBase = ({ className, children, ...props }) => {
 
 ButtonBase.propTypes = {
     href: PropTypes.string.isRequired,
-    useNextLink: PropTypes.bool,
+    usenextlink: PropTypes.bool,
 };
 
 const Button = styled(ButtonBase)`
