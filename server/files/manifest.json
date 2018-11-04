@@ -1,7 +1,7 @@
 {
-    "name": "Bytecode",
+    "name": "Bytecode Website",
     "short_name": "Bytecode",
-    "theme_color": "#6ca57b",
+    "theme_color": "#23be87",
     "background_color": "#1a1a1a",
     "display": "standalone",
     "scope": "/",
