@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import theme from '../styles/theme';
@@ -9,13 +7,14 @@ import Thumbnail from '../components/Thumbnail';
 import ContactForm from '../components/ContactForm';
 import Process from '../components/Process';
 
+/* eslint-disable */
 const pageSettings = {
-    title: 'Vind de weg naar jouw digitale succes - Bytecode Digital Agency',
-    description: `Ons gepassioneerde team van ervaren experts helpt je dolgraag
-        met het analyseren, bedenken en ontwikkelen van alles wat jij nodig hebt
-        om je digitaal volledig te ontplooien`,
-    keywords: 'bytecode',
+    title: 'Bytecode Digital Agency B.V. | Vind de weg naar jouw digitale succes!',
+    description: 'Bytecode Digital Agency B.V. | Gespecialiseerd in ✓Websites en Webshops ✓Webapps ✓Cloud ✓Automatisering ✓Mobiele apps ✓API ontwikkeling',
+    keywords: 'bytecode, digital agency',
 };
+/* eslint-enable */
+/* eslint-disable max-len */
 
 const HeaderContainer = styled.section`
     background-color: ${theme.colors.mediumgray};
