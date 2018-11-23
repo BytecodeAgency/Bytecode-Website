@@ -127,14 +127,22 @@ const Footer = () => (
                         <p className="subtitle">Documenten</p>
                     </FooterHeadingContainer>
                     <FooterText>
-                        <FooterLink href="#">Algemene Voorwaarden</FooterLink>
+                        <FooterLink
+                            href="/static/docs/algemene-voorwaarden.pdf"
+                            target="_blank"
+                        >
+                            Algemene Voorwaarden
+                        </FooterLink>
                         <Link href="/legal/privacy-policy">
                             <FooterLink>Privacy Policy</FooterLink>
                         </Link>
                         <Link href="/legal/cookie-policy">
                             <FooterLink>Cookie Policy</FooterLink>
                         </Link>
-                        <FooterLink href="https://security.bytecode.nl">
+                        <FooterLink
+                            href="https://security.bytecode.nl"
+                            target="_blank"
+                        >
                             Security Policy
                         </FooterLink>
                     </FooterText>
