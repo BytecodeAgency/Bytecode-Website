@@ -32,11 +32,12 @@ const CookiePolicy = () => (
                     (hierna te noemen &#34;
                     <b>Bytecode</b>
                     &#34;, &#34;wij&#34;, &#34;ons&#34; of &#34;onze&#34;), een
-                    onderneming met adres Spiegelmakerstraat 4, Delfgauw.
-                    Bytecode is ingeschreven bij de Kamer van Koophandel onder
-                    nummer 71497560. Dit cookiebeleid legt uit hoe wij cookies
-                    gebruiken en hoe wij uw gegevens delen en beschermen in
-                    relatie tot onze website www.bytecode.nl (de &#34;
+                    onderneming met adres Verlengde Spiegelmakerstraat 13,
+                    Delfgauw. Bytecode is ingeschreven bij de Kamer van
+                    Koophandel onder nummer 71497560. Dit cookiebeleid legt uit
+                    hoe wij cookies gebruiken en hoe wij uw gegevens delen en
+                    beschermen in relatie tot onze website www.bytecode.nl (de
+                    &#34;
                     <b>Website</b>
                     &#34;). Het plaatsen van cookies en het verwerken van
                     persoonsgegevens gebeurt op een wijze die in overeenstemming
