@@ -55,6 +55,10 @@ export const GlobalStyles = createGlobalStyle`
     @media (max-width: ${theme.breakpoints[0]}px) { h1 { font-size: 4rem; } }
     body { overflow-x: hidden; }
     textarea { resize: vertical; }
+    ::selection {
+        background: ${theme.colors.tertiary};
+        color: ${theme.colors.white}
+    }
 `;
 
 export const setContainerWidths = () => {
