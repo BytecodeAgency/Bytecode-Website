@@ -77,3 +77,6 @@ wp-content/plugins/hello.php
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
+
+# Include specific files
+!/static/docs
