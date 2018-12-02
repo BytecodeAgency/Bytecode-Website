@@ -7,13 +7,12 @@ import TextBlock from '../components/TextBlock';
 import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
 import ContactForm from '../components/ContactForm';
 import ImageBlock from '../components/ImageBlock';
-import IconTextHorizontal from '../components/IconTextHorizontal';
 
 const HeaderContainer = styled.section`
     margin: 10rem 5% 5% 5%;
     padding: 2%;
     @media (min-width: ${theme.breakpointMobileMenu}) {
-        margin: 0% 0% 5% 5%;
+        margin: 0% 0% 2% 5%;
         padding: 25vh 2% 25vh 5%;
     }
 `;
@@ -74,6 +73,10 @@ const pageSettings = {
     description: 'Hier de omschrijving',
     keywords: 'tag1,tag2',
 };
+
+const ArticleContent = styled(Container)`
+    background-color: ${theme.colors.secondary};
+`
 
 const Over = () => (
     <Layout pageSettings={pageSettings}>
@@ -177,20 +180,24 @@ const Over = () => (
             <Row>
                 <Col offset={{ xl: 1 }} lg={5} md={6}>
                     <Row>
-                    <Col lg={3}>
-                        <Icon
-                            src="/static/icons/services/website.svg"
-                            alt="Websites & Webapps"
-                        />
-                    </Col>
+                        <Col lg={3}>
+                            <Icon
+                                src="/static/icons/services/website.svg"
+                                alt="Websites & Webapps"
+                            />
+                        </Col>
 
-                    <Col lg={9}>
-                        <TextBlock title="Websites & Webapps" headingType="h3">
-                            Ons gepassioneerde team helpt je dolgraag met het
-                            bedenken en ontwikkelen van alles wat jij nodig hebt
-                            om je digitaal volledig te ontplooien.
-                        </TextBlock>
-                    </Col>
+                        <Col lg={9}>
+                            <TextBlock
+                                title="Websites & Webapps"
+                                headingType="h3"
+                            >
+                                Ons gepassioneerde team helpt je dolgraag met
+                                het bedenken en ontwikkelen van alles wat jij
+                                nodig hebt om je digitaal volledig te
+                                ontplooien.
+                            </TextBlock>
+                        </Col>
                     </Row>
                     {/* <IconTextHorizontal
                         icon="/static/icons/services/website.svg"
