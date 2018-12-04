@@ -37,7 +37,7 @@ export default class SiteDocument extends Document {
                     { getNoscriptTag() }
                     <div className="root">{main}</div>
                     <NextScript />
-                    <script src="/register-service-worker.js"/>
+                    { /* service-worker conflict with serving pdf file. will fix when we implement PWA. <script src="/register-service-worker.js"/> */ }
                 </body>
             </html>
         );
