@@ -26,8 +26,8 @@ const rootFileRouter = server => {
         'robots.txt',
         'humans.txt',
         'manifest.json',
-        'register-service-worker.js',
-        'service-worker.js',
+        //'register-service-worker.js', service-worker conflicts with serving pdf. when that is fixed we'll register it again.
+        //'service-worker.js',
     ];
     rootFileRoutes.forEach(file => {
         server.get(`/${file}`, (req, res) => res.sendFile(`${__dirname}/files/${file}`));
