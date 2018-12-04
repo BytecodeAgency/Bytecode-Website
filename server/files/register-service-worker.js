@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals, no-undef, no-console, prettier/prettier, max-len */
-
+/* Service worker conflicts with serving pdf's. When that's fixed we'll reregister service workers.
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
         .register('/service-worker.js', {
@@ -10,3 +10,4 @@ if ('serviceWorker' in navigator) {
 } else {
     console.log('Service worker not found in navigator');
 }
+*/
