@@ -12,6 +12,7 @@ const helmet = require('helmet');
 const next = require('next');
 const router = require('./router');
 const handlePost = require('./handle-post');
+const apiHandler = require('./api-handler');
 
 const dev = process.env.NODE_ENV !== 'PRODUCTION';
 const port = process.env.PORT || 4000;
@@ -23,6 +24,7 @@ app.prepare().then(() => {
     const server = express();
     server.use(bodyParser.json());
     server.use(helmet());
+    server.use('/api', apiHandler);
     server.get('*', (req, res) => router(req, res, app, handle));
     server.post('/post', (req, res) => handlePost(req, res));
     server.listen(port, err => {
