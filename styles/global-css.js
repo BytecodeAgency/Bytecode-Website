@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions, function-paren-newline */
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { reset, debug } from 'styled-components-style-utils';
 import { setConfiguration } from 'react-grid-system';
 import theme from './theme';
@@ -44,7 +44,7 @@ const typographyClassStyling = typographyClasses.map(
 );
 
 const enableCssReset = false;
-injectGlobal`
+export const GlobalStyles = createGlobalStyle`
     ${reset()}
     ${enableCssReset ? debug() : ''}
     html { font-size: 62.5%; background: ${theme.colors.background} }
@@ -55,6 +55,12 @@ injectGlobal`
     @media (max-width: ${theme.breakpoints[0]}px) { h1 { font-size: 4rem; } }
     body { overflow-x: hidden; }
     textarea { resize: vertical; }
+    ::selection {
+        background: ${theme.colors.tertiary};
+        color: ${theme.colors.white}
+    }
 `;
 
-setConfiguration({ containerWidths: theme.containerWidths });
+export const setContainerWidths = () => {
+    setConfiguration({ containerWidths: theme.containerWidths });
+};

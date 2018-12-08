@@ -2,7 +2,7 @@
   "name": "bytecode-website",
   "version": "1.0.0",
   "description": "Website for Bytecode Digital Agency B.V.",
-  "main": "server.js",
+  "main": "server/server.js",
   "repository": "https://github.com/BytecodeBV",
   "author": "Luciano Nooijen <luciano@bytecode.nl>",
   "license": "AGPL-3.0",
@@ -12,7 +12,8 @@
     "dev": "nodemon server/server",
     "build": "next build",
     "export": "next build && next export",
-    "lint": "eslint --ext .jsx,.js ."
+    "lint": "eslint --ext .jsx,.js .",
+    "reinstall": "rm -rf node_modules && yarn"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -29,7 +30,7 @@
     "react-dom": "^16.4.2",
     "react-grid-system": "^4.1.7",
     "sqreen": "^1.26.0",
-    "styled-components": "^3.4.1",
+    "styled-components": "^4.0.3",
     "styled-components-style-utils": "^1.2.0",
     "url": "^0.11.0"
   },

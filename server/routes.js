@@ -6,4 +6,3 @@ const routes = {
 };
 
 module.exports = routes;
-module.exports.getRoutes = () => routes;

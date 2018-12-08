@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import theme from '../styles/theme';
@@ -7,14 +5,16 @@ import TextBlock from '../components/TextBlock';
 import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
 import Thumbnail from '../components/Thumbnail';
 import ContactForm from '../components/ContactForm';
+import Process from '../components/Process';
 
+/* eslint-disable */
 const pageSettings = {
-    title: 'Vind de weg naar jouw digitale succes - Bytecode Digital Agency',
-    description: `Ons gepassioneerde team van ervaren experts helpt je dolgraag
-        met het analyseren, bedenken en ontwikkelen van alles wat jij nodig hebt
-        om je digitaal volledig te ontplooien`,
-    keywords: 'bytecode',
+    title: 'Bytecode Digital Agency B.V. | Vind de weg naar jouw digitale succes!',
+    description: 'Bytecode Digital Agency B.V. | Gespecialiseerd in ✓Websites en Webshops ✓Webapps ✓Cloud ✓Automatisering ✓Mobiele apps ✓API ontwikkeling',
+    keywords: 'bytecode, digital agency',
 };
+/* eslint-enable */
+/* eslint-disable max-len */
 
 const HeaderContainer = styled.section`
     background-color: ${theme.colors.mediumgray};
@@ -55,25 +55,16 @@ const HeaderImage = styled.img`
     height: 100%;
 `;
 
-const ContentBlockWrapper = styled.section`
-    background-color: ${theme.colors.mediumgray};
-    margin: 5% 0% 5% 5%;
-    padding: 7.5% 5%;
-`;
-
 const GroupImage = styled.img`
     margin-top: 4rem;
     width: 70rem;
     max-width: 100%;
 `;
 
-const ProcessStepImage = styled.img`
-    height: 60rem;
-    max-height: 30vh;
-    margin-bottom: 5rem;
-    @media (max-width: ${theme.breakpoints[2]}px) {
-        margin-top: 10rem;
-    }
+const ContentBlockWrapper = styled.section`
+    background-color: ${theme.colors.mediumgray};
+    margin: 5% 0% 5% 5%;
+    padding: 7.5% 5%;
 `;
 
 const Home = () => (
@@ -158,7 +149,7 @@ const Home = () => (
         </StyledContainer>
         <StyledContainer>
             <CenterAlignedRow>
-                <Col offset={{ lg: 0 }} md={4} lg={4}>
+                <Col offset={{ lg: 0 }} md={7} lg={4}>
                     <TextBlock
                         subtitle="Wie wij zijn"
                         title="Kennis en kwaliteit met een no-bullshit mentaliteit"
@@ -184,66 +175,7 @@ const Home = () => (
                 </Col>
             </CenterAlignedRow>
         </StyledContainer>
-        <ContentBlockWrapper>
-            <Row>
-                <Col md={4} lg={3}>
-                    <ProcessStepImage
-                        src="/static/img/content/workflow/analyze.svg"
-                        alt="Analyze"
-                    />
-                    <TextBlock
-                        subtitle="Stap 1"
-                        headingType="h2"
-                        title="Analyze"
-                    >
-                        Voordat we starten met ontwikkelen, maken we eerst een
-                        gedetailleerde analyse. Dit stelt ons in staat om een
-                        helder en volledig overzicht te krijgen van de huidige
-                        situatie. Hierdoor kunnen wij de pijnpunten in beeld
-                        brengen en analyseren welke punten het meeste prioriteit
-                        hebben.
-                    </TextBlock>
-                </Col>
-                <Col offset={{ lg: 1 }} md={4} lg={3}>
-                    <ProcessStepImage
-                        src="/static/img/content/workflow/strategize.svg"
-                        alt="Strategize"
-                    />
-                    <TextBlock
-                        subtitle="Stap 2"
-                        headingType="h2"
-                        title="Strategize"
-                    >
-                        Vervolgens maken wij een duidelijke strategie, waarin we
-                        uiteenzetten welke punten we aan gaan pakken en vooral
-                        op welke manier we dat doen. Bij het ontwikkelen van
-                        deze strategie wegen we de verschillende opties af,
-                        zodat we het best haalbare resultaat met het oog op de
-                        toekomst gaan halen.
-                    </TextBlock>
-                </Col>
-                <Col offset={{ lg: 1 }} md={4} lg={3}>
-                    <ProcessStepImage
-                        src="/static/img/content/workflow/realize.svg"
-                        alt="Realize"
-                    />
-                    <TextBlock
-                        subtitle="Stap 3"
-                        headingType="h2"
-                        title="Realize"
-                    >
-                        Nadat we alles helemaal hebben geanalyseerd en gepland,
-                        is het tijd om de handen uit de mouwen te steken en het
-                        plan te realiseren. Hierbij werken we volgens de
-                        scrum-methode. Op het moment dat het plan uitgevoerd is,
-                        is het tijd om het resultaat te analyzeren en om te
-                        kijken hoe het nóg beter kan. We blijven dus verbeteren
-                        en doorontwikkelen.
-                    </TextBlock>
-                </Col>
-            </Row>
-        </ContentBlockWrapper>
-
+        <Process />
         <ContentBlockWrapper>
             <TextBlock
                 subtitle="We staan voor je klaar"
