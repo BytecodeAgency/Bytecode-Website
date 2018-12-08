@@ -6,7 +6,7 @@ cache:
 
 before_script:
   - npm i -g yarn
-  - yarn
+  - npm i # To fix Yarn error
   - cp .env.example .env
 
 build:
