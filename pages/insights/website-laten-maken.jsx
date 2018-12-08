@@ -38,8 +38,9 @@ const HeaderContainer = styled.section`
     background-color: ${theme.colors.mediumgray};
     background-image: url('https://martinfletcher.files.wordpress.com/2015/01/plato.jpg');
     background-blend-mode: soft-light;
-    opacity: 60%;
     background-size: cover;
+    background-position: center center;
+    opacity: 60%;
     @media (min-width: ${theme.breakpointMobileMenu}) {
         padding: 40vh 2% 5vh 5%;
     }

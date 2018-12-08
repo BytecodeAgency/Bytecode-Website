@@ -32,6 +32,10 @@ const H3 = styled.h3`
     margin-bottom: 0rem;
 `;
 
+const H4 = styled.h4`
+    margin-bottom: 0rem;
+`;
+
 const StyledButton = styled(Button)`
     margin-top: 5rem;
 `;
@@ -67,6 +71,9 @@ const getTitle = (type, title) => {
     }
     if (type === 'h3') {
         return <H3>{title}</H3>;
+    }
+    if (type === 'h4') {
+        return <H4>{title}</H4>;
     }
     return <H1>{title}</H1>;
 };
