@@ -8,7 +8,6 @@ import TextBlock from '../components/TextBlock';
 import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
 import Author from '../components/Author';
 import ContactForm from '../components/ContactForm';
-// import BlogPostThumbnail from '../components/BlogPostThumbnail';
 
 const Posts = styled.section`
     margin: 12rem 0 6rem;

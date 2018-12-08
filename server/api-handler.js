@@ -6,12 +6,12 @@ const express = require('express');
 
 const router = express.Router();
 
-const client = process.env.BLOG_CLIENT;
-const host = process.env.BLOG_HOST;
-const database = process.env.BLOG_DATBASE;
-const user = process.env.BLOG_USER;
-const password = process.env.BLOG_PASSWORD;
-const debug = process.env.BLOG_DEBUG === 'true';
+// const client = process.env.BLOG_CLIENT;
+// const host = process.env.BLOG_HOST;
+// const database = process.env.BLOG_DATBASE;
+// const user = process.env.BLOG_USER;
+// const password = process.env.BLOG_PASSWORD;
+// const debug = process.env.BLOG_DEBUG === 'true';
 
 // const blog = nodeblog(client, host, database, user, password, debug);
 

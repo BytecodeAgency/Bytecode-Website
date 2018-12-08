@@ -42,7 +42,7 @@ const HeaderImage = styled.img`
     right: -10rem;
     top: -75rem;
     overflow: hidden;
-    width: 100%
+    width: 100%;
     height: 100%;
 `;
 
@@ -73,10 +73,6 @@ const pageSettings = {
     description: 'Hier de omschrijving',
     keywords: 'tag1,tag2',
 };
-
-const ArticleContent = styled(Container)`
-    background-color: ${theme.colors.secondary};
-`
 
 const Over = () => (
     <Layout pageSettings={pageSettings}>
