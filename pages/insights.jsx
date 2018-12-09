@@ -16,6 +16,7 @@ const pageSettings = {
     keywords: 'bytecode insights',
 };
 /* eslint-enable */
+/* eslint-disable max-len, object-curly-newline, camelcase */
 
 const Posts = styled.section`
     margin: 12rem 0 6rem;

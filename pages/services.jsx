@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import theme from '../styles/theme';
@@ -16,6 +14,7 @@ const pageSettings = {
     keywords: 'diensten',
 };
 /* eslint-enable */
+/* eslint-disable max-len */
 
 const HeaderContainer = styled.div`
     margin: 16rem 5vw 8rem;
