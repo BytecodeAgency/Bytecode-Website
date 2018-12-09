@@ -9,15 +9,17 @@ import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-lin
 import Author from '../components/Author';
 import ContactForm from '../components/ContactForm';
 
+/* eslint-disable */
+const pageSettings = {
+    title: 'Bytecode Insights - Bytecode Digital Agency B.V.',
+    description: 'Bytecode insights, vergroot je kennis en leer meer over hoe je digitale assets kan inzetten voor jouw business! Samen halen we alles uit jouw digitale zelf!',
+    keywords: 'bytecode insights',
+};
+/* eslint-enable */
+
 const Posts = styled.section`
     margin: 12rem 0 6rem;
 `;
-
-const pageSettings = {
-    title: 'Bytecode Insights',
-    description: 'Bytecode Insights',
-    keywords: 'bytecode blog',
-};
 
 const BlogThumbnailContentWrapper = styled.a`
     cursor: pointer;

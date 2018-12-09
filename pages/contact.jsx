@@ -6,12 +6,13 @@ import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
 import Button from '../components/Button';
 
+/* eslint-disable */
 const pageSettings = {
-    title: 'Neem contact met ons op - Bytecode Digital Agency',
-    description: `Je bent altijd van harte welkom om langs te komen bij
-        Bytecode. Een mailtje sturen of even bellen kan natuurlijk ook`,
-    keywords: 'bytecode,contact',
+    title: 'Contact - Bytecode Digital Agency | Eerste stap tot digitaal succes!',
+    description: 'Contact, neem contact met ons op door een belletje of door een mailtje te sturen. Langskomen mag altijd, Bytecode staat voor je klaar!',
+    keywords: 'contact',
 };
+/* eslint-enable */
 
 const HeaderContainer = styled.section`
     background-color: ${theme.colors.mediumgray};
