@@ -1,7 +1,8 @@
 /* eslint-disable no-restricted-globals, no-undef, no-console */
 
 console.log('Service worker file opened!');
-
+/* Service worker conflicts with serving pdf's.
+   When that's fixed we'll reregister service workers.
 const CACHE_NAME = 'bytecode';
 const urlsToCache = ['/', '/over', '/services', '/cases', '/contact'];
 
@@ -22,3 +23,4 @@ self.addEventListener('fetch', event => {
         .then(() => console.log('Service worker fetched!'));
     event.respondWith(response);
 });
+*/
