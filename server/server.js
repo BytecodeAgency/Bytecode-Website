@@ -13,6 +13,7 @@ const next = require('next');
 const router = require('./router');
 const handlePost = require('./handle-post');
 const sitemapGenerator = require('./sitemap-generator');
+const apiHandler = require('./api-handler');
 
 const dev = process.env.NODE_ENV !== 'PRODUCTION';
 const port = process.env.PORT || 4000;
@@ -40,6 +41,7 @@ app.prepare().then(() => {
     server.use(bodyParser.json());
     server.use(helmet());
     rootFileRouter(server);
+    server.use('/api', apiHandler);
     server.get('/sitemap.xml', (req, res) => sitemapGenerator(req, res));
     server.get('*', (req, res) => router(req, res, app, handle));
     server.post('/post', (req, res) => handlePost(req, res));
