@@ -13,7 +13,7 @@ const HeaderContainer = styled.section`
     margin: 10rem 5% 5% 5%;
     padding: 2%;
     @media (min-width: ${theme.breakpointMobileMenu}) {
-        margin: 0% 0% 5% 5%;
+        margin: 0% 0% 2% 5%;
         padding: 25vh 2% 25vh 5%;
     }
 `;
@@ -43,7 +43,7 @@ const HeaderImage = styled.img`
     right: -10rem;
     top: -75rem;
     overflow: hidden;
-    width: 100%
+    width: 100%;
     height: 100%;
     z-index: -1;
 `;

@@ -13,7 +13,7 @@ const MainHeader = styled.header`
     height: 80vh;
     display: flex;
     position: relative;
-    flex-items: center;
+    justify-items: center;
 `;
 
 const ContentPageHeaderContainer = styled(Container)`
