@@ -3,6 +3,7 @@ cache:
   - node_modules/
 
 before_script:
+  - apk add python make g++
   - npm i -g yarn
   - npm i # To fix Yarn error
   - cp .env.example .env
