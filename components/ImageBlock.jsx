@@ -8,6 +8,7 @@ const ImageBlockFigure = styled.figure`
     position: relative;
     right: 0px;
     margin-left: 5%;
+    margin-top: 4rem;
     overflow: hidden;
     &:after {
         border: 2px ${theme.colors.primary} solid;
