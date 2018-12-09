@@ -19,7 +19,7 @@ const pageSettings = {
 const HeaderContainer = styled.div`
     margin: 16rem 5vw 8rem;
     @media (max-width: ${theme.breakpointMobileMenu}) {
-        margin: 12rem 2vw 6rem;
+        margin: 16rem 2vw 6rem;
     }
 `;
 
@@ -216,6 +216,8 @@ const Services = () => (
                     </TextBlock>
                 </Col>
             </Row>
+        </StyledContainer>
+        <StyledContainer>
             <Row>
                 <Col xl={6} md={12}>
                     <Service
@@ -235,7 +237,7 @@ const Services = () => (
                     </Service>
                 </Col>
                 <Col xl={6} md={12}>
-                    <Service iconName="advertise" title="Digital advertising">
+                    <Service iconName="ads" title="Digital advertising">
                         Tegenwoordig kan je als bedrijf niet achterblijven op
                         het gebied van digital advertising. Bij elke klant doen
                         we daarom onderzoek naar de meest efficiënte manier om
