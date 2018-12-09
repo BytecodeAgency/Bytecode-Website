@@ -36,7 +36,7 @@ const pageSettings = {
 const HeaderContainer = styled.section`
     padding: 10rem 2% 2%;
     background-color: ${theme.colors.mediumgray};
-    background-image: url('https://martinfletcher.files.wordpress.com/2015/01/plato.jpg');
+    background-image: url(${props => props.background});
     background-blend-mode: soft-light;
     background-size: cover;
     background-position: center center;
@@ -133,7 +133,7 @@ const CallToAction = () => (
 const BlogSingle = () => (
     <Layout pageSettings={pageSettings}>
         <article>
-            <HeaderContainer>
+            <HeaderContainer background="https://cataas.com/cat?width=1200?height=800">
                 <Container>
                     <Row>
                         <Col md={12}>
