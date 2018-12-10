@@ -12,7 +12,8 @@ import ContactForm from '../components/ContactForm';
 /* eslint-disable */
 const pageSettings = {
     title: 'Bytecode Insights - Bytecode Digital Agency B.V.',
-    description: 'Bytecode insights, vergroot je kennis en leer meer over hoe je digitale assets kan inzetten voor jouw business! Samen halen we alles uit jouw digitale zelf!',
+    description:
+        'Bytecode insights, vergroot je kennis en leer meer over hoe je digitale assets kan inzetten voor jouw business! Samen halen we alles uit jouw digitale zelf!',
     keywords: 'bytecode insights',
 };
 /* eslint-enable */
@@ -43,6 +44,12 @@ const BlogThumbnailImage = styled.div`
 
 const AuthorContainer = styled.div`
     margin: 2rem 0;
+`;
+
+const ContentBlockWrapper = styled.div`
+    background-color: ${theme.colors.mediumgray};
+    margin: 5% 0 5% 0;
+    padding: 7.5% 5%;
 `;
 
 const content = {
@@ -167,29 +174,29 @@ const BlogSingle = () => (
                 </Row>
             </Container>
         </Posts>
-        <Container>
+        <ContentBlockWrapper>
             <Row>
                 <Col md={5}>
                     <TextBlock
                         headingType="h2"
                         title="Door de jongens van Bytecode. Met liefde gemaakt."
-                        // href="//bytecode.nl"
-                        // button="Lees meer over ons"
                     >
-                        Deze Insights zijn van het team van Bytecode. Een klein
-                        maar fijne web agency in Rotterdam. In ons werken houden
-                        wij, net als in deze artikelen, bezig hoe je het web het
-                        effectiefst kan gebruiken. Heb je nog vragen over een
-                        artikel of wil je zelf een web applictie gaan bouwen?
-                        Neem eens contact met ons op. Misschien kunnen we zelfs
-                        samenwerken.
+                        Dit artikel is met liefde geschreven voor het team van
+                        Bytecode, een kleine maar fijne web agency in regio
+                        Rotterdam/Den Haag. Net als in deze artikelen willen wij
+                        jou in ons werk graag nieuwe inzichten geven hoe je de
+                        kracht van het internet het beste kan inzetten om online
+                        succes te boeken. Heb je nog vragen over een artikel of
+                        wil je zelf een web applictie gaan bouwen? Neem eens
+                        contact met ons op, misschien kunnen we zelfs
+                        samenwerken!
                     </TextBlock>
                 </Col>
                 <Col offset={{ md: 1 }} md={6}>
                     <ContactForm />
                 </Col>
             </Row>
-        </Container>
+        </ContentBlockWrapper>
     </Layout>
 );
 
