@@ -195,7 +195,7 @@ const ContentBlockWrapper = styled.section`
 const CallToAction = () => (
     <CallToActionContainer>
         <CallToActionText>
-            Dit artikel is met liefde geschreven voor het team van Bytecode, een
+            Dit artikel is met liefde geschreven door het team van Bytecode, een
             kleine maar fijne web agency in regio Rotterdam/Den Haag. Net als in
             deze artikelen willen wij jou in ons werk graag nieuwe inzichten
             geven hoe je de kracht van het internet het beste kan inzetten om
