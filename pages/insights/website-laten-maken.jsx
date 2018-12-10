@@ -1,6 +1,5 @@
 /* eslint-disable max-len, react/no-danger */
 
-import { Fragment } from 'react';
 import styled from 'styled-components';
 import Layout from '../../components/Layout';
 import theme from '../../styles/theme';
@@ -98,8 +97,14 @@ const HeaderContainer = styled.section`
     }
 `;
 
-const BlogContent = styled(Container)`
-    padding: 4rem 0 12rem;
+const BlogContentContainer = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
+const BlogContent = styled.div`
+    padding: 4rem 0 4rem;
+    max-width: 68rem;
 
     p {
         margin: 1rem 0;
@@ -118,11 +123,6 @@ const BlogContent = styled(Container)`
         font-kerning: normal;
         line-height: 2.2rem;
         font-size: 1.75rem;
-        &.call-to-action {
-            font-style: italic;
-            color: ${theme.colors.lightgray};
-            margin-top: 2em;
-        }
     }
 
     h1,
@@ -140,11 +140,13 @@ const BlogContent = styled(Container)`
     }
 
     ol {
+        list-style-type: decimal;
         margin: 1em 1.5em;
     }
 
     li {
-        margin: 0.25rem 0;
+        margin: 0.5rem 0;
+        padding-left: 0.8rem;
         font-family: ${theme.typography.p.font};
         letter-spacing: ${theme.typography.p.spacing};
     }
@@ -175,18 +177,36 @@ const BlogMetaData = styled.p`
     }
 `;
 
+const CallToActionContainer = styled.div`
+    margin-top: 4rem;
+`;
+
+const CallToActionText = styled.p`
+    font-style: italic;
+    color: ${theme.colors.lightgray} !important;
+`;
+
+const ContentBlockWrapper = styled.section`
+    background-color: ${theme.colors.mediumgray};
+    margin: 5% 0% 5% -5%;
+    padding: 7.5% 5%;
+`;
+
 const CallToAction = () => (
-    <Fragment>
-        <p className="call-to-action">
-            Dit artikel is geschreven het team van Bytecode. Een klein maar
-            fijne web agency in Rotterdam. Net als in deze artikelen willen wij
-            jou in ons werk graag nieuwe inzichten geven hoe je het internet kan
-            gebruiken. Heb je vragen over dit artikel of wil je meer over ons
-            weten?
-            <a href="/contact"> Neem eens contact met ons op!</a>
-        </p>
-        <ContactForm />
-    </Fragment>
+    <CallToActionContainer>
+        <CallToActionText>
+            Dit artikel is met liefde geschreven voor het team van Bytecode, een
+            kleine maar fijne web agency in regio Rotterdam/Den Haag. Net als in
+            deze artikelen willen wij jou in ons werk graag nieuwe inzichten
+            geven hoe je de kracht van het internet het beste kan inzetten om
+            online succes te boeken.
+            <br />
+            <br />
+            Wil je meer over ons weten of eens sparren wat we voor jouw bedrijf
+            kunnen betekenen?&nbsp;
+            <a href="/contact">Kom gerust een keer bij ons langs!</a>
+        </CallToActionText>
+    </CallToActionContainer>
 );
 
 const BlogSingle = () => (
@@ -215,19 +235,28 @@ const BlogSingle = () => (
                     </Row>
                 </Container>
             </HeaderContainer>
-            <BlogContent>
-                <Row>
-                    <Col offset={{ md: 1, lg: 2, xl: 3 }} md={10} lg={8} xl={6}>
-                        <div
-                            dangerouslySetInnerHTML={{
-                                __html: content.html_content,
-                            }}
-                        />
-                        <CallToAction />
-                    </Col>
-                </Row>
-            </BlogContent>
+            <BlogContentContainer>
+                <BlogContent>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: content.html_content,
+                        }}
+                    />
+                    <CallToAction />
+                </BlogContent>
+            </BlogContentContainer>
         </article>
+        <Container>
+            {/* TODO: make a separate component out of this */}
+            <ContentBlockWrapper>
+                <TextBlock
+                    subtitle="We staan voor je klaar"
+                    headingType="h2"
+                    title="Heb je een vraag over dit artikel? Of misschien een suggestie voor een volgende post? Laat het ons weten!"
+                />
+                <ContactForm />
+            </ContentBlockWrapper>
+        </Container>
     </Layout>
 );
 
