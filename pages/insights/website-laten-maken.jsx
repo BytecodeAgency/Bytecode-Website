@@ -105,6 +105,11 @@ const BlogContent = styled(Container)`
         margin: 1rem 0;
     }
 
+    b,
+    strong {
+        font-weight: bold;
+    }
+
     p,
     ul,
     li,
@@ -132,9 +137,16 @@ const BlogContent = styled(Container)`
     ul {
         list-style-type: circle;
         margin: 1em 1.5em;
-        li {
-            margin: 0.25rem 0;
-        }
+    }
+
+    ol {
+        margin: 1em 1.5em;
+    }
+
+    li {
+        margin: 0.25rem 0;
+        font-family: ${theme.typography.p.font};
+        letter-spacing: ${theme.typography.p.spacing};
     }
 
     figure {
