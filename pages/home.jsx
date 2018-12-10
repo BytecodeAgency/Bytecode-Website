@@ -85,7 +85,7 @@ const Home = () => (
                     <TextBlock
                         subtitle="Welkom bij Bytecode"
                         title="Vind de weg naar jouw digitale succes"
-                        href="//bytecode.nl"
+                        href="//bytecode.nl/contact"
                         button="Lees verder"
                     >
                         Ons gepassioneerde team helpt je dolgraag met het
@@ -133,7 +133,7 @@ const Home = () => (
                     <TextBlock
                         subtitle="Hoe Bytecode kan helpen"
                         title="Samen halen we alles uit jouw digitale zelf"
-                        href="//bytecode.nl"
+                        href="//bytecode.nl/services"
                         button="Lees verder"
                     >
                         Wij maken uitgebreide analyses en strategieën van alles
@@ -153,7 +153,7 @@ const Home = () => (
                     <TextBlock
                         subtitle="Wie wij zijn"
                         title="Kennis en kwaliteit met een no-bullshit mentaliteit"
-                        href="//bytecode.nl"
+                        href="//bytecode.nl/services"
                         button="Lees verder"
                     >
                         Wij staan voor een eerlijke en open samenwerking. We

@@ -8,18 +8,20 @@ import ContentPageHeader from '../components/ContentPageHeader';
 import TeamMember from '../components/TeamMember';
 import { Container, Row, Col } from '../lib/Grid';
 
+/* eslint-disable */
+const pageSettings = {
+    title: 'Over ons - Bytecode Digital Agency | Wie zijn de drijvende krachten achter Bytecode?',
+    description: 'Over ons. Wie of wat is Bytecode? Wat is onze missie en hoe willen wij die bereiken? Kom meer te weten of het Bytecode-team!',
+    keywords: 'over ons',
+};
+/* eslint-enable */
+
 const StyledContainer = styled(Container)`
     margin-top: 10rem;
     margin-bottom: 10rem;
     max-width: none !important;
     margin: 10rem 0rem;
 `;
-
-const pageSettings = {
-    title: 'Cases',
-    description: 'Hier de omschrijving',
-    keywords: 'tag1,tag2',
-};
 
 const ContentBlockWrapper = styled.section`
     background-color: ${theme.colors.mediumgray};
