@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    name: 'bytecode.nl',
+    name: 'bytecode-website',
     script: 'server/server.js',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
