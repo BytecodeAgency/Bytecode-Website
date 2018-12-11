@@ -111,7 +111,7 @@ const Contact = () => (
                         <a href="tel:0152024222">015-2024222</a>
                     </ContactHeading>
                     <ContactHeading>
-                        Of kom een keertje (of afspraak) langs bij ons op
+                        Of kom een keertje (op afspraak) langs bij ons op
                         kantoor aan de de&nbsp;
                         <a
                             target="_blank"

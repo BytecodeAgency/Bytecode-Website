@@ -11,7 +11,7 @@ const createStaticPageEntry = page => {
     let entry = '';
     entry += `${indent(1)}<url>\n`;
     entry += `${indent(2)}<loc>${genUrl(page)}</loc>\n`;
-    entry += `${indent(2)}<changefreq>monthly</changefreq>\n`;
+    entry += `${indent(2)}<changefreq>weekly</changefreq>\n`;
     entry += `${indent(1)}</url>\n`;
     return entry;
 };
