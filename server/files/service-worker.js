@@ -1,10 +1,10 @@
 /* eslint-disable no-restricted-globals, no-undef, no-console */
 
 console.log('Service worker file opened!');
-
-const CACHE_NAME = 'bytecode-static-dev';
-// const urlsToCache = ['/', '/over', '/services', '/cases', '/contact'];
-const urlsToCache = [''];
+/* Service worker conflicts with serving pdf's.
+   When that's fixed we'll reregister service workers.
+const CACHE_NAME = 'bytecode';
+const urlsToCache = ['/', '/over', '/services', '/cases', '/contact'];
 
 self.addEventListener('install', event => {
     console.log('Service worker installing...');
@@ -23,3 +23,4 @@ self.addEventListener('fetch', event => {
         .then(() => console.log('Service worker fetched!'));
     event.respondWith(response);
 });
+*/

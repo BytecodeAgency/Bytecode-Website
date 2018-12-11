@@ -28,6 +28,14 @@ const Paragraph = styled.p`
     margin: 0.5rem 0;
 `;
 
+const H3 = styled.h3`
+    margin-bottom: 0rem;
+`;
+
+const H4 = styled.h4`
+    margin-bottom: 0rem;
+`;
+
 const StyledButton = styled(Button)`
     margin-top: 5rem;
 `;
@@ -43,10 +51,10 @@ const getImage = (src, alt) => {
     return '';
 };
 
-const getButton = (href, button, useNextLink) => {
+const getButton = (href, button, usenextlink) => {
     if (href && button) {
         return (
-            <StyledButton href={href} useNextLink={useNextLink}>
+            <StyledButton href={href} usenextlink={usenextlink}>
                 {button}
             </StyledButton>
         );
@@ -61,6 +69,12 @@ const getTitle = (type, title) => {
     if (type === 'h2') {
         return <H2>{title}</H2>;
     }
+    if (type === 'h3') {
+        return <H3>{title}</H3>;
+    }
+    if (type === 'h4') {
+        return <H4>{title}</H4>;
+    }
     return <H1>{title}</H1>;
 };
 
@@ -73,7 +87,7 @@ const TextBlock = props => {
         headingType,
         href = null,
         button = null,
-        useNextLink,
+        usenextlink,
         children,
     } = props;
 
@@ -83,17 +97,17 @@ const TextBlock = props => {
             <Subtitle>{subtitle}</Subtitle>
             {getTitle(headingType, title)}
             <Paragraph>{children}</Paragraph>
-            {getButton(href, button, useNextLink)}
+            {getButton(href, button, usenextlink)}
         </div>
     );
 };
 
 TextBlock.propTypes = {
-    subtitle: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
     title: PropTypes.string.isRequired,
     href: PropTypes.string,
     button: PropTypes.string,
-    useNextLink: PropTypes.bool,
+    usenextlink: PropTypes.bool,
 };
 
 export default TextBlock;

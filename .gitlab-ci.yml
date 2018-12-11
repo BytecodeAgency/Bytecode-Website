@@ -1,15 +1,22 @@
-image: node:8-alpine
-
 cache:
   paths:
   - node_modules/
 
 before_script:
+  - apk add python make g++
   - npm i -g yarn
-  - yarn
+  - npm i # To fix Yarn error
   - cp .env.example .env
 
 build:
+  image: node:10-alpine
+  script:
+    - yarn run lint
+    - yarn run build
+    - yarn run export
+
+build-node-8:
+  image: node:8-alpine
   script:
     - yarn run lint
     - yarn run build

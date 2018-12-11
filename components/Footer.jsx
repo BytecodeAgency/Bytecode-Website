@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 import { Container, Row, Col } from '../lib/Grid';
 import Button from './Button';
 import AllSocials from '../lib/Socials';
@@ -34,6 +35,7 @@ const FooterLinkContainer = styled.h4`
 const FooterLink = styled.a`
     display: block;
     text-decoration: none;
+    cursor: pointer;
 `;
 
 const FooterHeadingContainer = styled.div`
@@ -92,7 +94,10 @@ const Footer = () => (
                         Ons adres is Verlengde Spiegelmakerstraat 13, 2645LZ
                         Delfgauw.
                     </FooterText>
-                    <FooterButton href="https://calendly.com/bytecode">
+                    <FooterButton
+                        href="https://calendly.com/bytecode"
+                        target="_blank"
+                    >
                         Plan een afspraak
                     </FooterButton>
                 </FooterCol>
@@ -110,7 +115,10 @@ const Footer = () => (
                         vrijgegeven.
                     </FooterText>
                     {/* eslint-disable-next-line max-len */}
-                    <FooterButton href="https://github.com/BytecodeBV/Bytecode-Website">
+                    <FooterButton
+                        href="https://github.com/BytecodeBV/Bytecode-Website"
+                        target="_blank"
+                    >
                         Bekijk broncode
                     </FooterButton>
                 </FooterCol>
@@ -119,12 +127,22 @@ const Footer = () => (
                         <p className="subtitle">Documenten</p>
                     </FooterHeadingContainer>
                     <FooterText>
-                        {/* TODO: Add documents
-                        <FooterLink href="#">Algemene Voorwaarden</FooterLink>
-                        <FooterLink href="#">Privacy Policy</FooterLink>
-                        <FooterLink href="#">Cookie Policy</FooterLink>
-                        */}
-                        <FooterLink href="https://security.bytecode.nl">
+                        <FooterLink
+                            href="/static/docs/algemene-voorwaarden.pdf"
+                            target="_blank"
+                        >
+                            Algemene Voorwaarden
+                        </FooterLink>
+                        <Link href="/legal/privacy-policy">
+                            <FooterLink>Privacy Policy</FooterLink>
+                        </Link>
+                        <Link href="/legal/cookie-policy">
+                            <FooterLink>Cookie Policy</FooterLink>
+                        </Link>
+                        <FooterLink
+                            href="https://security.bytecode.nl"
+                            target="_blank"
+                        >
                             Security Policy
                         </FooterLink>
                     </FooterText>
