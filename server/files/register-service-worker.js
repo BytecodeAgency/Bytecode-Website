@@ -14,10 +14,15 @@ if ('serviceWorker' in navigator) {
 
 // Removes old service workers
 if ('serviceWorker' in navigator) {
+    console.log('Service worker in navigator');
     navigator.serviceWorker.getRegistrations()
         .then(registrations => {
+            console.log('sw\'s found, now removing them');
             registrations.forEach(registration => {
+                console.log('Removing sw:');
+                console.log(registration);
                 registration.unregister();
+                console.log('Removed sw!');
             });
         });
 }
