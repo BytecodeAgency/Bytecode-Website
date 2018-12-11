@@ -202,16 +202,17 @@ const ContentBlockWrapper = styled.section`
 const CallToAction = () => (
     <CallToActionContainer>
         <CallToActionText>
-            Dit artikel is met liefde geschreven door het team van Bytecode, een
-            kleine maar fijne web agency in regio Rotterdam/Den Haag. Net als in
-            deze artikelen willen wij jou in ons werk graag nieuwe inzichten
-            geven hoe je de kracht van het internet het beste kan inzetten om
-            online succes te boeken.
+            Dit artikel is met passie geschreven door Bytecode, een jonge en
+            moderne web agency. Wij laten jou graag zien hoe je de kracht van
+            het internet kunt gebruiken om alles uit jezelf te halen. Dit doen
+            we door bijvoorbeeld dit artikel te schrijven, maar ook door deze
+            inzichten in onze werkzaamheden te verwerken.
             <br />
             <br />
-            Wil je meer over ons weten of eens sparren wat we voor jouw bedrijf
-            kunnen betekenen?&nbsp;
-            <a href="/contact">Kom gerust een keer bij ons langs!</a>
+            Wil je meer over ons weten of kunnen we misschien iets voor je
+            betekenen? <a href="/contact">Neem gerust contact met ons op</a> of
+            kom een keer langs op de koffie! Kom gerust een keer bij ons op de
+            koffie!
         </CallToActionText>
     </CallToActionContainer>
 );

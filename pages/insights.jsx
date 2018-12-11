@@ -180,17 +180,19 @@ const BlogSingle = () => (
                 <Col md={5}>
                     <TextBlock
                         headingType="h2"
-                        title="Door de jongens van Bytecode. Met liefde gemaakt."
+                        title="Een frisse blik op het internet."
                     >
-                        Dit artikel is met liefde geschreven voor het team van
-                        Bytecode, een kleine maar fijne web agency in regio
-                        Rotterdam/Den Haag. Net als in deze artikelen willen wij
-                        jou in ons werk graag nieuwe inzichten geven hoe je de
-                        kracht van het internet het beste kan inzetten om online
-                        succes te boeken. Heb je nog vragen over een artikel of
-                        wil je zelf een web applictie gaan bouwen? Neem eens
-                        contact met ons op, misschien kunnen we zelfs
-                        samenwerken!
+                        Hier zie je artikelen die met passie zijn geschreven
+                        door Bytecode, een jonge en moderne web agency. Wij
+                        laten jou graag zien hoe je de kracht van het internet
+                        kunt gebruiken om alles uit jezelf te halen. Dit doen we
+                        door interessante artikelen te schrijven, maar ook door
+                        deze inzichten in onze werkzaamheden te verwerken.
+                        <br />
+                        <br />
+                        Wil je meer over ons weten of kunnen we misschien iets
+                        voor je betekenen? Neem gerust een keer contact met ons
+                        op of kom een keer langs op de koffie!
                     </TextBlock>
                 </Col>
                 <Col offset={{ md: 1 }} md={6}>

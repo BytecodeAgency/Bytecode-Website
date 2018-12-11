@@ -9,8 +9,10 @@ import Process from '../components/Process';
 
 /* eslint-disable */
 const pageSettings = {
-    title: 'Services - Bytecode Digital Agency | Vind de weg naar digitaal succes!',
-    description: 'Services, benieuwd wat Bytecode voor jou kan betekenen? Met onze expertise en maatwerk helpen we je om alles uit je digitale zelf te kunnen halen.',
+    title:
+        'Services - Bytecode Digital Agency | Vind de weg naar digitaal succes!',
+    description:
+        'Services, benieuwd wat Bytecode voor jou kan betekenen? Met onze expertise en maatwerk helpen we je om alles uit je digitale zelf te kunnen halen.',
     keywords: 'diensten',
 };
 /* eslint-enable */
@@ -121,11 +123,14 @@ const Services = () => (
             <Row>
                 <Col lg={6} md={12}>
                     <Service iconName="mobile" title="Mobiele applicaties">
-                        Wil je een succesvolle webshop hebben? Dan moet je aan
-                        heel veel factoren denken. Bytecode weet precies welke
-                        factoren dit zijn en wil je daar graag mee helpen. Zowel
-                        met de techniek als met de specifieke marketing en SEO
-                        die bij een succesvolle webshop komen kijken.
+                        Tegenwoordig zijn mobiele applicaties minstens zo
+                        belangrijk als websites of webapps. Wij vinden het
+                        daarom belangrijk dat apps net zo goed werken als
+                        websites en op elk apparaat perfect aangepast zijn.
+                        Daarbij benaderen wij apps als een zelfstandig platform
+                        en niet als een kopie van de website. Bytecode
+                        ontwikkelt zowel native applicaties als progressive
+                        webapps.
                     </Service>
                 </Col>
 
