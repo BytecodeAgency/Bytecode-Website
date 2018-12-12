@@ -211,7 +211,7 @@ const CallToAction = () => (
             <br />
             Wil je meer over ons weten of kunnen we misschien iets voor je
             betekenen? <a href="/contact">Neem gerust contact met ons op</a> of
-            kom gerust een keer langs op de koffie!
+            kom een keer langs op de koffie!
         </CallToActionText>
     </CallToActionContainer>
 );

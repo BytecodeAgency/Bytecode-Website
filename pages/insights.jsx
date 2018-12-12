@@ -192,7 +192,7 @@ const BlogSingle = () => (
                         <br />
                         Wil je meer over ons weten of kunnen we misschien iets
                         voor je betekenen? Neem gerust een keer contact met ons
-                        op of kom gerust een keer langs op de koffie!
+                        op of kom een keer langs op de koffie!
                     </TextBlock>
                 </Col>
                 <Col offset={{ md: 1 }} md={6}>
