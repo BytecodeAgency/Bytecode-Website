@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Disabled /home and /index routes
 * Fixed typo in Website Laten Maken article
 
+### Hotfixed:
+
+* v1.2.3-hotfix.0: Corrected CTA in Insights
+
 ## 1.2.2 (2018-12-11)
 
 ### Changed:
