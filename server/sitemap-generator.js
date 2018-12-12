@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable max-len, no-return-assign */
 const staticRoutes = require('./routes');
 
 const indentString = '    ';
@@ -19,9 +19,9 @@ const createStaticPageEntry = page => {
 const getStaticPageEntries = () => {
     let staticPages = '';
     const staticRoutesArray = Object.keys(staticRoutes);
-    staticRoutesArray.forEach(page => {
-        staticPages += createStaticPageEntry(page);
-    });
+    staticRoutesArray
+        .filter(page => page !== '/home' && page !== '/index')
+        .forEach(page => (staticPages += createStaticPageEntry(page)));
     return staticPages;
 };
 
