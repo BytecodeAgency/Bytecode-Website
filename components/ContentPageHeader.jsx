@@ -6,8 +6,8 @@ import theme from '../styles/theme';
 
 const MainHeader = styled.header`
     background-color: ${theme.colors.mediumgray};
-    background-image: url('/static/img/content/group.jpg');
-    background-blend-mode: luminosity;
+    background-image: url(${props => props.img});
+    background-blend-mode: soft-light;;
     background-size: cover;
     margin-left: 1%;
     height: 80vh;
@@ -31,7 +31,7 @@ const TextBlockContent =
     'rem ipsum dolor sit amet consectetur adipisicing elit. Asperio';
 
 const ContentPageHeader = () => (
-    <MainHeader>
+    <MainHeader img="https://www.grafixarts.com/wp-content/uploads/2018/06/gfx_shrink_artist_sheets_fan_julie.jpg">
         <ContentPageHeaderContainer>
             <ContentPageHeaderRow>
                 <Col md={6}>

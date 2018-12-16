@@ -60,7 +60,7 @@ const Over = () => (
                 </PaddedColumn>
             </Row>
         </StyledContainer>
-        <ImageBlock src="/static/img/content/interior.png" alt="Funny stuff" />
+        <ImageBlock src="https://www.grafixarts.com/wp-content/uploads/2018/06/gfx_shrink_artist_sheets_fan_julie.jpg" alt="Funny stuff" />
         <ContentBlockWrapper>
             <StyledContainer>
                 <Row>
