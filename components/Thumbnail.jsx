@@ -12,7 +12,8 @@ const StyledDiv = styled.div`
     justify-content: center;
     margin-bottom: 3rem;
     overflow: hidden;
-    &:hover div, &:focus div {
+    &:hover div,
+    &:focus div {
         -ms-transform: scale(1.2);
         -moz-transform: scale(1.2);
         -webkit-transform: scale(1.2);
@@ -58,10 +59,9 @@ const ServiceName = styled.p`
 const Thumbnail = ({ backgroundImage, serviceIcon, serviceName }) => (
     <StyledDiv background={backgroundImage}>
         <Icon>
-            <ServiceImage src={serviceIcon} alt={serviceName}/>
+            <ServiceImage src={serviceIcon} alt={serviceName} />
             <ServiceName>{serviceName}</ServiceName>
         </Icon>
-        <div/>
     </StyledDiv>
 );
 

@@ -10,8 +10,10 @@ import { Container, Row, Col } from '../lib/Grid';
 
 /* eslint-disable */
 const pageSettings = {
-    title: 'Over ons - Bytecode Digital Agency | Wie zijn de drijvende krachten achter Bytecode?',
-    description: 'Over ons. Wie of wat is Bytecode? Wat is onze missie en hoe willen wij die bereiken? Kom meer te weten of het Bytecode-team!',
+    title:
+        'Over ons - Bytecode Digital Agency | Wie zijn de drijvende krachten achter Bytecode?',
+    description:
+        'Over ons. Wie of wat is Bytecode? Wat is onze missie en hoe willen wij die bereiken? Kom meer te weten of het Bytecode-team!',
     keywords: 'over ons',
 };
 /* eslint-enable */
@@ -60,7 +62,11 @@ const Over = () => (
                 </PaddedColumn>
             </Row>
         </StyledContainer>
-        <ImageBlock src="https://www.grafixarts.com/wp-content/uploads/2018/06/gfx_shrink_artist_sheets_fan_julie.jpg" alt="Funny stuff" />
+        {/* eslint-disable max-len */}
+        <ImageBlock
+            src="https://www.grafixarts.com/wp-content/uploads/2018/06/gfx_shrink_artist_sheets_fan_julie.jpg"
+            alt="Funny stuff"
+        />
         <ContentBlockWrapper>
             <StyledContainer>
                 <Row>

@@ -1,16 +1,16 @@
 /* eslint-disable consistent-return, prettier/prettier, max-len */
 
 import Head from 'next/head';
+import styled from 'styled-components';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import theme from '../styles/theme';
-import styled from 'styled-components';
 
 const Main = styled.main`
     @media (max-width: ${theme.breakpointMobileMenu}) {
         padding-top: 7rem
     }
-`
+`;
 
 const description = descriptionInput => {
     if (descriptionInput) {
