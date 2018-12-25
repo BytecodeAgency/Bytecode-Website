@@ -75,8 +75,9 @@ const content = {
 };
 
 const pageSettings = {
-    title: `${content.title} - Bytecode Insights`,
-    description: content.subtitle,
+    title: content.title,
+    description:
+        'Je wilt een website laten maken en bent op zoek naar de juiste webdeveloper. Wat is nou echt waardevol voor jouw website? Lees het hier!',
     keywords: 'website laten maken',
 };
 
