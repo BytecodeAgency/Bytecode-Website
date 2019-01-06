@@ -20,7 +20,7 @@ const HeaderContainer = styled.section`
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    margin: 0% 0% 5% 5%;
+    margin: 1em 0 1em 2rem;
     padding: 20vh 2% 20vh 5%;
 `;
 
@@ -72,7 +72,7 @@ const Contact = () => (
                 </Hidden>
             </AbsoluteCol>
             <Row>
-                <Col md={8} lg={4}>
+                <Col md={10} lg={10} xl={6}>
                     <TextBlock
                         subtitle="Contact us"
                         title="Een keertje langskomen op kantoor? Gezellig!"

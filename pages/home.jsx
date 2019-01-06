@@ -78,7 +78,7 @@ const GroupImage = styled.img`
 
 const ContentBlockWrapper = styled.section`
     background-color: ${theme.colors.mediumgray};
-    margin: 2rem 0% 10rem 4rem;
+    margin: 2rem 0% 10rem 2rem;
     padding: 7.5% 5%;
 `;
 

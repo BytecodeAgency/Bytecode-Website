@@ -7,6 +7,9 @@ import theme from '../styles/theme';
 
 const FooterColInnerContainer = styled.div`
     margin-bottom: 2rem;
+    @media (max-width: ${theme.breakpoints[1]}px) {
+        margin: 3.5em 2rem;
+    }
 `;
 
 const FooterCol = ({ props, children }) => (
