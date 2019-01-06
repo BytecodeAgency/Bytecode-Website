@@ -1,8 +1,16 @@
 /* eslint-disable consistent-return, prettier/prettier, max-len */
 
 import Head from 'next/head';
+import styled from 'styled-components';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import theme from '../styles/theme';
+
+const Main = styled.main`
+    @media (max-width: ${theme.breakpointMobileMenu}) {
+        padding-top: 7rem
+    }
+`;
 
 const description = descriptionInput => {
     if (descriptionInput) {
@@ -28,7 +36,7 @@ const Layout = ({ children, pageSettings }) => (
             { keywords(pageSettings.keywords) }
         </Head>
         <Navbar />
-        <main className="main">{children}</main>
+        <Main className="main">{children}</Main>
         <Footer />
     </div>
 );

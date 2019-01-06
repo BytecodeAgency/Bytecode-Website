@@ -5,25 +5,39 @@ import { Row, Col } from '../lib/Grid'; // eslint-disable-line
 
 const ContentBlockWrapper = styled.section`
     background-color: ${theme.colors.mediumgray};
-    margin: 5% 0% 5% 5%;
+    margin: 2rem 0% 10rem 4rem;
     padding: 7.5% 5%;
     position: relative;
     z-index: 100;
 `;
 
 const ProcessStepImage = styled.img`
-    height: 60rem;
-    max-height: 30vh;
-    margin-bottom: 5rem;
-    @media (max-width: ${theme.breakpoints[2]}px) {
-        margin-top: 10rem;
+    width: 75%;
+    margin-top: 2rem;
+    @media (min-width: ${theme.breakpoints[0]}px) {
+        margin-bottom: 0rem;
+    }
+    @media (min-width: ${theme.breakpoints[1]}px) {
+        margin-bottom: 0rem;
+        width: 50%;
+        height: 60rem;
+    }
+    @media (min-width: ${theme.breakpoints[2]}px) {
+        margin-bottom: 0rem;
+        width: 60%;
+        height: 60rem;
+    }
+    @media (min-width: ${theme.breakpoints[3]}px) {
+        margin-bottom: 15rem;
+        width: 100%;
+        height: 60rem;
     }
 `;
 
 const Process = () => (
     <ContentBlockWrapper>
         <Row>
-            <Col md={4} lg={3}>
+            <Col md={6} lg={4} xl={3}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/analyze.svg"
                     alt="Analyze"
@@ -36,7 +50,7 @@ const Process = () => (
                     analyseren welke punten het meeste prioriteit hebben.
                 </TextBlock>
             </Col>
-            <Col offset={{ lg: 1 }} md={4} lg={3}>
+            <Col offset={{ xl: 0.75 }} md={6} lg={4} xl={3}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/strategize.svg"
                     alt="Strategize"
@@ -54,7 +68,7 @@ const Process = () => (
                     halen.
                 </TextBlock>
             </Col>
-            <Col offset={{ lg: 1 }} md={4} lg={3}>
+            <Col offset={{ xl: 0.75 }} md={12} lg={4} xl={3}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/realize.svg"
                     alt="Realize"

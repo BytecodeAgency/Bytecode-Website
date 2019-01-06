@@ -18,12 +18,27 @@ const pageSettings = {
 
 const HeaderContainer = styled.section`
     background-color: ${theme.colors.mediumgray};
-    margin: 0% 0% 5% 5%;
-    padding: 25vh 2% 25vh 5%;
+    padding: 4vh 2rem 3vh 2rem;
+
+    @media (min-width: ${theme.breakpoints[1]}px) {
+        margin: 0 0 0 1rem;
+        padding: 5vh 2% 7.5vh 5%;
+    }
+    @media (min-width: ${theme.breakpoints[2]}px) {
+        margin: 0 0 0 2rem;
+        padding: 10vh 2% 15vh 5%;
+    }
+    @media (min-width: ${theme.breakpoints[3]}px) {
+        margin: 0 0 0 2rem;
+        padding: 25vh 2% 25vh 5%;
+    }
 `;
 
 const StyledContainer = styled(Container)`
     margin: 10% !important;
+    @media (min-width: ${theme.breakpoints[2]}px) {
+        margin: 10% !important;
+    }
 `;
 
 const AbsoluteCol = styled(Col)`
@@ -51,7 +66,7 @@ const HeaderImage = styled.img`
     right: -10rem;
     top: -75rem;
     overflow: hidden;
-    width: 100%
+    width: 100%;
     height: 100%;
 `;
 
@@ -63,7 +78,7 @@ const GroupImage = styled.img`
 
 const ContentBlockWrapper = styled.section`
     background-color: ${theme.colors.mediumgray};
-    margin: 5% 0% 5% 5%;
+    margin: 2rem 0% 10rem 4rem;
     padding: 7.5% 5%;
 `;
 
@@ -81,7 +96,7 @@ const Home = () => (
                 </Hidden>
             </AbsoluteCol>
             <Row>
-                <Col md={6} lg={4}>
+                <Col lg={6} xl={4}>
                     <TextBlock
                         subtitle="Welkom bij Bytecode"
                         title="Vind de weg naar jouw digitale succes"
