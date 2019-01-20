@@ -9,6 +9,7 @@ const ContactFormContainer = styled.div`
 
 const InputField = styled.input`
     background: none;
+    outline: none;
     border: none;
     border-bottom: 2px solid ${theme.colors.lightgray};
     margin-bottom: 1.5rem;
@@ -34,6 +35,7 @@ const SendButton = styled.button`
 
 const InputTextArea = styled.textarea`
     background: none;
+    outline: none;
     border: none;
     border-bottom: 2px solid ${theme.colors.white};
     color: white;
