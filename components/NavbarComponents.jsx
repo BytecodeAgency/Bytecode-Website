@@ -23,6 +23,9 @@ const NavbarContainer = styled.nav`
         right: 0;
         background: ${transparentize(0.3, theme.colors.black)};
     }
+    @media (min-width: ${theme.breakpointMobileMenu}) {
+    margin: 0px 13.5rem;
+    }
 `;
 
 const InnerNavbarContainer = styled(Container)`
