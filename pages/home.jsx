@@ -29,7 +29,7 @@ const HeaderContainer = styled.section`
         padding: 10vh 2% 15vh 5%;
     }
     @media (min-width: ${theme.breakpoints[3]}px) {
-        margin: 0 0 0 2rem;
+        margin: 0 0 0 8rem;
         padding: 25vh 2% 25vh 5%;
     }
 `;
