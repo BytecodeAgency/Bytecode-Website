@@ -45,7 +45,7 @@ const HeaderImage = styled.img`
     right: -10rem;
     top: -75rem;
     overflow: hidden;
-    width: 100%
+    width: 100%;
     height: 100%;
 `;
 

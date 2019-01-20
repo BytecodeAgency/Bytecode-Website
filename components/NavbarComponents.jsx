@@ -23,8 +23,11 @@ const NavbarContainer = styled.nav`
         right: 0;
         background: ${transparentize(0.3, theme.colors.black)};
     }
-    @media (min-width: ${theme.breakpointMobileMenu}) {
-    margin: 0px 13.5rem;
+    @media (min-width: ${theme.breakpoints[2]}px) {
+        margin: 0 2rem;
+    }
+    @media (min-width: ${theme.breakpoints[3]}px) {
+        margin: 0 8.5rem;
     }
 `;
 
@@ -110,10 +113,7 @@ const NavbarItem = styled(NavbarItemBase)`
 `;
 
 const Logo = styled.img`
-    height: 55%;
-    margin-left: -4rem;
-    max-height: 6rem;
-    width: auto;
+    width: 60%;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         display: none;
     }
