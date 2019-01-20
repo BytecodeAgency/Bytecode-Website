@@ -59,8 +59,8 @@ class Navbar extends React.Component {
                     <NavbarContent menuIsOpen={menuIsOpen}>
                         <Link prefetch href="/">
                             <a>
-                                <Logo   
-                                    src="/static/img/logo.svg" 
+                                <Logo
+                                    src="/static/img/logo.svg"
                                     alt="Bytecode logo"
                                 />
                             </a>
