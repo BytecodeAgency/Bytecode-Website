@@ -10,6 +10,9 @@ const ImageBlockFigure = styled.figure`
     margin-left: 5%;
     margin-top: 4rem;
     overflow: hidden;
+    @media (max-width: ${theme.breakpoints[0]}px) {
+        margin: 0;
+    }
     &:after {
         border: 2px ${theme.colors.primary} solid;
         border-right: none;

@@ -19,27 +19,30 @@ const pageSettings = {
 /* eslint-disable max-len */
 
 const HeaderContainer = styled.div`
-    margin: 16rem 5vw 8rem;
-    @media (max-width: ${theme.breakpointMobileMenu}) {
-        margin: 16rem 2vw 6rem;
+    margin: 4em 2em;
+    @media (min-width: ${theme.breakpoints[1]}px) {
+        margin: 15em 0em;
+    }
+    @media (min-width: ${theme.breakpoints[2]}px) {
+        margin: 16em;
     }
 `;
 
 const StyledContainer = styled(Container)`
-    margin: 10% 10% 5% 10% !important;
+    margin: 5em 10% 5em 10% !important;
 `;
 
 const ContentBlockWrapper = styled.section`
     background-color: ${theme.colors.mediumgray};
-    margin: 5% 0% 5% 5%;
+    margin: 5% 0% 5% 2rem;
     padding: 7.5% 5%;
 `;
 
 const Icon = styled.img`
     padding: 20%;
     @media (max-width: ${theme.breakpoints[0]}px) {
-        margin-top: 4rem;
-        margin-bottom: -1.4rem;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
         padding: 0 !important;
     }
 `;
@@ -48,17 +51,21 @@ const ServiceRow = styled(Row)`
     margin-bottom: 2rem;
 `;
 
+const ServiceIcon = styled(Col)`
+    margin: 0;
+`;
+
 const Service = ({ children, ...props }) => {
     const { iconName, title } = props;
     return (
         <ServiceRow>
-            <Col xs={3}>
+            <ServiceIcon xs={4}>
                 <Icon
                     src={`/static/icons/services/${iconName}.svg`}
                     alt={iconName}
                 />
-            </Col>
-            <Col sm={9} xs={12}>
+            </ServiceIcon>
+            <Col sm={12} xs={12}>
                 <TextBlock title={title} headingType="h3">
                     {children}
                 </TextBlock>
@@ -74,12 +81,13 @@ const Services = () => (
                 <Col md={10}>
                     <TextBlock
                         subtitle="Services"
-                        headingType="h2"
+                        headingType="h1"
                         title="Het gaat niet om frameworks of technieken, maar om het behalen van de allerbeste resultaten voor jou. Dát is de essentie van onze diensten."
                     />
                 </Col>
             </Row>
         </HeaderContainer>
+
         <Process />
 
         {/* WEB EN MOBIEL */}
@@ -100,7 +108,7 @@ const Services = () => (
         </StyledContainer>
         <StyledContainer>
             <Row>
-                <Col lg={6} md={12}>
+                <Col lg={6} md={6} xs={12}>
                     <Service iconName="website" title="Websites & Webapps">
                         Dit is de plek waar alles gebeurt. De plek waar je laat
                         zien wie je bent, waar je mensen overtuigd en waar je
@@ -110,7 +118,7 @@ const Services = () => (
                         simplistische websites tot ingewikkelde webapps.
                     </Service>
                 </Col>
-                <Col lg={6} md={12}>
+                <Col lg={6} md={6} xs={12}>
                     <Service iconName="ecommerce" title="E-commerce">
                         Wil je een succesvolle webshop hebben? Dan moet je aan
                         heel veel factoren denken. Bytecode weet precies welke
@@ -121,7 +129,7 @@ const Services = () => (
                 </Col>
             </Row>
             <Row>
-                <Col lg={6} md={12}>
+                <Col lg={6} md={6} xs={12}>
                     <Service iconName="mobile" title="Mobiele applicaties">
                         Tegenwoordig zijn mobiele applicaties minstens zo
                         belangrijk als websites of webapps. Wij vinden het
@@ -134,7 +142,7 @@ const Services = () => (
                     </Service>
                 </Col>
 
-                <Col lg={6} md={12}>
+                <Col lg={6} md={6} xs={12}>
                     <Service iconName="ui" title="UX/UI-Design">
                         Alles draait om de beleving van de bezoeker van jouw
                         platform. Deze beleving optimaliseren wij door middel
@@ -168,7 +176,7 @@ const Services = () => (
         </StyledContainer>
         <StyledContainer>
             <Row>
-                <Col offset={{ xl: 1 }} xl={10}>
+                <Col xl={6}>
                     <Service iconName="api" title="API-ontwikkeling">
                         API-systemen zijn enorm belangrijk voor communicatie van
                         jouw platform met andere systemen. Wij zorgen er
@@ -178,6 +186,8 @@ const Services = () => (
                         beveiligen we jou API volgens de allernieuwste
                         beveiligingsstandaarden.
                     </Service>
+                </Col>
+                <Col xl={6}>
                     <Service iconName="devops" title="Devops & cloudcomputing">
                         Met onze devops-methodiek verkleinen wij de
                         ontwikkeltijd en zorgen we voor een betere oplevering,
@@ -189,6 +199,8 @@ const Services = () => (
                         kwalitatief hoge devops- en cloudsystemen op, om jou de
                         nodige hoofdpijn te besparen.
                     </Service>
+                </Col>
+                <Col xl={6}>
                     <Service iconName="automation" title="IT-automatisering">
                         Door IT-automatisering zorgt Bytecode ervoor dat bepaald
                         services gekoppeld worden met jouw website. Een goed

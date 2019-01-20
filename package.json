@@ -31,7 +31,8 @@
     "sqreen": "^1.26.0",
     "styled-components": "^4.0.3",
     "styled-components-style-utils": "^1.2.0",
-    "url": "^0.11.0"
+    "url": "^0.11.0",
+    "yarn": "^1.12.3"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",

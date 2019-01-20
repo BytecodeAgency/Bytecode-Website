@@ -25,15 +25,15 @@ const H2 = styled.h2`
 `;
 
 const Paragraph = styled.p`
-    margin: 0.5rem 0;
+    /*margin: 0.5rem 0;*/
 `;
 
 const H3 = styled.h3`
-    margin-bottom: 0rem;
+    margin-bottom: 1em;
 `;
 
 const H4 = styled.h4`
-    margin-bottom: 0rem;
+    margin-bottom: 1em;
 `;
 
 const StyledButton = styled(Button)`
