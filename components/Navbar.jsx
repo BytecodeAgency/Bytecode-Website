@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid, no-confusing-arrow */
 
 import React from 'react';
+import Link from 'next/link';
 import NavbarComponents from './NavbarComponents';
 
 const {
@@ -39,7 +40,11 @@ class Navbar extends React.Component {
         return (
             <NavbarContainer>
                 <InnerNavbarContainer>
-                    <MobileNavLogo src="/static/img/logo-min.svg" />
+                    <Link prefetch href="/">
+                        <a>
+                            <MobileNavLogo src="/static/img/logo-min.svg" />
+                        </a>
+                    </Link>
                     <BlackOverlay
                         menuIsOpen={menuIsOpen}
                         onClick={this.closeMenu}
@@ -52,8 +57,11 @@ class Navbar extends React.Component {
                         />
                     </MenuButton>
                     <NavbarContent menuIsOpen={menuIsOpen}>
-                        {/* TODO: Link Logo to homepage */}
-                        <Logo src="/static/img/logo.svg" alt="Bytecode logo" />
+                        <Link prefetch href="/">
+                            <a> 
+                                <Logo src="/static/img/logo.svg" alt="Bytecode logo" />
+                            </a>
+                        </Link>
                         <NavbarItems>
                             <CloseMenuButton href="#" onClick={this.closeMenu}>
                                 <img

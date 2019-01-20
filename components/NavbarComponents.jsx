@@ -107,10 +107,7 @@ const NavbarItem = styled(NavbarItemBase)`
 `;
 
 const Logo = styled.img`
-    height: 55%;
-    margin-left: -4rem;
-    max-height: 6rem;
-    width: auto;
+    height: 100%;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         display: none;
     }
