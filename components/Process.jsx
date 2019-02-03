@@ -1,22 +1,8 @@
 import styled from 'styled-components';
+import { Container } from 'react-grid-system';
 import theme from '../styles/theme';
 import TextBlock from './TextBlock';
 import { Row, Col } from '../lib/Grid'; // eslint-disable-line
-
-const ContentBlockWrapper = styled.section`
-    background-color: ${theme.colors.mediumgray};
-    margin: 0rem;
-    padding: 2em;
-    position: relative;
-    z-index: 100;
-    @media (min-width: ${theme.breakpoints[1]}px) {
-        margin: 2rem 0% 10rem 4rem;
-        padding: 7.5% 5%;
-    }
-    &::children {
-        padding: 5rem;
-    }
-`;
 
 const Step = styled(Col)`
     margin: 3em 0;
@@ -43,9 +29,9 @@ const ProcessStepImage = styled.img`
 `;
 
 const Process = () => (
-    <ContentBlockWrapper>
+    <Container fluid>
         <Row>
-            <Step md={6} lg={4} xl={3}>
+            <Step offset={{ xl: 2.5, lg: 2 }} md={6} lg={2} xl={2}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/analyze.svg"
                     alt="Analyze"
@@ -63,7 +49,7 @@ const Process = () => (
                     analyseren welke punten het meeste prioriteit hebben.
                 </TextBlock>
             </Step>
-            <Step offset={{ xl: 0.75 }} md={6} lg={4} xl={3}>
+            <Step offset={{ xl: 0.5, lg: 2 }} md={6} lg={4} xl={2}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/strategize.svg"
                     alt="Strategize"
@@ -81,7 +67,7 @@ const Process = () => (
                     halen.
                 </TextBlock>
             </Step>
-            <Step offset={{ xl: 0.75 }} md={12} lg={4} xl={3}>
+            <Step offset={{ xl: 0.5, lg: 2 }} md={12} lg={12} xl={2}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/realize.svg"
                     alt="Realize"
@@ -96,7 +82,7 @@ const Process = () => (
                 </TextBlock>
             </Step>
         </Row>
-    </ContentBlockWrapper>
+    </Container>
 );
 
 export default Process;

@@ -21,12 +21,12 @@ const HeaderContainer = styled.section`
     padding: 4vh 2rem 3vh 2rem;
 
     @media (min-width: ${theme.breakpoints[1]}px) {
-        margin: 0 0 0 1rem;
+        margin: 0 0 0 2em;
         padding: 5vh 2% 7.5vh 5%;
     }
     @media (min-width: ${theme.breakpoints[2]}px) {
-        margin: 0 0 0 2rem;
-        padding: 10vh 2% 15vh 5%;
+        margin: 0 0 0 2em;
+        padding: 10vh 2% 15vh 2em;
     }
     @media (min-width: ${theme.breakpoints[3]}px) {
         margin: 0 0 0 8rem;
@@ -34,12 +34,12 @@ const HeaderContainer = styled.section`
     }
 `;
 
-const StyledContainer = styled(Container)`
-    margin: 10% !important;
-    @media (min-width: ${theme.breakpoints[2]}px) {
-        margin: 10% !important;
-    }
-`;
+// const StyledContainer = styled(Container)`
+//     margin: 10% !important;
+//     @media (min-width: ${theme.breakpoints[2]}px) {
+//         margin: 10% !important;
+//     }
+// `;
 
 const AbsoluteCol = styled(Col)`
     top: 0px;
@@ -72,8 +72,7 @@ const HeaderImage = styled.img`
 
 const GroupImage = styled.img`
     margin-top: 4rem;
-    width: 70rem;
-    max-width: 100%;
+    width: 100%;
 `;
 
 const ContentBlockWrapper = styled.section`
@@ -110,9 +109,9 @@ const Home = () => (
                 </Col>
             </Row>
         </HeaderContainer>
-        <StyledContainer>
+        <Container fluid>
             <Row>
-                <Col md={12} lg={5}>
+                <Col offset={{ lg: 2.5 }} md={12} lg={3}>
                     <Row>
                         <Col sm={6}>
                             <Thumbnail
@@ -144,12 +143,13 @@ const Home = () => (
                         </Col>
                     </Row>
                 </Col>
-                <Col offset={{ lg: 1 }} md={12} lg={5}>
+                <Col offset={{ lg: 1 }} md={12} lg={2}>
                     <TextBlock
                         subtitle="Hoe Bytecode kan helpen"
                         title="Samen halen we alles uit jouw digitale zelf"
                         href="//bytecode.nl/services"
                         button="Lees verder"
+                        headingType="h2"
                     >
                         Wij maken uitgebreide analyses en strategieën van alles
                         wat je nodigt hebt om je online ijzersterk te
@@ -161,10 +161,10 @@ const Home = () => (
                     </TextBlock>
                 </Col>
             </Row>
-        </StyledContainer>
-        <StyledContainer>
+        </Container>
+        <Container fluid>
             <CenterAlignedRow>
-                <Col offset={{ lg: 0 }} md={7} lg={4}>
+                <Col offset={{ lg: 2 }} md={12} lg={3}>
                     <TextBlock
                         subtitle="Wie wij zijn"
                         title="Kennis en kwaliteit met een no-bullshit mentaliteit"
@@ -181,15 +181,15 @@ const Home = () => (
                         op te leveren.
                     </TextBlock>
                 </Col>
-                <Col offset={{ lg: 1 }} md={5} lg={5}>
+                <Col offset={{ lg: 1 }} md={12} lg={5}>
                     <GroupImage
                         width="700"
-                        src="/static/img/content/group.jpg"
+                        src="/static/img/content/team.png"
                         alt="Onze mindset"
                     />
                 </Col>
             </CenterAlignedRow>
-        </StyledContainer>
+        </Container>
         <Process />
         <ContentBlockWrapper>
             <TextBlock

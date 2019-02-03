@@ -12,6 +12,11 @@ const ImageBlockFigure = styled.figure`
     overflow: hidden;
     @media (max-width: ${theme.breakpoints[0]}px) {
         margin: 0;
+        height: 100vh;
+        img {
+            height: 100vh;
+            width: auto;
+        }
     }
     &:after {
         border: 2px ${theme.colors.primary} solid;

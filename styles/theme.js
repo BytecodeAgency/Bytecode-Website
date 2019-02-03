@@ -42,7 +42,7 @@ const bytecode = {
         body: {
             size: '1.8rem',
             height: '1.2em',
-            spacing: '0.16em',
+            spacing: '0.0em',
             font: paragraph,
             weight: regular,
             color: lightgray,

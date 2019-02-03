@@ -1,12 +1,11 @@
-import styled from 'styled-components';
 import Layout from '../components/Layout';
-import theme from '../styles/theme';
 
 import TextBlock from '../components/TextBlock';
 import ImageBlock from '../components/ImageBlock';
 import ContentPageHeader from '../components/ContentPageHeader';
 import TeamMember from '../components/TeamMember';
 import { Container, Row, Col } from '../lib/Grid';
+import ContactForm from '../components/ContactForm';
 
 /* eslint-disable */
 const pageSettings = {
@@ -17,23 +16,6 @@ const pageSettings = {
     keywords: 'over ons',
 };
 /* eslint-enable */
-
-const StyledContainer = styled(Container)`
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-    max-width: none !important;
-    margin: 10rem 0rem;
-`;
-
-const ContentBlockWrapper = styled.section`
-    background-color: ${theme.colors.mediumgray};
-    padding: 5% 0%;
-    margin: 5% 0% 5% 5%;
-`;
-
-const PaddedColumn = styled(Col)`
-    padding: 12% 0 15% 0;
-`;
 
 const loremipsum = `Lorem ipsum dolor sit
 amet consectetur adipisicing elit.Asperiores
@@ -49,93 +31,75 @@ amollitia? `;
 const Over = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader />
-        <StyledContainer>
+        {/* eslint-disable max-len */}
+        <Container fluid>
             <Row>
-                <PaddedColumn xl={4} lg={5} md={6}>
+                <Col
+                    offset={({ md: 0 }, { lg: 1 }, { xl: 2 })}
+                    md={6}
+                    lg={5}
+                    xl={3}
+                >
                     <TextBlock
+                        subtitle="Onze Visie"
+                        alt="I'm different!"
                         title="De titel maar dan een hele erge fucking lange
-                        titel waar geen einde aan lijkt te komen"
+                            titel waar geen einde aan lijkt te komen"
+                        headingType="h2"
+                    />
+                </Col>
+                <Col offset={{ md: 0, lg: 1, xl: 1 }} md={6} lg={5} xl={4}>
+                    <p>{loremipsum}</p>
+                </Col>
+            </Row>
+        </Container>
+        <ImageBlock
+            src="static/img/content/interior.jpg"
+            alt="A fun day at the office"
+        />
+        <Container fluid>
+            <Row>
+                <Col
+                    offset={({ md: 0 }, { lg: 0 }, { xl: 2 })}
+                    md={6}
+                    lg={6}
+                    xl={3}
+                >
+                    <TextBlock
+                        subtitle="Het team"
+                        alt="I'm different!"
+                        title="Unieke perspectieven door unieke personen"
                         headingType="h2"
                     >
                         {loremipsum}
                     </TextBlock>
-                </PaddedColumn>
+                </Col>
+                <Col
+                    offset={({ md: 0 }, { lg: 1 }, { xl: 1 })}
+                    md={2}
+                    lg={2}
+                    xl={1}
+                >
+                    <TeamMember
+                        name="Jeroen van Steijn"
+                        title="Co-founder &amp; full-stack developer"
+                        img="/static/img/team/Jeroen.png"
+                        alt="A photo of Jeroen van steijn"
+                    />
+                </Col>
             </Row>
-        </StyledContainer>
-        {/* eslint-disable max-len */}
-        <ImageBlock
-            src="https://www.grafixarts.com/wp-content/uploads/2018/06/gfx_shrink_artist_sheets_fan_julie.jpg"
-            alt="Funny stuff"
-        />
-        <ContentBlockWrapper>
-            <StyledContainer>
-                <Row>
-                    <Col md={6}>
-                        <TextBlock
-                            subtitle="Het Team"
-                            alt="I'm different!"
-                            title="De titel maar dan een hele erge fucking lange
-                            titel waar geen einde aan lijkt te komen"
-                            headingType="h2"
-                        >
-                            {loremipsum}
-                        </TextBlock>
-                    </Col>
-                </Row>
-                <Container fluid={true}>
-                    <Row>
-                        <Col md={3} xs={6}>
-                            <TeamMember
-                                name="Jeroen van Steijn"
-                                title="Co-founder &amp; full-stack developer"
-                                img="/static/img/team/Jeroen.png"
-                                alt="A photo of Jeroen van steijn"
-                            />
-                        </Col>
-                        <Col md={3} xs={6}>
-                            <TeamMember
-                                name="Jeroen van Steijn"
-                                title="Co-founder &amp; full-stack developer"
-                                img="/static/img/team/Jeroen.png"
-                                alt="A photo of Jeroen van steijn"
-                            />
-                        </Col>
-                        <Col md={3} xs={6}>
-                            <TeamMember
-                                name="Jeroen van Steijn"
-                                title="Co-founder &amp; full-stack developer"
-                                img="/static/img/team/Jeroen.png"
-                                alt="A photo of Jeroen van steijn"
-                            />
-                        </Col>
-                        <Col md={3} xs={6}>
-                            <TeamMember
-                                name="Jeroen van Steijn"
-                                title="Co-founder &amp; full-stack developer"
-                                img="/static/img/team/Jeroen.png"
-                                alt="A photo of Jeroen van steijn"
-                            />
-                        </Col>
-                        <Col md={3} xs={6}>
-                            <TeamMember
-                                name="Jeroen van Steijn"
-                                title="Co-founder &amp; full-stack developer"
-                                img="/static/img/team/Jeroen.png"
-                                alt="A photo of Jeroen van steijn"
-                            />
-                        </Col>
-                        <Col md={3} xs={6}>
-                            <TeamMember
-                                name="Jeroen van Steijn"
-                                title="Co-founder &amp; full-stack developer"
-                                img="/static/img/team/Jeroen.png"
-                                alt="A photo of Jeroen van steijn"
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </StyledContainer>
-        </ContentBlockWrapper>
+            <Row>
+                <Col offset={{ md: 1, lg: 1, xl: 2 }} md={1} lg={1} xl={1}>
+                    <TeamMember
+                        name="Jeroen van Steijn"
+                        title="Co-founder &amp; full-stack developer"
+                        img="/static/img/team/Jeroen.png"
+                        alt="A photo of Jeroen van steijn"
+                    />
+                </Col>
+            </Row>
+        </Container>
+        <ContactForm />
     </Layout>
 );
 

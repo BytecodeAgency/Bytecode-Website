@@ -32,6 +32,8 @@ const NavbarContainer = styled.nav`
 `;
 
 const InnerNavbarContainer = styled(Container)`
+    margin: 0rem 0 !important;
+    max-width: none !important;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         margin: 0 !important;
     }
