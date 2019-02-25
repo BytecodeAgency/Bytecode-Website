@@ -285,7 +285,7 @@ const PrivacyPolicy = () => (
             <Row>
                 <h2>Contact</h2>
                 <p>
-                    Mocht u vragen hebben over dit Cookiebeleid, dan
+                    Mocht u vragen hebben over dit Privacybeleid, dan
                     beantwoorden we deze graag. U kunt contact met ons opnemen
                     door een e-mail te sturen naar&nbsp;
                     <a href="mailto:support@bytecode.nl">support@bytecode.nl</a>
