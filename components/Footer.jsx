@@ -72,7 +72,7 @@ const Footer = () => (
     <footer>
         <Container>
             <Row>
-                <FooterCol>
+                <FooterCol offset={{md:2}}>
                     <FooterHeadingContainer>
                         <FooterLogo src="/static/img/logo.svg" alt="Bytecode" />
                     </FooterHeadingContainer>

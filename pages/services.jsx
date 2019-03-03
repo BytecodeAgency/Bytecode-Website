@@ -6,6 +6,7 @@ import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-lin
 import ContactForm from '../components/ContactForm';
 import ImageBlock from '../components/ImageBlock';
 import Process from '../components/Process';
+import ContentPageHeader from '../components/ContentPageHeader';
 
 /* eslint-disable */
 const pageSettings = {
@@ -18,15 +19,6 @@ const pageSettings = {
 /* eslint-enable */
 /* eslint-disable max-len */
 
-const HeaderContainer = styled.div`
-    margin: 4em 2em;
-    @media (min-width: ${theme.breakpoints[1]}px) {
-        margin: 15em 0em;
-    }
-    @media (min-width: ${theme.breakpoints[2]}px) {
-        margin: 16em;
-    }
-`;
 
 const StyledContainer = styled(Container)`
     margin: 5em 10% 5em 10% !important;
@@ -76,17 +68,12 @@ const Service = ({ children, ...props }) => {
 
 const Services = () => (
     <Layout pageSettings={pageSettings}>
-        <HeaderContainer>
-            <Row>
-                <Col md={10}>
-                    <TextBlock
-                        subtitle="Services"
-                        headingType="h1"
-                        title="Het gaat niet om frameworks of technieken, maar om het behalen van de allerbeste resultaten voor jou. Dát is de essentie van onze diensten."
-                    />
-                </Col>
-            </Row>
-        </HeaderContainer>
+        <ContentPageHeader
+            img = "/static/img/header/scores.jpg"
+            subtitle ="Services"
+            title="Wij doen alles om het beste uit jou te halen. Wat het ook is"
+            button="read more"
+        />
 
         <Process />
 

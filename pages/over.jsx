@@ -30,7 +30,15 @@ amollitia? `;
 
 const Over = () => (
     <Layout pageSettings={pageSettings}>
-        <ContentPageHeader />
+        <ContentPageHeader
+            img="/static/img/content/team.png"
+            subtitle= "Over ons"
+            title="De titel maar dan een hele erge fucking lange
+            titel waar geen einde aan lijkt te komen"
+            button="read more"
+        >
+            {loremipsum}
+        </ContentPageHeader>
         {/* eslint-disable max-len */}
         <Container fluid>
             <Row>
@@ -60,10 +68,10 @@ const Over = () => (
         <Container fluid>
             <Row>
                 <Col
-                    offset={({ md: 0 }, { lg: 0 }, { xl: 2 })}
+                    offset={({ md: 0 }, { lg: 0 }, { xl: 1 })}
                     md={6}
                     lg={6}
-                    xl={3}
+                    xl={4}
                 >
                     <TextBlock
                         subtitle="Het team"
@@ -74,29 +82,67 @@ const Over = () => (
                         {loremipsum}
                     </TextBlock>
                 </Col>
+
+
+
+            </Row>
+            <Row>
                 <Col
                     offset={({ md: 0 }, { lg: 1 }, { xl: 1 })}
-                    md={2}
-                    lg={2}
-                    xl={1}
+                    sm={6}
+                    md={4}
+                    lg={3}
+                    xl={2}
+                >
+                    <TeamMember
+                        name="Richard van 't Hof"
+                        title="Art-Director &amp; front-end developer"
+                        img="/static/img/team/Richard.png"
+                    />
+
+                </Col>
+                <Col
+                    offset={({ md: 0 }, { lg: 1 }, { xl: .25 })}
+                    sm={6}
+                    md={4}
+                    lg={3}
+                    xl={2}
                 >
                     <TeamMember
                         name="Jeroen van Steijn"
-                        title="Co-founder &amp; full-stack developer"
+                        title="Co-founder & software-consultant"
                         img="/static/img/team/Jeroen.png"
-                        alt="A photo of Jeroen van steijn"
                     />
+
                 </Col>
-            </Row>
-            <Row>
-                <Col offset={{ md: 1, lg: 1, xl: 2 }} md={1} lg={1} xl={1}>
+                <Col
+                    offset={({ md: 0 }, { lg: 1 }, { xl: .25 })}
+                    sm={6}
+                    md={4}
+                    lg={3}
+                    xl={2}
+                >
                     <TeamMember
-                        name="Jeroen van Steijn"
-                        title="Co-founder &amp; full-stack developer"
-                        img="/static/img/team/Jeroen.png"
-                        alt="A photo of Jeroen van steijn"
+                        name="Luciano Nooijen"
+                        title="Co-founder & software-consultant"
+                        img="/static/img/team/Luciano.png"
                     />
+
                 </Col>
+                {/* <Col
+                    offset={({ md: 0 }, { lg: 1 }, { xl: .25 })}
+                    sm={6}
+                    md={4}
+                    lg={3}
+                    xl={2}
+                >
+                    <TeamMember
+                        name="Thomas Bodlaender"
+                        title="Sales & copywriting"
+                        img="/static/img/team/thomas.png"
+                        alt="Een foto van Thomas moet nog gemaakt worden."
+                    />
+                </Col> */}
             </Row>
         </Container>
         <ContactForm />

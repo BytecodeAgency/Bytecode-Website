@@ -58,12 +58,12 @@ class Navbar extends React.Component {
                     </MenuButton>
                     <NavbarContent menuIsOpen={menuIsOpen}>
                         <Link prefetch href="/">
-                            <a>
-                                <Logo
+                            <Logo>
+                                <img
                                     src="/static/img/logo.svg"
                                     alt="Bytecode logo"
                                 />
-                            </a>
+                            </Logo>
                         </Link>
                         <NavbarItems>
                             <CloseMenuButton href="#" onClick={this.closeMenu}>
@@ -76,7 +76,7 @@ class Navbar extends React.Component {
                             <NavbarItem href="/" text="Home" />
                             <NavbarItem href="/services" text="Services" />
                             <NavbarItem href="/insights" text="Insights" />
-                            {/* <NavbarItem href="/over" text="Over" /> */}
+                            <NavbarItem href="/over" text="Over" />
                             {/* <NavbarItem href="/cases" text="Cases" /> */}
                             <NavbarItem href="/contact" text="Contact" />
                         </NavbarItems>

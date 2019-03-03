@@ -191,14 +191,7 @@ const Home = () => (
             </CenterAlignedRow>
         </Container>
         <Process />
-        <ContentBlockWrapper>
-            <TextBlock
-                subtitle="We staan voor je klaar"
-                headingType="h2"
-                title="Stuur ons een berichtje"
-            />
-            <ContactForm />
-        </ContentBlockWrapper>
+        <ContactForm />
     </Layout>
 );
 

@@ -5,6 +5,7 @@ import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-lin
 import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
 import Button from '../components/Button';
+import ContentPageHeader from '../components/ContentPageHeader';
 
 /* eslint-disable */
 const pageSettings = {
@@ -12,89 +13,29 @@ const pageSettings = {
     description: 'Contact, neem contact met ons op door een belletje of door een mailtje te sturen. Langskomen mag altijd, Bytecode staat voor je klaar!',
     keywords: 'contact',
 };
-/* eslint-enable */
-
-const HeaderContainer = styled.section`
-    background-color: ${theme.colors.mediumgray};
-    background-image: url('static/img/header/post-it.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: overlay;
-    margin: 1em 0 1em 2rem;
-    padding: 20vh 2% 20vh 5%;
-`;
-
-const AbsoluteCol = styled(Col)`
-    top: 0px;
-    right: 0px;
-    max-width: none;
-    position: absolute;
-`;
-
-const HeaderFigure = styled.figure`
-    position: absolute;
-    right: 10vw;
-    top: 0rem;
-    opacity: 0.2;
-    width: 60%;
-    height: 100%;
-`;
-
-const HeaderImage = styled.img`
-    position: relative;
-    right: -10rem;
-    top: -75rem;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-`;
 
 const ContactHeading = styled.h3`
     margin: 1.5em 0;
     line-height: 1.4em;
 `;
 
-const PaddedRow = styled(Row)`
-    padding: 5% 0 10% 0;
-`;
-
 const Contact = () => (
     <Layout pageSettings={pageSettings}>
-        <HeaderContainer>
-            <AbsoluteCol>
-                <Hidden xs sm>
-                    <HeaderFigure>
-                        <HeaderImage
-                            alt="Bytecode web"
-                            src="/static/img/header/web.svg"
-                        />
-                    </HeaderFigure>
-                </Hidden>
-            </AbsoluteCol>
+        <ContentPageHeader
+            img = "static/img/header/post-it-full.jpg"
+            subtitle ="Contact"
+            title="Een keertje langskomen? Gezellig!"
+            href="#"
+            button="Plan een afspraak"
+        />
+        <Container fluid>
             <Row>
-                <Col md={10} lg={10} xl={6}>
-                    <TextBlock
-                        subtitle="Contact us"
-                        title="Een keertje langskomen op kantoor? Gezellig!"
-                        href="https://calendly.com/bytecode"
-                        button="Plan een afspraak"
-                    >
-                        Geef ons een belletje of stuur een mailtje en het is zo
-                        geregeld. De koffie, thee en koekjes staan al klaar. Bij
-                        wijze van spreken, natuurlijk. Koffie en thee moeten
-                        warm zijn. Dat weten wij ook wel.
-                    </TextBlock>
-                </Col>
-            </Row>
-        </HeaderContainer>
-        <Container>
-            <PaddedRow>
                 <Col xl={7} lg={6} md={12} xs={12}>
-                    <TextBlock
+                    {/* <TextBlock
                         subtitle="We staan voor je klaar"
                         headingType="h2"
                         title="Stuur ons een berichtje"
-                    />
+                    /> */}
                     <ContactForm />
                 </Col>
                 <Col
@@ -129,7 +70,7 @@ const Contact = () => (
                         Plan een afspraak
                     </Button>
                 </Col>
-            </PaddedRow>
+            </Row>
         </Container>
     </Layout>
 );

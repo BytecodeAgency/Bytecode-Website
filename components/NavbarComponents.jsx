@@ -114,10 +114,15 @@ const NavbarItem = styled(NavbarItemBase)`
     }
 `;
 
-const Logo = styled.img`
-    width: 60%;
-    @media (max-width: ${theme.breakpointMobileMenu}) {
-        display: none;
+const Logo = styled.a`
+    @media (min-width: ${theme.breakpointMobileMenu}) {
+        width: 25rem;
+    }
+    img {
+        width: 60%;
+        @media (max-width: ${theme.breakpointMobileMenu}) {
+            display: none;
+        }
     }
 `;
 

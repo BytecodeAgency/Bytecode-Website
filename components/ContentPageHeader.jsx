@@ -5,25 +5,31 @@ import TextBlock from './TextBlock';
 import theme from '../styles/theme';
 
 const MainHeader = styled.header`
-    text-shadow: 5px 5px 100px rgba(0, 0, 0, 0.9);
+    /* text-shadow: 5px 5px 100px rgba(0, 0, 0, 0.9); */
     background-color: ${theme.colors.mediumgray};
     background-image: url(${props => props.img});
-
+    background-blend-mode: soft-light;
     margin-left: 1%;
-
     display: flex;
     position: relative;
-    justify-items: center;
+    justify-items: bottom;
     background-size: cover;
     background-blend-mode: soft-light;
-    /* background-blend-mode: soft-light; */
+    animation: fadeIn 2s;
     @media (min-width: ${theme.breakpoints[3]}px) {
+        background-color: ${theme.colors.mediumgray};
+        background-image: url(${props => props.img});
         background-size: 75%;
         background-repeat: no-repeat;
-        background-position-x: 80%;
+        background-position-x: 85%;
         /* background-blend-mode: normal; */
         height: 80vh;
+        & > div {
+            transform: translateY(5em);
+        }
     }
+
+    @keyframes fadeIn
 `;
 
 // eslint-disable-next-line
@@ -31,24 +37,26 @@ const TextBlockContent =
     'rem ipsum dolor sit amet consectetur adipisicing elit. Asperio';
 
 /* eslint-disable max-len */
-const ContentPageHeader = () => (
-    <MainHeader img="/static/img/content/team.png">
-        <Container fluid>
-            <Row>
-                <Col offset={{ xl: 1, lg: 1 }} md={10} lg={9} xl={4}>
-                    <TextBlock
-                        subtitle="De subtitel komt hier"
-                        title="De titel maar dan een hele erge fucking lange
-                        titel waar geen einde aan lijkt te komen"
-                        href="//bytecode.nl"
-                        button="more"
-                    >
-                        {TextBlockContent}
-                    </TextBlock>
-                </Col>
-            </Row>
-        </Container>
-    </MainHeader>
-);
+const ContentPageHeader = props => {
+    const { img, fluidImg, subtitle, title, button, href } = props;
+    return (
+        <MainHeader img={img}>
+            <Container fluid>
+                <Row>
+                    <Col offset={{ xl: 1, lg: 1 }} md={10} lg={9} xl={5}>
+                        <TextBlock
+                            subtitle={subtitle? subtitle : ''}
+                            title={title ? title : ''}
+                            href={href}
+                            button={button ? button : ''}
+                        >
+                            {TextBlockContent}
+                        </TextBlock>
+                    </Col>
+                </Row>
+            </Container>
+        </MainHeader>
+    ) ;
+};
 
 export default ContentPageHeader;
