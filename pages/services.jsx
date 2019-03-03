@@ -18,14 +18,6 @@ const pageSettings = {
 };
 /* eslint-enable */
 /* eslint-disable max-len */
-
-
-const ContentBlockWrapper = styled.section`
-    background-color: ${theme.colors.mediumgray};
-    margin: 5% 0% 5% 2rem;
-    padding: 7.5% 5%;
-`;
-
 const Icon = styled.img`
     padding: 20%;
     @media (max-width: ${theme.breakpoints[0]}px) {
@@ -65,8 +57,8 @@ const Service = ({ children, ...props }) => {
 const Services = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img = "/static/img/header/scores.jpg"
-            subtitle ="Services"
+            img="/static/img/header/scores.jpg"
+            subtitle="Services"
             title="Wij doen alles om het beste uit jou te halen. Wat het ook is"
             button="read more"
         />
@@ -76,7 +68,7 @@ const Services = () => (
         {/* WEB EN MOBIEL */}
         <Container fluid>
             <Row>
-                <Col offset={{ md:0, lg:1 }} lg={8} md={10}>
+                <Col offset={{ md: 0, lg: 1 }} lg={8} md={10}>
                     <TextBlock title="Web & mobiel" headingType="h2">
                         Natuurlijk heeft elk bedrijf een website nodig om zich
                         online te presenteren en een groot publiek te bereiken.
@@ -91,7 +83,7 @@ const Services = () => (
         </Container>
         <Container fluid>
             <Row>
-                <Col offset={{ md:0, lg: 1 }} lg={2.5} md={4} xs={12}>
+                <Col offset={{ md: 0, lg: 1 }} lg={2.5} md={4} xs={12}>
                     <Service iconName="website" title="Websites & Webapps">
                         Dit is de plek waar alles gebeurt. De plek waar je laat
                         zien wie je bent, waar je mensen overtuigd en waar je
@@ -141,7 +133,7 @@ const Services = () => (
         {/* CLOUD EN AUTOMATISERING */}
         <Container fluid>
             <Row>
-                <Col offset={{ md:0, lg:1 }} lg={6} md={4} xs={12}>
+                <Col offset={{ md: 0, lg: 1 }} lg={6} md={4} xs={12}>
                     <TextBlock title="Cloud & automatisering" headingType="h2">
                         Bedrijven zijn vaak erg veel tijd kwijt aan repetitief
                         handwerk, terwijl dit werk veel beter geautomatiseerd
@@ -157,7 +149,7 @@ const Services = () => (
         </Container>
         <Container fluid>
             <Row>
-                <Col offset={{ md:0, lg: 1 }} lg={2.5} md={4} xs={12}>
+                <Col offset={{ md: 0, lg: 1 }} lg={2.5} md={4} xs={12}>
                     <Service iconName="api" title="API-ontwikkeling">
                         API-systemen zijn enorm belangrijk voor communicatie van
                         jouw platform met andere systemen. Wij zorgen er
@@ -201,7 +193,7 @@ const Services = () => (
         {/* BRANDING EN DESIGN */}
         <Container fluid>
             <Row>
-                <Col offset={{ md:0, lg:1 }} lg={6} md={8}>
+                <Col offset={{ md: 0, lg: 1 }} lg={6} md={8}>
                     <TextBlock title="Branding & Design" headingType="h2">
                         Om te kunnen slagen, zal je bedrijf een duidelijke en
                         herkenbare identiteit moeten hebben. Hierdoor wordt het
@@ -217,7 +209,7 @@ const Services = () => (
         </Container>
         <Container fluid>
             <Row>
-                <Col offset={{ md:0, lg:1 }} lg={2.5} md={4} xs={12}>
+                <Col offset={{ md: 0, lg: 1 }} lg={2.5} md={4} xs={12}>
                     <Service
                         iconName="design"
                         title="Graphic design & branding"

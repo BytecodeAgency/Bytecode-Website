@@ -75,12 +75,6 @@ const GroupImage = styled.img`
     width: 100%;
 `;
 
-const ContentBlockWrapper = styled.section`
-    background-color: ${theme.colors.mediumgray};
-    margin: 2rem 0% 10rem 2rem;
-    padding: 7.5% 5%;
-`;
-
 const Home = () => (
     <Layout pageSettings={pageSettings}>
         <HeaderContainer>
@@ -143,7 +137,7 @@ const Home = () => (
                         </Col>
                     </Row>
                 </Col>
-                <Col offset={{ lg: 1 }} md={12} lg={4}  lg={3}>
+                <Col offset={{ lg: 1 }} md={12} lg={4}>
                     <TextBlock
                         subtitle="Hoe Bytecode kan helpen"
                         title="Samen halen we alles uit jouw digitale zelf"

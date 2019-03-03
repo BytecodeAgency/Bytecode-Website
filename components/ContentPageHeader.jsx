@@ -29,7 +29,7 @@ const MainHeader = styled.header`
         }
     }
 
-    @keyframes fadeIn
+    @keyframes fadeIn;
 `;
 
 // eslint-disable-next-line
@@ -38,17 +38,21 @@ const TextBlockContent =
 
 /* eslint-disable max-len */
 const ContentPageHeader = props => {
-    const { img, fluidImg, subtitle, title, button, href } = props;
+    // eslint-disable-next-line
+    const {
+        img, subtitle, title, button, href,
+    } = props;
+    // eslint-disable-next-line
     return (
         <MainHeader img={img}>
             <Container fluid>
                 <Row>
                     <Col offset={{ xl: 1, lg: 0 }} md={10} lg={9} xl={5}>
                         <TextBlock
-                            subtitle={subtitle? subtitle : ''}
-                            title={title ? title : ''}
+                            subtitle={subtitle || ''}
+                            title={title || ''}
                             href={href}
-                            button={button ? button : ''}
+                            button={button || ''}
                         >
                             {TextBlockContent}
                         </TextBlock>
@@ -56,7 +60,7 @@ const ContentPageHeader = props => {
                 </Row>
             </Container>
         </MainHeader>
-    ) ;
+    );
 };
 
 export default ContentPageHeader;

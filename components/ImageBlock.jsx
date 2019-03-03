@@ -39,7 +39,6 @@ const ImageBlockFigure = styled.figure`
         transform: scale(1.05);
     }
 
-
     @media (min-width: ${theme.breakpointMobileMenu}) {
         &:after {
             margin: 6rem 0rem 6rem 6rem;

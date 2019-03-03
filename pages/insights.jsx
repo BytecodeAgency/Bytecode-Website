@@ -136,7 +136,7 @@ const BlogThumbnail = props => {
             <Link href={`insights/${slug}`}>
                 <BlogThumbnailContentWrapper>
                     <BlogThumbnailImage url={article_image_url} />
-                    <h6 class="subtitle">{category_name}</h6>
+                    <h6 className="subtitle">{category_name}</h6>
                     <h3>{title}</h3>
                     <AuthorContainer>
                         <Author
@@ -158,7 +158,7 @@ const BlogSingle = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
             img="/static/img/content/team.png"
-            subtitle= "Over ons"
+            subtitle="Over ons"
             title="De titel maar dan een hele erge fucking lange
             titel waar geen einde aan lijkt te komen"
             button="read more"
@@ -286,9 +286,12 @@ const BlogSingle = () => (
                         op of kom een keer langs op de koffie!
                     </TextBlock>
                 </Col>
-                <Col offset={{lg:1}} md={6}>
+                <Col offset={{ lg: 1 }} md={6}>
                     <figure>
-                        <img src="/static/img/content/vision_web.png" alt="internet"/>
+                        <img
+                            src="/static/img/content/vision_web.png"
+                            alt="internet"
+                        />
                     </figure>
                 </Col>
             </Row>

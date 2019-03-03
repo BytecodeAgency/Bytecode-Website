@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
 import AllSocials from '../lib/Socials';
+
 const TeamMemberWrapper = styled.div`
     padding: 3rem 0rem 3rem 0rem;
     h1,
@@ -17,16 +18,15 @@ const TeamMemberWrapper = styled.div`
     & > div {
         opacity: 0;
         transition: 0.5s;
-        transform: translate(1em, .5em)
+        transform: translate(1em, 0.5em);
     }
     & > p {
         opacity: 1;
         transition: 0.5s;
         height: auto;
-        transition-delay: .5s
+        transition-delay: 0.5s;
     }
-    &:hover{
-
+    &:hover {
         & figure {
             background: ${theme.colors.red};
         }
@@ -41,12 +41,12 @@ const TeamMemberWrapper = styled.div`
         }
         & > div {
             opacity: 1;
-            transform: translate(1em, -1em)
+            transform: translate(1em, -1em);
         }
         & > p {
             opacity: 0;
             height: 0px;
-            transition-delay: 0s
+            transition-delay: 0s;
         }
     }
 `;

@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import ContactForm from '../components/ContactForm';
 import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
-import theme from '../styles/theme';
-import TextBlock from '../components/TextBlock';
 import Button from '../components/Button';
 import ContentPageHeader from '../components/ContentPageHeader';
 

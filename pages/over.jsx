@@ -32,7 +32,7 @@ const Over = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
             img="/static/img/content/team.png"
-            subtitle= "Over ons"
+            subtitle="Over ons"
             title="De titel maar dan een hele erge fucking lange
             titel waar geen einde aan lijkt te komen"
             button="read more"
@@ -82,9 +82,6 @@ const Over = () => (
                         {loremipsum}
                     </TextBlock>
                 </Col>
-
-
-
             </Row>
             <Row>
                 <Col
@@ -99,10 +96,9 @@ const Over = () => (
                         title="Art-Director &amp; front-end developer"
                         img="/static/img/team/Richard.png"
                     />
-
                 </Col>
                 <Col
-                    offset={({ md: 0 }, { lg: 1 }, { xl: .25 })}
+                    offset={({ md: 0 }, { lg: 1 }, { xl: 0.25 })}
                     sm={6}
                     md={4}
                     lg={3}
@@ -113,10 +109,9 @@ const Over = () => (
                         title="Co-founder & software-consultant"
                         img="/static/img/team/Jeroen.png"
                     />
-
                 </Col>
                 <Col
-                    offset={({ md: 0 }, { lg: 1 }, { xl: .25 })}
+                    offset={({ md: 0 }, { lg: 1 }, { xl: 0.25 })}
                     sm={6}
                     md={4}
                     lg={3}
@@ -127,7 +122,6 @@ const Over = () => (
                         title="Co-founder & software-consultant"
                         img="/static/img/team/Luciano.png"
                     />
-
                 </Col>
                 {/* <Col
                     offset={({ md: 0 }, { lg: 1 }, { xl: .25 })}

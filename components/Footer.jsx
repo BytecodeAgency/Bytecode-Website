@@ -72,7 +72,7 @@ const Footer = () => (
     <footer>
         <Container>
             <Row>
-                <FooterCol >
+                <FooterCol>
                     <FooterHeadingContainer>
                         <FooterLogo src="/static/img/logo.svg" alt="Bytecode" />
                     </FooterHeadingContainer>
@@ -87,7 +87,7 @@ const Footer = () => (
                         <AllSocials />
                     </FooterLinkContainer>
                 </FooterCol>
-                <FooterCol >
+                <FooterCol>
                     <FooterHeadingContainer>
                         <p className="subtitle">Kom langs</p>
                     </FooterHeadingContainer>
