@@ -90,13 +90,13 @@ const bytecode = {
         p: {
             size: '1.8rem',
             height: '1.2em',
-            spacing: '0.05em',
+            spacing: '0.03em',
             font: paragraph,
             weight: regular,
             color: lightgray,
         },
         text: {
-            size: '1.8rem',
+            size: '1rem',
             height: '1.2em',
             spacing: '0.16em',
             font: paragraph,

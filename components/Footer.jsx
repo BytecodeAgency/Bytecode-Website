@@ -24,7 +24,7 @@ const FooterIcon = styled.img`
 `;
 
 const FooterLogo = styled(FooterIcon)`
-    margin-left: -3.1rem;
+    transform: translateX(-3rem);
 `;
 
 const OpenSourceIcon = styled(FooterIcon)`
@@ -72,7 +72,7 @@ const Footer = () => (
     <footer>
         <Container>
             <Row>
-                <FooterCol offset={{md:2}}>
+                <FooterCol >
                     <FooterHeadingContainer>
                         <FooterLogo src="/static/img/logo.svg" alt="Bytecode" />
                     </FooterHeadingContainer>
@@ -87,7 +87,7 @@ const Footer = () => (
                         <AllSocials />
                     </FooterLinkContainer>
                 </FooterCol>
-                <FooterCol>
+                <FooterCol >
                     <FooterHeadingContainer>
                         <p className="subtitle">Kom langs</p>
                     </FooterHeadingContainer>
