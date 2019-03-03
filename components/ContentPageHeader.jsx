@@ -43,7 +43,7 @@ const ContentPageHeader = props => {
         <MainHeader img={img}>
             <Container fluid>
                 <Row>
-                    <Col offset={{ xl: 1, lg: 1 }} md={10} lg={9} xl={5}>
+                    <Col offset={{ xl: 1, lg: 0 }} md={10} lg={9} xl={5}>
                         <TextBlock
                             subtitle={subtitle? subtitle : ''}
                             title={title ? title : ''}

@@ -111,7 +111,7 @@ const Home = () => (
         </HeaderContainer>
         <Container fluid>
             <Row>
-                <Col offset={{ lg: 2.5 }} md={12} lg={3}>
+                <Col offset={{ xl: 1 }} md={12} lg={5} xl={5}>
                     <Row>
                         <Col sm={6}>
                             <Thumbnail
@@ -143,7 +143,7 @@ const Home = () => (
                         </Col>
                     </Row>
                 </Col>
-                <Col offset={{ lg: 1 }} md={12} lg={2}>
+                <Col offset={{ lg: 1 }} md={12} lg={4}  lg={3}>
                     <TextBlock
                         subtitle="Hoe Bytecode kan helpen"
                         title="Samen halen we alles uit jouw digitale zelf"
@@ -164,7 +164,7 @@ const Home = () => (
         </Container>
         <Container fluid>
             <CenterAlignedRow>
-                <Col offset={{ lg: 2 }} md={12} lg={3}>
+                <Col offset={{ lg: 1 }} md={12} lg={4}>
                     <TextBlock
                         subtitle="Wie wij zijn"
                         title="Kennis en kwaliteit met een no-bullshit mentaliteit"

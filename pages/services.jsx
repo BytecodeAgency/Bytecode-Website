@@ -20,10 +20,6 @@ const pageSettings = {
 /* eslint-disable max-len */
 
 
-const StyledContainer = styled(Container)`
-    margin: 5em 10% 5em 10% !important;
-`;
-
 const ContentBlockWrapper = styled.section`
     background-color: ${theme.colors.mediumgray};
     margin: 5% 0% 5% 2rem;
@@ -78,9 +74,9 @@ const Services = () => (
         <Process />
 
         {/* WEB EN MOBIEL */}
-        <StyledContainer>
+        <Container fluid>
             <Row>
-                <Col lg={8} md={10}>
+                <Col offset={{ md:0, lg:1 }} lg={8} md={10}>
                     <TextBlock title="Web & mobiel" headingType="h2">
                         Natuurlijk heeft elk bedrijf een website nodig om zich
                         online te presenteren en een groot publiek te bereiken.
@@ -92,10 +88,10 @@ const Services = () => (
                     </TextBlock>
                 </Col>
             </Row>
-        </StyledContainer>
-        <StyledContainer>
+        </Container>
+        <Container fluid>
             <Row>
-                <Col lg={6} md={6} xs={12}>
+                <Col offset={{ md:0, lg: 1 }} lg={2.5} md={4} xs={12}>
                     <Service iconName="website" title="Websites & Webapps">
                         Dit is de plek waar alles gebeurt. De plek waar je laat
                         zien wie je bent, waar je mensen overtuigd en waar je
@@ -105,7 +101,7 @@ const Services = () => (
                         simplistische websites tot ingewikkelde webapps.
                     </Service>
                 </Col>
-                <Col lg={6} md={6} xs={12}>
+                <Col lg={2.5} md={4} xs={12}>
                     <Service iconName="ecommerce" title="E-commerce">
                         Wil je een succesvolle webshop hebben? Dan moet je aan
                         heel veel factoren denken. Bytecode weet precies welke
@@ -114,9 +110,7 @@ const Services = () => (
                         die bij een succesvolle webshop komen kijken.
                     </Service>
                 </Col>
-            </Row>
-            <Row>
-                <Col lg={6} md={6} xs={12}>
+                <Col lg={2.5} md={4} xs={12}>
                     <Service iconName="mobile" title="Mobiele applicaties">
                         Tegenwoordig zijn mobiele applicaties minstens zo
                         belangrijk als websites of webapps. Wij vinden het
@@ -129,7 +123,7 @@ const Services = () => (
                     </Service>
                 </Col>
 
-                <Col lg={6} md={6} xs={12}>
+                <Col lg={2.5} md={4} xs={12}>
                     <Service iconName="ui" title="UX/UI-Design">
                         Alles draait om de beleving van de bezoeker van jouw
                         platform. Deze beleving optimaliseren wij door middel
@@ -142,12 +136,12 @@ const Services = () => (
                     </Service>
                 </Col>
             </Row>
-        </StyledContainer>
+        </Container>
 
         {/* CLOUD EN AUTOMATISERING */}
-        <StyledContainer>
+        <Container fluid>
             <Row>
-                <Col lg={8} md={10}>
+                <Col offset={{ md:0, lg:1 }} lg={6} md={4} xs={12}>
                     <TextBlock title="Cloud & automatisering" headingType="h2">
                         Bedrijven zijn vaak erg veel tijd kwijt aan repetitief
                         handwerk, terwijl dit werk veel beter geautomatiseerd
@@ -160,10 +154,10 @@ const Services = () => (
                     </TextBlock>
                 </Col>
             </Row>
-        </StyledContainer>
-        <StyledContainer>
+        </Container>
+        <Container fluid>
             <Row>
-                <Col xl={6}>
+                <Col offset={{ md:0, lg: 1 }} lg={2.5} md={4} xs={12}>
                     <Service iconName="api" title="API-ontwikkeling">
                         API-systemen zijn enorm belangrijk voor communicatie van
                         jouw platform met andere systemen. Wij zorgen er
@@ -174,7 +168,7 @@ const Services = () => (
                         beveiligingsstandaarden.
                     </Service>
                 </Col>
-                <Col xl={6}>
+                <Col lg={2.5} md={4} xs={12}>
                     <Service iconName="devops" title="Devops & cloudcomputing">
                         Met onze devops-methodiek verkleinen wij de
                         ontwikkeltijd en zorgen we voor een betere oplevering,
@@ -187,7 +181,7 @@ const Services = () => (
                         nodige hoofdpijn te besparen.
                     </Service>
                 </Col>
-                <Col xl={6}>
+                <Col lg={2.5} md={4} xs={12}>
                     <Service iconName="automation" title="IT-automatisering">
                         Door IT-automatisering zorgt Bytecode ervoor dat bepaald
                         services gekoppeld worden met jouw website. Een goed
@@ -200,14 +194,14 @@ const Services = () => (
                     </Service>
                 </Col>
             </Row>
-        </StyledContainer>
+        </Container>
 
         <ImageBlock src="/static/img/content/group-full.jpg" alt="groep" />
 
         {/* BRANDING EN DESIGN */}
-        <StyledContainer>
+        <Container fluid>
             <Row>
-                <Col lg={8} md={10}>
+                <Col offset={{ md:0, lg:1 }} lg={6} md={8}>
                     <TextBlock title="Branding & Design" headingType="h2">
                         Om te kunnen slagen, zal je bedrijf een duidelijke en
                         herkenbare identiteit moeten hebben. Hierdoor wordt het
@@ -220,10 +214,10 @@ const Services = () => (
                     </TextBlock>
                 </Col>
             </Row>
-        </StyledContainer>
-        <StyledContainer>
+        </Container>
+        <Container fluid>
             <Row>
-                <Col xl={6} md={12}>
+                <Col offset={{ md:0, lg:1 }} lg={2.5} md={4} xs={12}>
                     <Service
                         iconName="design"
                         title="Graphic design & branding"
@@ -240,7 +234,7 @@ const Services = () => (
                         van jouw bedrijf een goed merk te maken.
                     </Service>
                 </Col>
-                <Col xl={6} md={12}>
+                <Col lg={2.5} md={4} xs={12}>
                     <Service iconName="ads" title="Digital advertising">
                         Tegenwoordig kan je als bedrijf niet achterblijven op
                         het gebied van digital advertising. Bij elke klant doen
@@ -251,7 +245,7 @@ const Services = () => (
                         conversie oplevert.
                     </Service>
                 </Col>
-                <Col xl={6} md={12}>
+                <Col lg={2.5} md={4} xs={12}>
                     <Service iconName="seo" title="Zoekoptimalisatie">
                         Om veel bezoekers te genereren, zul je goed vindbaar
                         moeten zijn in zoekmachines. Wij zijn gespecialiseerd in
@@ -263,16 +257,9 @@ const Services = () => (
                     </Service>
                 </Col>
             </Row>
-        </StyledContainer>
+        </Container>
 
-        <ContentBlockWrapper>
-            <TextBlock
-                subtitle="We staan voor je klaar"
-                headingType="h2"
-                title="Stuur ons een berichtje"
-            />
-            <ContactForm />
-        </ContentBlockWrapper>
+        <ContactForm />
     </Layout>
 );
 

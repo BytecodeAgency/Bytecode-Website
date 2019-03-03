@@ -88,17 +88,17 @@ const bytecode = {
             color: white,
         },
         p: {
-            size: '1.8rem',
+            size: '1.7rem',
             height: '1.2em',
             spacing: '0.03em',
             font: paragraph,
             weight: regular,
             color: lightgray,
         },
-        text: {
-            size: '1rem',
+        introduction: {
+            size: '1.9rem',
             height: '1.2em',
-            spacing: '0.16em',
+            spacing: '0.01em',
             font: paragraph,
             weight: regular,
             color: lightgray,

@@ -96,7 +96,7 @@ const TextBlock = props => {
             {getImage(image, alt)}
             <Subtitle>{subtitle}</Subtitle>
             {getTitle(headingType, title)}
-            <Paragraph>{children}</Paragraph>
+            <Paragraph className="introduction">{children}</Paragraph>
             {getButton(href, button, usenextlink)}
         </div>
     );

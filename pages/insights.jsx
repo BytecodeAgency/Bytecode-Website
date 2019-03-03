@@ -8,6 +8,7 @@ import TextBlock from '../components/TextBlock';
 import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
 import Author from '../components/Author';
 import ContactForm from '../components/ContactForm';
+import ContentPageHeader from '../components/ContentPageHeader';
 
 /* eslint-disable */
 const pageSettings = {
@@ -33,12 +34,12 @@ const BlogThumbnailContentWrapper = styled.a`
 const BlogThumbnailImage = styled.div`
     background-image: url(${props => props.url});
     width: 100%;
-    height: 18rem;
+    height: 25rem;
     background-size: cover;
     background-position: center center;
     margin: 0 0 1.6rem;
     @media screen and (max-width: ${theme.breakpoints[1]}) {
-        height: 12rem;
+        height: 25rem;
     }
 `;
 
@@ -135,11 +136,8 @@ const BlogThumbnail = props => {
             <Link href={`insights/${slug}`}>
                 <BlogThumbnailContentWrapper>
                     <BlogThumbnailImage url={article_image_url} />
-                    <TextBlock
-                        title={title}
-                        subtitle={category_name}
-                        headingType="h4"
-                    />
+                    <h6 class="subtitle">{category_name}</h6>
+                    <h3>{title}</h3>
                     <AuthorContainer>
                         <Author
                             name={author_name}
@@ -158,9 +156,102 @@ const BlogThumbnail = props => {
 
 const BlogSingle = () => (
     <Layout pageSettings={pageSettings}>
+        <ContentPageHeader
+            img="/static/img/content/team.png"
+            subtitle= "Over ons"
+            title="De titel maar dan een hele erge fucking lange
+            titel waar geen einde aan lijkt te komen"
+            button="read more"
+        >
+            text here
+        </ContentPageHeader>
         <Posts>
-            <Container>
+            <Container fluid>
                 <Row>
+                    <BlogThumbnail
+                        title={content.title}
+                        slug={content.slug}
+                        posted_on={content.posted_on}
+                        article_image_url={content.article_image_url}
+                        author_name={content.author_name}
+                        author_role={content.author_role}
+                        author_image_url={content.author_image_url}
+                        category_name={content.category_name}
+                        reading_time={content.reading_time}
+                    />
+
+                    <BlogThumbnail
+                        title={content.title}
+                        slug={content.slug}
+                        posted_on={content.posted_on}
+                        article_image_url={content.article_image_url}
+                        author_name={content.author_name}
+                        author_role={content.author_role}
+                        author_image_url={content.author_image_url}
+                        category_name={content.category_name}
+                        reading_time={content.reading_time}
+                    />
+
+                    <BlogThumbnail
+                        title={content.title}
+                        slug={content.slug}
+                        posted_on={content.posted_on}
+                        article_image_url={content.article_image_url}
+                        author_name={content.author_name}
+                        author_role={content.author_role}
+                        author_image_url={content.author_image_url}
+                        category_name={content.category_name}
+                        reading_time={content.reading_time}
+                    />
+
+                    <BlogThumbnail
+                        title={content.title}
+                        slug={content.slug}
+                        posted_on={content.posted_on}
+                        article_image_url={content.article_image_url}
+                        author_name={content.author_name}
+                        author_role={content.author_role}
+                        author_image_url={content.author_image_url}
+                        category_name={content.category_name}
+                        reading_time={content.reading_time}
+                    />
+
+                    <BlogThumbnail
+                        title={content.title}
+                        slug={content.slug}
+                        posted_on={content.posted_on}
+                        article_image_url={content.article_image_url}
+                        author_name={content.author_name}
+                        author_role={content.author_role}
+                        author_image_url={content.author_image_url}
+                        category_name={content.category_name}
+                        reading_time={content.reading_time}
+                    />
+
+                    <BlogThumbnail
+                        title={content.title}
+                        slug={content.slug}
+                        posted_on={content.posted_on}
+                        article_image_url={content.article_image_url}
+                        author_name={content.author_name}
+                        author_role={content.author_role}
+                        author_image_url={content.author_image_url}
+                        category_name={content.category_name}
+                        reading_time={content.reading_time}
+                    />
+
+                    <BlogThumbnail
+                        title={content.title}
+                        slug={content.slug}
+                        posted_on={content.posted_on}
+                        article_image_url={content.article_image_url}
+                        author_name={content.author_name}
+                        author_role={content.author_role}
+                        author_image_url={content.author_image_url}
+                        category_name={content.category_name}
+                        reading_time={content.reading_time}
+                    />
+
                     <BlogThumbnail
                         title={content.title}
                         slug={content.slug}
@@ -195,11 +286,14 @@ const BlogSingle = () => (
                         op of kom een keer langs op de koffie!
                     </TextBlock>
                 </Col>
-                <Col offset={{ md: 1 }} md={6}>
-                    <ContactForm />
+                <Col offset={{lg:1}} md={6}>
+                    <figure>
+                        <img src="/static/img/content/vision_web.png" alt="internet"/>
+                    </figure>
                 </Col>
             </Row>
         </ContentBlockWrapper>
+        <ContactForm />
     </Layout>
 );
 

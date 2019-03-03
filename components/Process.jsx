@@ -31,7 +31,7 @@ const ProcessStepImage = styled.img`
 const Process = () => (
     <Container fluid>
         <Row>
-            <Step offset={{ xl: 2.5, lg: 2 }} md={6} lg={2} xl={2}>
+            <Step offset={{ xl: 1, lg: 1 }} md={6} lg={3} xl={3}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/analyze.svg"
                     alt="Analyze"
@@ -49,7 +49,7 @@ const Process = () => (
                     analyseren welke punten het meeste prioriteit hebben.
                 </TextBlock>
             </Step>
-            <Step offset={{ xl: 0.5, lg: 2 }} md={6} lg={4} xl={2}>
+            <Step offset={{ xl: 0.5, lg: 2 }} md={6} lg={3} xl={3}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/strategize.svg"
                     alt="Strategize"
@@ -67,7 +67,7 @@ const Process = () => (
                     halen.
                 </TextBlock>
             </Step>
-            <Step offset={{ xl: 0.5, lg: 2 }} md={12} lg={12} xl={2}>
+            <Step offset={{ xl: 0.5, lg: 2 }} md={6} lg={3} xl={3}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/realize.svg"
                     alt="Realize"
