@@ -42,7 +42,10 @@ class Navbar extends React.Component {
                 <InnerNavbarContainer>
                     <Link prefetch href="/">
                         <a>
-                            <MobileNavLogo src="/static/img/logo-min.svg" />
+                            <MobileNavLogo 
+                                src="/static/img/logo-min.svg" 
+                                alt="Logo"
+                            />
                         </a>
                     </Link>
                     <BlackOverlay
