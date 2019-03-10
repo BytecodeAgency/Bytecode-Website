@@ -6,6 +6,7 @@ import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-lin
 import Thumbnail from '../components/Thumbnail';
 import ContactForm from '../components/ContactForm';
 import Process from '../components/Process';
+import ContentPageHeader from '../components/ContentPageHeader';
 
 /* eslint-disable */
 const pageSettings = {
@@ -77,32 +78,13 @@ const GroupImage = styled.img`
 
 const Home = () => (
     <Layout pageSettings={pageSettings}>
-        <HeaderContainer>
-            <AbsoluteCol>
-                <Hidden xs sm>
-                    <HeaderFigure>
-                        <HeaderImage
-                            alt="Bytecode web"
-                            src="/static/img/header/web.svg"
-                        />
-                    </HeaderFigure>
-                </Hidden>
-            </AbsoluteCol>
-            <Row>
-                <Col lg={6} xl={4}>
-                    <TextBlock
-                        subtitle="Welkom bij Bytecode"
-                        title="Vind de weg naar jouw digitale succes"
-                        href="//bytecode.nl/contact"
-                        button="Lees verder"
-                    >
-                        Ons gepassioneerde team helpt je dolgraag met het
-                        analyseren, bedenken en ontwikkelen van alles wat jij
-                        nodig hebt om je digitaal volledig te ontplooien.
-                    </TextBlock>
-                </Col>
-            </Row>
-        </HeaderContainer>
+        <ContentPageHeader
+            img="static/img/header/girl.jpg"
+            subtitle="Welkom bij Bytecode"
+            title="De makers van alles wt digitaal los en vast zit!"
+            href="//bytecode.nl/contact"
+            button="Lees verder"
+        />
         <Container fluid>
             <Row>
                 <Col offset={{ xl: 1 }} md={12} lg={5} xl={5}>

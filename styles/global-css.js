@@ -48,7 +48,7 @@ export const GlobalStyles = createGlobalStyle`
     ${reset()}
     ${enableCssReset ? debug() : ''}
     html { font-size: 62.5%; background: ${theme.colors.background} }
-    @media screen and (min-width: ${theme.breakpoints[3] * 1.35}px) { html { font-size: 90%; } }
+    @media screen and (min-width: ${theme.breakpoints[3] * 1.4}px) { html { font-size: 80%; } }
     a { color: inherit; }
     img { width: 100%; height: auto; margin:0; padding: 0}
     ${typographyElementStyling}
