@@ -28,13 +28,13 @@ const Contact = () => (
         />
         <Container fluid>
             <Row>
-                <Col xl={7} lg={6} md={12} xs={12}>
+                <Col offset={{xl: .5, lg: 0.5}} xl={6.5} lg={5.5} md={12} xs={12}>
                     {/* <TextBlock
                         subtitle="We staan voor je klaar"
                         headingType="h2"
                         title="Stuur ons een berichtje"
                     /> */}
-                    <ContactForm />
+                    <ContactForm simple/>
                 </Col>
                 <Col
                     offset={({ xl: 0 }, { lg: 1 })}

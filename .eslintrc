@@ -10,17 +10,42 @@
         "security"
     ],
     "rules": {
-        "arrow-parens": ["error", "as-needed"],
+        "arrow-parens": [
+            "error",
+            "as-needed"
+        ],
         "strict": 1,
         "eol-last": 1,
         "no-else-return": 1,
-        "max-len": [1, 80, 2],
+        "max-len": [
+            1,
+            80,
+            2
+        ],
         "prefer-arrow-callback": 1,
         "prefer-template": 2,
-        "prettier/prettier": ["error", { "singleQuote": true }],
-        "indent": [1, 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
-        "react/jsx-indent": [1, 4],
-        "react/jsx-indent-props": [1, 4],
+        "prettier/prettier": [
+            "error",
+            {
+                "singleQuote": true
+            }
+        ],
+        "indent": [
+            1,
+            4,
+            {
+                "SwitchCase": 1,
+                "VariableDeclarator": 1
+            }
+        ],
+        "react/jsx-indent": [
+            1,
+            4
+        ],
+        "react/jsx-indent-props": [
+            1,
+            4
+        ],
         "react/react-in-jsx-scope": "off",
         "react/jsx-one-expression-per-line": "off",
         "react/prop-types": 0,
@@ -28,6 +53,14 @@
         "react/jsx-boolean-value": 0,
         "no-loop-func": 0,
         "no-nested-ternary": 1,
-        "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }]
+        "quotes": [
+            2,
+            "single",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
+        ],
+        "no-unused-vars": 0
     }
 }

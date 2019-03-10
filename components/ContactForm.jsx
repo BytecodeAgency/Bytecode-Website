@@ -1,13 +1,13 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import styled from 'styled-components';
 import axios from 'axios';
 import { Container, Row, Col } from '../lib/Grid';
 import theme from '../styles/theme';
 import TextBlock from './TextBlock';
-import Wrapper from './Wrapper';
 
 const ContactFormContainer = styled.div`
-    background: none;
+    padding: 5rem 0;
 `;
 
 const InputField = styled.input`
@@ -150,50 +150,44 @@ class ContactForm extends React.Component {
 
     render() {
         return (
-            <Wrapper>
-                <Container fluid>
-                    <Row>
-                        <Col offset={({ md: 1 }, { lg: 0.75 })} md={12} lg={8}>
-                            <TextBlock
-                                subtitle="We staan voor je klaar"
-                                headingType="h2"
-                                title="Stuur ons een berichtje"
-                            />
-                            <ContactFormContainer>
-                                {this.getNotifications()}
-                                {this.generateInputField(
-                                    'text',
-                                    'contact',
-                                    'Naam',
-                                )}
-                                {this.generateInputField(
-                                    'email',
-                                    'email',
-                                    'Emailadres',
-                                )}
-                                {this.generateInputField(
-                                    'tel',
-                                    'phone',
-                                    'Telefoonnummer',
-                                )}
-                                <InputTextArea
-                                    name="contents"
-                                    placeholder="Bericht"
-                                    onChange={this.handleInput}
+            <Container fluid>
+                <Row>
+                    <Col offset={({ md: 1 }, { lg: 0.75 })} md={12} lg={8}>
+                        <TextBlock
+                            subtitle="We staan voor je klaar"
+                            headingType="h2"
+                            title="Stuur ons een berichtje"
+                        />
+                        <ContactFormContainer>
+                            {this.getNotifications()}
+                            {this.generateInputField('text', 'contact', 'Naam')}
+                            {this.generateInputField(
+                                'email',
+                                'email',
+                                'Emailadres',
+                            )}
+                            {this.generateInputField(
+                                'tel',
+                                'phone',
+                                'Telefoonnummer',
+                            )}
+                            <InputTextArea
+                                name="contents"
+                                placeholder="Bericht"
+                                onChange={this.handleInput}
                     value={this.state.contents} // eslint-disable-line
-                                    className="form"
-                                />
-                                <SendButton
-                                    className="button"
-                                    onClick={this.handleSend}
-                                >
-                                    Verzenden
-                                </SendButton>
-                            </ContactFormContainer>
-                        </Col>
-                    </Row>
-                </Container>
-            </Wrapper>
+                                className="form"
+                            />
+                            <SendButton
+                                className="button"
+                                onClick={this.handleSend}
+                            >
+                                Verzenden
+                            </SendButton>
+                        </ContactFormContainer>
+                    </Col>
+                </Row>
+            </Container>
         );
     }
 }

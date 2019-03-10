@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import Layout from '../components/Layout';
-import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
-import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
-import Thumbnail from '../components/Thumbnail';
+import ContentPageHeader from '../components/ContentPageHeader';
+import { Container, Row, Col } from '../lib/Grid';
 import ContactForm from '../components/ContactForm';
 import Process from '../components/Process';
-import ContentPageHeader from '../components/ContentPageHeader';
+import Thumbnail from '../components/Thumbnail';
+import theme from '../styles/theme';
+import Wrapper from '../components/Wrapper';
+ // eslint-disable-line
 
 /* eslint-disable */
 const pageSettings = {
@@ -17,58 +19,13 @@ const pageSettings = {
 /* eslint-enable */
 /* eslint-disable max-len */
 
-const HeaderContainer = styled.section`
-    background-color: ${theme.colors.mediumgray};
-    padding: 4vh 2rem 3vh 2rem;
-
-    @media (min-width: ${theme.breakpoints[1]}px) {
-        margin: 0 0 0 2em;
-        padding: 5vh 2% 7.5vh 5%;
-    }
-    @media (min-width: ${theme.breakpoints[2]}px) {
-        margin: 0 0 0 2em;
-        padding: 10vh 2% 15vh 2em;
-    }
-    @media (min-width: ${theme.breakpoints[3]}px) {
-        margin: 0 0 0 8rem;
-        padding: 25vh 2% 25vh 5%;
-    }
-`;
-
-// const StyledContainer = styled(Container)`
-//     margin: 10% !important;
-//     @media (min-width: ${theme.breakpoints[2]}px) {
-//         margin: 10% !important;
-//     }
-// `;
-
-const AbsoluteCol = styled(Col)`
-    top: 0px;
-    right: 0px;
-    max-width: none;
-    position: absolute;
-`;
-
 const CenterAlignedRow = styled(Row)`
     align-items: center;
 `;
 
-const HeaderFigure = styled.figure`
-    position: absolute;
-    right: 10vw;
-    top: 0rem;
-    opacity: 0.2;
-    width: 60%;
-    height: 100%;
-`;
-
-const HeaderImage = styled.img`
-    position: relative;
-    right: -10rem;
-    top: -75rem;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+const CenterAlignedCol = styled(Col)`
+    align-self: center;
+    display: flex;
 `;
 
 const GroupImage = styled.img`
@@ -79,15 +36,18 @@ const GroupImage = styled.img`
 const Home = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="static/img/header/girl.jpg"
+            img="static/img/header/girl.png"
             subtitle="Welkom bij Bytecode"
-            title="De makers van alles wt digitaal los en vast zit!"
+            title="De makers van alles wat digitaal los en vast zit"
             href="//bytecode.nl/contact"
             button="Lees verder"
+            bgSize="10%"
+            bgX="80%"
+            bgY="50%"
         />
         <Container fluid>
             <Row>
-                <Col offset={{ xl: 1 }} md={12} lg={5} xl={5}>
+                <Col offset={{ xl: 1 }} md={12} lg={4} xl={4}>
                     <Row>
                         <Col sm={6}>
                             <Thumbnail
@@ -119,7 +79,7 @@ const Home = () => (
                         </Col>
                     </Row>
                 </Col>
-                <Col offset={{ lg: 1 }} md={12} lg={4}>
+                <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={4}>
                     <TextBlock
                         subtitle="Hoe Bytecode kan helpen"
                         title="Samen halen we alles uit jouw digitale zelf"
@@ -135,39 +95,43 @@ const Home = () => (
                         dat je bij ons echt alles uit je digitale zelf kunt
                         halen.
                     </TextBlock>
-                </Col>
+                </CenterAlignedCol>
             </Row>
         </Container>
-        <Container fluid>
-            <CenterAlignedRow>
-                <Col offset={{ lg: 1 }} md={12} lg={4}>
-                    <TextBlock
-                        subtitle="Wie wij zijn"
-                        title="Kennis en kwaliteit met een no-bullshit mentaliteit"
-                        href="//bytecode.nl/services"
-                        button="Lees verder"
-                    >
-                        Wij staan voor een eerlijke en open samenwerking. We
-                        werken met elkaar, niet langs elkaar. Ons zul je nooit
-                        om de zaken heen zien draaien; wij vertellen je hoe het
-                        zit en niet anders. Onze kennis en kwaliteit gebruiken
-                        we niet om met moeilijke termen te smijten, maar in het
-                        volledig vervullen van al je digitale wensen, om zo een
-                        kwalitatief hoogstaand en optimaal functionerend product
-                        op te leveren.
-                    </TextBlock>
-                </Col>
-                <Col offset={{ lg: 1 }} md={12} lg={5}>
-                    <GroupImage
-                        width="700"
-                        src="/static/img/content/team.png"
-                        alt="Onze mindset"
-                    />
-                </Col>
-            </CenterAlignedRow>
-        </Container>
+        <Wrapper>
+            <Container fluid>
+                <CenterAlignedRow>
+                    <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={4}>
+                        <TextBlock
+                            subtitle="Wie wij zijn"
+                            title="Kennis en kwaliteit met een no-bullshit mentaliteit"
+                            href="//bytecode.nl/services"
+                            button="Lees verder"
+                        >
+                            Wij staan voor een eerlijke en open samenwerking. We
+                            werken met elkaar, niet langs elkaar. Ons zul je
+                            nooit om de zaken heen zien draaien; wij vertellen
+                            je hoe het zit en niet anders. Onze kennis en
+                            kwaliteit gebruiken we niet om met moeilijke termen
+                            te smijten, maar in het volledig vervullen van al je
+                            digitale wensen, om zo een kwalitatief hoogstaand en
+                            optimaal functionerend product op te leveren.
+                        </TextBlock>
+                    </CenterAlignedCol>
+                    <Col offset={{ lg: 1 }} md={12} lg={5}>
+                        <GroupImage
+                            width="700"
+                            src="/static/img/content/team.png"
+                            alt="Onze mindset"
+                        />
+                    </Col>
+                </CenterAlignedRow>
+            </Container>
+        </Wrapper>
         <Process />
-        <ContactForm />
+        <Wrapper>
+            <ContactForm />
+        </Wrapper>
     </Layout>
 );
 

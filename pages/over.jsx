@@ -6,6 +6,7 @@ import ContentPageHeader from '../components/ContentPageHeader';
 import TeamMember from '../components/TeamMember';
 import { Container, Row, Col } from '../lib/Grid';
 import ContactForm from '../components/ContactForm';
+import Wrapper from '../components/Wrapper';
 
 /* eslint-disable */
 const pageSettings = {
@@ -139,7 +140,9 @@ const Over = () => (
                 </Col> */}
             </Row>
         </Container>
-        <ContactForm />
+        <Wrapper>
+            <ContactForm />
+        </Wrapper>
     </Layout>
 );
 

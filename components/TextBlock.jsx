@@ -78,6 +78,14 @@ const getTitle = (type, title) => {
     return <H1>{title}</H1>;
 };
 
+const state = '';
+
+// const getTypography = type => {
+//     if (type === 'h3') {
+//         state = 'introduction';
+//     }
+// };
+
 const TextBlock = props => {
     const {
         image,
@@ -96,7 +104,7 @@ const TextBlock = props => {
             {getImage(image, alt)}
             <Subtitle>{subtitle}</Subtitle>
             {getTitle(headingType, title)}
-            <Paragraph className="introduction">{children}</Paragraph>
+            <Paragraph className={state}>{children}</Paragraph>
             {getButton(href, button, usenextlink)}
         </div>
     );

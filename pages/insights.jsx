@@ -9,6 +9,7 @@ import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-lin
 import Author from '../components/Author';
 import ContactForm from '../components/ContactForm';
 import ContentPageHeader from '../components/ContentPageHeader';
+import Wrapper from '../components/Wrapper';
 
 /* eslint-disable */
 const pageSettings = {
@@ -21,7 +22,7 @@ const pageSettings = {
 /* eslint-disable max-len, object-curly-newline, camelcase */
 
 const Posts = styled.section`
-    margin: 12rem 0 6rem;
+    margin: 0;
 `;
 
 const BlogThumbnailContentWrapper = styled.a`
@@ -45,12 +46,6 @@ const BlogThumbnailImage = styled.div`
 
 const AuthorContainer = styled.div`
     margin: 2rem 0;
-`;
-
-const ContentBlockWrapper = styled.div`
-    background-color: ${theme.colors.mediumgray};
-    margin: 5% 0 5% 0;
-    padding: 7.5% 5%;
 `;
 
 const content = {
@@ -132,7 +127,7 @@ const BlogThumbnail = props => {
         reading_time,
     } = props;
     return (
-        <Col xl={3} lg={4}>
+        <Col xl={4} lg={4}>
             <Link href={`insights/${slug}`}>
                 <BlogThumbnailContentWrapper>
                     <BlogThumbnailImage url={article_image_url} />
@@ -168,135 +163,162 @@ const BlogSingle = () => (
         <Posts>
             <Container fluid>
                 <Row>
-                    <BlogThumbnail
-                        title={content.title}
-                        slug={content.slug}
-                        posted_on={content.posted_on}
-                        article_image_url={content.article_image_url}
-                        author_name={content.author_name}
-                        author_role={content.author_role}
-                        author_image_url={content.author_image_url}
-                        category_name={content.category_name}
-                        reading_time={content.reading_time}
-                    />
+                    <Col offset={{ md: 1 }} md={10}>
+                        <Container fluid>
+                            <Row>
+                                <BlogThumbnail
+                                    title={content.title}
+                                    slug={content.slug}
+                                    posted_on={content.posted_on}
+                                    article_image_url={
+                                        content.article_image_url
+                                    }
+                                    author_name={content.author_name}
+                                    author_role={content.author_role}
+                                    author_image_url={content.author_image_url}
+                                    category_name={content.category_name}
+                                    reading_time={content.reading_time}
+                                />
 
-                    <BlogThumbnail
-                        title={content.title}
-                        slug={content.slug}
-                        posted_on={content.posted_on}
-                        article_image_url={content.article_image_url}
-                        author_name={content.author_name}
-                        author_role={content.author_role}
-                        author_image_url={content.author_image_url}
-                        category_name={content.category_name}
-                        reading_time={content.reading_time}
-                    />
+                                <BlogThumbnail
+                                    title={content.title}
+                                    slug={content.slug}
+                                    posted_on={content.posted_on}
+                                    article_image_url={
+                                        content.article_image_url
+                                    }
+                                    author_name={content.author_name}
+                                    author_role={content.author_role}
+                                    author_image_url={content.author_image_url}
+                                    category_name={content.category_name}
+                                    reading_time={content.reading_time}
+                                />
 
-                    <BlogThumbnail
-                        title={content.title}
-                        slug={content.slug}
-                        posted_on={content.posted_on}
-                        article_image_url={content.article_image_url}
-                        author_name={content.author_name}
-                        author_role={content.author_role}
-                        author_image_url={content.author_image_url}
-                        category_name={content.category_name}
-                        reading_time={content.reading_time}
-                    />
+                                <BlogThumbnail
+                                    title={content.title}
+                                    slug={content.slug}
+                                    posted_on={content.posted_on}
+                                    article_image_url={
+                                        content.article_image_url
+                                    }
+                                    author_name={content.author_name}
+                                    author_role={content.author_role}
+                                    author_image_url={content.author_image_url}
+                                    category_name={content.category_name}
+                                    reading_time={content.reading_time}
+                                />
 
-                    <BlogThumbnail
-                        title={content.title}
-                        slug={content.slug}
-                        posted_on={content.posted_on}
-                        article_image_url={content.article_image_url}
-                        author_name={content.author_name}
-                        author_role={content.author_role}
-                        author_image_url={content.author_image_url}
-                        category_name={content.category_name}
-                        reading_time={content.reading_time}
-                    />
+                                <BlogThumbnail
+                                    title={content.title}
+                                    slug={content.slug}
+                                    posted_on={content.posted_on}
+                                    article_image_url={
+                                        content.article_image_url
+                                    }
+                                    author_name={content.author_name}
+                                    author_role={content.author_role}
+                                    author_image_url={content.author_image_url}
+                                    category_name={content.category_name}
+                                    reading_time={content.reading_time}
+                                />
 
-                    <BlogThumbnail
-                        title={content.title}
-                        slug={content.slug}
-                        posted_on={content.posted_on}
-                        article_image_url={content.article_image_url}
-                        author_name={content.author_name}
-                        author_role={content.author_role}
-                        author_image_url={content.author_image_url}
-                        category_name={content.category_name}
-                        reading_time={content.reading_time}
-                    />
+                                <BlogThumbnail
+                                    title={content.title}
+                                    slug={content.slug}
+                                    posted_on={content.posted_on}
+                                    article_image_url={
+                                        content.article_image_url
+                                    }
+                                    author_name={content.author_name}
+                                    author_role={content.author_role}
+                                    author_image_url={content.author_image_url}
+                                    category_name={content.category_name}
+                                    reading_time={content.reading_time}
+                                />
 
-                    <BlogThumbnail
-                        title={content.title}
-                        slug={content.slug}
-                        posted_on={content.posted_on}
-                        article_image_url={content.article_image_url}
-                        author_name={content.author_name}
-                        author_role={content.author_role}
-                        author_image_url={content.author_image_url}
-                        category_name={content.category_name}
-                        reading_time={content.reading_time}
-                    />
+                                <BlogThumbnail
+                                    title={content.title}
+                                    slug={content.slug}
+                                    posted_on={content.posted_on}
+                                    article_image_url={
+                                        content.article_image_url
+                                    }
+                                    author_name={content.author_name}
+                                    author_role={content.author_role}
+                                    author_image_url={content.author_image_url}
+                                    category_name={content.category_name}
+                                    reading_time={content.reading_time}
+                                />
 
-                    <BlogThumbnail
-                        title={content.title}
-                        slug={content.slug}
-                        posted_on={content.posted_on}
-                        article_image_url={content.article_image_url}
-                        author_name={content.author_name}
-                        author_role={content.author_role}
-                        author_image_url={content.author_image_url}
-                        category_name={content.category_name}
-                        reading_time={content.reading_time}
-                    />
+                                <BlogThumbnail
+                                    title={content.title}
+                                    slug={content.slug}
+                                    posted_on={content.posted_on}
+                                    article_image_url={
+                                        content.article_image_url
+                                    }
+                                    author_name={content.author_name}
+                                    author_role={content.author_role}
+                                    author_image_url={content.author_image_url}
+                                    category_name={content.category_name}
+                                    reading_time={content.reading_time}
+                                />
 
-                    <BlogThumbnail
-                        title={content.title}
-                        slug={content.slug}
-                        posted_on={content.posted_on}
-                        article_image_url={content.article_image_url}
-                        author_name={content.author_name}
-                        author_role={content.author_role}
-                        author_image_url={content.author_image_url}
-                        category_name={content.category_name}
-                        reading_time={content.reading_time}
-                    />
+                                <BlogThumbnail
+                                    title={content.title}
+                                    slug={content.slug}
+                                    posted_on={content.posted_on}
+                                    article_image_url={
+                                        content.article_image_url
+                                    }
+                                    author_name={content.author_name}
+                                    author_role={content.author_role}
+                                    author_image_url={content.author_image_url}
+                                    category_name={content.category_name}
+                                    reading_time={content.reading_time}
+                                />
+                            </Row>
+                        </Container>
+                    </Col>
+                </Row>
+                <Row>
+
+                        <Col offset={{ md: 1 }} md={5}>
+                            <TextBlock
+                                headingType="h2"
+                                title="Een frisse blik op het internet."
+                            >
+                                Hier zie je artikelen die met passie zijn
+                                geschreven door Bytecode, een jonge en moderne
+                                web agency. Wij laten jou graag zien hoe je de
+                                kracht van het internet kunt gebruiken om alles
+                                uit jezelf te halen. Dit doen we door
+                                interessante artikelen te schrijven, maar ook
+                                door deze inzichten in onze werkzaamheden te
+                                verwerken.
+                                <br />
+                                <br />
+                                Wil je meer over ons weten of kunnen we
+                                misschien iets voor je betekenen? Neem gerust
+                                een keer contact met ons op of kom een keer
+                                langs op de koffie!
+                            </TextBlock>
+                        </Col>
+                        {/* <Col md={4}>
+                            <figure>
+                                <img
+                                    src="/static/img/content/vision_web.png"
+                                    alt="internet"
+                                />
+                            </figure>
+                        </Col> */}
+
                 </Row>
             </Container>
         </Posts>
-        <ContentBlockWrapper>
-            <Row>
-                <Col md={5}>
-                    <TextBlock
-                        headingType="h2"
-                        title="Een frisse blik op het internet."
-                    >
-                        Hier zie je artikelen die met passie zijn geschreven
-                        door Bytecode, een jonge en moderne web agency. Wij
-                        laten jou graag zien hoe je de kracht van het internet
-                        kunt gebruiken om alles uit jezelf te halen. Dit doen we
-                        door interessante artikelen te schrijven, maar ook door
-                        deze inzichten in onze werkzaamheden te verwerken.
-                        <br />
-                        <br />
-                        Wil je meer over ons weten of kunnen we misschien iets
-                        voor je betekenen? Neem gerust een keer contact met ons
-                        op of kom een keer langs op de koffie!
-                    </TextBlock>
-                </Col>
-                <Col offset={{ lg: 1 }} md={6}>
-                    <figure>
-                        <img
-                            src="/static/img/content/vision_web.png"
-                            alt="internet"
-                        />
-                    </figure>
-                </Col>
-            </Row>
-        </ContentBlockWrapper>
-        <ContactForm />
+        <Wrapper>
+            <ContactForm />
+        </Wrapper>
     </Layout>
 );
 
