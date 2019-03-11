@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Container } from 'react-grid-system';
 import theme from '../styles/theme';
 import TextBlock from './TextBlock';
-import { Row, Col } from '../lib/Grid'; // eslint-disable-line
+import { Row, Col } from '../lib/Grid';
 
 const Step = styled(Col)`
     margin: 3em 0;

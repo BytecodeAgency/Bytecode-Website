@@ -1,5 +1,4 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import styled from 'styled-components';
 import axios from 'axios';
 import { Container, Row, Col } from '../lib/Grid';

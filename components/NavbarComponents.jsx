@@ -1,8 +1,3 @@
-/*  eslint-disable
-    jsx-a11y/anchor-is-valid,
-    no-confusing-arrow,
-    react/destructuring-assignment
-*/
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';

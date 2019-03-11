@@ -53,7 +53,6 @@ const TeamMemberWrapper = styled.div`
 
 const TeamMemberPhoto = styled.figure`
     margin: 1rem;
-    /* border-radius: 100rem; */
     overflow: hidden;
     width: 100%;
     height: auto;
@@ -88,7 +87,7 @@ const getAltText = (name, alt) => {
 };
 const TeamMember = props => {
     // eslint-disable-next-line
-    const { name, title, img, alt, description } = props;
+    const { name, title, img, alt } = props;
 
     return (
         <TeamMemberWrapper>
