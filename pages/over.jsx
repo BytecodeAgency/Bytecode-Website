@@ -8,17 +8,15 @@ import { Container, Row, Col } from '../lib/Grid';
 import ContactForm from '../components/ContactForm';
 import Wrapper from '../components/Wrapper';
 
-/* eslint-disable */
 const pageSettings = {
-    title:
-        'Over ons - Bytecode Digital Agency | Wie zijn de drijvende krachten achter Bytecode?',
-    description:
-        'Over ons. Wie of wat is Bytecode? Wat is onze missie en hoe willen wij die bereiken? Kom meer te weten of het Bytecode-team!',
+    title: `Over ons - Bytecode Digital Agency | 
+        Wie zijn de drijvende krachten achter Bytecode?`,
+    description: `Over ons. Wie of wat is Bytecode? Wat is onze missie
+     en hoe willen wij die bereiken? Kom meer te weten of het Bytecode-team!`,
     keywords: 'over ons',
 };
-/* eslint-enable */
 
-const loremipsum = `Lorem ipsum dolor sit
+const onzeVisie = `Lorem ipsum dolor sit
 amet consectetur adipisicing elit.Asperiores
 itaque inventore sequi tempora amet dolore
 voluptas? Natus eius repellendus tempora
@@ -34,13 +32,13 @@ const Over = () => (
         <ContentPageHeader
             img="/static/img/content/team.png"
             subtitle="Over ons"
-            title="De titel maar dan een hele erge fucking lange
-            titel waar geen einde aan lijkt te komen"
+            title="Het Bytecode team."
+            text="Hoi, wij zijn het Bytecode team. Aangenaam kennis te maken!"
             button="read more"
+            bgSize="80%"
         >
-            {loremipsum}
+            {onzeVisie}
         </ContentPageHeader>
-        {/* eslint-disable max-len */}
         <Container fluid>
             <Row>
                 <Col
@@ -58,7 +56,7 @@ const Over = () => (
                     />
                 </Col>
                 <Col offset={{ md: 0, lg: 1, xl: 1 }} md={6} lg={5} xl={4}>
-                    <p>{loremipsum}</p>
+                    <p>{onzeVisie}</p>
                 </Col>
             </Row>
         </Container>
@@ -80,7 +78,7 @@ const Over = () => (
                         title="Unieke perspectieven door unieke personen"
                         headingType="h2"
                     >
-                        {loremipsum}
+                        {onzeVisie}
                     </TextBlock>
                 </Col>
             </Row>

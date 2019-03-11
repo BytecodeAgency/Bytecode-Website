@@ -149,17 +149,21 @@ const BlogThumbnail = props => {
     );
 };
 
-const BlogSingle = () => (
+const blogArchive = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="/static/img/content/team.png"
-            subtitle="Over ons"
-            title="De titel maar dan een hele erge fucking lange
-            titel waar geen einde aan lijkt te komen"
+            img="/static/img/content/vision_web.png"
+            subtitle="Insights"
+            title="Een frisse blik op het internet."
+            text="Hier zie je artikelen die met passie zijn geschreven
+            door Bytecode, een jonge en moderne web agency. Wij
+            laten jou graag zien hoe je de kracht van het
+            internet kunt gebruiken om alles uit jezelf te
+            halen. Dit doen we door interessante artikelen te
+            schrijven, maar ook door deze inzichten in onze
+            werkzaamheden te verwerken."
             button="read more"
-        >
-            text here
-        </ContentPageHeader>
+        />
         <Posts>
             <Container fluid>
                 <Row>
@@ -179,136 +183,9 @@ const BlogSingle = () => (
                                     category_name={content.category_name}
                                     reading_time={content.reading_time}
                                 />
-
-                                <BlogThumbnail
-                                    title={content.title}
-                                    slug={content.slug}
-                                    posted_on={content.posted_on}
-                                    article_image_url={
-                                        content.article_image_url
-                                    }
-                                    author_name={content.author_name}
-                                    author_role={content.author_role}
-                                    author_image_url={content.author_image_url}
-                                    category_name={content.category_name}
-                                    reading_time={content.reading_time}
-                                />
-
-                                <BlogThumbnail
-                                    title={content.title}
-                                    slug={content.slug}
-                                    posted_on={content.posted_on}
-                                    article_image_url={
-                                        content.article_image_url
-                                    }
-                                    author_name={content.author_name}
-                                    author_role={content.author_role}
-                                    author_image_url={content.author_image_url}
-                                    category_name={content.category_name}
-                                    reading_time={content.reading_time}
-                                />
-
-                                <BlogThumbnail
-                                    title={content.title}
-                                    slug={content.slug}
-                                    posted_on={content.posted_on}
-                                    article_image_url={
-                                        content.article_image_url
-                                    }
-                                    author_name={content.author_name}
-                                    author_role={content.author_role}
-                                    author_image_url={content.author_image_url}
-                                    category_name={content.category_name}
-                                    reading_time={content.reading_time}
-                                />
-
-                                <BlogThumbnail
-                                    title={content.title}
-                                    slug={content.slug}
-                                    posted_on={content.posted_on}
-                                    article_image_url={
-                                        content.article_image_url
-                                    }
-                                    author_name={content.author_name}
-                                    author_role={content.author_role}
-                                    author_image_url={content.author_image_url}
-                                    category_name={content.category_name}
-                                    reading_time={content.reading_time}
-                                />
-
-                                <BlogThumbnail
-                                    title={content.title}
-                                    slug={content.slug}
-                                    posted_on={content.posted_on}
-                                    article_image_url={
-                                        content.article_image_url
-                                    }
-                                    author_name={content.author_name}
-                                    author_role={content.author_role}
-                                    author_image_url={content.author_image_url}
-                                    category_name={content.category_name}
-                                    reading_time={content.reading_time}
-                                />
-
-                                <BlogThumbnail
-                                    title={content.title}
-                                    slug={content.slug}
-                                    posted_on={content.posted_on}
-                                    article_image_url={
-                                        content.article_image_url
-                                    }
-                                    author_name={content.author_name}
-                                    author_role={content.author_role}
-                                    author_image_url={content.author_image_url}
-                                    category_name={content.category_name}
-                                    reading_time={content.reading_time}
-                                />
-
-                                <BlogThumbnail
-                                    title={content.title}
-                                    slug={content.slug}
-                                    posted_on={content.posted_on}
-                                    article_image_url={
-                                        content.article_image_url
-                                    }
-                                    author_name={content.author_name}
-                                    author_role={content.author_role}
-                                    author_image_url={content.author_image_url}
-                                    category_name={content.category_name}
-                                    reading_time={content.reading_time}
-                                />
                             </Row>
                         </Container>
                     </Col>
-                </Row>
-                <Row>
-                    <Col offset={{ md: 1 }} md={5}>
-                        <TextBlock
-                            headingType="h2"
-                            title="Een frisse blik op het internet."
-                        >
-                            Hier zie je artikelen die met passie zijn geschreven
-                            door Bytecode, een jonge en moderne web agency. Wij
-                            laten jou graag zien hoe je de kracht van het
-                            internet kunt gebruiken om alles uit jezelf te
-                            halen. Dit doen we door interessante artikelen te
-                            schrijven, maar ook door deze inzichten in onze
-                            werkzaamheden te verwerken.
-                            <br />
-                            <br />
-                            Wil je meer over ons weten of kunnen we misschien
-                            iets voor je betekenen? Neem gerust een keer contact
-                            met ons op of kom een keer langs op de koffie!
-                        </TextBlock>
-                    </Col>
-                    {/* <Col md={4}>
-                            <figure>
-                                <img
-                                    src="/static/img/content/vision_web.png"
-                                    alt="internet"
-                                />
-                            </figure>
-                        </Col> */}
                 </Row>
             </Container>
         </Posts>
@@ -318,4 +195,4 @@ const BlogSingle = () => (
     </Layout>
 );
 
-export default BlogSingle;
+export default blogArchive;

@@ -6,18 +6,15 @@ import { Container, Row, Col } from '../lib/Grid';
 import ContactForm from '../components/ContactForm';
 import Process from '../components/Process';
 import Thumbnail from '../components/Thumbnail';
-import theme from '../styles/theme';
 import Wrapper from '../components/Wrapper';
- // eslint-disable-line
 
-/* eslint-disable */
 const pageSettings = {
-    title: 'Bytecode Digital Agency B.V. | Vind de weg naar jouw digitale succes!',
-    description: 'Bytecode Digital Agency B.V. | Gespecialiseerd in ✓Websites en Webshops ✓Webapps ✓Cloud ✓Automatisering ✓Mobiele apps ✓API ontwikkeling',
+    title: `Bytecode Digital Agency B.V.`,
+    description: `Bytecode Digital Agency B.V. | 
+    Gespecialiseerd in ✓Websites en Webshops ✓Webapps 
+    ✓Cloud ✓Automatisering ✓Mobiele apps ✓API ontwikkeling`,
     keywords: 'bytecode, digital agency',
 };
-/* eslint-enable */
-/* eslint-disable max-len */
 
 const CenterAlignedRow = styled(Row)`
     align-items: center;
@@ -36,14 +33,16 @@ const GroupImage = styled.img`
 const Home = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="static/img/header/girl.png"
+            img="static/img/header/web.svg"
             subtitle="Welkom bij Bytecode"
             title="De makers van alles wat digitaal los en vast zit"
             href="//bytecode.nl/contact"
             button="Lees verder"
-            bgSize="10%"
-            bgX="80%"
-            bgY="50%"
+            bgSize="70%"
+            text="Ons gepassioneerde team helpt je dolgraag met het
+            analyseren, bedenken en ontwikkelen van alles wat jij
+            nodig hebt om je digitaal volledig te ontplooien.
+            "
         />
         <Container fluid>
             <Row>
@@ -53,14 +52,16 @@ const Home = () => (
                             <Thumbnail
                                 serviceName="Websites, Webshops en Webapps"
                                 serviceIcon="/static/icons/services/mobile.svg"
-                                backgroundImage="/static/img/services/mobile.jpg"
+                                backgroundImage="
+                                /static/img/services/mobile.jpg"
                             />
                         </Col>
                         <Col sm={6}>
                             <Thumbnail
                                 serviceName="Cloud en Automatisering"
                                 serviceIcon="/static/icons/services/cloud.svg"
-                                backgroundImage="/static/img/services/servers.jpg"
+                                backgroundImage="
+                                /static/img/services/servers.jpg"
                             />
                         </Col>
                         <Col sm={6}>
@@ -74,7 +75,8 @@ const Home = () => (
                             <Thumbnail
                                 serviceName="Branding, Design en Marketing"
                                 serviceIcon="/static/icons/services/design.svg"
-                                backgroundImage="/static/img/services/design.jpg"
+                                backgroundImage="
+                                /static/img/services/design.jpg"
                             />
                         </Col>
                     </Row>
@@ -104,7 +106,8 @@ const Home = () => (
                     <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={4}>
                         <TextBlock
                             subtitle="Wie wij zijn"
-                            title="Kennis en kwaliteit met een no-bullshit mentaliteit"
+                            title="
+                            Kennis en kwaliteit met een no-bullshit mentaliteit"
                             href="//bytecode.nl/services"
                             button="Lees verder"
                         >

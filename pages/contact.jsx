@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import ContactForm from '../components/ContactForm';
-import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
+import { Container, Row, Col } from '../lib/Grid';
 import Button from '../components/Button';
 import ContentPageHeader from '../components/ContentPageHeader';
 
-/* eslint-disable */
 const pageSettings = {
-    title: 'Contact - Bytecode Digital Agency | Eerste stap tot digitaal succes!',
-    description: 'Contact, neem contact met ons op door een belletje of door een mailtje te sturen. Langskomen mag altijd, Bytecode staat voor je klaar!',
+    title: `Contact - Bytecode Digital Agency B.V. 
+    | Eerste stap tot digitaal succes!`,
+    description: `Contact, neem contact met ons op door een belletje of door 
+    een mailtje te sturen. Langskomen mag altijd, 
+    Bytecode staat voor je klaar!`,
     keywords: 'contact',
 };
 
@@ -20,21 +22,27 @@ const ContactHeading = styled.h3`
 const Contact = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img = "static/img/header/post-it-full.jpg"
-            subtitle ="Contact"
+            img="static/img/header/scores.jpg"
+            subtitle="Contact"
             title="Een keertje langskomen? Gezellig!"
             href="#"
+            text="Geef ons een belletje of stuur een mailtje
+            en het is zo geregeld.
+            De koffie, thee en koekjes staan al klaar.
+            Bij wijze van spreken, natuurlijk. Koffie en thee moeten warm zijn.
+            Dat weten wij ook wel."
             button="Plan een afspraak"
         />
         <Container fluid>
             <Row>
-                <Col offset={{xl: .5, lg: 0.5}} xl={6.5} lg={5.5} md={12} xs={12}>
-                    {/* <TextBlock
-                        subtitle="We staan voor je klaar"
-                        headingType="h2"
-                        title="Stuur ons een berichtje"
-                    /> */}
-                    <ContactForm simple/>
+                <Col
+                    offset={{ xl: 0.5, lg: 0.5 }}
+                    xl={6.5}
+                    lg={5.5}
+                    md={12}
+                    xs={12}
+                >
+                    <ContactForm simple />
                 </Col>
                 <Col
                     offset={({ xl: 0 }, { lg: 1 })}

@@ -2,23 +2,21 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
-import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
+import { Container, Row, Col } from '../lib/Grid';
 import ContactForm from '../components/ContactForm';
 import ImageBlock from '../components/ImageBlock';
 import Process from '../components/Process';
 import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 
-/* eslint-disable */
 const pageSettings = {
-    title:
-        'Services - Bytecode Digital Agency | Vind de weg naar digitaal succes!',
-    description:
-        'Services, benieuwd wat Bytecode voor jou kan betekenen? Met onze expertise en maatwerk helpen we je om alles uit je digitale zelf te kunnen halen.',
+    title: 'Services - Bytecode Digital Agency B.V.',
+    description: `Services, benieuwd wat Bytecode voor jou kan betekenen? 
+    Met onze expertise en maatwerk helpen we je om alles uit je digitale 
+    zelf te kunnen halen.`,
     keywords: 'diensten',
 };
-/* eslint-enable */
-/* eslint-disable max-len */
+
 const Icon = styled.img`
     max-height: 10rem;
     margin-top: 5em;
@@ -71,12 +69,13 @@ const Service = ({ children, ...props }) => {
 const Services = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="/static/img/header/scores.jpg"
+            img="/static/img/header/post-it-full.jpg"
             subtitle="Services"
-            title="Wij doen alles om het beste uit jou te halen. Wat het ook is"
+            title="Wij doen alles om het beste digitale resultaat te behalen."
+            text="Onze diensten zorgen voor de beste digitale representatie
+            van jouw bedrijf."
             button="read more"
         />
-
         <Process />
 
         {/* WEB EN MOBIEL */}
