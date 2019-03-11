@@ -68,9 +68,13 @@ const Copyright = styled.p`
     color: ${theme.colors.white};
 `;
 
+const FooterContainer = styled(Container)`
+    max-width: 80vw;
+`;
+
 const Footer = () => (
     <footer>
-        <Container>
+        <FooterContainer fluid>
             <Row>
                 <FooterCol>
                     <FooterHeadingContainer>
@@ -123,7 +127,6 @@ const Footer = () => (
                         de broncode van deze website onder AGPL-3.0 licentie
                         vrijgegeven.
                     </FooterText>
-                    {/* eslint-disable-next-line max-len */}
                     <FooterButton
                         href="https://github.com/BytecodeBV/Bytecode-Website"
                         target="_blank"
@@ -172,7 +175,7 @@ const Footer = () => (
                 &copy; {new Date().getFullYear()}
                 &nbsp;Bytecode Digital Agency B.V. - All Rights Reserved
             </Copyright>
-        </Container>
+        </FooterContainer>
     </footer>
 );
 
