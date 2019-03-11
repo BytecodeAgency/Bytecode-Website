@@ -22,7 +22,7 @@ const MainHeader = styled.header`
     @media (min-width: ${theme.breakpoints[3] * 0.75}px) {
         background-color: ${theme.colors.mediumgray};
         background-image: url(${props => props.img});
-        background-size: ${props => props.bgSize || '75%'};
+        background-size: ${props => props.bgSize || '100%'};
         background-repeat: no-repeat;
         background-position-x: ${props => props.bgX || '85%'};
         background-position-y: ${props => props.bgY || 0};
@@ -47,9 +47,9 @@ const MainHeaderContent = styled('Container')`
 
 const ContentPageHeader = props => {
     // eslint-disable-next-line
-    const { img, subtitle, title, button, href, text } = props;
+    const { subtitle, title, button, href, text } = props;
     return (
-        <MainHeader img={img}>
+        <MainHeader {...props}>
             <MainHeaderContent fluid>
                 <Row>
                     <Col offset={{ xl: 1, lg: 0 }} md={10} lg={9} xl={5}>
