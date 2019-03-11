@@ -84,7 +84,12 @@ const Footer = () => (
                             015-2024222
                         </FooterLink>
                         <br />
-                        <AllSocials />
+                        <AllSocials
+                            facebook="https://www.facebook.com/bytecodeagency"
+                            twitter="https://twitter.com/bytecodeagency"
+                            instagram="https://www.instagram.com/bytecodeagency"
+                            linkedin="https://www.linkedin.com/company/bytecodeagency"
+                        />
                     </FooterLinkContainer>
                 </FooterCol>
                 <FooterCol>

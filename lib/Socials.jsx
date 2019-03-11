@@ -100,21 +100,13 @@ export const SocialIcon = ({ url, social }) => (
     </FooterSocialIcon>
 );
 
-const AllSocials = () => (
+// eslint-disable-next-line object-curly-newline
+const AllSocials = ({ facebook, twitter, linkedin, instagram }) => (
     <div>
-        <SocialIcon
-            url="https://www.facebook.com/bytecodeagency"
-            social="facebook"
-        />
-        <SocialIcon url="https://twitter.com/bytecodeagency" social="twitter" />
-        <SocialIcon
-            url="https://www.instagram.com/bytecodeagency"
-            social="instagram"
-        />
-        <SocialIcon
-            url="https://www.linkedin.com/company/bytecodeagency"
-            social="linkedin"
-        />
+        <SocialIcon url={facebook} social="facebook" />
+        <SocialIcon url={twitter} social="twitter" />
+        <SocialIcon url={instagram} social="instagram" />
+        <SocialIcon url={linkedin} social="linkedin" />
     </div>
 );
 

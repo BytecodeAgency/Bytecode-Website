@@ -96,7 +96,7 @@ const TeamMember = props => {
             </TeamMemberPhoto>
             <h4>{name}</h4>
             <p>{title}</p>
-            <AllSocials />
+            <AllSocials {...props} />
         </TeamMemberWrapper>
     );
 };

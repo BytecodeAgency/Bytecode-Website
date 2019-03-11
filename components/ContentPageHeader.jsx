@@ -8,7 +8,7 @@ const MainHeader = styled.header`
     background-color: ${theme.colors.mediumgray};
     background-image: url(${props => props.img});
     background-blend-mode: soft-light;
-    margin-left: 1% !important;
+    margin-left: 1%;
     display: flex;
     position: relative;
     justify-items: bottom;
@@ -33,12 +33,12 @@ const MainHeader = styled.header`
         background-blend-mode: ${props => props.blendMode || 'soft-light'};
     }
     .content {
-        margin-left: none !important;
+        margin-left: none;
     }
 `;
 
 const MainHeaderContent = styled('Container')`
-    margin-left: none !important;
+    margin-left: none;
 
     @media (min-width: ${theme.breakpoints[1]}px) {
         margin-top: 10em;

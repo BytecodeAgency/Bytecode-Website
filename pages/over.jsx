@@ -74,7 +74,7 @@ const Over = () => (
                 >
                     <TextBlock
                         subtitle="Het team"
-                        alt="I'm different!"
+                        alt="Het team"
                         title="Unieke perspectieven door unieke personen"
                         headingType="h2"
                     >
@@ -91,22 +91,13 @@ const Over = () => (
                     xl={2}
                 >
                     <TeamMember
-                        name="Richard van 't Hof"
-                        title="Art-Director &amp; front-end developer"
-                        img="/static/img/team/Richard.png"
-                    />
-                </Col>
-                <Col
-                    offset={({ md: 0 }, { lg: 1 }, { xl: 0.25 })}
-                    sm={6}
-                    md={4}
-                    lg={3}
-                    xl={2}
-                >
-                    <TeamMember
                         name="Jeroen van Steijn"
-                        title="Co-founder & software-consultant"
+                        title="Co-founder & software consultant"
                         img="/static/img/team/Jeroen.png"
+                        facebook="https://www.facebook.com/jjvansteijn"
+                        twitter="https://twitter.com/jjvansteijn"
+                        instagram="https://www.instagram.com/jjvansteijn"
+                        linkedin="https://www.linkedin.com/in/jjvansteijn"
                     />
                 </Col>
                 <Col
@@ -118,24 +109,31 @@ const Over = () => (
                 >
                     <TeamMember
                         name="Luciano Nooijen"
-                        title="Co-founder & software-consultant"
+                        title="Co-founder & software consultant"
                         img="/static/img/team/Luciano.png"
+                        facebook="https://www.facebook.com/lucianonooijen"
+                        twitter="https://twitter.com/lucianonooijen"
+                        instagram="https://www.instagram.com/lucianonooijen"
+                        linkedin="https://www.linkedin.com/in/lucianonooijen"
                     />
                 </Col>
-                {/* <Col
-                    offset={({ md: 0 }, { lg: 1 }, { xl: .25 })}
+                <Col
+                    offset={({ md: 0 }, { lg: 1 }, { xl: 0.25 })}
                     sm={6}
                     md={4}
                     lg={3}
                     xl={2}
                 >
                     <TeamMember
-                        name="Thomas Bodlaender"
-                        title="Sales & copywriting"
-                        img="/static/img/team/thomas.png"
-                        alt="Een foto van Thomas moet nog gemaakt worden."
+                        name="Richard van 't Hof"
+                        title="Designer &amp; front-end developer"
+                        img="/static/img/team/Richard.png"
+                        facebook="https://www.facebook.com/richardvanthof"
+                        twitter="https://twitter.com/richardvanthof"
+                        instagram="https://www.instagram.com/richardvanthof"
+                        linkedin="https://www.linkedin.com/in/richardvanthof"
                     />
-                </Col> */}
+                </Col>
             </Row>
         </Container>
         <Wrapper>
