@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from '../lib/Grid';
+import { Row, Col } from '../lib/Grid';
 import TextBlock from './TextBlock';
 import theme from '../styles/theme';
 
 const MainHeader = styled.header`
-    /* text-shadow: 5px 5px 100px rgba(0, 0, 0, 0.9); */
     background-color: ${theme.colors.mediumgray};
     background-image: url(${props => props.img});
     background-blend-mode: soft-light;
@@ -36,8 +35,6 @@ const MainHeader = styled.header`
     .content {
         margin-left: none !important;
     }
-
-    @keyframes fadeIn;
 `;
 
 const MainHeaderContent = styled('Container')`
@@ -48,25 +45,9 @@ const MainHeaderContent = styled('Container')`
     }
 `;
 
-// eslint-disable-next-line
-const TextBlockContent =
-    'rem ipsum dolor sit amet consectetur adipisicing elit. Asperio';
-
-/* eslint-disable max-len */
 const ContentPageHeader = props => {
     // eslint-disable-next-line
-    const {
-        img,
-        subtitle,
-        title,
-        button,
-        href,
-        blendMode,
-        bgSize,
-        bgX,
-        bgY,
-    } = props;
-    // eslint-disable-next-line
+    const { img, subtitle, title, button, href, text } = props;
     return (
         <MainHeader img={img}>
             <MainHeaderContent fluid>
@@ -78,7 +59,7 @@ const ContentPageHeader = props => {
                             href={href}
                             button={button || ''}
                         >
-                            {TextBlockContent}
+                            {text}
                         </TextBlock>
                     </Col>
                 </Row>
