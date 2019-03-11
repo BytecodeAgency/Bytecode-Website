@@ -37,7 +37,7 @@ const MainHeader = styled.header`
     }
 `;
 
-const MainHeaderContent = styled('Container')`
+const MainHeaderContent = styled.div`
     margin-left: none;
 
     @media (min-width: ${theme.breakpoints[1]}px) {
@@ -50,7 +50,7 @@ const ContentPageHeader = props => {
     const { subtitle, title, button, href, text } = props;
     return (
         <MainHeader {...props}>
-            <MainHeaderContent fluid>
+            <MainHeaderContent fluid={true}>
                 <Row>
                     <Col offset={{ xl: 1, lg: 0 }} md={10} lg={9} xl={5}>
                         <TextBlock

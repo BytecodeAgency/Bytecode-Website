@@ -124,7 +124,7 @@ const Home = () => (
                     <Col offset={{ lg: 1 }} md={12} lg={5}>
                         <GroupImage
                             width="700"
-                            src="/static/img/content/team.png"
+                            src="/static/img/content/team-700.webp"
                             alt="Onze mindset"
                         />
                     </Col>
