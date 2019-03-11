@@ -282,29 +282,26 @@ const BlogSingle = () => (
                     </Col>
                 </Row>
                 <Row>
-
-                        <Col offset={{ md: 1 }} md={5}>
-                            <TextBlock
-                                headingType="h2"
-                                title="Een frisse blik op het internet."
-                            >
-                                Hier zie je artikelen die met passie zijn
-                                geschreven door Bytecode, een jonge en moderne
-                                web agency. Wij laten jou graag zien hoe je de
-                                kracht van het internet kunt gebruiken om alles
-                                uit jezelf te halen. Dit doen we door
-                                interessante artikelen te schrijven, maar ook
-                                door deze inzichten in onze werkzaamheden te
-                                verwerken.
-                                <br />
-                                <br />
-                                Wil je meer over ons weten of kunnen we
-                                misschien iets voor je betekenen? Neem gerust
-                                een keer contact met ons op of kom een keer
-                                langs op de koffie!
-                            </TextBlock>
-                        </Col>
-                        {/* <Col md={4}>
+                    <Col offset={{ md: 1 }} md={5}>
+                        <TextBlock
+                            headingType="h2"
+                            title="Een frisse blik op het internet."
+                        >
+                            Hier zie je artikelen die met passie zijn geschreven
+                            door Bytecode, een jonge en moderne web agency. Wij
+                            laten jou graag zien hoe je de kracht van het
+                            internet kunt gebruiken om alles uit jezelf te
+                            halen. Dit doen we door interessante artikelen te
+                            schrijven, maar ook door deze inzichten in onze
+                            werkzaamheden te verwerken.
+                            <br />
+                            <br />
+                            Wil je meer over ons weten of kunnen we misschien
+                            iets voor je betekenen? Neem gerust een keer contact
+                            met ons op of kom een keer langs op de koffie!
+                        </TextBlock>
+                    </Col>
+                    {/* <Col md={4}>
                             <figure>
                                 <img
                                     src="/static/img/content/vision_web.png"
@@ -312,7 +309,6 @@ const BlogSingle = () => (
                                 />
                             </figure>
                         </Col> */}
-
                 </Row>
             </Container>
         </Posts>
