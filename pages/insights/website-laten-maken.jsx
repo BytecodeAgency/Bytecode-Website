@@ -1,10 +1,10 @@
-/* eslint-disable max-len, react/no-danger */
+/* eslint-disable max-len */
 
 import styled from 'styled-components';
 import Layout from '../../components/Layout';
 import theme from '../../styles/theme';
 import TextBlock from '../../components/TextBlock';
-import { Container, Row, Col } from '../../lib/Grid'; // eslint-disable-line
+import { Container, Row, Col } from '../../lib/Grid';
 import Author from '../../components/Author';
 import ContactForm from '../../components/ContactForm';
 
@@ -246,6 +246,7 @@ const BlogSingle = () => (
             <BlogContentContainer>
                 <BlogContent>
                     <div
+                        // eslint-disable-next-line react/no-danger
                         dangerouslySetInnerHTML={{
                             __html: content.html_content,
                         }}
@@ -255,14 +256,13 @@ const BlogSingle = () => (
             </BlogContentContainer>
         </article>
         <Container>
-            {/* TODO: make a separate component out of this */}
             <ContentBlockWrapper>
                 <TextBlock
                     subtitle="We staan voor je klaar"
                     headingType="h2"
                     title="Heb je een vraag over dit artikel? Of misschien een suggestie voor een volgende post? Laat het ons weten!"
                 />
-                <ContactForm />
+                <ContactForm hideText={true} />
             </ContentBlockWrapper>
         </Container>
     </Layout>

@@ -7,6 +7,7 @@ if (process.env.ENABLE_SQREEN === 'true' && process.env.SQREEN_TOKEN) {
 }
 
 const bodyParser = require('body-parser');
+const compression = require('compression');
 const express = require('express');
 const helmet = require('helmet');
 const next = require('next');
@@ -40,6 +41,7 @@ app.prepare().then(() => {
     const server = express();
     server.use(bodyParser.json());
     server.use(helmet());
+    server.use(compression());
     rootFileRouter(server);
     server.use('/api', apiHandler);
     server.get('/sitemap.xml', (req, res) => sitemapGenerator(req, res));

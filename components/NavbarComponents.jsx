@@ -1,8 +1,3 @@
-/*  eslint-disable
-    jsx-a11y/anchor-is-valid,
-    no-confusing-arrow,
-    react/destructuring-assignment
-*/
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -24,14 +19,16 @@ const NavbarContainer = styled.nav`
         background: ${transparentize(0.3, theme.colors.black)};
     }
     @media (min-width: ${theme.breakpoints[2]}px) {
-        margin: 0 2rem;
+        padding: 1rem 2rem;
     }
     @media (min-width: ${theme.breakpoints[3]}px) {
-        margin: 0 8.5rem;
+        margin: 1rem 8.5rem;
     }
 `;
 
 const InnerNavbarContainer = styled(Container)`
+    margin: 0rem 0 !important;
+    max-width: none !important;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         margin: 0 !important;
     }
@@ -112,10 +109,15 @@ const NavbarItem = styled(NavbarItemBase)`
     }
 `;
 
-const Logo = styled.img`
-    width: 60%;
-    @media (max-width: ${theme.breakpointMobileMenu}) {
-        display: none;
+const Logo = styled.a`
+    @media (min-width: ${theme.breakpointMobileMenu}) {
+        width: 25rem;
+    }
+    img {
+        width: 60%;
+        @media (max-width: ${theme.breakpointMobileMenu}) {
+            display: none;
+        }
     }
 `;
 

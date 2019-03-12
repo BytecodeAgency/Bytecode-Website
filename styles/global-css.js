@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-expressions, function-paren-newline */
+/* eslint-disable no-unused-expressions, function-paren-newline, prettier/prettier, max-len  */
 import { createGlobalStyle } from 'styled-components';
 import { reset, debug } from 'styled-components-style-utils';
 import { setConfiguration } from 'react-grid-system';
@@ -6,7 +6,7 @@ import theme from './theme';
 
 const typographyElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'body'];
 
-const typographyClasses = ['text', 'subtitle', 'button', 'menuitem', 'form'];
+const typographyClasses = ['introduction', 'subtitle', 'button', 'menuitem', 'form'];
 
 const addStylingExceptions = element => {
     switch (element) {
@@ -48,6 +48,7 @@ export const GlobalStyles = createGlobalStyle`
     ${reset()}
     ${enableCssReset ? debug() : ''}
     html { font-size: 62.5%; background: ${theme.colors.background} }
+    @media screen and (min-width: ${theme.breakpoints[3] * 1.4}px) { html { font-size: 80%; } }
     a { color: inherit; }
     img { width: 100%; height: auto; margin:0; padding: 0}
     ${typographyElementStyling}

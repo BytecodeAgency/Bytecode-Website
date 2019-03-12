@@ -9,6 +9,8 @@ const SubtitleBase = ({ className, children }) => (
 const Figure = styled.figure`
     position: relative;
     width: 100%;
+
+    padding-left: 10px;
     margin-bottom: 4rem;
 `;
 
@@ -22,10 +24,6 @@ const H1 = styled.h1`
 
 const H2 = styled.h2`
     margin-bottom: 4rem;
-`;
-
-const Paragraph = styled.p`
-    /*margin: 0.5rem 0;*/
 `;
 
 const H3 = styled.h3`
@@ -96,7 +94,7 @@ const TextBlock = props => {
             {getImage(image, alt)}
             <Subtitle>{subtitle}</Subtitle>
             {getTitle(headingType, title)}
-            <Paragraph>{children}</Paragraph>
+            <p>{children}</p>
             {getButton(href, button, usenextlink)}
         </div>
     );

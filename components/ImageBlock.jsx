@@ -12,6 +12,11 @@ const ImageBlockFigure = styled.figure`
     overflow: hidden;
     @media (max-width: ${theme.breakpoints[0]}px) {
         margin: 0;
+        height: 100vh;
+        img {
+            height: 100vh;
+            width: auto;
+        }
     }
     &:after {
         border: 2px ${theme.colors.primary} solid;
@@ -26,6 +31,14 @@ const ImageBlockFigure = styled.figure`
         margin: 3rem 0rem 3rem 3rem;
     }
 
+    .content {
+        transform: 10s ease;
+        transition: 0.3s ease;
+    }
+    &:hover img {
+        transform: scale(1.05);
+    }
+
     @media (min-width: ${theme.breakpointMobileMenu}) {
         &:after {
             margin: 6rem 0rem 6rem 6rem;
@@ -38,7 +51,7 @@ const ImageBlock = props => {
     return (
         <section>
             <ImageBlockFigure>
-                <img src={src} alt={alt} />
+                <img className="content" src={src} alt={alt} />
             </ImageBlockFigure>
         </section>
     );

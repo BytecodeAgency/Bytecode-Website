@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-filename-extension, no-nested-ternary */
-
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
@@ -22,6 +20,7 @@ export default class Error extends React.Component {
     }
 
     static getInitialProps({ res, err }) {
+        // eslint-disable-next-line no-nested-ternary
         const statusCode = res ? res.statusCode : err ? err.statusCode : null;
         return { statusCode };
     }
@@ -40,6 +39,7 @@ export default class Error extends React.Component {
 
     render() {
         return (
+            // eslint-disable-next-line react/jsx-filename-extension
             <Layout pageSettings={pageSettings}>
                 <Container404>
                     <h1>{this.getErrorContent()}</h1>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Layout from '../../components/Layout';
-import { Container, Row as RowBase } from '../../lib/Grid'; // eslint-disable-line
+import { Container, Row as RowBase } from '../../lib/Grid';
 
 const pageSettings = {
     title: 'Cookie Policy - Bytecode Digital Agency',
@@ -19,8 +19,6 @@ const Row = styled(RowBase)`
         margin-bottom: 6rem;
     }
 `;
-
-/* eslint-disable react/no-unescaped-entities */
 
 const CookiePolicy = () => (
     <Layout pageSettings={pageSettings}>
