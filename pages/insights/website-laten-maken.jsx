@@ -262,7 +262,7 @@ const BlogSingle = () => (
                     headingType="h2"
                     title="Heb je een vraag over dit artikel? Of misschien een suggestie voor een volgende post? Laat het ons weten!"
                 />
-                <ContactForm />
+                <ContactForm hideText={true} />
             </ContentBlockWrapper>
         </Container>
     </Layout>

@@ -32,6 +32,7 @@ const Contact = () => (
             Bij wijze van spreken, natuurlijk. Koffie en thee moeten warm zijn.
             Dat weten wij ook wel."
             button="Plan een afspraak"
+            bgSize="cover"
         />
         <Container fluid>
             <Row>

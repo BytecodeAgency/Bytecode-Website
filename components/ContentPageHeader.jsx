@@ -8,7 +8,6 @@ const MainHeader = styled.header`
     background-color: ${theme.colors.mediumgray};
     background-image: url(${props => props.img});
     background-blend-mode: soft-light;
-    margin-left: 1%;
     display: flex;
     position: relative;
     justify-items: bottom;

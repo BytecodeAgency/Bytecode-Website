@@ -75,6 +75,7 @@ const Services = () => (
             text="Onze diensten zorgen voor de beste digitale representatie
             van jouw bedrijf."
             button="read more"
+            bgSize="cover"
         />
         <Process />
 

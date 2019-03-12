@@ -19,10 +19,10 @@ const NavbarContainer = styled.nav`
         background: ${transparentize(0.3, theme.colors.black)};
     }
     @media (min-width: ${theme.breakpoints[2]}px) {
-        margin: 0 2rem;
+        padding: 1rem 2rem;
     }
     @media (min-width: ${theme.breakpoints[3]}px) {
-        margin: 0 8.5rem;
+        margin: 1rem 8.5rem;
     }
 `;
 

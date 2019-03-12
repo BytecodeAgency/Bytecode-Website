@@ -147,16 +147,26 @@ class ContactForm extends React.Component {
             });
     }
 
+    renderText() {
+        const { hideText } = this.props;
+        if (!hideText) {
+            return (
+                <TextBlock
+                    subtitle="We staan voor je klaar"
+                    headingType="h2"
+                    title="Stuur ons een berichtje"
+                />
+            );
+        }
+        return '';
+    }
+
     render() {
         return (
             <Container fluid>
                 <Row>
                     <Col offset={({ md: 1 }, { lg: 0.75 })} md={12} lg={8}>
-                        <TextBlock
-                            subtitle="We staan voor je klaar"
-                            headingType="h2"
-                            title="Stuur ons een berichtje"
-                        />
+                        {this.renderText()}
                         <ContactFormContainer>
                             {this.getNotifications()}
                             {this.generateInputField('text', 'contact', 'Naam')}
