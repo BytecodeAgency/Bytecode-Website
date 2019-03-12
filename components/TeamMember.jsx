@@ -5,6 +5,7 @@ import AllSocials from '../lib/Socials';
 import { Col } from '../lib/Grid';
 
 const TeamMemberWrapper = styled.div`
+    position: relative;
     padding: 3rem 0rem 3rem 0rem;
     h1,
     h2,
@@ -19,7 +20,7 @@ const TeamMemberWrapper = styled.div`
     & > div {
         opacity: 0;
         transition: 0.5s;
-        transform: translate(1em, 0.5em);
+        transform: translate(0, 0.5em);
     }
     & > p {
         opacity: 1;
@@ -42,7 +43,7 @@ const TeamMemberWrapper = styled.div`
         }
         & > div {
             opacity: 1;
-            transform: translate(1em, -1em);
+            transform: translate(0, -1em);
         }
         & > p {
             opacity: 0;
@@ -61,15 +62,14 @@ const TeamMemberPhoto = styled.figure`
 
     &::before {
         content: '';
-        width: 100%;
-        height: 45%;
+        width: 90%;
+        height: 80%;
         background: ${theme.colors.mediumgray};
         position: absolute;
-        left: 0;
+        left: 5%;
         transform: translate(0, 30%) scale(0.9);
         display: flex;
-        top: 0;
-        z-index: -1;
+        top: -10%;
         transition: 0.3s ease;
     }
     img {
@@ -90,27 +90,29 @@ const getAltText = (name, alt) => {
     return `Een foto van ${name}`;
 };
 
+const TeamMemberName = styled.h4`
+    font-size: 0.9em;
+`;
+
+const TeamMemberContainer = styled(Col)`
+    text-align: center;
+`;
+
 const TeamMember = props => {
     // eslint-disable-next-line
     const { name, title, img, alt } = props;
 
     return (
-        <Col
-            offset={({ md: 0 }, { lg: 1 }, { xl: 1 })}
-            sm={6}
-            md={4}
-            lg={3}
-            xl={2}
-        >
+        <TeamMemberContainer sm={6} md={6} lg={3} xl={3}>
             <TeamMemberWrapper>
                 <TeamMemberPhoto img={img}>
                     <img src={img} alt={getAltText(name, alt)} />
                 </TeamMemberPhoto>
-                <h4>{name}</h4>
+                <TeamMemberName>{name}</TeamMemberName>
                 <p>{title}</p>
                 <AllSocials {...props} />
             </TeamMemberWrapper>
-        </Col>
+        </TeamMemberContainer>
     );
 };
 

@@ -1,0 +1,52 @@
+<!-- Envelope icon source: https://fontawesome.com/icons/envelope?style=regular -->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 58.5 58.5"
+    version="1.1" id="svg3937" sodipodi:docname="email.svg" inkscape:version="0.92.4 5da689c313, 2019-01-14">
+    <metadata id="metadata3941">
+        <rdf:RDF>
+            <cc:Work rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                <dc:title>Facebook</dc:title>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1"
+        objecttolerance="10" gridtolerance="10" guidetolerance="10"
+        inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1608"
+        inkscape:window-height="2018" id="namedview3939" showgrid="false"
+        inkscape:zoom="11.047788" inkscape:cx="9.3329891" inkscape:cy="19.758498"
+        inkscape:window-x="19" inkscape:window-y="79" inkscape:window-maximized="0"
+        inkscape:current-layer="Layer_4" />
+    <defs id="defs3927">
+        <style id="style3925">
+            .cls-1 {
+                fill: #23be87;
+            }
+
+            .cls-2 {
+                fill: none;
+                stroke: #23be87;
+                stroke-miterlimit: 10;
+                stroke-width: 1.5px;
+            }
+
+        </style>
+    </defs>
+    <title id="title3929">Facebook</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_4" data-name="Layer 4">
+            <circle class="cls-2" cx="29.25" cy="29.25" r="28.5" id="circle3933" />
+            <text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:26.65069199px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.66626728"
+                x="21.592564" y="36.260834" id="text3945">
+                <tspan sodipodi:role="line" id="tspan3943" x="21.592564" y="60.490421"
+                    style="stroke-width:0.66626728" /></text>
+            <path inkscape:connector-curvature="0" style="fill:#23be87;fill-opacity:1;stroke-width:0.06763811"
+                d="M 43.318729,16.263481 H 15.181271 c -1.793089,0 -3.246629,1.453541 -3.246629,3.24663 v 19.479778 c 0,1.793083 1.45354,3.24663 3.246629,3.24663 h 28.137458 c 1.793082,0 3.246629,-1.453547 3.246629,-3.24663 V 19.510111 c 0,-1.793089 -1.453547,-3.24663 -3.246629,-3.24663 z m 0,3.24663 v 2.759973 c -1.516586,1.235006 -3.934375,3.155388 -9.103216,7.202785 -1.139091,0.895998 -3.395501,3.04858 -4.965513,3.023487 -1.569745,0.02538 -3.826897,-2.127828 -4.965521,-3.023487 -5.16802,-4.046792 -7.58642,-5.967578 -9.103208,-7.202785 V 19.510111 Z M 15.181271,38.989889 v -12.55377 c 1.549859,1.234466 3.747759,2.966742 7.097806,5.590019 1.478367,1.163716 4.067355,3.732674 6.970923,3.71705 2.889296,0.01562 5.445474,-2.516066 6.970311,-3.71651 3.349982,-2.623205 5.548488,-4.355963 7.098418,-5.590494 v 12.553705 z"
+                id="path2" />
+        </g>
+    </g>
+</svg>

@@ -55,12 +55,12 @@ const Over = () => (
             </Row>
         </Container>
         <ImageBlock
-            src="static/img/content/interior.jpg"
+            src="/static/img/content/interior.jpg"
             alt="A fun day at the office"
         />
         <Container fluid>
             <Row>
-                <Col offset={{ md: 0, lg: 1, xl: 1 }} md={6} lg={6} xl={4}>
+                <Col offset={{ md: 0, lg: 1, xl: 1 }} md={12} lg={5} xl={4}>
                     <TextBlock
                         subtitle="Het team"
                         alt="Het team"
@@ -70,8 +70,6 @@ const Over = () => (
                         {onzeVisie}
                     </TextBlock>
                 </Col>
-            </Row>
-            <Row>
                 <TeamMember
                     name="Jeroen van Steijn"
                     title="Co-founder & software consultant"
@@ -85,14 +83,17 @@ const Over = () => (
                     name="Luciano Nooijen"
                     title="Co-founder & software consultant"
                     img="/static/img/team/luciano.png"
-                    facebook="https://www.facebook.com/lucianonooijen"
+                    email="mailto:luciano@bytecode.nl"
+                    // facebook="https://www.facebook.com/lucianonooijen"
                     twitter="https://twitter.com/lucianonooijen"
-                    instagram="https://www.instagram.com/lucianonooijen"
+                    // instagram="https://www.instagram.com/lucianonooijen"
                     linkedin="https://www.linkedin.com/in/lucianonooijen"
                 />
+            </Row>
+            <Row>
                 <TeamMember
                     name="Julian van Dijk"
-                    title="Full-stack developer"
+                    title="Full-stack developer web/mobiel"
                     img="/static/img/team/julian.png"
                     facebook="https://www.facebook.com/lucianonooijen"
                     twitter="https://twitter.com/lucianonooijen"
@@ -110,7 +111,7 @@ const Over = () => (
                 />
                 <TeamMember
                     name="Thomas Bodlaender"
-                    title="Sales accountmanager"
+                    title="Sales- en accountmanager"
                     img="/static/img/team/thomas.png"
                     facebook="https://www.facebook.com/richardvanthof"
                     twitter="https://twitter.com/richardvanthof"
