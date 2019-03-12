@@ -55,9 +55,9 @@ const TeamMemberWrapper = styled.div`
 const TeamMemberPhoto = styled.figure`
     margin: 1rem;
     overflow: hidden;
-    width: 100%;
-    height: auto;
+    height: 30rem;
     transition: 0.5s;
+    position: relative;
 
     &::before {
         content: '';
@@ -78,6 +78,8 @@ const TeamMemberPhoto = styled.figure`
         font-size: 3em;
         color: ${theme.colors.green} !important;
         min-height: 5em;
+        height: 100%;
+        width: auto;
     }
 `;
 
@@ -101,7 +103,7 @@ const TeamMember = props => {
             xl={2}
         >
             <TeamMemberWrapper>
-                <TeamMemberPhoto>
+                <TeamMemberPhoto img={img}>
                     <img src={img} alt={getAltText(name, alt)} />
                 </TeamMemberPhoto>
                 <h4>{name}</h4>

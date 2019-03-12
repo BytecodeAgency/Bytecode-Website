@@ -91,6 +91,15 @@ const Over = () => (
                     linkedin="https://www.linkedin.com/in/lucianonooijen"
                 />
                 <TeamMember
+                    name="Julian van Dijk"
+                    title="Full-stack developer"
+                    img="/static/img/team/julian.png"
+                    facebook="https://www.facebook.com/lucianonooijen"
+                    twitter="https://twitter.com/lucianonooijen"
+                    instagram="https://www.instagram.com/lucianonooijen"
+                    linkedin="https://www.linkedin.com/in/lucianonooijen"
+                />
+                <TeamMember
                     name="Richard van 't Hof"
                     title="Designer &amp; front-end developer"
                     img="/static/img/team/richard.png"
@@ -100,8 +109,17 @@ const Over = () => (
                     linkedin="https://www.linkedin.com/in/richardvanthof"
                 />
                 <TeamMember
+                    name="Thomas Bodlaender"
+                    title="Sales accountmanager"
+                    img="/static/img/team/thomas.png"
+                    facebook="https://www.facebook.com/richardvanthof"
+                    twitter="https://twitter.com/richardvanthof"
+                    instagram="https://www.instagram.com/richardvanthof"
+                    linkedin="https://www.linkedin.com/in/richardvanthof"
+                />
+                <TeamMember
                     name="Nick Broekarts"
-                    title="Online Marketeer"
+                    title="Online marketeer &amp; SEO specialist"
                     img="/static/img/team/nick.png"
                     facebook="https://www.facebook.com/richardvanthof"
                     twitter="https://twitter.com/richardvanthof"
