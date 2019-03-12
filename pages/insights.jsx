@@ -154,16 +154,16 @@ const blogArchive = () => (
         <ContentPageHeader
             img="/static/img/content/vision_web.png"
             subtitle="Insights"
-            title="Een frisse blik op het internet."
+            title="Een frisse blik op het internet." // TODO: Content
             text="Hier zie je artikelen die met passie zijn geschreven
             door Bytecode, een jonge en moderne web agency. Wij
             laten jou graag zien hoe je de kracht van het
             internet kunt gebruiken om alles uit jezelf te
             halen. Dit doen we door interessante artikelen te
             schrijven, maar ook door deze inzichten in onze
-            werkzaamheden te verwerken."
-            button="read more"
-            bgSize="cover"
+            werkzaamheden te verwerken." // TODO: Content
+            button="read more" // TODO: Remove?
+            bgSize="cover" // TODO: Default?
         />
         <Posts>
             <Container fluid>

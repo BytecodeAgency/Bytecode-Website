@@ -32,9 +32,9 @@ const Over = () => (
         <ContentPageHeader
             img="/static/img/content/team.png"
             subtitle="Over ons"
-            title="Het Bytecode team."
-            text="Hoi, wij zijn het Bytecode team. Aangenaam kennis te maken!"
-            button="read more"
+            title="Het Bytecode team." // TODO: Content
+            text="Hoi, wij zijn het Bytecode team. Aangenaam kennis te maken!" // TODO: Content
+            button="read more" // TODO: Remove?
             bgSize="80%"
         >
             {onzeVisie}

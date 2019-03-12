@@ -35,9 +35,9 @@ const Home = () => (
         <ContentPageHeader
             img="static/img/header/web.svg"
             subtitle="Welkom bij Bytecode"
-            title="De makers van alles wat digitaal los en vast zit"
+            title="Specialisten op het gebied van web en mobiel" // TODO: Content
             href="//bytecode.nl/contact"
-            button="Lees verder"
+            button="Neem contact op"
             bgSize="70%"
             text="Ons gepassioneerde team helpt je dolgraag met het
             analyseren, bedenken en ontwikkelen van alles wat jij

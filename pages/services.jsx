@@ -11,8 +11,8 @@ import Wrapper from '../components/Wrapper';
 
 const pageSettings = {
     title: 'Services - Bytecode Digital Agency B.V.',
-    description: `Services, benieuwd wat Bytecode voor jou kan betekenen? 
-    Met onze expertise en maatwerk helpen we je om alles uit je digitale 
+    description: `Services, benieuwd wat Bytecode voor jou kan betekenen?
+    Met onze expertise en maatwerk helpen we je om alles uit je digitale
     zelf te kunnen halen.`,
     keywords: 'diensten',
 };
@@ -69,12 +69,12 @@ const Service = ({ children, ...props }) => {
 const Services = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="/static/img/header/post-it-full.jpg"
+            img="/static/img/header/post-it-full.jpg" // TODO: Content
             subtitle="Services"
             title="Wij doen alles om het beste digitale resultaat te behalen."
             text="Onze diensten zorgen voor de beste digitale representatie
-            van jouw bedrijf."
-            button="read more"
+            van jouw bedrijf." // TODO: Content
+            button="read more" // TODO: Remove?
             bgSize="cover"
         />
         <Process />
@@ -160,7 +160,7 @@ const Services = () => (
                 </Row>
             </Container>
         </Wrapper>
-        <ImageBlock src="/static/img/content/group-full.jpg" alt="groep" />
+        <ImageBlock src="/static/img/content/group-full.jpg" alt="groep" /> {/* TODO: Content */}
         {/* CLOUD EN AUTOMATISERING */}
         <Container fluid>
             <Row>
@@ -234,7 +234,7 @@ const Services = () => (
                 </Col>
                 <Col md={5}>
                     <ImageBlock
-                        src="/static/img/content/group-full.jpg"
+                        src="/static/img/content/group-full.jpg" // TODO: Content
                         alt="groep"
                     />
                 </Col>
