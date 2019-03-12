@@ -10,8 +10,8 @@ import Wrapper from '../components/Wrapper';
 
 const pageSettings = {
     title: `Bytecode Digital Agency B.V.`,
-    description: `Bytecode Digital Agency B.V. | 
-    Gespecialiseerd in ✓Websites en Webshops ✓Webapps 
+    description: `Bytecode Digital Agency B.V. |
+    Gespecialiseerd in ✓Websites en Webshops ✓Webapps
     ✓Cloud ✓Automatisering ✓Mobiele apps ✓API ontwikkeling`,
     keywords: 'bytecode, digital agency',
 };
@@ -46,7 +46,7 @@ const Home = () => (
         />
         <Container fluid>
             <Row>
-                <Col offset={{ xl: 1 }} md={12} lg={4} xl={4}>
+                <Col offset={{ xl: 1, lg: 1 }} md={12} lg={4} xl={4}>
                     <Row>
                         <Col sm={6}>
                             <Thumbnail
@@ -81,7 +81,7 @@ const Home = () => (
                         </Col>
                     </Row>
                 </Col>
-                <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={4}>
+                <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5} xl={4}>
                     <TextBlock
                         subtitle="Hoe Bytecode kan helpen"
                         title="Samen halen we alles uit jouw digitale zelf"
