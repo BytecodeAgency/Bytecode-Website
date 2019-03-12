@@ -20,7 +20,7 @@ const ProcessStepImage = styled.img`
         width: 50%;
     }
     @media (min-width: ${theme.breakpoints[2]}px) {
-        width: 60%;
+        width: 50%;
     }
     @media (min-width: ${theme.breakpoints[3]}px) {
         margin: 5rem;
@@ -31,7 +31,7 @@ const ProcessStepImage = styled.img`
 const Process = () => (
     <Container fluid>
         <Row>
-            <Step offset={{ xl: 1, lg: 1 }} md={6} lg={3} xl={3}>
+            <Step offset={{ xl: 1, lg: 2 }} md={6} lg={3} xl={3}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/analyze.svg"
                     alt="Analyze"
