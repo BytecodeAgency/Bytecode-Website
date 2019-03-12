@@ -26,11 +26,11 @@ const Icon = styled.span`
     }
 `;
 
-/* eslint-disable react/no-danger */
 export const SocialIcon = ({ url, social }) => {
     if (!url) {
         return '';
     }
+    /* eslint-disable react/no-danger */
     return (
         <FooterSocialIcon href={url}>
             <Icon
@@ -38,16 +38,17 @@ export const SocialIcon = ({ url, social }) => {
             />
         </FooterSocialIcon>
     );
+    /* eslint-enable react/no-danger */
 };
 
 const SocialsContainer = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: ${props => (props.isFooter ? 'left' : 'center')};
 `;
 
 // eslint-disable-next-line object-curly-newline, max-len, prettier/prettier
-const AllSocials = ({ link, email, github, facebook, twitter, linkedin, instagram }) => (
-    <SocialsContainer>
+const AllSocials = ({ isFooter, link, email, github, facebook, twitter, linkedin, instagram }) => (
+    <SocialsContainer isFooter={isFooter}>
         <SocialIcon url={link} social="link" />
         <SocialIcon url={email} social="email" />
         <SocialIcon url={github} social="github" />

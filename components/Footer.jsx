@@ -89,6 +89,7 @@ const Footer = () => (
                         </FooterLink>
                         <br />
                         <AllSocials
+                            isFooter={true}
                             facebook="https://www.facebook.com/bytecodeagency"
                             twitter="https://twitter.com/bytecodeagency"
                             instagram="https://www.instagram.com/bytecodeagency"
