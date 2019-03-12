@@ -46,10 +46,11 @@ const SocialsContainer = styled.div`
 `;
 
 // eslint-disable-next-line object-curly-newline, max-len, prettier/prettier
-const AllSocials = ({ link, email, facebook, twitter, linkedin, instagram }) => (
+const AllSocials = ({ link, email, github, facebook, twitter, linkedin, instagram }) => (
     <SocialsContainer>
         <SocialIcon url={link} social="link" />
         <SocialIcon url={email} social="email" />
+        <SocialIcon url={github} social="github" />
         <SocialIcon url={facebook} social="facebook" />
         <SocialIcon url={twitter} social="twitter" />
         <SocialIcon url={instagram} social="instagram" />
