@@ -5,7 +5,6 @@ import AllSocials from '../lib/Socials';
 import { Col } from '../lib/Grid';
 
 const TeamMemberWrapper = styled.div`
-    position: relative;
     padding: 3rem 0rem 3rem 0rem;
     h1,
     h2,
@@ -17,15 +16,16 @@ const TeamMemberWrapper = styled.div`
         margin: 1em 1em;
     }
     transition: 0.5s;
+    * {
+        transition: 0.5s;
+    }
     & > div {
         opacity: 0;
-        transition: 0.5s;
-        transform: translate(0, 0.5em);
+        transform: translate(0, -3em);
     }
     & > p {
         opacity: 1;
-        transition: 0.5s;
-        height: auto;
+        height: 3em;
         transition-delay: 0.5s;
     }
     &:hover {
@@ -43,11 +43,10 @@ const TeamMemberWrapper = styled.div`
         }
         & > div {
             opacity: 1;
-            transform: translate(0, -1em);
+            transform: translate(0, -4em);
         }
         & > p {
             opacity: 0;
-            height: 0px;
             transition-delay: 0s;
         }
     }

@@ -72,60 +72,53 @@ const Over = () => (
                 </Col>
                 <TeamMember
                     name="Jeroen van Steijn"
-                    title="Co-founder & software consultant"
+                    title="Co-founder &amp; software consultant"
                     img="/static/img/team/jeroen.png"
-                    facebook="https://www.facebook.com/jjvansteijn"
-                    twitter="https://twitter.com/jjvansteijn"
+                    email="mailto:jeroen@bytecode.nl"
+                    github="https://github.com/JeroenVanSteijn"
                     instagram="https://www.instagram.com/jjvansteijn"
                     linkedin="https://www.linkedin.com/in/jjvansteijn"
                 />
                 <TeamMember
                     name="Luciano Nooijen"
-                    title="Co-founder & software consultant"
+                    title="Co-founder &amp; software consultant"
                     img="/static/img/team/luciano.png"
+                    link="https://lucianonooijen.nl"
                     email="mailto:luciano@bytecode.nl"
-                    // facebook="https://www.facebook.com/lucianonooijen"
-                    twitter="https://twitter.com/lucianonooijen"
-                    // instagram="https://www.instagram.com/lucianonooijen"
+                    github="https://github.com/lucianonooijen"
                     linkedin="https://www.linkedin.com/in/lucianonooijen"
                 />
             </Row>
             <Row>
                 <TeamMember
                     name="Julian van Dijk"
-                    title="Full-stack developer web/mobiel"
+                    title="Full-stack developer web &amp; mobiel"
                     img="/static/img/team/julian.png"
-                    facebook="https://www.facebook.com/lucianonooijen"
-                    twitter="https://twitter.com/lucianonooijen"
-                    instagram="https://www.instagram.com/lucianonooijen"
-                    linkedin="https://www.linkedin.com/in/lucianonooijen"
+                    email="mailto:julian@bytecode.nl"
+                    linkedin="https://www.linkedin.com/in/julian-v-66b098116"
                 />
                 <TeamMember
                     name="Richard van 't Hof"
                     title="Designer &amp; front-end developer"
                     img="/static/img/team/richard.png"
-                    facebook="https://www.facebook.com/richardvanthof"
-                    twitter="https://twitter.com/richardvanthof"
-                    instagram="https://www.instagram.com/richardvanthof"
-                    linkedin="https://www.linkedin.com/in/richardvanthof"
+                    email="mailto:richard@bytecode.nl"
+                    linkedin="https://www.linkedin.com/in/richard-van-t-hof"
                 />
                 <TeamMember
                     name="Thomas Bodlaender"
-                    title="Sales- en accountmanager"
+                    title="Sales- &amp; accountmanager"
                     img="/static/img/team/thomas.png"
-                    facebook="https://www.facebook.com/richardvanthof"
-                    twitter="https://twitter.com/richardvanthof"
-                    instagram="https://www.instagram.com/richardvanthof"
-                    linkedin="https://www.linkedin.com/in/richardvanthof"
+                    email="mailto:thomas@bytecode.nl"
+                    instagram="https://www.instagram.com/thomasbodje"
+                    linkedin="https://www.linkedin.com/in/thomasbodlaender"
                 />
                 <TeamMember
                     name="Nick Broekarts"
                     title="Online marketeer &amp; SEO specialist"
                     img="/static/img/team/nick.png"
-                    facebook="https://www.facebook.com/richardvanthof"
-                    twitter="https://twitter.com/richardvanthof"
-                    instagram="https://www.instagram.com/richardvanthof"
-                    linkedin="https://www.linkedin.com/in/richardvanthof"
+                    email="mailto:nick@bytecode.nl"
+                    instagram="instagram.com/nickbroekarts"
+                    linkedin="https://www.linkedin.com/in/nickbroekarts"
                 />
             </Row>
         </Container>
