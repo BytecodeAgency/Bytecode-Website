@@ -9,7 +9,7 @@ import ContactForm from '../components/ContactForm';
 import Wrapper from '../components/Wrapper';
 
 const pageSettings = {
-    title: `Over ons - Bytecode Digital Agency | 
+    title: `Over ons - Bytecode Digital Agency |
         Wie zijn de drijvende krachten achter Bytecode?`,
     description: `Over ons. Wie of wat is Bytecode? Wat is onze missie
      en hoe willen wij die bereiken? Kom meer te weten of het Bytecode-team!`,
@@ -41,15 +41,9 @@ const Over = () => (
         </ContentPageHeader>
         <Container fluid>
             <Row>
-                <Col
-                    offset={({ md: 0 }, { lg: 1 }, { xl: 2 })}
-                    md={6}
-                    lg={5}
-                    xl={3}
-                >
+                <Col offset={{ md: 0, lg: 1, xl: 2 }} md={6} lg={5} xl={3}>
                     <TextBlock
                         subtitle="Onze Visie"
-                        alt="I'm different!"
                         title="De titel maar dan een hele erge fucking lange
                             titel waar geen einde aan lijkt te komen"
                         headingType="h2"
@@ -66,12 +60,7 @@ const Over = () => (
         />
         <Container fluid>
             <Row>
-                <Col
-                    offset={({ md: 0 }, { lg: 0 }, { xl: 1 })}
-                    md={6}
-                    lg={6}
-                    xl={4}
-                >
+                <Col offset={{ md: 0, lg: 1, xl: 1 }} md={6} lg={6} xl={4}>
                     <TextBlock
                         subtitle="Het team"
                         alt="Het team"
@@ -83,57 +72,42 @@ const Over = () => (
                 </Col>
             </Row>
             <Row>
-                <Col
-                    offset={({ md: 0 }, { lg: 1 }, { xl: 1 })}
-                    sm={6}
-                    md={4}
-                    lg={3}
-                    xl={2}
-                >
-                    <TeamMember
-                        name="Jeroen van Steijn"
-                        title="Co-founder & software consultant"
-                        img="/static/img/team/Jeroen.png"
-                        facebook="https://www.facebook.com/jjvansteijn"
-                        twitter="https://twitter.com/jjvansteijn"
-                        instagram="https://www.instagram.com/jjvansteijn"
-                        linkedin="https://www.linkedin.com/in/jjvansteijn"
-                    />
-                </Col>
-                <Col
-                    offset={({ md: 0 }, { lg: 1 }, { xl: 0.25 })}
-                    sm={6}
-                    md={4}
-                    lg={3}
-                    xl={2}
-                >
-                    <TeamMember
-                        name="Luciano Nooijen"
-                        title="Co-founder & software consultant"
-                        img="/static/img/team/Luciano.png"
-                        facebook="https://www.facebook.com/lucianonooijen"
-                        twitter="https://twitter.com/lucianonooijen"
-                        instagram="https://www.instagram.com/lucianonooijen"
-                        linkedin="https://www.linkedin.com/in/lucianonooijen"
-                    />
-                </Col>
-                <Col
-                    offset={({ md: 0 }, { lg: 1 }, { xl: 0.25 })}
-                    sm={6}
-                    md={4}
-                    lg={3}
-                    xl={2}
-                >
-                    <TeamMember
-                        name="Richard van 't Hof"
-                        title="Designer &amp; front-end developer"
-                        img="/static/img/team/Richard.png"
-                        facebook="https://www.facebook.com/richardvanthof"
-                        twitter="https://twitter.com/richardvanthof"
-                        instagram="https://www.instagram.com/richardvanthof"
-                        linkedin="https://www.linkedin.com/in/richardvanthof"
-                    />
-                </Col>
+                <TeamMember
+                    name="Jeroen van Steijn"
+                    title="Co-founder & software consultant"
+                    img="/static/img/team/jeroen.png"
+                    facebook="https://www.facebook.com/jjvansteijn"
+                    twitter="https://twitter.com/jjvansteijn"
+                    instagram="https://www.instagram.com/jjvansteijn"
+                    linkedin="https://www.linkedin.com/in/jjvansteijn"
+                />
+                <TeamMember
+                    name="Luciano Nooijen"
+                    title="Co-founder & software consultant"
+                    img="/static/img/team/luciano.png"
+                    facebook="https://www.facebook.com/lucianonooijen"
+                    twitter="https://twitter.com/lucianonooijen"
+                    instagram="https://www.instagram.com/lucianonooijen"
+                    linkedin="https://www.linkedin.com/in/lucianonooijen"
+                />
+                <TeamMember
+                    name="Richard van 't Hof"
+                    title="Designer &amp; front-end developer"
+                    img="/static/img/team/richard.png"
+                    facebook="https://www.facebook.com/richardvanthof"
+                    twitter="https://twitter.com/richardvanthof"
+                    instagram="https://www.instagram.com/richardvanthof"
+                    linkedin="https://www.linkedin.com/in/richardvanthof"
+                />
+                <TeamMember
+                    name="Nick Broekarts"
+                    title="Online Marketeer"
+                    img="/static/img/team/nick.png"
+                    facebook="https://www.facebook.com/richardvanthof"
+                    twitter="https://twitter.com/richardvanthof"
+                    instagram="https://www.instagram.com/richardvanthof"
+                    linkedin="https://www.linkedin.com/in/richardvanthof"
+                />
             </Row>
         </Container>
         <Wrapper>
