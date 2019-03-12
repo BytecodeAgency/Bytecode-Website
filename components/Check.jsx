@@ -27,7 +27,7 @@ const CheckItem = () => (
                 <Icon>
                     <img src="/static/icons/ui/check.svg" alt="Done!" />
                 </Icon>
-                <Label>
+                <Label> {/* TODO: Remove this, maybe delete file? */}
                     Lorem Ipsum is simply dummy tex Lorem Ipsum is simply dummy
                     tex.
                 </Label>

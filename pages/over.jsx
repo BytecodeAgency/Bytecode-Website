@@ -16,6 +16,7 @@ const pageSettings = {
     keywords: 'over ons',
 };
 
+// TODO: Remove this, content (next line)
 const onzeVisie = `Lorem ipsum dolor sit
 amet consectetur adipisicing elit.Asperiores
 itaque inventore sequi tempora amet dolore
