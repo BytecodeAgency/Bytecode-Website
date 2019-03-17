@@ -35,14 +35,16 @@ const Home = () => (
         <ContentPageHeader
             img="static/img/header/web.svg"
             subtitle="Welkom bij Bytecode"
-            title="Specialisten op het gebied van web en mobiel" // TODO: Content
-            href="//bytecode.nl/contact"
+            title="Specialisten in maatwerk voor web en mobiel"
+            href="/contact"
+            usenextlink={true}
             button="Neem contact op"
             bgSize="70%"
-            text="Ons gepassioneerde team helpt je dolgraag met het
-            analyseren, bedenken en ontwikkelen van alles wat jij
-            nodig hebt om je digitaal volledig te ontplooien.
-            "
+            text="Bytecode Digital Agency is een kleinschalig full-service
+            webbureau gespecialiseerd in maatwerkontwikkeling voor web en
+            mobiel. Ons team help je dolgraag met het analyseren, bedenken en
+            ontwikkelen van alles wat je nodig hebt om je digitaal volledig te
+            ontplooien."
         />
         <Container fluid>
             <Row>
@@ -85,8 +87,9 @@ const Home = () => (
                     <TextBlock
                         subtitle="Hoe Bytecode kan helpen"
                         title="Samen halen we alles uit jouw digitale zelf"
-                        href="//bytecode.nl/services"
-                        button="Lees verder"
+                        href="/services"
+                        usenextlink={true}
+                        button="Meer over onze diensten"
                         headingType="h2"
                     >
                         Wij maken uitgebreide analyses en strategieën van alles
@@ -108,8 +111,9 @@ const Home = () => (
                             subtitle="Wie wij zijn"
                             title="
                             Kennis en kwaliteit met een no-bullshit mentaliteit"
-                            href="//bytecode.nl/services"
-                            button="Lees verder"
+                            href="/over"
+                            usenextlink={true}
+                            button="Meer over ons team"
                         >
                             Wij staan voor een eerlijke en open samenwerking. We
                             werken met elkaar, niet langs elkaar. Ons zul je
