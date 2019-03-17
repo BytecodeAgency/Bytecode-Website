@@ -10,7 +10,7 @@ const MainHeader = styled.header`
     background-blend-mode: soft-light;
     display: flex;
     position: relative;
-    justify-items: bottom;
+    align-items: flex-end;
     background-size: cover;
     background-blend-mode: soft-light;
     animation: fadeIn 2s;
@@ -25,10 +25,7 @@ const MainHeader = styled.header`
         background-repeat: no-repeat;
         background-position-x: ${props => props.bgX || '85%'};
         background-position-y: ${props => props.bgY || 0};
-        height: 80vh;
-        & > div {
-            transform: translateY(5em);
-        }
+        min-height: 80vh;
         background-blend-mode: ${props => props.blendMode || 'soft-light'};
     }
     .content {
