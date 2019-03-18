@@ -85,10 +85,10 @@ const Home = () => (
                 </Col>
                 <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5} xl={4}>
                     <TextBlock
+                        usenextlink
                         subtitle="Hoe Bytecode kan helpen"
                         title="Samen halen we alles uit jouw digitale zelf"
                         href="/services"
-                        usenextlink={true}
                         button="Meer over onze diensten"
                         headingType="h2"
                     >
@@ -108,11 +108,11 @@ const Home = () => (
                 <CenterAlignedRow>
                     <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={4}>
                         <TextBlock
+                            usenextlink
                             subtitle="Wie wij zijn"
                             title="
                             Kennis en kwaliteit met een no-bullshit mentaliteit"
                             href="/over"
-                            usenextlink={true}
                             button="Meer over ons team"
                         >
                             Wij staan voor een eerlijke en open samenwerking. We
