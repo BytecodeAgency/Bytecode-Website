@@ -7,6 +7,9 @@ import theme from '../styles/theme';
 
 const FooterColInnerContainer = styled.div`
     margin-bottom: 2rem;
+    @media (max-width: ${theme.breakpoints[1]}px) {
+        margin: 3.5em 2rem;
+    }
 `;
 
 const FooterCol = ({ props, children }) => (
@@ -21,7 +24,7 @@ const FooterIcon = styled.img`
 `;
 
 const FooterLogo = styled(FooterIcon)`
-    margin-left: -3.1rem;
+    transform: translateX(-3rem);
 `;
 
 const OpenSourceIcon = styled(FooterIcon)`
@@ -65,9 +68,13 @@ const Copyright = styled.p`
     color: ${theme.colors.white};
 `;
 
+const FooterContainer = styled(Container)`
+    max-width: 80vw;
+`;
+
 const Footer = () => (
     <footer>
-        <Container>
+        <FooterContainer fluid>
             <Row>
                 <FooterCol>
                     <FooterHeadingContainer>
@@ -81,7 +88,14 @@ const Footer = () => (
                             015-2024222
                         </FooterLink>
                         <br />
-                        <AllSocials />
+                        <AllSocials
+                            isFooter={true}
+                            facebook="https://www.facebook.com/bytecodeagency"
+                            twitter="https://twitter.com/bytecodeagency"
+                            instagram="https://www.instagram.com/bytecodeagency"
+                            linkedin="
+                            https://www.linkedin.com/company/bytecodeagency"
+                        />
                     </FooterLinkContainer>
                 </FooterCol>
                 <FooterCol>
@@ -114,7 +128,6 @@ const Footer = () => (
                         de broncode van deze website onder AGPL-3.0 licentie
                         vrijgegeven.
                     </FooterText>
-                    {/* eslint-disable-next-line max-len */}
                     <FooterButton
                         href="https://github.com/BytecodeBV/Bytecode-Website"
                         target="_blank"
@@ -163,7 +176,7 @@ const Footer = () => (
                 &copy; {new Date().getFullYear()}
                 &nbsp;Bytecode Digital Agency B.V. - All Rights Reserved
             </Copyright>
-        </Container>
+        </FooterContainer>
     </footer>
 );
 

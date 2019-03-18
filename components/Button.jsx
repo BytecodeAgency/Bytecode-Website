@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -10,7 +8,6 @@ const ButtonBase = ({ className, children, ...props }) => {
     if (usenextlink) {
         return (
             <Link href={href}>
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid  */}
                 <a className={`button ${className}`} {...props}>
                     {children}
                 </a>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Layout from '../../components/Layout';
-import { Container, Row as RowBase } from '../../lib/Grid'; // eslint-disable-line
+import { Container, Row as RowBase } from '../../lib/Grid';
 
 const pageSettings = {
     title: 'Cookie Policy - Bytecode Digital Agency',
@@ -28,7 +28,6 @@ const Row = styled(RowBase)`
     }
 `;
 
-/* eslint-disable react/no-unescaped-entities */
 const PrivacyPolicy = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
@@ -285,7 +284,7 @@ const PrivacyPolicy = () => (
             <Row>
                 <h2>Contact</h2>
                 <p>
-                    Mocht u vragen hebben over dit Cookiebeleid, dan
+                    Mocht u vragen hebben over dit Privacybeleid, dan
                     beantwoorden we deze graag. U kunt contact met ons opnemen
                     door een e-mail te sturen naar&nbsp;
                     <a href="mailto:support@bytecode.nl">support@bytecode.nl</a>

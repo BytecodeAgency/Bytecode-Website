@@ -1,53 +1,67 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from '../lib/Grid';
+import { Row, Col } from '../lib/Grid';
 import TextBlock from './TextBlock';
 import theme from '../styles/theme';
 
 const MainHeader = styled.header`
     background-color: ${theme.colors.mediumgray};
-    background-image: url('/static/img/content/group.jpg');
-    background-blend-mode: luminosity;
-    background-size: cover;
-    margin-left: 1%;
-    height: 80vh;
+    background-image: url(${props => props.img});
+    background-blend-mode: soft-light;
     display: flex;
     position: relative;
-    justify-items: center;
+    align-items: flex-end;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    animation: fadeIn 2s;
+    padding: 3em 1em;
+    @media (min-width: ${theme.breakpoints[2]}px) {
+        padding: 3em 3em;
+    }
+    @media (min-width: ${theme.breakpoints[3] * 0.75}px) {
+        background-color: ${theme.colors.mediumgray};
+        background-image: url(${props => props.img});
+        background-size: ${props => props.bgSize || 'cover'};
+        background-repeat: no-repeat;
+        background-position-x: ${props => props.bgX || '85%'};
+        background-position-y: ${props => props.bgY || 0};
+        min-height: 80vh;
+        background-blend-mode: ${props => props.blendMode || 'soft-light'};
+    }
+    .content {
+        margin-left: none;
+    }
 `;
 
-const ContentPageHeaderContainer = styled(Container)`
-    display: flex;
-    align-items: center;
-    max-width: 100vw;
+const MainHeaderContent = styled.div`
+    margin: 4em 0 4em;
+
+    @media (min-width: ${theme.breakpoints[2]}px) {
+        margin-bottom: 8em;
+    }
 `;
 
-const ContentPageHeaderRow = styled(Row)`
-    flex-shrink: 1 !important;
-`;
-
-// eslint-disable-next-line
-const TextBlockContent =
-    'rem ipsum dolor sit amet consectetur adipisicing elit. Asperio';
-
-const ContentPageHeader = () => (
-    <MainHeader>
-        <ContentPageHeaderContainer>
-            <ContentPageHeaderRow>
-                <Col md={6}>
-                    <TextBlock
-                        subtitle="De subtitel komt hier"
-                        title="De titel maar dan een hele erge fucking lange
-                        titel waar geen einde aan lijkt te komen"
-                        href="//bytecode.nl"
-                        button="more"
-                    >
-                        {TextBlockContent}
-                    </TextBlock>
-                </Col>
-            </ContentPageHeaderRow>
-        </ContentPageHeaderContainer>
-    </MainHeader>
-);
+const ContentPageHeader = props => {
+    // eslint-disable-next-line
+    const { subtitle, title, button, href, text } = props;
+    return (
+        <MainHeader {...props}>
+            <MainHeaderContent fluid={true}>
+                <Row>
+                    <Col offset={{ xl: 1, lg: 0 }} md={10} lg={9} xl={5}>
+                        <TextBlock
+                            subtitle={subtitle || ''}
+                            title={title || ''}
+                            href={href}
+                            button={button || ''}
+                        >
+                            {text}
+                        </TextBlock>
+                    </Col>
+                </Row>
+            </MainHeaderContent>
+        </MainHeader>
+    );
+};
 
 export default ContentPageHeader;

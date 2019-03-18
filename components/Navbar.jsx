@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid, no-confusing-arrow */
 
 import React from 'react';
+import Link from 'next/link';
 import NavbarComponents from './NavbarComponents';
 
 const {
@@ -39,7 +40,14 @@ class Navbar extends React.Component {
         return (
             <NavbarContainer>
                 <InnerNavbarContainer>
-                    <MobileNavLogo src="/static/img/logo-min.svg" />
+                    <Link prefetch href="/">
+                        <a>
+                            <MobileNavLogo
+                                src="/static/img/logo-min.svg"
+                                alt="Logo"
+                            />
+                        </a>
+                    </Link>
                     <BlackOverlay
                         menuIsOpen={menuIsOpen}
                         onClick={this.closeMenu}
@@ -52,8 +60,14 @@ class Navbar extends React.Component {
                         />
                     </MenuButton>
                     <NavbarContent menuIsOpen={menuIsOpen}>
-                        {/* TODO: Link Logo to homepage */}
-                        <Logo src="/static/img/logo.svg" alt="Bytecode logo" />
+                        <Link prefetch href="/">
+                            <Logo>
+                                <img
+                                    src="/static/img/logo.svg"
+                                    alt="Bytecode logo"
+                                />
+                            </Logo>
+                        </Link>
                         <NavbarItems>
                             <CloseMenuButton href="#" onClick={this.closeMenu}>
                                 <img
@@ -65,8 +79,7 @@ class Navbar extends React.Component {
                             <NavbarItem href="/" text="Home" />
                             <NavbarItem href="/services" text="Services" />
                             <NavbarItem href="/insights" text="Insights" />
-                            {/* <NavbarItem href="/over" text="Over" /> */}
-                            {/* <NavbarItem href="/cases" text="Cases" /> */}
+                            <NavbarItem href="/over" text="Over" />
                             <NavbarItem href="/contact" text="Contact" />
                         </NavbarItems>
                     </NavbarContent>

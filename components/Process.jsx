@@ -1,42 +1,55 @@
 import styled from 'styled-components';
+import { Container } from 'react-grid-system';
 import theme from '../styles/theme';
 import TextBlock from './TextBlock';
-import { Row, Col } from '../lib/Grid'; // eslint-disable-line
+import { Row, Col } from '../lib/Grid';
 
-const ContentBlockWrapper = styled.section`
-    background-color: ${theme.colors.mediumgray};
-    margin: 5% 0% 5% 5%;
-    padding: 7.5% 5%;
-    position: relative;
-    z-index: 100;
+const Step = styled(Col)`
+    margin: 3em 0;
 `;
 
 const ProcessStepImage = styled.img`
-    height: 60rem;
-    max-height: 30vh;
-    margin-bottom: 5rem;
-    @media (max-width: ${theme.breakpoints[2]}px) {
-        margin-top: 10rem;
+    margin: 1;
+    margin-left: 3rem;
+    width: 50%;
+    text-align: center;
+    @media (min-width: ${theme.breakpoints[0]}px) {
+        margin-bottom: 4em;
+    }
+    @media (min-width: ${theme.breakpoints[1]}px) {
+        width: 50%;
+    }
+    @media (min-width: ${theme.breakpoints[2]}px) {
+        width: 50%;
+    }
+    @media (min-width: ${theme.breakpoints[3]}px) {
+        margin: 5rem;
+        width: 50%;
     }
 `;
 
 const Process = () => (
-    <ContentBlockWrapper>
+    <Container fluid>
         <Row>
-            <Col md={4} lg={3}>
+            <Step offset={{ xl: 1, lg: 2 }} md={6} lg={3} xl={3}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/analyze.svg"
                     alt="Analyze"
                 />
-                <TextBlock subtitle="Stap 1" headingType="h2" title="Analyze">
+                <TextBlock
+                    className="padded"
+                    subtitle="Stap 1"
+                    headingType="h2"
+                    title="Analyze"
+                >
                     Voordat we starten met ontwikkelen, maken we eerst een
                     gedetailleerde analyse. Dit stelt ons in staat om een helder
                     en volledig overzicht te krijgen van de huidige situatie.
                     Hierdoor kunnen wij de pijnpunten in beeld brengen en
                     analyseren welke punten het meeste prioriteit hebben.
                 </TextBlock>
-            </Col>
-            <Col offset={{ lg: 1 }} md={4} lg={3}>
+            </Step>
+            <Step offset={{ xl: 0.5, lg: 2 }} md={6} lg={3} xl={3}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/strategize.svg"
                     alt="Strategize"
@@ -53,8 +66,8 @@ const Process = () => (
                     best haalbare resultaat met het oog op de toekomst gaan
                     halen.
                 </TextBlock>
-            </Col>
-            <Col offset={{ lg: 1 }} md={4} lg={3}>
+            </Step>
+            <Step offset={{ xl: 0.5, lg: 2 }} md={6} lg={3} xl={3}>
                 <ProcessStepImage
                     src="/static/img/content/workflow/realize.svg"
                     alt="Realize"
@@ -67,9 +80,9 @@ const Process = () => (
                     resultaat te analyzeren en om te kijken hoe het nóg beter
                     kan. We blijven dus verbeteren en doorontwikkelen.
                 </TextBlock>
-            </Col>
+            </Step>
         </Row>
-    </ContentBlockWrapper>
+    </Container>
 );
 
 export default Process;

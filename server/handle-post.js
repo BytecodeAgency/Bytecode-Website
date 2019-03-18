@@ -44,7 +44,7 @@ const makeRequestToWebhook = async (webhookUrl, payload) => {
 
 const validateDataAndSendMessage = async (req, res) => {
     const { contact, email, phone, contents } = req.body; // eslint-disable-line
-    if (validateHandlePost(contact, email, phone, contents, res) === false) {
+    if (!validateHandlePost(contact, email, phone, contents, res)) {
         return;
     }
 

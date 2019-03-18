@@ -8,6 +8,8 @@ import TextBlock from '../components/TextBlock';
 import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
 import Author from '../components/Author';
 import ContactForm from '../components/ContactForm';
+import ContentPageHeader from '../components/ContentPageHeader';
+import Wrapper from '../components/Wrapper';
 
 /* eslint-disable */
 const pageSettings = {
@@ -20,7 +22,7 @@ const pageSettings = {
 /* eslint-disable max-len, object-curly-newline, camelcase */
 
 const Posts = styled.section`
-    margin: 12rem 0 6rem;
+    margin: 0;
 `;
 
 const BlogThumbnailContentWrapper = styled.a`
@@ -33,23 +35,17 @@ const BlogThumbnailContentWrapper = styled.a`
 const BlogThumbnailImage = styled.div`
     background-image: url(${props => props.url});
     width: 100%;
-    height: 18rem;
+    height: 25rem;
     background-size: cover;
     background-position: center center;
     margin: 0 0 1.6rem;
     @media screen and (max-width: ${theme.breakpoints[1]}) {
-        height: 12rem;
+        height: 25rem;
     }
 `;
 
 const AuthorContainer = styled.div`
     margin: 2rem 0;
-`;
-
-const ContentBlockWrapper = styled.div`
-    background-color: ${theme.colors.mediumgray};
-    margin: 5% 0 5% 0;
-    padding: 7.5% 5%;
 `;
 
 const content = {
@@ -131,15 +127,12 @@ const BlogThumbnail = props => {
         reading_time,
     } = props;
     return (
-        <Col xl={3} lg={4}>
+        <Col xl={4} lg={4}>
             <Link href={`insights/${slug}`}>
                 <BlogThumbnailContentWrapper>
                     <BlogThumbnailImage url={article_image_url} />
-                    <TextBlock
-                        title={title}
-                        subtitle={category_name}
-                        headingType="h4"
-                    />
+                    <h6 className="subtitle">{category_name}</h6>
+                    <h3>{title}</h3>
                     <AuthorContainer>
                         <Author
                             name={author_name}
@@ -156,51 +149,49 @@ const BlogThumbnail = props => {
     );
 };
 
-const BlogSingle = () => (
+const blogArchive = () => (
     <Layout pageSettings={pageSettings}>
+        <ContentPageHeader
+            img="/static/img/content/vision_web.png"
+            subtitle="Insights"
+            title="Een frisse blik op het internet."
+            text="Hier zie je artikelen die met passie zijn geschreven
+            door Bytecode, een jonge en moderne web agency. Wij
+            laten jou graag zien hoe je de kracht van het
+            internet kunt gebruiken om alles uit jezelf te
+            halen. Dit doen we door interessante artikelen te
+            schrijven, maar ook door deze inzichten in onze
+            werkzaamheden te verwerken."
+        />
         <Posts>
-            <Container>
+            <Container fluid>
                 <Row>
-                    <BlogThumbnail
-                        title={content.title}
-                        slug={content.slug}
-                        posted_on={content.posted_on}
-                        article_image_url={content.article_image_url}
-                        author_name={content.author_name}
-                        author_role={content.author_role}
-                        author_image_url={content.author_image_url}
-                        category_name={content.category_name}
-                        reading_time={content.reading_time}
-                    />
+                    <Col offset={{ md: 1 }} md={10}>
+                        <Container fluid>
+                            <Row>
+                                <BlogThumbnail
+                                    title={content.title}
+                                    slug={content.slug}
+                                    posted_on={content.posted_on}
+                                    article_image_url={
+                                        content.article_image_url
+                                    }
+                                    author_name={content.author_name}
+                                    author_role={content.author_role}
+                                    author_image_url={content.author_image_url}
+                                    category_name={content.category_name}
+                                    reading_time={content.reading_time}
+                                />
+                            </Row>
+                        </Container>
+                    </Col>
                 </Row>
             </Container>
         </Posts>
-        <ContentBlockWrapper>
-            <Row>
-                <Col md={5}>
-                    <TextBlock
-                        headingType="h2"
-                        title="Een frisse blik op het internet."
-                    >
-                        Hier zie je artikelen die met passie zijn geschreven
-                        door Bytecode, een jonge en moderne web agency. Wij
-                        laten jou graag zien hoe je de kracht van het internet
-                        kunt gebruiken om alles uit jezelf te halen. Dit doen we
-                        door interessante artikelen te schrijven, maar ook door
-                        deze inzichten in onze werkzaamheden te verwerken.
-                        <br />
-                        <br />
-                        Wil je meer over ons weten of kunnen we misschien iets
-                        voor je betekenen? Neem gerust een keer contact met ons
-                        op of kom een keer langs op de koffie!
-                    </TextBlock>
-                </Col>
-                <Col offset={{ md: 1 }} md={6}>
-                    <ContactForm />
-                </Col>
-            </Row>
-        </ContentBlockWrapper>
+        <Wrapper>
+            <ContactForm />
+        </Wrapper>
     </Layout>
 );
 
-export default BlogSingle;
+export default blogArchive;

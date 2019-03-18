@@ -1,100 +1,48 @@
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import ContactForm from '../components/ContactForm';
-import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
-import theme from '../styles/theme';
-import TextBlock from '../components/TextBlock';
+import { Container, Row, Col } from '../lib/Grid';
 import Button from '../components/Button';
+import ContentPageHeader from '../components/ContentPageHeader';
 
-/* eslint-disable */
 const pageSettings = {
-    title: 'Contact - Bytecode Digital Agency | Eerste stap tot digitaal succes!',
-    description: 'Contact, neem contact met ons op door een belletje of door een mailtje te sturen. Langskomen mag altijd, Bytecode staat voor je klaar!',
+    title: `Contact - Bytecode Digital Agency B.V.
+    | Eerste stap tot digitaal succes!`,
+    description: `Contact, neem contact met ons op door een belletje of door
+    een mailtje te sturen. Langskomen mag altijd,
+    Bytecode staat voor je klaar!`,
     keywords: 'contact',
 };
-/* eslint-enable */
-
-const HeaderContainer = styled.section`
-    background-color: ${theme.colors.mediumgray};
-    background-image: url('static/img/header/post-it.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: overlay;
-    margin: 0% 0% 5% 5%;
-    padding: 20vh 2% 20vh 5%;
-`;
-
-const AbsoluteCol = styled(Col)`
-    top: 0px;
-    right: 0px;
-    max-width: none;
-    position: absolute;
-`;
-
-const HeaderFigure = styled.figure`
-    position: absolute;
-    right: 10vw;
-    top: 0rem;
-    opacity: 0.2;
-    width: 60%;
-    height: 100%;
-`;
-
-const HeaderImage = styled.img`
-    position: relative;
-    right: -10rem;
-    top: -75rem;
-    overflow: hidden;
-    width: 100%
-    height: 100%;
-`;
 
 const ContactHeading = styled.h3`
-    margin: 1.5em 0;
+    margin: 3em 0 2em;
     line-height: 1.4em;
-`;
-
-const PaddedRow = styled(Row)`
-    padding: 5% 0 10% 0;
 `;
 
 const Contact = () => (
     <Layout pageSettings={pageSettings}>
-        <HeaderContainer>
-            <AbsoluteCol>
-                <Hidden xs sm>
-                    <HeaderFigure>
-                        <HeaderImage
-                            alt="Bytecode web"
-                            src="/static/img/header/web.svg"
-                        />
-                    </HeaderFigure>
-                </Hidden>
-            </AbsoluteCol>
+        <ContentPageHeader
+            img="/static/img/header/telefoon.jpg"
+            subtitle="Contact"
+            title="Een keertje langskomen? Gezellig!"
+            href="https://calendly.com/bytecode"
+            text="Geef ons een belletje of stuur een mailtje
+            en het is zo geregeld.
+            De koffie, thee en koekjes staan al klaar.
+            Bij wijze van spreken, natuurlijk. Koffie en thee moeten warm zijn.
+            Dat weten wij ook wel."
+            button="Plan een afspraak"
+            bgSize="cover"
+        />
+        <Container fluid>
             <Row>
-                <Col md={8} lg={4}>
-                    <TextBlock
-                        subtitle="Contact us"
-                        title="Een keertje langskomen op kantoor? Gezellig!"
-                        href="https://calendly.com/bytecode"
-                        button="Plan een afspraak"
-                    >
-                        Geef ons een belletje of stuur een mailtje en het is zo
-                        geregeld. De koffie, thee en koekjes staan al klaar. Bij
-                        wijze van spreken, natuurlijk. Koffie en thee moeten
-                        warm zijn. Dat weten wij ook wel.
-                    </TextBlock>
-                </Col>
-            </Row>
-        </HeaderContainer>
-        <Container>
-            <PaddedRow>
-                <Col xl={7} lg={6} md={12} xs={12}>
-                    <TextBlock
-                        subtitle="We staan voor je klaar"
-                        headingType="h2"
-                        title="Stuur ons een berichtje"
-                    />
+                <Col
+                    offset={{ xl: 0.5, lg: 0.5 }}
+                    xl={6.5}
+                    lg={5.5}
+                    md={12}
+                    xs={12}
+                >
                     <ContactForm />
                 </Col>
                 <Col
@@ -111,8 +59,7 @@ const Contact = () => (
                         <a href="tel:0152024222">015-2024222</a>
                     </ContactHeading>
                     <ContactHeading>
-                        Of kom een keertje (op afspraak) langs bij ons op
-                        kantoor aan de de&nbsp;
+                        Of kom een keertje langs bij ons op kantoor aan de&nbsp;
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
@@ -129,7 +76,7 @@ const Contact = () => (
                         Plan een afspraak
                     </Button>
                 </Col>
-            </PaddedRow>
+            </Row>
         </Container>
     </Layout>
 );
