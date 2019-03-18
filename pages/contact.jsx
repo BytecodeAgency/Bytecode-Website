@@ -6,26 +6,26 @@ import Button from '../components/Button';
 import ContentPageHeader from '../components/ContentPageHeader';
 
 const pageSettings = {
-    title: `Contact - Bytecode Digital Agency B.V. 
+    title: `Contact - Bytecode Digital Agency B.V.
     | Eerste stap tot digitaal succes!`,
-    description: `Contact, neem contact met ons op door een belletje of door 
-    een mailtje te sturen. Langskomen mag altijd, 
+    description: `Contact, neem contact met ons op door een belletje of door
+    een mailtje te sturen. Langskomen mag altijd,
     Bytecode staat voor je klaar!`,
     keywords: 'contact',
 };
 
 const ContactHeading = styled.h3`
-    margin: 1.5em 0;
+    margin: 3em 0 2em;
     line-height: 1.4em;
 `;
 
 const Contact = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="static/img/header/scores.jpg"
+            img="/static/img/header/telefoon.jpg"
             subtitle="Contact"
             title="Een keertje langskomen? Gezellig!"
-            href="#"
+            href="https://calendly.com/bytecode"
             text="Geef ons een belletje of stuur een mailtje
             en het is zo geregeld.
             De koffie, thee en koekjes staan al klaar.
@@ -43,7 +43,7 @@ const Contact = () => (
                     md={12}
                     xs={12}
                 >
-                    <ContactForm simple />
+                    <ContactForm />
                 </Col>
                 <Col
                     offset={({ xl: 0 }, { lg: 1 })}
@@ -59,8 +59,7 @@ const Contact = () => (
                         <a href="tel:0152024222">015-2024222</a>
                     </ContactHeading>
                     <ContactHeading>
-                        Of kom een keertje (op afspraak) langs bij ons op
-                        kantoor aan de de&nbsp;
+                        Of kom een keertje langs bij ons op kantoor aan de&nbsp;
                         <a
                             target="_blank"
                             rel="noopener noreferrer"

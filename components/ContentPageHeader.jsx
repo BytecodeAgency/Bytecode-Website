@@ -10,7 +10,7 @@ const MainHeader = styled.header`
     background-blend-mode: soft-light;
     display: flex;
     position: relative;
-    justify-items: bottom;
+    align-items: flex-end;
     background-size: cover;
     background-blend-mode: soft-light;
     animation: fadeIn 2s;
@@ -21,14 +21,11 @@ const MainHeader = styled.header`
     @media (min-width: ${theme.breakpoints[3] * 0.75}px) {
         background-color: ${theme.colors.mediumgray};
         background-image: url(${props => props.img});
-        background-size: ${props => props.bgSize || '100%'};
+        background-size: ${props => props.bgSize || 'cover'};
         background-repeat: no-repeat;
         background-position-x: ${props => props.bgX || '85%'};
         background-position-y: ${props => props.bgY || 0};
-        height: 80vh;
-        & > div {
-            transform: translateY(5em);
-        }
+        min-height: 80vh;
         background-blend-mode: ${props => props.blendMode || 'soft-light'};
     }
     .content {
@@ -40,7 +37,7 @@ const MainHeaderContent = styled.div`
     margin-left: none;
 
     @media (min-width: ${theme.breakpoints[1]}px) {
-        margin-top: 10em;
+        margin-bottom: 10em;
     }
 `;
 
