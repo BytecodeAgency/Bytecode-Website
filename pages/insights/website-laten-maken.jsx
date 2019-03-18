@@ -105,7 +105,7 @@ const BlogContentContainer = styled.div`
 `;
 
 const BlogContent = styled.div`
-    padding: 4rem 0 4rem;
+    padding: 4rem 1rem 4rem;
     max-width: 68rem;
 
     p {

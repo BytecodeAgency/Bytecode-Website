@@ -69,7 +69,7 @@ const Service = ({ children, ...props }) => {
 const Services = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="/static/img/header/post-it-full.jpg" // TODO: Content
+            img="/static/img/header/postit-shadow.jpg" // TODO: Content
             subtitle="Services"
             title="Wij doen alles om het beste digitale resultaat te behalen."
             text="Onze diensten zorgen voor de beste digitale representatie
@@ -160,7 +160,11 @@ const Services = () => (
                 </Row>
             </Container>
         </Wrapper>
-        <ImageBlock src="/static/img/content/group-full.jpg" alt="groep" /> {/* TODO: Content */}
+        <ImageBlock
+            src="/static/img/content/code-arch.jpg"
+            alt="maatwerk development"
+        />
+
         {/* CLOUD EN AUTOMATISERING */}
         <Container fluid>
             <Row>
@@ -234,8 +238,8 @@ const Services = () => (
                 </Col>
                 <Col md={5}>
                     <ImageBlock
-                        src="/static/img/content/group-full.jpg" // TODO: Content
-                        alt="groep"
+                        src="/static/img/content/tekentablet.jpg"
+                        alt="tekentablet voor designwerk"
                     />
                 </Col>
             </Row>

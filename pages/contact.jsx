@@ -15,17 +15,17 @@ const pageSettings = {
 };
 
 const ContactHeading = styled.h3`
-    margin: 1.5em 0;
+    margin: 3em 0 2em;
     line-height: 1.4em;
 `;
 
 const Contact = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="static/img/header/scores.jpg" // TODO: Content
+            img="/static/img/header/telefoon.jpg"
             subtitle="Contact"
             title="Een keertje langskomen? Gezellig!"
-            href="#" // TODO: Fix link
+            href="https://calendly.com/bytecode"
             text="Geef ons een belletje of stuur een mailtje
             en het is zo geregeld.
             De koffie, thee en koekjes staan al klaar.
@@ -59,8 +59,7 @@ const Contact = () => (
                         <a href="tel:0152024222">015-2024222</a>
                     </ContactHeading>
                     <ContactHeading>
-                        Of kom een keertje (op afspraak) langs bij ons op
-                        kantoor aan de de&nbsp;
+                        Of kom een keertje langs bij ons op kantoor aan de&nbsp;
                         <a
                             target="_blank"
                             rel="noopener noreferrer"

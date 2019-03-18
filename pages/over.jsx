@@ -56,7 +56,7 @@ const Over = () => (
             </Row>
         </Container>
         <ImageBlock
-            src="/static/img/content/interior.jpg"
+            src="/static/img/content/cards.jpg"
             alt="A fun day at the office"
         />
         <Container fluid>
