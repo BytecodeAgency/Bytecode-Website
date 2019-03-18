@@ -69,12 +69,11 @@ const Service = ({ children, ...props }) => {
 const Services = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="/static/img/header/postit-shadow.jpg" // TODO: Content
+            img="/static/img/header/postit-shadow.jpg"
             subtitle="Services"
             title="Wij doen alles om het beste digitale resultaat te behalen."
             text="Onze diensten zorgen voor de beste digitale representatie
             van jouw bedrijf." // TODO: Content
-            button="read more" // TODO: Remove?
             bgSize="cover"
         />
         <Process />
