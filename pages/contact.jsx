@@ -43,7 +43,7 @@ const Contact = () => (
                     md={12}
                     xs={12}
                 >
-                    <ContactForm/>
+                    <ContactForm />
                 </Col>
                 <Col
                     offset={({ xl: 0 }, { lg: 1 })}
