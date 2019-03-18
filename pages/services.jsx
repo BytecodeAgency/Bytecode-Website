@@ -72,8 +72,8 @@ const Services = () => (
             img="/static/img/header/postit-shadow.jpg"
             subtitle="Services"
             title="Wij doen alles om het beste digitale resultaat te behalen."
-            text="Onze diensten zorgen voor de beste digitale representatie
-            van jouw bedrijf." // TODO: Content
+            text="Onze diensten zorgen voor de beste digitale resultaten
+            voor jouw bedrijf."
             bgSize="cover"
         />
         <Process />

@@ -162,7 +162,6 @@ const blogArchive = () => (
             halen. Dit doen we door interessante artikelen te
             schrijven, maar ook door deze inzichten in onze
             werkzaamheden te verwerken."
-            button="read more" // TODO: Remove?
         />
         <Posts>
             <Container fluid>

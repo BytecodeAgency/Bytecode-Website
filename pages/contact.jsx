@@ -43,9 +43,9 @@ const Contact = () => (
                     md={12}
                     xs={12}
                 >
-                    <ContactForm simple /> {/* TODO: wtf is simple? */}
+                    <ContactForm/>
                 </Col>
-                <Col // TODO: Layout improvements
+                <Col
                     offset={({ xl: 0 }, { lg: 1 })}
                     xl={3}
                     lg={5}
