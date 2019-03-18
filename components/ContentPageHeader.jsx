@@ -21,7 +21,7 @@ const MainHeader = styled.header`
     @media (min-width: ${theme.breakpoints[3] * 0.75}px) {
         background-color: ${theme.colors.mediumgray};
         background-image: url(${props => props.img});
-        background-size: ${props => props.bgSize || '100%'};
+        background-size: ${props => props.bgSize || 'cover'};
         background-repeat: no-repeat;
         background-position-x: ${props => props.bgX || '85%'};
         background-position-y: ${props => props.bgY || 0};
@@ -37,7 +37,7 @@ const MainHeaderContent = styled.div`
     margin-left: none;
 
     @media (min-width: ${theme.breakpoints[1]}px) {
-        margin-top: 10em;
+        margin-bottom: 10em;
     }
 `;
 
