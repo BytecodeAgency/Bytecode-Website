@@ -16,18 +16,6 @@ const pageSettings = {
     keywords: 'over ons',
 };
 
-// TODO: Remove this, content (next line)
-const onzeVisie = `Lorem ipsum dolor sit
-amet consectetur adipisicing elit.Asperiores
-itaque inventore sequi tempora amet dolore
-voluptas? Natus eius repellendus tempora
-reiciendis ea tempore dolorum temporibus
-quisquam fuga magni. Quis quam, recusandae,
-iste, deleniti cum esse distinctio omnis sequi
-nemo iusto tempore nobis hic nesciunt
-perspiciatis sunt laboriosam corrupti
-amollitia? `;
-
 const Over = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
@@ -38,20 +26,25 @@ const Over = () => (
             button="read more" // TODO: Remove?
             bgSize="80%"
         >
-            {onzeVisie}
         </ContentPageHeader>
         <Container fluid>
             <Row>
                 <Col offset={{ md: 0, lg: 1, xl: 2 }} md={6} lg={5} xl={3}>
                     <TextBlock
                         subtitle="Onze Visie"
-                        title="De titel maar dan een hele erge fucking lange
-                            titel waar geen einde aan lijkt te komen"
+                        title="Problemen oplossen met de nieuwste technieken, 
+                        om zo waarde te creëren voor jouw business."
                         headingType="h2"
                     />
                 </Col>
                 <Col offset={{ md: 0, lg: 1, xl: 1 }} md={6} lg={5} xl={4}>
-                    <p>{onzeVisie}</p>
+                    <p>`Door eerst de problemen te analyseren en doelen te stellen zorgen
+                    we voor resultaat, en voorkomen we veelgemaakte fouten. We weten waarom
+                    een project nodig is, niet alleen hoe het gemaakt moet worden, en helpen
+                    daarnaast bij het duidelijk maken van de ‘waarom’ als deze nog niet is vastgesteld.
+                    Zo zorgen we ervoor dat we mee kunnen denken tijdens een project,
+                    en nieuwe ideeën aan kunnen dragen.`
+                    </p>
                 </Col>
             </Row>
         </Container>
@@ -68,7 +61,12 @@ const Over = () => (
                         title="Unieke perspectieven door unieke personen"
                         headingType="h2"
                     >
-                        {onzeVisie}
+                    `Ons hechte team werkt keihard om jouw doelen te bereiken!
+                    Door onze multidisciplinaire kennis versterken we elkaar en delen we
+                    onze ervaring. Daarnaast krijgt iedereen ruimte tot inspraak in
+                    de toekomst van Bytecode en om bij te dragen aan vrije software projecten.
+                    waardoor we niet alleen gebruik maken van de nieuwste technieken,
+                    maar er ook aan bijdragen.`
                     </TextBlock>
                 </Col>
                 <TeamMember
