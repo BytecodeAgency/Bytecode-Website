@@ -6,7 +6,7 @@ Website for Bytecode Digital Agency B.V. built with NextJS (server-side rendered
 
 To run this develop environment, you need the follow dependencies:
 
-* NodeJS 8
+* NodeJS 8+ (10 recommended)
 * Yarn (install using `npm i -g yarn`)
 
 To install all dependencies after cloning the Git repo, run `yarn`. Otherwise the project will not run.
