@@ -34,10 +34,10 @@ const MainHeader = styled.header`
 `;
 
 const MainHeaderContent = styled.div`
-    margin-left: none;
+    margin: 4em 0 4em;
 
-    @media (min-width: ${theme.breakpoints[1]}px) {
-        margin-bottom: 10em;
+    @media (min-width: ${theme.breakpoints[2]}px) {
+        margin-bottom: 8em;
     }
 `;
 
