@@ -133,6 +133,8 @@ class ContactForm extends React.Component {
             <Notification
                 type={notification.type}
                 message={notification.message}
+                onTimeout={this.clearNotifications}
+                timeout={7000}
             />
         ));
     }
@@ -198,7 +200,6 @@ class ContactForm extends React.Component {
                                         }, 5000);
                                         actions.resetForm();
                                     } else {
-                                        actions.resetForm();
                                         this.addNotification(
                                             'error',
                                             'Iets ging fout...',
