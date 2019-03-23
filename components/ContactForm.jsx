@@ -123,6 +123,10 @@ class ContactForm extends React.Component {
         };
     }
 
+    componentDidUpdate() {
+        setTimeout(() => this.clearNotifications(), 5000);
+    }
+
     getNotifications() {
         const { notifications } = this.state;
         return notifications.map(notification => (
@@ -185,12 +189,20 @@ class ContactForm extends React.Component {
                                             JSON.stringify(values, null, 2),
                                         )
                                     ) {
-                                        this.addNotification('succes', 'Je bericht is verstuurd!');
-                                        setTimeout( () => { this.clearNotifications(); }, 5000);
-                                        actions.resetForm();
+                                        this.addNotification(
+                                            'succes',
+                                            'Je bericht is verstuurd!',
+                                        );
+                                        setTimeout(() => {
+                                            this.clearNotifications();
+                                        }, 5000);
                                         actions.resetForm();
                                     } else {
-                                        this.addNotification('error', 'Iets ging fout...');
+                                        actions.resetForm();
+                                        this.addNotification(
+                                            'error',
+                                            'Iets ging fout...',
+                                        );
                                     }
                                     setTimeout(() => {
                                         actions.setSubmitting(false);
@@ -234,8 +246,8 @@ class ContactForm extends React.Component {
                                                 className={
                                                     errors.contact &&
                                                     touched.contact
-                                                        ? 'error'
-                                                        : ''
+                                                        ? 'text-input error'
+                                                        : 'text-input'
                                                 }
                                             />
                                             {errors.contact &&
@@ -254,8 +266,8 @@ class ContactForm extends React.Component {
                                                 className={
                                                     errors.email &&
                                                     touched.email
-                                                        ? 'error'
-                                                        : ''
+                                                        ? 'text-input error'
+                                                        : 'text-input'
                                                 }
                                             />
                                             {errors.email && touched.email && (
@@ -273,8 +285,8 @@ class ContactForm extends React.Component {
                                                 className={
                                                     errors.phone &&
                                                     touched.phone
-                                                        ? 'error'
-                                                        : ''
+                                                        ? 'text-input error'
+                                                        : 'text-input'
                                                 }
                                             />
                                             {errors.phone && touched.phone && (
