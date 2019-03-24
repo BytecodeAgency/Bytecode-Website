@@ -118,7 +118,7 @@ const Over = () => (
                     title="Online marketeer &amp; SEO specialist"
                     img="/static/img/team/nick.png"
                     email="mailto:nick@bytecode.nl"
-                    instagram="instagram.com/nickbroekarts"
+                    instagram="https://www.instagram.com/nickbroekarts"
                     linkedin="https://www.linkedin.com/in/nickbroekarts"
                 />
             </Row>
