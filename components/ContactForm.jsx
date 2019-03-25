@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
@@ -106,6 +107,7 @@ const handleSend = formValues => {
     /* eslint-disable object-curly-newline */
     const { contents, contact, email, phone } = formValues;
     const sendData = { contact, email, phone, contents };
+
     /* eslint-enable */
 
     return sendFormInformation(sendData);
@@ -121,10 +123,6 @@ class ContactForm extends React.Component {
         this.state = {
             notifications: [],
         };
-    }
-
-    componentDidUpdate() {
-        setTimeout(() => this.clearNotifications(), 5000);
     }
 
     getNotifications() {
