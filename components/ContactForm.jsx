@@ -96,18 +96,16 @@ const Notification = ({ type, message }) => (
     <StyledNotification className={type}>{message}</StyledNotification>
 );
 
-const sendFormInformation = sendData => {
-    axios
+// eslint-disable-next-line prettier/prettier
+const sendFormInformation = async sendData => axios
         .post('/post', sendData)
         .then(true)
         .catch(false);
-};
 
 const handleSend = formValues => {
     /* eslint-disable object-curly-newline */
     const { contents, contact, email, phone } = formValues;
     const sendData = { contact, email, phone, contents };
-    console.log(sendData);
     /* eslint-enable */
 
     return sendFormInformation(sendData);
@@ -119,7 +117,6 @@ class ContactForm extends React.Component {
         this.getNotifications = this.getNotifications.bind(this);
         this.addNotification = this.addNotification.bind(this);
         this.clearNotifications = this.clearNotifications.bind(this);
-        this.handleInput = this.handleInput.bind(this);
         this.state = {
             notifications: [],
         };
@@ -148,10 +145,6 @@ class ContactForm extends React.Component {
 
     clearNotifications() {
         this.setState({ notifications: [] });
-    }
-
-    handleInput(e) {
-        this.setState({ [e.target.name]: e.target.value });
     }
 
     renderText() {
@@ -183,22 +176,27 @@ class ContactForm extends React.Component {
                                     { phone: '' },
                                     { contents: '' })
                                 }
-                                onSubmit={(values, actions) => {
+                                onSubmit={async (values, actions) => {
                                     const {
                                         contact,
                                         email,
                                         phone,
                                         contents,
                                     } = values;
-                                    if (handleSend(values)) {
+                                    if (await handleSend(values)) {
                                         this.addNotification(
-                                            'succes',
+                                            'success',
                                             'Je bericht is verstuurd!',
                                         );
                                         setTimeout(() => {
                                             this.clearNotifications();
                                         }, 5000);
-                                        actions.resetForm();
+                                        actions.resetForm({
+                                            contact: '',
+                                            email: '',
+                                            phone: '',
+                                            contents: '',
+                                        });
                                     } else {
                                         this.addNotification(
                                             'error',
