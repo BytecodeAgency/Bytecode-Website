@@ -96,7 +96,7 @@ const Notification = ({ type, message }) => (
     <StyledNotification className={type}>{message}</StyledNotification>
 );
 
-const sendFormInformation = ({ sendData }) => {
+const sendFormInformation = sendData => {
     axios
         .post('/post', sendData)
         .then(true)
@@ -107,7 +107,7 @@ const handleSend = formValues => {
     /* eslint-disable object-curly-newline */
     const { contents, contact, email, phone } = formValues;
     const sendData = { contact, email, phone, contents };
-
+    console.log(sendData);
     /* eslint-enable */
 
     return sendFormInformation(sendData);
@@ -184,11 +184,13 @@ class ContactForm extends React.Component {
                                     { contents: '' })
                                 }
                                 onSubmit={(values, actions) => {
-                                    if (
-                                        handleSend(
-                                            JSON.stringify(values, null, 2),
-                                        )
-                                    ) {
+                                    const {
+                                        contact,
+                                        email,
+                                        phone,
+                                        contents,
+                                    } = values;
+                                    if (handleSend(values)) {
                                         this.addNotification(
                                             'succes',
                                             'Je bericht is verstuurd!',
