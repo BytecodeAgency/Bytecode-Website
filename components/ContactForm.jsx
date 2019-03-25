@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
@@ -96,11 +95,12 @@ const Notification = ({ type, message }) => (
     <StyledNotification className={type}>{message}</StyledNotification>
 );
 
-// eslint-disable-next-line prettier/prettier
+/* eslint-disable indent, prettier/prettier, impicit-arrow-linebreak */
 const sendFormInformation = async sendData => axios
         .post('/post', sendData)
         .then(true)
         .catch(false);
+/* eslint-enable */
 
 const handleSend = formValues => {
     /* eslint-disable object-curly-newline */
@@ -249,12 +249,13 @@ class ContactForm extends React.Component {
                                                         : 'text-input'
                                                 }
                                             />
-                                            {errors.contact &&
+                                            {/* eslint-disable indent */
+                                            errors.contact &&
                                                 touched.contact && (
                                                     <ErrorMessage>
                                                         {errors.contact}
                                                     </ErrorMessage>
-                                                )}
+                                                ) /* eslint-enable */}
                                             <InputField
                                                 id="email"
                                                 placeholder="Email"
@@ -307,11 +308,13 @@ class ContactForm extends React.Component {
                                                         : 'text'
                                                 }
                                             />
-                                            {errors.contents &&
+                                            {/* eslint-disable indent */
+                                            errors.contents &&
                                                 touched.contents && (
                                                     <ErrorMessage>
                                                         {errors.contents}
                                                     </ErrorMessage>
+                                                    /* eslint-enable */
                                                 )}
                                             <SendButton
                                                 type="submit"
