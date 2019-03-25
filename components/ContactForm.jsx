@@ -16,9 +16,10 @@ const InputField = styled.input`
     outline: none;
     border: none;
     border-bottom: 2px solid ${theme.colors.lightgray};
+    padding-bottom: 1rem;
     margin-bottom: 1.5rem;
     color: ${theme.colors.white};
-    font-size: 2rem;
+    font-size: 2.4rem;
     width: 100%;
     &:hover {
         cursor: pointer;
@@ -76,7 +77,7 @@ const InputTextArea = styled.textarea`
     &.text {
         font-family: ${theme.typography.form.font};
         color: ${theme.colors.white};
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 `;
 
@@ -95,18 +96,17 @@ const Notification = ({ type, message }) => (
     <StyledNotification className={type}>{message}</StyledNotification>
 );
 
-/* eslint-disable indent, prettier/prettier, impicit-arrow-linebreak */
-const sendFormInformation = async sendData => axios
+/* eslint-disable indent, prettier/prettier, implicit-arrow-linebreak */
+const sendFormInformation = async sendData =>
+    axios
         .post('/post', sendData)
         .then(true)
         .catch(false);
 /* eslint-enable */
 
 const handleSend = formValues => {
-    /* eslint-disable object-curly-newline */
     const { contents, contact, email, phone } = formValues;
     const sendData = { contact, email, phone, contents };
-    /* eslint-enable */
 
     return sendFormInformation(sendData);
 };
