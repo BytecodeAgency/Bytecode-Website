@@ -72,7 +72,7 @@ const content2 = {
     subtitle: '',
     slug: 'webapp-het-complete-overzicht',
     posted_on: '30 maart 2019',
-    article_image_url: '/static/img/articles/webapp-overzicht.jpeg',
+    article_image_url: '/static/img/articles/webapp-overzicht.jpg',
     summary:
         'Webapp: wat is een (progressive) webapp? Is een webapp beter dan een mobiele app en wat is de waarde van een webapp voor jouw bedrijf? Lees het hier!',
     author_name: 'Nick Broekarts',
@@ -153,7 +153,7 @@ const blogArchive = () => (
                                 />
                                 <BlogThumbnail
                                     title={content2.title}
-                                    slug={content1.slug}
+                                    slug={content2.slug}
                                     posted_on={content2.posted_on}
                                     article_image_url={
                                         content2.article_image_url
