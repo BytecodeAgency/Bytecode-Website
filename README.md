@@ -1,6 +1,6 @@
 # Bytecode Website
 
-Website for Bytecode Digital Agency B.V. built with NextJS (server-side rendered React) and Styled Components.
+Website for Bytecode Digital Agency B.V. built with GatsbyJS.
 
 ## Dependencies
 
