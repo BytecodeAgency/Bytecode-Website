@@ -2,7 +2,6 @@
 
 * Make components work
 * Make pages load
-* Change Layout.jsx and SEO.jsx to be with capital letters in Git
 * Update all images to load with Gatsby
 * Update `<Link/>` elements
 * Make sure all SEO stuff is still working
