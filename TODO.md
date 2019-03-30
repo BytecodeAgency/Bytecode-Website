@@ -4,6 +4,8 @@
 * Make pages load
 * Update all images to load with Gatsby
 * Update `<Link/>` elements
+* Serve static PDF files
+* Don't gitignore documents with AV
 * Make sure all SEO stuff is still working
 * Remove Gatsby boilerplate everywhere
 * Update insights to work with Markdown
