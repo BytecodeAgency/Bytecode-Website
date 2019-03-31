@@ -139,19 +139,6 @@ const blogArchive = () => (
                         <Container fluid>
                             <Row>
                                 <BlogThumbnail
-                                    title={content1.title}
-                                    slug={content1.slug}
-                                    posted_on={content1.posted_on}
-                                    article_image_url={
-                                        content1.article_image_url
-                                    }
-                                    author_name={content1.author_name}
-                                    author_role={content1.author_role}
-                                    author_image_url={content1.author_image_url}
-                                    category_name={content1.category_name}
-                                    reading_time={content1.reading_time}
-                                />
-                                <BlogThumbnail
                                     title={content2.title}
                                     slug={content2.slug}
                                     posted_on={content2.posted_on}
@@ -163,6 +150,19 @@ const blogArchive = () => (
                                     author_image_url={content2.author_image_url}
                                     category_name={content2.category_name}
                                     reading_time={content2.reading_time}
+                                />
+                                <BlogThumbnail
+                                    title={content1.title}
+                                    slug={content1.slug}
+                                    posted_on={content1.posted_on}
+                                    article_image_url={
+                                        content1.article_image_url
+                                    }
+                                    author_name={content1.author_name}
+                                    author_role={content1.author_role}
+                                    author_image_url={content1.author_image_url}
+                                    category_name={content1.category_name}
+                                    reading_time={content1.reading_time}
                                 />
                             </Row>
                         </Container>
