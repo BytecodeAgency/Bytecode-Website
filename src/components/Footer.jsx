@@ -146,10 +146,10 @@ const Footer = () => (
                         >
                             Algemene Voorwaarden
                         </FooterLink>
-                        <Link href="/legal/privacy-policy">
+                        <Link to="/legal/privacy-policy">
                             <FooterLink>Privacy Policy</FooterLink>
                         </Link>
-                        <Link href="/legal/cookie-policy">
+                        <Link to="/legal/cookie-policy">
                             <FooterLink>Cookie Policy</FooterLink>
                         </Link>
                         <FooterLink
