@@ -49,10 +49,10 @@ const getImage = (src, alt) => {
     return '';
 };
 
-const getButton = (href, button, usenextlink) => {
+const getButton = (href, button, useGatsbyLink) => {
     if (href && button) {
         return (
-            <StyledButton href={href} usenextlink={usenextlink}>
+            <StyledButton href={href} useGatsbyLink={useGatsbyLink}>
                 {button}
             </StyledButton>
         );
@@ -85,7 +85,7 @@ const TextBlock = props => {
         headingType,
         href = null,
         button = null,
-        usenextlink,
+        useGatsbyLink,
         children,
     } = props;
 
@@ -95,7 +95,7 @@ const TextBlock = props => {
             <Subtitle>{subtitle}</Subtitle>
             {getTitle(headingType, title)}
             <p>{children}</p>
-            {getButton(href, button, usenextlink)}
+            {getButton(href, button, useGatsbyLink)}
         </div>
     );
 };
@@ -105,7 +105,7 @@ TextBlock.propTypes = {
     title: PropTypes.string.isRequired,
     href: PropTypes.string,
     button: PropTypes.string,
-    usenextlink: PropTypes.bool,
+    useGatsbyLink: PropTypes.bool,
 };
 
 export default TextBlock;

@@ -33,7 +33,7 @@ const GroupImage = styled.img`
 const Home = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            usenextlink
+            useGatsbyLink
             img="/static/img/header/web.svg"
             subtitle="Welkom bij Bytecode"
             title="Specialisten in maatwerk voor web en mobiel"
@@ -85,7 +85,7 @@ const Home = () => (
                 </Col>
                 <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5} xl={4}>
                     <TextBlock
-                        usenextlink
+                        useGatsbyLink
                         subtitle="Hoe Bytecode kan helpen"
                         title="Samen halen we alles uit jouw digitale zelf"
                         href="/services"
@@ -108,7 +108,7 @@ const Home = () => (
                 <CenterAlignedRow>
                     <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={4}>
                         <TextBlock
-                            usenextlink
+                            useGatsbyLink
                             subtitle="Wie wij zijn"
                             title="
                             Kennis en kwaliteit met een no-bullshit mentaliteit"

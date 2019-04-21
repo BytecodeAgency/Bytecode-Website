@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import theme from '../styles/theme';
 
 const ButtonBase = ({ className, children, ...props }) => {
-    const { href, usenextlink } = props;
-    if (usenextlink) {
+    const { href, useGatsbyLink } = props;
+    if (useGatsbyLink) {
         return (
             <Link href={href}>
                 <a className={`button ${className}`} {...props}>
@@ -23,7 +23,7 @@ const ButtonBase = ({ className, children, ...props }) => {
 
 ButtonBase.propTypes = {
     href: PropTypes.string.isRequired,
-    usenextlink: PropTypes.bool,
+    useGatsbyLink: PropTypes.bool,
 };
 
 const Button = styled(ButtonBase)`
