@@ -67,19 +67,17 @@ function SEO({ description, lang, meta, keywords, title }) {
                     name: `twitter:description`,
                     content: metaDescription,
                 },
-            ]
-                .concat(
-                    keywords.length > 0
-                        ? { name: `keywords`, content: keywords.join(`, `) }
-                        : [],
-                )
-                .concat(meta)}
+                {
+                    name: `keywords`,
+                    content: keywords,
+                },
+            ].concat(meta)}
         />
     );
 }
 
 SEO.defaultProps = {
-    lang: `en`,
+    lang: `nl`,
     meta: [],
     keywords: [],
     description: ``,

@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { Container } from 'react-grid-system';
 import theme from '../styles/theme';

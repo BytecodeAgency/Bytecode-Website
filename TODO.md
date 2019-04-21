@@ -9,6 +9,7 @@
 * Don't gitignore documents with AV
 * Make sure all SEO stuff is still working
 * Remove Gatsby boilerplate everywhere
+* Fix ESLint
 * Update insights to work with Markdown
 * Update license to state proprietary content (text, images, insights)
 * Add server folder from old repo, with .env support
