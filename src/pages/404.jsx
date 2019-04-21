@@ -19,7 +19,6 @@ const NotFound = () => (
             <h1>Oeps, deze pagina bestaat niet...</h1>
         </Container404>
     </Layout>
-
 );
 
 export default NotFound;

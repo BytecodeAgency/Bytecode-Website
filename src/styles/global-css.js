@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-expressions, function-paren-newline, prettier/prettier, max-len  */
-import { createGlobalStyle } from 'styled-components';
 import { reset, debug } from 'styled-components-style-utils';
 import { setConfiguration } from 'react-grid-system';
 import theme from './theme';
@@ -21,30 +20,30 @@ const addStylingExceptions = element => {
 
 const typographyElementStyling = typographyElements.map(
     element => `${element} {
-        font-size: ${theme.typography[element].size}
-        line-height: ${theme.typography[element].height}
-        letter-spacing: ${theme.typography[element].spacing}
-        font-family: ${theme.typography[element].font}
-        font-weight: ${theme.typography[element].weight}
-        color: ${theme.typography[element].color}
-        ${addStylingExceptions(element)}
+        font-size: ${theme.typography[element].size};
+        line-height: ${theme.typography[element].height};
+        letter-spacing: ${theme.typography[element].spacing};
+        font-family: ${theme.typography[element].font};
+        font-weight: ${theme.typography[element].weight};
+        color: ${theme.typography[element].color};
+        ${addStylingExceptions(element)};
     }`,
-);
+).join('\n\n');
 
 const typographyClassStyling = typographyClasses.map(
     element => `.${element} {
-        font-size: ${theme.typography[element].size}
-        line-height: ${theme.typography[element].height}
-        letter-spacing: ${theme.typography[element].spacing}
-        font-family: ${theme.typography[element].font}
-        font-weight: ${theme.typography[element].weight}
-        color: ${theme.typography[element].color}
-        ${addStylingExceptions(element)}
+        font-size: ${theme.typography[element].size};
+        line-height: ${theme.typography[element].height};
+        letter-spacing: ${theme.typography[element].spacing};
+        font-family: ${theme.typography[element].font};
+        font-weight: ${theme.typography[element].weight};
+        color: ${theme.typography[element].color};
+        ${addStylingExceptions(element)};
     }`,
-);
+).join('\n\n');
 
 const enableCssReset = false;
-export const GlobalStyles = createGlobalStyle`
+const GlobalStylesRaw = `
     ${reset()}
     ${enableCssReset ? debug() : ''}
     html { font-size: 62.5%; background: ${theme.colors.background} }
@@ -61,6 +60,8 @@ export const GlobalStyles = createGlobalStyle`
         color: ${theme.colors.white}
     }
 `;
+
+export const GlobalStyles = GlobalStylesRaw.replace(/\s+/gm, '');
 
 export const setContainerWidths = () => {
     setConfiguration({ containerWidths: theme.containerWidths });

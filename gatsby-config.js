@@ -5,7 +5,6 @@ module.exports = {
         author: `@bytecodebv`,
     },
     plugins: [
-        `gatsby-plugin-styled-components`,
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
@@ -27,6 +26,9 @@ module.exports = {
                 display: `minimal-ui`,
                 icon: `src/images/icons/icon-512x512.png`,
             },
+        },
+        {
+            resolve: `gatsby-plugin-styled-components`,
         },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
