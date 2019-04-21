@@ -42,8 +42,10 @@ export default class SiteDocument extends Document {
                     <link
                         rel="stylesheet"
                         // eslint-disable-next-line
+
                         href="https://fonts.googleapis.com/css?family=Space+Mono"
                     />
+                    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"/>
                     <GlobalStyles />
                     {styleTags}
                     {getHeadScripts()}

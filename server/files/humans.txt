@@ -9,7 +9,7 @@ Site: https://bytecode.nl
 Location: Nootdorp, The Netherlands
 
 Designer and front-end developer: Richard van 't Hof
-Site: https://bytecode.nl
+Site: therichart.space
 Location: Rotterdam, The Netherlands
 
 Copywriter: Thomas Bodlaender
