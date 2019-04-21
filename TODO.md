@@ -1,9 +1,6 @@
 # TODO
 
-* Make components work
-* Make pages load
 * Update all images to load with Gatsby
-* Update `<Link/>` elements
 * Make sure all links are still working correctly, no 404s
 * Serve static PDF files through a CDN
 * Don't gitignore documents with AV
@@ -15,6 +12,7 @@
 * Add server folder from old repo, with .env support
 * Make sure all forms are still working
 * Update .travis.yml and /gitlab-ci.yml
+* Add humans.txt again
 * Add sitemap functionality
 * Add RSS feed functionality
 * Add PWA functionality (see gatsby-config.js file)
