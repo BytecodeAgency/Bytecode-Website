@@ -147,12 +147,12 @@ const Footer = () => (
                         >
                             Algemene Voorwaarden
                         </FooterLink>
-                        <Link to="/legal/privacy-policy">
-                            <FooterLink>Privacy Policy</FooterLink>
-                        </Link>
-                        <Link to="/legal/cookie-policy">
-                            <FooterLink>Cookie Policy</FooterLink>
-                        </Link>
+                        <FooterLink href="/legal/privacy-policy">
+                            Privacy Policy
+                        </FooterLink>
+                        <FooterLink href="/legal/cookie-policy">
+                            Cookie Policy
+                        </FooterLink>
                         <FooterLink
                             href="https://security.bytecode.nl"
                             target="_blank"

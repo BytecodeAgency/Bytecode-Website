@@ -61,7 +61,7 @@ const NavbarItems = styled.ul`
     }
 `;
 
-const Anchor = styled.a`
+const StyledLink = styled(Link)`
     text-transform: none;
     position: relative;
     transition: all 0.2s ease;
@@ -88,9 +88,9 @@ const NavbarItemBase = ({ className, ...props }) => {
     const { href, text } = props;
     return (
         <li className={className}>
-            <Link to={href}>
-                <Anchor className="menuitem">{text}</Anchor>
-            </Link>
+            <StyledLink to={href} className="menuitem">
+                {text}
+            </StyledLink>
         </li>
     );
 };
@@ -109,7 +109,7 @@ const NavbarItem = styled(NavbarItemBase)`
     }
 `;
 
-const Logo = styled.a`
+const Logo = styled.span`
     @media (min-width: ${theme.breakpointMobileMenu}) {
         width: 25rem;
     }

@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../styles/theme';
 
-const ButtonBase = ({ className, children, ...props }) => {
-    const { href, useGatsbyLink } = props;
+const ButtonBase = ({ href, useGatsbyLink, className, children, ...props }) => {
     if (useGatsbyLink) {
         return (
             <Link to={href} className={`button ${className}`} {...props}>

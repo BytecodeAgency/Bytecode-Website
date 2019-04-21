@@ -40,17 +40,15 @@ class Navbar extends React.Component {
         return (
             <NavbarContainer>
                 <InnerNavbarContainer>
-                    <Link prefetch href="/">
-                        <a>
-                            <MobileNavLogo
-                                src="/static/img/logo-min.svg"
-                                alt="Logo"
-                            />
-                        </a>
+                    <Link to="/">
+                        <MobileNavLogo
+                            src="/static/img/logo-min.svg"
+                            alt="Logo"
+                        />
                     </Link>
                     <BlackOverlay
                         menuIsOpen={menuIsOpen}
-                        onClick={this.closeMenu}
+                        onClick={this.cloeMenu}
                     />
                     <MenuButton href="#" onClick={this.openMenu}>
                         <img
@@ -60,7 +58,7 @@ class Navbar extends React.Component {
                         />
                     </MenuButton>
                     <NavbarContent menuIsOpen={menuIsOpen}>
-                        <Link prefetch href="/">
+                        <Link to="/">
                             <Logo>
                                 <img
                                     src="/static/img/logo.svg"
