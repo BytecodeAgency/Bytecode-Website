@@ -1,5 +1,6 @@
 # TODO
 
+* Fix font in menu
 * Update insights to work with Markdown
 * Serve static PDF files through a CDN
 * Don't gitignore documents with AV
@@ -16,3 +17,5 @@
 * Where possible, abstract the Gatsby API to make future framework switches less painful
 * Update documentation from Next to Gatsby
 * Research page transitions
+* Configure production server
+* Write Ansible script for deployment
