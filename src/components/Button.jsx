@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../styles/theme';
@@ -7,10 +7,8 @@ const ButtonBase = ({ className, children, ...props }) => {
     const { href, useGatsbyLink } = props;
     if (useGatsbyLink) {
         return (
-            <Link href={href}>
-                <a className={`button ${className}`} {...props}>
-                    {children}
-                </a>
+            <Link to={href} className={`button ${className}`} {...props}>
+                {children}
             </Link>
         );
     }

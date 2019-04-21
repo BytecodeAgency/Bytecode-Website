@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { transparentize } from 'polished';
 import theme from '../styles/theme';

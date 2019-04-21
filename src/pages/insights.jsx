@@ -1,7 +1,7 @@
 /* eslint-disable max-len, object-curly-newline, camelcase */
 
 import styled from 'styled-components';
-import Link from 'next/link';
+import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';

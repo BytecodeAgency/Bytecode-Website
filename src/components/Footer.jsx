@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Link from 'next/link';
+import { Link } from 'gatsby';
 import { Container, Row, Col } from '../lib/Grid';
 import Button from './Button';
 import AllSocials from '../lib/Socials';
