@@ -1,10 +1,10 @@
 # TODO
 
-* Research GraphQL+Gatsby ecosystem and create plan
 * Make components work
 * Make pages load
 * Update all images to load with Gatsby
 * Update `<Link/>` elements
+* Make sure all links are still working correctly, no 404s
 * Serve static PDF files through a CDN
 * Don't gitignore documents with AV
 * Make sure all SEO stuff is still working
