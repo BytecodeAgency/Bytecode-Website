@@ -88,7 +88,7 @@ const NavbarItemBase = ({ className, ...props }) => {
     const { href, text } = props;
     return (
         <li className={className}>
-            <Link href={href}>
+            <Link to={href}>
                 <Anchor className="menuitem">{text}</Anchor>
             </Link>
         </li>

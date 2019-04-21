@@ -97,7 +97,7 @@ const BlogThumbnail = props => {
     } = props;
     return (
         <Col xl={4} lg={4}>
-            <Link href={`insights/${slug}`}>
+            <Link to={`insights/${slug}`}>
                 <BlogThumbnailContentWrapper>
                     <BlogThumbnailImage url={article_image_url} />
                     <h6 className="subtitle">{category_name}</h6>
