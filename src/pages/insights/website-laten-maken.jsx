@@ -16,18 +16,18 @@ const content = {
     subtitle: '',
     slug: 'website-laten-maken',
     posted_on: '10 december 2018',
-    article_image_url: '/static/img/articles/website-laten-maken.jpg',
+    article_image_url: require('../../images/img/articles/website-laten-maken.jpg'),
     summary:
         'Je wilt een website laten maken en bent op zoek naar de juiste webdeveloper. Wat is nou echt waardevol voor jouw website? Lees het hier!',
     author_name: 'Nick Broekarts',
     author_role: 'Online Marketeer',
-    author_image_url: '/static/img/authors/nick.jpeg',
+    author_image_url: require('../../images/img/authors/nick.jpeg'),
     catergory_name: 'Websites',
     category_slug: 'websites',
     reading_time: 8,
     html_content: `
         <p>In de loop van de jaren is er een aantal marktontwikkelingen geweest die voortvloeien vanuit de opkomst van digitalisering. Tegenwoordig kan eigenlijk alles digitaal geregeld worden, denk maar aan: kleding, bankzaken, vakanties, voedsel, alhoewel fysieke supermarkten nog steeds erg geliefd zijn. Daarnaast zijn er veel fysieke winkels verdwenen en kwamen daar online winkels voor in de plaats. Dit blijkt ook uit de cijfers van 2017: volgens het AD waren er in 2017 32.000 webwinkels en zijn het er anno 2018 ongeveer 40.000. <a href="https://www.ad.nl/economie/aantal-webshops-in-nederland-in-tien-jaar-tijd-verzesvoudigd~a755cbb5/" rel="nofollow">bron</a></p>
-        <p><img src="/static/img/articles/website-laten-maken-2.jpeg" alt="webshop"/></p>
+        <p><img src=${require('../../images/img/articles/website-laten-maken-2.jpeg')} alt="webshop"/></p>
         <p>Misschien wil je zelf ook een website laten maken en ben je op zoek naar de juiste partij, maar weet je niet waar precies op te letten. Daarom willen we met dit artikel jou helpen om de volgende stap te nemen in je digitale loopbaan. In dit artikel bespreken we wat voor soorten websites er zijn en voor welke doeleinden, wat het verschil is tussen alle internetbureaus die met jouw ideeën aan de slag willen, wat de belangrijkste prijs-kwaliteitsoverwegingen zijn en tot slot de kwaliteitseisen en conclusie.</p>
         <h2>Wat voor soort websites zijn er en wat wil ik?</h2>
         <p>In het algemeen vallen alle websites onder een van de volgende modellen:</p>
@@ -62,7 +62,7 @@ const content = {
         <li>
         <strong>Sustainable zijn</strong>, een website moet de basis zijn van waaruit voortgebouwd wordt.</li>
         </ul>
-        <p><img src="/static/img/articles/website-laten-maken-1.jpeg" alt="webshop success"/></p>
+        <p><img src=${require('../../images/img/articles/website-laten-maken-1.jpeg')} alt="webshop success"/></p>
         <h2>Kwaliteitseisen</h2>
         <p>Jouw toekomstige website moet niet alleen een investering zijn die op korte termijn rendeert. Een goede technische website is zo ontwikkeld dat deze aan jouw persoonlijke eisen voldoet, zodat jouw klanten ook optimaal bediend kunnen worden. Ook in dit geval is <strong>goedkoop duurkoop</strong>. Op die manier wordt er een website door middel van maatwerk gerealiseerd zodat het een basis is voor toekomstige features en dus "future proof" is. Daarmee is jouw digitale succes verzekerd.</p>
         <p>Waaraan herken je een goed internetbureau? Een internetbureau dat kwaliteit levert zal de volgende stappen met een klant doorlopen:</p>

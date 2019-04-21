@@ -1,13 +1,10 @@
 # TODO
 
-* Update all images to load with Gatsby
-* Make sure all links are still working correctly, no 404s
+* Update insights to work with Markdown
 * Serve static PDF files through a CDN
 * Don't gitignore documents with AV
 * Make sure all SEO stuff is still working
 * Remove Gatsby boilerplate everywhere
-* Fix ESLint
-* Update insights to work with Markdown
 * Update license to state proprietary content (text, images, insights)
 * Add server folder from old repo, with .env support
 * Make sure all forms are still working

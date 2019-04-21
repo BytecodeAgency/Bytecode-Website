@@ -17,6 +17,11 @@ const {
     BlackOverlay,
 } = NavbarComponents;
 
+const logo = require('../images/img/logo.svg');
+const logoMin = require('../images/img/logo-min.svg');
+const hamburger = require('../images/img/hamburger-menu.svg');
+const closeMenu = require('../images/img/close-menu.svg');
+
 class Navbar extends React.Component {
     constructor() {
         super();
@@ -41,35 +46,25 @@ class Navbar extends React.Component {
             <NavbarContainer>
                 <InnerNavbarContainer>
                     <Link to="/">
-                        <MobileNavLogo
-                            src="/static/img/logo-min.svg"
-                            alt="Logo"
-                        />
+                        <MobileNavLogo src={logoMin} alt="Logo" />
                     </Link>
                     <BlackOverlay
                         menuIsOpen={menuIsOpen}
-                        onClick={this.cloeMenu}
+                        onClick={this.closeMenu}
                     />
                     <MenuButton href="#" onClick={this.openMenu}>
-                        <img
-                            src="/static/img/hamburger-menu.svg"
-                            alt="Close menu"
-                            width="100%"
-                        />
+                        <img src={hamburger} alt="Close menu" width="100%" />
                     </MenuButton>
                     <NavbarContent menuIsOpen={menuIsOpen}>
                         <Link to="/">
                             <Logo>
-                                <img
-                                    src="/static/img/logo.svg"
-                                    alt="Bytecode logo"
-                                />
+                                <img src={logo} alt="Bytecode logo" />
                             </Logo>
                         </Link>
                         <NavbarItems>
                             <CloseMenuButton href="#" onClick={this.closeMenu}>
                                 <img
-                                    src="/static/img/close-menu.svg"
+                                    src={closeMenu}
                                     alt="Close menu"
                                     width="100%"
                                 />

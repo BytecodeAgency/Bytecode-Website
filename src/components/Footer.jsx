@@ -6,6 +6,8 @@ import Button from './Button';
 import AllSocials from '../lib/Socials';
 import theme from '../styles/theme';
 
+const opensource = require('../images/icons/social/open-source.svg');
+
 const FooterColInnerContainer = styled.div`
     margin-bottom: 2rem;
     @media (max-width: ${theme.breakpoints[1]}px) {
@@ -73,13 +75,15 @@ const FooterContainer = styled(Container)`
     max-width: 80vw;
 `;
 
+const logo = require('../images/img/logo.svg');
+
 const Footer = () => (
     <footer>
         <FooterContainer fluid>
             <Row>
                 <FooterCol>
                     <FooterHeadingContainer>
-                        <FooterLogo src="/static/img/logo.svg" alt="Bytecode" />
+                        <FooterLogo src={logo} alt="Bytecode" />
                     </FooterHeadingContainer>
                     <FooterLinkContainer>
                         <FooterLink href="mailto:info@bytecode.nl">
@@ -119,7 +123,7 @@ const Footer = () => (
                 <FooterCol>
                     <FooterHeadingContainer>
                         <OpenSourceIcon
-                            src="/static/icons/social/open-source.svg"
+                            src={opensource}
                             alt="Open source"
                         />
                     </FooterHeadingContainer>

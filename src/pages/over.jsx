@@ -19,7 +19,7 @@ const pageSettings = {
 const Over = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="/static/img/content/team.png"
+            img={require('../images/img/content/team.png')}
             subtitle="Over ons"
             title="Het Bytecode team."
             text="Hoi, wij zijn het Bytecode team. Aangenaam kennis te maken!"
@@ -50,7 +50,7 @@ const Over = () => (
             </Row>
         </Container>
         <ImageBlock
-            src="/static/img/content/cards.jpg"
+            src={require('../images/img/content/cards.jpg')}
             alt="A fun day at the office"
         />
         <Container fluid>
@@ -74,7 +74,7 @@ const Over = () => (
                 <TeamMember
                     name="Jeroen van Steijn"
                     title="Co-founder &amp; software consultant"
-                    img="/static/img/team/jeroen.png"
+                    img={require('../images/img/team/jeroen.png')}
                     email="mailto:jeroen@bytecode.nl"
                     github="https://github.com/JeroenVanSteijn"
                     instagram="https://www.instagram.com/jjvansteijn"
@@ -83,7 +83,7 @@ const Over = () => (
                 <TeamMember
                     name="Luciano Nooijen"
                     title="Co-founder &amp; software consultant"
-                    img="/static/img/team/luciano.png"
+                    img={require('../images/img/team/luciano.png')}
                     link="https://lucianonooijen.nl"
                     email="mailto:luciano@bytecode.nl"
                     github="https://github.com/lucianonooijen"
@@ -94,21 +94,21 @@ const Over = () => (
                 <TeamMember
                     name="Julian van Dijk"
                     title="Full-stack developer web &amp; mobiel"
-                    img="/static/img/team/julian.png"
+                    img={require('../images/img/team/julian.png')}
                     email="mailto:julian@bytecode.nl"
                     linkedin="https://www.linkedin.com/in/julian-v-66b098116"
                 />
                 <TeamMember
                     name="Richard van 't Hof"
                     title="Designer &amp; front-end developer"
-                    img="/static/img/team/richard.png"
+                    img={require('../images/img/team/richard.png')}
                     email="mailto:richard@bytecode.nl"
                     linkedin="https://www.linkedin.com/in/richard-van-t-hof"
                 />
                 <TeamMember
                     name="Thomas Bodlaender"
                     title="Sales- &amp; accountmanager"
-                    img="/static/img/team/thomas.png"
+                    img={require('../images/img/team/thomas.png')}
                     email="mailto:thomas@bytecode.nl"
                     instagram="https://www.instagram.com/thomasbodje"
                     linkedin="https://www.linkedin.com/in/thomasbodlaender"
@@ -116,7 +116,7 @@ const Over = () => (
                 <TeamMember
                     name="Nick Broekarts"
                     title="Online marketeer &amp; SEO specialist"
-                    img="/static/img/team/nick.png"
+                    img={require('../images/img/team/nick.png')}
                     email="mailto:nick@bytecode.nl"
                     instagram="https://www.instagram.com/nickbroekarts"
                     linkedin="https://www.linkedin.com/in/nickbroekarts"

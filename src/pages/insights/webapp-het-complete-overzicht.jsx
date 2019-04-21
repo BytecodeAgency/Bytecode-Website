@@ -15,12 +15,12 @@ const content = {
     subtitle: '',
     slug: 'webapp-het-complete-overzicht',
     posted_on: '30 maart 2019',
-    article_image_url: '/static/img/articles/webapp-overzicht.jpg',
+    article_image_url: require('../../images/img/articles/webapp-overzicht.jpg'),
     summary:
         'Webapp: wat is een (progressive) webapp? Is een webapp beter dan een mobiele app en wat is de waarde van een webapp voor jouw bedrijf? Lees het hier!',
     author_name: 'Nick Broekarts',
     author_role: 'Online Marketeer',
-    author_image_url: '/static/img/authors/nick.jpeg',
+    author_image_url: require('../../images/img/authors/nick.jpeg'),
     catergory_name: 'Webapps',
     category_slug: 'webapps',
     reading_time: 13,
@@ -64,7 +64,7 @@ const content = {
     <li>Het moet mogelijk zijn om push notificaties aan en/of uit te zetten.</li>
     <li>De gebruiker moet ingelogd kunnen zijn op verschillende toestellen met behulp van de credential management API.</li>
     <li>De gebruiker kan makkelijk betalen door de user-interface bij een betaalverzoek.</li>
-    </ul><p><a href="https://developers.google.com/web/progressive-web-apps/checklist" target="_blank" rel="noopener">Bron checklist: Google</a></p><p><img src="/static/img/articles/webapp-overzicht-1.jpeg" alt=""></p><h3 id="Chrome-Lighthouse-Tool">Chrome Lighthouse Tool</h3><p>Als je een webapplicatie hebt of aan het ontwikkelen bent, en je wilt testen of je (progressive) webapp voldoet aan de <strong>eisen</strong>, dan kun je gebruik maken van de <a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk" target="_blank" rel="noopener">Chrome Lighthouse Tool</a>.</p><p>Aan de techniek achter progressive webapps wordt hard gewerkt. Stukje bij beetje wordt het voor PWAs gemakkelijker om native apps te vervangen, omdat Android en iOS steeds meer mogelijk maken binnen de browser. Zo zal het bijvoorbeeld binnenkort mogelijk worden om gebruik te maken van de NFC-functionaliteit, allemaal vanuit de PWA. Om te bekijken wat er allemaal mogelijk is kan je met je mobiele browser naar <a href="https://whatwebcando.today" target="_blank" rel="noopener">whatwebcando.today</a> gaan om precies te zien welke functionaliteiten jouw telefoon ondersteunt.</p><h2 id="Webapp-versus-native-app-wat-zijn-de-voor-en-nadelen">Webapp versus native app: wat zijn de voor en nadelen?</h2><p>Voordat we gaan bespreken wat de mogelijkheden van een webapplicatie zijn voor jouw bedrijf, zullen we eerst de webapp tegenover de native app zetten. We bekijken hierbij de voor- en nadelen van beide instrumenten.</p><h3 id="De-voordelen-van-een-webapp">De voordelen van een webapp:</h3><ul>
+    </ul><p><a href="https://developers.google.com/web/progressive-web-apps/checklist" target="_blank" rel="noopener">Bron checklist: Google</a></p><p><img src=${require('../../images/img/articles/webapp-overzicht-1.jpeg')} alt=""></p><h3 id="Chrome-Lighthouse-Tool">Chrome Lighthouse Tool</h3><p>Als je een webapplicatie hebt of aan het ontwikkelen bent, en je wilt testen of je (progressive) webapp voldoet aan de <strong>eisen</strong>, dan kun je gebruik maken van de <a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk" target="_blank" rel="noopener">Chrome Lighthouse Tool</a>.</p><p>Aan de techniek achter progressive webapps wordt hard gewerkt. Stukje bij beetje wordt het voor PWAs gemakkelijker om native apps te vervangen, omdat Android en iOS steeds meer mogelijk maken binnen de browser. Zo zal het bijvoorbeeld binnenkort mogelijk worden om gebruik te maken van de NFC-functionaliteit, allemaal vanuit de PWA. Om te bekijken wat er allemaal mogelijk is kan je met je mobiele browser naar <a href="https://whatwebcando.today" target="_blank" rel="noopener">whatwebcando.today</a> gaan om precies te zien welke functionaliteiten jouw telefoon ondersteunt.</p><h2 id="Webapp-versus-native-app-wat-zijn-de-voor-en-nadelen">Webapp versus native app: wat zijn de voor en nadelen?</h2><p>Voordat we gaan bespreken wat de mogelijkheden van een webapplicatie zijn voor jouw bedrijf, zullen we eerst de webapp tegenover de native app zetten. We bekijken hierbij de voor- en nadelen van beide instrumenten.</p><h3 id="De-voordelen-van-een-webapp">De voordelen van een webapp:</h3><ul>
     <li>Webapps werken op <strong>alle besturingssystemen</strong> en toestellen die beschikking hebben tot een webbrowser (zelfs op desktop!).</li>
     <li>Webapplicaties hoeven <strong>niet geïnstalleerd</strong> te worden.</li>
     <li>Gebruikt nagenoeg <strong>geen ruimte op het apparaat</strong>.</li>

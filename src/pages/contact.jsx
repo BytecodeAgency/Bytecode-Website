@@ -23,7 +23,7 @@ const ContactHeading = styled.h3`
 const Contact = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="/static/img/header/telefoon.jpg"
+            img={require('../images/img/header/telefoon.jpg')}
             subtitle="Contact"
             title="Een keertje langskomen? Gezellig!"
             href="https://calendly.com/bytecode"

@@ -9,6 +9,15 @@ import Process from '../components/Process';
 import Thumbnail from '../components/Thumbnail';
 import Wrapper from '../components/Wrapper';
 
+const service1icon = require('../images/icons/services/mobile.svg');
+const service2icon = require('../images/icons/services/cloud.svg');
+const service3icon = require('../images/icons/services/api.svg');
+const service4icon = require('../images/icons/services/design.svg');
+const service1bg = require('../images/img/services/mobile.jpg');
+const service2bg = require('../images/img/services/servers.jpg');
+const service3bg = require('../images/img/services/code.jpeg');
+const service4bg = require('../images/img/services/design.jpg');
+
 const pageSettings = {
     title: `Bytecode Digital Agency B.V.`,
     description: `Bytecode Digital Agency B.V. |
@@ -35,7 +44,7 @@ const Home = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
             useGatsbyLink
-            img="/static/img/header/web.svg"
+            img={require('../images/img/header/web.svg')}
             subtitle="Welkom bij Bytecode"
             title="Specialisten in maatwerk voor web en mobiel"
             href="/contact"
@@ -54,32 +63,29 @@ const Home = () => (
                         <Col sm={6}>
                             <Thumbnail
                                 serviceName="Websites, Webshops en Webapps"
-                                serviceIcon="/static/icons/services/mobile.svg"
-                                backgroundImage="
-                                /static/img/services/mobile.jpg"
+                                serviceIcon={service1icon}
+                                backgroundImage={service1bg}
                             />
                         </Col>
                         <Col sm={6}>
                             <Thumbnail
                                 serviceName="Cloud en Automatisering"
-                                serviceIcon="/static/icons/services/cloud.svg"
-                                backgroundImage="
-                                /static/img/services/servers.jpg"
+                                serviceIcon={service2icon}
+                                backgroundImage={service2bg}
                             />
                         </Col>
                         <Col sm={6}>
                             <Thumbnail
                                 serviceName="Mobile- en API-ontwikkeling"
-                                serviceIcon="/static/icons/services/api.svg"
-                                backgroundImage="/static/img/services/code.jpeg"
+                                serviceIcon={service3icon}
+                                backgroundImage={service3bg}
                             />
                         </Col>
                         <Col sm={6}>
                             <Thumbnail
                                 serviceName="Branding, Design en Marketing"
-                                serviceIcon="/static/icons/services/design.svg"
-                                backgroundImage="
-                                /static/img/services/design.jpg"
+                                serviceIcon={service4icon}
+                                backgroundImage={service4bg}
                             />
                         </Col>
                     </Row>
@@ -129,7 +135,7 @@ const Home = () => (
                     <Col offset={{ lg: 1 }} md={12} lg={5}>
                         <GroupImage
                             width="700"
-                            src="/static/img/content/team-700.png"
+                            src={require('../images/img/content/team-700.png')}
                             alt="Onze mindset"
                         />
                     </Col>

@@ -34,7 +34,7 @@ const BlogThumbnailContentWrapper = styled.a`
 `;
 
 const BlogThumbnailImage = styled.div`
-    background-image: url(${props => props.url || '/static/img/header/noise.jpg'});
+    background-image: url(${props => props.url || '../images/img/header/noise.jpg'});
     width: 100%;
     height: 25rem;
     background-size: cover;
@@ -56,12 +56,12 @@ const content1 = {
     subtitle: '',
     slug: 'website-laten-maken',
     posted_on: '10 december 2018',
-    article_image_url: '/static/img/articles/website-laten-maken.jpg',
+    article_image_url: require('../images/img/articles/website-laten-maken.jpg'),
     summary:
         'Je wilt een website laten maken en bent op zoek naar de juiste webdeveloper. Wat is nou echt waardevol voor jouw website? Lees het hier!',
     author_name: 'Nick Broekarts',
     author_role: 'Online Marketeer',
-    author_image_url: '/static/img/authors/nick.jpeg',
+    author_image_url: require('../images/img/authors/nick.jpeg'),
     catergory_name: 'Websites',
     category_slug: 'websites',
     reading_time: 8,
@@ -73,12 +73,12 @@ const content2 = {
     subtitle: '',
     slug: 'webapp-het-complete-overzicht',
     posted_on: '30 maart 2019',
-    article_image_url: '/static/img/articles/webapp-overzicht.jpg',
+    article_image_url: require('../images/img/articles/webapp-overzicht.jpg'),
     summary:
         'Webapp: wat is een (progressive) webapp? Is een webapp beter dan een mobiele app en wat is de waarde van een webapp voor jouw bedrijf? Lees het hier!',
     author_name: 'Nick Broekarts',
     author_role: 'Online Marketeer',
-    author_image_url: '/static/img/authors/nick.jpeg',
+    author_image_url: require('../images/img/authors/nick.jpeg'),
     catergory_name: 'Webapps',
     category_slug: 'webapps',
     reading_time: 13,
@@ -122,7 +122,7 @@ const BlogThumbnail = props => {
 const blogArchive = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="/static/img/content/vision_web.png"
+            img={require('../images/img/content/vision_web.png')}
             subtitle="Insights"
             title="Een frisse blik op het internet."
             text="Hier zie je artikelen die met passie zijn geschreven

@@ -5,6 +5,10 @@ import theme from '../styles/theme';
 import TextBlock from './TextBlock';
 import { Row, Col } from '../lib/Grid';
 
+const step1 = require('../images/img/content/workflow/analyze.svg');
+const step2 = require('../images/img/content/workflow/strategize.svg');
+const step3 = require('../images/img/content/workflow/realize.svg');
+
 const Step = styled(Col)`
     margin: 3em 0;
 `;
@@ -33,10 +37,7 @@ const Process = () => (
     <Container fluid>
         <Row>
             <Step offset={{ xl: 1, lg: 2 }} md={6} lg={3} xl={3}>
-                <ProcessStepImage
-                    src="/static/img/content/workflow/analyze.svg"
-                    alt="Analyze"
-                />
+                <ProcessStepImage src={step1} alt="Analyze" />
                 <TextBlock
                     className="padded"
                     subtitle="Stap 1"
@@ -51,10 +52,7 @@ const Process = () => (
                 </TextBlock>
             </Step>
             <Step offset={{ xl: 0.5, lg: 2 }} md={6} lg={3} xl={3}>
-                <ProcessStepImage
-                    src="/static/img/content/workflow/strategize.svg"
-                    alt="Strategize"
-                />
+                <ProcessStepImage src={step2} alt="Strategize" />
                 <TextBlock
                     subtitle="Stap 2"
                     headingType="h2"
@@ -69,10 +67,7 @@ const Process = () => (
                 </TextBlock>
             </Step>
             <Step offset={{ xl: 0.5, lg: 2 }} md={6} lg={3} xl={3}>
-                <ProcessStepImage
-                    src="/static/img/content/workflow/realize.svg"
-                    alt="Realize"
-                />
+                <ProcessStepImage src={step3} alt="Realize" />
                 <TextBlock subtitle="Stap 3" headingType="h2" title="Realize">
                     Nadat we alles helemaal hebben geanalyseerd en gepland, is
                     het tijd om de handen uit de mouwen te steken en het plan te

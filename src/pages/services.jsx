@@ -44,6 +44,7 @@ const ServiceIcon = styled(Col)`
 
 const Service = ({ children, ...props }) => {
     const { iconName, title, fullWidth } = props;
+    const iconSrc = require(`../images/icons/services/${iconName}.svg`);
     let width = 5;
     if (fullWidth) {
         width = 11;
@@ -52,10 +53,7 @@ const Service = ({ children, ...props }) => {
         <ServiceWrapper lg={width} md={width} xs={12}>
             <ServiceRow>
                 <ServiceIcon xs={4}>
-                    <Icon
-                        src={`/static/icons/services/${iconName}.svg`}
-                        alt={iconName}
-                    />
+                    <Icon src={iconSrc} alt={iconName} />
                 </ServiceIcon>
                 <Col sm={8} xs={12}>
                     <TextBlock title={title} headingType="h3">
@@ -70,7 +68,7 @@ const Service = ({ children, ...props }) => {
 const Services = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
-            img="/static/img/header/postit-shadow.jpg"
+            img={require('../images/img/header/postit-shadow.jpg')}
             subtitle="Services"
             title="Wij doen alles om het beste digitale resultaat te behalen."
             text="Onze diensten zorgen voor de beste digitale resultaten
@@ -161,7 +159,7 @@ const Services = () => (
             </Container>
         </Wrapper>
         <ImageBlock
-            src="/static/img/content/code-arch.jpg"
+            src={require('../images/img/content/code-arch.jpg')}
             alt="maatwerk development"
         />
 
@@ -238,7 +236,7 @@ const Services = () => (
                 </Col>
                 <Col md={5}>
                     <ImageBlock
-                        src="/static/img/content/tekentablet.jpg"
+                        src={require('../images/img/content/tekentablet.jpg')}
                         alt="tekentablet voor designwerk"
                     />
                 </Col>
