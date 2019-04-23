@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from '../layouts/MainLayout';
 import TextBlock from '../components/TextBlock';
 import ImageBlock from '../components/ImageBlock';
 import ContentPageHeader from '../components/ContentPageHeader';

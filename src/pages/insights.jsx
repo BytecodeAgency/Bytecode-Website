@@ -1,26 +1,143 @@
-/* eslint-disable max-len, object-curly-newline, camelcase */
+/* eslint-disable max-len, object-curly-newline, camelcase, prettier/prettier */
 
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import Layout from '../components/Layout';
+import { Link, graphql } from 'gatsby';
+import Layout from '../layouts/MainLayout';
 import theme from '../styles/theme';
-import TextBlock from '../components/TextBlock';
-import { Container, Row, Col, Hidden } from '../lib/Grid'; // eslint-disable-line
+import { Container, Row, Col } from '../lib/Grid';
 import Author from '../components/Author';
 import ContactForm from '../components/ContactForm';
 import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 
-/* eslint-disable */
 const pageSettings = {
     title: 'Bytecode Insights - Bytecode Digital Agency B.V.',
     description:
         'Bytecode insights, vergroot je kennis en leer meer over hoe je digitale assets kan inzetten voor jouw business! Samen halen we alles uit jouw digitale zelf!',
     keywords: 'bytecode insights',
 };
-/* eslint-enable */
-/* eslint-disable max-len, object-curly-newline, camelcase, prettier/prettier */
+
+const Blogpost = ({ data: post }, key) => (
+    <BlogThumbnail
+        key={key}
+        title={post.frontmatter.title}
+        slug={post.frontmatter.slug}
+        posted_on={post.frontmatter.posted_on}
+        article_image_url={post.frontmatter.article_image_url}
+        author_name={post.frontmatter.author_name}
+        author_role={post.frontmatter.author_role}
+        author_image_url={post.frontmatter.author_image_url}
+        category_name={post.frontmatter.category_name}
+        reading_time={post.frontmatter.reading_time}
+    />
+);
+
+const blogArchive = ({ data }) => {
+    const { edges: posts } = data.allMdx;
+
+    return (
+        <Layout pageSettings={pageSettings}>
+            <ContentPageHeader
+                img={require('../images/img/content/vision_web.png')}
+                subtitle="Insights"
+                title="Een frisse blik op het internet."
+                text="Hier zie je artikelen die met passie zijn geschreven
+                door Bytecode, een jonge en moderne web agency. Wij
+                laten jou graag zien hoe je de kracht van het
+                internet kunt gebruiken om alles uit jezelf te
+                halen. Dit doen we door interessante artikelen te
+                schrijven, maar ook door deze inzichten in onze
+                werkzaamheden te verwerken."
+            />
+            <Posts>
+                <Container fluid>
+                    <Row>
+                        <Col offset={{ md: 1 }} md={10}>
+                            <Container fluid>
+                                <Row>
+                                    {
+                                        posts.map(({ node: post }, _, key) => <Blogpost data={post} key={key} />)
+                                    }
+                                </Row>
+                            </Container>
+                        </Col>
+                    </Row>
+                </Container>
+            </Posts>
+            <Wrapper>
+                <ContactForm />
+            </Wrapper>
+        </Layout>
+    );
+};
+
+export const pageQuery = graphql`
+    query blogIndex {
+        allMdx {
+            edges {
+                node {
+                    id
+                    excerpt
+                    frontmatter {
+                        id
+                        title
+                        subtitle
+                        posted_on
+                        article_image_url
+                        summary
+                        author_name
+                        author_role
+                        author_image_url
+                        catergory_name
+                        category_slug
+                        reading_time
+                    }
+                    # fields {
+                    #     slug
+                    # }
+                }
+            }
+        }
+    }
+`;
+
+export default blogArchive;
+
+const BlogThumbnail = props => {
+    const {
+        title,
+        slug,
+        posted_on,
+        article_image_url,
+        author_name,
+        author_role,
+        author_image_url,
+        category_name,
+        reading_time,
+    } = props;
+    return (
+        <Col xl={4} lg={4}>
+            <Link to={slug}>
+                <BlogThumbnailContentWrapper>
+                    <BlogThumbnailImage url={article_image_url} />
+                    <h6 className="subtitle">{category_name}</h6>
+                    <h3>{title}</h3>
+                    <AuthorContainer>
+                        <Author
+                            name={author_name}
+                            title={author_role}
+                            img={author_image_url}
+                        />
+                    </AuthorContainer>
+                    <p>
+                        {reading_time} min read <br /> {posted_on}
+                    </p>
+                </BlogThumbnailContentWrapper>
+            </Link>
+        </Col>
+    );
+};
 
 const Posts = styled.section`
     margin: 0;
@@ -48,133 +165,3 @@ const BlogThumbnailImage = styled.div`
 const AuthorContainer = styled.div`
     margin: 2rem 0;
 `;
-
-const content1 = {
-    id: 1,
-    title:
-        'Wil je een website laten maken? Tips en tricks bij het kiezen van een webdeveloper!',
-    subtitle: '',
-    slug: 'website-laten-maken',
-    posted_on: '10 december 2018',
-    article_image_url: require('../images/img/articles/website-laten-maken.jpg'),
-    summary:
-        'Je wilt een website laten maken en bent op zoek naar de juiste webdeveloper. Wat is nou echt waardevol voor jouw website? Lees het hier!',
-    author_name: 'Nick Broekarts',
-    author_role: 'Online Marketeer',
-    author_image_url: require('../images/img/authors/nick.jpeg'),
-    catergory_name: 'Websites',
-    category_slug: 'websites',
-    reading_time: 8,
-};
-
-const content2 = {
-    id: 2,
-    title: 'Webapp: het complete overzicht',
-    subtitle: '',
-    slug: 'webapp-het-complete-overzicht',
-    posted_on: '30 maart 2019',
-    article_image_url: require('../images/img/articles/webapp-overzicht.jpg'),
-    summary:
-        'Webapp: wat is een (progressive) webapp? Is een webapp beter dan een mobiele app en wat is de waarde van een webapp voor jouw bedrijf? Lees het hier!',
-    author_name: 'Nick Broekarts',
-    author_role: 'Online Marketeer',
-    author_image_url: require('../images/img/authors/nick.jpeg'),
-    catergory_name: 'Webapps',
-    category_slug: 'webapps',
-    reading_time: 13,
-};
-
-const BlogThumbnail = props => {
-    const {
-        title,
-        slug,
-        posted_on,
-        article_image_url,
-        author_name,
-        author_role,
-        author_image_url,
-        category_name,
-        reading_time,
-    } = props;
-    return (
-        <Col xl={4} lg={4}>
-            <Link to={`insights/${slug}`}>
-                <BlogThumbnailContentWrapper>
-                    <BlogThumbnailImage url={article_image_url} />
-                    <h6 className="subtitle">{category_name}</h6>
-                    <h3>{title}</h3>
-                    <AuthorContainer>
-                        <Author
-                            name={author_name}
-                            title={author_role}
-                            img={author_image_url}
-                        />
-                    </AuthorContainer>
-                    <p>
-                        {reading_time} min read <br /> {posted_on}
-                    </p>
-                </BlogThumbnailContentWrapper>
-            </Link>
-        </Col>
-    );
-};
-
-const blogArchive = () => (
-    <Layout pageSettings={pageSettings}>
-        <ContentPageHeader
-            img={require('../images/img/content/vision_web.png')}
-            subtitle="Insights"
-            title="Een frisse blik op het internet."
-            text="Hier zie je artikelen die met passie zijn geschreven
-            door Bytecode, een jonge en moderne web agency. Wij
-            laten jou graag zien hoe je de kracht van het
-            internet kunt gebruiken om alles uit jezelf te
-            halen. Dit doen we door interessante artikelen te
-            schrijven, maar ook door deze inzichten in onze
-            werkzaamheden te verwerken."
-        />
-        <Posts>
-            <Container fluid>
-                <Row>
-                    <Col offset={{ md: 1 }} md={10}>
-                        <Container fluid>
-                            <Row>
-                                <BlogThumbnail
-                                    title={content1.title}
-                                    slug={content1.slug}
-                                    posted_on={content1.posted_on}
-                                    article_image_url={
-                                        content1.article_image_url
-                                    }
-                                    author_name={content1.author_name}
-                                    author_role={content1.author_role}
-                                    author_image_url={content1.author_image_url}
-                                    category_name={content1.category_name}
-                                    reading_time={content1.reading_time}
-                                />
-                                <BlogThumbnail
-                                    title={content2.title}
-                                    slug={content2.slug}
-                                    posted_on={content2.posted_on}
-                                    article_image_url={
-                                        content2.article_image_url
-                                    }
-                                    author_name={content2.author_name}
-                                    author_role={content2.author_role}
-                                    author_image_url={content2.author_image_url}
-                                    category_name={content2.category_name}
-                                    reading_time={content2.reading_time}
-                                />
-                            </Row>
-                        </Container>
-                    </Col>
-                </Row>
-            </Container>
-        </Posts>
-        <Wrapper>
-            <ContactForm />
-        </Wrapper>
-    </Layout>
-);
-
-export default blogArchive;

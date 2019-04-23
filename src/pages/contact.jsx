@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../components/Layout';
+import Layout from '../layouts/MainLayout';
 import ContactForm from '../components/ContactForm';
 import { Container, Row, Col } from '../lib/Grid';
 import Button from '../components/Button';

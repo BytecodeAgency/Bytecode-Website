@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
-import SEO from './SEO';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import SEO from '../components/SEO';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import theme from '../styles/theme';
 import { GlobalStyles } from '../styles/global-css';
 

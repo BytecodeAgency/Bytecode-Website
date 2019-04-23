@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../components/Layout';
+import Layout from '../layouts/MainLayout';
 import TextBlock from '../components/TextBlock';
 import ContentPageHeader from '../components/ContentPageHeader';
 import { Container, Row, Col } from '../lib/Grid';
