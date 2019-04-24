@@ -1,7 +1,9 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import BlogpostLayout from '../layouts/BlogpostLayout';
 
-const BlogpostTemplate = ({ mdx }) => {
+const BlogpostTemplate = ({ data }) => {
+    const { mdx } = data;
     const content = {
         pageSettings: {
             title: mdx.frontmatter.title,
@@ -22,3 +24,33 @@ const BlogpostTemplate = ({ mdx }) => {
 };
 
 export default BlogpostTemplate;
+
+export const query = graphql`
+    query BlogPostQuery($id: String) {
+        mdx(id: { eq: $id }) {
+            id
+            frontmatter {
+                id
+                title
+                description
+                keywords
+                subtitle
+                posted_on
+                article_image_url
+                summary
+                author_name
+                author_role
+                author_image_url
+                catergory_name
+                category_slug
+                reading_time
+            }
+            code {
+                body
+            }
+            fields {
+                slug
+            }
+        }
+    }
+`;

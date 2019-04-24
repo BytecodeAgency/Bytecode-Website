@@ -27,7 +27,7 @@ const CallToAction = () => (
     </CallToActionContainer>
 );
 
-const BlogSingle = content => (
+const BlogSingle = ({ content }) => (
     <Layout pageSettings={content.pageSettings}>
         <article>
             <HeaderContainer background={content.article_image_url}>

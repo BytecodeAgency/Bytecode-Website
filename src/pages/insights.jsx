@@ -22,7 +22,7 @@ const Blogpost = ({ data: post }, key) => (
     <BlogThumbnail
         key={key}
         title={post.frontmatter.title}
-        slug={post.frontmatter.slug}
+        slug={post.fields.slug}
         posted_on={post.frontmatter.posted_on}
         article_image_url={post.frontmatter.article_image_url}
         author_name={post.frontmatter.author_name}
@@ -83,7 +83,6 @@ export const pageQuery = graphql`
                         id
                         title
                         subtitle
-                        slug
                         posted_on
                         article_image_url
                         summary
@@ -93,6 +92,9 @@ export const pageQuery = graphql`
                         catergory_name
                         category_slug
                         reading_time
+                    }
+                    fields {
+                        slug
                     }
                 }
             }
