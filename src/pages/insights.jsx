@@ -83,6 +83,7 @@ export const pageQuery = graphql`
                         id
                         title
                         subtitle
+                        slug
                         posted_on
                         article_image_url
                         summary
@@ -93,9 +94,6 @@ export const pageQuery = graphql`
                         category_slug
                         reading_time
                     }
-                    # fields {
-                    #     slug
-                    # }
                 }
             }
         }

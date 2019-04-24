@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import Layout from './MainLayout';
 import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
@@ -54,7 +55,9 @@ const BlogSingle = content => (
             </HeaderContainer>
             <BlogContentContainer>
                 <BlogContent>
-                    <div id="blogpost-content">{content.post_content}</div>
+                    <div id="blogpost-content">
+                        <MDXRenderer>{content.post_content}</MDXRenderer>
+                    </div>
                     <CallToAction />
                 </BlogContent>
             </BlogContentContainer>
