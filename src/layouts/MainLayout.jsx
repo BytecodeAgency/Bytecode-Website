@@ -19,8 +19,8 @@ const Head = () => (
         <link type="text/plain" rel="author" href="/humans.txt" />
         <link rel="stylesheet" href="https://use.typekit.net/kcu2skl.css" />
         <link
+            href="https://fonts.googleapis.com/css?family=Inconsolata"
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Space+Mono"
         />
         <style data-info="bytecode-global-styling">{GlobalStyles}</style>
     </Helmet>
