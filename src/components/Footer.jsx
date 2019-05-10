@@ -122,10 +122,7 @@ const Footer = () => (
                 </FooterCol>
                 <FooterCol>
                     <FooterHeadingContainer>
-                        <OpenSourceIcon
-                            src={opensource}
-                            alt="Open source"
-                        />
+                        <OpenSourceIcon src={opensource} alt="Open source" />
                     </FooterHeadingContainer>
                     <FooterText>
                         Wij dragen graag bij aan open source projecten en vrije
