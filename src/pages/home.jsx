@@ -52,7 +52,7 @@ const Home = () => (
             bgSize="70%"
             text="Bytecode Digital Agency is een kleinschalig full-service
             webbureau gespecialiseerd in maatwerkontwikkeling voor web en
-            mobiel. Ons team help je dolgraag met het analyseren, bedenken en
+            mobiel. Ons team helpt je dolgraag met het analyseren, bedenken en
             ontwikkelen van alles wat je nodig hebt om je digitaal volledig te
             ontplooien."
         />

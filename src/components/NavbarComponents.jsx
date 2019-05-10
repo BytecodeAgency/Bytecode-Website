@@ -65,6 +65,8 @@ const StyledLink = styled(Link)`
     text-transform: none;
     position: relative;
     transition: all 0.2s ease;
+    ${theme.typography.menuitem};
+    text-decoration: none;
     &::after {
         content: '';
         position: absolute;
