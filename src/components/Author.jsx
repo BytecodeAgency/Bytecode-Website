@@ -16,7 +16,7 @@ const AuthorBlock = styled.div`
     }
 `;
 
-const AuthorBlockPhoto = styled.div`
+const AuthorBlockPhoto = styled.img`
     min-width: 5rem;
     width: 5rem;
     min-height: 5rem;
@@ -30,9 +30,10 @@ const AuthorBlockPhoto = styled.div`
 
 const Author = props => {
     const { img, name, title } = props;
+    const image = require(`../images/img/authors/${img}`);
     return (
         <AuthorBlock>
-            <AuthorBlockPhoto src={img} />
+            <AuthorBlockPhoto src={image} />
             <div className="content">
                 <h4>{name}</h4>
                 <h5>{title}</h5>

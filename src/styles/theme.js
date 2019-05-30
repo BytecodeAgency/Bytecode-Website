@@ -12,7 +12,7 @@ const white = '#ffffff';
 // Fonts
 const heading = 'Lato';
 const paragraph = 'Lato';
-const menu = 'Space Mono';
+const menu = 'Cousine';
 
 // Font weights
 const regular = 400;

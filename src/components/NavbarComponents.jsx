@@ -65,6 +65,7 @@ const StyledLink = styled(Link)`
     text-transform: none;
     position: relative;
     transition: all 0.2s ease;
+    text-decoration: none;
     &::after {
         content: '';
         position: absolute;
@@ -110,11 +111,12 @@ const NavbarItem = styled(NavbarItemBase)`
 `;
 
 const Logo = styled.span`
+    display: block;
     @media (min-width: ${theme.breakpointMobileMenu}) {
         width: 25rem;
     }
     img {
-        width: 60%;
+        width: 70%;
         @media (max-width: ${theme.breakpointMobileMenu}) {
             display: none;
         }

@@ -5,7 +5,7 @@ cache:
 before_script:
   - apk add python make g++
   - npm i -g yarn
-  - npm i # To fix Yarn error
+  - yarn
   - cp .env.example .env
 
 build:
@@ -13,11 +13,3 @@ build:
   script:
     - yarn run lint
     - yarn run build
-    - yarn run export
-
-build-node-8:
-  image: node:8-alpine
-  script:
-    - yarn run lint
-    - yarn run build
-    - yarn run export
