@@ -111,11 +111,12 @@ const NavbarItem = styled(NavbarItemBase)`
 `;
 
 const Logo = styled.span`
+    display: block;
     @media (min-width: ${theme.breakpointMobileMenu}) {
         width: 25rem;
     }
     img {
-        width: 60%;
+        width: 70%;
         @media (max-width: ${theme.breakpointMobileMenu}) {
             display: none;
         }
