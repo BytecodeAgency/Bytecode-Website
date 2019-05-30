@@ -82,6 +82,7 @@ export const pageQuery = graphql`
                     frontmatter {
                         id
                         title
+                        slug
                         subtitle
                         posted_on
                         article_image_url
@@ -116,11 +117,12 @@ const BlogThumbnail = props => {
         category_name,
         reading_time,
     } = props;
+    const articleImage = require(`../images/img/articles/${article_image_url}`);
     return (
         <Col xl={4} lg={4}>
-            <Link to={slug}>
+            <Link to={`/insights/${slug}`}>
                 <BlogThumbnailContentWrapper>
-                    <BlogThumbnailImage url={article_image_url} />
+                    <BlogThumbnailImage url={articleImage} />
                     <h6 className="subtitle">{category_name}</h6>
                     <h3>{title}</h3>
                     <AuthorContainer>
