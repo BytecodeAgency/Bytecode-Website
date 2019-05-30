@@ -1,6 +1,5 @@
 # TODO
 
-* Fix font in menu
 * Update insights to work with Markdown
 * Serve static PDF files through a CDN
 * Don't gitignore documents with AV
