@@ -48,9 +48,7 @@ export const query = graphql`
             code {
                 body
             }
-            fields {
-                slug
-            }
+
         }
     }
 `;

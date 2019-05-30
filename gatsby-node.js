@@ -5,6 +5,7 @@
  */
 
 const path = require('path');
+
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -26,6 +27,25 @@ exports.createPages = async ({ actions, graphql }) => {
                 edges {
                     node {
                         id
+                        frontmatter {
+                            id
+                            title
+                            description
+                            keywords
+                            subtitle
+                            posted_on
+                            article_image_url
+                            summary
+                            author_name
+                            author_role
+                            author_image_url
+                            catergory_name
+                            category_slug
+                            reading_time
+                        }
+                        code {
+                            body
+                        }
                         fields {
                             slug
                         }
