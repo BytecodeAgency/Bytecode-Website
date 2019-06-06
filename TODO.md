@@ -4,7 +4,6 @@
 
 ### Blocking issues Julian
 
-* Update insights to work with Markdown
 * Remove Gatsby boilerplate everywhere (if any)
 * Make sure all SEO stuff is still working
 * Make sure all forms are still working
