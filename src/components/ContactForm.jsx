@@ -100,10 +100,11 @@ const Notification = ({ type, message }) => (
 const sendFormInformation = async sendData =>
     axios
         .post(
-            'api.bytecode.nl/contact',
+            'localhost:3000/contact',
             {
                 header: {
                     'Access-Control-Allow-Origin': '*',
+                    'Content-Type': 'application/json',
                 },
             },
             sendData,

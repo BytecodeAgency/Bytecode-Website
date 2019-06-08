@@ -4,16 +4,12 @@
 
 ### Blocking issues Julian
 
-* Remove Gatsby boilerplate everywhere (if any)
-* Make sure all forms are still working // Do send the correct post
-* Update .travis.yml
-* Research page transitions // 
+* Make sure all forms are still working // api has to be fixed.
+* Update .travis.yml // Nothing really changed Export should catch all linting errors, added `yarn run test` tho
+* Research page transitions // Can be done with: https://transitionlink.tylerbarnes.ca/docs/transitionlink/ looks really obstrusive tho, maybe good for a short responsive animation
 
 ### Blocking issues Luciano
 
-* Serve static PDF files through a CDN
-* Don't gitignore documents with AV
-* Update license to state proprietary content (text, images, insights)
 * Configure production server
 
 ## Release TBD
