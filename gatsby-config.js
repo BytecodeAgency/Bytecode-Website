@@ -3,6 +3,7 @@ module.exports = {
         title: `Bytecode Digital Agency`,
         description: `The Bytecode Digital Agency website, made in GatsbyJS`,
         author: `@bytecodebv`,
+        siteUrl: 'https://www.bytecode.nl',
     },
     plugins: [
         {
@@ -29,6 +30,15 @@ module.exports = {
                 theme_color: `#23be87`,
                 display: `minimal-ui`,
                 icon: `src/images/icons/icon-512x512.png`,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-sitemap`,
+        },
+        {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+                policy: [{ userAgent: '*', allow: '/' }],
             },
         },
         {
