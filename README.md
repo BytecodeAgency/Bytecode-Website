@@ -55,7 +55,7 @@ The `POST`-route is `/post`.
 
 This project is AGPL-3.0 licenced with certain restrictions for commercial use. These restrictions are as follows:
 
-1. The files in the icon folder are proprietary, unless stated otherwise on the top of the file
+1. The files in the content, src/pages and src/image folders are proprietary, unless stated otherwise on the top of the file
 2. The styles/theme.js file must be completely modified so that a modified version of this website will not include the same look and feel and markup, as Bytecode branding and markup is proprietary
 3. Any written content, with the sole purpose of displaying text or custom content for meta tags, must be removed or completely modified, as website contents are proprietary
 4. Images cannot be reused unless they are used under Creative Commons license
