@@ -7,8 +7,6 @@
 * Remove Gatsby boilerplate everywhere (if any)
 * Make sure all forms are still working // Do send the correct post
 * Update .travis.yml
-* Add humans.txt again
-* Add sitemap functionality // sitemap.xml ,pwa functionality
 * Research page transitions // 
 
 ### Blocking issues Luciano
