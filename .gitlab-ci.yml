@@ -12,4 +12,5 @@ build:
   image: node:10-alpine
   script:
     - yarn run lint
+    - yarn run test
     - yarn run build
