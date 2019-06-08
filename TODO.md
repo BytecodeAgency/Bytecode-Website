@@ -6,11 +6,11 @@
 
 * Remove Gatsby boilerplate everywhere (if any)
 * Make sure all SEO stuff is still working
-* Make sure all forms are still working
+* Make sure all forms are still working // Do send the correct post
 * Update .travis.yml and /gitlab-ci.yml
 * Add humans.txt again
-* Add sitemap functionality
-* Research page transitions
+* Add sitemap functionality // sitemap.xml ,pwa functionality
+* Research page transitions // 
 
 ### Blocking issues Luciano
 
