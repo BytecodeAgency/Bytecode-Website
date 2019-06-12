@@ -8,11 +8,8 @@ build:
   before_script:
     - npm i -g yarn
     - yarn
-    - cp .env.example .env
   script:
-    - yarn run lint
-    - yarn run test
-    - yarn run build
+    - yarn run build --prefix-paths bytecode-website
     - mv public build
   artifacts:
     paths:
