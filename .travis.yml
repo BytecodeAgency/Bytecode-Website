@@ -4,23 +4,13 @@ node_js:
   - "stable"
   - "node"
   - "lts/*"
-  - "9"
-  - "8"
-
-notifications:
-  email:
-    receipients:
-      - info@bytecode.nl
-
-# before_install:
+  - "10"
 
 install:
   - yarn
 
-# before_script:
-
 script:
-  - yarn run test
+  - yarn run lint
   - yarn run export
 
 cache:
