@@ -42,8 +42,8 @@ pages:
   artifacts:
     paths:
       - public
-    only:
-      - master
-      - develop
-      - feature/v2-gatsby # TODO: Remove me!
+  only:
+    - master
+    - develop
+    - feature/v2-gatsby # TODO: Remove me!
 
