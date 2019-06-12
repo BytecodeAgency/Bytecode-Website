@@ -1,16 +1,47 @@
+image: node:10-alpine
 cache:
   paths:
   - node_modules/
 
-before_script:
-  - apk add python make g++
-  - npm i -g yarn
-  - yarn
-  - cp .env.example .env
-
 build:
-  image: node:10-alpine
+  stage: build
+  before_script:
+    - npm i -g yarn
+    - yarn
+    - cp .env.example .env
   script:
     - yarn run lint
     - yarn run test
     - yarn run build
+    - mv public build
+  artifacts:
+    paths:
+      - build/
+
+lint:
+  stage: test
+  before_script:
+    - npm i -g yarn
+    - yarn
+  script:
+    - yarn run lint
+
+include:
+  - template: Code-Quality.gitlab-ci.yml
+code_quality:
+  dependencies: []
+
+pages:
+  image: alpine:3.9
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - rm -rf public
+    - mv build public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+
