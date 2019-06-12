@@ -4,6 +4,7 @@
 
 ### Blocking issues Julian
 
+* [ ] Fix GitLab Pages build http://bytecode.pages.bytedev.io/bytecode-website/
 * [ ] Make sure all forms are still working // api has to be fixed.
 * [ ] Add PWA functionality (see gatsby-config.js file) // docs: https://www.gatsbyjs.org/docs/progressive-web-app/
     * [ ] Manifest
