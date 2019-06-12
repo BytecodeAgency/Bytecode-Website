@@ -120,7 +120,7 @@ const BlogThumbnail = props => {
     const articleImage = require(`../images/img/articles/${article_image_url}`);
     return (
         <Col xl={4} lg={4}>
-            <Link to={`/insights/${slug}`}>
+            <Link to={slug}>
                 <BlogThumbnailContentWrapper>
                     <BlogThumbnailImage url={articleImage} />
                     <h6 className="subtitle">{category_name}</h6>

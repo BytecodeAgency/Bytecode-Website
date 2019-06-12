@@ -4,25 +4,17 @@
 
 ### Blocking issues Julian
 
-* [ ] Update insights to work with Markdown
-* [ ] Remove Gatsby boilerplate everywhere (if any)
-* [ ] Make sure all SEO stuff is still working
-* [ ] Make sure all forms are still working
-* [ ] Update .travis.yml and /gitlab-ci.yml
-* [ ] Add humans.txt again
-* [ ] Add sitemap functionality
-* [ ] Research page transitions
+* Make sure all forms are still working // api has to be fixed.
+* Update .travis.yml // Nothing really changed Export should catch all linting errors, added `yarn run test` tho
+* Research page transitions // Can be done with: https://transitionlink.tylerbarnes.ca/docs/transitionlink/ looks really obstrusive tho, maybe good for a short responsive animation
 
 ### Blocking issues Luciano
 
-* [ ] Serve static PDF files through a CDN
-* [ ] Don't gitignore documents with AV
-* [ ] Update license to state proprietary content (text, images, insights)
-* [ ] Configure production server
+* Configure production server
 
 ## Release TBD
 
-* [ ] Add RSS feed functionality
-* [ ] Add PWA functionality (see gatsby-config.js file)
-* [ ] Where possible, abstract the Gatsby API to make future framework switches less painful
-* [ ] Update documentation from Next to Gatsby
+* Add RSS feed functionality
+* Add PWA functionality (see gatsby-config.js file)
+* Where possible, abstract the Gatsby API to make future framework switches less painful
+* Update documentation from Next to Gatsby

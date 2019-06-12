@@ -99,8 +99,8 @@ const Notification = ({ type, message }) => (
 /* eslint-disable indent, prettier/prettier, implicit-arrow-linebreak */
 const sendFormInformation = async sendData =>
     axios
-        .post('/post', sendData)
-        .then(true)
+        .post('localhost:3000/contact', sendData)
+        .then(() => true)
         .catch(false);
 /* eslint-enable */
 
@@ -126,6 +126,7 @@ class ContactForm extends React.Component {
         const { notifications } = this.state;
         return notifications.map(notification => (
             <Notification
+                key={notification.type + toString(Math.random() * 100)}
                 type={notification.type}
                 message={notification.message}
                 onTimeout={this.clearNotifications}
