@@ -240,6 +240,7 @@ class ContactForm extends React.Component {
                                                 id="contact"
                                                 placeholder="Naam"
                                                 type="text"
+                                                aria-label="contact"
                                                 value={values.contact}
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
@@ -261,6 +262,7 @@ class ContactForm extends React.Component {
                                                 id="email"
                                                 placeholder="Email"
                                                 type="text"
+                                                aria-label="email"
                                                 value={values.email}
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
@@ -280,6 +282,7 @@ class ContactForm extends React.Component {
                                                 id="phone"
                                                 placeholder="Telefoonnummer"
                                                 type="text"
+                                                aria-label="phone"
                                                 value={values.phone}
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
@@ -299,6 +302,7 @@ class ContactForm extends React.Component {
                                                 component={InputTextArea}
                                                 id="contents"
                                                 placeholder="Bericht"
+                                                aria-label="message"
                                                 value={values.contents}
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}

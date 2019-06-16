@@ -45,7 +45,7 @@ class Navbar extends React.Component {
         return (
             <NavbarContainer>
                 <InnerNavbarContainer>
-                    <Link to="/">
+                    <Link to="/" aria-label="homePage">
                         <MobileNavLogo src={logoMin} alt="Logo" />
                     </Link>
                     <BlackOverlay
@@ -56,7 +56,7 @@ class Navbar extends React.Component {
                         <img src={hamburger} alt="Close menu" width="100%" />
                     </MenuButton>
                     <NavbarContent menuIsOpen={menuIsOpen}>
-                        <Link to="/">
+                        <Link to="/" aria-label="homePage">
                             <Logo>
                                 <img src={logo} alt="Bytecode logo" />
                             </Logo>
