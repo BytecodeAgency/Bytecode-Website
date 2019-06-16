@@ -1,4 +1,9 @@
 image: node:10-alpine
+stages:
+  - build
+  - test
+  - deploy
+  - analyze
 cache:
   paths:
   - node_modules/
@@ -23,11 +28,6 @@ lint:
   script:
     - yarn run lint
 
-include:
-  - template: Code-Quality.gitlab-ci.yml
-code_quality:
-  dependencies: []
-
 pages:
   image: alpine:3.9
   stage: deploy
@@ -43,4 +43,10 @@ pages:
     - master
     - develop
     - feature/v2-gatsby # TODO: Remove me!
+
+include:
+  - template: Code-Quality.gitlab-ci.yml
+code_quality:
+  stage: analyze
+  dependencies: []
 
