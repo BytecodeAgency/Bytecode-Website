@@ -33,7 +33,7 @@ export const SocialIcon = ({ url, social }) => {
     }
     /* eslint-disable react/no-danger */
     return (
-        <FooterSocialIcon href={url} target="_blank">
+        <FooterSocialIcon href={url} target="_blank" rel="noopener">
             <Icon
                 dangerouslySetInnerHTML={{ __html: getMinifiedSocial(social) }}
             />

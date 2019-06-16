@@ -7,8 +7,8 @@
 * [ ] Fix GitLab Pages build http://bytecode.pages.bytedev.io/bytecode-website/
 * [ ] Make sure all forms are still working // api has to be fixed.
 * [ ] Add PWA functionality (see gatsby-config.js file) // docs: https://www.gatsbyjs.org/docs/progressive-web-app/
-    * [ ] Manifest
-    * [ ] Caching
+    * [x] Manifest
+    * [x] Caching
     * [ ] Offline mode?
 * [ ] Update documentation from Next to Gatsby
 * [ ] Convert all existing blogposts to MDX
@@ -17,10 +17,10 @@
 * [ ] Fix all pictures on Over page
 * [ ] Fix all pictures on Contact page
 * [ ] Fix Chrome(/Chromium) Lighthouse audit issues:
-    * [ ] [id] attributes on the page are not unique
-    * [ ] Background and foreground colors do not have a sufficient contrast ratio.
-    * [ ] Links to cross-origin destinations are unsafe
-    * [ ] Make sure everything is 80%+, best 90%+
+    * [x] [id] attributes on the page are not unique
+    * [ ] Background and foreground colors do not have a sufficient contrast ratio. (Richard issue)
+    * [x] Links to cross-origin destinations are unsafe
+    * [x] Make sure everything is 80%+, best 90%+
 
 ## Release TBD
 

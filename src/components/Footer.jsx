@@ -116,6 +116,7 @@ const Footer = () => (
                     <FooterButton
                         href="https://calendly.com/bytecode"
                         target="_blank"
+                        rel="noopener"
                     >
                         Plan een afspraak
                     </FooterButton>
@@ -133,6 +134,7 @@ const Footer = () => (
                     <FooterButton
                         href="https://github.com/BytecodeBV/Bytecode-Website"
                         target="_blank"
+                        rel="noopener"
                     >
                         Bekijk broncode
                     </FooterButton>
@@ -157,6 +159,7 @@ const Footer = () => (
                         <FooterLink
                             href="https://security.bytecode.nl"
                             target="_blank"
+                            rel="noopener"
                         >
                             Security Policy
                         </FooterLink>
