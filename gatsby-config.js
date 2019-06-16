@@ -1,5 +1,5 @@
 module.exports = {
-    pathPrefix: '',
+    pathPrefix: '/',
     siteMetadata: {
         title: `Bytecode Digital Agency`,
         description: `The Bytecode Digital Agency website, made in GatsbyJS`,
