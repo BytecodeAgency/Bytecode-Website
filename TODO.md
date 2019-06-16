@@ -27,3 +27,5 @@
 * [ ] Add RSS feed functionality
 * [ ] Where possible, abstract the Gatsby API to make future framework switches less painful
 * [ ] Research page transitions // Can be done with: https://transitionlink.tylerbarnes.ca/docs/transitionlink/ looks really obstrusive tho, maybe good for a short responsive animation
+* [ ] Add Typescript support
+* [ ] Update Styled Components
