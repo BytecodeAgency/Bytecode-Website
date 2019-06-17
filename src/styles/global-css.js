@@ -5,7 +5,13 @@ import theme from './theme';
 
 const typographyElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'body'];
 
-const typographyClasses = ['introduction', 'subtitle', 'button', 'menuitem', 'form'];
+const typographyClasses = [
+    'introduction',
+    'subtitle',
+    'button',
+    'menuitem',
+    'form',
+];
 
 const addStylingExceptions = element => {
     switch (element) {
@@ -18,8 +24,9 @@ const addStylingExceptions = element => {
     }
 };
 
-const typographyElementStyling = typographyElements.map(
-    element => `${element} {
+const typographyElementStyling = typographyElements
+    .map(
+        element => `${element} {
         font-size: ${theme.typography[element].size};
         line-height: ${theme.typography[element].height};
         letter-spacing: ${theme.typography[element].spacing};
@@ -28,10 +35,12 @@ const typographyElementStyling = typographyElements.map(
         color: ${theme.typography[element].color};
         ${addStylingExceptions(element)};
     }`,
-).join('\n\n');
+    )
+    .join('\n\n');
 
-const typographyClassStyling = typographyClasses.map(
-    element => `.${element} {
+const typographyClassStyling = typographyClasses
+    .map(
+        element => `.${element} {
         font-size: ${theme.typography[element].size};
         line-height: ${theme.typography[element].height};
         letter-spacing: ${theme.typography[element].spacing};
@@ -40,14 +49,16 @@ const typographyClassStyling = typographyClasses.map(
         color: ${theme.typography[element].color};
         ${addStylingExceptions(element)};
     }`,
-).join('\n\n');
+    )
+    .join('\n\n');
 
 const enableCssReset = false;
 const GlobalStylesRaw = `
     ${reset()}
     ${enableCssReset ? debug() : ''}
     html { font-size: 62.5%; background: ${theme.colors.background} }
-    @media screen and (min-width: ${theme.breakpoints[3] * 1.4}px) { html { font-size: 80%; } }
+    @media screen and (min-width: ${theme.breakpoints[3] *
+        1.4}px) { html { font-size: 80%; } }
     a { color: inherit; text-decoration: none }
     img { width: 100%; height: auto; margin:0; padding: 0}
     ${typographyElementStyling}
