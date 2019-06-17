@@ -11,7 +11,7 @@
     * [x] Caching
     * [ ] Offline mode?
 * [x] Update documentation from Next to Gatsby
-* [ ] Convert all existing blogposts to MDX
+* [x] Convert all existing blogposts to MDX
 * [x] Make sure all images are loading correctly for blogposts, including header img
 * [ ] On the insights page, text should not be underlined
 * [ ] Fix all pictures on Over page
