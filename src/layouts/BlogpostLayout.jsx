@@ -30,7 +30,11 @@ const CallToAction = () => (
 const BlogSingle = ({ content }) => (
     <Layout pageSettings={content.pageSettings}>
         <article>
-            <HeaderContainer background={content.article_image_url}>
+            <HeaderContainer
+                background={require(`../images/img/articles/${
+                    content.article_image_url
+                }`)}
+            >
                 <Container>
                     <Row>
                         <Col md={12}>
@@ -80,8 +84,7 @@ export default BlogSingle;
 const HeaderContainer = styled.section`
     padding: 10rem 2% 2%;
     background-color: ${theme.colors.mediumgray};
-    // eslint-disable-next-line prettier/prettier
-    background-image: url(${props => require(`../images/img/articles/${props.background}`)});
+    background-image: url(${props => props.background});
     background-blend-mode: soft-light;
     background-size: cover;
     background-position: center center;
