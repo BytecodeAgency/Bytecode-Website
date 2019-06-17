@@ -14,8 +14,8 @@
 * [x] Convert all existing blogposts to MDX
 * [x] Make sure all images are loading correctly for blogposts, including header img
 * [x] On the insights page, text should not be underlined
-* [ ] Fix all pictures on Over page
-* [ ] Fix all pictures on Contact page
+* [x] Fix all pictures on Over page
+* [x] Fix all pictures on Contact page
 * [x] Fix Chrome(/Chromium) Lighthouse audit issues:
     * [x] [id] attributes on the page are not unique
     * [x] Background and foreground colors do not have a sufficient contrast ratio. (Richard issue)
