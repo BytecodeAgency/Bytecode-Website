@@ -88,9 +88,10 @@ const Services = () => (
                             bereiken. bereiken. Mobiel wordt echter steeds en
                             steeds steeds belangrijker. Daarom is het voor veel
                             bedrijven ook essentieel om een mobiele (web-)app te
-                            Bytecode zorgt ervoor dat jij je op beide platforms
-                            met trots kunt presenteren en dat mobiel en web dat
-                            dat mobiel en web naadloos op elkaar aansluiten.
+                            hebben. Bytecode zorgt ervoor dat jij je op beide
+                            platforms met trots kunt presenteren en dat mobiel
+                            en web dat dat mobiel en web naadloos op elkaar
+                            aansluiten.
                         </TextBlock>
                     </Col>
                 </Row>
@@ -106,7 +107,7 @@ const Services = () => (
                                 >
                                     Dit is de plek waar alles gebeurt. De plek
                                     waar je laat zien wie je bent, waar je
-                                    mensen overtuigd en waar je klanten
+                                    mensen overtuigt en waar je klanten
                                     binnenhaalt. Bytecode zal je hiertoe in
                                     staat stellen, door het onderste uit de kan
                                     te halen. Daarmee creëren wij samen het
@@ -196,7 +197,7 @@ const Services = () => (
                                 klanten door middel van API met jouw website
                                 kunnen communiceren of dat betaalsystemen zoals
                                 iDeal aan je platform worden gekoppeld.
-                                Daarnaast beveiligen we jou API volgens de
+                                Daarnaast beveiligen we jouw API volgens de
                                 allernieuwste beveiligingsstandaarden.
                             </Service>
                             <Service
@@ -222,7 +223,7 @@ const Services = () => (
                                 title="IT-automatisering"
                             >
                                 Door IT-automatisering zorgt Bytecode ervoor dat
-                                bepaald services gekoppeld worden met jouw
+                                bepaalde services gekoppeld worden met jouw
                                 website. Een goed voorbeeld daarvan is het
                                 koppelen van een boekhoudservices met jouw
                                 webshop of het automatisch doorsturen van orders
@@ -250,12 +251,12 @@ const Services = () => (
                     <TextBlock title="Branding & Design" headingType="h2">
                         Om te kunnen slagen, zal je bedrijf een duidelijke en
                         herkenbare identiteit moeten hebben. Hierdoor wordt het
-                        een echt merk, en zal je makkelijker aan bezoekers
-                        komen. Een andere manier om voor meer bezoekers te
-                        zorgen, is door digital advertising en
-                        zoekoptimalisatie. Wij hebben designers en marketeers in
-                        huis die ervoor zorgen dat jouw bedrijf nog
-                        aantrekkelijker wordt door middel van branding & design.
+                        een echt merk en zal je makkelijker aan bezoekers komen.
+                        Een andere manier om voor meer bezoekers te zorgen, is
+                        door digital advertising en zoekoptimalisatie. Wij
+                        hebben designers en marketeers in huis die ervoor zorgen
+                        dat jouw bedrijf nog aantrekkelijker wordt door middel
+                        van branding & design.
                     </TextBlock>
                 </Col>
             </Row>
@@ -277,11 +278,10 @@ const Services = () => (
                                 definieert en zorgen we ervoor dat deze
                                 identiteit terugkomt op je social media, je
                                 websites en mobiele apps, maar ook in
-                                verpakkingen, visitekaartjes, of wat dan ook. Je
-                                kunt het zo gek niet bedenken; Bytecode zal
-                                ervoor zorgen dat alles uit de kast wordt
-                                getrokken om van jouw bedrijf een goed merk te
-                                maken.
+                                verpakkingen, visitekaartjes et cetera. Je kunt
+                                het zo gek niet bedenken; Bytecode zal ervoor
+                                zorgen dat alles uit de kast wordt getrokken om
+                                van jouw bedrijf een goed merk te maken.
                             </Service>
                             <Service iconName="ads" title="Digital advertising">
                                 Tegenwoordig kan je als bedrijf niet
