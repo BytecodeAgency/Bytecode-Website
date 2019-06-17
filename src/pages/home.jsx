@@ -127,9 +127,10 @@ const Home = () => (
                             nooit om de zaken heen zien draaien; wij vertellen
                             je hoe het zit en niet anders. Onze kennis en
                             kwaliteit gebruiken we niet om met moeilijke termen
-                            te smijten, maar in het volledig vervullen van al je
-                            digitale wensen, om zo een kwalitatief hoogstaand en
-                            optimaal functionerend product op te leveren.
+                            te smijten, maar voor in het volledig vervullen van
+                            al je digitale wensen. Zo leveren wij een
+                            kwalitatief hoogstaand en optimaal functionerend
+                            product op.
                         </TextBlock>
                     </CenterAlignedCol>
                     <Col offset={{ lg: 1 }} md={12} lg={5}>

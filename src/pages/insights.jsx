@@ -149,7 +149,7 @@ const BlogThumbnailContentWrapper = styled.div`
     cursor: pointer;
     padding: 2rem;
     margin: 1rem;
-    text-decoration: none;
+    text-decoration: none !important;
 `;
 
 const BlogThumbnailImage = styled.div`
