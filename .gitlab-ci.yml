@@ -14,7 +14,7 @@ build:
     - npm i -g yarn
     - yarn
   script:
-    - yarn run build
+    - yarn run build --prefix-paths bytecode-website
     - mv public build
   artifacts:
     paths:
