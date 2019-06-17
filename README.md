@@ -30,26 +30,12 @@ This website can both be exported to static HTML or run as a live server itself.
 To use this project as a server for production, run
 
 ```sh
-yarn run build
+yarn run build && yarn run serve
 ```
-
-to build the pages and then run
-
-```sh
-yarn run start
-```
-
-to start the server.
 
 #### Export
 
 If you want to export the project to static HTML/CSS/JS, run `yarn run export`.
-
-### Routes
-
-All `GET`-routes are defined in `server/routes.js`.
-
-The `POST`-route is `/post`.
 
 ## License and restrictions
 

@@ -4,13 +4,13 @@
 
 ### Blocking issues Julian
 
-* [ ] Fix GitLab Pages build http://bytecode.pages.bytedev.io/bytecode-website/
+* [x] Fix GitLab Pages build http://bytecode.pages.bytedev.io/bytecode-website/
 * [ ] Make sure all forms are still working // api has to be fixed.
 * [ ] Add PWA functionality (see gatsby-config.js file) // docs: https://www.gatsbyjs.org/docs/progressive-web-app/
     * [x] Manifest
     * [x] Caching
     * [ ] Offline mode?
-* [ ] Update documentation from Next to Gatsby
+* [x] Update documentation from Next to Gatsby
 * [ ] Convert all existing blogposts to MDX
 * [ ] Make sure all images are loading correctly for blogposts, including header img
 * [ ] On the insights page, text should not be underlined

@@ -145,11 +145,11 @@ const Posts = styled.section`
     margin: 0;
 `;
 
-const BlogThumbnailContentWrapper = styled.a`
+const BlogThumbnailContentWrapper = styled.div`
     cursor: pointer;
-    text-decoration: none;
     padding: 2rem;
     margin: 1rem;
+    text-decoration: none;
 `;
 
 const BlogThumbnailImage = styled.div`
