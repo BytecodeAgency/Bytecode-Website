@@ -13,12 +13,12 @@
 * [x] Update documentation from Next to Gatsby
 * [x] Convert all existing blogposts to MDX
 * [x] Make sure all images are loading correctly for blogposts, including header img
-* [ ] On the insights page, text should not be underlined
+* [x] On the insights page, text should not be underlined
 * [ ] Fix all pictures on Over page
 * [ ] Fix all pictures on Contact page
-* [ ] Fix Chrome(/Chromium) Lighthouse audit issues:
+* [x] Fix Chrome(/Chromium) Lighthouse audit issues:
     * [x] [id] attributes on the page are not unique
-    * [ ] Background and foreground colors do not have a sufficient contrast ratio. (Richard issue)
+    * [x] Background and foreground colors do not have a sufficient contrast ratio. (Richard issue)
     * [x] Links to cross-origin destinations are unsafe
     * [x] Make sure everything is 80%+, best 90%+
 
