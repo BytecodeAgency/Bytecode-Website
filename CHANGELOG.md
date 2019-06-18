@@ -7,9 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 2.0.0 (tbd)
 
+Complete switch from NextJS to GatsbyJS
+
+### Added:
+
+* GitLab pages setup
+* GatsbyJS configuration
+* PWA functionalities, manifes, caching and offline mode
+
 ### Changed:
 
 * Changed NextJS to GatsbyJS
+* Humans.txt
 
 ## 1.3.1 (2019-03-29)
 

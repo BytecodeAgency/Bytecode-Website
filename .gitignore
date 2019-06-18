@@ -16,7 +16,6 @@ Thumbs.db
 # General
 build/
 dist/
-docs/
 .next/
 .out/
 out/
@@ -29,7 +28,6 @@ out
 .env
 .npm
 coverage
-docs/
 .cache/
 
 # Code editors
@@ -84,5 +82,3 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
-# Include specific files
-!/static/docs
