@@ -42,7 +42,7 @@ pages:
   only:
     - master
     - develop
-    - feature/v2-gatsby # TODO: Remove me!
+    - release/*
 
 include:
   - template: Code-Quality.gitlab-ci.yml
