@@ -1,3 +1,9 @@
+# Temp
+gatsby-gen/
+next/
+.cache/
+public
+
 # OS specific
 .DS_Store
 .DS_Store?

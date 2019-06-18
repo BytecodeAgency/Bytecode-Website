@@ -1,23 +1,52 @@
+image: node:10-alpine
+stages:
+  - build
+  - test
+  - deploy
+  - analyze
 cache:
   paths:
   - node_modules/
 
-before_script:
-  - apk add python make g++
-  - npm i -g yarn
-  - npm i # To fix Yarn error
-  - cp .env.example .env
-
 build:
-  image: node:10-alpine
+  stage: build
+  before_script:
+    - npm i -g yarn
+    - yarn
   script:
-    - yarn run lint
-    - yarn run build
-    - yarn run export
+    - yarn run build --prefix-paths bytecode-website
+    - mv public build
+  artifacts:
+    paths:
+      - build/
 
-build-node-8:
-  image: node:8-alpine
+lint:
+  stage: test
+  before_script:
+    - npm i -g yarn
+    - yarn
   script:
     - yarn run lint
-    - yarn run build
-    - yarn run export
+
+pages:
+  image: alpine:3.9
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - rm -rf public
+    - mv build public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+    - develop
+    - feature/v2-gatsby # TODO: Remove me!
+
+include:
+  - template: Code-Quality.gitlab-ci.yml
+code_quality:
+  stage: analyze
+  dependencies: []
+
