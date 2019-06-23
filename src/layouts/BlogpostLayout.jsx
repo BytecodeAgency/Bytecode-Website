@@ -90,7 +90,7 @@ const HeaderContainer = styled.section`
     background-position: center center;
     opacity: 60%;
     @media (min-width: ${theme.breakpointMobileMenu}) {
-        padding: 40vh 2% 5vh 5%;
+        padding: 5em 0 1em 0;
     }
     @media (max-width: ${theme.breakpointMobileMenu}) {
         h1 {
@@ -106,9 +106,16 @@ const BlogContentContainer = styled.div`
 
 const BlogContent = styled.div`
     padding: 4rem 1rem 4rem;
-    max-width: 68rem;
+    & {
+        max-width: 56rem;
+    }
 
-    p {
+    img,
+    figure {
+        max-width: 75rem;
+    }
+
+    /* p {
         margin: 1rem 0;
     }
 
@@ -116,15 +123,15 @@ const BlogContent = styled.div`
     strong {
         font-weight: bold;
     }
+     */
 
     p,
     ul,
     li,
     a {
-        color: ${theme.colors.white};
         font-kerning: normal;
-        line-height: 2.2rem;
-        font-size: 1.75rem;
+        line-height: 1.58em;
+        font-size: 1.406rem;
     }
 
     h1,
@@ -133,27 +140,27 @@ const BlogContent = styled.div`
     h4,
     h5,
     h6 {
-        margin: 1.5em 0 0em 0;
+        margin: 1.33em 0 0.66em 0;
     }
 
     ul {
         list-style-type: circle;
-        margin: 1em 1.5em;
+        margin: 1.33em 1.66em;
     }
 
     ol {
         list-style-type: decimal;
-        margin: 1em 1.5em;
+        margin: 1.66em 2em;
     }
 
     li {
-        margin: 0.5rem 0;
+        margin: 1.33rem 0;
         padding-left: 0.8rem;
         font-family: ${theme.typography.p.font};
         letter-spacing: ${theme.typography.p.spacing};
     }
 
-    figure {
+    /* figure {
         margin: 4em 0;
     }
 
@@ -161,7 +168,7 @@ const BlogContent = styled.div`
         max-width: 400px;
         margin: 3rem auto 3rem auto;
         display: block;
-    }
+    } */
 `;
 
 const BlogMetaDataWrapper = styled.div`
@@ -176,7 +183,6 @@ const BlogMetaDataWrapper = styled.div`
 
 const BlogMetaData = styled.p`
     text-align: right;
-    font-size: 1.25rem;
     display: flex;
     align-self: center;
     max-width: 20rem;

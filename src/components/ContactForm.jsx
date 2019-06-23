@@ -166,7 +166,7 @@ class ContactForm extends React.Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col offset={({ md: 1 }, { lg: 0.75 })} md={12} lg={8}>
+                    <Col offset={({ md: 0 }, { lg: 0.75 })} md={12} lg={8}>
                         <ContactFormContainer>
                             {this.renderText()}
                             {this.getNotifications()}

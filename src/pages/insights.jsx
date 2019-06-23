@@ -38,7 +38,25 @@ const blogArchive = ({ data }) => {
 
     return (
         <Layout pageSettings={pageSettings}>
-            <ContentPageHeader
+            <Container>
+                <Row>
+                    <Col md={5}>
+                        <h2>Een frisse blik op het internet</h2>
+                    </Col>
+                    <Col offset={{ md: 1 }} md={6}>
+                        <p>
+                        Hier zie je artikelen die met passie zijn geschreven
+                        door Bytecode, een jonge en moderne web agency. Wij
+                        laten jou graag zien hoe je de kracht van het
+                        internet kunt gebruiken om alles uit jezelf te
+                        halen. Dit doen we door interessante artikelen te
+                        schrijven, maar ook door deze inzichten in onze
+                        werkzaamheden te verwerken
+                        </p>
+                    </Col>
+                </Row>
+            </Container>
+            {/* <ContentPageHeader
                 img={require('../images/img/content/vision_web.png')}
                 subtitle="Insights"
                 title="Een frisse blik op het internet."
@@ -49,11 +67,11 @@ const blogArchive = ({ data }) => {
                 halen. Dit doen we door interessante artikelen te
                 schrijven, maar ook door deze inzichten in onze
                 werkzaamheden te verwerken."
-            />
+            /> */}
             <Posts>
                 <Container fluid>
                     <Row>
-                        <Col offset={{ md: 1 }} md={10}>
+                        <Col offset={{ md: 0, lg: 0, xl: 1 }} md={10}>
                             <Container fluid>
                                 <Row>
                                     {
@@ -124,7 +142,7 @@ const BlogThumbnail = props => {
                 <BlogThumbnailContentWrapper>
                     <BlogThumbnailImage url={articleImage} />
                     <h6 className="subtitle">{category_name}</h6>
-                    <h3>{title}</h3>
+                    <h6>{title}</h6>
                     <AuthorContainer>
                         <Author
                             name={author_name}

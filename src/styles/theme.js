@@ -4,7 +4,7 @@
 const black = '#0f0f0f';
 const darkgray = '#1a1a1a';
 const green = '#23be87';
-const lightgray = '#c1c1c1';
+const lightgray = '#f2f2f2';
 const mediumgray = '#252525';
 const red = '#df5252';
 const white = '#ffffff';
@@ -19,6 +19,15 @@ const regular = 400;
 const bold = 700;
 const medium = 500;
 const extrabold = 900;
+
+// Global Header settings
+const GlobalHeadingSettings = {
+    height: '1em',
+    spacing: '0em',
+    color: white,
+    weight: bold,
+    marginBottom: '0.66em',
+};
 
 /**
  * Used font combinations:
@@ -48,52 +57,102 @@ const bytecode = {
             color: lightgray,
         },
         h1: {
-            size: '5.4rem',
-            height: '1.0em',
-            spacing: '0.05em',
+            size: '4.292rem',
+            height: GlobalHeadingSettings.height,
+            spacing: GlobalHeadingSettings.spacing,
             font: heading,
-            weight: extrabold,
-            color: white,
+            weight: GlobalHeadingSettings.weight,
+            color: GlobalHeadingSettings.color,
+            marginBottom: GlobalHeadingSettings.marginBottom,
         },
         h2: {
-            size: '3.6rem',
-            height: '1.05em',
-            spacing: '0.02em',
+            size: '3.433rem',
+            height: GlobalHeadingSettings.height,
+            spacing: GlobalHeadingSettings.spacing,
             font: heading,
-            weight: medium,
-            color: white,
+            weight: GlobalHeadingSettings.weight,
+            color: GlobalHeadingSettings.color,
+            marginBottom: GlobalHeadingSettings.marginBottom,
         },
         h3: {
-            size: '2.4rem',
-            height: '1.2em',
-            spacing: '0.02em',
+            size: '2.747rem',
+            height: GlobalHeadingSettings.height,
+            spacing: GlobalHeadingSettings.spacing,
             font: heading,
-            weight: medium,
-            color: white,
+            weight: GlobalHeadingSettings.weight,
+            color: GlobalHeadingSettings.color,
+            marginBottom: GlobalHeadingSettings.marginBottom,
         },
         h4: {
-            size: '2.0rem',
-            height: '1.2em',
-            spacing: '0.04em',
+            size: '2.197rem',
+            height: '1.11em',
+            spacing: GlobalHeadingSettings.spacing,
             font: heading,
-            weight: medium,
-            color: white,
+            weight: GlobalHeadingSettings.weight,
+            color: GlobalHeadingSettings.color,
+            marginBottom: GlobalHeadingSettings.marginBottom,
         },
         h5: {
-            size: '1.4rem',
-            height: '1.4em',
-            spacing: '0.1em',
+            size: '1.758rem',
+            height: GlobalHeadingSettings.height,
+            spacing: GlobalHeadingSettings.spacing,
             font: heading,
-            weight: medium,
-            color: white,
+            weight: GlobalHeadingSettings.weight,
+            color: GlobalHeadingSettings.color,
+            marginBottom: GlobalHeadingSettings.marginBottom,
+        },
+        h6: {
+            size: '1.406rem',
+            height: GlobalHeadingSettings.height,
+            spacing: GlobalHeadingSettings.spacing,
+            font: heading,
+            weight: GlobalHeadingSettings.weight,
+            color: GlobalHeadingSettings.color,
+            marginBottom: '0.33em',
         },
         p: {
-            size: '1.7rem',
-            height: '1.2em',
-            spacing: '0.03em',
+            size: '1.125rem',
+            height: '1.33em',
+            spacing: '0em',
             font: paragraph,
             weight: regular,
             color: lightgray,
+            marginBottom: '1.66em',
+        },
+        big: {
+            size: '133%',
+            height: '1.33em',
+            spacing: '0em',
+            font: paragraph,
+            weight: regular,
+            color: lightgray,
+            marginBottom: '3em',
+            marginTop: '1.66em',
+        },
+        small: {
+            size: '66%',
+            height: '1.33em',
+            spacing: '0em',
+            font: paragraph,
+            weight: regular,
+            color: lightgray,
+            marginBottom: '1.66em',
+        },
+        li: {
+            size: '1.125rem',
+            height: '1.33em',
+            spacing: '0em',
+            font: paragraph,
+            weight: regular,
+            color: white,
+            marginTop: '1em',
+            marginBottom: '1.33em',
+        },
+        ul: {
+            marginTop: '1.33em',
+            marginBottom: '1em',
+            marginLeft: '1em',
+            marginRight: '1.66m',
         },
         introduction: {
             size: '1.9rem',
@@ -104,15 +163,15 @@ const bytecode = {
             color: lightgray,
         },
         subtitle: {
-            size: '1.6rem',
+            size: '1rem',
             height: '1.2em',
-            spacing: '0.45em',
+            spacing: '0.35em',
             font: paragraph,
             weight: bold,
             color: green,
         },
         button: {
-            size: '1.4rem',
+            size: '1.125rem',
             height: '1.2em',
             spacing: 'normal',
             font: paragraph,
@@ -120,7 +179,7 @@ const bytecode = {
             color: red,
         },
         menuitem: {
-            size: '1.6rem',
+            size: '1.125rem',
             height: '1.2em',
             spacing: '0.17em',
             font: menu,
@@ -138,7 +197,7 @@ const bytecode = {
     },
     breakpointMobileMenu: '63rem',
     breakpoints: [540, 750, 960, 1400],
-    containerWidths: [540, 750, 960, 1400],
+    containerWidths: [540, 750, 960, 1600],
 };
 
 const theme = bytecode;

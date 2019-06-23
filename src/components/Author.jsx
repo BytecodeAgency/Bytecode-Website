@@ -6,6 +6,9 @@ const AuthorBlock = styled.div`
     display: flex;
     align-items: center;
     max-width: 40rem;
+    p {
+        margin: 0;
+    }
     @media (max-width: ${theme.breakpointMobileMenu}) {
         h4 {
             font-size: 1.4rem;
@@ -35,8 +38,8 @@ const Author = props => {
         <AuthorBlock>
             <AuthorBlockPhoto src={image} />
             <div className="content">
-                <h4>{name}</h4>
-                <h5>{title}</h5>
+                <h6>{name}</h6>
+                <p>{title}</p>
             </div>
         </AuthorBlock>
     );

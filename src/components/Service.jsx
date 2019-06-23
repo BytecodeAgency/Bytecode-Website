@@ -1,8 +1,8 @@
 import React from 'react';
-import { Container, Row, Col } from '../lib/Grid';
 import styled from 'styled-components';
+import { Container, Row, Col } from '../lib/Grid';
 import theme from '../styles/theme';
-import TextBlock from '../components/TextBlock';
+import TextBlock from './TextBlock';
 
 const Icon = styled.img`
     max-height: 10rem;
@@ -31,17 +31,17 @@ const ServiceIcon = styled(Col)`
 const Service = ({ children, ...props }) => {
     const { iconName, title, fullWidth } = props;
     const iconSrc = require(`../images/icons/services/${iconName}.svg`);
-    let width = 5;
+    let width = 6;
     if (fullWidth) {
         width = 11;
     }
     return (
         <ServiceWrapper lg={width} md={width} xs={12}>
             <ServiceRow>
-                <ServiceIcon xs={4}>
+                <ServiceIcon xl={2} lg={2.5} md={3} xs={4}>
                     <Icon src={iconSrc} alt={iconName} />
                 </ServiceIcon>
-                <Col sm={8} xs={12}>
+                <Col offset={{ md: 0.5 }} sm={8} xs={12}>
                     <TextBlock title={title} headingType="h3">
                         {children}
                     </TextBlock>

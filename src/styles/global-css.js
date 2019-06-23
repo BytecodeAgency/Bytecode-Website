@@ -3,7 +3,7 @@ import { reset, debug } from 'styled-components-style-utils';
 import { setConfiguration } from 'react-grid-system';
 import theme from './theme';
 
-const typographyElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'body'];
+const typographyElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'big', 'small', 'li', 'ul', 'body'];
 
 const typographyClasses = [
     'introduction',
@@ -33,6 +33,10 @@ const typographyElementStyling = typographyElements
         font-family: ${theme.typography[element].font};
         font-weight: ${theme.typography[element].weight};
         color: ${theme.typography[element].color};
+        margin-top: ${theme.typography[element].marginTop};
+        margin-bottom: ${theme.typography[element].marginBottom};
+        margin-left: ${theme.typography[element].marginLeft};
+        margin-right: ${theme.typography[element].marginRight};
         ${addStylingExceptions(element)};
     }`,
     )
@@ -47,6 +51,7 @@ const typographyClassStyling = typographyClasses
         font-family: ${theme.typography[element].font};
         font-weight: ${theme.typography[element].weight};
         color: ${theme.typography[element].color};
+        margin: ${theme.typography[element].margin};
         ${addStylingExceptions(element)};
     }`,
     )
@@ -56,9 +61,9 @@ const enableCssReset = false;
 const GlobalStylesRaw = `
     ${reset()}
     ${enableCssReset ? debug() : ''}
-    html { font-size: 62.5%; background: ${theme.colors.background} }
+    html { font-size: 100%; background: ${theme.colors.background} }
     @media screen and (min-width: ${theme.breakpoints[3] *
-        1.4}px) { html { font-size: 80%; } }
+        1.4}px) { html { font-size: 125%; } }
     a { color: inherit; text-decoration: none }
     img { width: 100%; height: auto; margin:0; padding: 0}
     ${typographyElementStyling}

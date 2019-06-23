@@ -10,7 +10,7 @@ const NavbarContainer = styled.nav`
     z-index: 10000;
     padding: 1rem 0;
     @media (max-width: ${theme.breakpointMobileMenu}) {
-        height: 7rem;
+        height: 5rem;
         width: 100vw;
         position: fixed;
         top: 0;
@@ -113,10 +113,10 @@ const NavbarItem = styled(NavbarItemBase)`
 const Logo = styled.span`
     display: block;
     @media (min-width: ${theme.breakpointMobileMenu}) {
-        width: 25rem;
+        width: 20rem;
     }
     img {
-        width: 70%;
+        width: 50%;
         @media (max-width: ${theme.breakpointMobileMenu}) {
             display: none;
         }
@@ -124,7 +124,7 @@ const Logo = styled.span`
 `;
 
 const MobileNavLogo = styled.img`
-    height: 3.5rem;
+    height: 2.1rem;
     position: absolute;
     top: 0.8rem;
     left: 2rem;
@@ -137,8 +137,8 @@ const MobileNavLogo = styled.img`
 `;
 
 const MenuButton = styled.a`
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
     position: absolute;
     top: 1.1rem;
     right: 4rem;

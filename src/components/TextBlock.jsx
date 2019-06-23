@@ -20,19 +20,19 @@ const Subtitle = styled(SubtitleBase)`
 `;
 
 const H1 = styled.h1`
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
 `;
 
 const H2 = styled.h2`
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
 `;
 
 const H3 = styled.h3`
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 `;
 
 const H4 = styled.h4`
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 `;
 
 const StyledButton = styled(Button)`

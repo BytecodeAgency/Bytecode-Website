@@ -1,13 +1,12 @@
 import React from 'react';
-import Layout from '../layouts/MainLayout';
+import styled from 'styled-components';
 import { Container, Row, Col } from '../lib/Grid';
-import styled from 'styled-components'
+import Layout from '../layouts/MainLayout';
 import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 import ContactForm from '../components/ContactForm';
 
 import Service from '../components/Service';
-
 
 const pageSettings = {
     title: 'Cases',
@@ -21,27 +20,37 @@ const ProfilePicture = styled.div`
     border-radius: 100rem;
     background-image: url(${props => props.img});
     background-size: cover;
-    margin: 2em 0;
-`
+    margin-bottom: 1.66em;
+`;
 const CheckListItemBase = styled.li`
     display: flex;
     align-items: center;
     justify-items: left;
-    margin: 1em 0;
+    margin: 1.33em 0;
+    p {
+        margin: 0;
+    }
     img {
         width: 4rem;
-        margin-right: 0.5em;
+        margin-right: 1.33em;
     }
-`
+`;
+
+const Checklist = styled.ul`
+    margin: 2em 0;
+`;
 
 const CheckListItem = props => {
+    const { children } = props;
     return (
         <CheckListItemBase>
-            <img src={require('../images/icons/ui/check.svg')} alt="- " /> <p>{props.children}</p>
+            <img src={require('../images/icons/ui/check.svg')} alt="- " />
+            <p>
+                <big>{children}</big>
+            </p>
         </CheckListItemBase>
-    )
-}
-
+    );
+};
 
 const Collaboration = () => (
     <Layout pageSettings={pageSettings}>
@@ -64,163 +73,173 @@ const Collaboration = () => (
         <Container>
             <Row>
                 <Col>
-                <h4>
-                Wij komen als technisch partner in beeld wanneer er maatwerk
-                maatwerk nodig is op het technisch gebied. Marketing- en
-                communicatiebureaus zijn een kei bij het creeeren en marketing
-                bij content, hierbij zijn de bedrijven op hun sterkts. Om de
-                klantenwens te kunnen bedienen bij een meer technisch vraagstuk
-                zoals bijvoorbeeld maatwerk websites en webshops, mobiele apps,
-                API-koppelingen of (cloud-)hosting worden technische partijen
-                zoals Bytecode vaak ingeschakeld.
-                </h4>
+                    <h4>
+                        Wij komen als technisch partner in beeld wanneer er
+                        maatwerk maatwerk nodig is op het technisch gebied.
+                        Marketing- en communicatiebureaus zijn een kei bij het
+                        creeeren en marketing bij content, hierbij zijn de
+                        bedrijven op hun sterkts. Om de klantenwens te kunnen
+                        bedienen bij een meer technisch vraagstuk zoals
+                        bijvoorbeeld maatwerk websites en webshops, mobiele
+                        apps, API-koppelingen of (cloud-)hosting worden
+                        technische partijen zoals Bytecode vaak ingeschakeld.
+                    </h4>
                 </Col>
             </Row>
         </Container>
         <Container fluid>
             <Row>
-                <Col offset={{md:2}} md={4}>
+                <Col offset={{ md: 2 }} md={4}>
                     <h2>De nieuwste technieken</h2>
                     <p>
-                        Bij het leveren van onze diensten zorgen wij altijd dat
-                        we ons aanpassen naar de benodigde workflow, dus dat wij
-                        als onderdeel (of in het verlengde) van het bestaande team
-                        kunnen werken.
+                        <big>
+                            Bij het leveren van onze diensten zorgen wij altijd
+                            dat we ons aanpassen naar de benodigde workflow, dus
+                            dat wij als onderdeel (of in het verlengde) van het
+                            bestaande team kunnen werken.
+                        </big>
                     </p>
                 </Col>
-                <Col offset={{md:1}}>
-                    <img src={require('../images/img/header/telefoon.jpg')}/>
+                <Col offset={{ md: 1 }}>
+                    <img
+                        src={require('../images/img/header/telefoon.jpg')}
+                        alt="test"
+                    />
                 </Col>
             </Row>
         </Container>
         <Container fluid>
             <Row>
                 <Col md={5}>
-                    <img src={require('../images/img/header/telefoon.jpg')}/>
+                    <img
+                        src={require('../images/img/header/telefoon.jpg')}
+                        alt="test"
+                    />
                 </Col>
-                <Col offset={{md:1}}>
+                <Col offset={{ md: 1 }}>
                     <h2>De nieuwste technieken</h2>
                     <p>
-                        Bij het leveren van onze diensten zorgen wij altijd dat
-                        we ons aanpassen naar de benodigde workflow, dus dat wij
-                        als onderdeel (of in het verlengde) van het bestaande team
-                        kunnen werken.
+                        <big>
+                            Bij het leveren van onze diensten zorgen wij altijd
+                            dat we ons aanpassen naar de benodigde workflow, dus
+                            dat wij als onderdeel (of in het verlengde) van het
+                            bestaande team kunnen werken.
+                        </big>
                     </p>
                 </Col>
             </Row>
         </Container>
         <Container fluid>
             <Row>
-                <Col offset={{md:2}} md={4}>
+                <Col offset={{ md: 2 }} md={4}>
                     <h2>De nieuwste technieken</h2>
                     <p>
-                        Bij het leveren van onze diensten zorgen wij altijd dat
-                        we ons aanpassen naar de benodigde workflow, dus dat wij
-                        als onderdeel (of in het verlengde) van het bestaande team
-                        kunnen werken.
+                        <big>
+                            Bij het leveren van onze diensten zorgen wij altijd
+                            dat we ons aanpassen naar de benodigde workflow, dus
+                            dat wij als onderdeel (of in het verlengde) van het
+                            bestaande team kunnen werken.
+                        </big>
                     </p>
                 </Col>
-                <Col offset={{md:1}}>
-                    <img src={require('../images/img/header/telefoon.jpg')}/>
+                <Col offset={{ md: 1 }}>
+                    <img
+                        src={require('../images/img/header/telefoon.jpg')}
+                        alt="test"
+                    />
                 </Col>
             </Row>
         </Container>
         <Wrapper>
-            <Container  fluid>
+            <Container fluid>
                 <Row>
                     <Col offset={{ md: 0.6 }} lg={6}>
-                        <h2>
-                        De nieuwste technieken
-                        </h2>
+                        <h2>De nieuwste technieken</h2>
                         <p>
-                        Bij het leveren van onze diensten zorgen wij altijd dat
-                        we ons aanpassen naar de benodigde workflow, dus dat wij
-                        als onderdeel (of in het verlengde) van het bestaande team
-                        kunnen werken.
+                            <big>
+                                Bij het leveren van onze diensten zorgen wij
+                                altijd dat we ons aanpassen naar de benodigde
+                                workflow, dus dat wij als onderdeel (of in het
+                                verlengde) van het bestaande team kunnen werken.
+                            </big>
                         </p>
                     </Col>
                 </Row>
             </Container>
             <Container fluid>
                 <Row>
-                <Service
-                iconName="website"
-                title="Websites & Webapps"
-                >
-                    Dit is de plek waar alles gebeurt. De plek
-                    waar je laat zien wie je bent, waar je
-                    mensen overtuigt en waar je klanten
-                    binnenhaalt. Bytecode zal je hiertoe in
-                    staat stellen, door het onderste uit de kan
-                    te halen. Daarmee creëren wij samen het
-                    beste voor jou, uiteenlopend van
-                    simplistische websites tot ingewikkelde
-                    webapps.
-                </Service>
-                <Service
-                iconName="ecommerce"
-                title="E-commerce"
-                >
-                    Wil je een succesvolle webshop hebben? Dan
-                    moet je aan heel veel factoren denken.
-                    Bytecode weet precies welke factoren dit
-                    zijn en wil je daar graag mee helpen. Zowel
-                    met de techniek als met de specifieke
-                    marketing en SEO die bij een succesvolle
-                    webshop komen kijken.
-                </Service>
-                <Service
-                iconName="mobile"
-                title="Mobiele applicaties"
-                >
-                    Tegenwoordig zijn mobiele applicaties
-                    minstens zo belangrijk als websites of
-                    webapps. Wij vinden het daarom belangrijk
-                    dat apps net zo goed werken als websites en
-                    op elk apparaat perfect aangepast zijn.
-                    Daarbij benaderen wij apps als een
-                    zelfstandig platform en niet als een kopie
-                    van de website. Bytecode ontwikkelt zowel
-                    native applicaties als progressive webapps.
-                </Service>
-                <Service iconName="ui" title="UX/UI-Design">
-                    Alles draait om de beleving van de bezoeker
-                    van jouw platform. Deze beleving
-                    optimaliseren wij door middel middel van
-                    hoogstaand UX/UI-design. Onze developers
-                    besteden uiterst veel aandacht aan de user experience en
-                    de intuïtiviteit van de website of app. Daarnaast zorgen
-                    designers ervoor dat het ontwerp van het
-                    platform in het oog springt en perfect past
-                    bij wat jij wil uitstralen.
-                </Service>
+                    <Service iconName="website" title="Websites & Webapps">
+                        Dit is de plek waar alles gebeurt. De plek waar je laat
+                        zien wie je bent, waar je mensen overtuigt en waar je
+                        klanten binnenhaalt. Bytecode zal je hiertoe in staat
+                        stellen, door het onderste uit de kan te halen. Daarmee
+                        creëren wij samen het beste voor jou, uiteenlopend van
+                        simplistische websites tot ingewikkelde webapps.
+                    </Service>
+                    <Service iconName="ecommerce" title="E-commerce">
+                        Wil je een succesvolle webshop hebben? Dan heel veel
+                        factoren denken. Bytecode weet precies welke factoren
+                        dit zijn en wil je daar graag mee helpen. Zowel met de
+                        techniek als met de specifieke marketing en SEO die bij
+                        een succesvolle webshop komen kijken.
+                    </Service>
+                    <Service iconName="mobile" title="Mobiele applicaties">
+                        Tegenwoordig zijn mobiele applicaties belangrijk als
+                        websites of webapps. Wij vinden het daarom belangrijk
+                        dat apps net zo goed werken als websites en op elk
+                        apparaat perfect aangepast zijn. Daarbij benaderen wij
+                        apps als een zelfstandig platform en niet als een kopie
+                        van de website. Bytecode ontwikkelt zowel native
+                        applicaties als progressive webapps.
+                    </Service>
+                    <Service iconName="ui" title="UX/UI-Design">
+                        Alles draait om de beleving van de bezoeker van jouw
+                        platform. Deze beleving optimaliseren wij door middel
+                        middel van hoogstaand UX/UI-design. Onze developers
+                        besteden uiterst veel aandacht aan de user experience en
+                        de intuïtiviteit van de website of app. Daarnaast zorgen
+                        designers ervoor dat het ontwerp van het platform in het
+                        oog springt en perfect past bij wat jij wil uitstralen.
+                    </Service>
                 </Row>
             </Container>
         </Wrapper>
         <Container>
             <Row>
-                <Col md={6}>
-                    <h3>Garanties</h3>
-                    <ul>
-                        <CheckListItem>Item</CheckListItem>
-                        <CheckListItem>The best contact persons</CheckListItem>
-                        <CheckListItem>Item</CheckListItem>
-                        <CheckListItem>Item</CheckListItem>
-                    </ul>
+                <Col lg={6}>
+                    <h2>Garanties</h2>
+                    <Checklist>
+                        <CheckListItem>
+                            Altijd duidelijke en snelle communicatie
+                        </CheckListItem>
+                        <CheckListItem>
+                            Altijd duidelijke en snelle communicatie
+                        </CheckListItem>
+                        <CheckListItem>
+                            Altijd duidelijke en snelle communicatie
+                        </CheckListItem>
+                        <CheckListItem>
+                            Altijd duidelijke en snelle communicatie
+                        </CheckListItem>
+                    </Checklist>
                 </Col>
-                <Col md={6}>
-                    <ProfilePicture img={require('../images/img/authors/nick.jpeg')} />
+                <Col lg={6}>
+                    <ProfilePicture
+                        img={require('../images/img/authors/nick.jpeg')}
+                    />
                     <blockquote>
-                        <h2>"With Code School, we excelled as an early entry
-                        learn-to-code marketplace. Since then, we’ve consulted
-                        on and implemented platforms."</h2>
+                        <h3>
+                            With Code School, we excelled as an early entry
+                            learn-to-code marketplace. Since then, we’ve
+                            consulted on and implemented platforms.
+                        </h3>
                         <p>- Nick</p>
                     </blockquote>
                 </Col>
             </Row>
         </Container>
         <Wrapper>
-            <ContactForm/>
+            <ContactForm />
         </Wrapper>
     </Layout>
 );
