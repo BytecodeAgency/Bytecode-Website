@@ -9,6 +9,7 @@ import ImageBlock from '../components/ImageBlock';
 import Process from '../components/Process';
 import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
+import Service from '../components/Service';
 
 const pageSettings = {
     title: 'Services - Bytecode Digital Agency B.V.',
@@ -42,28 +43,7 @@ const ServiceIcon = styled(Col)`
     margin: 0;
 `;
 
-const Service = ({ children, ...props }) => {
-    const { iconName, title, fullWidth } = props;
-    const iconSrc = require(`../images/icons/services/${iconName}.svg`);
-    let width = 5;
-    if (fullWidth) {
-        width = 11;
-    }
-    return (
-        <ServiceWrapper lg={width} md={width} xs={12}>
-            <ServiceRow>
-                <ServiceIcon xs={4}>
-                    <Icon src={iconSrc} alt={iconName} />
-                </ServiceIcon>
-                <Col sm={8} xs={12}>
-                    <TextBlock title={title} headingType="h3">
-                        {children}
-                    </TextBlock>
-                </Col>
-            </ServiceRow>
-        </ServiceWrapper>
-    );
-};
+
 
 const Services = () => (
     <Layout pageSettings={pageSettings}>
