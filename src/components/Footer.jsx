@@ -145,7 +145,7 @@ const Footer = () => (
                     </FooterHeadingContainer>
                     <FooterText>
                         <FooterLink
-                            href="/cdn/walgemene-vooraarden.pdf"
+                            href="https://cdn.bytecode.nl/algemene-voorwaarden.pdf"
                             target="_blank"
                         >
                             Algemene Voorwaarden
