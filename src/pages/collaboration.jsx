@@ -1,10 +1,13 @@
 import React from 'react';
+import { ReactComponent } from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from '../lib/Grid';
 import Layout from '../layouts/MainLayout';
 import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 import ContactForm from '../components/ContactForm';
+
+import theme from '../styles/theme';
 
 import Service from '../components/Service';
 
@@ -35,6 +38,13 @@ const CheckListItemBase = styled.li`
         margin-right: 1.33em;
     }
 `;
+
+const PaddedCol = styled(Col)`
+    margin-top: 1em;
+    @media (min-width: ${theme.breakpoints[2]}px) {
+        margin-top: 7em;
+    }
+`
 
 const Checklist = styled.ul`
     margin: 2em 0;
@@ -72,7 +82,7 @@ const Collaboration = () => (
         />
         <Container>
             <Row>
-                <Col>
+                <PaddedCol>
                     <h4>
                         Wij komen als technisch partner in beeld wanneer er
                         maatwerk maatwerk nodig is op het technisch gebied.
@@ -84,39 +94,40 @@ const Collaboration = () => (
                         apps, API-koppelingen of (cloud-)hosting worden
                         technische partijen zoals Bytecode vaak ingeschakeld.
                     </h4>
-                </Col>
+                </PaddedCol>
             </Row>
         </Container>
         <Container fluid>
             <Row>
-                <Col offset={{ md: 2 }} md={4}>
-                    <h2>De nieuwste technieken</h2>
+                <PaddedCol offset={{ md: 2 }} md={4}>
+                    <h2>Eén contactpersoon</h2>
                     <p>
                         <big>
-                            Bij het leveren van onze diensten zorgen wij altijd
-                            dat we ons aanpassen naar de benodigde workflow, dus
-                            dat wij als onderdeel (of in het verlengde) van het
-                            bestaande team kunnen werken.
+                        Bedrijven willen graag een enkele partij hebben waarbij ze
+                        al hun vragen kunnen neerleggen. Voor bedrijven gespecialiseerd
+                        in marketing heeft het dus een grote toegevoegde
+                        aarde om technische diensten aan te kunnen bieden
+                        aan klanten, zonder dat dit volledig intern gemanaged hoeft te worden.
                         </big>
                     </p>
-                </Col>
-                <Col offset={{ md: 1 }}>
+                </PaddedCol>
+                <Col offset={{ lg: 1 }}>
                     <img
-                        src={require('../images/img/header/telefoon.jpg')}
-                        alt="test"
+                        src={require('../images/img/content/collaboration/say.svg')}
+                        alt="worth"
                     />
                 </Col>
             </Row>
         </Container>
         <Container fluid>
             <Row>
-                <Col md={5}>
+                <Col offset={{ lg: 1 }} md={5}>
                     <img
-                        src={require('../images/img/header/telefoon.jpg')}
-                        alt="test"
+                        src={require('../images/img/content/collaboration/code.svg')}
+                        alt="worth"
                     />
                 </Col>
-                <Col offset={{ md: 1 }}>
+                <PaddedCol lg={4} offset={{ md: 1 }}>
                     <h2>De nieuwste technieken</h2>
                     <p>
                         <big>
@@ -126,26 +137,26 @@ const Collaboration = () => (
                             bestaande team kunnen werken.
                         </big>
                     </p>
-                </Col>
+                </PaddedCol>
             </Row>
         </Container>
         <Container fluid>
             <Row>
-                <Col offset={{ md: 2 }} md={4}>
-                    <h2>De nieuwste technieken</h2>
+                <PaddedCol offset={{ md: 2 }} md={4}>
+                    <h2>Vergroot je waarde</h2>
                     <p>
                         <big>
-                            Bij het leveren van onze diensten zorgen wij altijd
-                            dat we ons aanpassen naar de benodigde workflow, dus
-                            dat wij als onderdeel (of in het verlengde) van het
-                            bestaande team kunnen werken.
+                        Door technische diensten aan te kunnen bieden aan
+                        klanten vergroot je dus de waarde van de geleverde
+                        diensten, en kan je de full-service bieden waar
+                        eel klanten naar verlangen.
                         </big>
                     </p>
-                </Col>
-                <Col offset={{ md: 1 }}>
+                </PaddedCol>
+                <Col lg={5} offset={{ md: 1 }}>
                     <img
-                        src={require('../images/img/header/telefoon.jpg')}
-                        alt="test"
+                        src={require('../images/img/content/collaboration/worth.svg')}
+                        alt="worth"
                     />
                 </Col>
             </Row>
