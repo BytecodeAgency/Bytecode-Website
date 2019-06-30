@@ -1,6 +1,5 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import theme from './theme';
-
 
 // Below I staticially added new responsive breakpoints. In the end these breakpoints should be incorporated into the main theme.js
 const breakpoint = {
@@ -67,7 +66,9 @@ const TextScaler = `
 //         /* Base Font Size */
 //         font-size: ${base.fontSize};
 //         line-height: ${base.lineHeight.paragraph};
-
+//            h1, h2, h3, h4, h5, h6 {
+//                line-height: ${base.lineHeight.header}
+//            }
 //         @media ${mediaQueries.md} {
 //             font-size: ${base.fontSize}*1.2;
 //             line-height: ${base.lineHeight.paragraph};

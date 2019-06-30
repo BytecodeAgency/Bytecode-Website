@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactComponent } from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from '../lib/Grid';
 import Layout from '../layouts/MainLayout';
@@ -44,7 +43,7 @@ const PaddedCol = styled(Col)`
     @media (min-width: ${theme.breakpoints[2]}px) {
         margin-top: 7em;
     }
-`
+`;
 
 const Checklist = styled.ul`
     margin: 2em 0;
@@ -103,16 +102,18 @@ const Collaboration = () => (
                     <h2>Eén contactpersoon</h2>
                     <p>
                         <big>
-                        Bedrijven willen graag een enkele partij hebben waarbij ze
-                        al hun vragen kunnen neerleggen. Voor bedrijven gespecialiseerd
-                        in marketing heeft het dus een grote toegevoegde
-                        aarde om technische diensten aan te kunnen bieden
-                        aan klanten, zonder dat dit volledig intern gemanaged hoeft te worden.
+                            Bedrijven willen graag een enkele partij hebben
+                            waarbij ze al hun vragen kunnen neerleggen. Voor
+                            bedrijven gespecialiseerd in marketing heeft het dus
+                            een grote toegevoegde aarde om technische diensten
+                            aan te kunnen bieden aan klanten, zonder dat dit
+                            volledig intern gemanaged hoeft te worden.
                         </big>
                     </p>
                 </PaddedCol>
                 <Col offset={{ lg: 1 }}>
                     <img
+                        // eslint-disable-next-line max-len
                         src={require('../images/img/content/collaboration/say.svg')}
                         alt="worth"
                     />
@@ -123,6 +124,7 @@ const Collaboration = () => (
             <Row>
                 <Col offset={{ lg: 1 }} md={5}>
                     <img
+                        // eslint-disable-next-line max-len
                         src={require('../images/img/content/collaboration/code.svg')}
                         alt="worth"
                     />
@@ -146,15 +148,16 @@ const Collaboration = () => (
                     <h2>Vergroot je waarde</h2>
                     <p>
                         <big>
-                        Door technische diensten aan te kunnen bieden aan
-                        klanten vergroot je dus de waarde van de geleverde
-                        diensten, en kan je de full-service bieden waar
-                        eel klanten naar verlangen.
+                            Door technische diensten aan te kunnen bieden aan
+                            klanten vergroot je dus de waarde van de geleverde
+                            diensten, en kan je de full-service bieden waar eel
+                            klanten naar verlangen.
                         </big>
                     </p>
                 </PaddedCol>
                 <Col lg={5} offset={{ md: 1 }}>
                     <img
+                        // eslint-disable-next-line max-len
                         src={require('../images/img/content/collaboration/worth.svg')}
                         alt="worth"
                     />

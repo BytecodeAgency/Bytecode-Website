@@ -25,7 +25,6 @@ const addStylingExceptions = element => {
 };
 
 
-
 const typographyElementStyling = typographyElements
     .map(
         element => `${element} {

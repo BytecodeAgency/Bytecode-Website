@@ -37,13 +37,7 @@ const Contact = () => (
         />
         <Container fluid>
             <Row>
-                <Col
-                    offset={{ xl: 0, lg: 0 }}
-                    xl={8}
-                    lg={5.5}
-                    md={12}
-                    xs={12}
-                >
+                <Col offset={{ xl: 0, lg: 0 }} xl={8} lg={5.5} md={12} xs={12}>
                     <ContactForm />
                 </Col>
                 <Col
