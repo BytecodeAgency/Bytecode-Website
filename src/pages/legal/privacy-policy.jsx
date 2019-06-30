@@ -4,10 +4,10 @@ import Layout from '../../layouts/MainLayout';
 import { Container, Row as RowBase } from '../../lib/Grid';
 
 const pageSettings = {
-    title: 'Cookie Policy - Bytecode Digital Agency',
-    description: `Dit is het cookiebeleid van Bytecode Digital Agency B.V.
+    title: 'Privacy Policy - Bytecode Digital Agency',
+    description: `Dit is het privacybeleid van Bytecode Digital Agency B.V.
         (hierna te noemen Bytecode), wij ons ...`,
-    keywords: 'cookies',
+    keywords: 'privacy',
 };
 
 const Row = styled(RowBase)`
