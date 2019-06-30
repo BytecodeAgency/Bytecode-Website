@@ -24,6 +24,8 @@ const addStylingExceptions = element => {
     }
 };
 
+
+
 const typographyElementStyling = typographyElements
     .map(
         element => `${element} {
@@ -61,9 +63,7 @@ const enableCssReset = false;
 const GlobalStylesRaw = `
     ${reset()}
     ${enableCssReset ? debug() : ''}
-    html { font-size: 100%; background: ${theme.colors.background} }
-    @media screen and (min-width: ${theme.breakpoints[3] *
-        1.4}px) { html { font-size: 125%; } }
+    html { font-size: 1em; background: ${theme.colors.background} }
     a { color: inherit; text-decoration: none }
     img { width: 100%; height: auto; margin:0; padding: 0}
     ${typographyElementStyling}

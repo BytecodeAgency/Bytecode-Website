@@ -58,7 +58,7 @@ const bytecode = {
         },
         h1: {
             size: '4.292rem',
-            height: GlobalHeadingSettings.height,
+
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -67,7 +67,7 @@ const bytecode = {
         },
         h2: {
             size: '3.433rem',
-            height: GlobalHeadingSettings.height,
+
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -76,7 +76,6 @@ const bytecode = {
         },
         h3: {
             size: '2.747rem',
-            height: GlobalHeadingSettings.height,
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -85,7 +84,6 @@ const bytecode = {
         },
         h4: {
             size: '2.197rem',
-            height: '1.11em',
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -94,7 +92,6 @@ const bytecode = {
         },
         h5: {
             size: '1.758rem',
-            height: GlobalHeadingSettings.height,
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -103,7 +100,6 @@ const bytecode = {
         },
         h6: {
             size: '1.406rem',
-            height: GlobalHeadingSettings.height,
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -111,8 +107,6 @@ const bytecode = {
             marginBottom: '0.33em',
         },
         p: {
-            size: '1.125rem',
-            height: '1.33em',
             spacing: '0em',
             font: paragraph,
             weight: regular,
@@ -131,7 +125,6 @@ const bytecode = {
         },
         small: {
             size: '66%',
-            height: '1.33em',
             spacing: '0em',
             font: paragraph,
             weight: regular,
@@ -139,8 +132,6 @@ const bytecode = {
             marginBottom: '1.66em',
         },
         li: {
-            size: '1.125rem',
-            height: '1.33em',
             spacing: '0em',
             font: paragraph,
             weight: regular,

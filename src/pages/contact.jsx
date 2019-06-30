@@ -15,7 +15,7 @@ const pageSettings = {
     keywords: 'contact',
 };
 
-const ContactHeading = styled.h3`
+const ContactHeading = styled.h4`
     margin: 3em 0 2em;
     line-height: 1.4em;
 `;
@@ -38,8 +38,8 @@ const Contact = () => (
         <Container fluid>
             <Row>
                 <Col
-                    offset={{ xl: 0.5, lg: 0.5 }}
-                    xl={6.5}
+                    offset={{ xl: 0, lg: 0 }}
+                    xl={8}
                     lg={5.5}
                     md={12}
                     xs={12}
@@ -47,7 +47,7 @@ const Contact = () => (
                     <ContactForm />
                 </Col>
                 <Col
-                    offset={({ xl: 0 }, { lg: 1 })}
+                    offset={({ xl: 0 }, { lg: 0 })}
                     xl={3}
                     lg={5}
                     md={12}

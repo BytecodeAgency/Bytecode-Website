@@ -8,7 +8,7 @@ import theme from '../styles/theme';
 import TextBlock from './TextBlock';
 
 const ContactFormContainer = styled.div`
-    padding: 5rem 0;
+    padding: 1em 0;
 `;
 
 const InputField = styled.input`
@@ -19,8 +19,8 @@ const InputField = styled.input`
     padding-bottom: 1rem;
     margin-bottom: 1.5rem;
     color: ${theme.colors.white};
-    font-size: 2.4rem;
     width: 100%;
+    font-size: 1rem;
     &:hover {
         cursor: pointer;
     }
@@ -64,7 +64,7 @@ const InputTextArea = styled.textarea`
     border-bottom: 2px solid ${theme.colors.white};
     margin-bottom: 2rem;
     width: 100%;
-    min-height: 20rem;
+    min-height: 20em;
     &:hover {
         cursor: pointer;
     }
@@ -77,7 +77,6 @@ const InputTextArea = styled.textarea`
     &.text {
         font-family: ${theme.typography.form.font};
         color: ${theme.colors.white};
-        font-size: 2.4rem;
     }
 `;
 
@@ -166,7 +165,7 @@ class ContactForm extends React.Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col offset={({ md: 0 }, { lg: 0.75 })} md={12} lg={8}>
+                    <Col offset={({ md: 0 }, { lg: 0.75 })} md={12} lg={9}>
                         <ContactFormContainer>
                             {this.renderText()}
                             {this.getNotifications()}

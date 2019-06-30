@@ -7,6 +7,8 @@ import Footer from '../components/Footer';
 import theme from '../styles/theme';
 import { GlobalStyles } from '../styles/global-css';
 
+import TextScaler from '../styles/textScaler';
+
 const Main = styled.main`
     @media (max-width: ${theme.breakpointMobileMenu}) {
         padding-top: 7rem;
@@ -23,6 +25,7 @@ const Head = () => (
             rel="stylesheet"
         />
         <style data-info="bytecode-global-styling">{GlobalStyles}</style>
+        <style data-info="text-scaler">{TextScaler}</style>
     </Helmet>
 );
 
