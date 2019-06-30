@@ -31,6 +31,7 @@ const ServiceImageContainer = styled.div`
 const Icon = styled.figure`
     width: 80%;
     height: auto;
+    max-height: 20rem;
     display: flex;
     align-items: center;
     flex-direction: column;
