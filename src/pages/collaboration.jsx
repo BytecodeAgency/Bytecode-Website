@@ -39,14 +39,50 @@ const CheckListItemBase = styled.li`
 `;
 
 const PaddedCol = styled(Col)`
-    margin-top: 1em;
+    margin: 1em !important;
     @media (min-width: ${theme.breakpoints[2]}px) {
-        margin-top: 7em;
+        margin: 0 3em;
+    }
+`;
+
+const PaddedContainer = styled(Container)`
+    padding: 4em 0;
+    @media (max-width: ${theme.breakpoints[1]}px) {
+        margin: 1em;
     }
 `;
 
 const Checklist = styled.ul`
     margin: 2em 0;
+`;
+
+const Img = styled.img`
+    max-width: 30em;
+`;
+
+const Big = styled.big`
+    line-height: 1.33em;
+
+    p {
+        @media (max-width: ${theme.breakpoints[1]}px) {
+            max-width: 95vw;
+        }
+    }
+`;
+
+const FluidWrapper = styled(Wrapper)`
+    margin: 0 !important;
+    padding: 0 !important;
+    Container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+`;
+
+const SwitchCol = styled(Col)`
+    @media (max-width: ${theme.breakpoints[1]}px) {
+        order: -1;
+    }
 `;
 
 const CheckListItem = props => {
@@ -79,27 +115,38 @@ const Collaboration = () => (
             Bytecode neemt voor veel marketing- en communicatiebedrijven
             de technische opdrachten uit handen, volledig of gedeeltelijk."
         />
-        <Container>
-            <Row>
-                <PaddedCol>
-                    <h4>
-                        Wij komen als technisch partner in beeld wanneer er
-                        maatwerk maatwerk nodig is op het technisch gebied.
-                        Marketing- en communicatiebureaus zijn een kei bij het
-                        creeeren en marketing bij content, hierbij zijn de
-                        bedrijven op hun sterkts. Om de klantenwens te kunnen
-                        bedienen bij een meer technisch vraagstuk zoals
-                        bijvoorbeeld maatwerk websites en webshops, mobiele
-                        apps, API-koppelingen of (cloud-)hosting worden
-                        technische partijen zoals Bytecode vaak ingeschakeld.
-                    </h4>
-                </PaddedCol>
-            </Row>
-        </Container>
-        <Container fluid>
-            <Row>
-                <PaddedCol offset={{ md: 2 }} md={4}>
-                    <h2>Eén contactpersoon</h2>
+        <FluidWrapper>
+            <Container style={{ marginTop: '0', padding: '5em 0' }}>
+                <Row>
+                    <PaddedCol
+                        style={{ margin: '1em' }}
+                        offset={{ lg: 1 }}
+                        lg={9}
+                    >
+                        <h2>Waarom samenwerken?</h2>
+                        <Big>
+                            <p>
+                                Wij komen als technisch partner in beeld wanneer
+                                er maatwerk maatwerk nodig is op het technisch
+                                gebied. Marketing- en communicatiebureaus zijn
+                                een kei bij het creeeren en marketing bij
+                                content, hierbij zijn de bedrijven op hun
+                                sterkts. Om de klantenwens te kunnen bedienen
+                                bij een meer technisch vraagstuk zoals
+                                bijvoorbeeld maatwerk websites en webshops,
+                                mobiele apps, API-koppelingen of (cloud-)hosting
+                                worden technische partijen zoals Bytecode vaak
+                                ingeschakeld.
+                            </p>
+                        </Big>
+                    </PaddedCol>
+                </Row>
+            </Container>
+        </FluidWrapper>
+        <PaddedContainer>
+            <Row justify="center" align="center">
+                <PaddedCol md={5}>
+                    <h3>Eén contactpersoon</h3>
                     <p>
                         <big>
                             Bedrijven willen graag een enkele partij hebben
@@ -111,26 +158,28 @@ const Collaboration = () => (
                         </big>
                     </p>
                 </PaddedCol>
-                <Col offset={{ lg: 1 }}>
-                    <img
+                <SwitchCol offset={{ lg: 1 }}>
+                    <Img
                         // eslint-disable-next-line max-len
                         src={require('../images/img/content/collaboration/say.svg')}
                         alt="worth"
+                        style={{ marginBottom: '1em' }}
                     />
-                </Col>
+                </SwitchCol>
             </Row>
-        </Container>
-        <Container fluid>
-            <Row>
-                <Col offset={{ lg: 1 }} md={5}>
-                    <img
+        </PaddedContainer>
+        <PaddedContainer>
+            <Row justify="center" align="center">
+                <Col lg={6} md={5}>
+                    <Img
                         // eslint-disable-next-line max-len
                         src={require('../images/img/content/collaboration/code.svg')}
                         alt="worth"
+                        style={{ marginBottom: '1em' }}
                     />
                 </Col>
-                <PaddedCol lg={4} offset={{ md: 1 }}>
-                    <h2>De nieuwste technieken</h2>
+                <PaddedCol lg={5} md={5} offset={{ lg: 1, md: 1 }}>
+                    <h3>De nieuwste technieken</h3>
                     <p>
                         <big>
                             Bij het leveren van onze diensten zorgen wij altijd
@@ -141,11 +190,11 @@ const Collaboration = () => (
                     </p>
                 </PaddedCol>
             </Row>
-        </Container>
-        <Container fluid>
-            <Row>
-                <PaddedCol offset={{ md: 2 }} md={4}>
-                    <h2>Vergroot je waarde</h2>
+        </PaddedContainer>
+        <PaddedContainer>
+            <Row justify="center" align="center">
+                <PaddedCol md={6}>
+                    <h3>Vergroot je waarde</h3>
                     <p>
                         <big>
                             Door technische diensten aan te kunnen bieden aan
@@ -155,15 +204,16 @@ const Collaboration = () => (
                         </big>
                     </p>
                 </PaddedCol>
-                <Col lg={5} offset={{ md: 1 }}>
-                    <img
+                <SwitchCol lg={5} offset={{ md: 0.5 }}>
+                    <Img
                         // eslint-disable-next-line max-len
                         src={require('../images/img/content/collaboration/worth.svg')}
                         alt="worth"
+                        style={{ marginBottom: '1em' }}
                     />
-                </Col>
+                </SwitchCol>
             </Row>
-        </Container>
+        </PaddedContainer>
         <Wrapper>
             <Container fluid>
                 <Row>
@@ -218,7 +268,7 @@ const Collaboration = () => (
                 </Row>
             </Container>
         </Wrapper>
-        <Container>
+        <PaddedContainer>
             <Row>
                 <Col lg={6}>
                     <h2>Garanties</h2>
@@ -251,7 +301,7 @@ const Collaboration = () => (
                     </blockquote>
                 </Col>
             </Row>
-        </Container>
+        </PaddedContainer>
         <Wrapper>
             <ContactForm />
         </Wrapper>

@@ -11,6 +11,8 @@ const pageSettings = {
     keywords: 'tag1,tag2',
 };
 
+const testImg = require('../images/img/content/team.png');
+
 const Cases = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
@@ -23,6 +25,7 @@ const Cases = () => (
                     category="Test"
                     big
                     url="#"
+                    img={testImg}
                 />
             </Row>
         </Container>
@@ -30,8 +33,8 @@ const Cases = () => (
             <Row>
                 <CaseThumbnail
                     title="How we made breda collaborate"
-                    img="../images/img/content/team.png"
                     category="Test"
+                    img={testImg}
                 />
                 <CaseThumbnail />
                 <CaseThumbnail />
@@ -43,6 +46,7 @@ const Cases = () => (
                     title="How we made breda collaborate"
                     category="Test"
                     big
+                    img={testImg}
                 />
             </Row>
         </Container>
@@ -50,8 +54,8 @@ const Cases = () => (
             <Row>
                 <CaseThumbnail
                     title="How we made breda collaborate"
-                    img={require('../images/img/content/team.png')}
                     category="Test"
+                    img={testImg}
                 />
                 <CaseThumbnail />
                 <CaseThumbnail />

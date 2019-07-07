@@ -112,7 +112,7 @@ const Home = () => (
         </Container>
         <Wrapper>
             <Container fluid>
-                <CenterAlignedRow>
+                <Row justify="center" align="center">
                     <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={4}>
                         <TextBlock
                             useGatsbyLink
@@ -140,7 +140,7 @@ const Home = () => (
                             alt="Onze mindset"
                         />
                     </Col>
-                </CenterAlignedRow>
+                </Row>
             </Container>
         </Wrapper>
         <Process />

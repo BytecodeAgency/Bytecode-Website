@@ -26,7 +26,7 @@ const Over = () => (
             bgSize="80%"
         />
         <Container fluid>
-            <Row>
+            <Row justify="center" align="center">
                 <Col offset={{ md: 0, lg: 1, xl: 2 }} md={6} lg={5} xl={3}>
                     <TextBlock
                         subtitle="Onze Visie"
@@ -54,7 +54,7 @@ const Over = () => (
             alt="A fun day at the office"
         />
         <Container fluid>
-            <Row>
+            <Row justify="center" align="center">
                 <Col offset={{ md: 0, lg: 1, xl: 1 }} md={12} lg={5} xl={4}>
                     <TextBlock
                         subtitle="Het team"

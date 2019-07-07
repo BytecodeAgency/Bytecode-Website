@@ -6,12 +6,13 @@ import TextBlock from './TextBlock';
 
 const Icon = styled.img`
     max-height: 10rem;
-    margin-top: 5em;
-    margin-left: 2em;
+    margin-top: 3em;
+    margin-left: 0em;
+    padding: 0.1em;
     @media (max-width: ${theme.breakpoints[0]}px) {
         margin-top: 1.5em;
         margin-bottom: 1em;
-        padding: 0 !important;
+        padding: 0em !important;
     }
 `;
 
@@ -21,7 +22,6 @@ const ServiceWrapper = styled(Col)`
 const ServiceRow = styled(Row)`
     margin: 1em;
     padding: 1em;
-    font-size: 0.5rem;
 `;
 
 const ServiceIcon = styled(Col)`

@@ -15,12 +15,11 @@ const InputField = styled.input`
     background: none;
     outline: none;
     border: none;
-    border-bottom: 2px solid ${theme.colors.lightgray};
-    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid ${theme.colors.lightgray};
+    padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
     color: ${theme.colors.white};
     width: 100%;
-    font-size: 1rem;
     &:hover {
         cursor: pointer;
     }
@@ -35,14 +34,14 @@ const InputField = styled.input`
 const SendButton = styled.button`
     display: inline-block;
     background: transparent;
-    padding: 0.8rem 3.6rem;
+    padding: 1em 5em;
     border-color: ${theme.colors.tertiary};
     color: ${theme.colors.tertiary};
     border-style: solid;
     border-width: 0.1rem;
     border-radius: 10rem;
     transition: all 0.2s ease;
-    margin-top: 3rem;
+    margin-top: 1em;
     &:hover {
         color: ${theme.colors.white};
         background: ${theme.colors.primary};
@@ -52,7 +51,7 @@ const SendButton = styled.button`
 `;
 
 const ErrorMessage = styled.div`
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     color: ${theme.colors.tertiary};
 `;
 

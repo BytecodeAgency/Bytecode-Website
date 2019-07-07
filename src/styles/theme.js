@@ -187,7 +187,7 @@ const bytecode = {
         },
     },
     breakpointMobileMenu: '63rem',
-    breakpoints: [540, 750, 960, 1400],
+    breakpoints: [540, 750, 1200, 1400],
     containerWidths: [540, 750, 960, 1600],
 };
 

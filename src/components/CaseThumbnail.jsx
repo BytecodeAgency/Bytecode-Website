@@ -40,13 +40,13 @@ const ThumbnailContent = styled.div`
 `;
 
 const BigThumbnailImg = styled.div`
-    background: url(${props => props.img}), ${theme.colors.secondary};
+    background: url('${props => props.img}'), ${theme.colors.secondary};
     background-size: cover;
     height: 35em;
 `;
 
 const ThumbnailImg = styled.div`
-    background: url(${props => props.img}), ${theme.colors.secondary};
+    background: url('${props => props.img}'), ${theme.colors.secondary};
     background-size: cover;
     height: ${props => (props.big ? '50em' : '18em')};
 `;

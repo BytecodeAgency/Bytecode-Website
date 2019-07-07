@@ -27,7 +27,7 @@ const base = {
 };
 
 const TextScaler = `
-    body {
+    body, input, textarea {
         /* Base Font Size */
         font-size: ${base.fontSize};
         line-height: ${base.lineHeight.paragraph};
@@ -38,23 +38,23 @@ const TextScaler = `
     }
 
     @media only screen and ${mediaQueries.md} {
-        body {
+        body, input, textarea {
             font-size: calc(${base.fontSize}*1.2);
             line-height: ${base.lineHeight.paragraph};
         }
     };
     @media only screen and ${mediaQueries.lg} {
-        body {
+        body, input, textarea {
             font-size: calc(${base.fontSize}*1.3);
         }
     };
     @media only screen and ${mediaQueries.xl} {
-        body {
-            font-size: calc(${base.fontSize}*1.4);
+        body, input, textarea {
+            font-size: calc(${base.fontSize}*1.5);
         }
     };
     @media only screen and ${mediaQueries.xxl} {
-        body {
+        body, input, textarea {
             font-size: calc(${base.fontSize}*1.6);
         }
     };
