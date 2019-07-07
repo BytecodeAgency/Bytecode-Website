@@ -41,7 +41,8 @@ const NavbarContent = styled.div`
     height: 6rem;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         display: block;
-        width: 30rem;
+        width: 100%;
+        max-width: 30rem;
         height: 100vh;
         position: fixed;
         right: ${props => (props.menuIsOpen ? 0 : '-30rem')};

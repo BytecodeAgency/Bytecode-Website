@@ -16,6 +16,26 @@ const ThumbnailBase = styled.a`
     background-color: ${theme.colors.secondary};
     padding-bottom: 2em;
     cursor: pointer;
+    transition: all 0.4s ease;
+    .thumbnailCTA {
+        transition: 0.3s ease all;
+        transform: translate(0em, -1em);
+        img {
+            transition: 0.3s ease all;
+        }
+    }
+    &:hover {
+        & > .ThumbnailImg {
+            transform: scale(1.02);
+        }
+
+        .thumbnailCTA {
+            transform: translate(0.3em, -1em);
+            img {
+                transform: scaleX(1.3);
+            }
+        }
+    }
 `;
 
 const ThumbnailContent = styled.div`
@@ -34,8 +54,10 @@ const ThumbnailContent = styled.div`
 
         img {
             width: 2em;
+            height: 0.5em;
             margin-left: 0.66em;
         }
+
     }
 `;
 
@@ -43,13 +65,30 @@ const BigThumbnailImg = styled.div`
     background: url('${props => props.img}'), ${theme.colors.secondary};
     background-size: cover;
     height: 35em;
+    transition: all 0.3s ease;
+   
 `;
+
+//  &:after {
+//         content: "";
+//         background-color: ${theme.colors.primary};
+//         width: 100%;
+//         height: 100%;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//     }
 
 const ThumbnailImg = styled.div`
     background: url('${props => props.img}'), ${theme.colors.secondary};
     background-size: cover;
     height: ${props => (props.big ? '50em' : '18em')};
+    transition: all 0.5s ease;
 `;
+
+const Arrow = styled.img`
+
+`
 
 const CaseThumbnail = props => {
     const { big, title, category, description, img, url } = props;
@@ -57,7 +96,7 @@ const CaseThumbnail = props => {
         return (
             <Col>
                 <ThumbnailBase href={url}>
-                    <BigThumbnailImg />
+                    <BigThumbnailImg className="ThumbnailImg" img={img} />
                     <ThumbnailContent>
                         <Subtitle>{category}</Subtitle>
                         <h5>{title}</h5>
@@ -69,16 +108,16 @@ const CaseThumbnail = props => {
     return (
         <Col md={4}>
             <ThumbnailBase href={url}>
-                <ThumbnailImg />
+                <ThumbnailImg className="ThumbnailImg" img={img} />
                 <ThumbnailContent>
                     <Subtitle>{category}</Subtitle>
                     <big>
                         <p>{title}</p>
                     </big>
                     <a href={url}>
-                        <small>
+                        <small className="thumbnailCTA">
                             Learn more{' '}
-                            <img
+                            <Arrow
                                 src={require('../images/icons/ui/arrow.svg')}
                                 alt=" >"
                             />
