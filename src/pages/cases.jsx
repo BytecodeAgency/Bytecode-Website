@@ -46,7 +46,6 @@ const Cases = () => (
                     title="How we made breda collaborate"
                     category="Test"
                     big
-                    img="https://mir-s3-cdn-cf.behance.net/project_modules/fs/3dec5682356855.5d1b51509448a.jpg"
                 />
             </Row>
         </Container>

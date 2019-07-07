@@ -10,7 +10,7 @@ const Wrapper = styled.section`
         padding: 1em 1em;
     }
     @media screen and (min-width: ${theme.breakpoints[3]}px) {
-        margin: 1rem 0% 2em 2em;
+        margin: 1rem 0% 2em 1em;
         padding: 1em 5em;
     }
 `;

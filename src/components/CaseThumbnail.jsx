@@ -17,6 +17,7 @@ const ThumbnailBase = styled.a`
     padding-bottom: 2em;
     cursor: pointer;
     transition: all 0.4s ease;
+    min-width: 10em;
     .thumbnailCTA {
         transition: 0.3s ease all;
         transform: translate(0em, -1em);
@@ -57,7 +58,6 @@ const ThumbnailContent = styled.div`
             height: 0.5em;
             margin-left: 0.66em;
         }
-
     }
 `;
 
@@ -86,9 +86,7 @@ const ThumbnailImg = styled.div`
     transition: all 0.5s ease;
 `;
 
-const Arrow = styled.img`
-
-`
+const Arrow = styled.img``;
 
 const CaseThumbnail = props => {
     const { big, title, category, description, img, url } = props;

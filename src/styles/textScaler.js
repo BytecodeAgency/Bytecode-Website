@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 import theme from './theme';
 
-// Below I staticially added new responsive breakpoints. In the end these breakpoints should be incorporated into the main theme.js
+// Below I staticially added new responsive breakpoints.
+// In the end these breakpoints should be incorporated into the main theme.js
 const breakpoint = {
     xs: '48em',
     sm: '64em',
