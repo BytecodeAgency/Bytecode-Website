@@ -11,7 +11,7 @@ import TextScaler from '../styles/textScaler';
 
 const Main = styled.main`
     @media (max-width: ${theme.breakpointMobileMenu}) {
-        padding-top: 7rem;
+        padding-top: 5rem;
     }
 `;
 

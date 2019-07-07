@@ -124,10 +124,9 @@ const Logo = styled.span`
 `;
 
 const MobileNavLogo = styled.img`
-    height: 2.1rem;
+    height: 3em;
     position: absolute;
-    top: 0.8rem;
-    left: 2rem;
+    padding: 0.5em 0;
     color: white;
     display: none;
     @media (max-width: ${theme.breakpointMobileMenu}) {
@@ -137,11 +136,11 @@ const MobileNavLogo = styled.img`
 `;
 
 const MenuButton = styled.a`
-    height: 2rem;
-    width: 2rem;
+    height: 2em;
+    width: 2em;
     position: absolute;
-    top: 1.1rem;
-    right: 4rem;
+    right: 2em;
+    top: 0.5em;
     color: white;
     align-items: center;
     display: none;
