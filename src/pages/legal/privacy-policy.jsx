@@ -43,8 +43,7 @@ const PrivacyPolicy = () => (
                     Delfgauw. Bytecode is ingeschreven bij de Kamer van
                     Koophandel onder nummer 71497560. Deze Privacy Policy legt
                     uit hoe wij gegevens verzamelen, gebruiken, delen en
-                    beschermen in relatie tot onze website bytecode.nl (de
-                    &#34;
+                    beschermen in relatie tot onze website bytecode.nl (de &#34;
                     <b>Website</b>
                     &#34;). Wij verzamelen deze gegevens wanneer u onze Website
                     bezoekt met uw computer, tablet of mobiele telefoon (&#34;

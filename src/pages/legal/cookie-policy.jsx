@@ -35,8 +35,7 @@ const CookiePolicy = () => (
                     Delfgauw. Bytecode is ingeschreven bij de Kamer van
                     Koophandel onder nummer 71497560. Dit cookiebeleid legt uit
                     hoe wij cookies gebruiken en hoe wij uw gegevens delen en
-                    beschermen in relatie tot onze website bytecode.nl (de
-                    &#34;
+                    beschermen in relatie tot onze website bytecode.nl (de &#34;
                     <b>Website</b>
                     &#34;). Het plaatsen van cookies en het verwerken van
                     persoonsgegevens gebeurt op een wijze die in overeenstemming
