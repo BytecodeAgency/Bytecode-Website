@@ -57,7 +57,7 @@ const blogArchive = ({ data }) => {
                             <Container fluid>
                                 <Row>
                                     {
-                                        posts.map(({ node: post }, _, key) => <Blogpost data={post} key={key} />)
+                                        posts.reverse().map(({ node: post }, _, key) => <Blogpost data={post} key={key} />)
                                     }
                                 </Row>
                             </Container>
