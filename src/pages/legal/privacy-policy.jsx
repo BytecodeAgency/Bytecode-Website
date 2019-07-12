@@ -4,10 +4,10 @@ import Layout from '../../layouts/MainLayout';
 import { Container, Row as RowBase } from '../../lib/Grid';
 
 const pageSettings = {
-    title: 'Cookie Policy - Bytecode Digital Agency',
-    description: `Dit is het cookiebeleid van Bytecode Digital Agency B.V.
+    title: 'Privacy Policy - Bytecode Digital Agency',
+    description: `Dit is het privacybeleid van Bytecode Digital Agency B.V.
         (hierna te noemen Bytecode), wij ons ...`,
-    keywords: 'cookies',
+    keywords: 'privacy',
 };
 
 const Row = styled(RowBase)`
@@ -43,8 +43,7 @@ const PrivacyPolicy = () => (
                     Delfgauw. Bytecode is ingeschreven bij de Kamer van
                     Koophandel onder nummer 71497560. Deze Privacy Policy legt
                     uit hoe wij gegevens verzamelen, gebruiken, delen en
-                    beschermen in relatie tot onze website www.bytecode.nl (de
-                    &#34;
+                    beschermen in relatie tot onze website bytecode.nl (de &#34;
                     <b>Website</b>
                     &#34;). Wij verzamelen deze gegevens wanneer u onze Website
                     bezoekt met uw computer, tablet of mobiele telefoon (&#34;

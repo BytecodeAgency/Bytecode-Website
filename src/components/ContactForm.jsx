@@ -99,7 +99,7 @@ const Notification = ({ type, message }) => (
 /* eslint-disable indent, prettier/prettier, implicit-arrow-linebreak */
 const sendFormInformation = async sendData =>
     axios
-        .post('http://localhost:3000/contact', sendData)
+        .post('https://api.bytecode.nl/contact', sendData)
         .then(() => true)
         .catch(false);
 /* eslint-enable */
