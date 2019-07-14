@@ -11,7 +11,7 @@ import theme from '../styles/theme';
 import Service from '../components/Service';
 
 const pageSettings = {
-    title: 'Cases',
+    title: 'Bytecode as partner',
     description: 'Hier de omschrijving',
     keywords: 'tag1,tag2',
 };
@@ -33,7 +33,7 @@ const CheckListItemBase = styled.li`
         margin: 0;
     }
     img {
-        width: 4rem;
+        width: 3rem;
         margin-right: 1.33em;
     }
 `;
@@ -70,6 +70,25 @@ const Big = styled.big`
     }
 `;
 
+const SmallList = styled.ul`
+    margin: 1em 0.5em;
+    list-style-position: inside;
+    list-style: circle;
+    li {
+        font-size: 85%;
+        margin: 0 1em;
+        line-height: 1.58em;
+        color: ${theme.colors.lightgray};
+    }
+    p {
+        margin: inherit;
+        font-size: 75%;
+        line-height: 1.4em;
+        color: ${theme.colors.lightgray};
+        opacity: 0.33;
+    }
+`;
+
 const FluidWrapper = styled(Wrapper)`
     margin: 0 !important;
     padding: 0 !important;
@@ -97,7 +116,7 @@ const CheckListItem = props => {
     );
 };
 
-const Collaboration = () => (
+const Partners = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
             useGatsbyLink
@@ -145,6 +164,29 @@ const Collaboration = () => (
         </FluidWrapper>
         <PaddedContainer>
             <Row justify="center" align="center">
+                <PaddedCol md={6}>
+                    <h3>Vergroot je waarde</h3>
+                    <p>
+                        <big>
+                            Door technische diensten aan te kunnen bieden aan
+                            klanten vergroot je dus de waarde van de geleverde
+                            diensten, en kan je de full-service bieden waar eel
+                            klanten naar verlangen.
+                        </big>
+                    </p>
+                </PaddedCol>
+                <SwitchCol lg={5} offset={{ md: 0.5 }}>
+                    <Img
+                        // eslint-disable-next-line max-len
+                        src={require('../images/img/content/collaboration/worth.svg')}
+                        alt="worth"
+                        style={{ marginBottom: '1em' }}
+                    />
+                </SwitchCol>
+            </Row>
+        </PaddedContainer>
+        <PaddedContainer>
+            <Row justify="center" align="center">
                 <PaddedCol md={5}>
                     <h3>Eén contactpersoon</h3>
                     <p>
@@ -185,54 +227,42 @@ const Collaboration = () => (
                             Bij het leveren van onze diensten zorgen wij altijd
                             dat we ons aanpassen naar de benodigde workflow, dus
                             dat wij als onderdeel (of in het verlengde) van het
-                            bestaande team kunnen werken.
+                            bestaande team kunnen werken. Door onze jarenlange
+                            ervaring als technisch partner hebben wij met
+                            vrijwel alle veelgebruikte technieken ervaring.
                         </big>
                     </p>
+                    <SmallList>
+                        <li>Front-end: HTML, CSS, Sass, Stylus, Bootstrap</li>
+                        <li>
+                            PHP: WordPress, WooCommerce, Laravel en Magento 2
+                        </li>
+                        {/* // eslint-disable-line no-use-before-define */}
+                        <li>Frameworks: NodeJS, ReactJS en Angular 2+ </li>
+                        <li>Mobiel: React Native, Ionic 2+, Flutter</li>
+                        <li>Servers: Linux, Apache, Nginx</li>
+                        <p>
+                            Indien je een partner zoekt voor een techniek dit
+                            niet hierboven genoemd is, schroom dan niet contact
+                            op te nemen, want we kijken graag wat we je kunnen
+                            betekenen.
+                        </p>
+                    </SmallList>
                 </PaddedCol>
             </Row>
         </PaddedContainer>
-        <PaddedContainer>
-            <Row justify="center" align="center">
-                <PaddedCol md={6}>
-                    <h3>Vergroot je waarde</h3>
-                    <p>
-                        <big>
-                            Door technische diensten aan te kunnen bieden aan
-                            klanten vergroot je dus de waarde van de geleverde
-                            diensten, en kan je de full-service bieden waar eel
-                            klanten naar verlangen.
-                        </big>
-                    </p>
-                </PaddedCol>
-                <SwitchCol lg={5} offset={{ md: 0.5 }}>
-                    <Img
-                        // eslint-disable-next-line max-len
-                        src={require('../images/img/content/collaboration/worth.svg')}
-                        alt="worth"
-                        style={{ marginBottom: '1em' }}
-                    />
-                </SwitchCol>
-            </Row>
-        </PaddedContainer>
+
         <Wrapper>
             <Container fluid>
                 <Row>
                     <Col offset={{ md: 0.6 }} lg={6}>
-                        <h2>De nieuwste technieken</h2>
-                        <p>
-                            <big>
-                                Bij het leveren van onze diensten zorgen wij
-                                altijd dat we ons aanpassen naar de benodigde
-                                workflow, dus dat wij als onderdeel (of in het
-                                verlengde) van het bestaande team kunnen werken.
-                            </big>
-                        </p>
+                        <h2>Diensten</h2>
                     </Col>
                 </Row>
             </Container>
             <Container fluid>
                 <Row>
-                    <Service iconName="website" title="Websites & Webapps">
+                    <Service iconName="website" title="Websites & Webshops">
                         Dit is de plek waar alles gebeurt. De plek waar je laat
                         zien wie je bent, waar je mensen overtuigt en waar je
                         klanten binnenhaalt. Bytecode zal je hiertoe in staat
@@ -240,23 +270,14 @@ const Collaboration = () => (
                         creëren wij samen het beste voor jou, uiteenlopend van
                         simplistische websites tot ingewikkelde webapps.
                     </Service>
-                    <Service iconName="ecommerce" title="E-commerce">
+                    <Service iconName="mobile" title="Apps & Webapps">
                         Wil je een succesvolle webshop hebben? Dan heel veel
                         factoren denken. Bytecode weet precies welke factoren
                         dit zijn en wil je daar graag mee helpen. Zowel met de
                         techniek als met de specifieke marketing en SEO die bij
                         een succesvolle webshop komen kijken.
                     </Service>
-                    <Service iconName="mobile" title="Mobiele applicaties">
-                        Tegenwoordig zijn mobiele applicaties belangrijk als
-                        websites of webapps. Wij vinden het daarom belangrijk
-                        dat apps net zo goed werken als websites en op elk
-                        apparaat perfect aangepast zijn. Daarbij benaderen wij
-                        apps als een zelfstandig platform en niet als een kopie
-                        van de website. Bytecode ontwikkelt zowel native
-                        applicaties als progressive webapps.
-                    </Service>
-                    <Service iconName="ui" title="UX/UI-Design">
+                    <Service iconName="api" title="APIs & automatisering">
                         Alles draait om de beleving van de bezoeker van jouw
                         platform. Deze beleving optimaliseren wij door middel
                         middel van hoogstaand UX/UI-design. Onze developers
@@ -265,9 +286,59 @@ const Collaboration = () => (
                         designers ervoor dat het ontwerp van het platform in het
                         oog springt en perfect past bij wat jij wil uitstralen.
                     </Service>
+                    <Service iconName="cloud" title="Cloud & hosting">
+                        Tegenwoordig zijn mobiele applicaties belangrijk als
+                        websites of webapps. Wij vinden het daarom belangrijk
+                        dat apps net zo goed werken als websites en op elk
+                        apparaat perfect aangepast zijn. Daarbij benaderen wij
+                        apps als een zelfstandig platform en niet als een kopie
+                        van de website. Bytecode ontwikkelt zowel native
+                        applicaties als progressive webapps.
+                    </Service>
+
+                    <Service iconName="ads" title="Support op afstand">
+                        Dit is de plek waar alles gebeurt. De plek waar je laat
+                        zien wie je bent, waar je mensen overtuigt en waar je
+                        klanten binnenhaalt. Bytecode zal je hiertoe in staat
+                        stellen, door het onderste uit de kan te halen. Daarmee
+                        creëren wij samen het beste voor jou, uiteenlopend van
+                        simplistische websites tot ingewikkelde webapps.
+                    </Service>
+                    <Service iconName="design" title="Design & Branding">
+                        Wil je een succesvolle webshop hebben? Dan heel veel
+                        factoren denken. Bytecode weet precies welke factoren
+                        dit zijn en wil je daar graag mee helpen. Zowel met de
+                        techniek als met de specifieke marketing en SEO die bij
+                        een succesvolle webshop komen kijken.
+                    </Service>
                 </Row>
             </Container>
         </Wrapper>
+        <Container>
+            <Row>
+                <h1>Werkwijze</h1>
+
+                <big>
+                    <big>
+                        <p>
+                            Voordat we voor een partij aan de slag gaan als
+                            technisch partner zorgen we altijd dat we voor alles
+                            op een lijn zitten. Indien wij support verlenen aan
+                            eindklanten kunnen wij dit volledig white-label
+                            doen. Voor ons is het geen probleem om bijvoorbeeld
+                            als medewerker vanuit een eigen support-systeem te
+                            werken, als dit de beste oplossing is. Hierna kijken
+                            we altijd wat de behoeften zijn. Soms komt dit neer
+                            op dat we een opdracht volledig uit handen nemen.
+                            Andere keren zal het nodig zijn om te fungeren als
+                            onderdeel van een team voor een langere tijd. Of
+                            wellicht is een ad-hoc support-contructie de beste
+                            oplossing. Hierin denken we graag mee.
+                        </p>
+                    </big>
+                </big>
+            </Row>
+        </Container>
         <PaddedContainer>
             <Row>
                 <Col lg={6}>
@@ -277,13 +348,16 @@ const Collaboration = () => (
                             Altijd duidelijke en snelle communicatie
                         </CheckListItem>
                         <CheckListItem>
-                            Altijd duidelijke en snelle communicatie
+                            7 dagen per week, binnen een uur, reactie op vragen
                         </CheckListItem>
                         <CheckListItem>
-                            Altijd duidelijke en snelle communicatie
+                            Voor noodgevallen altijd bereikbaar te zijn
                         </CheckListItem>
                         <CheckListItem>
-                            Altijd duidelijke en snelle communicatie
+                            Voor noodgevallen altijd bereikbaar te zijn
+                        </CheckListItem>
+                        <CheckListItem>
+                            Transparantie en openheid, zonder uitzonderingen
                         </CheckListItem>
                     </Checklist>
                 </Col>
@@ -308,4 +382,4 @@ const Collaboration = () => (
     </Layout>
 );
 
-export default Collaboration;
+export default Partners;

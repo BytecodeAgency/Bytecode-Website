@@ -115,7 +115,7 @@ const bytecode = {
         },
         big: {
             size: '111%',
-            height: '1.11em',
+            height: '1.33em',
             spacing: '0em',
             font: paragraph,
             weight: regular,
