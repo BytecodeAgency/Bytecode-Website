@@ -73,8 +73,9 @@ const Over = () => (
                 </Col>
                 <TeamMember
                     name="Jeroen van Steijn"
-                    title="Co-founder &amp; software consultant"
+                    title="Co-founder &amp; Operations manager"
                     img={require('../images/img/team/jeroen.png')}
+                    link="https://jeroenvansteijn.nl"
                     email="mailto:jeroen@bytecode.nl"
                     github="https://github.com/JeroenVanSteijn"
                     instagram="https://www.instagram.com/jjvansteijn"
@@ -82,7 +83,7 @@ const Over = () => (
                 />
                 <TeamMember
                     name="Luciano Nooijen"
-                    title="Co-founder &amp; software consultant"
+                    title="Co-founder &amp; Technical lead"
                     img={require('../images/img/team/luciano.png')}
                     link="https://lucianonooijen.nl"
                     email="mailto:luciano@bytecode.nl"
