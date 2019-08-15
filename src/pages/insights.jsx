@@ -35,7 +35,6 @@ const Blogpost = ({ data: post }, key) => (
 
 const blogArchive = ({ data }) => {
     const { edges: posts } = data.allMdx;
-
     return (
         <Layout pageSettings={pageSettings}>
             <ContentPageHeader
@@ -57,7 +56,7 @@ const blogArchive = ({ data }) => {
                             <Container fluid>
                                 <Row>
                                     {
-                                        posts.sort((post1, post2) => post1.id > post2.id).map(({ node: post }, _, key) => <Blogpost data={post} key={key} />)
+                                        posts.map(({ node: post }, _, key) => <Blogpost data={post} key={key} />)
                                     }
                                 </Row>
                             </Container>
@@ -74,7 +73,9 @@ const blogArchive = ({ data }) => {
 
 export const pageQuery = graphql`
     query blogIndex {
-        allMdx {
+        allMdx
+        (sort: { fields: [frontmatter___id], order: DESC })
+        {
             edges {
                 node {
                     id
