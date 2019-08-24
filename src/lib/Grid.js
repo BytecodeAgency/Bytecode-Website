@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {
-    Container as ContainerBase,
     Row as RowBase,
     Col as ColBase,
     Hidden as HiddenBase,
@@ -8,14 +7,24 @@ import {
 } from 'react-grid-system';
 import theme from '../styles/theme';
 
-export const Container = styled(ContainerBase)`
-    @media (max-width: ${theme.breakpoints[0]}px) {
-        margin: 4em 0 !important;
-        margin: 10rem 0;
+const breakpoints = theme.mediaQuery;
+const container = theme.containerWidth;
+
+console.debug(breakpoints.lg);
+
+export const Container = styled.section`
+    margin: 3em ${container.sm};
+
+    @media ${breakpoints.md} {
+        margin: 5em ${container.md};
     }
-    @media (min-width: ${theme.breakpoints[0]}px) {
-        margin: 5rem 0;
-        align-self: center;
+
+    @media ${breakpoints.lg} {
+        margin: 7vw ${container.lg};
+    }
+
+    @media ${breakpoints.xl} {
+        margin: 5vw ${container.xl};
     }
 `;
 

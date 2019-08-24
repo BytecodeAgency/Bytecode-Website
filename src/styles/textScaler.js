@@ -3,21 +3,23 @@ import theme from './theme';
 
 // Below I staticially added new responsive breakpoints.
 // In the end these breakpoints should be incorporated into the main theme.js
-const breakpoint = {
-    xs: '48em',
-    sm: '64em',
-    md: '85.375em',
-    lg: '120em',
-    xl: '160em',
-};
+// const breakpoint = {
+//     xs: '48em',
+//     sm: '64em',
+//     md: '85.375em',
+//     lg: '120em',
+//     xl: '160em',
+// };
 
-const mediaQueries = {
-    sm: `(min-width: ${breakpoint.sm})`,
-    md: `(min-width: ${breakpoint.md})`,
-    lg: `(min-width: ${breakpoint.lg})`,
-    xl: `(min-width: ${breakpoint.xl})`,
-    xxl: `(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)`,
-};
+// const mediaQueries = {
+//     sm: `(min-width: ${breakpoint.sm})`,
+//     md: `(min-width: ${breakpoint.md})`,
+//     lg: `(min-width: ${breakpoint.lg})`,
+//     xl: `(min-width: ${breakpoint.xl})`,
+//     xxl: `(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)`,
+// };
+
+const mediaQueries = theme.mediaQuery;
 
 const base = {
     fontSize: '1em',

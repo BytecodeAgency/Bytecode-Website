@@ -50,8 +50,7 @@ const Case = () => (
             <Container>
                 <Row>
                     <img
-                        src={require(```../images/img/
-                        content/cases/cote-et-ciel/website1.png```)}
+                        src={require(`../images/img/content/cases/cote-et-ciel/website1.png`)}
                         alt="Website Cote et Ciel"
                     />
                 </Row>
@@ -137,8 +136,7 @@ const Case = () => (
                 </Col>
                 <Col>
                     <img
-                        src={require(```../images/img/content/cases/
-                        cote-et-ciel/website1.png```)}
+                        src={require(`../images/img/content/cases/cote-et-ciel/website1.png`)}
                         alt="Website Cote et Ciel"
                     />
                 </Col>

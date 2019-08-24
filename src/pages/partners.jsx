@@ -47,9 +47,6 @@ const PaddedCol = styled(Col)`
 
 const PaddedContainer = styled(Container)`
     padding: 4em 0;
-    @media (max-width: ${theme.breakpoints[1]}px) {
-        margin: 1em;
-    }
 `;
 
 const Checklist = styled.ul`
@@ -165,7 +162,7 @@ const Partners = () => (
         <PaddedContainer>
             <Row justify="center" align="center">
                 <PaddedCol md={6}>
-                    <h3>Vergroot je waarde</h3>
+                    <h2>Vergroot je waarde</h2>
                     <p>
                         <big>
                             Door technische diensten aan te kunnen bieden aan
@@ -255,12 +252,8 @@ const Partners = () => (
         <Wrapper>
             <Container fluid>
                 <Row>
-                    <Col offset={{ md: 0.6 }} lg={6}>
-                        <h2>Diensten</h2>
-                    </Col>
+                    <h2>Diensten</h2>
                 </Row>
-            </Container>
-            <Container fluid>
                 <Row>
                     <Service iconName="website" title="Websites & Webshops">
                         Dit is de plek waar alles gebeurt. De plek waar je laat
