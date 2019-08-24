@@ -166,6 +166,14 @@ const BlogContent = styled.div`
         margin: 3rem auto 3rem auto;
         display: block;
     }
+
+    em {
+        font-style: italic;
+    }
+
+    strong {
+        font-weight: 900;
+    }
 `;
 
 const BlogMetaDataWrapper = styled.div`
