@@ -5,9 +5,10 @@ import socialIcons from './SocialIcons';
 const FooterSocialIcon = styled.a`
     display: inline;
     text-decoration: none;
+    margin: 1em 0;
     svg {
         display: inline-block;
-        width: 3rem;
+        width: 1.33em;
     }
 `;
 

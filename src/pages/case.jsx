@@ -50,6 +50,7 @@ const Case = () => (
             <Container>
                 <Row>
                     <img
+                        // eslint-disable-next-line max-len
                         src={require(`../images/img/content/cases/cote-et-ciel/website1.png`)}
                         alt="Website Cote et Ciel"
                     />
@@ -136,6 +137,7 @@ const Case = () => (
                 </Col>
                 <Col>
                     <img
+                        // eslint-disable-next-line max-len
                         src={require(`../images/img/content/cases/cote-et-ciel/website1.png`)}
                         alt="Website Cote et Ciel"
                     />

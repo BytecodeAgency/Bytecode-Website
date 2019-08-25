@@ -17,9 +17,6 @@ const Cases = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
             <Row>
-                <h1>Cases</h1>
-            </Row>
-            <Row>
                 <CaseThumbnail
                     title="How we made breda collaborate"
                     category="Test"

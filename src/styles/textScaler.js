@@ -24,8 +24,8 @@ const mediaQueries = theme.mediaQuery;
 const base = {
     fontSize: '1em',
     lineHeight: {
-        paragraph: '1.58em',
-        header: '1.05em',
+        paragraph: '1.33em',
+        header: '1em',
     },
 };
 

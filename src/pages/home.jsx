@@ -90,7 +90,7 @@ const Home = () => (
                         </Col>
                     </Row>
                 </Col>
-                <CenterAlignedCol offset={{lg: 1}} md={12} lg={5}>
+                <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5}>
                     <TextBlock
                         useGatsbyLink
                         subtitle="Hoe Bytecode kan helpen"
@@ -111,7 +111,7 @@ const Home = () => (
             </Row>
         </Container>
         <Wrapper>
-            <Container fluid>
+            <Container>
                 <Row justify="center" align="center">
                     <CenterAlignedCol md={12} lg={5}>
                         <TextBlock
@@ -144,9 +144,9 @@ const Home = () => (
             </Container>
         </Wrapper>
         <Process />
-        <Wrapper>
+        <Container>
             <ContactForm />
-        </Wrapper>
+        </Container>
     </Layout>
 );
 
