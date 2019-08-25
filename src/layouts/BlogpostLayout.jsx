@@ -66,16 +66,6 @@ const BlogSingle = ({ content }) => (
                 </BlogContent>
             </BlogContentContainer>
         </article>
-        <Container>
-            <ContentBlockWrapper>
-                <TextBlock
-                    subtitle="We staan voor je klaar"
-                    headingType="h2"
-                    title="Heb je een vraag over dit artikel? Of misschien een suggestie voor een volgende post? Laat het ons weten!"
-                />
-                <ContactForm hideText={true} />
-            </ContentBlockWrapper>
-        </Container>
     </Layout>
 );
 

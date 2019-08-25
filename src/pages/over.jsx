@@ -27,7 +27,7 @@ const Over = () => (
         />
         <Container fluid>
             <Row justify="center" align="center">
-                <Col offset={{ md: 0, lg: 1, xl: 2 }} md={6} lg={5} xl={3}>
+                <Col>
                     <TextBlock
                         subtitle="Onze Visie"
                         title="Problemen oplossen met de nieuwste technieken,
@@ -35,7 +35,7 @@ const Over = () => (
                         headingType="h2"
                     />
                 </Col>
-                <Col offset={{ md: 0, lg: 1, xl: 1 }} md={6} lg={5} xl={4}>
+                <Col>
                     <p>
                         Door eerst de problemen te analyseren en doelen te
                         stellen zorgen we voor resultaat, en voorkomen we
@@ -55,7 +55,7 @@ const Over = () => (
         />
         <Container fluid>
             <Row justify="center" align="center">
-                <Col offset={{ md: 0, lg: 1, xl: 1 }} md={12} lg={5} xl={4}>
+                <Col md={12} lg={5} xl={4}>
                     <TextBlock
                         subtitle="Het team"
                         alt="Het team"
@@ -123,9 +123,10 @@ const Over = () => (
                 />
             </Row>
         </Container>
-        <Wrapper>
+        <Container>
+            <hr />
             <ContactForm />
-        </Wrapper>
+        </Container>
     </Layout>
 );
 
