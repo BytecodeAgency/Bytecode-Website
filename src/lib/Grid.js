@@ -8,14 +8,23 @@ import {
 } from 'react-grid-system';
 import theme from '../styles/theme';
 
+const breakpoints = theme.mediaQuery;
+const container = theme.containerWidth;
+
 export const Container = styled(ContainerBase)`
-    @media (max-width: ${theme.breakpoints[0]}px) {
-        margin: 4em 0 !important;
-        margin: 10rem 0;
+    max-width: unset !important;
+    margin: 3em ${props => (props.fluid ? '0' : container.sm)} !important;
+
+    @media ${breakpoints.md} {
+        margin: 2em ${props => (props.fluid ? '0' : container.md)} !important;
     }
-    @media (min-width: ${theme.breakpoints[0]}px) {
-        margin: 5rem 0;
-        align-self: center;
+
+    @media ${breakpoints.lg} {
+        margin: 2.5vw ${props => (props.fluid ? '0' : container.lg)} !important;
+    }
+
+    @media ${breakpoints.xl} {
+        margin: 4vw ${props => (props.fluid ? '0' : container.xl)} !important;
     }
 `;
 

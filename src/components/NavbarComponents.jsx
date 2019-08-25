@@ -5,10 +5,15 @@ import { transparentize } from 'polished';
 import theme from '../styles/theme';
 import { Container } from '../lib/Grid';
 
+const { mediaQuery } = theme;
+const container = theme.containerWidth;
+
 const NavbarContainer = styled.nav`
+    @media ${mediaQuery.md} {
+    }
     position: relative;
     z-index: 10000;
-    padding: 1rem 0;
+    padding: 1em 1em;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         height: 5rem;
         width: 100vw;
@@ -104,7 +109,7 @@ const NavbarItem = styled(NavbarItemBase)`
         padding-right: 0;
     }
     @media (max-width: ${theme.breakpointMobileMenu}) {
-        padding: 1rem 2rem;
+        padding: 0 1em;
         &:first-child {
             margin-top: 4rem;
         }
@@ -127,7 +132,7 @@ const Logo = styled.span`
 const MobileNavLogo = styled.img`
     height: 3em;
     position: absolute;
-    padding: 0.5em 0;
+    padding: 0.5em 1em;
     color: white;
     display: none;
     @media (max-width: ${theme.breakpointMobileMenu}) {
@@ -141,7 +146,7 @@ const MenuButton = styled.a`
     width: 2em;
     position: absolute;
     right: 2em;
-    top: 0.5em;
+    top: 1.33em;
     color: white;
     align-items: center;
     display: none;

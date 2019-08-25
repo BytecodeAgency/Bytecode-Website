@@ -115,7 +115,7 @@ const bytecode = {
         },
         big: {
             size: '111%',
-            height: '1.11em',
+            height: '1.33em',
             spacing: '0em',
             font: paragraph,
             weight: regular,
@@ -188,7 +188,30 @@ const bytecode = {
     },
     breakpointMobileMenu: '63rem',
     breakpoints: [540, 750, 1200, 1400],
-    containerWidths: [540, 750, 960, 1600],
+    containerWidths: [],
+    breakpoint: {
+        xs: '48em',
+        sm: '64em',
+        md: '85.375em',
+        lg: '120em',
+        xl: '160em',
+    },
+    containerWidth: {
+        xs: '1vw',
+        sm: '4vw',
+        md: '8vw',
+        lg: '11vw',
+        xl: '15vw',
+    },
+};
+
+bytecode.mediaQuery = {
+    xs: `(min-width: ${bytecode.breakpoint.xs})`,
+    sm: `(min-width: ${bytecode.breakpoint.sm})`,
+    md: `(min-width: ${bytecode.breakpoint.md})`,
+    lg: `(min-width: ${bytecode.breakpoint.lg})`,
+    xl: `(min-width: ${bytecode.breakpoint.xl})`,
+    xxl: `(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)`,
 };
 
 const theme = bytecode;

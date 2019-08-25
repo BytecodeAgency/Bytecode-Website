@@ -12,20 +12,18 @@ const pageSettings = {
 };
 
 const testImg = require('../images/img/content/team.png');
+const testImg2 = require('../images/img/cases/sample.webp');
 
 const Cases = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
             <Row>
-                <h1>Cases</h1>
-            </Row>
-            <Row>
                 <CaseThumbnail
                     title="How we made breda collaborate"
                     category="Test"
                     big
-                    url="#"
-                    img={testImg}
+                    url="/case"
+                    img={testImg2}
                 />
             </Row>
         </Container>

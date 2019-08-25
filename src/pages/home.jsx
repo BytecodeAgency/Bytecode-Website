@@ -56,9 +56,9 @@ const Home = () => (
             ontwikkelen van alles wat je nodig hebt om je digitaal volledig te
             ontplooien."
         />
-        <Container fluid>
+        <Container>
             <Row>
-                <Col offset={{ xl: 1, lg: 1 }} md={12} lg={4} xl={4}>
+                <Col md={12} lg={6} xl={6}>
                     <Row>
                         <Col sm={6}>
                             <Thumbnail
@@ -90,7 +90,7 @@ const Home = () => (
                         </Col>
                     </Row>
                 </Col>
-                <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5} xl={4}>
+                <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5}>
                     <TextBlock
                         useGatsbyLink
                         subtitle="Hoe Bytecode kan helpen"
@@ -111,9 +111,9 @@ const Home = () => (
             </Row>
         </Container>
         <Wrapper>
-            <Container fluid>
+            <Container>
                 <Row justify="center" align="center">
-                    <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={4}>
+                    <CenterAlignedCol md={12} lg={5}>
                         <TextBlock
                             useGatsbyLink
                             subtitle="Wie wij zijn"
@@ -133,7 +133,7 @@ const Home = () => (
                             product op.
                         </TextBlock>
                     </CenterAlignedCol>
-                    <Col offset={{ lg: 1 }} md={12} lg={5}>
+                    <Col offset={{ lg: 1 }} md={12} lg={6}>
                         <GroupImage
                             width="700"
                             src={require('../images/img/content/team-700.png')}
@@ -144,9 +144,9 @@ const Home = () => (
             </Container>
         </Wrapper>
         <Process />
-        <Wrapper>
+        <Container>
             <ContactForm />
-        </Wrapper>
+        </Container>
     </Layout>
 );
 

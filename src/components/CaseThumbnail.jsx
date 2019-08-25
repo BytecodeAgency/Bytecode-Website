@@ -5,6 +5,8 @@ import theme from '../styles/theme';
 import TextBlock from './TextBlock';
 import { Col } from '../lib/Grid';
 
+const { xs, sm, md, lg, xl, xxl } = theme.mediaQuery;
+
 const SubtitleBase = ({ className, children }) => (
     <div className={`subtitle ${className}`}>{children}</div>
 );
@@ -64,9 +66,9 @@ const ThumbnailContent = styled.div`
 const BigThumbnailImg = styled.div`
     background: url('${props => props.img}'), ${theme.colors.secondary};
     background-size: cover;
-    height: 35em;
+    height: 40em;
     transition: all 0.3s ease;
-   
+
 `;
 
 //  &:after {
@@ -82,8 +84,11 @@ const BigThumbnailImg = styled.div`
 const ThumbnailImg = styled.div`
     background: url('${props => props.img}'), ${theme.colors.secondary};
     background-size: cover;
-    height: ${props => (props.big ? '50em' : '18em')};
     transition: all 0.5s ease;
+    height: 50vh;
+    @media ${md} {
+        height: ${props => (props.big ? '50vh' : '18em')};
+    }
 `;
 
 const Arrow = styled.img``;

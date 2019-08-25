@@ -11,6 +11,8 @@ import ContactForm from '../components/ContactForm';
 import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 
+const { xs, sm, md, lg, xl, xxl } = theme.mediaQuery;
+
 const pageSettings = {
     title: 'Bytecode Insights - Bytecode Digital Agency B.V.',
     description:
@@ -41,7 +43,7 @@ const blogArchive = ({ data }) => {
             <Container>
                 <Row>
                     <Col md={5}>
-                        <h2>Een frisse blik op het internet</h2>
+                        <h1>Een frisse blik op het internet</h1>
                     </Col>
                     <Col offset={{ md: 1 }} md={6}>
                         <p>
@@ -56,36 +58,13 @@ const blogArchive = ({ data }) => {
                     </Col>
                 </Row>
             </Container>
-            {/* <ContentPageHeader
-                img={require('../images/img/content/vision_web.png')}
-                subtitle="Insights"
-                title="Een frisse blik op het internet."
-                text="Hier zie je artikelen die met passie zijn geschreven
-                door Bytecode, een jonge en moderne web agency. Wij
-                laten jou graag zien hoe je de kracht van het
-                internet kunt gebruiken om alles uit jezelf te
-                halen. Dit doen we door interessante artikelen te
-                schrijven, maar ook door deze inzichten in onze
-                werkzaamheden te verwerken."
-            /> */}
             <Posts>
-                <Container fluid>
-                    <Row>
-                        <Col offset={{ md: 0, lg: 0, xl: 1 }} md={10}>
-                            <Container fluid>
-                                <Row>
-                                    {
-                                        posts.map(({ node: post }, _, key) => <Blogpost data={post} key={key} />)
-                                    }
-                                </Row>
-                            </Container>
-                        </Col>
-                    </Row>
-                </Container>
+
+                {
+                    posts.map(({ node: post }, _, key) => <Blogpost data={post} key={key} />)
+                }
+
             </Posts>
-            <Wrapper>
-                <ContactForm />
-            </Wrapper>
         </Layout>
     );
 };
@@ -123,6 +102,13 @@ export const pageQuery = graphql`
 
 export default blogArchive;
 
+const BlogThumbnailWrapper = styled.div`
+    width: 100%;
+    @media ${md} {
+        width: 50%;
+    }
+`;
+
 const BlogThumbnail = props => {
     const {
         title,
@@ -137,12 +123,12 @@ const BlogThumbnail = props => {
     } = props;
     const articleImage = require(`../images/img/articles/${article_image_url}`);
     return (
-        <Col xl={4} lg={4} md={6}>
+        <BlogThumbnailWrapper>
             <Link to={slug}>
                 <BlogThumbnailContentWrapper>
                     <BlogThumbnailImage url={articleImage} />
                     <h6 className="subtitle">{category_name}</h6>
-                    <h6>{title}</h6>
+                    <h4>{title}</h4>
                     <AuthorContainer>
                         <Author
                             name={author_name}
@@ -155,30 +141,41 @@ const BlogThumbnail = props => {
                     </p>
                 </BlogThumbnailContentWrapper>
             </Link>
-        </Col>
+        </BlogThumbnailWrapper>
     );
 };
 
-const Posts = styled.section`
+const Posts = styled(Container)`
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    @media ${sm} {
+        flex-direction: row;
+    }
 `;
+
 
 const BlogThumbnailContentWrapper = styled.div`
     text-decoration: none !important;
     cursor: pointer;
-    padding: 2rem;
-    margin: 1rem;
+    @media ${md} {
+        padding: 2rem;
+        margin: 1rem;
+    }
 `;
 
 const BlogThumbnailImage = styled.div`
     background-image: url(${props => props.url || '../images/img/header/noise.jpg'});
+    height: 50vh;
     width: 100%;
-    height: 25rem;
     background-size: cover;
     background-position: center center;
-    margin: 0 0 1.6rem;
-    @media screen and (max-width: ${theme.breakpoints[1]}) {
+    @media ${md} {
+
+        width: 100%;
         height: 25rem;
+
+        margin: 0 0 1.6rem;
     }
 `;
 

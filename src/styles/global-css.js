@@ -79,5 +79,5 @@ const GlobalStylesRaw = `
 export const GlobalStyles = GlobalStylesRaw.replace(/\s+/gm, '');
 
 export const setContainerWidths = () => {
-    setConfiguration({ containerWidths: theme.containerWidths });
+    setConfiguration({ containerWidths: theme.containerWidths, gutterWidth: 100 });
 };

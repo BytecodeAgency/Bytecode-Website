@@ -44,39 +44,38 @@ class Navbar extends React.Component {
         const { menuIsOpen } = this.state;
         return (
             <NavbarContainer>
-                <InnerNavbarContainer>
+                <Link to="/" aria-label="homePage">
+                    <MobileNavLogo src={logoMin} alt="Logo" />
+                </Link>
+                <BlackOverlay
+                    menuIsOpen={menuIsOpen}
+                    onClick={this.closeMenu}
+                />
+                <MenuButton href="#" onClick={this.openMenu}>
+                    <img src={hamburger} alt="Close menu" width="100%" />
+                </MenuButton>
+                <NavbarContent menuIsOpen={menuIsOpen}>
                     <Link to="/" aria-label="homePage">
-                        <MobileNavLogo src={logoMin} alt="Logo" />
+                        <Logo>
+                            <img src={logo} alt="Bytecode logo" />
+                        </Logo>
                     </Link>
-                    <BlackOverlay
-                        menuIsOpen={menuIsOpen}
-                        onClick={this.closeMenu}
-                    />
-                    <MenuButton href="#" onClick={this.openMenu}>
-                        <img src={hamburger} alt="Close menu" width="100%" />
-                    </MenuButton>
-                    <NavbarContent menuIsOpen={menuIsOpen}>
-                        <Link to="/" aria-label="homePage">
-                            <Logo>
-                                <img src={logo} alt="Bytecode logo" />
-                            </Logo>
-                        </Link>
-                        <NavbarItems>
-                            <CloseMenuButton href="#" onClick={this.closeMenu}>
-                                <img
-                                    src={closeMenu}
-                                    alt="Close menu"
-                                    width="100%"
-                                />
-                            </CloseMenuButton>
-                            <NavbarItem href="/" text="Home" />
-                            <NavbarItem href="/services" text="Services" />
-                            <NavbarItem href="/insights" text="Insights" />
-                            <NavbarItem href="/over" text="Over" />
-                            <NavbarItem href="/contact" text="Contact" />
-                        </NavbarItems>
-                    </NavbarContent>
-                </InnerNavbarContainer>
+                    <NavbarItems>
+                        <CloseMenuButton href="#" onClick={this.closeMenu}>
+                            <img
+                                src={closeMenu}
+                                alt="Close menu"
+                                width="100%"
+                            />
+                        </CloseMenuButton>
+                        <NavbarItem href="/" text="Home" />
+                        <NavbarItem href="/services" text="Services" />
+                        <NavbarItem href="/cases" text="Work" />
+                        <NavbarItem href="/insights" text="Insights" />
+                        <NavbarItem href="/over" text="Over" />
+                        <NavbarItem href="/contact" text="Contact" />
+                    </NavbarItems>
+                </NavbarContent>
             </NavbarContainer>
         );
     }
