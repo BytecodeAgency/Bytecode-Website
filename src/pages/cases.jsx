@@ -12,7 +12,7 @@ const pageSettings = {
 };
 
 const testImg = require('../images/img/content/team.png');
-const testImg2= require('../images/img/cases/sample.webp');
+const testImg2 = require('../images/img/cases/sample.webp');
 
 const Cases = () => (
     <Layout pageSettings={pageSettings}>

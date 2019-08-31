@@ -296,7 +296,9 @@ class ContactForm extends React.Component {
                                 />
                                 {/* eslint-disable indent */}
                                 {errors.content && touched.content && (
-                                    <ErrorMessage>{errors.content}</ErrorMessage>
+                                    <ErrorMessage>
+                                        {errors.content}
+                                    </ErrorMessage>
                                 )}
                                 {/* eslint-enable */}
                                 <SendButton

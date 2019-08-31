@@ -96,7 +96,7 @@ const Results = styled(Container)`
 `;
 
 const testImg = require('../images/img/content/team.png');
-const testImg2  = require('../images/img/cases/sample.webp');
+const testImg2 = require('../images/img/cases/sample.webp');
 
 const WrappedContainer = styled(PaddedContainer)`
     &:before {
@@ -120,38 +120,49 @@ const CaseHeader = styled.header`
     }
 `;
 
+const caseImageLocation =
+    '../images/img/content/cases/cote-et-ciel/website1.png';
+
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container fluid>
-                <Container>
+            <Container>
                 <CaseHeader img={testImg2} />
-
             </Container>
             <Container>
-            <Row align="center">
-                        <Col offset={{lg:1}} md={5}>
+                <Row align="center">
+                    <Col offset={{ lg: 1 }} md={5}>
                         <p className="subtitle">Côte & Ciel</p>
                         <h1>Een high end shopbeleving</h1>
-                        </Col>
-                        <Col md={5}>
-                        <p><big> Dit is een opzetje voor een case pagina. Op deze pagina staan elementen die je kan gebruiken. Daarnaast kan je ook zelf composities maken met het react grid. Ben benieuwd wat jullie ermee doen. Als je het idee hebt dat je bepaalde informatie niet handig/goed/mooi kan noteren: geef dat even bij mij aan. Dan kan ik daarvoor weer verder ontwerpen</big></p>
-                        </Col>
-                    </Row>
+                    </Col>
+                    <Col md={5}>
+                        <p>
+                            <big>
+                                {' '}
+                                Dit is een opzetje voor een case pagina. Op deze
+                                pagina staan elementen die je kan gebruiken.
+                                Daarnaast kan je ook zelf composities maken met
+                                het react grid. Ben benieuwd wat jullie ermee
+                                doen. Als je het idee hebt dat je bepaalde
+                                informatie niet handig/goed/mooi kan noteren:
+                                geef dat even bij mij aan. Dan kan ik daarvoor
+                                weer verder ontwerpen
+                            </big>
+                        </p>
+                    </Col>
+                </Row>
             </Container>
-            <TextAndImage
-                img={require('../images/img/content/cases/cote-et-ciel/website1.png')}
-                fluid
-            >
+            <TextAndImage img={require(caseImageLocation)} fluid>
                 <p className="subtitle">Ontdekking</p>
-                    <h2>Een high end shopbeleving</h2>
-                    <p>
+                <h2>Een high end shopbeleving</h2>
+                <p>
                     <big>
                         {' '}
                         hebben Côte et Ciel in samenwerking met The Pumphouse
                         geholpen om hun user flow te verbeteren.
                     </big>
                 </p>
-                    <Checklist>
+                <Checklist>
                     <CheckListItem>
                         Altijd duidelijke en snelle communicatie
                     </CheckListItem>
@@ -169,20 +180,16 @@ const Case = () => (
                     </CheckListItem>
                 </Checklist>
             </TextAndImage>
-            <TextAndImage
-                img={require('../images/img/content/cases/cote-et-ciel/website1.png')}
-                fluid
-                reverse
-            >
-                    <h2>Een high end shopbeleving</h2>
-                    <p>
+            <TextAndImage img={require(caseImageLocation)} fluid reverse>
+                <h2>Een high end shopbeleving</h2>
+                <p>
                     <big>
                         {' '}
                         hebben Côte et Ciel in samenwerking met The Pumphouse
                         geholpen om hun user flow te verbeteren.
                     </big>
                 </p>
-                    <Checklist>
+                <Checklist>
                     <CheckListItem>
                         Altijd duidelijke en snelle communicatie
                     </CheckListItem>
@@ -203,20 +210,17 @@ const Case = () => (
         </Container>
 
         <Container fluid>
-            <TextAndImage
-                img={require('../images/img/content/cases/cote-et-ciel/website1.png')}
-                reverse
-            >
+            <TextAndImage img={require(caseImageLocation)} reverse>
                 <p className="subtitle">Ontwikkeling</p>
-                    <h2>Leg de focus op de webwinkel</h2>
-                    <p>
+                <h2>Leg de focus op de webwinkel</h2>
+                <p>
                     <big>
                         {' '}
                         hebben Côte et Ciel in samenwerking met The Pumphouse
                         geholpen om hun user flow te verbeteren.
                     </big>
                 </p>
-                    <Checklist>
+                <Checklist>
                     <CheckListItem>
                         Altijd duidelijke en snelle communicatie
                     </CheckListItem>
@@ -234,21 +238,18 @@ const Case = () => (
                     </CheckListItem>
                 </Checklist>
             </TextAndImage>
-
         </Container>
         <Container fluid>
-            <TextAndImage
-                img={require('../images/img/content/cases/cote-et-ciel/website1.png')}
-            >
-                    <h2>Leg de focus op de webwinkel</h2>
-                    <p>
+            <TextAndImage img={require(caseImageLocation)}>
+                <h2>Leg de focus op de webwinkel</h2>
+                <p>
                     <big>
                         {' '}
                         hebben Côte et Ciel in samenwerking met The Pumphouse
                         geholpen om hun user flow te verbeteren.
                     </big>
                 </p>
-                    <Checklist>
+                <Checklist>
                     <CheckListItem>
                         Altijd duidelijke en snelle communicatie
                     </CheckListItem>
@@ -267,7 +268,6 @@ const Case = () => (
                 </Checklist>
             </TextAndImage>
         </Container>
-
     </Layout>
 );
 
