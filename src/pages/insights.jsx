@@ -37,7 +37,6 @@ const Blogpost = ({ data: post }, key) => (
 
 const blogArchive = ({ data }) => {
     const { edges: posts } = data.allMdx;
-
     return (
         <Layout pageSettings={pageSettings}>
             <Container>
@@ -71,7 +70,9 @@ const blogArchive = ({ data }) => {
 
 export const pageQuery = graphql`
     query blogIndex {
-        allMdx {
+        allMdx
+        (sort: { fields: [frontmatter___id], order: DESC })
+        {
             edges {
                 node {
                     id

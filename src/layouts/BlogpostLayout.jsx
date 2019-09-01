@@ -124,6 +124,10 @@ const BlogContent = styled.div`
         font-size: 1.406rem;
     }
 
+    a {
+        color: #23be87;
+    }
+
     h1,
     h2,
     h3,

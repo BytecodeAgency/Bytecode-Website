@@ -9,7 +9,7 @@
   ],
   "license": "AGPL-3.0",
   "scripts": {
-    "start": "yarn run develop",
+    "start": "yarn run dev",
     "dev": "gatsby develop",
     "build": "gatsby build",
     "export": "gatsby build",
