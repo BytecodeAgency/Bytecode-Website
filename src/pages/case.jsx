@@ -121,6 +121,8 @@ const CaseHeader = styled.header`
     }
 `;
 
+const temp = require('../images/img/content/cases/cote-et-ciel/website1.png');
+
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container fluid>
@@ -150,10 +152,7 @@ const Case = () => (
                     </Col>
                 </Row>
             </Container>
-            <TextAndImage
-                img={require('../images/img/content/cases/cote-et-ciel/website1.png')}
-                fluid
-            >
+            <TextAndImage img={temp} fluid>
                 <p className="subtitle">Ontdekking</p>
                 <h2>Een high end shopbeleving</h2>
                 <p>
@@ -181,11 +180,7 @@ const Case = () => (
                     </CheckListItem>
                 </Checklist>
             </TextAndImage>
-            <TextAndImage
-                img={require('../images/img/content/cases/cote-et-ciel/website1.png')}
-                fluid
-                reverse
-            >
+            <TextAndImage img={temp} fluid reverse>
                 <h2>Een high end shopbeleving</h2>
                 <p>
                     <big>
@@ -215,10 +210,7 @@ const Case = () => (
         </Container>
 
         <Container fluid>
-            <TextAndImage
-                img={require('../images/img/content/cases/cote-et-ciel/website1.png')}
-                reverse
-            >
+            <TextAndImage img={temp} reverse>
                 <p className="subtitle">Ontwikkeling</p>
                 <h2>Leg de focus op de webwinkel</h2>
                 <p>
@@ -248,9 +240,7 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage
-                img={require('../images/img/content/cases/cote-et-ciel/website1.png')}
-            >
+            <TextAndImage img={temp}>
                 <h2>Leg de focus op de webwinkel</h2>
                 <p>
                     <big>
