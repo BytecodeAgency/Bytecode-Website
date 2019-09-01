@@ -132,7 +132,7 @@ const Footer = () => (
                         vrijgegeven.
                     </FooterText>
                     <FooterButton
-                        href="https://github.com/BytecodeBV/Bytecode-Website"
+                        href="https://github.com/BytecodeAgency/Bytecode-Website"
                         target="_blank"
                         rel="noopener"
                     >
@@ -145,7 +145,7 @@ const Footer = () => (
                     </FooterHeadingContainer>
                     <FooterText>
                         <FooterLink
-                            href="/cdn/walgemene-vooraarden.pdf"
+                            href="https://cdn.bytecode.nl/algemene-voorwaarden.pdf"
                             target="_blank"
                         >
                             Algemene Voorwaarden

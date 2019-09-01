@@ -4,7 +4,7 @@ module.exports = {
         title: `Bytecode Digital Agency`,
         description: `The Bytecode Digital Agency website, made in GatsbyJS`,
         author: `@bytecodebv`,
-        siteUrl: 'https://www.bytecode.nl',
+        siteUrl: 'https://bytecode.nl',
     },
     plugins: [
         {

@@ -127,6 +127,10 @@ const BlogContent = styled.div`
         font-size: 1.75rem;
     }
 
+    a {
+        color: #23be87;
+    }
+
     h1,
     h2,
     h3,
@@ -161,6 +165,14 @@ const BlogContent = styled.div`
         max-width: 400px;
         margin: 3rem auto 3rem auto;
         display: block;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    strong {
+        font-weight: 900;
     }
 `;
 
