@@ -59,7 +59,7 @@ const Home = () => (
         <Container>
             <Row>
                 <Col md={12} lg={6} xl={6}>
-                    <Row>
+                    <Row gutterWidth={20}>
                         <Col sm={6}>
                             <Thumbnail
                                 serviceName="Websites, Webshops en Webapps"

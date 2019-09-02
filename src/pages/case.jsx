@@ -116,9 +116,7 @@ const CaseHeader = styled.header`
     background-size: cover;
     height: 75vh;
     border-radius: 0.5em;
-    &:after {
-        content: "Cote et Ciel";
-    }
+    margin-bottom: 3em;
 `;
 
 const temp = require('../images/img/content/cases/cote-et-ciel/website1.png');
@@ -131,11 +129,11 @@ const Case = () => (
             </Container>
             <Container>
                 <Row align="center">
-                    <Col offset={{ lg: 1 }} md={5}>
+                    <Col offset={{ lg: 1 }} lg={5}>
                         <p className="subtitle">Côte & Ciel</p>
                         <h1>Een high end shopbeleving</h1>
                     </Col>
-                    <Col md={5}>
+                    <Col lg={5}>
                         <p>
                             <big>
                                 {' '}

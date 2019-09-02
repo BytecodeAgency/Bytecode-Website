@@ -9,6 +9,8 @@ const StyledDiv = styled.div`
     justify-content: center;
     margin-bottom: 3rem;
     overflow: hidden;
+    margin: 0 0.5em;
+    padding: 0.5em;
     &:hover div,
     &:focus div {
         background-color: #080808;

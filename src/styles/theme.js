@@ -29,12 +29,6 @@ const GlobalHeadingSettings = {
     marginBottom: '0.66em',
 };
 
-/**
- * Used font combinations:
- * Lato: 900, 700, 400
- * Space Mono: 400
- */
-
 // Bytecode theme
 const bytecode = {
     colors: {
@@ -49,7 +43,6 @@ const bytecode = {
     },
     typography: {
         body: {
-            size: '1.8rem',
             height: '1.2em',
             spacing: '0.0em',
             font: paragraph,
@@ -57,8 +50,6 @@ const bytecode = {
             color: lightgray,
         },
         h1: {
-            size: '4.292rem',
-
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -66,8 +57,6 @@ const bytecode = {
             marginBottom: GlobalHeadingSettings.marginBottom,
         },
         h2: {
-            size: '3.433rem',
-
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -75,7 +64,6 @@ const bytecode = {
             marginBottom: GlobalHeadingSettings.marginBottom,
         },
         h3: {
-            size: '2.747rem',
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -83,7 +71,6 @@ const bytecode = {
             marginBottom: GlobalHeadingSettings.marginBottom,
         },
         h4: {
-            size: '2.197rem',
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -91,7 +78,6 @@ const bytecode = {
             marginBottom: GlobalHeadingSettings.marginBottom,
         },
         h5: {
-            size: '1.758rem',
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -99,7 +85,6 @@ const bytecode = {
             marginBottom: GlobalHeadingSettings.marginBottom,
         },
         h6: {
-            size: '1.406rem',
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
             weight: GlobalHeadingSettings.weight,
@@ -197,7 +182,7 @@ const bytecode = {
         xl: '160em',
     },
     containerWidth: {
-        xs: '1vw',
+        xs: '2vw',
         sm: '4vw',
         md: '8vw',
         lg: '11vw',

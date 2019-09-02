@@ -7,6 +7,7 @@ const container = theme.containerWidth;
 const { xs, sm, md, lg, xl, xxl } = theme.mediaQuery;
 
 const TextAndImageBase = styled.div`
+    max-width: 100% !important
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,14 +33,26 @@ const TextAndImageBase = styled.div`
 const ImageWrapper = styled.figure`
     grid-area: ${props => props.pos};
 
-    margin: 1em 0;
+    margin: 5em 0;
     @media ${sm} {
+        margin: 1em 0;
         transform: translateX(${props => props.translate});
     }
 `;
 
+const reversed = '1 / 3 / 1 / 4';
+const normal = '1 / 2 / 1 / 3';
+
 const ContentWrapper = styled.div`
-    grid-area: ${props => (props.reverse ? '1 / 3 / 1 / 4' : '1 / 2 / 1 / 3')};
+    margin: 2em 1em;
+    max-width: 100vw;
+    @media ${xs} {
+        margin: 3em 1em;
+    }
+    @media ${sm} {
+        margin: 0;
+        grid-area: ${props => (props.reverse ? reversed : normal)};
+    }
 `;
 
 const TextAndImage = props => {

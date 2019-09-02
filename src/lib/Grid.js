@@ -13,7 +13,9 @@ const container = theme.containerWidth;
 
 export const Container = styled(ContainerBase)`
     max-width: unset !important;
-    margin: 3em ${props => (props.fluid ? '0' : container.sm)} !important;
+    margin: 1em ${props => (props.fluid ? '0' : container.sm)} !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 
     @media ${breakpoints.md} {
         margin: 2em ${props => (props.fluid ? '0' : container.md)} !important;
@@ -28,9 +30,15 @@ export const Container = styled(ContainerBase)`
     }
 `;
 
-export const Row = styled(RowBase)``;
+export const Row = styled(RowBase)`
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+`;
 
-export const Col = styled(ColBase)``;
+export const Col = styled(ColBase)`
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+`;
 
 export const Hidden = styled(HiddenBase)`
     position: relative;

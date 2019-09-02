@@ -23,7 +23,7 @@ const ServiceWrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0;
+    padding: 1em 0;
     @media screen and ${xs} {
         flex-direction: row;
     }

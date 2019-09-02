@@ -6,7 +6,8 @@ import Button from './Button';
 import AllSocials from '../lib/Socials';
 import theme from '../styles/theme';
 
-const { mediaQuery } = theme;
+// eslint-disable-next-line prefer-destructuring
+const mediaQuery = theme.mediaQuery;
 const container = theme.containerWidth;
 
 const opensource = require('../images/icons/social/open-source.svg');
@@ -36,6 +37,10 @@ const FooterIcon = styled.img`
     height: 100%;
     padding: 0.75em;
     width: auto;
+    max-width: 20em;
+    @media ${mediaQuery.md} {
+        max-width: unset;
+    }
 `;
 
 const FooterLogo = styled(FooterIcon)`
@@ -60,9 +65,15 @@ const FooterLink = styled.a`
 `;
 
 const FooterHeadingContainer = styled.div`
-    height: 5rem;
-    display: flex;
-    align-items: end;
+    margin: 2em 0 0.66em 0;
+    p {
+        margin-bottom: 0;
+    }
+    @media ${mediaQuery.sm} {
+        height: 5rem;
+        display: flex;
+        align-items: end;
+    }
 `;
 
 const FooterButton = styled(Button)`

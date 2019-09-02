@@ -45,6 +45,7 @@ const ContentPageHeader = props => {
     // eslint-disable-next-line
     const { subtitle, title, button, href, text } = props;
     return (
+        // eslint-disable-next-line
         <MainHeader {...props}>
             <MainHeaderContent fluid={true}>
                 <Row>

@@ -25,9 +25,9 @@ const Over = () => (
             text="Hoi, wij zijn het Bytecode team. Aangenaam kennis te maken!"
             bgSize="80%"
         />
-        <Container fluid>
+        <Container>
             <Row justify="center" align="center">
-                <Col>
+                <Col lg={4}>
                     <TextBlock
                         subtitle="Onze Visie"
                         title="Problemen oplossen met de nieuwste technieken,
@@ -35,7 +35,7 @@ const Over = () => (
                         headingType="h2"
                     />
                 </Col>
-                <Col>
+                <Col lg={5}>
                     <p>
                         Door eerst de problemen te analyseren en doelen te
                         stellen zorgen we voor resultaat, en voorkomen we
@@ -53,7 +53,7 @@ const Over = () => (
             src={require('../images/img/content/cards.jpg')}
             alt="A fun day at the office"
         />
-        <Container fluid>
+        <Container>
             <Row justify="center" align="center">
                 <Col md={12} lg={5} xl={4}>
                     <TextBlock
@@ -104,7 +104,10 @@ const Over = () => (
                     title="Designer &amp; front-end developer"
                     img={require('../images/img/team/richard.png')}
                     email="mailto:richard@bytecode.nl"
+                    link="https://www.therichart.space"
                     linkedin="https://www.linkedin.com/in/richard-van-t-hof"
+                    behance="https://www.behance.net/therichartspace"
+                    github="https://www.github.com/RichART-Official"
                 />
                 <TeamMember
                     name="Thomas Bodlaender"
@@ -125,7 +128,6 @@ const Over = () => (
             </Row>
         </Container>
         <Container>
-            <hr />
             <ContactForm />
         </Container>
     </Layout>

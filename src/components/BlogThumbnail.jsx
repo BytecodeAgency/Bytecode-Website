@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container } from 'react-grid-system';
+import { Link, graphql } from 'gatsby';
 import theme from '../styles/theme';
 import TextBlock from './TextBlock';
 import { Col } from '../lib/Grid';
@@ -11,10 +12,11 @@ const SubtitleBase = ({ className, children }) => (
     <div className={`subtitle ${className}`}>{children}</div>
 );
 const Subtitle = styled(SubtitleBase)`
-    margin-bottom: 0.66rem;
+    margin-bottom: 0.66em;
 `;
 
-const ThumbnailBase = styled.a`
+const ThumbnailBase = styled(Link)`
+    flex-basis: 25%;
     background-color: ${theme.colors.secondary};
     padding-bottom: 2em;
     cursor: pointer;
@@ -58,6 +60,7 @@ const ThumbnailContent = styled.div`
         img {
             width: 2em;
             height: 0.5em;
+
             margin-left: 0.66em;
         }
     }
@@ -75,11 +78,10 @@ const BigThumbnailImg = styled.div`
 `;
 
 const ThumbnailImg = styled.div`
-    background: url('${props => props.img}'), ${theme.colors.secondary};
+    background: url(${props => props.img}), ${theme.colors.secondary};
     background-size: cover;
     transition: all 0.5s ease;
     height: 50vh;
-    max-height: 40em;
     @media ${md} {
         height: ${props => (props.big ? '50vh' : '18em')};
     }
@@ -87,43 +89,42 @@ const ThumbnailImg = styled.div`
 
 const Arrow = styled.img``;
 
-const CaseThumbnail = props => {
-    const { big, title, category, description, img, url } = props;
-    if (big) {
-        return (
-            <Col>
-                <ThumbnailBase href={url}>
-                    <BigThumbnailImg className="ThumbnailImg" img={img} />
-                    <ThumbnailContent>
-                        <Subtitle>{category}</Subtitle>
-                        <h5>{title}</h5>
-                    </ThumbnailContent>
-                </ThumbnailBase>
-            </Col>
-        );
-    }
+const BlogThumbnail = props => {
+    const {
+        title,
+        slug,
+        postedOn,
+        articleImageUrl,
+        authorName,
+        authorRole,
+        authorImageUrl,
+        categoryName,
+        readingTime,
+    } = props;
+    const articleImage = require(`../images/img/articles/${articleImageUrl}`);
+
     return (
         <Col offset={{ md: 0.1 }} md={3.9}>
-            <ThumbnailBase href={url}>
-                <ThumbnailImg className="ThumbnailImg" img={img} />
+            <ThumbnailBase to={slug}>
+                <ThumbnailImg className="ThumbnailImg" img={articleImage} />
                 <ThumbnailContent>
-                    <Subtitle>{category}</Subtitle>
-                    <big>
-                        <p>{title}</p>
-                    </big>
-                    <a href={url}>
+                    <Subtitle>{categoryName}</Subtitle>
+
+                    <h6>{title}</h6>
+
+                    <Link to={slug}>
                         <small className="thumbnailCTA">
-                            Learn more{' '}
+                            Lees meer{' '}
                             <Arrow
                                 src={require('../images/icons/ui/arrow.svg')}
                                 alt=" >"
                             />
                         </small>
-                    </a>
+                    </Link>
                 </ThumbnailContent>
             </ThumbnailBase>
         </Col>
     );
 };
 
-export default CaseThumbnail;
+export default BlogThumbnail;

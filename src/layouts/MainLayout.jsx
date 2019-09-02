@@ -5,9 +5,7 @@ import SEO from '../components/SEO';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import theme from '../styles/theme';
-import { GlobalStyles } from '../styles/global-css';
-
-import TextScaler from '../styles/textScaler';
+import { GlobalStyles, TypographyClassStyling } from '../styles/global-css';
 
 const Main = styled.main`
     @media (max-width: ${theme.breakpointMobileMenu}) {
@@ -24,8 +22,6 @@ const Head = () => (
             href="https://fonts.googleapis.com/css?family=Cousine"
             rel="stylesheet"
         />
-        <style data-info="bytecode-global-styling">{GlobalStyles}</style>
-        <style data-info="text-scaler">{TextScaler}</style>
     </Helmet>
 );
 
@@ -34,9 +30,13 @@ const Layout = ({ children, pageSettings }) => {
     return (
         <div>
             <Head />
+            <GlobalStyles />
             <SEO title={title} description={description} keywords={keywords} />
             <Navbar />
-            <Main className="main">{children}</Main>
+            <Main className="main">
+                <TypographyClassStyling />
+                {children}
+            </Main>
             <Footer />
         </div>
     );

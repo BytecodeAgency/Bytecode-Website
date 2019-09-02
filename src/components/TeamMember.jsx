@@ -4,8 +4,12 @@ import theme from '../styles/theme';
 import AllSocials from '../lib/Socials';
 import { Col } from '../lib/Grid';
 
+const { xs, sm, md, lg, xl } = theme.mediaQuery;
+
 const TeamMemberWrapper = styled.div`
-    padding: 3rem 0rem 3rem 0rem;
+    @media ${md} {
+        padding: 3rem 0rem 3rem 0rem;
+    }
     h1,
     h2,
     h3,
@@ -53,9 +57,12 @@ const TeamMemberWrapper = styled.div`
 `;
 
 const TeamMemberPhoto = styled.figure`
+    @media ${xs} {
+        height: 30rem;
+    }
     margin: 1rem;
     overflow: hidden;
-    height: 30rem;
+
     transition: 0.5s;
     position: relative;
 
@@ -99,7 +106,18 @@ const TeamMemberContainer = styled(Col)`
 
 const TeamMember = props => {
     // eslint-disable-next-line
-    const { name, title, img, alt } = props;
+    const {
+        name,
+        title,
+        img,
+        alt,
+        link,
+        email,
+        github,
+        instagram,
+        facebook,
+        twitter,
+    } = props;
 
     return (
         <TeamMemberContainer sm={6} md={6} lg={3} xl={3}>
@@ -109,7 +127,14 @@ const TeamMember = props => {
                 </TeamMemberPhoto>
                 <TeamMemberName>{name}</TeamMemberName>
                 <p>{title}</p>
-                <AllSocials {...props} />
+                <AllSocials
+                    link={link}
+                    email={email}
+                    github={github}
+                    instagram={instagram}
+                    facebook={facebook}
+                    twitter={twitter}
+                />
             </TeamMemberWrapper>
         </TeamMemberContainer>
     );

@@ -12,11 +12,11 @@ const ContactFormContainer = styled.div`
 `;
 
 const InputField = styled.input`
+    font-size: 1.35rem;
     background: ${theme.colors.secondary};
     border-radius: 0.1em;
     outline: none;
     border: none;
-    /* border-bottom: 0.1rem solid ${theme.colors.lightgray}; */
     padding: 0.66em 1em;
     margin: 0em 0.1em 1em 0.1em;
     color: ${theme.colors.white};
@@ -59,6 +59,7 @@ const ErrorMessage = styled.div`
 `;
 
 const InputTextArea = styled.textarea`
+    font-size: 1.35rem;
     background: ${theme.colors.secondary};
     border-radius: 0.1em;
     outline: none;
@@ -66,7 +67,6 @@ const InputTextArea = styled.textarea`
     padding: 1em;
     margin: 0 0.1em;
     margin-bottom: 1.33em;
-    /* border-bottom: 0.1em solid ${theme.colors.white}; */
     width: 100%;
     min-height: 20em;
     &:hover {
@@ -245,7 +245,9 @@ class ContactForm extends React.Component {
                                     <ErrorMessage>
                                         {errors.contact}
                                     </ErrorMessage>
-                                ) /* eslint-enable */}
+                                )
+                                /* eslint-enable */
+                                }
                                 <InputField
                                     id="email"
                                     placeholder="Email"

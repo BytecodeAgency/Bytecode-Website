@@ -10,6 +10,7 @@ import Author from '../components/Author';
 import ContactForm from '../components/ContactForm';
 import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
+import BlogThumbnail from '../components/BlogThumbnail';
 
 const { xs, sm, md, lg, xl, xxl } = theme.mediaQuery;
 
@@ -25,13 +26,13 @@ const Blogpost = ({ data: post }, key) => (
         key={key}
         title={post.frontmatter.title}
         slug={post.fields.slug}
-        posted_on={post.frontmatter.posted_on}
-        article_image_url={post.frontmatter.article_image_url}
-        author_name={post.frontmatter.author_name}
-        author_role={post.frontmatter.author_role}
-        author_image_url={post.frontmatter.author_image_url}
-        category_name={post.frontmatter.category_name}
-        reading_time={post.frontmatter.reading_time}
+        postedOn={post.frontmatter.posted_on}
+        articleImageUrl={post.frontmatter.article_image_url}
+        authorName={post.frontmatter.author_name}
+        authorRole={post.frontmatter.author_role}
+        authorImage_url={post.frontmatter.author_image_url}
+        categoryName={post.frontmatter.category_name}
+        readingTime={post.frontmatter.reading_time}
     />
 );
 
@@ -57,13 +58,13 @@ const blogArchive = ({ data }) => {
                     </Col>
                 </Row>
             </Container>
-            <Posts>
-
-                {
-                    posts.map(({ node: post }, _, key) => <Blogpost data={post} key={key} />)
-                }
-
-            </Posts>
+            <Container>
+                <Row>
+                    {
+                        posts.map(({ node: post }, _, key) => <Blogpost data={post} key={key} />)
+                    }
+                </Row>
+            </Container>
         </Layout>
     );
 };
@@ -109,42 +110,6 @@ const BlogThumbnailWrapper = styled.div`
         width: 50%;
     }
 `;
-
-const BlogThumbnail = props => {
-    const {
-        title,
-        slug,
-        posted_on,
-        article_image_url,
-        author_name,
-        author_role,
-        author_image_url,
-        category_name,
-        reading_time,
-    } = props;
-    const articleImage = require(`../images/img/articles/${article_image_url}`);
-    return (
-        <BlogThumbnailWrapper>
-            <Link to={slug}>
-                <BlogThumbnailContentWrapper>
-                    <BlogThumbnailImage url={articleImage} />
-                    <h6 className="subtitle">{category_name}</h6>
-                    <h4>{title}</h4>
-                    <AuthorContainer>
-                        <Author
-                            name={author_name}
-                            title={author_role}
-                            img={author_image_url}
-                        />
-                    </AuthorContainer>
-                    <p>
-                        {reading_time} min read <br /> {posted_on}
-                    </p>
-                </BlogThumbnailContentWrapper>
-            </Link>
-        </BlogThumbnailWrapper>
-    );
-};
 
 const Posts = styled(Container)`
     margin: 0;

@@ -5,6 +5,7 @@ import Layout from '../layouts/MainLayout';
 import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 import ContactForm from '../components/ContactForm';
+import TextAndImage from '../components/ContentBlocks';
 
 import theme from '../styles/theme';
 
@@ -131,126 +132,91 @@ const Partners = () => (
             Bytecode neemt voor veel marketing- en communicatiebedrijven
             de technische opdrachten uit handen, volledig of gedeeltelijk."
         />
-        <FluidWrapper>
-            <Container style={{ marginTop: '0', padding: '5em 0' }}>
-                <Row>
-                    <PaddedCol
-                        style={{ margin: '1em' }}
-                        offset={{ lg: 1 }}
-                        lg={9}
-                    >
-                        <h2>Waarom samenwerken?</h2>
-                        <Big>
-                            <p>
-                                Wij komen als technisch partner in beeld wanneer
-                                er maatwerk maatwerk nodig is op het technisch
-                                gebied. Marketing- en communicatiebureaus zijn
-                                een kei bij het creeeren en marketing bij
-                                content, hierbij zijn de bedrijven op hun
-                                sterkts. Om de klantenwens te kunnen bedienen
-                                bij een meer technisch vraagstuk zoals
-                                bijvoorbeeld maatwerk websites en webshops,
-                                mobiele apps, API-koppelingen of (cloud-)hosting
-                                worden technische partijen zoals Bytecode vaak
-                                ingeschakeld.
-                            </p>
-                        </Big>
-                    </PaddedCol>
-                </Row>
-            </Container>
-        </FluidWrapper>
-        <PaddedContainer>
-            <Row justify="center" align="center">
-                <PaddedCol md={6}>
-                    <h2>Vergroot je waarde</h2>
-                    <p>
-                        <big>
-                            Door technische diensten aan te kunnen bieden aan
-                            klanten vergroot je dus de waarde van de geleverde
-                            diensten, en kan je de full-service bieden waar eel
-                            klanten naar verlangen.
-                        </big>
-                    </p>
-                </PaddedCol>
-                <SwitchCol lg={5} offset={{ md: 0.5 }}>
-                    <Img
-                        // eslint-disable-next-line max-len
-                        src={require('../images/img/content/collaboration/worth.svg')}
-                        alt="worth"
-                        style={{ marginBottom: '1em' }}
-                    />
-                </SwitchCol>
-            </Row>
-        </PaddedContainer>
-        <PaddedContainer>
-            <Row justify="center" align="center">
-                <PaddedCol md={5}>
-                    <h3>Eén contactpersoon</h3>
-                    <p>
-                        <big>
-                            Bedrijven willen graag een enkele partij hebben
-                            waarbij ze al hun vragen kunnen neerleggen. Voor
-                            bedrijven gespecialiseerd in marketing heeft het dus
-                            een grote toegevoegde aarde om technische diensten
-                            aan te kunnen bieden aan klanten, zonder dat dit
-                            volledig intern gemanaged hoeft te worden.
-                        </big>
-                    </p>
-                </PaddedCol>
-                <SwitchCol offset={{ lg: 1 }}>
-                    <Img
-                        // eslint-disable-next-line max-len
-                        src={require('../images/img/content/collaboration/say.svg')}
-                        alt="worth"
-                        style={{ marginBottom: '1em' }}
-                    />
-                </SwitchCol>
-            </Row>
-        </PaddedContainer>
-        <PaddedContainer>
-            <Row justify="center" align="center">
-                <Col lg={6} md={5}>
-                    <Img
-                        // eslint-disable-next-line max-len
-                        src={require('../images/img/content/collaboration/code.svg')}
-                        alt="worth"
-                        style={{ marginBottom: '1em' }}
-                    />
-                </Col>
-                <PaddedCol lg={5} md={5} offset={{ lg: 1, md: 1 }}>
-                    <h3>De nieuwste technieken</h3>
-                    <p>
-                        <big>
-                            Bij het leveren van onze diensten zorgen wij altijd
-                            dat we ons aanpassen naar de benodigde workflow, dus
-                            dat wij als onderdeel (of in het verlengde) van het
-                            bestaande team kunnen werken. Door onze jarenlange
-                            ervaring als technisch partner hebben wij met
-                            vrijwel alle veelgebruikte technieken ervaring.
-                        </big>
-                    </p>
-                    <SmallList>
-                        <li>Front-end: HTML, CSS, Sass, Stylus, Bootstrap</li>
-                        <li>
-                            PHP: WordPress, WooCommerce, Laravel en Magento 2
-                        </li>
-                        {/* // eslint-disable-line no-use-before-define */}
-                        <li>Frameworks: NodeJS, ReactJS en Angular 2+ </li>
-                        <li>Mobiel: React Native, Ionic 2+, Flutter</li>
-                        <li>Servers: Linux, Apache, Nginx</li>
+
+        <Container>
+            <Row>
+                <Col style={{ margin: '1em' }} offset={{ lg: 1 }} lg={7}>
+                    <h2>Waarom samenwerken?</h2>
+                    <Big>
                         <p>
-                            Indien je een partner zoekt voor een techniek dit
-                            niet hierboven genoemd is, schroom dan niet contact
-                            op te nemen, want we kijken graag wat we je kunnen
-                            betekenen.
+                            Wij komen als technisch partner in beeld wanneer er
+                            maatwerk maatwerk nodig is op het technisch gebied.
+                            Marketing- en communicatiebureaus zijn een kei bij
+                            het creeeren en marketing bij content, hierbij zijn
+                            de bedrijven op hun sterkts. Om de klantenwens te
+                            kunnen bedienen bij een meer technisch vraagstuk
+                            zoals bijvoorbeeld maatwerk websites en webshops,
+                            mobiele apps, API-koppelingen of (cloud-)hosting
+                            worden technische partijen zoals Bytecode vaak
+                            ingeschakeld.
                         </p>
-                    </SmallList>
-                </PaddedCol>
+                    </Big>
+                </Col>
             </Row>
-        </PaddedContainer>
+        </Container>
+
+        <TextAndImage
+            img={require('../images/img/content/collaboration/worth.svg')}
+            alt="worth"
+        >
+            <h2>Vergroot je waarde</h2>
+            <p>
+                <big>
+                    Door technische diensten aan te kunnen bieden aan klanten
+                    vergroot je dus de waarde van de geleverde diensten, en kan
+                    je de full-service bieden waar eel klanten naar verlangen.
+                </big>
+            </p>
+        </TextAndImage>
+        <TextAndImage
+            img={require('../images/img/content/collaboration/say.svg')}
+            alt="1 contactpersoon"
+            reverse
+        >
+            <h2>Eén contactpersoon</h2>
+            <p>
+                <big>
+                    Bedrijven willen graag een enkele partij hebben waarbij ze
+                    al hun vragen kunnen neerleggen. Voor bedrijven
+                    gespecialiseerd in marketing heeft het dus een grote
+                    toegevoegde aarde om technische diensten aan te kunnen
+                    bieden aan klanten, zonder dat dit volledig intern gemanaged
+                    hoeft te worden.
+                </big>
+            </p>
+        </TextAndImage>
+        <TextAndImage
+            img={require('../images/img/content/collaboration/code.svg')}
+            alt="1 contactpersoon"
+            fluid
+        >
+            <h2>De nieuwste technieken</h2>
+            <p>
+                <big>
+                    Bij het leveren van onze diensten zorgen wij altijd dat we
+                    ons aanpassen naar de benodigde workflow, dus dat wij als
+                    onderdeel (of in het verlengde) van het bestaande team
+                    kunnen werken. Door onze jarenlange ervaring als technisch
+                    partner hebben wij met vrijwel alle veelgebruikte technieken
+                </big>
+            </p>
+            <SmallList>
+                <li>Front-end: HTML, CSS, Sass, Stylus, Bootstrap</li>
+                <li>PHP: WordPress, WooCommerce, Laravel en Magento 2</li>
+                {/* // eslint-disable-line no-use-before-define */}
+                <li>Frameworks: NodeJS, ReactJS en Angular 2+ </li>
+                <li>Mobiel: React Native, Ionic 2+, Flutter</li>
+                <li>Servers: Linux, Apache, Nginx</li>
+                <p>
+                    Indien je een partner zoekt voor een techniek dit niet
+                    hierboven genoemd is, schroom dan niet contact op te nemen,
+                    want we kijken graag wat we je kunnen betekenen.
+                </p>
+            </SmallList>
+        </TextAndImage>
 
         <Wrapper>
-            <Container fluid>
+            <Container>
                 <Row>
                     <h2>Diensten</h2>
                 </Row>
@@ -369,9 +335,10 @@ const Partners = () => (
                 </Col>
             </Row>
         </PaddedContainer>
-        <Wrapper>
+
+        <Container>
             <ContactForm />
-        </Wrapper>
+        </Container>
     </Layout>
 );
 

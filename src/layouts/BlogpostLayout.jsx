@@ -37,7 +37,7 @@ const BlogSingle = ({ content }) => (
             >
                 <Container>
                     <Row>
-                        <Col md={12}>
+                        <Col offset={{ lg: 2 }} lg={8} md={12}>
                             <TextBlock
                                 subtitle={content.catergory_name}
                                 title={content.title}
@@ -71,8 +71,8 @@ const BlogSingle = ({ content }) => (
 
 export default BlogSingle;
 
-const HeaderContainer = styled.section`
-    padding: 10rem 2% 2%;
+const HeaderContainer = styled.header`
+    padding: 20em 2% 2%;
     background-color: ${theme.colors.mediumgray};
     background-image: url(${props => props.background});
     background-blend-mode: soft-light;
@@ -80,7 +80,7 @@ const HeaderContainer = styled.section`
     background-position: center center;
     opacity: 60%;
     @media (min-width: ${theme.breakpointMobileMenu}) {
-        padding: 5em 0 1em 0;
+        padding: 20em 0 5em 0;
     }
     @media (max-width: ${theme.breakpointMobileMenu}) {
         h1 {
@@ -97,24 +97,13 @@ const BlogContentContainer = styled.div`
 const BlogContent = styled.div`
     padding: 4rem 1rem 4rem;
     & {
-        max-width: 56rem;
+        max-width: 54em;
     }
 
     img,
     figure {
         max-width: 75rem;
     }
-
-    /* p {
-        margin: 1rem 0;
-    }
-
-    b,
-    strong {
-        font-weight: bold;
-    }
-     */
-
     p,
     ul,
     li,
@@ -153,16 +142,6 @@ const BlogContent = styled.div`
         font-family: ${theme.typography.p.font};
         letter-spacing: ${theme.typography.p.spacing};
     }
-
-    /* figure {
-        margin: 4em 0;
-    }
-
-    img {
-        max-width: 400px;
-        margin: 3rem auto 3rem auto;
-        display: block;
-    } */
 `;
 
 const BlogMetaDataWrapper = styled.div`
