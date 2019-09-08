@@ -10,9 +10,9 @@ import Author from '../components/Author';
 import ContactForm from '../components/ContactForm';
 import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
-import BlogThumbnail from '../components/BlogThumbnail';
+import PostThumbnail from '../components/PostThumbnail';
 
-const { xs, sm, md, lg, xl, xxl } = theme.mediaQuery;
+const { xs, sm, md, lg, xl, xxl } = theme.mediaQueryMin;
 
 const pageSettings = {
     title: 'Bytecode Insights - Bytecode Digital Agency B.V.',
@@ -22,16 +22,17 @@ const pageSettings = {
 };
 
 const Blogpost = ({ data: post }, key) => (
-    <BlogThumbnail
+    <PostThumbnail
+        blog
         key={key}
         title={post.frontmatter.title}
         slug={post.fields.slug}
         postedOn={post.frontmatter.posted_on}
-        articleImageUrl={post.frontmatter.article_image_url}
+        postImageUrl={require(`../images/img/articles/${post.frontmatter.article_image_url}`)}
         authorName={post.frontmatter.author_name}
         authorRole={post.frontmatter.author_role}
-        authorImage_url={post.frontmatter.author_image_url}
-        categoryName={post.frontmatter.category_name}
+        authorImageUrl={post.frontmatter.author_image_url}
+        category={post.frontmatter.category_name}
         readingTime={post.frontmatter.reading_time}
     />
 );
@@ -104,7 +105,7 @@ export const pageQuery = graphql`
 
 export default blogArchive;
 
-const BlogThumbnailWrapper = styled.div`
+const PostThumbnailWrapper = styled.div`
     width: 100%;
     @media ${md} {
         width: 50%;
@@ -121,7 +122,7 @@ const Posts = styled(Container)`
 `;
 
 
-const BlogThumbnailContentWrapper = styled.div`
+const PostThumbnailContentWrapper = styled.div`
     text-decoration: none !important;
     cursor: pointer;
     @media ${md} {
@@ -130,7 +131,7 @@ const BlogThumbnailContentWrapper = styled.div`
     }
 `;
 
-const BlogThumbnailImage = styled.div`
+const PostThumbnailImage = styled.div`
     background-image: url(${props => props.url || '../images/img/header/noise.jpg'});
     height: 50vh;
     width: 100%;

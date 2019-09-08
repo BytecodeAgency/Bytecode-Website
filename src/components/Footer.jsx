@@ -7,7 +7,7 @@ import AllSocials from '../lib/Socials';
 import theme from '../styles/theme';
 
 // eslint-disable-next-line prefer-destructuring
-const mediaQuery = theme.mediaQuery;
+const mediaQueryMin = theme.mediaQueryMin;
 const container = theme.containerWidth;
 
 const opensource = require('../images/icons/social/open-source.svg');
@@ -21,10 +21,10 @@ const FooterColInnerContainer = styled.div`
             line-height: 1em;
         }
     }
-    @media screen and ${mediaQuery.sm} {
+    @media screen and (${mediaQueryMin.sm}) {
         width: 45%;
     }
-    @media screen and ${mediaQuery.md} {
+    @media screen and (${mediaQueryMin.md}) {
         width: 20%;
     }
 `;
@@ -38,7 +38,7 @@ const FooterIcon = styled.img`
     padding: 0.75em;
     width: auto;
     max-width: 20em;
-    @media ${mediaQuery.md} {
+    @media (${mediaQueryMin.md}) {
         max-width: unset;
     }
 `;
@@ -69,7 +69,7 @@ const FooterHeadingContainer = styled.div`
     p {
         margin-bottom: 0;
     }
-    @media ${mediaQuery.sm} {
+    @media (${mediaQueryMin.sm}) {
         height: 5rem;
         display: flex;
         align-items: end;
@@ -96,18 +96,18 @@ const FooterContainer = styled.section`
     flex-direction: column;
     flex-wrap: wrap;
     padding 3em ${container.xs} 1em ${container.xs};
-    @media screen and ${mediaQuery.sm} {
+    @media screen and (${mediaQueryMin.sm}) {
         padding 3em ${container.sm} 3em ${container.sm};
         flex-direction: row;
     }
-    @media screen and ${mediaQuery.md} {
+    @media screen and (${mediaQueryMin.md}) {
         padding 3em ${container.md} 0 ${container.md};
     }
-    @media screen and ${mediaQuery.lg} {
+    @media screen and (${mediaQueryMin.lg}) {
         padding 3em ${container.lg} 0 ${container.lg};
         padding-bottom: 1em;
     }
-    @media screen and ${mediaQuery.xl} {
+    @media screen and (${mediaQueryMin.xl}) {
         padding 3em ${container.xl} 0 ${container.xl};
     }
     background: ${theme.colors.secondary};

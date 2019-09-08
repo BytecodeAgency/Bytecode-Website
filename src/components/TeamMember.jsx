@@ -4,10 +4,10 @@ import theme from '../styles/theme';
 import AllSocials from '../lib/Socials';
 import { Col } from '../lib/Grid';
 
-const { xs, sm, md, lg, xl } = theme.mediaQuery;
+const { mediaQueryMin } = theme;
 
 const TeamMemberWrapper = styled.div`
-    @media ${md} {
+    @media (${mediaQueryMin.md}) {
         padding: 3rem 0rem 3rem 0rem;
     }
     h1,
@@ -57,7 +57,7 @@ const TeamMemberWrapper = styled.div`
 `;
 
 const TeamMemberPhoto = styled.figure`
-    @media ${xs} {
+    @media (${mediaQueryMin.xs}) {
         height: 30rem;
     }
     margin: 1rem;

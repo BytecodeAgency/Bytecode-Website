@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { Container } from 'react-grid-system';
 import theme from '../styles/theme';
 import TextBlock from './TextBlock';
 import { Col } from '../lib/Grid';
+import { Small, Big } from './Typography';
 
-const { xs, sm, md, lg, xl, xxl } = theme.mediaQuery;
+const { mediaQueryMin } = theme;
 
 const SubtitleBase = ({ className, children }) => (
     <div className={`subtitle ${className}`}>{children}</div>
@@ -14,7 +16,7 @@ const Subtitle = styled(SubtitleBase)`
     margin-bottom: 0.66rem;
 `;
 
-const ThumbnailBase = styled.a`
+const ThumbnailBase = styled(Link)`
     background-color: ${theme.colors.secondary};
     padding-bottom: 2em;
     cursor: pointer;
@@ -50,7 +52,7 @@ const ThumbnailContent = styled.div`
     }
     small {
         display: hidden;
-        @media (min-width: ${theme.breakpoints[2]}px) {
+        @media (${mediaQueryMin.md}) {
             display: block;
             margin: 1.66em 0em;
         }
@@ -67,7 +69,7 @@ const BigThumbnailImg = styled.div`
     background: url('${props => props.img}'), ${theme.colors.secondary};
     background-size: cover;
     height: 50vh;
-    @media ${md} {
+    @media (${mediaQueryMin.md}) {
         height: 65vh;
     }
     transition: all 0.3s ease;
@@ -80,20 +82,39 @@ const ThumbnailImg = styled.div`
     transition: all 0.5s ease;
     height: 50vh;
     max-height: 40em;
-    @media ${md} {
+    @media (${mediaQueryMin.md}) {
         height: ${props => (props.big ? '50vh' : '18em')};
     }
 `;
 
 const Arrow = styled.img``;
 
-const CaseThumbnail = props => {
-    const { big, title, category, description, img, url } = props;
+const PostThumbnail = props => {
+    const {
+        big,
+        title,
+        slug,
+        category,
+        postedOn,
+        articleImageUrl,
+        authorName,
+        authorRole,
+        authorImageUrl,
+        readingTime,
+        description,
+        imageRoot,
+        postImageUrl,
+        blog,
+    } = props;
+
     if (big) {
         return (
             <Col>
-                <ThumbnailBase href={url}>
-                    <BigThumbnailImg className="ThumbnailImg" img={img} />
+                <ThumbnailBase to={slug}>
+                    <BigThumbnailImg
+                        className="ThumbnailImg"
+                        img={postImageUrl}
+                    />
                     <ThumbnailContent>
                         <Subtitle>{category}</Subtitle>
                         <h5>{title}</h5>
@@ -104,14 +125,14 @@ const CaseThumbnail = props => {
     }
     return (
         <Col offset={{ md: 0.1 }} md={3.9}>
-            <ThumbnailBase href={url}>
-                <ThumbnailImg className="ThumbnailImg" img={img} />
+            <ThumbnailBase to={slug}>
+                <ThumbnailImg className="ThumbnailImg" img={postImageUrl} />
                 <ThumbnailContent>
                     <Subtitle>{category}</Subtitle>
-                    <big>
+                    <Big>
                         <p>{title}</p>
-                    </big>
-                    <a href={url}>
+                    </Big>
+                    <a href={slug}>
                         <small className="thumbnailCTA">
                             Learn more{' '}
                             <Arrow
@@ -126,4 +147,4 @@ const CaseThumbnail = props => {
     );
 };
 
-export default CaseThumbnail;
+export default PostThumbnail;

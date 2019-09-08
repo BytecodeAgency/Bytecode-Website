@@ -172,7 +172,7 @@ const bytecode = {
         },
     },
     breakpointMobileMenu: '63rem',
-    breakpoints: [540, 750, 1200, 1400],
+    // breakpoints: [540, 750, 1200, 1400],
     containerWidths: [],
     breakpoint: {
         xs: '48em',
@@ -180,6 +180,7 @@ const bytecode = {
         md: '85.375em',
         lg: '120em',
         xl: '160em',
+        xxl: '200em',
     },
     containerWidth: {
         xs: '2vw',
@@ -190,13 +191,15 @@ const bytecode = {
     },
 };
 
-bytecode.mediaQuery = {
-    xs: `(min-width: ${bytecode.breakpoint.xs})`,
-    sm: `(min-width: ${bytecode.breakpoint.sm})`,
-    md: `(min-width: ${bytecode.breakpoint.md})`,
-    lg: `(min-width: ${bytecode.breakpoint.lg})`,
-    xl: `(min-width: ${bytecode.breakpoint.xl})`,
-    xxl: `(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)`,
+bytecode.mediaQueryMin = {
+    xs: `min-width: ${bytecode.breakpoint.xs}`,
+    sm: `min-width: ${bytecode.breakpoint.sm}`,
+    md: `min-width: ${bytecode.breakpoint.md}`,
+    lg: `min-width: ${bytecode.breakpoint.lg}`,
+    xl: `min-width: ${bytecode.breakpoint.xl}`,
+    xxl: `-webkit-min-device-pixel-ratio: 2) and
+    (min-resolution: 192dpi) and
+    (min-width: ${bytecode.breakpoint.xxl}`,
 };
 
 const theme = bytecode;

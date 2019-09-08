@@ -6,10 +6,12 @@ import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 import ContactForm from '../components/ContactForm';
 import TextAndImage from '../components/ContentBlocks';
-
+import { Small, Big } from '../components/Typography';
 import theme from '../styles/theme';
 
 import Service from '../components/Service';
+
+const { mediaQueryMin, colors } = theme;
 
 const pageSettings = {
     title: 'Bytecode as partner',
@@ -41,7 +43,7 @@ const CheckListItemBase = styled.li`
 
 const PaddedCol = styled(Col)`
     margin: 1em !important;
-    @media (min-width: ${theme.breakpoints[2]}px) {
+    @media (${mediaQueryMin.xs}) {
         margin: 0 3em;
     }
 `;
@@ -58,16 +60,6 @@ const Img = styled.img`
     max-width: 30em;
 `;
 
-const Big = styled.big`
-    line-height: 1.33em;
-
-    p {
-        @media (max-width: ${theme.breakpoints[1]}px) {
-            max-width: 95vw;
-        }
-    }
-`;
-
 const SmallList = styled.ul`
     margin: 1em 0.5em;
     list-style-position: inside;
@@ -76,13 +68,13 @@ const SmallList = styled.ul`
         font-size: 85%;
         margin: 0 1em;
         line-height: 1.58em;
-        color: ${theme.colors.lightgray};
+        color: ${colors.lightgray};
     }
     p {
         margin: inherit;
         font-size: 75%;
         line-height: 1.4em;
-        color: ${theme.colors.lightgray};
+        color: ${colors.lightgray};
         opacity: 0.33;
     }
 `;
@@ -97,8 +89,9 @@ const FluidWrapper = styled(Wrapper)`
 `;
 
 const SwitchCol = styled(Col)`
-    @media (max-width: ${theme.breakpoints[1]}px) {
-        order: -1;
+    order: -1;
+    @media (${mediaQueryMin.xs}) {
+        order: 0;
     }
 `;
 
@@ -108,7 +101,7 @@ const CheckListItem = props => {
         <CheckListItemBase>
             <img src={require('../images/icons/ui/check.svg')} alt="- " />
             <p>
-                <big>{children}</big>
+                <Big>{children}</Big>
             </p>
         </CheckListItemBase>
     );
@@ -161,11 +154,11 @@ const Partners = () => (
         >
             <h2>Vergroot je waarde</h2>
             <p>
-                <big>
+                <Big>
                     Door technische diensten aan te kunnen bieden aan klanten
                     vergroot je dus de waarde van de geleverde diensten, en kan
                     je de full-service bieden waar eel klanten naar verlangen.
-                </big>
+                </Big>
             </p>
         </TextAndImage>
         <TextAndImage
@@ -175,14 +168,14 @@ const Partners = () => (
         >
             <h2>Eén contactpersoon</h2>
             <p>
-                <big>
+                <Big>
                     Bedrijven willen graag een enkele partij hebben waarbij ze
                     al hun vragen kunnen neerleggen. Voor bedrijven
                     gespecialiseerd in marketing heeft het dus een grote
                     toegevoegde aarde om technische diensten aan te kunnen
                     bieden aan klanten, zonder dat dit volledig intern gemanaged
                     hoeft te worden.
-                </big>
+                </Big>
             </p>
         </TextAndImage>
         <TextAndImage
@@ -192,13 +185,13 @@ const Partners = () => (
         >
             <h2>De nieuwste technieken</h2>
             <p>
-                <big>
+                <Big>
                     Bij het leveren van onze diensten zorgen wij altijd dat we
                     ons aanpassen naar de benodigde workflow, dus dat wij als
                     onderdeel (of in het verlengde) van het bestaande team
                     kunnen werken. Door onze jarenlange ervaring als technisch
                     partner hebben wij met vrijwel alle veelgebruikte technieken
-                </big>
+                </Big>
             </p>
             <SmallList>
                 <li>Front-end: HTML, CSS, Sass, Stylus, Bootstrap</li>
@@ -221,7 +214,7 @@ const Partners = () => (
                     <h2>Diensten</h2>
                 </Row>
                 <Row>
-                    <Service iconName="website" title="Websites & Webshops">
+                    <Service iconName="website" title="Websites &amp Webshops">
                         Dit is de plek waar alles gebeurt. De plek waar je laat
                         zien wie je bent, waar je mensen overtuigt en waar je
                         klanten binnenhaalt. Bytecode zal je hiertoe in staat
@@ -229,14 +222,14 @@ const Partners = () => (
                         creëren wij samen het beste voor jou, uiteenlopend van
                         simplistische websites tot ingewikkelde webapps.
                     </Service>
-                    <Service iconName="mobile" title="Apps & Webapps">
+                    <Service iconName="mobile" title="Apps &amp Webapps">
                         Wil je een succesvolle webshop hebben? Dan heel veel
                         factoren denken. Bytecode weet precies welke factoren
                         dit zijn en wil je daar graag mee helpen. Zowel met de
                         techniek als met de specifieke marketing en SEO die bij
                         een succesvolle webshop komen kijken.
                     </Service>
-                    <Service iconName="api" title="APIs & automatisering">
+                    <Service iconName="api" title="APIs &amp automatisering">
                         Alles draait om de beleving van de bezoeker van jouw
                         platform. Deze beleving optimaliseren wij door middel
                         middel van hoogstaand UX/UI-design. Onze developers
@@ -245,7 +238,7 @@ const Partners = () => (
                         designers ervoor dat het ontwerp van het platform in het
                         oog springt en perfect past bij wat jij wil uitstralen.
                     </Service>
-                    <Service iconName="cloud" title="Cloud & hosting">
+                    <Service iconName="cloud" title="Cloud &amp hosting">
                         Tegenwoordig zijn mobiele applicaties belangrijk als
                         websites of webapps. Wij vinden het daarom belangrijk
                         dat apps net zo goed werken als websites en op elk
@@ -263,7 +256,7 @@ const Partners = () => (
                         creëren wij samen het beste voor jou, uiteenlopend van
                         simplistische websites tot ingewikkelde webapps.
                     </Service>
-                    <Service iconName="design" title="Design & Branding">
+                    <Service iconName="design" title="Design &amp Branding">
                         Wil je een succesvolle webshop hebben? Dan heel veel
                         factoren denken. Bytecode weet precies welke factoren
                         dit zijn en wil je daar graag mee helpen. Zowel met de
@@ -277,25 +270,23 @@ const Partners = () => (
             <Row>
                 <h1>Werkwijze</h1>
 
-                <big>
-                    <big>
-                        <p>
-                            Voordat we voor een partij aan de slag gaan als
-                            technisch partner zorgen we altijd dat we voor alles
-                            op een lijn zitten. Indien wij support verlenen aan
-                            eindklanten kunnen wij dit volledig white-label
-                            doen. Voor ons is het geen probleem om bijvoorbeeld
-                            als medewerker vanuit een eigen support-systeem te
-                            werken, als dit de beste oplossing is. Hierna kijken
-                            we altijd wat de behoeften zijn. Soms komt dit neer
-                            op dat we een opdracht volledig uit handen nemen.
-                            Andere keren zal het nodig zijn om te fungeren als
-                            onderdeel van een team voor een langere tijd. Of
-                            wellicht is een ad-hoc support-contructie de beste
-                            oplossing. Hierin denken we graag mee.
-                        </p>
-                    </big>
-                </big>
+                <Big>
+                    <p>
+                        Voordat we voor een partij aan de slag gaan als
+                        technisch partner zorgen we altijd dat we voor alles op
+                        een lijn zitten. Indien wij support verlenen aan
+                        eindklanten kunnen wij dit volledig white-label doen.
+                        Voor ons is het geen probleem om bijvoorbeeld als
+                        medewerker vanuit een eigen support-systeem te werken,
+                        als dit de beste oplossing is. Hierna kijken we altijd
+                        wat de behoeften zijn. Soms komt dit neer op dat we een
+                        opdracht volledig uit handen nemen. Andere keren zal het
+                        nodig zijn om te fungeren als onderdeel van een team
+                        voor een langere tijd. Of wellicht is een ad-hoc
+                        support-contructie de beste oplossing. Hierin denken we
+                        graag mee.
+                    </p>
+                </Big>
             </Row>
         </Container>
         <PaddedContainer>

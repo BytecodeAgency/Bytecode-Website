@@ -8,23 +8,23 @@ const step1 = require('../images/img/content/workflow/analyze.svg');
 const step2 = require('../images/img/content/workflow/strategize.svg');
 const step3 = require('../images/img/content/workflow/realize.svg');
 
-const Step = styled(Col)``;
+const { mediaQueryMin } = theme;
+
+const Step = styled(Col)`
+    @media (${mediaQueryMin.xs}) {
+        margin: 0 2em;
+    }
+`;
 
 const ProcessStepImage = styled.img`
     margin: 5em;
     margin-left: 3rem;
     width: 50%;
     text-align: center;
-    @media (min-width: ${theme.breakpoints[0]}px) {
+    @media (${mediaQueryMin.xs}) {
         margin-bottom: 4em;
     }
-    @media (min-width: ${theme.breakpoints[1]}px) {
-        width: 50%;
-    }
-    @media (min-width: ${theme.breakpoints[2]}px) {
-        width: 50%;
-    }
-    @media (min-width: ${theme.breakpoints[3]}px) {
+    @media (${mediaQueryMin.sm}) {
         width: 50%;
     }
 `;
@@ -32,7 +32,7 @@ const ProcessStepImage = styled.img`
 const Process = () => (
     <Container>
         <Row gutterWidth={30}>
-            <Step md={6} lg={4}>
+            <Step md={5.55} lg={3.55}>
                 <ProcessStepImage src={step1} alt="Analyze" />
                 <TextBlock
                     className="padded"
@@ -47,7 +47,7 @@ const Process = () => (
                     analyseren welke punten het meeste prioriteit hebben.
                 </TextBlock>
             </Step>
-            <Step md={6} lg={4}>
+            <Step md={5.55} lg={3.55}>
                 <ProcessStepImage src={step2} alt="Strategize" />
                 <TextBlock
                     subtitle="Stap 2"
@@ -62,7 +62,7 @@ const Process = () => (
                     halen.
                 </TextBlock>
             </Step>
-            <Step md={6} lg={4}>
+            <Step md={5.55} lg={3.55}>
                 <ProcessStepImage src={step3} alt="Realize" />
                 <TextBlock subtitle="Stap 3" headingType="h2" title="Realize">
                     Nadat we alles helemaal hebben geanalyseerd en gepland, is

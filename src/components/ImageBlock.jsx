@@ -2,31 +2,31 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
 
+const { mediaQueryMin, colors } = theme;
+
 const ImageBlockFigure = styled.figure`
-    max-height: 75vh;
-    display: block;
-    position: relative;
-    right: 0px;
-    margin-left: 5%;
-    margin-top: 4rem;
-    overflow: hidden;
-    @media (max-width: ${theme.breakpoints[0]}px) {
-        margin: 0;
+    margin: 0;
+    height: 100vh;
+    img {
         height: 100vh;
-        img {
-            height: 100vh;
-            width: auto;
-        }
+        width: auto;
+    }
+    @media (${mediaQueryMin.xs}) {
+        max-height: 75vh;
+        display: block;
+        position: relative;
+        right: 0px;
+        margin-left: 5%;
+        margin-top: 4rem;
+        overflow: hidden;
     }
     &:after {
-        border: 2px ${theme.colors.primary} solid;
+        border: 0.1em ${colors.primary} solid;
         border-right: none;
         content: '';
         position: absolute;
         top: 0px;
         right: 0px;
-        bottom: 0px;
-        left: 0px;
         z-index: 10;
         margin: 3rem 0rem 3rem 3rem;
     }

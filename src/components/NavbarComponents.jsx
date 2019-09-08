@@ -5,7 +5,7 @@ import { transparentize } from 'polished';
 import theme from '../styles/theme';
 import { Container } from '../lib/Grid';
 
-const { mediaQuery } = theme;
+const { mediaQueryMin } = theme;
 const container = theme.containerWidth;
 
 const NavbarContainer = styled.nav`
@@ -24,13 +24,13 @@ const NavbarContainer = styled.nav`
         justify-content: space-between;
     }
 
-    @media ${mediaQuery.md} {
+    @media (${mediaQueryMin.md}) {
     }
 
-    @media ${mediaQuery.sm} {
+    @media (${mediaQueryMin.sm}) {
         padding: 0rem 3rem;
     }
-    @media ${mediaQuery.lg} {
+    @media (${mediaQueryMin.lg}) {
         margin: 1rem 8.5rem;
     }
 `;

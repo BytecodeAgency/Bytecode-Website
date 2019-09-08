@@ -9,9 +9,10 @@ import Wrapper from '../components/Wrapper';
 import TextBlock from '../components/TextBlock';
 import TextAndImage from '../components/ContentBlocks';
 import theme from '../styles/theme';
+import { Small, Big } from '../components/Typography';
 
 const container = theme.containerWidth;
-const { xs, sm, md, lg, xl, xxl } = theme.mediaQuery;
+const { xs, sm, md, lg, xl, xxl } = theme.mediaQueryMin;
 
 const pageSettings = {
     title: 'Cases',
@@ -58,7 +59,7 @@ const CheckListItem = props => {
         <CheckListItemBase>
             <img src={require('../images/icons/ui/check.svg')} alt="- " />
             <p>
-                <big>{children}</big>
+                <Big>{children}</Big>
             </p>
         </CheckListItemBase>
     );
@@ -97,7 +98,7 @@ const Results = styled(Container)`
 `;
 
 const testImg = require('../images/img/content/team.png');
-const testImg2 = require('../images/img/cases/sample.webp');
+const testImg2 = require('../images/img/content/cases/cote-et-ciel/website2.png');
 
 const WrappedContainer = styled(PaddedContainer)`
     &:before {
@@ -123,100 +124,97 @@ const temp = require('../images/img/content/cases/cote-et-ciel/website1.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <Container fluid>
-            <Container>
-                <CaseHeader img={testImg2} />
-            </Container>
-            <Container>
-                <Row align="center">
-                    <Col offset={{ lg: 1 }} lg={5}>
-                        <p className="subtitle">Côte & Ciel</p>
-                        <h1>Een high end shopbeleving</h1>
-                    </Col>
-                    <Col lg={5}>
-                        <p>
-                            <big>
-                                {' '}
-                                Dit is een opzetje voor een case pagina. Op deze
-                                pagina staan elementen die je kan gebruiken.
-                                Daarnaast kan je ook zelf composities maken met
-                                het react grid. Ben benieuwd wat jullie ermee
-                                doen. Als je het idee hebt dat je bepaalde
-                                informatie niet handig/goed/mooi kan noteren:
-                                geef dat even bij mij aan. Dan kan ik daarvoor
-                                weer verder ontwerpen
-                            </big>
-                        </p>
-                    </Col>
-                </Row>
-            </Container>
-            <TextAndImage img={temp} fluid>
-                <p className="subtitle">Ontdekking</p>
-                <h2>Een high end shopbeleving</h2>
-                <p>
-                    <big>
-                        {' '}
-                        hebben Côte et Ciel in samenwerking met The Pumphouse
-                        geholpen om hun user flow te verbeteren.
-                    </big>
-                </p>
-                <Checklist>
-                    <CheckListItem>
-                        Altijd duidelijke en snelle communicatie
-                    </CheckListItem>
-                    <CheckListItem>
-                        7 dagen per week, binnen een uur, reactie op vragen
-                    </CheckListItem>
-                    <CheckListItem>
-                        Voor noodgevallen altijd bereikbaar te zijn
-                    </CheckListItem>
-                    <CheckListItem>
-                        Voor noodgevallen altijd bereikbaar te zijn
-                    </CheckListItem>
-                    <CheckListItem>
-                        Transparantie en openheid, zonder uitzonderingen
-                    </CheckListItem>
-                </Checklist>
-            </TextAndImage>
-            <TextAndImage img={temp} fluid reverse>
-                <h2>Een high end shopbeleving</h2>
-                <p>
-                    <big>
-                        {' '}
-                        hebben Côte et Ciel in samenwerking met The Pumphouse
-                        geholpen om hun user flow te verbeteren.
-                    </big>
-                </p>
-                <Checklist>
-                    <CheckListItem>
-                        Altijd duidelijke en snelle communicatie
-                    </CheckListItem>
-                    <CheckListItem>
-                        7 dagen per week, binnen een uur, reactie op vragen
-                    </CheckListItem>
-                    <CheckListItem>
-                        Voor noodgevallen altijd bereikbaar te zijn
-                    </CheckListItem>
-                    <CheckListItem>
-                        Voor noodgevallen altijd bereikbaar te zijn
-                    </CheckListItem>
-                    <CheckListItem>
-                        Transparantie en openheid, zonder uitzonderingen
-                    </CheckListItem>
-                </Checklist>
-            </TextAndImage>
+        <Container>
+            <CaseHeader img={testImg2} />
         </Container>
+        <Container>
+            <Row align="center">
+                <Col offset={{ lg: 1 }} lg={5}>
+                    <p className="subtitle">Côte & Ciel</p>
+                    <h1>Een high end shopbeleving</h1>
+                </Col>
+                <Col lg={5}>
+                    <p>
+                        <Big>
+                            {' '}
+                            Dit is een opzetje voor een case pagina. Op deze
+                            pagina staan elementen die je kan gebruiken.
+                            Daarnaast kan je ook zelf composities maken met het
+                            react grid. Ben benieuwd wat jullie ermee doen. Als
+                            je het idee hebt dat je bepaalde informatie niet
+                            handig/goed/mooi kan noteren: geef dat even bij mij
+                            aan. Dan kan ik daarvoor weer verder ontwerpen
+                        </Big>
+                    </p>
+                </Col>
+            </Row>
+        </Container>
+        <TextAndImage img={temp} fluid>
+            <p className="subtitle">Ontdekking</p>
+            <h2>Een high end shopbeleving</h2>
+            <p>
+                <Big>
+                    {' '}
+                    hebben Côte et Ciel in samenwerking met The Pumphouse
+                    geholpen om hun user flow te verbeteren.
+                </Big>
+            </p>
+            <Checklist>
+                <CheckListItem>
+                    Altijd duidelijke en snelle communicatie
+                </CheckListItem>
+                <CheckListItem>
+                    7 dagen per week, binnen een uur, reactie op vragen
+                </CheckListItem>
+                <CheckListItem>
+                    Voor noodgevallen altijd bereikbaar te zijn
+                </CheckListItem>
+                <CheckListItem>
+                    Voor noodgevallen altijd bereikbaar te zijn
+                </CheckListItem>
+                <CheckListItem>
+                    Transparantie en openheid, zonder uitzonderingen
+                </CheckListItem>
+            </Checklist>
+        </TextAndImage>
+        <TextAndImage img={temp} fluid reverse>
+            <h2>Een high end shopbeleving</h2>
+            <p>
+                <Big>
+                    {' '}
+                    hebben Côte et Ciel in samenwerking met The Pumphouse
+                    geholpen om hun user flow te verbeteren.
+                </Big>
+            </p>
+            <Checklist>
+                <CheckListItem>
+                    Altijd duidelijke en snelle communicatie
+                </CheckListItem>
+                <CheckListItem>
+                    7 dagen per week, binnen een uur, reactie op vragen
+                </CheckListItem>
+                <CheckListItem>
+                    Voor noodgevallen altijd bereikbaar te zijn
+                </CheckListItem>
+                <CheckListItem>
+                    Voor noodgevallen altijd bereikbaar te zijn
+                </CheckListItem>
+                <CheckListItem>
+                    Transparantie en openheid, zonder uitzonderingen
+                </CheckListItem>
+            </Checklist>
+        </TextAndImage>
 
         <Container fluid>
             <TextAndImage img={temp} reverse>
                 <p className="subtitle">Ontwikkeling</p>
                 <h2>Leg de focus op de webwinkel</h2>
                 <p>
-                    <big>
+                    <Big>
                         {' '}
                         hebben Côte et Ciel in samenwerking met The Pumphouse
                         geholpen om hun user flow te verbeteren.
-                    </big>
+                    </Big>
                 </p>
                 <Checklist>
                     <CheckListItem>
@@ -241,11 +239,11 @@ const Case = () => (
             <TextAndImage img={temp}>
                 <h2>Leg de focus op de webwinkel</h2>
                 <p>
-                    <big>
+                    <Big>
                         {' '}
                         hebben Côte et Ciel in samenwerking met The Pumphouse
                         geholpen om hun user flow te verbeteren.
-                    </big>
+                    </Big>
                 </p>
                 <Checklist>
                     <CheckListItem>

@@ -35,7 +35,7 @@ const Over = () => (
                         headingType="h2"
                     />
                 </Col>
-                <Col lg={5}>
+                <Col lg={5} offset={{ lg: 1 }}>
                     <p>
                         Door eerst de problemen te analyseren en doelen te
                         stellen zorgen we voor resultaat, en voorkomen we

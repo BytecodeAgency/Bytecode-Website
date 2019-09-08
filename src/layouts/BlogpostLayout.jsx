@@ -10,6 +10,8 @@ import { Container, Row, Col } from '../lib/Grid';
 import Author from '../components/Author';
 import ContactForm from '../components/ContactForm';
 
+const { mediaQueryMin, colors } = theme;
+
 const CallToAction = () => (
     <CallToActionContainer>
         <CallToActionText>
@@ -57,14 +59,14 @@ const BlogSingle = ({ content }) => (
                     </Row>
                 </Container>
             </HeaderContainer>
-            <BlogContentContainer>
+            <Container>
                 <BlogContent>
                     <div id="blogpost-content">
                         <MDXRenderer>{content.post_content}</MDXRenderer>
                     </div>
                     <CallToAction />
                 </BlogContent>
-            </BlogContentContainer>
+            </Container>
         </article>
     </Layout>
 );
@@ -79,68 +81,51 @@ const HeaderContainer = styled.header`
     background-size: cover;
     background-position: center center;
     opacity: 60%;
-    @media (min-width: ${theme.breakpointMobileMenu}) {
-        padding: 20em 0 5em 0;
-    }
-    @media (max-width: ${theme.breakpointMobileMenu}) {
-        h1 {
-            font-size: 2.6rem;
-        }
-    }
-`;
-
-const BlogContentContainer = styled.div`
-    display: flex;
-    justify-content: center;
 `;
 
 const BlogContent = styled.div`
-    padding: 4rem 1rem 4rem;
-    & {
-        max-width: 54em;
+    @media (${mediaQueryMin.sm}) {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol {
+            padding: 0 15vw;
+        }
+        img,
+        figure,
+        svg {
+            padding: 0 5vw;
+        }
+        ol,
+        ul {
+            list-style-position: outside;
+            margin: 0em;
+        }
     }
 
-    img,
-    figure {
-        max-width: 75rem;
-    }
-    p,
-    ul,
-    li,
-    a {
-        font-kerning: normal;
-        line-height: 1.58em;
-        font-size: 1.406rem;
-    }
-
-    a {
-        color: #23be87;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: 1.33em 0 0.66em 0;
-    }
 
     ul {
-        list-style-type: circle;
-        margin: 1.33em 1.66em;
+        list-style: circle;
     }
-
     ol {
-        list-style-type: decimal;
-        margin: 1.66em 2em;
+        list-style: decimal;
     }
-
-    li {
-        margin: 1.33rem 0;
-        padding-left: 0.8rem;
-        font-family: ${theme.typography.p.font};
-        letter-spacing: ${theme.typography.p.spacing};
+    ol,
+    ul {
+        list-style-position: outside;
+    }
+    a {
+        color: ${colors.primary};
+    }
+    img,
+    figure,
+    svg {
+        margin: 2em 0;
     }
 `;
 
@@ -149,6 +134,8 @@ const BlogMetaDataWrapper = styled.div`
     justify-content: space-between;
     align-content: flex-end;
     margin-top: 6rem;
+    font-size: 0.66em;
+    line-height: 1em;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         margin-top: 2.4rem;
     }
@@ -171,10 +158,4 @@ const CallToActionContainer = styled.div`
 const CallToActionText = styled.p`
     font-style: italic;
     color: ${theme.colors.lightgray} !important;
-`;
-
-const ContentBlockWrapper = styled.section`
-    background-color: ${theme.colors.mediumgray};
-    margin: 5% 0% 5% -5%;
-    padding: 7.5% 5%;
 `;

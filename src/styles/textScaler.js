@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 import theme from './theme';
+import calcHeaderSize from '../lib/calcHeaderSizes';
 
-const mediaQueries = theme.mediaQuery;
+const mediaQueries = theme.mediaQueryMin;
 
 const base = {
     fontSize: '1em',
@@ -15,29 +16,15 @@ const base = {
     },
 };
 
-// Calculate size of headings
-const setHeadingSize = (scale, baseSize) => {
-    const elements = ['h6', 'h5', 'h4', 'h3', 'h2', 'h1'];
-    const rawCss = [];
-    let multiplier = baseSize;
-    for (let i = 0; i < elements.length; i += 1) {
-        multiplier *= scale;
-        rawCss.push(`${elements[i]} {font-size: ${multiplier}rem};`);
-    }
-
-    const headingStyling = rawCss.join('\n');
-    return headingStyling;
-};
-
 const headerSize = {
-    desktop: () => setHeadingSize(base.scale.desktop, 1 * 1.125),
-    mobile: () => setHeadingSize(base.scale.mobile, 1 * 1.125),
+    desktop: calcHeaderSize(base.scale.desktop, 1 * 1.125),
+    mobile: calcHeaderSize(base.scale.mobile, 1 * 1.125),
 };
 
 // SCSS-version
 const textScaler = css`
     ${headerSize.mobile}
-    @media ${mediaQueries.md} {
+    @media (${mediaQueries.sm}) {
         ${headerSize.desktop}
     };
     body {
@@ -50,18 +37,18 @@ const textScaler = css`
             line-height: ${base.lineHeight.header}
         }
         /* ${headerSize.mobile} */
-        @media ${mediaQueries.md} {
-            font-size: calc(${base.fontSize}*1.2));
+        @media (${mediaQueries.md}) {
+            font-size: calc(${base.fontSize} * 1.2);
             line-height: calc(${base.lineHeight.paragraph});
         };
-        @media ${mediaQueries.lg} {
+        @media (${mediaQueries.lg}) {
             font-size: calc(${base.fontSize}*1.3);
         };
-        @media ${mediaQueries.xl} {
+        @media (${mediaQueries.xl}) {
             font-size: calc(${base.fontSize}*1.4);
         };
-        @media ${mediaQueries.xl} and ${mediaQueries.xxl} {
-            font-size: calc(${base.fontSize}*1.6);
+        @media (${mediaQueries.xl}) and (${mediaQueries.xxl}) {
+            font-size: calc(${base.fontSize}*1.5);
         };
     }
 

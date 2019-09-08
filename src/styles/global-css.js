@@ -5,7 +5,7 @@ import theme from './theme';
 
 import textScaler from './textScaler';
 
-const { mediaQuery } = theme;
+const { mediaQueryMin, colors } = theme;
 
 const typographyElements = [
     'h1',
@@ -104,12 +104,14 @@ const GlobalStyles = createGlobalStyle`
         background: ${theme.colors.tertiary};
         color: ${theme.colors.white}
     }
-
+    strong { font-weight: 700}
     ${textScaler}
+    ul { list-style: circle};
+    ol { list-style: decimal};
 `;
 
-export const setContainerWidths = () => {
-    setConfiguration({ containerWidths: theme.containerWidths });
-};
+// export const setContainerWidths = () => {
+//     setConfiguration({ containerWidths: theme.containerWidths });
+// };
 
 export { GlobalStyles };

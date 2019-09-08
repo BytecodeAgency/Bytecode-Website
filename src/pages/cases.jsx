@@ -3,7 +3,8 @@ import Layout from '../layouts/MainLayout';
 
 import { Container, Row, Col } from '../lib/Grid';
 
-import CaseThumbnail from '../components/CaseThumbnail';
+import PostThumbnail from '../components/PostThumbnail';
+import { Small, Big } from '../components/Typography';
 
 const pageSettings = {
     title: 'Cases',
@@ -12,35 +13,36 @@ const pageSettings = {
 };
 
 const testImg = require('../images/img/content/team.png');
-const testImg2 = require('../images/img/cases/sample.webp');
+// eslint-disable-next-line max-len
+const testImg2 = require('../images/img/content/cases/cote-et-ciel/website2.png');
 
 const Cases = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
             <Row>
-                <CaseThumbnail
+                <PostThumbnail
                     title="How we made breda collaborate"
                     category="Test"
                     big
-                    url="/case"
-                    img={testImg2}
+                    slug="/case"
+                    postImageUrl={testImg2}
                 />
             </Row>
         </Container>
         <Container>
             <Row>
-                <CaseThumbnail
+                <PostThumbnail
                     title="How we made breda collaborate"
                     category="Test"
-                    img={testImg}
+                    postImageUrl={testImg}
                 />
-                <CaseThumbnail />
-                <CaseThumbnail />
+                <PostThumbnail />
+                <PostThumbnail />
             </Row>
         </Container>
         <Container>
             <Row>
-                <CaseThumbnail
+                <PostThumbnail
                     title="How we made breda collaborate"
                     category="Test"
                     big
@@ -49,13 +51,13 @@ const Cases = () => (
         </Container>
         <Container>
             <Row>
-                <CaseThumbnail
+                <PostThumbnail
                     title="How we made breda collaborate"
                     category="Test"
-                    img={testImg}
+                    postImageUrl={testImg}
                 />
-                <CaseThumbnail />
-                <CaseThumbnail />
+                <PostThumbnail />
+                <PostThumbnail />
             </Row>
         </Container>
     </Layout>
