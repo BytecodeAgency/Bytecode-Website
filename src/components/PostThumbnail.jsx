@@ -89,13 +89,7 @@ const Arrow = styled.img`
 `;
 
 const PostThumbnail = props => {
-    const {
-        big,
-        title,
-        slug,
-        category,
-        postImageUrl,
-    } = props;
+    const { big, title, slug, category, postImageUrl } = props;
 
     if (big) {
         return (
