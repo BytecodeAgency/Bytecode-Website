@@ -3,17 +3,6 @@ module.exports = {
     coverageDirectory: 'coverage',
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     // setupFiles: ['./tests/config/global-setup.ts'],
-    testEnvironment: 'node',
-    testRegex: 'tests/(.*).(test).ts?',
-    transform: {
-        '^.+\\.tsx?$': 'ts-jest',
-    },
-
-    globals: {
-        'ts-jest': {
-            diagnostics: {
-                ignoreCodes: [],
-            },
-        },
-    },
+    // testEnvironment: 'node',
+    testRegex: 'src/(.*).(test).js?',
 };
