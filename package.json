@@ -21,9 +21,9 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.0.14",
     "@mdx-js/react": "^1.0.6",
-    "axios": "^0.18.0",
-    "babel-plugin-styled-components": "^1.10.0",
-    "formik": "^1.5.1",
+    "axios": "^0.19.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "formik": "^1.5.8",
     "gatsby": "^2.3.3",
     "gatsby-image": "^2.0.35",
     "gatsby-mdx": "^0.6.2",
@@ -43,10 +43,10 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-grid-system": "^4.4.3",
-    "react-helmet": "^5.2.0",
-    "styled-components": "^4.2.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.3.2",
     "styled-components-style-utils": "^1.2.1",
-    "yarn": "^1.15.2",
+    "yarn": "^1.17.3",
     "yup": "^0.27.0"
   },
   "devDependencies": {
