@@ -21,7 +21,7 @@ const ThumbnailBase = styled(Link)`
     cursor: pointer;
     transition: all 0.4s ease;
     min-width: 10em;
-    .thumbnailCTA {
+    .thumbnail-cta {
         transition: 0.3s ease all;
         transform: translate(0em, -1em);
         img {
@@ -29,15 +29,14 @@ const ThumbnailBase = styled(Link)`
         }
     }
     &:hover {
-        // TODO: CSS classes in SC?
-        & > .ThumbnailImg {
+        & > .thumbnail-img {
             transform: scale(1.02);
         }
 
-        .thumbnailCTA {
+        .thumbnail-cta {
             transform: translate(0.3em, -1em);
             img {
-                transform: scaleX(1.3);
+                transform: scaleX(1.1);
             }
         }
     }
@@ -87,7 +86,9 @@ const ThumbnailImg = styled.div`
     }
 `;
 
-const Arrow = styled.img``;
+const Arrow = styled.img`
+    margin-left: 0.01em;
+`;
 
 const PostThumbnail = props => {
     const {
@@ -112,7 +113,7 @@ const PostThumbnail = props => {
             <Col>
                 <ThumbnailBase to={slug}>
                     <BigThumbnailImg
-                        className="ThumbnailImg"
+                        className="thumbnail-img"
                         img={postImageUrl}
                     />
                     <ThumbnailContent>
@@ -126,15 +127,15 @@ const PostThumbnail = props => {
     return (
         <Col offset={{ md: 0.1 }} md={3.9}>
             <ThumbnailBase to={slug}>
-                <ThumbnailImg className="ThumbnailImg" img={postImageUrl} />
+                <ThumbnailImg className="thumbnail-img" img={postImageUrl} />
                 <ThumbnailContent>
                     <Subtitle>{category}</Subtitle>
                     <Big>
                         <p>{title}</p>
                     </Big>
                     <a href={slug}>
-                        <small className="thumbnailCTA">
-                            Learn more{' '}
+                        <small className="thumbnail-cta">
+                            Lees meer
                             <Arrow
                                 src={require('../images/icons/ui/arrow.svg')}
                                 alt=">"

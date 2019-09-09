@@ -4,10 +4,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/MainLayout';
 import { Container, Row, Col } from '../lib/Grid';
-import Author from '../components/Author';
-import ContactForm from '../components/ContactForm';
-import ContentPageHeader from '../components/ContentPageHeader';
-import Wrapper from '../components/Wrapper';
 import PostThumbnail from '../components/PostThumbnail';
 import theme from '../styles/theme';
 

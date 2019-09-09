@@ -15,8 +15,6 @@ const typographyElements = [
     'h5',
     'h6',
     'p',
-    'big',
-    'small',
     'li',
     'ul',
     'body',

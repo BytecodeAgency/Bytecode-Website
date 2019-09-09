@@ -107,7 +107,6 @@ const BlogContent = styled.div`
         }
     }
 
-
     ul {
         list-style: circle;
     }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Button from './Button';
 import AllSocials from '../lib/Socials';
 import theme from '../styles/theme';
-import {Small} from './Typography';
+import { Small } from './Typography';
 
 const { mediaQueryMin } = theme;
 const container = theme.containerWidth;
