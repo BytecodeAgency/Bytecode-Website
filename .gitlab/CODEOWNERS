@@ -1,17 +1,3 @@
-# Add other code owners using `[path] @[username]`
-# (note the missing * after `/docs`, this is intentional!
-# Otherwise you only won't include subdirectories in /docs)
-
-# Examples:
-# /config/ @configowner # Only for the config dir in root of repo, not nested
-# lib/ @libowner # For all lib directories in the repo
-# .gitlab-ci.yml @devops engineer # Just the GitLab CI file
-
-# You can also add users by email, for example
-# LICENSE @legal this_does_not_match janedoe@gitlab.com
-
-###### YOU CAN DELETE EVERYTHING ABOVE AND THIS LINE AFTER CONFIGURATION ######
-
 # CODEOWNERS file for GitLab
 # We use this to let GitLab automatically find users to review merge-requests
 
