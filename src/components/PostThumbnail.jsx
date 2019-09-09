@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { Container } from 'react-grid-system';
 import theme from '../styles/theme';
 import { Col } from '../lib/Grid';
-import { Small, Big } from './Typography';
+import { Big } from './Typography';
 
 const { mediaQueryMin } = theme;
 
@@ -50,7 +49,6 @@ const ThumbnailContent = styled.div`
         }
     }
     small {
-        display: hidden;
         @media (${mediaQueryMin.md}) {
             display: block;
             margin: 1.66em 0em;
@@ -96,16 +94,7 @@ const PostThumbnail = props => {
         title,
         slug,
         category,
-        postedOn,
-        articleImageUrl,
-        authorName,
-        authorRole,
-        authorImageUrl,
-        readingTime,
-        description,
-        imageRoot,
         postImageUrl,
-        blog,
     } = props;
 
     if (big) {

@@ -32,8 +32,7 @@ const ImageBlockFigure = styled.figure`
     }
 
     .content {
-        transform: 10s ease; // TODO: Incorrect value?
-        transition: 0.3s ease;
+        transition: all 0.3s ease;
     }
     &:hover img {
         transform: scale(1.05);

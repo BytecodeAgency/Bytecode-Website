@@ -103,7 +103,7 @@ const BlogContent = styled.div`
         ol,
         ul {
             list-style-position: outside;
-            margin: 0em;
+            margin: 0;
         }
     }
 

@@ -8,7 +8,7 @@ const { mediaQueryMin } = theme;
 
 const TeamMemberWrapper = styled.div`
     @media (${mediaQueryMin.md}) {
-        padding: 3rem 0rem 3rem 0rem;
+        padding: 3rem 0 3rem 0;
     }
     h1,
     h2,

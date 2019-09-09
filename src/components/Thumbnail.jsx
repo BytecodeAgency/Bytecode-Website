@@ -15,7 +15,7 @@ const ThumbnailContainer = styled.div`
     &:focus div {
         background-color: #080808;
     }
-    @media ${mediaQuery.md} {
+    @media (${mediaQuery.md}) {
         margin: 0 0.5em 3rem;
         width: 100%;
     }

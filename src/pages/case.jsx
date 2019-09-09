@@ -5,14 +5,9 @@ import Layout from '../layouts/MainLayout';
 
 import { Container, Row, Col } from '../lib/Grid';
 
-import Wrapper from '../components/Wrapper';
-import TextBlock from '../components/TextBlock';
 import TextAndImage from '../components/ContentBlocks';
 import theme from '../styles/theme';
-import { Small, Big } from '../components/Typography';
-
-const container = theme.containerWidth;
-const { mediaQueryMin } = theme;
+import { Big } from '../components/Typography';
 
 const pageSettings = {
     title: 'Cases',
@@ -38,10 +33,6 @@ const CheckListItemBase = styled.li`
     }
 `;
 
-const PaddedContainer = styled(Container)`
-    padding: 7em 0;
-`;
-
 const CheckListItem = props => {
     const { children } = props;
     return (
@@ -54,39 +45,6 @@ const CheckListItem = props => {
     );
 };
 
-const Frame = styled.figure`
-    background: teal;
-    overflow: hidden;
-
-    padding: 0em;
-    transform: translateX(10em);
-    img {
-        height: 100%;
-        transform: translate(5rem, 5rem) scale(1.1);
-    }
-`;
-
-const Results = styled(Container)`
-    padding: 5em 0;
-    margin: 0;
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0em;
-        left: 0;
-        width: 90%;
-        height: 100%;
-        background: ${theme.colors.secondary};
-        @media ${mediaQueryMin.md} {
-            width: 100%;
-        }
-    }
-    img {
-        transform: translateX(4em);
-    }
-`;
-
-const testImg = require('../images/img/content/team.png');
 const testImg2 = require('../images/img/content/cases/cote-et-ciel/website2.png');
 
 const CaseHeader = styled.header`

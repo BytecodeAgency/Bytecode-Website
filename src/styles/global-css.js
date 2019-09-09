@@ -1,11 +1,7 @@
 import { reset, debug } from 'styled-components-style-utils';
 import { css, createGlobalStyle } from 'styled-components';
-import { setConfiguration } from 'react-grid-system';
 import theme from './theme';
-
 import textScaler from './textScaler';
-
-const { mediaQueryMin, colors } = theme;
 
 const typographyElements = [
     'h1',
@@ -94,9 +90,5 @@ const GlobalStyles = createGlobalStyle`
     ul { list-style: circle};
     ol { list-style: decimal};
 `;
-
-// export const setContainerWidths = () => {
-//     setConfiguration({ containerWidths: theme.containerWidths });
-// };
 
 export { GlobalStyles };

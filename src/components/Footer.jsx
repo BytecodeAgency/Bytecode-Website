@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Button from './Button';
 import AllSocials from '../lib/Socials';
 import theme from '../styles/theme';
-import { Small } from './Typography';
 
 const { mediaQueryMin } = theme;
 const container = theme.containerWidth;
@@ -25,7 +24,7 @@ const FooterColInnerContainer = styled.div`
     }
 `;
 
-const FooterCol = ({ props, children }) => (
+const FooterCol = ({ children }) => (
     <FooterColInnerContainer>{children}</FooterColInnerContainer>
 );
 
@@ -42,7 +41,7 @@ const FooterIcon = styled.img`
 const FooterLogo = styled(FooterIcon)`
     transform: translateX(-1.5rem);
     max-width: 60vw;
-    @media ${mediaQueryMin.sm} {
+    @media (${mediaQueryMin.sm}) {
         transform: translateX(-3rem);
     }
 `;
@@ -95,8 +94,7 @@ const FooterContainer = styled.section`
         padding: 3em ${container.md} 0 ${container.md};
     }
     @media screen and (${mediaQueryMin.lg}) {
-        padding: 3em ${container.lg} 0 ${container.lg};
-        padding-bottom: 1em;
+        padding: 3em ${container.lg} 0 1em;
     }
     @media screen and (${mediaQueryMin.xl}) {
         padding: 3em ${container.xl} 0 ${container.xl};

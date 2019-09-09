@@ -6,7 +6,6 @@ import { Container } from '../lib/Grid';
 import theme from '../styles/theme';
 
 const { mediaQueryMin } = theme;
-const container = theme.containerWidth;
 
 const NavbarContainer = styled.nav`
     position: relative;
@@ -28,7 +27,7 @@ const NavbarContainer = styled.nav`
     }
 
     @media (${mediaQueryMin.sm}) {
-        padding: 0rem 3rem;
+        padding: 0 3rem;
     }
     @media (${mediaQueryMin.lg}) {
         margin: 1rem 8.5rem;

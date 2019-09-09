@@ -6,7 +6,7 @@ import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 import ContactForm from '../components/ContactForm';
 import TextAndImage from '../components/ContentBlocks';
-import { Small, Big } from '../components/Typography';
+import { Big } from '../components/Typography';
 import theme from '../styles/theme';
 
 import Service from '../components/Service';
@@ -41,23 +41,12 @@ const CheckListItemBase = styled.li`
     }
 `;
 
-const PaddedCol = styled(Col)`
-    margin: 1em !important;
-    @media (${mediaQueryMin.xs}) {
-        margin: 0 3em;
-    }
-`;
-
 const PaddedContainer = styled(Container)`
     padding: 4em 0;
 `;
 
 const Checklist = styled.ul`
     margin: 2em 0;
-`;
-
-const Img = styled.img`
-    max-width: 30em;
 `;
 
 const SmallList = styled.ul`
@@ -76,22 +65,6 @@ const SmallList = styled.ul`
         line-height: 1.4em;
         color: ${colors.lightgray};
         opacity: 0.33;
-    }
-`;
-
-const FluidWrapper = styled(Wrapper)`
-    margin: 0 !important;
-    padding: 0 !important;
-    Container {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-`;
-
-const SwitchCol = styled(Col)`
-    order: -1;
-    @media (${mediaQueryMin.xs}) {
-        order: 0;
     }
 `;
 

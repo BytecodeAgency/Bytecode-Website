@@ -7,12 +7,12 @@ const { mediaQueryMin } = theme;
 
 const Icon = styled.img`
     margin-top: 2em;
-    margin-bottom: 0em;
-    padding: 0em !important;
+    margin-bottom: 0;
+    padding: 0 !important;
     @media (${mediaQueryMin.sm}) {
         max-height: 10rem;
         margin-top: 3em;
-        margin-left: 0em;
+        margin-left: 0;
         padding: 0.1em;
     }
 `;
@@ -27,7 +27,7 @@ const ServiceWrapper = styled.div`
         flex-direction: row;
     }
     @media (${mediaQueryMin.md}) {
-        padding: 0 6em 1em 0em;
+        padding: 0 6em 1em 0;
         flex-basis: ${props => (props.fullWidth ? '100%' : '50%')};
     }
 `;
@@ -38,18 +38,14 @@ const ServiceIcon = styled.div`
     flex-basis: 25%;
     width: 20%;
     @media (${mediaQueryMin.sm}) {
-        margin: 0;
-        margin-right: 3em;
+        margin: 0 3em 0 0;
         min-height: 100%;
         flex-basis: 25%;
         width: 20%;
     }
     @media (${mediaQueryMin.md}) {
-        margin: 0;
         flex-basis: 15%;
         min-width: 15%;
-        margin-right: 3em;
-        min-height: 100%;
     }
 `;
 

@@ -1,10 +1,9 @@
 import React from 'react';
 import Layout from '../layouts/MainLayout';
 
-import { Container, Row, Col } from '../lib/Grid';
+import { Container, Row } from '../lib/Grid';
 
 import PostThumbnail from '../components/PostThumbnail';
-import { Small, Big } from '../components/Typography';
 
 const pageSettings = {
     title: 'Cases',

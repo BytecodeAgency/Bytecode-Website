@@ -5,9 +5,6 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/MainLayout';
 import { Container, Row, Col } from '../lib/Grid';
 import PostThumbnail from '../components/PostThumbnail';
-import theme from '../styles/theme';
-
-const { mediaQueryMin } = theme;
 
 const pageSettings = {
     title: 'Bytecode Insights - Bytecode Digital Agency B.V.',

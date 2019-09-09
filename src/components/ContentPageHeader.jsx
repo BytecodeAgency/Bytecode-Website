@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Row, Col } from '../lib/Grid';
 import TextBlock from './TextBlock';
 import theme from '../styles/theme';
 
@@ -14,7 +13,6 @@ const MainHeader = styled.header`
     background-size: cover;
     animation: fadeIn 2s;
     padding: 3em 1em;
-    display: flex;
     align-items: end;
     height: 100vh;
     max-height: 40em;
@@ -35,12 +33,11 @@ const MainHeader = styled.header`
         background-blend-mode: ${props => props.blendMode || 'soft-light'};
     }
     .content {
-        margin-left: none; // TODO: Incorrect value?
+        margin-left: 0;
     }
 `;
 
 const MainHeaderContent = styled.div`
-    margin: 0;
     margin: 2em ${containerWidth.xs};
     @media (${mediaQueryMin.sm}) {
         margin: 2em ${containerWidth.sm};
@@ -68,11 +65,11 @@ const ContentPageHeader = props => {
         <MainHeader {...props}>
             <MainHeaderContent fluid={true}>
                 <TextBlock
+                    useGatsbyLink
                     subtitle={subtitle || ''}
                     title={title || ''}
                     href={href}
                     button={button || ''}
-                    useGatsbyLink
                 >
                     {text}
                 </TextBlock>

@@ -154,7 +154,6 @@ const bytecode = {
         },
     },
     breakpointMobileMenu: '63rem',
-    // breakpoints: [540, 750, 1200, 1400],
     containerWidths: [],
     breakpoint: {
         xs: '48em',
