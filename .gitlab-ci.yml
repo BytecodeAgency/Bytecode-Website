@@ -28,6 +28,14 @@ lint:
   script:
     - yarn run lint
 
+test_jest:
+  stage: test
+  before_script:
+    - npm i -g yarn
+    - yarn
+  script:
+    - yarn run test:ci
+
 pages:
   image: alpine:3.9
   stage: deploy
