@@ -196,7 +196,6 @@ const Partners = () => (
             <SmallList>
                 <li>Front-end: HTML, CSS, Sass, Stylus, Bootstrap</li>
                 <li>PHP: WordPress, WooCommerce, Laravel en Magento 2</li>
-                {/* // eslint-disable-line no-use-before-define */}
                 <li>Frameworks: NodeJS, ReactJS en Angular 2+ </li>
                 <li>Mobiel: React Native, Ionic 2+, Flutter</li>
                 <li>Servers: Linux, Apache, Nginx</li>

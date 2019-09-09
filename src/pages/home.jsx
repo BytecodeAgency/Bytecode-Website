@@ -26,10 +26,6 @@ const pageSettings = {
     keywords: 'bytecode, digital agency',
 };
 
-const CenterAlignedRow = styled(Row)`
-    align-items: center;
-`;
-
 const CenterAlignedCol = styled(Col)`
     align-self: center;
     display: flex;

@@ -1,19 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from '../styles/theme';
 
-const StyledDiv = styled.div`
-    width: 100%;
+const mediaQuery = theme;
+
+const ThumbnailContainer = styled.div`
     height: 22rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 3rem;
     overflow: hidden;
-    margin: 0 0.5em;
     padding: 0.5em;
     &:hover div,
     &:focus div {
         background-color: #080808;
+    }
+    @media ${mediaQuery.md} {
+        margin: 0 0.5em 3rem;
+        width: 100%;
     }
 `;
 
@@ -50,14 +54,14 @@ const ServiceName = styled.p`
 `;
 
 const Thumbnail = ({ backgroundImage, serviceIcon, serviceName }) => (
-    <StyledDiv>
+    <ThumbnailContainer>
         <ServiceImageContainer background={backgroundImage}>
             <Icon>
                 <ServiceImage src={serviceIcon} alt={serviceName} />
                 <ServiceName>{serviceName}</ServiceName>
             </Icon>
         </ServiceImageContainer>
-    </StyledDiv>
+    </ThumbnailContainer>
 );
 
 export default Thumbnail;

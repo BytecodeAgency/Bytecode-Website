@@ -1,18 +1,17 @@
 /* eslint-disable max-len, object-curly-newline, camelcase, prettier/prettier */
 
 import React from 'react';
-import styled from 'styled-components';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../layouts/MainLayout';
-import theme from '../styles/theme';
 import { Container, Row, Col } from '../lib/Grid';
 import Author from '../components/Author';
 import ContactForm from '../components/ContactForm';
 import ContentPageHeader from '../components/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 import PostThumbnail from '../components/PostThumbnail';
+import theme from '../styles/theme';
 
-const { xs, sm, md, lg, xl, xxl } = theme.mediaQueryMin;
+const { mediaQueryMin } = theme;
 
 const pageSettings = {
     title: 'Bytecode Insights - Bytecode Digital Agency B.V.',
@@ -104,48 +103,3 @@ export const pageQuery = graphql`
 `;
 
 export default blogArchive;
-
-const PostThumbnailWrapper = styled.div`
-    width: 100%;
-    @media ${md} {
-        width: 50%;
-    }
-`;
-
-const Posts = styled(Container)`
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    @media ${sm} {
-        flex-direction: row;
-    }
-`;
-
-
-const PostThumbnailContentWrapper = styled.div`
-    text-decoration: none !important;
-    cursor: pointer;
-    @media ${md} {
-        padding: 2rem;
-        margin: 1rem;
-    }
-`;
-
-const PostThumbnailImage = styled.div`
-    background-image: url(${props => props.url || '../images/img/header/noise.jpg'});
-    height: 50vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center center;
-    @media ${md} {
-
-        width: 100%;
-        height: 25rem;
-
-        margin: 0 0 1.6rem;
-    }
-`;
-
-const AuthorContainer = styled.div`
-    margin: 2rem 0;
-`;

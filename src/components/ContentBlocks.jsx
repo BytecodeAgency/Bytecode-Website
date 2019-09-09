@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from '../lib/Grid';
 import theme from '../styles/theme';
 
 const container = theme.containerWidth;
 const { mediaQueryMin } = theme;
 
 const TextAndImageBase = styled.div`
-    max-width: 100% !important
+    max-width: 100% !important //TODO
     display: flex;
     flex-direction: column;
     align-items: center;

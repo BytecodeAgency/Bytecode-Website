@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import axios from 'axios';
 import { Field, Formik } from 'formik';
 import * as Yup from 'yup';
-import { Container, Row, Col } from '../lib/Grid';
 import theme from '../styles/theme';
 import TextBlock from './TextBlock';
+import Button from './Button';
 
 const ContactFormContainer = styled.div`
     padding: 1em 0;
@@ -18,7 +18,7 @@ const InputField = styled.input`
     outline: none;
     border: none;
     padding: 0.66em 1em;
-    margin: 0em 0.1em 1em 0.1em;
+    margin: 0 0.1em 1em 0.1em;
     color: ${theme.colors.white};
     width: 100%;
     &:hover {
@@ -32,28 +32,9 @@ const InputField = styled.input`
     }
 `;
 
-const SendButton = styled.button`
-    display: inline-block;
-    background: transparent;
-    padding: 1em 5em;
-    border-color: ${theme.colors.tertiary};
-    color: ${theme.colors.tertiary};
-    border-style: solid;
-    border-width: 0.1rem;
-    border-radius: 10rem;
-    transition: all 0.2s ease;
-    margin-top: 1em;
-    font-size: 0.8rem;
-    &:hover {
-        color: ${theme.colors.white};
-        background: ${theme.colors.primary};
-        border-color: ${theme.colors.primary};
-        cursor: pointer;
-    }
-`;
+const SendButton = styled(Button)``;
 
 const ErrorMessage = styled.div`
-    /* font-size: 1.5rem; */
     margin-left: 1.33em;
     color: ${theme.colors.tertiary};
 `;
@@ -65,8 +46,7 @@ const InputTextArea = styled.textarea`
     outline: none;
     border: none;
     padding: 1em;
-    margin: 0 0.1em;
-    margin-bottom: 1.33em;
+    margin: 0 0.1em 1.33em;
     width: 100%;
     min-height: 20em;
     &:hover {

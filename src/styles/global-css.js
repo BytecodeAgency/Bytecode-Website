@@ -41,19 +41,6 @@ const addStylingExceptions = element => {
     }
 };
 
-const setHeadingSize = (scale, base) => {
-    const elements = ['h6', 'h5', 'h4', 'h3', 'h2', 'h1'];
-    const rawCss = [];
-    let multiplier = base;
-    for (let i = 0; i < elements.length; i += 1) {
-        multiplier *= scale;
-        rawCss.push(`${elements[i]} {font-size: ${multiplier}rem};`);
-    }
-
-    const HeadingStyling = rawCss.join('\n');
-    return HeadingStyling;
-};
-
 const typographyElementStyling = typographyElements.map(
     element => css`
         ${element} {

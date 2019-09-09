@@ -12,24 +12,13 @@ import theme from '../styles/theme';
 import { Small, Big } from '../components/Typography';
 
 const container = theme.containerWidth;
-const { xs, sm, md, lg, xl, xxl } = theme.mediaQueryMin;
+const { mediaQueryMin } = theme;
 
 const pageSettings = {
     title: 'Cases',
     description: 'Hier de omschrijving',
     keywords: 'tag1,tag2',
 };
-const Statistic = styled(Col)`
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin-bottom: 0.1em;
-    }
-    padding-bottom: 1em;
-`;
 
 const Checklist = styled.ul`
     margin: 2em 0;
@@ -88,7 +77,7 @@ const Results = styled(Container)`
         width: 90%;
         height: 100%;
         background: ${theme.colors.secondary};
-        @media ${md} {
+        @media ${mediaQueryMin.md} {
             width: 100%;
         }
     }
@@ -99,18 +88,6 @@ const Results = styled(Container)`
 
 const testImg = require('../images/img/content/team.png');
 const testImg2 = require('../images/img/content/cases/cote-et-ciel/website2.png');
-
-const WrappedContainer = styled(PaddedContainer)`
-    &:before {
-        content: '';
-        position: absolute;
-        top: -3em;
-        right: 0em;
-        width: 96vw;
-        height: 175%;
-        background: ${theme.colors.secondary};
-    }
-`;
 
 const CaseHeader = styled.header`
     background: url("${props => props.img}"), ${theme.colors.secondary};

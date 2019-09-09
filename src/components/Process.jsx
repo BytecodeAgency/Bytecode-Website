@@ -17,9 +17,9 @@ const Step = styled(Col)`
 `;
 
 const ProcessStepImage = styled.img`
-    margin: 5em;
-    margin-left: 3rem;
-    width: 50%;
+    margin: 5rem 5rem 5rem 3rem;
+    height: 400px;
+    width: auto;
     text-align: center;
     @media (${mediaQueryMin.xs}) {
         margin-bottom: 4em;

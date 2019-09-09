@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from '../lib/Grid';
 import theme from '../styles/theme';
 import TextBlock from './TextBlock';
 
@@ -33,9 +32,8 @@ const ServiceWrapper = styled.div`
     }
 `;
 
-const ServiceIcon = styled.figure`
-    margin: 0;
-    margin-right: 3em;
+const ServiceIcon = styled.div`
+    margin: 0 3em 0 0;
     transform: translateY(0.1em);
     flex-basis: 25%;
     width: 20%;

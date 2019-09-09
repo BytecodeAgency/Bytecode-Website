@@ -4,12 +4,13 @@ import {
     Row as RowBase,
     Col as ColBase,
     Hidden as HiddenBase,
-    setConfiguration,
 } from 'react-grid-system';
 import theme from '../styles/theme';
 
 const { mediaQueryMin } = theme;
 const container = theme.containerWidth;
+
+// TODO: Why is everything so !important?
 
 export const Container = styled(ContainerBase)`
     max-width: unset !important;

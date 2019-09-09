@@ -6,7 +6,6 @@ import ContentPageHeader from '../components/ContentPageHeader';
 import TeamMember from '../components/TeamMember';
 import { Container, Row, Col } from '../lib/Grid';
 import ContactForm from '../components/ContactForm';
-import Wrapper from '../components/Wrapper';
 
 const pageSettings = {
     title: `Over ons - Bytecode Digital Agency |
@@ -92,6 +91,7 @@ const Over = () => (
                 />
             </Row>
             <Row>
+                {/* TODO: Generate from array, maybe later change via dashb. */}
                 <TeamMember
                     name="Julian van Dijk"
                     title="Full-stack developer web &amp; mobiel"

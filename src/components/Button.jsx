@@ -1,21 +1,21 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Link from '../lib/AnimatedLink';
 import theme from '../styles/theme';
 
-// eslint-disable-next-line
+// eslint-disable-next-line react/jsx-props-no-spreading
 const ButtonBase = ({ href, useGatsbyLink, className, children, ...props }) => {
     if (useGatsbyLink) {
         return (
-            // eslint-disable-next-line
+            // eslint-disable-next-line react/jsx-props-no-spreading
             <Link to={href} className={`button ${className}`} {...props}>
                 {children}
             </Link>
         );
     }
     return (
-        // eslint-disable-next-line
+        // eslint-disable-next-line react/jsx-props-no-spreading
         <a href={href} className={`button ${className}`} {...props}>
             {children}
         </a>

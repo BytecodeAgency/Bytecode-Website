@@ -1,16 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import { Container, Row, Col } from '../lib/Grid';
 import Button from './Button';
 import AllSocials from '../lib/Socials';
 import theme from '../styles/theme';
+import {Small} from './Typography';
 
-// eslint-disable-next-line prefer-destructuring
-const mediaQueryMin = theme.mediaQueryMin;
+const { mediaQueryMin } = theme;
 const container = theme.containerWidth;
-
-const opensource = require('../images/icons/social/open-source.svg');
 
 const FooterColInnerContainer = styled.div`
     width: 100%;
@@ -44,12 +40,11 @@ const FooterIcon = styled.img`
 `;
 
 const FooterLogo = styled(FooterIcon)`
-    transform: translateX(-3rem);
-`;
-
-const OpenSourceIcon = styled(FooterIcon)`
-    height: 100%;
-    padding: 1em 0;
+    transform: translateX(-1.5rem);
+    max-width: 60vw;
+    @media ${mediaQueryMin.sm} {
+        transform: translateX(-3rem);
+    }
 `;
 
 const FooterLinkContainer = styled.p`
@@ -82,10 +77,6 @@ const FooterButton = styled(Button)`
     padding: 0.5em 2rem;
 `;
 
-const FooterText = styled.p`
-    font-size: 1.4rem;
-`;
-
 const FooterSpacer = styled.div`
     height: 3.4rem;
 `;
@@ -95,20 +86,20 @@ const FooterContainer = styled.section`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding 3em ${container.xs} 1em ${container.xs};
+    padding: 3em ${container.xs} 1em ${container.xs};
     @media screen and (${mediaQueryMin.sm}) {
-        padding 3em ${container.sm} 3em ${container.sm};
+        padding: 3em ${container.sm} 3em ${container.sm};
         flex-direction: row;
     }
     @media screen and (${mediaQueryMin.md}) {
-        padding 3em ${container.md} 0 ${container.md};
+        padding: 3em ${container.md} 0 ${container.md};
     }
     @media screen and (${mediaQueryMin.lg}) {
-        padding 3em ${container.lg} 0 ${container.lg};
+        padding: 3em ${container.lg} 0 ${container.lg};
         padding-bottom: 1em;
     }
     @media screen and (${mediaQueryMin.xl}) {
-        padding 3em ${container.xl} 0 ${container.xl};
+        padding: 3em ${container.xl} 0 ${container.xl};
     }
     background: ${theme.colors.secondary};
 `;
@@ -142,11 +133,6 @@ const Footer = () => (
                     <FooterLogo src={logo} alt="Bytecode" />
                 </FooterHeadingContainer>
                 <FooterLinkContainer>
-                    <FooterLink href="mailto:info@bytecode.nl">
-                        info@bytecode.nl
-                    </FooterLink>
-                    <FooterLink href="tel:+31152024222">015-2024222</FooterLink>
-
                     <AllSocials
                         isFooter={true}
                         facebook="https://www.facebook.com/bytecodeagency"
@@ -155,6 +141,20 @@ const Footer = () => (
                         linkedin="
                                 https://www.linkedin.com/company/bytecodeagency"
                     />
+                    <FooterLink href="mailto:info@bytecode.nl">
+                        info@bytecode.nl
+                    </FooterLink>
+                    <FooterLink href="tel:+31152024222">015-2024222</FooterLink>
+
+                    <FooterSpacer />
+                    <p className="subtitle">Legal</p>
+                    <p>
+                        KvK: 71497560
+                        <br />
+                        BTW: NL858738703B01
+                        <br />
+                        IBAN: NL77 BUNQ 2206 3628 13
+                    </p>
                 </FooterLinkContainer>
             </FooterCol>
             <FooterCol>
@@ -168,12 +168,6 @@ const Footer = () => (
                     <br />
                     Nederland
                 </p>
-                <p>
-                    <small>
-                        Onze deur staat altijd open, maar een afspraak plannen
-                        is wel gewenst.
-                    </small>
-                </p>
                 <FooterButton
                     href="https://calendly.com/bytecode"
                     target="_blank"
@@ -184,7 +178,7 @@ const Footer = () => (
             </FooterCol>
             <FooterCol>
                 <FooterHeadingContainer>
-                    <OpenSourceIcon src={opensource} alt="Open source" />
+                    <p className="subtitle">Broncode website</p>
                 </FooterHeadingContainer>
                 <p>
                     Wij dragen graag bij aan open source projecten en vrije
@@ -225,16 +219,6 @@ const Footer = () => (
                         Security Policy
                     </FooterLink>
                 </p>
-                <FooterHeadingContainer>
-                    <p className="subtitle">Legal</p>
-                </FooterHeadingContainer>
-                <p>
-                    KvK: 71497560
-                    <br />
-                    BTW: NL858738703B01
-                    <br />
-                    IBAN: NL77 BUNQ 2206 3628 13
-                </p>
             </FooterCol>
         </FooterContainer>
         <Copyright>
@@ -242,7 +226,13 @@ const Footer = () => (
             <p>
                 <small>
                     &copy; {new Date().getFullYear()}
-                    &nbsp;Bytecode Digital Agency B.V. - All Rights Reserved
+                    &nbsp;Bytecode Digital Agency B.V.
+                    <br />
+                    All Rights Reserved on text and image content,
+                    <a href="https://github.com/BytecodeBV/Bytecode-Website">
+                        &nbsp;source code&nbsp;
+                    </a>
+                    is available under the AGPL-3.0 license.
                 </small>
             </p>
         </Copyright>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { transparentize } from 'polished';
-import theme from '../styles/theme';
+import Link from '../lib/AnimatedLink';
 import { Container } from '../lib/Grid';
+import theme from '../styles/theme';
 
 const { mediaQueryMin } = theme;
 const container = theme.containerWidth;
@@ -14,8 +14,8 @@ const NavbarContainer = styled.nav`
     padding: 1em 1em;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         width: 100vw;
-        height: 5em;
-        padding: 1.66em 1em;
+        height: 3.5em;
+        padding: 1em;
         position: fixed;
         top: 0;
         left: 0;
@@ -36,7 +36,7 @@ const NavbarContainer = styled.nav`
 `;
 
 const InnerNavbarContainer = styled(Container)`
-    margin: 0rem 0 !important;
+    margin: 0 0 !important;
     max-width: none !important;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         margin: 0 !important;
@@ -115,6 +115,7 @@ const NavbarItem = styled(NavbarItemBase)`
         padding-right: 0;
     }
     @media (max-width: ${theme.breakpointMobileMenu}) {
+        margin-bottom: 0.5em;
         padding: 0 1em;
         &:first-child {
             margin-top: 4rem;
@@ -170,7 +171,8 @@ const CloseMenuButton = styled(MenuButton)`
     justify-content: right;
     height: 100%;
     padding: 0.5em;
-    min-height: 5em;
+    min-height: 4em;
+    margin-right: 0.5em;
     @media (min-width: ${theme.breakpointMobileMenu}) {
         display: none;
     }

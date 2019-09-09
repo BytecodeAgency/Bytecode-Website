@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { Container } from 'react-grid-system';
 import theme from '../styles/theme';
-import TextBlock from './TextBlock';
 import { Col } from '../lib/Grid';
 import { Small, Big } from './Typography';
 
@@ -30,6 +29,7 @@ const ThumbnailBase = styled(Link)`
         }
     }
     &:hover {
+        // TODO: CSS classes in SC?
         & > .ThumbnailImg {
             transform: scale(1.02);
         }
@@ -137,7 +137,7 @@ const PostThumbnail = props => {
                             Learn more{' '}
                             <Arrow
                                 src={require('../images/icons/ui/arrow.svg')}
-                                alt=" >"
+                                alt=">"
                             />
                         </small>
                     </a>

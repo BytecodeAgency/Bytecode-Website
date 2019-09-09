@@ -46,6 +46,7 @@ export const SocialIcon = ({ url, social }) => {
 const SocialsContainer = styled.div`
     display: flex;
     justify-content: ${props => (props.isFooter ? 'left' : 'center')};
+    margin-top: ${props => (props.isFooter ? '-40px' : 'initial')};
 `;
 
 // eslint-disable-next-line object-curly-newline, max-len, prettier/prettier

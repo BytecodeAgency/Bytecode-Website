@@ -28,11 +28,11 @@ const ImageBlockFigure = styled.figure`
         top: 0px;
         right: 0px;
         z-index: 10;
-        margin: 3rem 0rem 3rem 3rem;
+        margin: 3rem 0 3rem 3rem;
     }
 
     .content {
-        transform: 10s ease;
+        transform: 10s ease; // TODO: Incorrect value?
         transition: 0.3s ease;
     }
     &:hover img {
@@ -41,7 +41,7 @@ const ImageBlockFigure = styled.figure`
 
     @media (min-width: ${theme.breakpointMobileMenu}) {
         &:after {
-            margin: 6rem 0rem 6rem 6rem;
+            margin: 6rem 0 6rem 6rem;
         }
     }
 `;

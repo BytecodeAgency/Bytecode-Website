@@ -12,7 +12,6 @@ const MainHeader = styled.header`
     background-blend-mode: soft-light;
     display: flex;
     background-size: cover;
-    background-blend-mode: soft-light;
     animation: fadeIn 2s;
     padding: 3em 1em;
     display: flex;
@@ -36,7 +35,7 @@ const MainHeader = styled.header`
         background-blend-mode: ${props => props.blendMode || 'soft-light'};
     }
     .content {
-        margin-left: none;
+        margin-left: none; // TODO: Incorrect value?
     }
 `;
 
@@ -63,10 +62,9 @@ const MainHeaderContent = styled.div`
 `;
 
 const ContentPageHeader = props => {
-    // eslint-disable-next-line
-    const { subtitle, title, button, href, text } = props;
+    const { subtitle, title, button, href, text, useGatsbyLink } = props;
     return (
-        // eslint-disable-next-line
+        // eslint-disable-next-line react/jsx-props-no-spreading
         <MainHeader {...props}>
             <MainHeaderContent fluid={true}>
                 <TextBlock
@@ -74,6 +72,7 @@ const ContentPageHeader = props => {
                     title={title || ''}
                     href={href}
                     button={button || ''}
+                    useGatsbyLink
                 >
                     {text}
                 </TextBlock>

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import { css } from 'styled-components';
 import theme from './theme';
 import calcHeaderSize from '../lib/calcHeaderSizes';
 

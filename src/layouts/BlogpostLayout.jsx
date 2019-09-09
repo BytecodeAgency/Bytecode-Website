@@ -8,7 +8,6 @@ import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
 import { Container, Row, Col } from '../lib/Grid';
 import Author from '../components/Author';
-import ContactForm from '../components/ContactForm';
 
 const { mediaQueryMin, colors } = theme;
 
