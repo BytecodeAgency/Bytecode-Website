@@ -5,11 +5,13 @@ import SEO from '../components/SEO';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import theme from '../styles/theme';
-import { GlobalStyles } from '../styles/global-css';
+import { GlobalStyles, TypographyClassStyling } from '../styles/global-css';
 
 const Main = styled.main`
+    max-width: 100vw !important;
+    overflow-x: hidden;
     @media (max-width: ${theme.breakpointMobileMenu}) {
-        padding-top: 7rem;
+        padding-top: 5rem;
     }
 `;
 
@@ -22,7 +24,6 @@ const Head = () => (
             href="https://fonts.googleapis.com/css?family=Cousine"
             rel="stylesheet"
         />
-        <style data-info="bytecode-global-styling">{GlobalStyles}</style>
     </Helmet>
 );
 
@@ -31,9 +32,13 @@ const Layout = ({ children, pageSettings }) => {
     return (
         <div>
             <Head />
+            <GlobalStyles />
             <SEO title={title} description={description} keywords={keywords} />
             <Navbar />
-            <Main className="main">{children}</Main>
+            <Main className="main">
+                <TypographyClassStyling />
+                {children}
+            </Main>
             <Footer />
         </div>
     );

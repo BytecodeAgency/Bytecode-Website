@@ -2,6 +2,7 @@ import theme from '../styles/theme';
 
 const socialIconFillColor = theme.colors.primary;
 
+// TODO: Clean this up
 /* eslint-disable max-len */
 const socialIcons = {
     facebook: `

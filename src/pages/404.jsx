@@ -5,6 +5,7 @@ import Layout from '../layouts/MainLayout';
 const Container404 = styled.div`
     text-align: center;
     margin: 20rem 0;
+    min-height: 20vh;
 `;
 
 const pageSettings = {

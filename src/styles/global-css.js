@@ -1,9 +1,20 @@
-/* eslint-disable no-unused-expressions, function-paren-newline, prettier/prettier, max-len  */
 import { reset, debug } from 'styled-components-style-utils';
-import { setConfiguration } from 'react-grid-system';
+import { css, createGlobalStyle } from 'styled-components';
 import theme from './theme';
+import textScaler from './textScaler';
 
-const typographyElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'body'];
+const typographyElements = [
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'p',
+    'li',
+    'ul',
+    'body',
+];
 
 const typographyClasses = [
     'introduction',
@@ -24,56 +35,60 @@ const addStylingExceptions = element => {
     }
 };
 
-const typographyElementStyling = typographyElements
-    .map(
-        element => `${element} {
-        font-size: ${theme.typography[element].size};
-        line-height: ${theme.typography[element].height};
-        letter-spacing: ${theme.typography[element].spacing};
-        font-family: ${theme.typography[element].font};
-        font-weight: ${theme.typography[element].weight};
-        color: ${theme.typography[element].color};
-        ${addStylingExceptions(element)};
-    }`,
-    )
-    .join('\n\n');
+const typographyElementStyling = typographyElements.map(
+    element => css`
+        ${element} {
+            font-size: ${theme.typography[element].size};
+            line-height: ${theme.typography[element].height};
+            letter-spacing: ${theme.typography[element].spacing};
+            font-family: ${theme.typography[element].font};
+            font-weight: ${theme.typography[element].weight};
+            color: ${theme.typography[element].color};
+            margin-top: ${theme.typography[element].marginTop};
+            margin-bottom: ${theme.typography[element].marginBottom};
+            margin-left: ${theme.typography[element].marginLeft};
+            margin-right: ${theme.typography[element].marginRight};
+            ${addStylingExceptions(element)};
+        }
+    `,
+);
 
-const typographyClassStyling = typographyClasses
-    .map(
-        element => `.${element} {
-        font-size: ${theme.typography[element].size};
-        line-height: ${theme.typography[element].height};
-        letter-spacing: ${theme.typography[element].spacing};
-        font-family: ${theme.typography[element].font};
-        font-weight: ${theme.typography[element].weight};
-        color: ${theme.typography[element].color};
-        ${addStylingExceptions(element)};
-    }`,
-    )
-    .join('\n\n');
+export const TypographyClassStyling = createGlobalStyle`
+    ${typographyClasses
+        .map(
+            element => `.${element} {
+            font-size: ${theme.typography[element].size};
+            line-height: ${theme.typography[element].height};
+            letter-spacing: ${theme.typography[element].spacing};
+            font-family: ${theme.typography[element].font};
+            font-weight: ${theme.typography[element].weight};
+            color: ${theme.typography[element].color};
+            margin: ${theme.typography[element].margin};
+            ${addStylingExceptions(element)};
+        }`,
+        )
+        .join('\n')}
+`;
 
 const enableCssReset = false;
-const GlobalStylesRaw = `
+const GlobalStyles = createGlobalStyle`
     ${reset()}
     ${enableCssReset ? debug() : ''}
-    html { font-size: 62.5%; background: ${theme.colors.background} }
-    @media screen and (min-width: ${theme.breakpoints[3] *
-        1.4}px) { html { font-size: 80%; } }
+    html { font-size: 1em; background: ${theme.colors.background} }
     a { color: inherit; text-decoration: none }
     img { width: 100%; height: auto; margin:0; padding: 0}
     ${typographyElementStyling}
-    ${typographyClassStyling}
-    @media (max-width: ${theme.breakpoints[0]}px) { h1 { font-size: 4rem; } }
+
     body { overflow-x: hidden; }
     textarea { resize: vertical; }
     ::selection {
         background: ${theme.colors.tertiary};
         color: ${theme.colors.white}
     }
+    strong { font-weight: 700}
+    ${textScaler}
+    ul { list-style: circle};
+    ol { list-style: decimal};
 `;
 
-export const GlobalStyles = GlobalStylesRaw.replace(/\s+/gm, '');
-
-export const setContainerWidths = () => {
-    setConfiguration({ containerWidths: theme.containerWidths });
-};
+export { GlobalStyles };

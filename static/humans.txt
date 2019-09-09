@@ -13,7 +13,7 @@ Site: https://bytecode.nl
 Location: Delft, The Netherlands
 
 Designer and front-end developer: Richard van 't Hof
-Site: https://bytecode.nl
+Site: https://therichart.space
 Location: Rotterdam, The Netherlands
 
 Copywriter: Thomas Bodlaender

@@ -8,7 +8,8 @@ import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
 import { Container, Row, Col } from '../lib/Grid';
 import Author from '../components/Author';
-import ContactForm from '../components/ContactForm';
+
+const { mediaQueryMin, colors } = theme;
 
 const CallToAction = () => (
     <CallToActionContainer>
@@ -37,7 +38,7 @@ const BlogSingle = ({ content }) => (
             >
                 <Container>
                     <Row>
-                        <Col md={12}>
+                        <Col offset={{ lg: 2 }} lg={8} md={12}>
                             <TextBlock
                                 subtitle={content.catergory_name}
                                 title={content.title}
@@ -57,122 +58,72 @@ const BlogSingle = ({ content }) => (
                     </Row>
                 </Container>
             </HeaderContainer>
-            <BlogContentContainer>
+            <Container>
                 <BlogContent>
                     <div id="blogpost-content">
                         <MDXRenderer>{content.post_content}</MDXRenderer>
                     </div>
                     <CallToAction />
                 </BlogContent>
-            </BlogContentContainer>
+            </Container>
         </article>
-        <Container>
-            <ContentBlockWrapper>
-                <TextBlock
-                    subtitle="We staan voor je klaar"
-                    headingType="h2"
-                    title="Heb je een vraag over dit artikel? Of misschien een suggestie voor een volgende post? Laat het ons weten!"
-                />
-                <ContactForm hideText={true} />
-            </ContentBlockWrapper>
-        </Container>
     </Layout>
 );
 
 export default BlogSingle;
 
-const HeaderContainer = styled.section`
-    padding: 10rem 2% 2%;
+const HeaderContainer = styled.header`
+    padding: 20em 2% 2%;
     background-color: ${theme.colors.mediumgray};
     background-image: url(${props => props.background});
     background-blend-mode: soft-light;
     background-size: cover;
     background-position: center center;
     opacity: 60%;
-    @media (min-width: ${theme.breakpointMobileMenu}) {
-        padding: 40vh 2% 5vh 5%;
-    }
-    @media (max-width: ${theme.breakpointMobileMenu}) {
-        h1 {
-            font-size: 2.6rem;
-        }
-    }
-`;
-
-const BlogContentContainer = styled.div`
-    display: flex;
-    justify-content: center;
 `;
 
 const BlogContent = styled.div`
-    padding: 4rem 1rem 4rem;
-    max-width: 68rem;
-
-    p {
-        margin: 1rem 0;
-    }
-
-    b,
-    strong {
-        font-weight: bold;
-    }
-
-    p,
-    ul,
-    li,
-    a {
-        color: ${theme.colors.white};
-        font-kerning: normal;
-        line-height: 2.2rem;
-        font-size: 1.75rem;
-    }
-
-    a {
-        color: #23be87;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: 1.5em 0 0em 0;
+    @media (${mediaQueryMin.sm}) {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol {
+            padding: 0 15vw;
+        }
+        img,
+        figure,
+        svg {
+            padding: 0 5vw;
+        }
+        ol,
+        ul {
+            list-style-position: outside;
+            margin: 0;
+        }
     }
 
     ul {
-        list-style-type: circle;
-        margin: 1em 1.5em;
+        list-style: circle;
     }
-
     ol {
-        list-style-type: decimal;
-        margin: 1em 1.5em;
+        list-style: decimal;
     }
-
-    li {
-        margin: 0.5rem 0;
-        padding-left: 0.8rem;
-        font-family: ${theme.typography.p.font};
-        letter-spacing: ${theme.typography.p.spacing};
+    ol,
+    ul {
+        list-style-position: outside;
     }
-
-    figure {
-        margin: 4em 0;
+    a {
+        color: ${colors.primary};
     }
-
-    img {
-        max-width: 400px;
-        margin: 3rem auto 3rem auto;
-        display: block;
-    }
-
-    em {
-        font-style: italic;
-    }
-
-    strong {
-        font-weight: 900;
+    img,
+    figure,
+    svg {
+        margin: 2em 0;
     }
 `;
 
@@ -181,6 +132,8 @@ const BlogMetaDataWrapper = styled.div`
     justify-content: space-between;
     align-content: flex-end;
     margin-top: 6rem;
+    font-size: 0.66em;
+    line-height: 1em;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         margin-top: 2.4rem;
     }
@@ -188,7 +141,6 @@ const BlogMetaDataWrapper = styled.div`
 
 const BlogMetaData = styled.p`
     text-align: right;
-    font-size: 1.25rem;
     display: flex;
     align-self: center;
     max-width: 20rem;
@@ -204,10 +156,4 @@ const CallToActionContainer = styled.div`
 const CallToActionText = styled.p`
     font-style: italic;
     color: ${theme.colors.lightgray} !important;
-`;
-
-const ContentBlockWrapper = styled.section`
-    background-color: ${theme.colors.mediumgray};
-    margin: 5% 0% 5% -5%;
-    padding: 7.5% 5%;
 `;

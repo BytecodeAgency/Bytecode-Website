@@ -6,7 +6,6 @@ import ContentPageHeader from '../components/ContentPageHeader';
 import TeamMember from '../components/TeamMember';
 import { Container, Row, Col } from '../lib/Grid';
 import ContactForm from '../components/ContactForm';
-import Wrapper from '../components/Wrapper';
 
 const pageSettings = {
     title: `Over ons - Bytecode Digital Agency |
@@ -25,9 +24,9 @@ const Over = () => (
             text="Hoi, wij zijn het Bytecode team. Aangenaam kennis te maken!"
             bgSize="80%"
         />
-        <Container fluid>
-            <Row>
-                <Col offset={{ md: 0, lg: 1, xl: 2 }} md={6} lg={5} xl={3}>
+        <Container>
+            <Row justify="center" align="center">
+                <Col lg={4}>
                     <TextBlock
                         subtitle="Onze Visie"
                         title="Problemen oplossen met de nieuwste technieken,
@@ -35,7 +34,7 @@ const Over = () => (
                         headingType="h2"
                     />
                 </Col>
-                <Col offset={{ md: 0, lg: 1, xl: 1 }} md={6} lg={5} xl={4}>
+                <Col lg={5} offset={{ lg: 1 }}>
                     <p>
                         Door eerst de problemen te analyseren en doelen te
                         stellen zorgen we voor resultaat, en voorkomen we
@@ -53,9 +52,9 @@ const Over = () => (
             src={require('../images/img/content/cards.jpg')}
             alt="A fun day at the office"
         />
-        <Container fluid>
-            <Row>
-                <Col offset={{ md: 0, lg: 1, xl: 1 }} md={12} lg={5} xl={4}>
+        <Container>
+            <Row justify="center" align="center">
+                <Col md={12} lg={5} xl={4}>
                     <TextBlock
                         subtitle="Het team"
                         alt="Het team"
@@ -92,6 +91,7 @@ const Over = () => (
                 />
             </Row>
             <Row>
+                {/* TODO: Generate from array, maybe later change via dashb. */}
                 <TeamMember
                     name="Julian van Dijk"
                     title="Full-stack developer web &amp; mobiel"
@@ -104,7 +104,10 @@ const Over = () => (
                     title="Designer &amp; front-end developer"
                     img={require('../images/img/team/richard.png')}
                     email="mailto:richard@bytecode.nl"
+                    link="https://www.therichart.space"
                     linkedin="https://www.linkedin.com/in/richard-van-t-hof"
+                    behance="https://www.behance.net/therichartspace"
+                    github="https://www.github.com/RichART-Official"
                 />
                 <TeamMember
                     name="Thomas Bodlaender"
@@ -124,9 +127,9 @@ const Over = () => (
                 />
             </Row>
         </Container>
-        <Wrapper>
+        <Container>
             <ContactForm />
-        </Wrapper>
+        </Container>
     </Layout>
 );
 
