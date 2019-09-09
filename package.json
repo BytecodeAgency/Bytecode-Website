@@ -10,7 +10,7 @@
   "license": "AGPL-3.0",
   "scripts": {
     "start": "yarn run dev",
-    "dev": "gatsby develop -H 0.0.0.0",
+    "dev": "gatsby develop",
     "build": "gatsby build",
     "export": "gatsby build",
     "lint": "eslint --ext .jsx,.js src",
