@@ -26,10 +26,6 @@ const pageSettings = {
     keywords: 'bytecode, digital agency',
 };
 
-const CenterAlignedRow = styled(Row)`
-    align-items: center;
-`;
-
 const CenterAlignedCol = styled(Col)`
     align-self: center;
     display: flex;
@@ -56,10 +52,10 @@ const Home = () => (
             ontwikkelen van alles wat je nodig hebt om je digitaal volledig te
             ontplooien."
         />
-        <Container fluid>
+        <Container>
             <Row>
-                <Col offset={{ xl: 1, lg: 1 }} md={12} lg={4} xl={4}>
-                    <Row>
+                <Col md={12} lg={6} xl={6}>
+                    <Row gutterWidth={20}>
                         <Col sm={6}>
                             <Thumbnail
                                 serviceName="Websites, Webshops en Webapps"
@@ -90,7 +86,7 @@ const Home = () => (
                         </Col>
                     </Row>
                 </Col>
-                <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5} xl={4}>
+                <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5}>
                     <TextBlock
                         useGatsbyLink
                         subtitle="Hoe Bytecode kan helpen"
@@ -111,9 +107,9 @@ const Home = () => (
             </Row>
         </Container>
         <Wrapper>
-            <Container fluid>
-                <CenterAlignedRow>
-                    <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={4}>
+            <Container>
+                <Row justify="center" align="center">
+                    <CenterAlignedCol md={12} lg={5}>
                         <TextBlock
                             useGatsbyLink
                             subtitle="Wie wij zijn"
@@ -133,20 +129,20 @@ const Home = () => (
                             product op.
                         </TextBlock>
                     </CenterAlignedCol>
-                    <Col offset={{ lg: 1 }} md={12} lg={5}>
+                    <Col offset={{ lg: 1 }} md={12} lg={6}>
                         <GroupImage
                             width="700"
                             src={require('../images/img/content/team-700.png')}
                             alt="Onze mindset"
                         />
                     </Col>
-                </CenterAlignedRow>
+                </Row>
             </Container>
         </Wrapper>
         <Process />
-        <Wrapper>
+        <Container>
             <ContactForm />
-        </Wrapper>
+        </Container>
     </Layout>
 );
 

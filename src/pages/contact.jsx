@@ -15,7 +15,7 @@ const pageSettings = {
     keywords: 'contact',
 };
 
-const ContactHeading = styled.h3`
+const ContactHeading = styled.h4`
     margin: 3em 0 2em;
     line-height: 1.4em;
 `;
@@ -35,24 +35,13 @@ const Contact = () => (
             button="Plan een afspraak"
             bgSize="cover"
         />
-        <Container fluid>
+        <Container>
             <Row>
-                <Col
-                    offset={{ xl: 0.5, lg: 0.5 }}
-                    xl={6.5}
-                    lg={5.5}
-                    md={12}
-                    xs={12}
-                >
+                <Col lg={7}>
                     <ContactForm />
                 </Col>
-                <Col
-                    offset={({ xl: 0 }, { lg: 1 })}
-                    xl={3}
-                    lg={5}
-                    md={12}
-                    xs={12}
-                >
+
+                <Col lg={4} offset={{ lg: 1 }}>
                     <ContactHeading>
                         Zin om samen te werken? Stuur een berichtje naar&nbsp;
                         <a href="mailto:info@bytecode.nl">info@bytecode.nl</a>

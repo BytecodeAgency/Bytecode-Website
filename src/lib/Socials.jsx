@@ -5,9 +5,10 @@ import socialIcons from './SocialIcons';
 const FooterSocialIcon = styled.a`
     display: inline;
     text-decoration: none;
+    margin: 1em 0;
     svg {
         display: inline-block;
-        width: 3rem;
+        width: 1.33em;
     }
 `;
 
@@ -45,6 +46,7 @@ export const SocialIcon = ({ url, social }) => {
 const SocialsContainer = styled.div`
     display: flex;
     justify-content: ${props => (props.isFooter ? 'left' : 'center')};
+    margin-top: ${props => (props.isFooter ? '-40px' : 'initial')};
 `;
 
 // eslint-disable-next-line object-curly-newline, max-len, prettier/prettier

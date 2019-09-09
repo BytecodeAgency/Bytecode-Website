@@ -1,33 +1,41 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { transparentize } from 'polished';
-import theme from '../styles/theme';
+import Link from '../lib/AnimatedLink';
 import { Container } from '../lib/Grid';
+import theme from '../styles/theme';
+
+const { mediaQueryMin } = theme;
 
 const NavbarContainer = styled.nav`
     position: relative;
     z-index: 10000;
-    padding: 1rem 0;
+    padding: 1em 1em;
     @media (max-width: ${theme.breakpointMobileMenu}) {
-        height: 7rem;
         width: 100vw;
+        height: 3.5em;
+        padding: 1em;
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
         background: ${transparentize(0.3, theme.colors.black)};
+        display: flex;
+        justify-content: space-between;
     }
-    @media (min-width: ${theme.breakpoints[2]}px) {
-        padding: 1rem 2rem;
+
+    @media (${mediaQueryMin.md}) {
     }
-    @media (min-width: ${theme.breakpoints[3]}px) {
+
+    @media (${mediaQueryMin.sm}) {
+        padding: 0 3rem;
+    }
+    @media (${mediaQueryMin.lg}) {
         margin: 1rem 8.5rem;
     }
 `;
 
 const InnerNavbarContainer = styled(Container)`
-    margin: 0rem 0 !important;
+    margin: 0 0 !important;
     max-width: none !important;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         margin: 0 !important;
@@ -41,13 +49,15 @@ const NavbarContent = styled.div`
     height: 6rem;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         display: block;
-        width: 30rem;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+
         position: fixed;
-        right: ${props => (props.menuIsOpen ? 0 : '-30rem')};
+        transform: translateX(${props => (props.menuIsOpen ? 0 : '65em')});
         top: 0;
         bottom: 0;
-        padding-top: 6rem;
+
         transition: all 0.4s ease;
         background: ${theme.colors.secondary};
         opacity: 1;
@@ -56,6 +66,7 @@ const NavbarContent = styled.div`
 
 const NavbarItems = styled.ul`
     display: flex;
+    margin: 0;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         flex-direction: column;
     }
@@ -103,7 +114,8 @@ const NavbarItem = styled(NavbarItemBase)`
         padding-right: 0;
     }
     @media (max-width: ${theme.breakpointMobileMenu}) {
-        padding: 1rem 2rem;
+        margin-bottom: 0.5em;
+        padding: 0 1em;
         &:first-child {
             margin-top: 4rem;
         }
@@ -113,10 +125,11 @@ const NavbarItem = styled(NavbarItemBase)`
 const Logo = styled.span`
     display: block;
     @media (min-width: ${theme.breakpointMobileMenu}) {
-        width: 25rem;
+        img {
+            min-width: 10rem;
+        }
     }
     img {
-        width: 70%;
         @media (max-width: ${theme.breakpointMobileMenu}) {
             display: none;
         }
@@ -124,27 +137,27 @@ const Logo = styled.span`
 `;
 
 const MobileNavLogo = styled.img`
-    height: 3.5rem;
-    position: absolute;
-    top: 0.8rem;
-    left: 2rem;
+    height: 100%;
     color: white;
     display: none;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         display: block;
         width: auto;
+        height: 100%;
+        min-width: 2em;
     }
 `;
 
 const MenuButton = styled.a`
-    height: 3rem;
-    width: 3rem;
-    position: absolute;
-    top: 1.1rem;
-    right: 4rem;
+    position: relative;
+    height: 100%;
     color: white;
     align-items: center;
     display: none;
+    img {
+        height: 80%;
+        width: auto;
+    }
     @media (max-width: ${theme.breakpointMobileMenu}) {
         display: flex;
     }
@@ -153,10 +166,15 @@ const MenuButton = styled.a`
 // TODO: Clean this, as it is a hack at the moment to make it work
 // TODO: Create new button SVG
 const CloseMenuButton = styled(MenuButton)`
-    top: 1.5rem;
-    right: 1.5rem;
-    height: 4.5rem;
-    width: 4.5rem;
+    display: flex;
+    justify-content: right;
+    height: 100%;
+    padding: 0.5em;
+    min-height: 4em;
+    margin-right: 0.5em;
+    @media (min-width: ${theme.breakpointMobileMenu}) {
+        display: none;
+    }
 `;
 
 const BlackOverlay = styled.div`

@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from './Button';
 
 const Image = props => {
     const { src, alt } = props;

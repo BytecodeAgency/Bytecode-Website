@@ -39,10 +39,6 @@ pages:
   artifacts:
     paths:
       - public
-  only:
-    - master
-    - develop
-    - release/*
 
 include:
   - template: Code-Quality.gitlab-ci.yml

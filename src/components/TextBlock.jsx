@@ -19,24 +19,16 @@ const Subtitle = styled(SubtitleBase)`
     margin-bottom: 2rem;
 `;
 
-const H1 = styled.h1`
-    margin-bottom: 4rem;
-`;
+const H1 = styled.h1``;
 
-const H2 = styled.h2`
-    margin-bottom: 4rem;
-`;
+const H2 = styled.h2``;
 
-const H3 = styled.h3`
-    margin-bottom: 1em;
-`;
+const H3 = styled.h3``;
 
-const H4 = styled.h4`
-    margin-bottom: 1em;
-`;
+const H4 = styled.h4``;
 
 const StyledButton = styled(Button)`
-    margin-top: 5rem;
+    margin: 1em 0;
 `;
 
 const getImage = (src, alt) => {
