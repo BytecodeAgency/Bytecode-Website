@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { transparentize } from 'polished';
-import Link from '../lib/AnimatedLink';
+import { Link } from 'gatsby';
 import { Container } from '../lib/Grid';
 import theme from '../styles/theme';
 
