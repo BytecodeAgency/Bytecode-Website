@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid, no-confusing-arrow */
 
 import React from 'react';
+import { Link } from 'gatsby';
 import NavbarComponents from './NavbarComponents';
-import Link from '../lib/AnimatedLink';
 
 const {
     NavbarContainer,
@@ -69,7 +69,6 @@ class Navbar extends React.Component {
                         </CloseMenuButton>
                         <NavbarItem href="/" text="Home" />
                         <NavbarItem href="/services" text="Services" />
-                        <NavbarItem href="/cases" text="Work" />
                         <NavbarItem href="/insights" text="Insights" />
                         <NavbarItem href="/over" text="Over" />
                         <NavbarItem href="/contact" text="Contact" />
