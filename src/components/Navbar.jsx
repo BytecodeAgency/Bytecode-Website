@@ -2,7 +2,7 @@
 
 import React from 'react';
 import NavbarComponents from './NavbarComponents';
-import Link from '../lib/AnimatedLink';
+import { Link } from 'gatsby';
 
 const {
     NavbarContainer,
