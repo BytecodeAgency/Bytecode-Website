@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid, no-confusing-arrow */
 
 import React from 'react';
-import NavbarComponents from './NavbarComponents';
 import { Link } from 'gatsby';
+import NavbarComponents from './NavbarComponents';
 
 const {
     NavbarContainer,
