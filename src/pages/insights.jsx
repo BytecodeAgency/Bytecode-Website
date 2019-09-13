@@ -1,5 +1,3 @@
-/* eslint-disable max-len, object-curly-newline, camelcase, prettier/prettier */
-
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/MainLayout';

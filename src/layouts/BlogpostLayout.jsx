@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 import React from 'react';
 import styled from 'styled-components';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';

@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 // Colors
 const black = '#0f0f0f';
 const darkgray = '#1a1a1a';

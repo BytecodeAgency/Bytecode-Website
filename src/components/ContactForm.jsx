@@ -79,13 +79,11 @@ const Notification = ({ type, message }) => (
     <StyledNotification className={type}>{message}</StyledNotification>
 );
 
-/* eslint-disable indent, prettier/prettier, implicit-arrow-linebreak */
 const sendFormInformation = async sendData =>
     axios
         .post('https://api.bytecode.nl/contact', sendData)
         .then(() => true)
         .catch(false);
-/* eslint-enable */
 
 const handleSend = formValues => {
     const { contents, contact, email, phone } = formValues;
@@ -220,13 +218,11 @@ class ContactForm extends React.Component {
                                             : 'text-input'
                                     }
                                 />
-                                {/* eslint-disable indent */
                                 errors.contact && touched.contact && (
                                     <ErrorMessage>
                                         {errors.contact}
                                     </ErrorMessage>
                                 )
-                                /* eslint-enable */
                                 }
                                 <InputField
                                     id="email"
@@ -276,13 +272,11 @@ class ContactForm extends React.Component {
                                             : 'text'
                                     }
                                 />
-                                {/* eslint-disable indent */}
                                 {errors.content && touched.content && (
                                     <ErrorMessage>
                                         {errors.content}
                                     </ErrorMessage>
                                 )}
-                                {/* eslint-enable */}
                                 <SendButton
                                     type="submit"
                                     disabled={!dirty || isSubmitting}

@@ -1,15 +1,6 @@
 // This file is not part of the AGPL license
 // Copyright: (c) Bytecode Digital Agency B.V.
 
-/* eslint-disable
-    max-len,
-    react/jsx-filename-extension,
-    react/no-danger,
-    jsx-a11y/iframe-has-title,
-    react/self-closing-comp,
-    react/jsx-closing-tag-location
-*/
-
 const enableTagManager = process.env.ENABLE_TAGMANAGER === 'true';
 const enableDrift = process.env.ENABLE_DRIFT === 'true';
 

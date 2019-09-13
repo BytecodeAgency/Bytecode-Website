@@ -12,7 +12,6 @@ const FooterSocialIcon = styled.a`
     }
 `;
 
-// eslint-disable-next-line arrow-parens
 export const getMinifiedSocial = social => {
     const socialHtml = socialIcons[social];
     const twoOrMoreWhitespaceRegex = /\s{2,}/g;
@@ -32,7 +31,6 @@ export const SocialIcon = ({ url, social }) => {
     if (!url) {
         return '';
     }
-    /* eslint-disable react/no-danger */
     return (
         <FooterSocialIcon href={url} target="_blank" rel="noopener">
             <Icon
@@ -40,7 +38,6 @@ export const SocialIcon = ({ url, social }) => {
             />
         </FooterSocialIcon>
     );
-    /* eslint-enable react/no-danger */
 };
 
 const SocialsContainer = styled.div`
@@ -49,7 +46,6 @@ const SocialsContainer = styled.div`
     margin-top: ${props => (props.isFooter ? '-40px' : 'initial')};
 `;
 
-// eslint-disable-next-line object-curly-newline, max-len, prettier/prettier
 const AllSocials = ({ isFooter, link, email, github, facebook, twitter, linkedin, instagram }) => (
     <SocialsContainer isFooter={isFooter}>
         <SocialIcon url={link} social="link" />

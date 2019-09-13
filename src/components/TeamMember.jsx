@@ -105,7 +105,6 @@ const TeamMemberContainer = styled(Col)`
 `;
 
 const TeamMember = props => {
-    // eslint-disable-next-line
     const {
         name,
         title,

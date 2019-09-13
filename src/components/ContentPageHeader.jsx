@@ -61,7 +61,6 @@ const MainHeaderContent = styled.div`
 const ContentPageHeader = props => {
     const { subtitle, title, button, href, text, useGatsbyLink } = props;
     return (
-        // eslint-disable-next-line react/jsx-props-no-spreading
         <MainHeader {...props}>
             <MainHeaderContent fluid={true}>
                 <TextBlock

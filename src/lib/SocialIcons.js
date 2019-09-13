@@ -3,7 +3,6 @@ import theme from '../styles/theme';
 const socialIconFillColor = theme.colors.primary;
 
 // TODO: Clean this up
-/* eslint-disable max-len */
 const socialIcons = {
     facebook: `
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.5 58.5">
