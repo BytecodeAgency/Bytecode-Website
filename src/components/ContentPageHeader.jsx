@@ -64,7 +64,7 @@ const ContentPageHeader = props => {
         <MainHeader {...props}>
             <MainHeaderContent fluid>
                 <TextBlock
-                    useGatsbyLink
+                    useGatsbyLink={useGatsbyLink}
                     subtitle={subtitle || ''}
                     title={title || ''}
                     href={href}
