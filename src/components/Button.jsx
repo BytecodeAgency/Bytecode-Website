@@ -22,7 +22,14 @@ const ButtonBase = ({ href, useGatsbyLink, className, children, ...props }) => {
 ButtonBase.propTypes = {
     href: PropTypes.string.isRequired,
     useGatsbyLink: PropTypes.bool,
+    className: PropTypes.string,
+    children: PropTypes.node.isRequired,
 };
+
+ButtonBase.defaultProps = {
+    useGatsbyLink: false,
+    className: '',
+}
 
 const Button = styled(ButtonBase)`
     display: inline-block;
