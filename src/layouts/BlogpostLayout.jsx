@@ -30,9 +30,7 @@ const BlogSingle = ({ content }) => (
     <Layout pageSettings={content.pageSettings}>
         <article>
             <HeaderContainer
-                background={require(`../images/img/articles/${
-                    content.article_image_url
-                }`)}
+                background={require(`../images/img/articles/${content.article_image_url}`)}
             >
                 <Container>
                     <Row>

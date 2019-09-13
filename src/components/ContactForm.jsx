@@ -219,11 +219,8 @@ class ContactForm extends React.Component {
                                     }
                                 />
                                 errors.contact && touched.contact && (
-                                    <ErrorMessage>
-                                        {errors.contact}
-                                    </ErrorMessage>
-                                )
-                                }
+                                <ErrorMessage>{errors.contact}</ErrorMessage>
+                                ) }
                                 <InputField
                                     id="email"
                                     placeholder="Email"

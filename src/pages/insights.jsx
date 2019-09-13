@@ -38,22 +38,22 @@ const blogArchive = ({ data }) => {
                     </Col>
                     <Col offset={{ md: 1 }} md={6}>
                         <p>
-                        Hier zie je artikelen die met passie zijn geschreven
-                        door Bytecode, een jonge en moderne web agency. Wij
-                        laten jou graag zien hoe je de kracht van het
-                        internet kunt gebruiken om alles uit jezelf te
-                        halen. Dit doen we door interessante artikelen te
-                        schrijven, maar ook door deze inzichten in onze
-                        werkzaamheden te verwerken
+                            Hier zie je artikelen die met passie zijn geschreven
+                            door Bytecode, een jonge en moderne web agency. Wij
+                            laten jou graag zien hoe je de kracht van het
+                            internet kunt gebruiken om alles uit jezelf te
+                            halen. Dit doen we door interessante artikelen te
+                            schrijven, maar ook door deze inzichten in onze
+                            werkzaamheden te verwerken
                         </p>
                     </Col>
                 </Row>
             </Container>
             <Container>
                 <Row>
-                    {
-                        posts.map(({ node: post }, _, key) => <Blogpost data={post} key={key} />)
-                    }
+                    {posts.map(({ node: post }, _, key) => (
+                        <Blogpost data={post} key={key} />
+                    ))}
                 </Row>
             </Container>
         </Layout>
@@ -62,9 +62,7 @@ const blogArchive = ({ data }) => {
 
 export const pageQuery = graphql`
     query blogIndex {
-        allMdx
-        (sort: { fields: [frontmatter___id], order: DESC })
-        {
+        allMdx(sort: { fields: [frontmatter___id], order: DESC }) {
             edges {
                 node {
                     id

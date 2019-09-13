@@ -62,7 +62,7 @@ const ContentPageHeader = props => {
     const { subtitle, title, button, href, text, useGatsbyLink } = props;
     return (
         <MainHeader {...props}>
-            <MainHeaderContent fluid={true}>
+            <MainHeaderContent fluid>
                 <TextBlock
                     useGatsbyLink
                     subtitle={subtitle || ''}

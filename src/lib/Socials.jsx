@@ -46,7 +46,16 @@ const SocialsContainer = styled.div`
     margin-top: ${props => (props.isFooter ? '-40px' : 'initial')};
 `;
 
-const AllSocials = ({ isFooter, link, email, github, facebook, twitter, linkedin, instagram }) => (
+const AllSocials = ({
+    isFooter,
+    link,
+    email,
+    github,
+    facebook,
+    twitter,
+    linkedin,
+    instagram,
+}) => (
     <SocialsContainer isFooter={isFooter}>
         <SocialIcon url={link} social="link" />
         <SocialIcon url={email} social="email" />
