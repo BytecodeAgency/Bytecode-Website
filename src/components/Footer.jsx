@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Button from './Button';
 import AllSocials from '../lib/Socials';
 import theme from '../styles/theme';
@@ -10,7 +11,7 @@ const container = theme.containerWidth;
 const FooterColInnerContainer = styled.div`
     width: 100%;
     margin: 2.5%;
-    /* Quick fix for </small> opject having a wrong line-height */
+    // Quick fix for small bpject having a wrong line-height
     p {
         small {
             line-height: 1em;
@@ -27,6 +28,10 @@ const FooterColInnerContainer = styled.div`
 const FooterCol = ({ children }) => (
     <FooterColInnerContainer>{children}</FooterColInnerContainer>
 );
+
+FooterCol.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 const FooterIcon = styled.img`
     height: 100%;

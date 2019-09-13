@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 import AllSocials from '../lib/Socials';
 import { Col } from '../lib/Grid';
@@ -140,3 +141,25 @@ const TeamMember = props => {
 };
 
 export default TeamMember;
+
+TeamMember.propTypes = {
+    name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    link: PropTypes.string,
+    email: PropTypes.string,
+    github: PropTypes.string,
+    instagram: PropTypes.string,
+    facebook: PropTypes.string,
+    twitter: PropTypes.string,
+};
+
+TeamMember.defaultProps = {
+    link: undefined,
+    email: undefined,
+    github: undefined,
+    instagram: undefined,
+    facebook: undefined,
+    twitter: undefined,
+};

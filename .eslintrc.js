@@ -21,10 +21,13 @@ module.exports = {
         },
     },
     rules: {
-        "prettier/prettier" : ["error"],
         "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/no-var-requires": 0,
+        "global-require": 0,
+        "import/no-dynamic-require": 0,
+        "prettier/prettier" : ["error"],
     },
     env: {
         jest: true,
     }
-}
+};

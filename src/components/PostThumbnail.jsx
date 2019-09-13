@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 import { Col } from '../lib/Grid';
 import { Big } from './Typography';
@@ -10,6 +11,17 @@ const { mediaQueryMin } = theme;
 const SubtitleBase = ({ className, children }) => (
     <div className={`subtitle ${className}`}>{children}</div>
 );
+
+SubtitleBase.propTypes = {
+    className: PropTypes.string,
+    children: PropTypes.node,
+};
+
+SubtitleBase.defaultProps = {
+    className: '',
+    children: '',
+};
+
 const Subtitle = styled(SubtitleBase)`
     margin-bottom: 0.66rem;
 `;
@@ -88,9 +100,7 @@ const Arrow = styled.img`
     margin-left: 0.01em;
 `;
 
-const PostThumbnail = props => {
-    const { big, title, slug, category, postImageUrl } = props;
-
+const PostThumbnail = ({ big, title, slug, category, postImageUrl }) => {
     if (big) {
         return (
             <Col>
@@ -132,3 +142,16 @@ const PostThumbnail = props => {
 };
 
 export default PostThumbnail;
+
+PostThumbnail.propTypes = {
+    big: PropTypes.bool,
+    title: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    category: PropTypes.string,
+    postImageUrl: PropTypes.string.isRequired,
+};
+
+PostThumbnail.defaultProps = {
+    big: false,
+    category: undefined,
+};

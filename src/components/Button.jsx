@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -22,6 +24,13 @@ const ButtonBase = ({ href, useGatsbyLink, className, children, ...props }) => {
 ButtonBase.propTypes = {
     href: PropTypes.string.isRequired,
     useGatsbyLink: PropTypes.bool,
+    className: PropTypes.string,
+    children: PropTypes.node.isRequired,
+};
+
+ButtonBase.defaultProps = {
+    useGatsbyLink: false,
+    className: '',
 };
 
 const Button = styled(ButtonBase)`

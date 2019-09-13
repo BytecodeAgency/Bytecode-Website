@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 
 const mediaQuery = theme;
@@ -25,7 +26,7 @@ const ServiceImageContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(${props => props.background});
+    background-image: url(${props => props.backgroundURL});
     background-size: cover;
     background-blend-mode: overlay;
     background-color: #1a1a1a;
@@ -55,7 +56,7 @@ const ServiceName = styled.p`
 
 const Thumbnail = ({ backgroundImage, serviceIcon, serviceName }) => (
     <ThumbnailContainer>
-        <ServiceImageContainer background={backgroundImage}>
+        <ServiceImageContainer backgroundURL={backgroundImage}>
             <Icon>
                 <ServiceImage src={serviceIcon} alt={serviceName} />
                 <ServiceName>{serviceName}</ServiceName>
@@ -65,3 +66,13 @@ const Thumbnail = ({ backgroundImage, serviceIcon, serviceName }) => (
 );
 
 export default Thumbnail;
+
+Thumbnail.propTypes = {
+    backgroundImage: PropTypes.string.isRequired,
+    serviceIcon: PropTypes.string, // TODO: Change to enum
+    serviceName: PropTypes.string.isRequired,
+};
+
+Thumbnail.defaultProps = {
+    serviceIcon: null,
+};
