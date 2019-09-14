@@ -141,8 +141,7 @@ const Footer = () => (
                         facebook="https://www.facebook.com/bytecodeagency"
                         twitter="https://twitter.com/bytecodeagency"
                         instagram="https://www.instagram.com/bytecodeagency"
-                        linkedin="
-                                https://www.linkedin.com/company/bytecodeagency"
+                        linkedin="https://www.linkedin.com/company/bytecodeagency"
                     />
                     <FooterLink href="mailto:info@bytecode.nl">
                         info@bytecode.nl

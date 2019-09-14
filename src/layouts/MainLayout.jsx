@@ -1,6 +1,10 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import pageSettingsPropTypes from './pageSettings.proptypes';
 import SEO from '../components/SEO';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -43,4 +47,10 @@ const Layout = ({ children, pageSettings }) => {
         </div>
     );
 };
+
 export default Layout;
+
+Layout.propTypes = {
+    children: PropTypes.node.isRequired,
+    pageSettings: pageSettingsPropTypes.isRequired,
+};

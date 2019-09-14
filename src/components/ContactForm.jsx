@@ -1,3 +1,6 @@
+// Ignore all ESLint issues as we have a TODO to rewrite this file
+/* eslint-disable react/prop-types, no-unused-vars, @typescript-eslint/no-unused-vars, react/no-unescaped-entities */
+
 import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import socialIcons from './SocialIcons';
 
@@ -40,6 +41,15 @@ export const SocialIcon = ({ url, social }) => {
     );
 };
 
+SocialIcon.propTypes = {
+    url: PropTypes.string,
+    social: PropTypes.string.isRequired,
+};
+
+SocialIcon.defaultProps = {
+    url: undefined,
+};
+
 const SocialsContainer = styled.div`
     display: flex;
     justify-content: ${props => (props.isFooter ? 'left' : 'center')};
@@ -68,3 +78,25 @@ const AllSocials = ({
 );
 
 export default AllSocials;
+
+AllSocials.propTypes = {
+    isFooter: PropTypes.bool,
+    link: PropTypes.string,
+    email: PropTypes.string,
+    github: PropTypes.string,
+    facebook: PropTypes.string,
+    twitter: PropTypes.string,
+    linkedin: PropTypes.string,
+    instagram: PropTypes.string,
+};
+
+AllSocials.defaultProps = {
+    isFooter: false,
+    link: undefined,
+    email: undefined,
+    github: undefined,
+    facebook: undefined,
+    twitter: undefined,
+    linkedin: undefined,
+    instagram: undefined,
+};

@@ -1,6 +1,9 @@
 // This file is not part of the AGPL license
 // Copyright: (c) Bytecode Digital Agency B.V.
 
+/* eslint-disable jsx-a11y/iframe-has-title */
+import React from 'react';
+
 const enableTagManager = process.env.ENABLE_TAGMANAGER === 'true';
 const enableDrift = process.env.ENABLE_DRIFT === 'true';
 
@@ -50,6 +53,7 @@ const getHeadScriptContents = () => {
 };
 
 const getHeadScripts = () => (
+    // eslint-disable-next-line react/no-danger
     <script dangerouslySetInnerHTML={{ __html: getHeadScriptContents() }} />
 );
 
@@ -69,4 +73,4 @@ const getNoscriptTag = () => {
     return null;
 };
 
-export { getHeadScripts, getNoscriptTag };
+export { getHeadScripts, getNoscriptTag }; // TODO: Correct

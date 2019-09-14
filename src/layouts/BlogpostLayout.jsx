@@ -1,6 +1,10 @@
+/* eslint-disable @typescript-eslint/camelcase */
+
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import pageSettingsPropTypes from './pageSettings.proptypes';
 import Layout from './MainLayout';
 import theme from '../styles/theme';
 import TextBlock from '../components/TextBlock';
@@ -67,6 +71,21 @@ const BlogSingle = ({ content }) => (
 );
 
 export default BlogSingle;
+
+BlogSingle.propTypes = {
+    content: PropTypes.shape({
+        pageSettings: pageSettingsPropTypes.isRequired,
+        article_image_url: PropTypes.string.isRequired,
+        catergory_name: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        author_name: PropTypes.string.isRequired,
+        author_role: PropTypes.string.isRequired,
+        author_image_url: PropTypes.string.isRequired,
+        posted_on: PropTypes.string.isRequired,
+        reading_time: PropTypes.string.isRequired,
+        post_content: PropTypes.string.isRequired,
+    }).isRequired,
+};
 
 const HeaderContainer = styled.header`
     padding: 20em 2% 2%;

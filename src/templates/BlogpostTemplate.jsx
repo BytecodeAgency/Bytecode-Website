@@ -1,7 +1,10 @@
+/* eslint-disable react/prop-types, @typescript-eslint/camelcase */
+
 import React from 'react';
 import { graphql } from 'gatsby';
 import BlogpostLayout from '../layouts/BlogpostLayout';
 
+// TODO: Add props validation for Gatbsy query
 const BlogpostTemplate = ({ data }) => {
     const { mdx } = data;
     const content = {
