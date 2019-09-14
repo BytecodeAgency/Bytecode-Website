@@ -11,7 +11,7 @@ const container = theme.containerWidth;
 const FooterColInnerContainer = styled.div`
     width: 100%;
     margin: 2.5%;
-    // Quick fix for small bpject having a wrong line-height
+    // Quick fix for small object having a wrong line-height
     p {
         small {
             line-height: 1em;
@@ -142,7 +142,7 @@ const Footer = () => (
                         twitter="https://twitter.com/bytecodeagency"
                         instagram="https://www.instagram.com/bytecodeagency"
                         linkedin="
-                                https:// www.linkedin.com/company/bytecodeagency"
+                                https://www.linkedin.com/company/bytecodeagency"
                     />
                     <FooterLink href="mailto:info@bytecode.nl">
                         info@bytecode.nl
