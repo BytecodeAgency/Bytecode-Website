@@ -6954,6 +6954,11 @@ gatsby-page-utils@^0.0.17:
     micromatch "^3.1.10"
     slash "^3.0.0"
 
+gatsby-plugin-babel@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-babel/-/gatsby-plugin-babel-1.0.0.tgz#a17aada17db64a0b512769ca03bdd769ef1e2784"
+  integrity sha512-dpQhNkZOgG0iBj0JC/8HOcic3nUgX40q1IpLn9XsYQQYkLTd/kjuEo7ayV61jt3ie1NNF2OYmXg452DCO47KJg==
+
 gatsby-plugin-manifest@^2.2.16:
   version "2.2.16"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.16.tgz#ce83838602390e96375212d6535aea25d4037bba"
