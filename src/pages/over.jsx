@@ -67,7 +67,7 @@ const Over = () => (
                         iedereen ruimte tot inspraak in de toekomst van Bytecode
                         en om bij te dragen aan vrije software projecten,
                         waardoor we niet alleen gebruik maken van de nieuwste
-                        technieken, maar er ook aan bijdragen.`
+                        technieken, maar er ook aan bijdragen.
                     </TextBlock>
                 </Col>
                 <TeamMember

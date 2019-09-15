@@ -37,13 +37,12 @@ const Services = () => (
                         <TextBlock title="Web & mobiel" headingType="h2">
                             Natuurlijk heeft elk bedrijf een website nodig om
                             zich online te presenteren en een groot publiek te
-                            bereiken. bereiken. Mobiel wordt echter steeds en
-                            steeds steeds belangrijker. Daarom is het voor veel
-                            bedrijven ook essentieel om een mobiele (web-)app te
-                            hebben. Bytecode zorgt ervoor dat jij je op beide
+                            bereiken. Mobiel wordt echter steeds belangrijker.
+                            Daarom is het voor veel bedrijven ook essentieel
+                            om een mobiele (web-)app te hebben.
+                            Bytecode zorgt ervoor dat jij je op beide
                             platforms met trots kunt presenteren en dat mobiel
-                            en web dat dat mobiel en web naadloos op elkaar
-                            aansluiten.
+                            en web naadloos op elkaar aansluiten.
                         </TextBlock>
                     </Col>
                 </Row>
@@ -86,7 +85,7 @@ const Services = () => (
                         <Service iconName="ui" title="UX/UI-Design">
                             Alles draait om de beleving van de bezoeker van jouw
                             platform. Deze beleving optimaliseren wij door
-                            middel middel van hoogstaand UX/UI-design. Onze
+                            middel van hoogstaand UX/UI-design. Onze
                             developers besteden uiterst veel aandacht aan de
                             user experience en de intuïtiviteit van de website
                             of app. Daarnaast zorgen onze designers ervoor dat
@@ -135,8 +134,8 @@ const Services = () => (
                         ontwikkeltijd en zorgen we voor een betere oplevering,
                         door overal in het ontwikkelingsproces automatisering
                         toe te passen. Dit zorgt er bijvoorbeeld voor dat nieuwe
-                        versies van jouw website of applicatie automatisch wordt
-                        uitgerold. Daarnaast bieden wij ook managed
+                        versies van jouw website of applicatie automatisch
+                        worden uitgerold. Daarnaast bieden wij ook managed
                         infrastructuur in de cloud. Al met al zetten wij
                         kwalitatief hoge devops- en cloudsystemen op, om jou de
                         nodige hoofdpijn te besparen.
@@ -149,7 +148,7 @@ const Services = () => (
                         Door IT-automatisering zorgt Bytecode ervoor dat
                         bepaalde services gekoppeld worden met jouw website. Een
                         goed voorbeeld daarvan is het koppelen van een
-                        boekhoudservices met jouw webshop of het automatisch
+                        boekhoudservice met jouw webshop of het automatisch
                         doorsturen van orders naar PostNL. Omdat
                         IT-automatisering enorm veel functionaliteiten toevoegt
                         aan jouw service is dit een van de diensten waar wij

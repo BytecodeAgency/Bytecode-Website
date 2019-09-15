@@ -46,7 +46,7 @@ const blogArchive = ({ data }) => {
                         internet kunt gebruiken om alles uit jezelf te
                         halen. Dit doen we door interessante artikelen te
                         schrijven, maar ook door deze inzichten in onze
-                        werkzaamheden te verwerken
+                        werkzaamheden te verwerken.
                         </p>
                     </Col>
                 </Row>
