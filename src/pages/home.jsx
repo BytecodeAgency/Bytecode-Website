@@ -96,7 +96,7 @@ const Home = () => (
                         headingType="h2"
                     >
                         Wij maken uitgebreide analyses en strategieën van alles
-                        wat je nodigt hebt om je online ijzersterk te
+                        wat je nodig hebt om je online ijzersterk te
                         presenteren en profileren. In combinatie met onze
                         expertise op het gebied van alle maatwerk
                         webontwikkeling en IT-automatisering, zorgt dit ervoor
@@ -120,10 +120,10 @@ const Home = () => (
                         >
                             Wij staan voor een eerlijke en open samenwerking. We
                             werken met elkaar, niet langs elkaar. Ons zul je
-                            nooit om de zaken heen zien draaien; wij vertellen
+                            nooit om de zaken heen zien draaien. Wij vertellen
                             je hoe het zit en niet anders. Onze kennis en
                             kwaliteit gebruiken we niet om met moeilijke termen
-                            te smijten, maar voor in het volledig vervullen van
+                            te smijten, maar voor het volledig vervullen van
                             al je digitale wensen. Zo leveren wij een
                             kwalitatief hoogstaand en optimaal functionerend
                             product op.
