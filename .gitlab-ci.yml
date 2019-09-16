@@ -5,6 +5,7 @@ stages:
   - deploy
   - analyze
 cache:
+  key: ${CI_COMMIT_REF_SLUG}
   paths:
   - node_modules/
 
@@ -27,6 +28,16 @@ lint:
     - yarn
   script:
     - yarn run lint
+
+test_jest:
+  stage: test
+  dependencies:
+    - build
+  before_script:
+    - npm i -g yarn
+    - yarn
+  script:
+    - yarn run test:ci
 
 pages:
   image: alpine:3.9

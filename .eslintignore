@@ -1,9 +1,0 @@
-/node_modules/**
-/build/**
-/out/**
-/dist/**
-/tmp/**
-/docs/**
-/jsdoc/**
-.next/**
-ecosystem.config.js

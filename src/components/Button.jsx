@@ -1,21 +1,20 @@
+/* eslint-disable react/jsx-props-no-spreading */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import theme from '../styles/theme';
 
-// eslint-disable-next-line react/jsx-props-no-spreading
 const ButtonBase = ({ href, useGatsbyLink, className, children, ...props }) => {
     if (useGatsbyLink) {
         return (
-            // eslint-disable-next-line react/jsx-props-no-spreading
             <Link to={href} className={`button ${className}`} {...props}>
                 {children}
             </Link>
         );
     }
     return (
-        // eslint-disable-next-line react/jsx-props-no-spreading
         <a href={href} className={`button ${className}`} {...props}>
             {children}
         </a>
@@ -25,6 +24,13 @@ const ButtonBase = ({ href, useGatsbyLink, className, children, ...props }) => {
 ButtonBase.propTypes = {
     href: PropTypes.string.isRequired,
     useGatsbyLink: PropTypes.bool,
+    className: PropTypes.string,
+    children: PropTypes.node.isRequired,
+};
+
+ButtonBase.defaultProps = {
+    useGatsbyLink: false,
+    className: '',
 };
 
 const Button = styled(ButtonBase)`

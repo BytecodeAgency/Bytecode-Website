@@ -1,3 +1,6 @@
+// Ignore all ESLint issues as we have a TODO to rewrite this file
+/* eslint-disable react/prop-types, no-unused-vars, @typescript-eslint/no-unused-vars, react/no-unescaped-entities */
+
 import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
@@ -79,13 +82,11 @@ const Notification = ({ type, message }) => (
     <StyledNotification className={type}>{message}</StyledNotification>
 );
 
-/* eslint-disable indent, prettier/prettier, implicit-arrow-linebreak */
 const sendFormInformation = async sendData =>
     axios
         .post('https://api.bytecode.nl/contact', sendData)
         .then(() => true)
         .catch(false);
-/* eslint-enable */
 
 const handleSend = formValues => {
     const { contents, contact, email, phone } = formValues;
@@ -220,14 +221,11 @@ class ContactForm extends React.Component {
                                             : 'text-input'
                                     }
                                 />
-                                {/* eslint-disable indent */
-                                errors.contact && touched.contact && (
+                                {errors.contact && touched.contact && (
                                     <ErrorMessage>
                                         {errors.contact}
                                     </ErrorMessage>
-                                )
-                                /* eslint-enable */
-                                }
+                                )}
                                 <InputField
                                     id="email"
                                     placeholder="Email"
@@ -276,13 +274,11 @@ class ContactForm extends React.Component {
                                             : 'text'
                                     }
                                 />
-                                {/* eslint-disable indent */}
                                 {errors.content && touched.content && (
                                     <ErrorMessage>
                                         {errors.content}
                                     </ErrorMessage>
                                 )}
-                                {/* eslint-enable */}
                                 <SendButton
                                     type="submit"
                                     disabled={!dirty || isSubmitting}

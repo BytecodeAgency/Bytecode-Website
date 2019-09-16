@@ -1,14 +1,8 @@
 // This file is not part of the AGPL license
 // Copyright: (c) Bytecode Digital Agency B.V.
 
-/* eslint-disable
-    max-len,
-    react/jsx-filename-extension,
-    react/no-danger,
-    jsx-a11y/iframe-has-title,
-    react/self-closing-comp,
-    react/jsx-closing-tag-location
-*/
+/* eslint-disable jsx-a11y/iframe-has-title */
+import React from 'react';
 
 const enableTagManager = process.env.ENABLE_TAGMANAGER === 'true';
 const enableDrift = process.env.ENABLE_DRIFT === 'true';
@@ -58,11 +52,12 @@ const getHeadScriptContents = () => {
     return headScriptContents;
 };
 
-const getHeadScripts = () => (
+const HeadScripts = () => (
+    // eslint-disable-next-line react/no-danger
     <script dangerouslySetInnerHTML={{ __html: getHeadScriptContents() }} />
 );
 
-const getNoscriptTag = () => {
+const NoscriptTag = () => {
     if (process.env.ENABLE_TAGMANAGER === 'true') {
         return (
             <noscript>
@@ -78,4 +73,4 @@ const getNoscriptTag = () => {
     return null;
 };
 
-export { getHeadScripts, getNoscriptTag };
+export { HeadScripts, NoscriptTag };
