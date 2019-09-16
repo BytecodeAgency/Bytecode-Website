@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { transparentize } from 'polished';
+import PropTypes from 'prop-types';
+import { transparentize } from 'polished'; // TODO: Remove dependency
 import { Link } from 'gatsby';
 import { Container } from '../lib/Grid';
 import theme from '../styles/theme';
@@ -96,15 +97,22 @@ const StyledLink = styled(Link)`
     }
 `;
 
-const NavbarItemBase = ({ className, ...props }) => {
-    const { href, text } = props;
-    return (
-        <li className={className}>
-            <StyledLink to={href} className="menuitem">
-                {text}
-            </StyledLink>
-        </li>
-    );
+const NavbarItemBase = ({ className, href, text }) => (
+    <li className={className}>
+        <StyledLink to={href} className="menuitem">
+            {text}
+        </StyledLink>
+    </li>
+);
+
+NavbarItemBase.propTypes = {
+    className: PropTypes.string,
+    href: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+};
+
+NavbarItemBase.defaultProps = {
+    className: '',
 };
 
 const NavbarItem = styled(NavbarItemBase)`

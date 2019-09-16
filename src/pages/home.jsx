@@ -96,12 +96,11 @@ const Home = () => (
                         headingType="h2"
                     >
                         Wij maken uitgebreide analyses en strategieën van alles
-                        wat je nodig hebt om je online ijzersterk te
-                        presenteren en profileren. In combinatie met onze
-                        expertise op het gebied van alle maatwerk
-                        webontwikkeling en IT-automatisering, zorgt dit ervoor
-                        dat je bij ons echt alles uit je digitale zelf kunt
-                        halen.
+                        wat je nodig hebt om je online ijzersterk te presenteren
+                        en profileren. In combinatie met onze expertise op het
+                        gebied van alle maatwerk webontwikkeling en
+                        IT-automatisering, zorgt dit ervoor dat je bij ons echt
+                        alles uit je digitale zelf kunt halen.
                     </TextBlock>
                 </CenterAlignedCol>
             </Row>
@@ -123,10 +122,9 @@ const Home = () => (
                             nooit om de zaken heen zien draaien. Wij vertellen
                             je hoe het zit en niet anders. Onze kennis en
                             kwaliteit gebruiken we niet om met moeilijke termen
-                            te smijten, maar voor het volledig vervullen van
-                            al je digitale wensen. Zo leveren wij een
-                            kwalitatief hoogstaand en optimaal functionerend
-                            product op.
+                            te smijten, maar voor het volledig vervullen van al
+                            je digitale wensen. Zo leveren wij een kwalitatief
+                            hoogstaand en optimaal functionerend product op.
                         </TextBlock>
                     </CenterAlignedCol>
                     <Col offset={{ lg: 1 }} md={12} lg={6}>

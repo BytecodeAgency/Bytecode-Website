@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 import TextBlock from './TextBlock';
 
@@ -49,8 +50,7 @@ const ServiceIcon = styled.div`
     }
 `;
 
-const Service = ({ children, ...props }) => {
-    const { iconName, title, fullWidth } = props;
+const Service = ({ children, iconName, title, fullWidth }) => {
     const iconSrc = require(`../images/icons/services/${iconName}.svg`);
     return (
         <ServiceWrapper fullWidth={fullWidth}>
@@ -67,3 +67,14 @@ const Service = ({ children, ...props }) => {
 };
 
 export default Service;
+
+Service.propTypes = {
+    children: PropTypes.node.isRequired,
+    iconName: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    fullWidth: PropTypes.bool,
+};
+
+Service.defaultProps = {
+    fullWidth: false,
+};

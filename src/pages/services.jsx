@@ -38,11 +38,11 @@ const Services = () => (
                             Natuurlijk heeft elk bedrijf een website nodig om
                             zich online te presenteren en een groot publiek te
                             bereiken. Mobiel wordt echter steeds belangrijker.
-                            Daarom is het voor veel bedrijven ook essentieel
-                            om een mobiele (web-)app te hebben.
-                            Bytecode zorgt ervoor dat jij je op beide
-                            platforms met trots kunt presenteren en dat mobiel
-                            en web naadloos op elkaar aansluiten.
+                            Daarom is het voor veel bedrijven ook essentieel om
+                            een mobiele (web-)app te hebben. Bytecode zorgt
+                            ervoor dat jij je op beide platforms met trots kunt
+                            presenteren en dat mobiel en web naadloos op elkaar
+                            aansluiten.
                         </TextBlock>
                     </Col>
                 </Row>
@@ -85,11 +85,11 @@ const Services = () => (
                         <Service iconName="ui" title="UX/UI-Design">
                             Alles draait om de beleving van de bezoeker van jouw
                             platform. Deze beleving optimaliseren wij door
-                            middel van hoogstaand UX/UI-design. Onze
-                            developers besteden uiterst veel aandacht aan de
-                            user experience en de intuïtiviteit van de website
-                            of app. Daarnaast zorgen onze designers ervoor dat
-                            het ontwerp van het platform in het oog springt en
+                            middel van hoogstaand UX/UI-design. Onze developers
+                            besteden uiterst veel aandacht aan de user
+                            experience en de intuïtiviteit van de website of
+                            app. Daarnaast zorgen onze designers ervoor dat het
+                            ontwerp van het platform in het oog springt en
                             perfect past bij wat jij wil uitstralen.
                         </Service>
                     </Col>

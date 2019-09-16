@@ -7,6 +7,16 @@ const SubtitleBase = ({ className, children }) => (
     <div className={`subtitle ${className}`}>{children}</div>
 );
 
+SubtitleBase.propTypes = {
+    className: PropTypes.string,
+    children: PropTypes.node,
+};
+
+SubtitleBase.defaultProps = {
+    className: '',
+    children: undefined,
+};
+
 const Figure = styled.figure`
     position: relative;
     width: 100%;
@@ -93,12 +103,27 @@ const TextBlock = props => {
     );
 };
 
+export default TextBlock;
+
 TextBlock.propTypes = {
+    image: PropTypes.string,
+    alt: PropTypes.string,
     subtitle: PropTypes.string,
     title: PropTypes.string.isRequired,
+    headingType: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4']),
     href: PropTypes.string,
     button: PropTypes.string,
     useGatsbyLink: PropTypes.bool,
+    children: PropTypes.node,
 };
 
-export default TextBlock;
+TextBlock.defaultProps = {
+    image: undefined,
+    alt: undefined,
+    subtitle: undefined,
+    headingType: 'h1',
+    href: null,
+    button: null,
+    useGatsbyLink: false,
+    children: undefined,
+};

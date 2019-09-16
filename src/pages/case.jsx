@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Layout from '../layouts/MainLayout';
 
 import { Container, Row, Col } from '../lib/Grid';
@@ -45,6 +46,10 @@ const CheckListItem = props => {
     );
 };
 
+CheckListItem.propTypes = {
+    children: PropTypes.node.isRequired,
+};
+
 const testImg2 = require('../images/img/content/cases/cote-et-ciel/website2.png');
 
 const CaseHeader = styled.header`
@@ -84,7 +89,7 @@ const Case = () => (
                 </Col>
             </Row>
         </Container>
-        <TextAndImage img={temp} fluid>
+        <TextAndImage img={temp} alt="alt tag" fluid>
             <p className="subtitle">Ontdekking</p>
             <h2>Een high end shopbeleving</h2>
             <p>
@@ -112,7 +117,7 @@ const Case = () => (
                 </CheckListItem>
             </Checklist>
         </TextAndImage>
-        <TextAndImage img={temp} fluid reverse>
+        <TextAndImage img={temp} alt="alt" fluid reverse>
             <h2>Een high end shopbeleving</h2>
             <p>
                 <Big>
@@ -141,7 +146,7 @@ const Case = () => (
         </TextAndImage>
 
         <Container fluid>
-            <TextAndImage img={temp} reverse>
+            <TextAndImage img={temp} alt="alt" reverse>
                 <p className="subtitle">Ontwikkeling</p>
                 <h2>Leg de focus op de webwinkel</h2>
                 <p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { Container, Row, Col } from '../lib/Grid';
 import Layout from '../layouts/MainLayout';
 import ContentPageHeader from '../components/ContentPageHeader';
@@ -11,7 +12,7 @@ import theme from '../styles/theme';
 
 import Service from '../components/Service';
 
-const { mediaQueryMin, colors } = theme;
+const { colors } = theme;
 
 const pageSettings = {
     title: 'Bytecode as partner',
@@ -78,6 +79,10 @@ const CheckListItem = props => {
             </p>
         </CheckListItemBase>
     );
+};
+
+CheckListItem.propTypes = {
+    children: PropTypes.node.isRequired,
 };
 
 const Partners = () => (

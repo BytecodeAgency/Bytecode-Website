@@ -1,4 +1,7 @@
+/* eslint-disable react/jsx-props-no-spreading */
+
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import TextBlock from './TextBlock';
 import theme from '../styles/theme';
@@ -61,11 +64,10 @@ const MainHeaderContent = styled.div`
 const ContentPageHeader = props => {
     const { subtitle, title, button, href, text, useGatsbyLink } = props;
     return (
-        // eslint-disable-next-line react/jsx-props-no-spreading
         <MainHeader {...props}>
-            <MainHeaderContent fluid={true}>
+            <MainHeaderContent fluid>
                 <TextBlock
-                    useGatsbyLink
+                    useGatsbyLink={useGatsbyLink}
                     subtitle={subtitle || ''}
                     title={title || ''}
                     href={href}
@@ -79,3 +81,21 @@ const ContentPageHeader = props => {
 };
 
 export default ContentPageHeader;
+
+ContentPageHeader.propTypes = {
+    subtitle: PropTypes.string,
+    title: PropTypes.string,
+    button: PropTypes.string,
+    href: PropTypes.string,
+    text: PropTypes.node,
+    useGatsbyLink: PropTypes.bool,
+};
+
+ContentPageHeader.defaultProps = {
+    subtitle: '',
+    title: '',
+    button: '',
+    href: '#',
+    text: '',
+    useGatsbyLink: false,
+};

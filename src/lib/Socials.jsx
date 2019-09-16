@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import socialIcons from './SocialIcons';
 
@@ -12,7 +13,6 @@ const FooterSocialIcon = styled.a`
     }
 `;
 
-// eslint-disable-next-line arrow-parens
 export const getMinifiedSocial = social => {
     const socialHtml = socialIcons[social];
     const twoOrMoreWhitespaceRegex = /\s{2,}/g;
@@ -32,7 +32,6 @@ export const SocialIcon = ({ url, social }) => {
     if (!url) {
         return '';
     }
-    /* eslint-disable react/no-danger */
     return (
         <FooterSocialIcon href={url} target="_blank" rel="noopener">
             <Icon
@@ -40,7 +39,15 @@ export const SocialIcon = ({ url, social }) => {
             />
         </FooterSocialIcon>
     );
-    /* eslint-enable react/no-danger */
+};
+
+SocialIcon.propTypes = {
+    url: PropTypes.string,
+    social: PropTypes.string.isRequired,
+};
+
+SocialIcon.defaultProps = {
+    url: undefined,
 };
 
 const SocialsContainer = styled.div`
@@ -49,8 +56,16 @@ const SocialsContainer = styled.div`
     margin-top: ${props => (props.isFooter ? '-40px' : 'initial')};
 `;
 
-// eslint-disable-next-line object-curly-newline, max-len, prettier/prettier
-const AllSocials = ({ isFooter, link, email, github, facebook, twitter, linkedin, instagram }) => (
+const AllSocials = ({
+    isFooter,
+    link,
+    email,
+    github,
+    facebook,
+    twitter,
+    linkedin,
+    instagram,
+}) => (
     <SocialsContainer isFooter={isFooter}>
         <SocialIcon url={link} social="link" />
         <SocialIcon url={email} social="email" />
@@ -63,3 +78,25 @@ const AllSocials = ({ isFooter, link, email, github, facebook, twitter, linkedin
 );
 
 export default AllSocials;
+
+AllSocials.propTypes = {
+    isFooter: PropTypes.bool,
+    link: PropTypes.string,
+    email: PropTypes.string,
+    github: PropTypes.string,
+    facebook: PropTypes.string,
+    twitter: PropTypes.string,
+    linkedin: PropTypes.string,
+    instagram: PropTypes.string,
+};
+
+AllSocials.defaultProps = {
+    isFooter: false,
+    link: undefined,
+    email: undefined,
+    github: undefined,
+    facebook: undefined,
+    twitter: undefined,
+    linkedin: undefined,
+    instagram: undefined,
+};

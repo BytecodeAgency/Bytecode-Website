@@ -1,0 +1,6 @@
+# CODEOWNERS file for GitLab
+# We use this to let GitLab automatically find users to review merge-requests
+
+# Codeowner defaults to technical lead
+* @luciano
+
