@@ -14,9 +14,9 @@
     "build": "gatsby build",
     "lint": "eslint --ext .jsx,.js,.ts,.tsx src",
     "lint:fix": "yarn run lint --fix",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:ci": "jest --coverage --ci",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "yarn run test --watch",
+    "test:ci": "yarn run test --coverage --ci",
     "serve": "gatsby serve",
     "reinstall": "rm -rf node_modules && yarn"
   },
