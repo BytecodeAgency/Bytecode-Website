@@ -3,12 +3,11 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { transparentize } from 'polished'; // TODO: Remove dependency
 import { Link } from 'gatsby';
-import { Container } from '../../lib/Grid';
 import theme from '../../styles/theme';
 
 const { mediaQueryMin } = theme;
 
-const NavbarContainer = styled.nav`
+export const NavbarContainer = styled.nav`
     position: relative;
     z-index: 10000;
     padding: 1em 1em;
@@ -35,15 +34,7 @@ const NavbarContainer = styled.nav`
     }
 `;
 
-const InnerNavbarContainer = styled(Container)`
-    margin: 0 0 !important;
-    max-width: none !important;
-    @media (max-width: ${theme.breakpointMobileMenu}) {
-        margin: 0 !important;
-    }
-`;
-
-const NavbarContent = styled.div`
+export const NavbarContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -65,7 +56,7 @@ const NavbarContent = styled.div`
     }
 `;
 
-const NavbarItems = styled.ul`
+export const NavbarItems = styled.ul`
     display: flex;
     margin: 0;
     @media (max-width: ${theme.breakpointMobileMenu}) {
@@ -115,7 +106,7 @@ NavbarItemBase.defaultProps = {
     className: '',
 };
 
-const NavbarItem = styled(NavbarItemBase)`
+export const NavbarItem = styled(NavbarItemBase)`
     display: inline-block;
     padding: 0 2rem;
     &:last-child {
@@ -130,7 +121,7 @@ const NavbarItem = styled(NavbarItemBase)`
     }
 `;
 
-const Logo = styled.span`
+export const Logo = styled.span`
     display: block;
     @media (min-width: ${theme.breakpointMobileMenu}) {
         img {
@@ -144,7 +135,7 @@ const Logo = styled.span`
     }
 `;
 
-const MobileNavLogo = styled.img`
+export const MobileNavLogo = styled.img`
     height: 100%;
     color: white;
     display: none;
@@ -156,7 +147,7 @@ const MobileNavLogo = styled.img`
     }
 `;
 
-const MenuButton = styled.a`
+export const MenuButton = styled.a`
     position: relative;
     height: 100%;
     color: white;
@@ -173,7 +164,7 @@ const MenuButton = styled.a`
 
 // TODO: Clean this, as it is a hack at the moment to make it work
 // TODO: Create new button SVG
-const CloseMenuButton = styled(MenuButton)`
+export const CloseMenuButton = styled(MenuButton)`
     display: flex;
     justify-content: right;
     height: 100%;
@@ -185,7 +176,7 @@ const CloseMenuButton = styled(MenuButton)`
     }
 `;
 
-const BlackOverlay = styled.div`
+export const BlackOverlay = styled.div`
     position: fixed;
     top: 0;
     right: 0;
@@ -200,16 +191,3 @@ const BlackOverlay = styled.div`
         opacity: ${props => (props.menuIsOpen ? 0.5 : 0)};
     }
 `;
-
-export default {
-    NavbarContainer,
-    InnerNavbarContainer,
-    NavbarContent,
-    NavbarItems,
-    NavbarItem,
-    Logo,
-    MobileNavLogo,
-    MenuButton,
-    CloseMenuButton,
-    BlackOverlay,
-};

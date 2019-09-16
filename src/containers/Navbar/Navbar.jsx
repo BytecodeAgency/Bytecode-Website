@@ -1,18 +1,16 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import NavbarComponents from './Navbar.components';
-
-const {
+import {
+    BlackOverlay,
+    CloseMenuButton,
+    Logo,
+    MenuButton,
+    MobileNavLogo,
     NavbarContainer,
     NavbarContent,
-    NavbarItems,
     NavbarItem,
-    Logo,
-    MobileNavLogo,
-    MenuButton,
-    CloseMenuButton,
-    BlackOverlay,
-} = NavbarComponents;
+    NavbarItems,
+} from './Navbar.components';
 
 const logo = require('../../images/img/logo.svg');
 const logoMin = require('../../images/img/logo-min.svg');

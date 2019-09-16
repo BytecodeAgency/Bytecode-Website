@@ -1,45 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Button from '../../components/Button';
-
-const SubtitleBase = ({ className, children }) => (
-    <div className={`subtitle ${className}`}>{children}</div>
-);
-
-SubtitleBase.propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.node,
-};
-
-SubtitleBase.defaultProps = {
-    className: '',
-    children: undefined,
-};
-
-const Figure = styled.figure`
-    position: relative;
-    width: 100%;
-
-    padding-left: 10px;
-    margin-bottom: 4rem;
-`;
-
-const Subtitle = styled(SubtitleBase)`
-    margin-bottom: 2rem;
-`;
-
-const H1 = styled.h1``;
-
-const H2 = styled.h2``;
-
-const H3 = styled.h3``;
-
-const H4 = styled.h4``;
-
-const StyledButton = styled(Button)`
-    margin: 1em 0;
-`;
+import {
+    Figure,
+    H1,
+    H2,
+    H3,
+    H4,
+    StyledButton,
+    Subtitle,
+} from './TextBlock.components';
 
 const getImage = (src, alt) => {
     if (src) {
