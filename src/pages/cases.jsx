@@ -12,7 +12,6 @@ const pageSettings = {
 };
 
 const testImg = require('../images/img/content/team.png');
-// eslint-disable-next-line max-len
 const testImg2 = require('../images/img/content/cases/cote-et-ciel/website2.png');
 
 const Cases = () => (

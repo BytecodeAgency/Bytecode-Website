@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 
 const container = theme.containerWidth;
@@ -98,3 +99,16 @@ const TextAndImage = props => {
 };
 
 export default TextAndImage;
+
+TextAndImage.propTypes = {
+    children: PropTypes.func.isRequired,
+    img: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    reverse: PropTypes.bool,
+    fluid: PropTypes.bool,
+};
+
+TextAndImage.defaultProps = {
+    reverse: false,
+    fluid: false,
+};
