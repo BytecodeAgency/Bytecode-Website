@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import theme from '../styles/theme';
-import { Col } from '../lib/Grid';
-import { Big } from './Typography';
+import theme from '../../styles/theme';
+import { Col } from '../../lib/Grid';
+import { Big } from '../../components/Typography';
 
 const { mediaQueryMin } = theme;
 
@@ -130,7 +130,7 @@ const PostThumbnail = ({ big, title, slug, category, postImageUrl }) => {
                         <small className="thumbnail-cta">
                             Lees meer
                             <Arrow
-                                src={require('../images/icons/ui/arrow.svg')}
+                                src={require('../../images/icons/ui/arrow.svg')}
                                 alt=">"
                             />
                         </small>

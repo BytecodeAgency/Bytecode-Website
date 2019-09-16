@@ -4,7 +4,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/MainLayout';
 import { Container, Row, Col } from '../lib/Grid';
-import PostThumbnail from '../components/PostThumbnail';
+import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 
 const pageSettings = {
     title: 'Bytecode Insights - Bytecode Digital Agency B.V.',

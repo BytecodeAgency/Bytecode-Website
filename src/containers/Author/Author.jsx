@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import theme from '../styles/theme';
+import theme from '../../styles/theme';
 
 const AuthorBlock = styled.div`
     display: flex;
@@ -34,7 +34,7 @@ const AuthorBlockPhoto = styled.img`
 
 const Author = props => {
     const { img, name, title } = props;
-    const image = require(`../images/img/authors/${img}`);
+    const image = require(`../../images/img/authors/${img}`);
     return (
         <AuthorBlock>
             <AuthorBlockPhoto src={image} />

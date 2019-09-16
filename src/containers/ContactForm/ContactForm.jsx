@@ -6,9 +6,9 @@ import styled from 'styled-components';
 import axios from 'axios';
 import { Field, Formik } from 'formik';
 import * as Yup from 'yup';
-import theme from '../styles/theme';
-import TextBlock from './TextBlock';
-import Button from './Button';
+import theme from '../../styles/theme';
+import TextBlock from '../TextBlock/TextBlock';
+import Button from '../../components/Button';
 
 const ContactFormContainer = styled.div`
     padding: 1em 0;

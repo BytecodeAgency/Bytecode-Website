@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import theme from '../styles/theme';
+import theme from '../../styles/theme';
 
 const container = theme.containerWidth;
 const { mediaQueryMin } = theme;

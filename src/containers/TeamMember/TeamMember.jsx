@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import theme from '../styles/theme';
-import AllSocials from '../lib/Socials';
-import { Col } from '../lib/Grid';
+import theme from '../../styles/theme';
+import AllSocials from '../../lib/Socials';
+import { Col } from '../../lib/Grid';
 
 const { mediaQueryMin } = theme;
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from '../styles/theme';
-import TextBlock from './TextBlock';
-import { Container, Row, Col } from '../lib/Grid';
+import theme from '../../styles/theme';
+import TextBlock from '../TextBlock/TextBlock';
+import { Container, Row, Col } from '../../lib/Grid';
 
-const step1 = require('../images/img/content/workflow/analyze.svg');
-const step2 = require('../images/img/content/workflow/strategize.svg');
-const step3 = require('../images/img/content/workflow/realize.svg');
+const step1 = require('../../images/img/content/workflow/analyze.svg');
+const step2 = require('../../images/img/content/workflow/strategize.svg');
+const step3 = require('../../images/img/content/workflow/realize.svg');
 
 const { mediaQueryMin } = theme;
 

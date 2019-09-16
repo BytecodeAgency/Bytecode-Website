@@ -7,9 +7,9 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import pageSettingsPropTypes from './pageSettings.proptypes';
 import Layout from './MainLayout';
 import theme from '../styles/theme';
-import TextBlock from '../components/TextBlock';
+import TextBlock from '../containers/TextBlock/TextBlock';
 import { Container, Row, Col } from '../lib/Grid';
-import Author from '../components/Author';
+import Author from '../containers/Author/Author';
 
 const { mediaQueryMin, colors } = theme;
 

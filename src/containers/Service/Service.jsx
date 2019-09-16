@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import theme from '../styles/theme';
-import TextBlock from './TextBlock';
+import theme from '../../styles/theme';
+import TextBlock from '../TextBlock/TextBlock';
 
 const { mediaQueryMin } = theme;
 
@@ -51,7 +51,7 @@ const ServiceIcon = styled.div`
 `;
 
 const Service = ({ children, iconName, title, fullWidth }) => {
-    const iconSrc = require(`../images/icons/services/${iconName}.svg`);
+    const iconSrc = require(`../../images/icons/services/${iconName}.svg`);
     return (
         <ServiceWrapper fullWidth={fullWidth}>
             <ServiceIcon>

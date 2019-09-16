@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from '../lib/Grid';
 import Layout from '../layouts/MainLayout';
-import ContentPageHeader from '../components/ContentPageHeader';
+import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
-import ContactForm from '../components/ContactForm';
-import TextAndImage from '../components/ContentBlocks';
+import ContactForm from '../containers/ContactForm/ContactForm';
+import TextAndImage from '../containers/ContentBlocks/ContentBlocks';
 import { Big } from '../components/Typography';
 import theme from '../styles/theme';
 
-import Service from '../components/Service';
+import Service from '../containers/Service/Service';
 
 const { colors } = theme;
 

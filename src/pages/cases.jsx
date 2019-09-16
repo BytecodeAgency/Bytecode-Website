@@ -3,7 +3,7 @@ import Layout from '../layouts/MainLayout';
 
 import { Container, Row } from '../lib/Grid';
 
-import PostThumbnail from '../components/PostThumbnail';
+import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 
 const pageSettings = {
     title: 'Cases',

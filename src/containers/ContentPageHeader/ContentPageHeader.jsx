@@ -3,8 +3,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import TextBlock from './TextBlock';
-import theme from '../styles/theme';
+import TextBlock from '../TextBlock/TextBlock';
+import theme from '../../styles/theme';
 
 const { mediaQueryMin, colors, containerWidth } = theme;
 

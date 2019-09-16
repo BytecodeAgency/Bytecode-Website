@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { transparentize } from 'polished'; // TODO: Remove dependency
 import { Link } from 'gatsby';
-import { Container } from '../lib/Grid';
-import theme from '../styles/theme';
+import { Container } from '../../lib/Grid';
+import theme from '../../styles/theme';
 
 const { mediaQueryMin } = theme;
 
