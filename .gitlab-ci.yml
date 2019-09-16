@@ -14,7 +14,6 @@ build:
   before_script:
     - npm i -g yarn
     - yarn
-    - rm -rf .cache
   script:
     - yarn run build --prefix-paths bytecode-website
     - mv public build
@@ -32,6 +31,8 @@ lint:
 
 test_jest:
   stage: test
+  dependencies:
+    - build
   before_script:
     - npm i -g yarn
     - yarn
