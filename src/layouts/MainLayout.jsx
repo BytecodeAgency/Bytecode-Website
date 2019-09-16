@@ -10,6 +10,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import theme from '../styles/theme';
 import { GlobalStyles, TypographyClassStyling } from '../styles/global-css';
+import { HeadScripts, NoscriptTag } from '../lib/GetHeadScripts';
 
 const Main = styled.main`
     max-width: 100vw !important;
@@ -28,6 +29,7 @@ const Head = () => (
             href="https://fonts.googleapis.com/css?family=Cousine"
             rel="stylesheet"
         />
+        <HeadScripts />
     </Helmet>
 );
 
@@ -36,6 +38,7 @@ const Layout = ({ children, pageSettings }) => {
     return (
         <div>
             <Head />
+            <NoscriptTag />
             <GlobalStyles />
             <SEO title={title} description={description} keywords={keywords} />
             <Navbar />

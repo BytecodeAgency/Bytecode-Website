@@ -52,12 +52,12 @@ const getHeadScriptContents = () => {
     return headScriptContents;
 };
 
-const getHeadScripts = () => (
+const HeadScripts = () => (
     // eslint-disable-next-line react/no-danger
     <script dangerouslySetInnerHTML={{ __html: getHeadScriptContents() }} />
 );
 
-const getNoscriptTag = () => {
+const NoscriptTag = () => {
     if (process.env.ENABLE_TAGMANAGER === 'true') {
         return (
             <noscript>
@@ -73,4 +73,4 @@ const getNoscriptTag = () => {
     return null;
 };
 
-export { getHeadScripts, getNoscriptTag }; // TODO: Correct
+export { HeadScripts, NoscriptTag };
