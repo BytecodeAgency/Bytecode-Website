@@ -114,7 +114,7 @@ TextBlock.propTypes = {
     href: PropTypes.string,
     button: PropTypes.string,
     useGatsbyLink: PropTypes.bool,
-    children: PropTypes.string,
+    children: PropTypes.node,
 };
 
 TextBlock.defaultProps = {

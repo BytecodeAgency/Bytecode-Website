@@ -82,7 +82,7 @@ const CheckListItem = props => {
 };
 
 CheckListItem.propTypes = {
-    children: PropTypes.func.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 const Partners = () => (

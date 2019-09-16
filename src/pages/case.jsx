@@ -47,7 +47,7 @@ const CheckListItem = props => {
 };
 
 CheckListItem.propTypes = {
-    children: PropTypes.func.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 const testImg2 = require('../images/img/content/cases/cote-et-ciel/website2.png');

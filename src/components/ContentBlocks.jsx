@@ -101,7 +101,7 @@ const TextAndImage = props => {
 export default TextAndImage;
 
 TextAndImage.propTypes = {
-    children: PropTypes.func.isRequired,
+    children: PropTypes.node.isRequired,
     img: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
     reverse: PropTypes.bool,
