@@ -6,7 +6,7 @@ import Layout from '../layouts/MainLayout';
 
 import { Container, Row, Col } from '../lib/Grid';
 
-import TextAndImage from '../components/ContentBlocks';
+import TextAndImage from '../containers/ContentBlocks/ContentBlocks';
 import theme from '../styles/theme';
 import { Big } from '../components/Typography';
 

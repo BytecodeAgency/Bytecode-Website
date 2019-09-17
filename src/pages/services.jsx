@@ -1,13 +1,13 @@
 import React from 'react';
 import Layout from '../layouts/MainLayout';
-import TextBlock from '../components/TextBlock';
+import TextBlock from '../containers/TextBlock/TextBlock';
 import { Container, Row, Col } from '../lib/Grid';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../containers/ContactForm/ContactForm';
 import ImageBlock from '../components/ImageBlock';
-import Process from '../components/Process';
-import ContentPageHeader from '../components/ContentPageHeader';
+import Process from '../containers/Process/Process';
+import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
-import Service from '../components/Service';
+import Service from '../containers/Service/Service';
 
 const pageSettings = {
     title: 'Services - Bytecode Digital Agency B.V.',

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../layouts/MainLayout';
-import TextBlock from '../components/TextBlock';
-import ContentPageHeader from '../components/ContentPageHeader';
+import TextBlock from '../containers/TextBlock/TextBlock';
+import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import { Container, Row, Col } from '../lib/Grid';
-import ContactForm from '../components/ContactForm';
-import Process from '../components/Process';
-import Thumbnail from '../components/Thumbnail';
+import ContactForm from '../containers/ContactForm/ContactForm';
+import Process from '../containers/Process/Process';
+import Thumbnail from '../containers/Thumbnails/Thumbnail';
 import Wrapper from '../components/Wrapper';
 
 const service1icon = require('../images/icons/services/mobile.svg');

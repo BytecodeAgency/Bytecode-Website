@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '../layouts/MainLayout';
-import TextBlock from '../components/TextBlock';
+import TextBlock from '../containers/TextBlock/TextBlock';
 import ImageBlock from '../components/ImageBlock';
-import ContentPageHeader from '../components/ContentPageHeader';
-import TeamMember from '../components/TeamMember';
+import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
+import TeamMember from '../containers/TeamMember/TeamMember';
 import { Container, Row, Col } from '../lib/Grid';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../containers/ContactForm/ContactForm';
 
 const pageSettings = {
     title: `Over ons - Bytecode Digital Agency |

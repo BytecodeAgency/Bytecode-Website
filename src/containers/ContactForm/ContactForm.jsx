@@ -2,81 +2,18 @@
 /* eslint-disable react/prop-types, no-unused-vars, @typescript-eslint/no-unused-vars, react/no-unescaped-entities */
 
 import React from 'react';
-import styled from 'styled-components';
 import axios from 'axios';
 import { Field, Formik } from 'formik';
 import * as Yup from 'yup';
-import theme from '../styles/theme';
-import TextBlock from './TextBlock';
-import Button from './Button';
-
-const ContactFormContainer = styled.div`
-    padding: 1em 0;
-`;
-
-const InputField = styled.input`
-    font-size: 1.35rem;
-    background: ${theme.colors.secondary};
-    border-radius: 0.1em;
-    outline: none;
-    border: none;
-    padding: 0.66em 1em;
-    margin: 0 0.1em 1em 0.1em;
-    color: ${theme.colors.white};
-    width: 100%;
-    &:hover {
-        cursor: pointer;
-    }
-    &:focus {
-        border-bottom: 2px solid ${theme.colors.primary};
-    }
-    &.error {
-        border-bottom: 2px solid ${theme.colors.tertiary};
-    }
-`;
-
-const SendButton = styled(Button)``;
-
-const ErrorMessage = styled.div`
-    margin-left: 1.33em;
-    color: ${theme.colors.tertiary};
-`;
-
-const InputTextArea = styled.textarea`
-    font-size: 1.35rem;
-    background: ${theme.colors.secondary};
-    border-radius: 0.1em;
-    outline: none;
-    border: none;
-    padding: 1em;
-    margin: 0 0.1em 1.33em;
-    width: 100%;
-    min-height: 20em;
-    &:hover {
-        cursor: pointer;
-    }
-    &:focus {
-        border-bottom: 2px solid ${theme.colors.primary};
-    }
-    &.error {
-        border-bottom: 2px solid ${theme.colors.tertiary};
-    }
-    &.text {
-        font-family: ${theme.typography.form.font};
-        color: ${theme.colors.white};
-    }
-`;
-
-const StyledNotification = styled.div`
-    color: white;
-    padding: 3rem;
-    &.success {
-        background: ${theme.colors.primary};
-    }
-    &.error {
-        background: ${theme.colors.tertiary};
-    }
-`;
+import TextBlock from '../TextBlock/TextBlock';
+import {
+    ContactFormContainer,
+    ErrorMessage,
+    InputField,
+    InputTextArea,
+    SendButton,
+    StyledNotification,
+} from './ContactForm.components';
 
 const Notification = ({ type, message }) => (
     <StyledNotification className={type}>{message}</StyledNotification>

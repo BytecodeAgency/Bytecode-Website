@@ -1,33 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
-import theme from '../styles/theme';
-import TextBlock from './TextBlock';
-import { Container, Row, Col } from '../lib/Grid';
+import TextBlock from '../TextBlock/TextBlock';
+import { Container, Row } from '../../lib/Grid';
+import { ProcessStepImage, Step } from './Process.components';
 
-const step1 = require('../images/img/content/workflow/analyze.svg');
-const step2 = require('../images/img/content/workflow/strategize.svg');
-const step3 = require('../images/img/content/workflow/realize.svg');
-
-const { mediaQueryMin } = theme;
-
-const Step = styled(Col)`
-    @media (${mediaQueryMin.xs}) {
-        margin: 0 2em;
-    }
-`;
-
-const ProcessStepImage = styled.img`
-    margin: 5rem 5rem 5rem 3rem;
-    height: 400px;
-    width: auto;
-    text-align: center;
-    @media (${mediaQueryMin.xs}) {
-        margin-bottom: 4em;
-    }
-    @media (${mediaQueryMin.sm}) {
-        width: 50%;
-    }
-`;
+const step1 = require('../../images/img/content/workflow/analyze.svg');
+const step2 = require('../../images/img/content/workflow/strategize.svg');
+const step3 = require('../../images/img/content/workflow/realize.svg');
 
 const Process = () => (
     <Container>

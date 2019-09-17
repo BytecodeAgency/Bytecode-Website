@@ -1,23 +1,21 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import NavbarComponents from './NavbarComponents';
-
-const {
+import {
+    BlackOverlay,
+    CloseMenuButton,
+    Logo,
+    MenuButton,
+    MobileNavLogo,
     NavbarContainer,
     NavbarContent,
-    NavbarItems,
     NavbarItem,
-    Logo,
-    MobileNavLogo,
-    MenuButton,
-    CloseMenuButton,
-    BlackOverlay,
-} = NavbarComponents;
+    NavbarItems,
+} from './Navbar.components';
 
-const logo = require('../images/img/logo.svg');
-const logoMin = require('../images/img/logo-min.svg');
-const hamburger = require('../images/img/hamburger-menu.svg');
-const closeMenu = require('../images/img/close-menu.svg');
+const logo = require('../../images/img/logo.svg');
+const logoMin = require('../../images/img/logo-min.svg');
+const hamburger = require('../../images/img/hamburger-menu.svg');
+const closeMenu = require('../../images/img/close-menu.svg');
 
 class Navbar extends React.Component {
     constructor() {

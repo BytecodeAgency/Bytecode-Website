@@ -1,14 +1,9 @@
-/* eslint-disable react/jsx-props-no-spreading */
-
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import TextBlock from './TextBlock';
-import theme from '../styles/theme';
+import theme from '../../styles/theme';
 
 const { mediaQueryMin, colors, containerWidth } = theme;
 
-const MainHeader = styled.header`
+export const MainHeader = styled.header`
     background-color: ${colors.mediumgray};
     background-image: url(${props => props.img});
     background-blend-mode: soft-light;
@@ -40,7 +35,7 @@ const MainHeader = styled.header`
     }
 `;
 
-const MainHeaderContent = styled.div`
+export const MainHeaderContent = styled.div`
     margin: 2em ${containerWidth.xs};
     @media (${mediaQueryMin.sm}) {
         margin: 2em ${containerWidth.sm};
@@ -60,42 +55,3 @@ const MainHeaderContent = styled.div`
         margin: 4vw ${containerWidth.xl}};
     }
 `;
-
-const ContentPageHeader = props => {
-    const { subtitle, title, button, href, text, useGatsbyLink } = props;
-    return (
-        <MainHeader {...props}>
-            <MainHeaderContent fluid>
-                <TextBlock
-                    useGatsbyLink={useGatsbyLink}
-                    subtitle={subtitle || ''}
-                    title={title || ''}
-                    href={href}
-                    button={button || ''}
-                >
-                    {text}
-                </TextBlock>
-            </MainHeaderContent>
-        </MainHeader>
-    );
-};
-
-export default ContentPageHeader;
-
-ContentPageHeader.propTypes = {
-    subtitle: PropTypes.string,
-    title: PropTypes.string,
-    button: PropTypes.string,
-    href: PropTypes.string,
-    text: PropTypes.node,
-    useGatsbyLink: PropTypes.bool,
-};
-
-ContentPageHeader.defaultProps = {
-    subtitle: '',
-    title: '',
-    button: '',
-    href: '#',
-    text: '',
-    useGatsbyLink: false,
-};
