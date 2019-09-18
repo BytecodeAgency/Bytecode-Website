@@ -93,14 +93,6 @@ const Over = () => (
             <Row>
                 {/* TODO: Generate from array, maybe later change via dashb. */}
                 <TeamMember
-                    name="Nick Broekarts"
-                    title="Partner &amp; Business Developer"
-                    img={require('../images/img/team/nick.png')}
-                    email="mailto:nick@bytecode.nl"
-                    instagram="https://www.instagram.com/nickbroekarts"
-                    linkedin="https://www.linkedin.com/in/nickbroekarts"
-                />
-                <TeamMember
                     name="Thomas Bodlaender"
                     title="Sales- &amp; accountmanager"
                     img={require('../images/img/team/thomas.png')}
@@ -124,6 +116,14 @@ const Over = () => (
                     img={require('../images/img/team/julian.png')}
                     email="mailto:julian@bytecode.nl"
                     linkedin="https://www.linkedin.com/in/julian-v-66b098116"
+                />
+                <TeamMember
+                    name="Nick Broekarts"
+                    title="Partner &amp; Business Developer"
+                    img={require('../images/img/team/nick.png')}
+                    email="mailto:nick@bytecode.nl"
+                    instagram="https://www.instagram.com/nickbroekarts"
+                    linkedin="https://www.linkedin.com/in/nickbroekarts"
                 />
                 <TeamMember
                     name="Robin van Zeelst"
