@@ -134,7 +134,7 @@ const Over = () => (
                 />
                 <TeamMember
                     name="Suzanne De Vries"
-                    title="Public Relations"
+                    title="Marketing &amp; Communicatie"
                     img={require('../images/img/team/suzanne.png')}
                     email="mailto:suzanne@bytecode.nl"
                     linkedin="https://www.linkedin.com/in/suzanne-de-vries-11b088149/"
