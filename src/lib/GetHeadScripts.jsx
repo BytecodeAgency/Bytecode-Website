@@ -3,7 +3,7 @@
 
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 // const enableTagManager = process.env.ENABLE_TAGMANAGER === 'true';
 // const enableDrift = process.env.ENABLE_DRIFT === 'true';
@@ -49,9 +49,7 @@ const HeadScripts = () => (
         <script type="text/javascript">
             {enableTagManager && tagManagerCode}
         </script>
-        <script type="text/javascript">
-            {enableDrift && driftCode}
-        </script>
+        <script type="text/javascript">{enableDrift && driftCode}</script>
         <NoscriptTag />
     </Helmet>
 );
