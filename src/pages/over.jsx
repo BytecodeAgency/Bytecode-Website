@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '../layouts/MainLayout';
-import TextBlock from '../components/TextBlock';
+import TextBlock from '../containers/TextBlock/TextBlock';
 import ImageBlock from '../components/ImageBlock';
-import ContentPageHeader from '../components/ContentPageHeader';
-import TeamMember from '../components/TeamMember';
+import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
+import TeamMember from '../containers/TeamMember/TeamMember';
 import { Container, Row, Col } from '../lib/Grid';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../containers/ContactForm/ContactForm';
 
 const pageSettings = {
     title: `Over ons - Bytecode Digital Agency |
@@ -93,11 +93,12 @@ const Over = () => (
             <Row>
                 {/* TODO: Generate from array, maybe later change via dashb. */}
                 <TeamMember
-                    name="Julian van Dijk"
-                    title="Full-stack developer web &amp; mobiel"
-                    img={require('../images/img/team/julian.png')}
-                    email="mailto:julian@bytecode.nl"
-                    linkedin="https://www.linkedin.com/in/julian-v-66b098116"
+                    name="Thomas Bodlaender"
+                    title="Sales- &amp; accountmanager"
+                    img={require('../images/img/team/thomas.png')}
+                    email="mailto:thomas@bytecode.nl"
+                    instagram="https://www.instagram.com/thomasbodje"
+                    linkedin="https://www.linkedin.com/in/thomasbodlaender"
                 />
                 <TeamMember
                     name="Richard van 't Hof"
@@ -110,20 +111,33 @@ const Over = () => (
                     github="https://www.github.com/RichART-Official"
                 />
                 <TeamMember
-                    name="Thomas Bodlaender"
-                    title="Sales- &amp; accountmanager"
-                    img={require('../images/img/team/thomas.png')}
-                    email="mailto:thomas@bytecode.nl"
-                    instagram="https://www.instagram.com/thomasbodje"
-                    linkedin="https://www.linkedin.com/in/thomasbodlaender"
+                    name="Julian van Dijk"
+                    title="Full-stack developer web &amp; mobiel"
+                    img={require('../images/img/team/julian.png')}
+                    email="mailto:julian@bytecode.nl"
+                    linkedin="https://www.linkedin.com/in/julian-v-66b098116"
                 />
                 <TeamMember
                     name="Nick Broekarts"
-                    title="Online marketeer &amp; SEO specialist"
+                    title="Partner &amp; Business Developer"
                     img={require('../images/img/team/nick.png')}
                     email="mailto:nick@bytecode.nl"
                     instagram="https://www.instagram.com/nickbroekarts"
                     linkedin="https://www.linkedin.com/in/nickbroekarts"
+                />
+                <TeamMember
+                    name="Robin van Zeelst"
+                    title="Online Marketeer"
+                    img={require('../images/img/team/robin.png')}
+                    email="mailto:robin@bytecode.nl"
+                    linkedin="https://www.linkedin.com/in/robin-van-zeelst/"
+                />
+                <TeamMember
+                    name="Suzanne De Vries"
+                    title="Public Relations"
+                    img={require('../images/img/team/suzanne.png')}
+                    email="mailto:suzanne@bytecode.nl"
+                    linkedin="https://www.linkedin.com/in/suzanne-de-vries-11b088149/"
                 />
             </Row>
         </Container>

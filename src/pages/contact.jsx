@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../layouts/MainLayout';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../containers/ContactForm/ContactForm';
 import { Container, Row, Col } from '../lib/Grid';
 import Button from '../components/Button';
-import ContentPageHeader from '../components/ContentPageHeader';
+import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 
 const pageSettings = {
     title: `Contact - Bytecode Digital Agency B.V.

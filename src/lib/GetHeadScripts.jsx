@@ -3,9 +3,12 @@
 
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
-const enableTagManager = process.env.ENABLE_TAGMANAGER === 'true';
-const enableDrift = process.env.ENABLE_DRIFT === 'true';
+// const enableTagManager = process.env.ENABLE_TAGMANAGER === 'true';
+// const enableDrift = process.env.ENABLE_DRIFT === 'true';
+const enableTagManager = true;
+const enableDrift = true;
 
 const tagManagerCode = `
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -41,24 +44,18 @@ const driftCode = `
     drift.load('bbh8h2v73h4n');
 `;
 
-const getHeadScriptContents = () => {
-    let headScriptContents = '';
-    if (enableTagManager) {
-        headScriptContents += tagManagerCode;
-    }
-    if (enableDrift) {
-        headScriptContents += driftCode;
-    }
-    return headScriptContents;
-};
-
 const HeadScripts = () => (
-    // eslint-disable-next-line react/no-danger
-    <script dangerouslySetInnerHTML={{ __html: getHeadScriptContents() }} />
+    <Helmet>
+        <script type="text/javascript">
+            {enableTagManager && tagManagerCode}
+        </script>
+        <script type="text/javascript">{enableDrift && driftCode}</script>
+        <NoscriptTag />
+    </Helmet>
 );
 
 const NoscriptTag = () => {
-    if (process.env.ENABLE_TAGMANAGER === 'true') {
+    if (enableTagManager) {
         return (
             <noscript>
                 <iframe
@@ -73,4 +70,4 @@ const NoscriptTag = () => {
     return null;
 };
 
-export { HeadScripts, NoscriptTag };
+export default HeadScripts;

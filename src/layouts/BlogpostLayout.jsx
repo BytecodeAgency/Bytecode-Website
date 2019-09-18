@@ -4,12 +4,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
-import pageSettingsPropTypes from './pageSettings.proptypes';
 import Layout from './MainLayout';
 import theme from '../styles/theme';
-import TextBlock from '../components/TextBlock';
+import TextBlock from '../containers/TextBlock/TextBlock';
 import { Container, Row, Col } from '../lib/Grid';
-import Author from '../components/Author';
+import Author from '../containers/Author/Author';
 
 const { mediaQueryMin, colors } = theme;
 
@@ -74,7 +73,11 @@ export default BlogSingle;
 
 BlogSingle.propTypes = {
     content: PropTypes.shape({
-        pageSettings: pageSettingsPropTypes.isRequired,
+        pageSettings: PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired,
+            keywords: PropTypes.string.isRequired,
+        }).isRequired,
         article_image_url: PropTypes.string.isRequired,
         catergory_name: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
