@@ -4,13 +4,12 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import pageSettingsPropTypes from './pageSettings.proptypes';
 import SEO from './SEO';
 import Navbar from '../containers/Navbar/Navbar';
 import Footer from './Footer';
 import theme from '../styles/theme';
 import { GlobalStyles, TypographyClassStyling } from '../styles/global-css';
-import { HeadScripts, NoscriptTag } from '../lib/GetHeadScripts';
+import HeadScripts from '../lib/GetHeadScripts';
 
 const Main = styled.main`
     max-width: 100vw !important;
@@ -20,7 +19,7 @@ const Main = styled.main`
     }
 `;
 
-const Head = () => (
+const HeadElements = () => (
     <Helmet>
         <meta name="robots" content="index, follow" />
         <link type="text/plain" rel="author" href="/humans.txt" />
@@ -29,7 +28,6 @@ const Head = () => (
             href="https://fonts.googleapis.com/css?family=Cousine"
             rel="stylesheet"
         />
-        <HeadScripts />
     </Helmet>
 );
 
@@ -37,8 +35,8 @@ const Layout = ({ children, pageSettings }) => {
     const { title, description, keywords } = pageSettings;
     return (
         <div>
-            <Head />
-            <NoscriptTag />
+            <HeadElements />
+            <HeadScripts />
             <GlobalStyles />
             <SEO title={title} description={description} keywords={keywords} />
             <Navbar />
@@ -55,5 +53,9 @@ export default Layout;
 
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
-    pageSettings: pageSettingsPropTypes.isRequired,
+    pageSettings: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        keywords: PropTypes.string.isRequired,
+    }).isRequired,
 };
