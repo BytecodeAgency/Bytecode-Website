@@ -31,8 +31,6 @@ lint:
 
 test_jest:
   stage: test
-  dependencies:
-    - build
   before_script:
     - npm i -g yarn
     - yarn install --frozen-lockfile
