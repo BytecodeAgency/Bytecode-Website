@@ -4,7 +4,7 @@ node_js:
   - "stable"
   - "node"
   - "lts/*"
-  - "10"
+  - "12"
 
 install:
   - yarn
