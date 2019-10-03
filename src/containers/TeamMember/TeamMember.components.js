@@ -82,8 +82,8 @@ export const TeamMemberPhoto = styled.figure`
         font-size: 3em;
         color: ${theme.colors.green} !important;
         min-height: 5em;
-        height: 100%;
-        width: auto;
+        height: auto;
+        max-width: 100%;
     }
 `;
 
