@@ -43,7 +43,7 @@ pages:
   image: alpine:3.9
   stage: deploy
   dependencies:
-    - build
+    - build_node
   script:
     - rm -rf public
     - mv build public
