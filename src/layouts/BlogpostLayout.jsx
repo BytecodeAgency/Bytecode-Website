@@ -108,9 +108,7 @@ const BlogContent = styled.div`
         h4,
         h5,
         h6,
-        p,
-        ul,
-        ol {
+        p {
             padding: 0 15vw;
         }
         img,
