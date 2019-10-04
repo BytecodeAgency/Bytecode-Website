@@ -66,7 +66,7 @@ deploy_prod:
     - chmod +x ./kubectl
     - mv ./kubectl /usr/local/bin/kubectl
     - mkdir ~/.kube
-    - cat K8S_CONFIG_BASE64 | base64 -d > ~/.kube/config
+    - cat $K8S_CONFIG_BASE64 | base64 -d > ~/.kube/config
     - kubectl version
     - cd .gitlab/k8s
   script:
