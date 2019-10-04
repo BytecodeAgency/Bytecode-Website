@@ -85,9 +85,10 @@ deploy_pages:
   artifacts:
     paths:
       - public
-  only:
-    - develop
-    - release/*
+#   only:
+#     - master
+#     - develop
+#     - release/*
 
 include:
   - template: Code-Quality.gitlab-ci.yml
