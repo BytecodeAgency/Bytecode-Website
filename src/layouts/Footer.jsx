@@ -166,7 +166,7 @@ const Footer = () => (
                 <p>
                     Verlengde Spiegelmakersstraat 13
                     <br />
-                    2645LZ Deflgauw
+                    2645LZ Delfgauw
                     <br />
                     Nederland
                 </p>
