@@ -27,7 +27,11 @@ export const InputField = styled.input`
     }
 `;
 
-export const SendButton = styled(Button)``;
+export const SendButton = styled(Button)`
+    &:hover {
+        cursor: pointer;
+    }
+`;
 
 export const ErrorMessage = styled.div`
     margin-left: 1.33em;

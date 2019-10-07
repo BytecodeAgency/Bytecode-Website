@@ -1,14 +1,12 @@
+/* eslint-disable react/destructuring-assignment */
 // Ignore all ESLint issues as we have a TODO to rewrite this file
 /* eslint-disable react/prop-types, no-unused-vars, @typescript-eslint/no-unused-vars, react/no-unescaped-entities */
 
 import React from 'react';
 import axios from 'axios';
-import { Field, Formik } from 'formik';
-import * as Yup from 'yup';
 import TextBlock from '../TextBlock/TextBlock';
 import {
     ContactFormContainer,
-    ErrorMessage,
     InputField,
     InputTextArea,
     SendButton,
@@ -40,6 +38,12 @@ class ContactForm extends React.Component {
         this.clearNotifications = this.clearNotifications.bind(this);
         this.state = {
             notifications: [],
+            formValues: {
+                contact: '',
+                email: '',
+                phone: '',
+                contents: '',
+            },
         };
     }
 
@@ -69,6 +73,33 @@ class ContactForm extends React.Component {
         this.setState({ notifications: [] });
     }
 
+    handleFormChange(key, value) {
+        // eslint-disable-next-line react/destructuring-assignment
+        const previousFormValues = this.state.formValues;
+        this.setState({
+            formValues: { ...previousFormValues, [key]: value },
+        });
+    }
+
+    async handleFormSubmit({ contact, email, phone, contents }) {
+        if (await handleSend({ contact, email, phone, contents })) {
+            this.addNotification('success', 'Je bericht is verstuurd!');
+            setTimeout(() => {
+                this.clearNotifications();
+            }, 5000);
+            this.setState({
+                formValues: {
+                    contact: '',
+                    email: '',
+                    phone: '',
+                    contents: '',
+                },
+            });
+        } else {
+            this.addNotification('error', 'Iets ging fout...');
+        }
+    }
+
     renderText() {
         const { hideText } = this.props;
         if (!hideText) {
@@ -84,148 +115,67 @@ class ContactForm extends React.Component {
     }
 
     render() {
+        const { contact, phone, email, contents } = this.state.formValues;
         return (
             <ContactFormContainer>
                 {this.renderText()}
                 {this.getNotifications()}
-                <Formik
-                    initialValues={
-                        ({ contact: '' },
-                        { email: '' },
-                        { phone: '' },
-                        { contents: '' })
-                    }
-                    onSubmit={async (values, actions) => {
-                        const { contact, email, phone, contents } = values;
-                        if (await handleSend(values)) {
-                            this.addNotification(
-                                'success',
-                                'Je bericht is verstuurd!',
-                            );
-                            setTimeout(() => {
-                                this.clearNotifications();
-                            }, 5000);
-                            actions.resetForm({
-                                contact: '',
-                                email: '',
-                                phone: '',
-                                contents: '',
-                            });
-                        } else {
-                            this.addNotification('error', 'Iets ging fout...');
+                <form>
+                    <InputField
+                        id="contact"
+                        placeholder="Naam"
+                        type="text"
+                        aria-label="contact"
+                        value={contact}
+                        onChange={event =>
+                            this.handleFormChange('contact', event.target.value)
                         }
-                        setTimeout(() => {
-                            actions.setSubmitting(false);
-                        }, 500);
-                    }}
-                    validationSchema={Yup.object().shape({
-                        email: Yup.string()
-                            .email()
-                            .required('verplicht'),
-                        contact: Yup.string()
-                            .max(64)
-                            .min(2)
-                            .required('verplicht'),
-                        phone: Yup.number().required('verplicht'),
-                        contents: Yup.string().required('verplicht'),
-                    })}
-                >
-                    {props => {
-                        const {
-                            values,
-                            touched,
-                            errors,
-                            dirty,
-                            isSubmitting,
-                            handleChange,
-                            handleBlur,
-                            handleSubmit,
-                            handleReset,
-                        } = props;
-                        return (
-                            <form onSubmit={handleSubmit}>
-                                <InputField
-                                    id="contact"
-                                    placeholder="Naam"
-                                    type="text"
-                                    aria-label="contact"
-                                    value={values.contact}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    className={
-                                        errors.contact && touched.contact
-                                            ? 'text-input error'
-                                            : 'text-input'
-                                    }
-                                />
-                                {errors.contact && touched.contact && (
-                                    <ErrorMessage>
-                                        {errors.contact}
-                                    </ErrorMessage>
-                                )}
-                                <InputField
-                                    id="email"
-                                    placeholder="Email"
-                                    type="text"
-                                    aria-label="email"
-                                    value={values.email}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    className={
-                                        errors.email && touched.email
-                                            ? 'text-input error'
-                                            : 'text-input'
-                                    }
-                                />
-                                {errors.email && touched.email && (
-                                    <ErrorMessage>{errors.email}</ErrorMessage>
-                                )}
-                                <InputField
-                                    id="phone"
-                                    placeholder="Telefoonnummer"
-                                    type="text"
-                                    aria-label="phone"
-                                    value={values.phone}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    className={
-                                        errors.phone && touched.phone
-                                            ? 'text-input error'
-                                            : 'text-input'
-                                    }
-                                />
-                                {errors.phone && touched.phone && (
-                                    <ErrorMessage>{errors.phone}</ErrorMessage>
-                                )}
-                                <Field
-                                    component={InputTextArea}
-                                    id="contents"
-                                    placeholder="Bericht"
-                                    aria-label="message"
-                                    value={values.contents}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    className={
-                                        errors.contents && touched.contents
-                                            ? 'text error'
-                                            : 'text'
-                                    }
-                                />
-                                {errors.content && touched.content && (
-                                    <ErrorMessage>
-                                        {errors.content}
-                                    </ErrorMessage>
-                                )}
-                                <SendButton
-                                    type="submit"
-                                    disabled={!dirty || isSubmitting}
-                                >
-                                    Verzenden
-                                </SendButton>
-                            </form>
-                        );
-                    }}
-                </Formik>
+                        className="text-input"
+                    />
+                    <InputField
+                        id="email"
+                        placeholder="Email"
+                        type="text"
+                        aria-label="email"
+                        value={email}
+                        onChange={event =>
+                            this.handleFormChange('email', event.target.value)
+                        }
+                        className="text-input"
+                    />
+                    <InputField
+                        id="phone"
+                        placeholder="Telefoonnummer"
+                        type="text"
+                        aria-label="phone"
+                        value={phone}
+                        onChange={event =>
+                            this.handleFormChange('phone', event.target.value)
+                        }
+                        className="text-input"
+                    />
+                    <InputTextArea
+                        id="contents"
+                        placeholder="Bericht"
+                        aria-label="message"
+                        value={contents}
+                        onChange={event =>
+                            this.handleFormChange(
+                                'contents',
+                                event.target.value,
+                            )
+                        }
+                        className="text"
+                    />
+                    <SendButton
+                        type="submit"
+                        onClick={() =>
+                            this.handleFormSubmit(this.state.formValues)
+                        }
+                    >
+                        Verzenden
+                    </SendButton>
+                </form>
             </ContactFormContainer>
         );
     }
