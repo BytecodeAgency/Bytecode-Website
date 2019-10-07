@@ -2,7 +2,7 @@
   "name": "bytecode-website",
   "private": false,
   "description": "The Bytecode Digital Agency website, released as free software",
-  "version": "2.0.0",
+  "version": "2.1.6",
   "author": "Luciano Nooijen <luciano@bytecode.nl>",
   "keywords": [
     "bytecode"
@@ -26,7 +26,6 @@
     "axios": "^0.19.0",
     "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-gatsby": "^0.2.13",
-    "formik": "^1.5.8",
     "gatsby": "^2.15.12",
     "gatsby-image": "^2.2.18",
     "gatsby-mdx": "^0.6.2",
@@ -51,8 +50,7 @@
     "react-helmet": "^5.2.0",
     "styled-components": "^4.2.0",
     "styled-components-style-utils": "^1.2.1",
-    "yarn": "^1.17.3",
-    "yup": "^0.27.0"
+    "yarn": "^1.17.3"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
