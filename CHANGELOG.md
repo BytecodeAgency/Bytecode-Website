@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed:
 
+* Typo in footer
 * Contact form not sending data (rewrite contact form, #122 on GitLab)
 * Double image in cloud article
 * Capitalized file name for cloud article
