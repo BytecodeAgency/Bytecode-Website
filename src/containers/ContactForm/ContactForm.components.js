@@ -15,6 +15,7 @@ export const InputField = styled.input`
     padding: 0.66em 1em;
     margin: 0 0.1em 1em 0.1em;
     color: ${theme.colors.white};
+    border-bottom: 2px solid transparent;
     width: 100%;
     &:hover {
         cursor: pointer;
