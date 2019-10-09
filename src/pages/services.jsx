@@ -8,6 +8,7 @@ import Process from '../containers/Process/Process';
 import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 import Service from '../containers/Service/Service';
+import DigitalOceanPartnerLogo from '../components/DigitalOceanPartnerLogo';
 
 const pageSettings = {
     title: 'Services - Bytecode Digital Agency B.V.',
@@ -103,15 +104,26 @@ const Services = () => (
 
         {/* CLOUD EN AUTOMATISERING */}
         <Container>
-            <TextBlock title="Cloud & automatisering" headingType="h2">
-                Bedrijven zijn vaak erg veel tijd kwijt aan repetitief handwerk,
-                terwijl dit werk veel beter geautomatiseerd zou kunnen worden.
-                Bytecode zorgt ervoor dat je geen tijd meer kwijt bent aan dit
-                soort werk, zodat je je kunt richten op werkzaamheden waarin jij
-                en je bedrijf veel beter zijn, zoals sales of marketing.
-                Daarnaast verkleinen wij de kans op menselijke fouten door deze
-                automatisering.
-            </TextBlock>
+            <Col>
+                <TextBlock title="Cloud & automatisering" headingType="h2">
+                    <Row>
+                        <Col lg={9}>
+                            Bedrijven zijn vaak erg veel tijd kwijt aan
+                            repetitief handwerk, terwijl dit werk veel beter
+                            geautomatiseerd zou kunnen worden. Bytecode zorgt
+                            ervoor dat je geen tijd meer kwijt bent aan dit
+                            soort werk, zodat je je kunt richten op
+                            werkzaamheden waarin jij en je bedrijf veel beter
+                            zijn, zoals sales of marketing. Daarnaast verkleinen
+                            wij de kans op menselijke fouten door deze
+                            automatisering.
+                        </Col>
+                        <Col lg={3}>
+                            <DigitalOceanPartnerLogo />
+                        </Col>
+                    </Row>
+                </TextBlock>
+            </Col>
         </Container>
         <Container>
             <Row>
@@ -135,10 +147,11 @@ const Services = () => (
                         door overal in het ontwikkelingsproces automatisering
                         toe te passen. Dit zorgt er bijvoorbeeld voor dat nieuwe
                         versies van jouw website of applicatie automatisch
-                        worden uitgerold. Daarnaast bieden wij ook managed
-                        infrastructuur in de cloud. Al met al zetten wij
-                        kwalitatief hoge devops- en cloudsystemen op, om jou de
-                        nodige hoofdpijn te besparen.
+                        worden uitgerold. Daarnaast bieden wij als Official
+                        DigitalOcean Partner ook managed infrastructuur in de
+                        cloud. Al met al zetten wij kwalitatief hoge devops- en
+                        cloudsystemen op, om jou de nodige hoofdpijn te
+                        besparen.
                     </Service>
                     <Service
                         fullWidth
