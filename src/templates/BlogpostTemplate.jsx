@@ -21,6 +21,7 @@ const BlogpostTemplate = ({ data }) => {
         author_image_url: mdx.frontmatter.author_image_url,
         posted_on: mdx.frontmatter.posted_on,
         reading_time: mdx.frontmatter.reading_time,
+        article_intro: mdx.frontmatter.article_intro,
         post_content: mdx.code.body,
     };
     return <BlogpostLayout content={content} />;
@@ -47,6 +48,7 @@ export const query = graphql`
                 catergory_name
                 category_slug
                 reading_time
+                article_intro
             }
             code {
                 body

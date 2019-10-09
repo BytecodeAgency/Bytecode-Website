@@ -41,6 +41,17 @@ const bytecode = {
         lightgray,
         white,
     },
+    fonts: {
+        heading,
+        paragraph,
+        menu,
+    },
+    fontWeights: {
+        regular,
+        bold,
+        medium,
+        extrabold,
+    },
     typography: {
         body: {
             height: '1.2em',

@@ -9,8 +9,10 @@ import theme from '../styles/theme';
 import TextBlock from '../containers/TextBlock/TextBlock';
 import { Container, Row, Col } from '../lib/Grid';
 import Author from '../containers/Author/Author';
+import { Big, Small } from '../components/Typography';
 
 const { mediaQueryMin, colors } = theme;
+const { fonts, fontWeights } = theme;
 
 const CallToAction = () => (
     <CallToActionContainer>
@@ -50,7 +52,7 @@ const BlogSingle = ({ content }) => (
                                 />
                                 <BlogMetaData>
                                     {content.posted_on} <br />
-                                    {content.reading_time} min. read
+                                    <ReadingTime>{content.reading_time} min. read</ReadingTime>
                                 </BlogMetaData>
                             </BlogMetaDataWrapper>
                         </Col>
@@ -60,6 +62,7 @@ const BlogSingle = ({ content }) => (
             <Container>
                 <BlogContent>
                     <div id="blogpost-content">
+                        <ArticleIntro>{content.article_intro}</ArticleIntro>
                         <MDXRenderer>{content.post_content}</MDXRenderer>
                     </div>
                     <CallToAction />
@@ -86,6 +89,7 @@ BlogSingle.propTypes = {
         author_image_url: PropTypes.string.isRequired,
         posted_on: PropTypes.string.isRequired,
         reading_time: PropTypes.string.isRequired,
+        article_intro: PropTypes.string.isRequired,
         post_content: PropTypes.string.isRequired,
     }).isRequired,
 };
@@ -172,4 +176,20 @@ const CallToActionContainer = styled.div`
 const CallToActionText = styled.p`
     font-style: italic;
     color: ${theme.colors.lightgray} !important;
+`;
+
+const ArticleIntro = styled(Big)`
+    margin-bottom: 1em;
+    line-height: 1.22em !important;
+`;
+
+const ReadingTime = Small;
+
+const Subtitle = styled.h6`
+    size: '0.85rem',
+    height: '1.2em',
+    spacing: '0.35em',
+    font: ${fonts.paragraph},
+    weight: ${fontWeights.bold},
+    color: ${colors.primary},
 `;
