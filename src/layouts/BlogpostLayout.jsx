@@ -84,6 +84,8 @@ const Article = styled.article`
     }
     p {
         line-height: 1.5em;
+        letter-spacing: 0.015em;
+        font-weight: ${theme.fontWeights.light};
     }
 `;
 
