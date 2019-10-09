@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TextBlock from '../TextBlock/TextBlock';
-import { Icon, ServiceIcon, ServiceWrapper, ServiceText } from './Service.components';
+import {
+    Icon,
+    ServiceIcon,
+    ServiceWrapper,
+    ServiceText,
+} from './Service.components';
 
 const Service = ({ children, iconName, title, fullWidth }) => {
     const iconSrc = require(`../../images/icons/services/${iconName}.svg`);

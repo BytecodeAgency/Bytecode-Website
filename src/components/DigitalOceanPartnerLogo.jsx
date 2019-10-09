@@ -17,6 +17,7 @@ const LogoContainer = styled.div`
 
 const LogoImage = styled.img`
     max-width: 200px;
+    height: unset !important;
 `;
 
 const DigitalOceanPartnerLogo = () => (
