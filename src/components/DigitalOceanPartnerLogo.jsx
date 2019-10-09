@@ -1,16 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from '../styles/theme';
+
+const { mediaQueryMin } = theme;
 
 const partnerLogo = require('../images/img/content/do-partner-logo.png');
 
 const LogoContainer = styled.div`
-    display: flex;
-    justify-content: right;
-    /* margin-top: 20px; */
+    margin-top: 20px;
+    @media (${mediaQueryMin.md}) {
+        margin-top: 0;
+        display: flex;
+        justify-content: right;
+    }
 `;
 
 const LogoImage = styled.img`
-    /* margin-left: 5%; */
     max-width: 200px;
 `;
 
