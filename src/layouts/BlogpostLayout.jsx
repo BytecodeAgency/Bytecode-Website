@@ -18,9 +18,9 @@ const BlogSingle = ({ content }) => (
             <ArticleHeader>
                 <SubtitleContainer>
                     <Subtitle>{content.catergory_name}</Subtitle>
-                    <Small>
+                    <ReadingTime>
                         &nbsp;&nbsp;&#47;&#47; {content.reading_time} min. read
-                    </Small>
+                    </ReadingTime>
                 </SubtitleContainer>
                 <Title>{content.title}</Title>
                 <ArticleImageWrapper>
@@ -82,6 +82,7 @@ const Article = styled.article`
     h6 {
         margin-top: 0.66em;
         margin-bottom: 0.33em;
+        font-weight: ${theme.fontWeights.regular};
     }
     p {
         line-height: 1.5em;
@@ -89,7 +90,7 @@ const Article = styled.article`
         font-weight: ${theme.fontWeights.light};
         b,
         strong {
-            font-weight: 400;
+            font-weight: ${theme.fontWeights.regular};
         }
     }
 `;
@@ -172,7 +173,7 @@ const InformationItem = styled.li`
 const SubtitleContainer = styled.div`
     display: flex;
     text-transform: uppercase;
-    align-items: self-end;
+    align-items: flex-end;
     padding: 0 1em;
     span,
     p {
@@ -181,13 +182,18 @@ const SubtitleContainer = styled.div`
     }
 `;
 
+const ReadingTime = styled(Small)`
+    margin-bottom: 2px;
+`;
+
 const ArticleImage = styled.img``;
 
 const CallToActionContainer = styled.div`
-    margin: 4rem;
+    margin: 2rem 4rem;
 `;
 
 const CallToActionText = styled.p`
+    font-weight: ${theme.fontWeights.regular} !important;
     font-style: italic;
     color: ${theme.colors.lightgray} !important;
 `;
