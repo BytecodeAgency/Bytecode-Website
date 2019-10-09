@@ -14,7 +14,6 @@ export const Small = styled.span`
 export const Subtitle = styled.h6`
     size: '0.85rem';
     height: '1.2em';
-    /* spacing: '0.35em'; */
     font-family: ${fonts.paragraph};
     font-weight: ${fontWeights.bold};
     color: ${theme.colors.primary};

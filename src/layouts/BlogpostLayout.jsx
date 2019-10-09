@@ -7,7 +7,7 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import Layout from './MainLayout';
 import theme from '../styles/theme';
 import Author from '../containers/Author/Author';
-import { Subtitle, Small } from '../components/Typography';
+import { Big, Subtitle, Small } from '../components/Typography';
 import ContactForm from '../containers/ContactForm/ContactForm';
 
 const { mediaQueryMin, colors } = theme;
@@ -42,6 +42,7 @@ const BlogSingle = ({ content }) => (
                 </MetaData>
             </ArticleHeader>
             <BlogContent>
+                <ArticleIntro>{content.article_intro}</ArticleIntro>
                 <MDXRenderer>{content.post_content}</MDXRenderer>
                 <CallToAction />
             </BlogContent>
@@ -86,6 +87,10 @@ const Article = styled.article`
         line-height: 1.5em;
         letter-spacing: 0.015em;
         font-weight: ${theme.fontWeights.light};
+        b,
+        strong {
+            font-weight: 400;
+        }
     }
 `;
 
@@ -135,6 +140,11 @@ const BlogContent = styled.div`
 const Title = styled.h1`
     margin: 0.44em !important;
     padding: 0 0.33em;
+`;
+
+const ArticleIntro = styled(Big)`
+    margin-bottom: 1em;
+    line-height: 1.22em !important;
 `;
 
 const MetaData = styled.div`
