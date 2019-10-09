@@ -1,11 +1,21 @@
 import styled from 'styled-components';
+import theme from '../styles/theme';
 
-const Big = styled.span`
+const { fontWeights, fonts } = theme;
+
+export const Big = styled.span`
     font-size: 1.33em;
 `;
 
-const Small = styled.span`
+export const Small = styled.span`
     font-size: 0.66em;
 `;
 
-export { Big, Small };
+export const Subtitle = styled.h6`
+    size: '0.85rem';
+    height: '1.2em';
+    /* spacing: '0.35em'; */
+    font-family: ${fonts.paragraph};
+    font-weight: ${fontWeights.bold};
+    color: ${theme.colors.primary};
+`;

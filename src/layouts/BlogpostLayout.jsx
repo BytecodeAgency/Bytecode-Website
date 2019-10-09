@@ -1,18 +1,55 @@
 /* eslint-disable @typescript-eslint/camelcase */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import Layout from './MainLayout';
 import theme from '../styles/theme';
-import TextBlock from '../containers/TextBlock/TextBlock';
-import { Container, Row, Col } from '../lib/Grid';
 import Author from '../containers/Author/Author';
-import { Big, Small } from '../components/Typography';
+import { Subtitle, Small } from '../components/Typography';
+import ContactForm from '../containers/ContactForm/ContactForm';
 
 const { mediaQueryMin, colors } = theme;
-const { fonts, fontWeights } = theme;
+
+const BlogSingle = ({ content }) => (
+    <Layout pageSettings={content.pageSettings}>
+        <Article>
+            <ArticleHeader>
+                <SubtitleContainer>
+                    <Subtitle>{content.catergory_name}</Subtitle>
+                    <Small>
+                        &nbsp;&nbsp;&#47;&#47; {content.reading_time} min. read
+                    </Small>
+                </SubtitleContainer>
+                <Title>{content.title}</Title>
+                <ArticleImageWrapper>
+                    <ArticleImage
+                        src={require(`../images/img/articles/${content.article_image_url}`)}
+                    />
+                </ArticleImageWrapper>
+                <MetaData>
+                    <Author
+                        name={content.author_name}
+                        title={content.author_role}
+                        img={content.author_image_url}
+                    />
+                    <Information>
+                        <InformationItem>
+                            <Small>Gepubliceerd op {content.posted_on}</Small>
+                        </InformationItem>
+                    </Information>
+                </MetaData>
+            </ArticleHeader>
+            <BlogContent>
+                <MDXRenderer>{content.post_content}</MDXRenderer>
+                <CallToAction />
+            </BlogContent>
+        </Article>
+    </Layout>
+);
+
+export default BlogSingle;
 
 const CallToAction = () => (
     <CallToActionContainer>
@@ -28,51 +65,120 @@ const CallToAction = () => (
             betekenen? <a href="/contact">Neem gerust contact met ons op</a> of
             kom een keer langs op de koffie!
         </CallToActionText>
+        <ContactForm />
     </CallToActionContainer>
 );
 
-const BlogSingle = ({ content }) => (
-    <Layout pageSettings={content.pageSettings}>
-        <article>
-            <HeaderContainer
-                background={require(`../images/img/articles/${content.article_image_url}`)}
-            >
-                <Container>
-                    <Row>
-                        <Col offset={{ lg: 2 }} lg={8} md={12}>
-                            <TextBlock
-                                subtitle={content.catergory_name}
-                                title={content.title}
-                            />
-                            <BlogMetaDataWrapper>
-                                <Author
-                                    name={content.author_name}
-                                    title={content.author_role}
-                                    img={content.author_image_url}
-                                />
-                                <BlogMetaData>
-                                    {content.posted_on} <br />
-                                    <ReadingTime>{content.reading_time} min. read</ReadingTime>
-                                </BlogMetaData>
-                            </BlogMetaDataWrapper>
-                        </Col>
-                    </Row>
-                </Container>
-            </HeaderContainer>
-            <Container>
-                <BlogContent>
-                    <div id="blogpost-content">
-                        <ArticleIntro>{content.article_intro}</ArticleIntro>
-                        <MDXRenderer>{content.post_content}</MDXRenderer>
-                    </div>
-                    <CallToAction />
-                </BlogContent>
-            </Container>
-        </article>
-    </Layout>
-);
+const Article = styled.article`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 0.66em;
+        margin-bottom: 0.33em;
+    }
+    p {
+        line-height: 1.5em;
+    }
+`;
 
-export default BlogSingle;
+const ArticleHeader = styled.header`
+    max-width: 40em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & > * {
+        width: 100%;
+    }
+    &:before {
+        content: '';
+        background: ${colors.mediumgray};
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 35em;
+        z-index: -1;
+    }
+    @media (${mediaQueryMin.sm}) {
+        margin-top: 5vh;
+        &:before {
+            height: 75vh;
+        }
+    }
+`;
+
+const ArticleImageWrapper = styled.figure`
+    width: 125%;
+    margin: 0.66em 0;
+`;
+
+const BlogContent = styled.div`
+    max-width: 40em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    & > * {
+        width: 100%;
+    }
+`;
+
+const Title = styled.h1`
+    margin: 0.44em !important;
+    padding: 0 0.33em;
+`;
+
+const MetaData = styled.div`
+    padding: 0 1em;
+    display: flex;
+    flex-direction: row;
+    @media (${mediaQueryMin.xs}) {
+        flex-direction: row;
+    }
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+const Information = styled.li`
+    list-style: none;
+`;
+
+const InformationItem = styled.li`
+    line-height: 0.7em;
+    margin: 0;
+    color: ${colors.lightgray};
+`;
+
+const SubtitleContainer = styled.div`
+    display: flex;
+    text-transform: uppercase;
+    align-items: self-end;
+    padding: 0 1em;
+    span,
+    p {
+        opacity: 0.3;
+        color: ${colors.lightgray};
+    }
+`;
+
+const ArticleImage = styled.img``;
+
+const CallToActionContainer = styled.div`
+    margin: 4rem;
+`;
+
+const CallToActionText = styled.p`
+    font-style: italic;
+    color: ${theme.colors.lightgray} !important;
+`;
 
 BlogSingle.propTypes = {
     content: PropTypes.shape({
@@ -93,103 +199,3 @@ BlogSingle.propTypes = {
         post_content: PropTypes.string.isRequired,
     }).isRequired,
 };
-
-const HeaderContainer = styled.header`
-    padding: 20em 2% 2%;
-    background-color: ${theme.colors.mediumgray};
-    background-image: url(${props => props.background});
-    background-blend-mode: soft-light;
-    background-size: cover;
-    background-position: center center;
-    opacity: 60%;
-`;
-
-const BlogContent = styled.div`
-    @media (${mediaQueryMin.sm}) {
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p {
-            padding: 0 15vw;
-        }
-        img,
-        figure,
-        svg {
-            padding: 0 5vw;
-        }
-        ol,
-        ul {
-            list-style-position: outside;
-            margin: 0;
-        }
-    }
-
-    ul {
-        list-style: circle;
-    }
-    ol {
-        list-style: decimal;
-    }
-    ol,
-    ul {
-        list-style-position: outside;
-    }
-    a {
-        color: ${colors.primary};
-    }
-    img,
-    figure,
-    svg {
-        margin: 2em 0;
-    }
-`;
-
-const BlogMetaDataWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-content: flex-end;
-    margin-top: 6rem;
-    font-size: 0.66em;
-    line-height: 1em;
-    @media (max-width: ${theme.breakpointMobileMenu}) {
-        margin-top: 2.4rem;
-    }
-`;
-
-const BlogMetaData = styled.p`
-    text-align: right;
-    display: flex;
-    align-self: center;
-    max-width: 20rem;
-    @media (max-width: ${theme.breakpointMobileMenu}) {
-        display: none;
-    }
-`;
-
-const CallToActionContainer = styled.div`
-    margin-top: 4rem;
-`;
-
-const CallToActionText = styled.p`
-    font-style: italic;
-    color: ${theme.colors.lightgray} !important;
-`;
-
-const ArticleIntro = styled(Big)`
-    margin-bottom: 1em;
-    line-height: 1.22em !important;
-`;
-
-const ReadingTime = Small;
-
-const Subtitle = styled.h6`
-    size: '0.85rem',
-    height: '1.2em',
-    spacing: '0.35em',
-    font: ${fonts.paragraph},
-    weight: ${fontWeights.bold},
-    color: ${colors.primary},
-`;
