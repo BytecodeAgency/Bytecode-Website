@@ -103,7 +103,7 @@ const ArticleHeader = styled.header`
     & > * {
         width: 100%;
     }
-    &:before {
+    &::before {
         content: '';
         background: ${colors.mediumgray};
         position: absolute;
@@ -114,9 +114,9 @@ const ArticleHeader = styled.header`
         height: 35em;
         z-index: -1;
     }
-    @media (${mediaQueryMin.sm}) {
+    @media (${mediaQueryMin.md}) {
         margin-top: 5vh;
-        &:before {
+        &::before {
             height: 75vh;
         }
     }
