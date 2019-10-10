@@ -16,8 +16,7 @@ import {
     ArticleImageWrapper,
     ArticleImage,
     MetaData,
-    Information,
-    InformationItem,
+    PublishedOnContainer,
     BlogContent,
     ArticleIntro,
     CallToActionContainer,
@@ -46,11 +45,9 @@ const BlogSingle = ({ content }) => (
                         title={content.author_role}
                         img={content.author_image_url}
                     />
-                    <Information>
-                        <InformationItem>
-                            <Small>Gepubliceerd op {content.posted_on}</Small>
-                        </InformationItem>
-                    </Information>
+                    <PublishedOnContainer>
+                        <Small>Gepubliceerd op {content.posted_on}</Small>
+                    </PublishedOnContainer>
                 </MetaData>
             </ArticleHeader>
             <BlogContent>

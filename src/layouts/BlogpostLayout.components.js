@@ -86,22 +86,18 @@ export const MetaData = styled.div`
     padding: 0 1em;
     display: flex;
     flex-direction: row;
-    @media (${mediaQueryMin.xs}) {
-        flex-direction: row;
-    }
-    width: 100%;
     justify-content: space-between;
     align-items: center;
 `;
 
-export const Information = styled.li`
-    list-style: none;
-`;
-
-export const InformationItem = styled.li`
+export const PublishedOnContainer = styled.div`
     line-height: 0.7em;
     margin: 0;
     color: ${colors.lightgray};
+    max-width: 5em;
+    @media (${mediaQueryMin.md}) {
+        max-width: unset;
+    }
 `;
 
 export const SubtitleContainer = styled.div`
