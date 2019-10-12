@@ -15,10 +15,9 @@ const paragraph = 'Lato';
 const menu = 'Cousine';
 
 // Font weights
+const light = 300;
 const regular = 400;
 const bold = 700;
-const medium = 500;
-const extrabold = 900;
 
 // Global Header settings
 const GlobalHeadingSettings = {
@@ -40,6 +39,16 @@ const bytecode = {
         mediumgray,
         lightgray,
         white,
+    },
+    fonts: {
+        heading,
+        paragraph,
+        menu,
+    },
+    fontWeights: {
+        light,
+        regular,
+        bold,
     },
     typography: {
         body: {

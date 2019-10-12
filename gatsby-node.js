@@ -42,6 +42,7 @@ exports.createPages = async ({ actions, graphql }) => {
                             catergory_name
                             category_slug
                             reading_time
+                            article_intro
                         }
                         code {
                             body
