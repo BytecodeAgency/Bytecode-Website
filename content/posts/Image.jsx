@@ -28,5 +28,9 @@ export default Image;
 Image.propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
 };
+
+Image.defaultProps = {
+    title: '',
+}
