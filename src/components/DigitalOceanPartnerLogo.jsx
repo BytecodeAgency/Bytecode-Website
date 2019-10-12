@@ -8,9 +8,9 @@ const partnerLogo = require('../images/img/content/do-partner-logo.png');
 
 const LogoContainer = styled.div`
     margin-top: 20px;
-    @media (${mediaQueryMin.md}) {
+    @media (${mediaQueryMin.sm}) {
         margin-top: 0;
-        display: flex;
+        display: grid;
         justify-content: right;
     }
 `;
