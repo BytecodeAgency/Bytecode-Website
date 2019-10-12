@@ -23,9 +23,8 @@ const HeadElements = () => (
     <Helmet>
         <meta name="robots" content="index, follow" />
         <link type="text/plain" rel="author" href="/humans.txt" />
-        <link rel="stylesheet" href="https://use.typekit.net/kcu2skl.css" />
         <link
-            href="https://fonts.googleapis.com/css?family=Cousine"
+            href="https://fonts.googleapis.com/css?family=Cousine|Lato:300,400,700&display=swap"
             rel="stylesheet"
         />
     </Helmet>

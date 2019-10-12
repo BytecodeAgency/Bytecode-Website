@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TextBlock from '../TextBlock/TextBlock';
-import { Icon, ServiceIcon, ServiceWrapper } from './Service.components';
+import {
+    Icon,
+    ServiceIcon,
+    ServiceWrapper,
+    ServiceText,
+} from './Service.components';
 
 const Service = ({ children, iconName, title, fullWidth }) => {
     const iconSrc = require(`../../images/icons/services/${iconName}.svg`);
@@ -10,11 +15,11 @@ const Service = ({ children, iconName, title, fullWidth }) => {
             <ServiceIcon>
                 <Icon src={iconSrc} alt={iconName} />
             </ServiceIcon>
-            <div>
+            <ServiceText>
                 <TextBlock title={title} headingType="h3">
                     {children}
                 </TextBlock>
-            </div>
+            </ServiceText>
         </ServiceWrapper>
     );
 };

@@ -2,15 +2,64 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import Layout from './MainLayout';
-import theme from '../styles/theme';
-import TextBlock from '../containers/TextBlock/TextBlock';
-import { Container, Row, Col } from '../lib/Grid';
 import Author from '../containers/Author/Author';
+import { Subtitle, Small } from '../components/Typography';
+import ContactForm from '../containers/ContactForm/ContactForm';
+import {
+    Article,
+    ArticleHeader,
+    SubtitleContainer,
+    ReadingTime,
+    Title,
+    ArticleImageWrapper,
+    ArticleImage,
+    MetaData,
+    PublishedOnContainer,
+    BlogContent,
+    ArticleIntro,
+    CallToActionContainer,
+    CallToActionText,
+} from './BlogpostLayout.components';
 
-const { mediaQueryMin, colors } = theme;
+const BlogSingle = ({ content }) => (
+    <Layout pageSettings={content.pageSettings}>
+        <Article>
+            <ArticleHeader>
+                <SubtitleContainer>
+                    <Subtitle>{content.catergory_name}</Subtitle>
+                    <ReadingTime>
+                        &nbsp;&nbsp;&#47;&#47; {content.reading_time} min. read
+                    </ReadingTime>
+                </SubtitleContainer>
+                <Title>{content.title}</Title>
+                <ArticleImageWrapper>
+                    <ArticleImage
+                        src={require(`../images/img/articles/${content.article_image_url}`)}
+                    />
+                </ArticleImageWrapper>
+                <MetaData>
+                    <Author
+                        name={content.author_name}
+                        title={content.author_role}
+                        img={content.author_image_url}
+                    />
+                    <PublishedOnContainer>
+                        <Small>Gepubliceerd op {content.posted_on}</Small>
+                    </PublishedOnContainer>
+                </MetaData>
+            </ArticleHeader>
+            <BlogContent>
+                <ArticleIntro>{content.article_intro}</ArticleIntro>
+                <MDXRenderer>{content.post_content}</MDXRenderer>
+                <CallToAction />
+            </BlogContent>
+        </Article>
+    </Layout>
+);
+
+export default BlogSingle;
 
 const CallToAction = () => (
     <CallToActionContainer>
@@ -26,50 +75,9 @@ const CallToAction = () => (
             betekenen? <a href="/contact">Neem gerust contact met ons op</a> of
             kom een keer langs op de koffie!
         </CallToActionText>
+        <ContactForm />
     </CallToActionContainer>
 );
-
-const BlogSingle = ({ content }) => (
-    <Layout pageSettings={content.pageSettings}>
-        <article>
-            <HeaderContainer
-                background={require(`../images/img/articles/${content.article_image_url}`)}
-            >
-                <Container>
-                    <Row>
-                        <Col offset={{ lg: 2 }} lg={8} md={12}>
-                            <TextBlock
-                                subtitle={content.catergory_name}
-                                title={content.title}
-                            />
-                            <BlogMetaDataWrapper>
-                                <Author
-                                    name={content.author_name}
-                                    title={content.author_role}
-                                    img={content.author_image_url}
-                                />
-                                <BlogMetaData>
-                                    {content.posted_on} <br />
-                                    {content.reading_time} min. read
-                                </BlogMetaData>
-                            </BlogMetaDataWrapper>
-                        </Col>
-                    </Row>
-                </Container>
-            </HeaderContainer>
-            <Container>
-                <BlogContent>
-                    <div id="blogpost-content">
-                        <MDXRenderer>{content.post_content}</MDXRenderer>
-                    </div>
-                    <CallToAction />
-                </BlogContent>
-            </Container>
-        </article>
-    </Layout>
-);
-
-export default BlogSingle;
 
 BlogSingle.propTypes = {
     content: PropTypes.shape({
@@ -86,90 +94,7 @@ BlogSingle.propTypes = {
         author_image_url: PropTypes.string.isRequired,
         posted_on: PropTypes.string.isRequired,
         reading_time: PropTypes.string.isRequired,
+        article_intro: PropTypes.string.isRequired,
         post_content: PropTypes.string.isRequired,
     }).isRequired,
 };
-
-const HeaderContainer = styled.header`
-    padding: 20em 2% 2%;
-    background-color: ${theme.colors.mediumgray};
-    background-image: url(${props => props.background});
-    background-blend-mode: soft-light;
-    background-size: cover;
-    background-position: center center;
-    opacity: 60%;
-`;
-
-const BlogContent = styled.div`
-    @media (${mediaQueryMin.sm}) {
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p {
-            padding: 0 15vw;
-        }
-        img,
-        figure,
-        svg {
-            padding: 0 5vw;
-        }
-        ol,
-        ul {
-            list-style-position: outside;
-            margin: 0;
-        }
-    }
-
-    ul {
-        list-style: circle;
-    }
-    ol {
-        list-style: decimal;
-    }
-    ol,
-    ul {
-        list-style-position: outside;
-    }
-    a {
-        color: ${colors.primary};
-    }
-    img,
-    figure,
-    svg {
-        margin: 2em 0;
-    }
-`;
-
-const BlogMetaDataWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-content: flex-end;
-    margin-top: 6rem;
-    font-size: 0.66em;
-    line-height: 1em;
-    @media (max-width: ${theme.breakpointMobileMenu}) {
-        margin-top: 2.4rem;
-    }
-`;
-
-const BlogMetaData = styled.p`
-    text-align: right;
-    display: flex;
-    align-self: center;
-    max-width: 20rem;
-    @media (max-width: ${theme.breakpointMobileMenu}) {
-        display: none;
-    }
-`;
-
-const CallToActionContainer = styled.div`
-    margin-top: 4rem;
-`;
-
-const CallToActionText = styled.p`
-    font-style: italic;
-    color: ${theme.colors.lightgray} !important;
-`;
