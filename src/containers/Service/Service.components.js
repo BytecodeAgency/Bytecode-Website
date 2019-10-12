@@ -33,16 +33,13 @@ export const ServiceWrapper = styled.div`
 export const ServiceIcon = styled.div`
     margin: 0 3em 0 0;
     transform: translateY(0.1em);
-    flex-basis: 25%;
-    width: 20%;
+    width: 120px;
     @media (${mediaQueryMin.sm}) {
         margin: 0 3em 0 0;
         min-height: 100%;
-        flex-basis: 25%;
-        width: 20%;
     }
-    @media (${mediaQueryMin.md}) {
-        flex-basis: 15%;
-        min-width: 15%;
-    }
+`;
+
+export const ServiceText = styled.div`
+    flex: 1;
 `;
