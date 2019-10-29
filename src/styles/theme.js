@@ -101,7 +101,8 @@ const bytecode = {
             marginBottom: '0.33em',
         },
         p: {
-            spacing: '0em',
+            spacing: '0.015em',
+            height: '1.5em',
             font: paragraph,
             weight: regular,
             color: lightgray,
