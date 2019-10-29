@@ -60,7 +60,7 @@ const CaseHeader = styled.header`
     margin-bottom: 3em;
 `;
 
-const temp = require('../../images/img/cases/styr/sample.webp');;
+const temp = require('../../images/img/cases/styr/sample.webp');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
