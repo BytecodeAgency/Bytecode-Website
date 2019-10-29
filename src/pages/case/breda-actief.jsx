@@ -76,11 +76,11 @@ const Case = () => (
                 <Col lg={5}>
                     <p>
                         <Big>
-                            Stichting Breda Actief&#39;s missie is om alle inwoners
-                            van Breda de mogelijkheid te geven om te kunnen met
-                            sport en beweging. Naar dit doel wordt gestreefd
-                            door middel van het aanbieden van onder andere
-                            sport- en beweegmomenten, het inzetten van
+                            Stichting Breda Actief&#39;s missie is om alle
+                            inwoners van Breda de mogelijkheid te geven om te
+                            kunnen met sport en beweging. Naar dit doel wordt
+                            gestreefd door middel van het aanbieden van onder
+                            andere sport- en beweegmomenten, het inzetten van
                             sportcoaches, het aanbieden van advies, en het
                             helpen zoeken naar sportmogelijkheden voor mensen
                             met een beperking.
