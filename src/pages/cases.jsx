@@ -11,9 +11,9 @@ const pageSettings = {
     keywords: 'website,applicatie,portfolio',
 };
 
-const mooiwerkImg = require('../images/img/cases/styr/sample.webp');
-const styrImg = require('../images/img/cases/styr/sample.webp');
-const bredaImg = require('../images/img/cases/styr/sample.webp');
+const mooiwerkImg = require('../images/img/cases/mooiwerkbreda/website-1.png');
+const styrImg = require('../images/img/cases/styr/website-2.png');
+const bredaImg = require('../images/img/cases/breda-actief/website-1.jpg');
 
 const Cases = () => (
     <Layout pageSettings={pageSettings}>
@@ -31,7 +31,7 @@ const Cases = () => (
         <Container>
             <Row>
                 <PostThumbnail
-                    title="Functiewaardering in 2019"
+                    title="STYR: Functiewaardering in 2019"
                     category="Website"
                     slug="/case/styr"
                     postImageUrl={styrImg}

@@ -163,45 +163,41 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={temp}>
-                <h2>Oplossing</h2>
-                <p>
-                    <Big>
-                        Om Breda Actief zo goed mogelijk te helpen bij het
-                        neerzetten van een succesvolle website, hebben we
-                        besloten het volgende als oplossing te bieden, om bij te
-                        dragen aan de online groei en de prachtige gestelde
-                        doelen.
-                    </Big>
-                </p>
-                <Checklist>
-                    <CheckListItem>
-                        Het platform met verschillende contentblokken
-                        ontwikkelen, die gebruikt worden voor het opbouwen van
-                        de pagina’s
-                    </CheckListItem>
-                    <CheckListItem>
-                        Door de contentblokken kan de content makkelijk beheerd
-                        worden, zonder problemen voor de layout
-                    </CheckListItem>
-                    <CheckListItem>
-                        De inhoud van de blokken wordt ingeladen in ee maatwerk
-                        Wordpress thema, zodat alle elementen goed toegankelijk
-                        zijn, zelfs voor mensen met een screenreader of
-                        gebruikers die geen muis kunnen bedienen
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een grote rol voor semantische HTML, iets wat
-                        pagebuilders of templates vaak niet kunnen leveren
-                    </CheckListItem>
-                    <CheckListItem>
-                        oor het juridische deel van de website hebben we een
-                        multisite opgeze, met als positieve consequentie dat de
-                        styling van beide sites zonder dubbel werk aangepast kan
-                        worden
-                    </CheckListItem>
-                </Checklist>
-            </TextAndImage>
+            <h2>Oplossing</h2>
+            <p>
+                <Big>
+                    Om Breda Actief zo goed mogelijk te helpen bij het
+                    neerzetten van een succesvolle website, hebben we besloten
+                    het volgende als oplossing te bieden, om bij te dragen aan
+                    de online groei en de prachtige gestelde doelen.
+                </Big>
+            </p>
+            <Checklist>
+                <CheckListItem>
+                    Het platform met verschillende contentblokken ontwikkelen,
+                    die gebruikt worden voor het opbouwen van de pagina’s
+                </CheckListItem>
+                <CheckListItem>
+                    Door de contentblokken kan de content makkelijk beheerd
+                    worden, zonder problemen voor de layout
+                </CheckListItem>
+                <CheckListItem>
+                    De inhoud van de blokken wordt ingeladen in ee maatwerk
+                    Wordpress thema, zodat alle elementen goed toegankelijk
+                    zijn, zelfs voor mensen met een screenreader of gebruikers
+                    die geen muis kunnen bedienen
+                </CheckListItem>
+                <CheckListItem>
+                    Een grote rol voor semantische HTML, iets wat pagebuilders
+                    of templates vaak niet kunnen leveren
+                </CheckListItem>
+                <CheckListItem>
+                    oor het juridische deel van de website hebben we een
+                    multisite opgeze, met als positieve consequentie dat de
+                    styling van beide sites zonder dubbel werk aangepast kan
+                    worden
+                </CheckListItem>
+            </Checklist>
         </Container>
         <Container fluid>
             <TextAndImage img={temp} alt="alt" fluid reverse>

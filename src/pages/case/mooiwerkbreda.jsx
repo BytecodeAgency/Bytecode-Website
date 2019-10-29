@@ -50,7 +50,7 @@ CheckListItem.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-const testImg2 = require('../../images/img/cases/styr/sample.webp');
+const testImg2 = require('../../images/img/cases/mooiwerkbreda/website-1.png');
 
 const CaseHeader = styled.header`
     background: url("${props => props.img}"), ${theme.colors.secondary};
@@ -60,7 +60,7 @@ const CaseHeader = styled.header`
     margin-bottom: 3em;
 `;
 
-const temp = require('../../images/img/cases/styr/sample.webp');
+const temp = require('../../images/img/cases/mooiwerkbreda/website-1.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
@@ -76,7 +76,6 @@ const Case = () => (
                 <Col lg={5}>
                     <p>
                         <Big>
-                            {' '}
                             Dit is een opzetje voor een case pagina. Op deze
                             pagina staan elementen die je kan gebruiken.
                             Daarnaast kan je ook zelf composities maken met het
@@ -94,7 +93,6 @@ const Case = () => (
             <h2>Een high end shopbeleving</h2>
             <p>
                 <Big>
-                    {' '}
                     hebben Côte et Ciel in samenwerking met The Pumphouse
                     geholpen om hun user flow te verbeteren.
                 </Big>
@@ -121,7 +119,6 @@ const Case = () => (
             <h2>Een high end shopbeleving</h2>
             <p>
                 <Big>
-                    {' '}
                     hebben Côte et Ciel in samenwerking met The Pumphouse
                     geholpen om hun user flow te verbeteren.
                 </Big>
@@ -151,7 +148,6 @@ const Case = () => (
                 <h2>Leg de focus op de webwinkel</h2>
                 <p>
                     <Big>
-                        {' '}
                         hebben Côte et Ciel in samenwerking met The Pumphouse
                         geholpen om hun user flow te verbeteren.
                     </Big>
@@ -180,7 +176,6 @@ const Case = () => (
                 <h2>Leg de focus op de webwinkel</h2>
                 <p>
                     <Big>
-                        {' '}
                         hebben Côte et Ciel in samenwerking met The Pumphouse
                         geholpen om hun user flow te verbeteren.
                     </Big>
