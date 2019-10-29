@@ -6,56 +6,42 @@ import { Container, Row } from '../lib/Grid';
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 
 const pageSettings = {
-    title: 'Cases',
-    description: 'Hier de omschrijving',
-    keywords: 'tag1,tag2',
+    title: 'Work',
+    description: 'Bekijk hier ons werk!',
+    keywords: 'website,applicatie,portfolio',
 };
 
-const testImg = require('../images/img/content/team.png');
-const testImg2 = require('../images/img/content/cases/cote-et-ciel/website2.png');
+const mooiwerkImg = require('../images/img/cases/styr/sample.webp');
+const styrImg = require('../images/img/cases/styr/sample.webp');
+const bredaImg = require('../images/img/cases/styr/sample.webp');
 
 const Cases = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
             <Row>
                 <PostThumbnail
-                    title="How we made breda collaborate"
-                    category="Test"
+                    title="Hoe we Breda dichter bij elkaar brachten"
+                    category="Website"
                     big
-                    slug="/case"
-                    postImageUrl={testImg2}
+                    slug="/case/mooiwerkbreda"
+                    postImageUrl={mooiwerkImg}
                 />
             </Row>
         </Container>
         <Container>
             <Row>
                 <PostThumbnail
-                    title="How we made breda collaborate"
-                    category="Test"
-                    postImageUrl={testImg}
+                    title="Functiewaardering in 2019"
+                    category="Website"
+                    slug="/case/styr"
+                    postImageUrl={styrImg}
                 />
-                <PostThumbnail />
-                <PostThumbnail />
-            </Row>
-        </Container>
-        <Container>
-            <Row>
                 <PostThumbnail
-                    title="How we made breda collaborate"
-                    category="Test"
-                    big
+                    title="Breda in beweging!"
+                    category="Website"
+                    slug="/case/breda-actief"
+                    postImageUrl={bredaImg}
                 />
-            </Row>
-        </Container>
-        <Container>
-            <Row>
-                <PostThumbnail
-                    title="How we made breda collaborate"
-                    category="Test"
-                    postImageUrl={testImg}
-                />
-                <PostThumbnail />
-                <PostThumbnail />
             </Row>
         </Container>
     </Layout>

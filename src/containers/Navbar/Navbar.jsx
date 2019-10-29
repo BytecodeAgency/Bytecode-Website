@@ -67,7 +67,7 @@ class Navbar extends React.Component {
                         <NavbarItem href="/services" text="Services" />
                         <NavbarItem href="/cases" text="Work" />
                         <NavbarItem href="/insights" text="Insights" />
-                        <NavbarItem href="/over" text="Over" />
+                        <NavbarItem href="/over" text="About" />
                         <NavbarItem href="/contact" text="Contact" />
                     </NavbarItems>
                 </NavbarContent>
