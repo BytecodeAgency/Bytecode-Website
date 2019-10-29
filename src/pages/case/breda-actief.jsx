@@ -50,7 +50,7 @@ CheckListItem.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-const testImg2 = require('../../images/img/cases/styr/sample.webp');
+const testImg2 = require('../../images/img/cases/breda-actief/website-1.jpg');
 
 const CaseHeader = styled.header`
     background: url("${props => props.img}"), ${theme.colors.secondary};
@@ -60,7 +60,7 @@ const CaseHeader = styled.header`
     margin-bottom: 3em;
 `;
 
-const temp = require('../../images/img/cases/styr/sample.webp');;
+const temp = require('../../images/img/cases/breda-actief/website-1.jpg');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
@@ -70,138 +70,110 @@ const Case = () => (
         <Container>
             <Row align="center">
                 <Col offset={{ lg: 1 }} lg={5}>
-                    <p className="subtitle">Côte & Ciel</p>
-                    <h1>Een high end shopbeleving</h1>
+                    <p className="subtitle">Breda Actief</p>
+                    <h1>Brengt Breda in beweging</h1>
                 </Col>
                 <Col lg={5}>
                     <p>
                         <Big>
                             {' '}
-                            Dit is een opzetje voor een case pagina. Op deze
-                            pagina staan elementen die je kan gebruiken.
-                            Daarnaast kan je ook zelf composities maken met het
-                            react grid. Ben benieuwd wat jullie ermee doen. Als
-                            je het idee hebt dat je bepaalde informatie niet
-                            handig/goed/mooi kan noteren: geef dat even bij mij
-                            aan. Dan kan ik daarvoor weer verder ontwerpen
+                            Stichting Breda Actief's missie is om alle inwoners van Breda de mogelijkheid te geven om te kunnen met sport en beweging. Naar dit doel wordt gestreefd door middel van het aanbieden van onder andere sport- en beweegmomenten, het inzetten van sportcoaches, het aanbieden van advies, en het helpen zoeken naar sportmogelijkheden voor mensen met een beperking.
                         </Big>
                     </p>
                 </Col>
             </Row>
         </Container>
-        <TextAndImage img={temp} alt="alt tag" fluid>
-            <p className="subtitle">Ontdekking</p>
-            <h2>Een high end shopbeleving</h2>
-            <p>
-                <Big>
-                    {' '}
-                    hebben Côte et Ciel in samenwerking met The Pumphouse
-                    geholpen om hun user flow te verbeteren.
-                </Big>
-            </p>
-            <Checklist>
-                <CheckListItem>
-                    Altijd duidelijke en snelle communicatie
-                </CheckListItem>
-                <CheckListItem>
-                    7 dagen per week, binnen een uur, reactie op vragen
-                </CheckListItem>
-                <CheckListItem>
-                    Voor noodgevallen altijd bereikbaar te zijn
-                </CheckListItem>
-                <CheckListItem>
-                    Voor noodgevallen altijd bereikbaar te zijn
-                </CheckListItem>
-                <CheckListItem>
-                    Transparantie en openheid, zonder uitzonderingen
-                </CheckListItem>
-            </Checklist>
-        </TextAndImage>
-        <TextAndImage img={temp} alt="alt" fluid reverse>
-            <h2>Een high end shopbeleving</h2>
-            <p>
-                <Big>
-                    {' '}
-                    hebben Côte et Ciel in samenwerking met The Pumphouse
-                    geholpen om hun user flow te verbeteren.
-                </Big>
-            </p>
-            <Checklist>
-                <CheckListItem>
-                    Altijd duidelijke en snelle communicatie
-                </CheckListItem>
-                <CheckListItem>
-                    7 dagen per week, binnen een uur, reactie op vragen
-                </CheckListItem>
-                <CheckListItem>
-                    Voor noodgevallen altijd bereikbaar te zijn
-                </CheckListItem>
-                <CheckListItem>
-                    Voor noodgevallen altijd bereikbaar te zijn
-                </CheckListItem>
-                <CheckListItem>
-                    Transparantie en openheid, zonder uitzonderingen
-                </CheckListItem>
-            </Checklist>
-        </TextAndImage>
-
+        <Container>
+            <Row align="center">
+                <Col offset={{ lg: 1 }} lg={5}>
+                    <p className="subtitle">Ontdekking</p>
+                    <h2>De uitdaging</h2>
+                    <p>
+                        Voor een maatschappelijk betrokken organisatie zoals stichting Breda Actief is webtoegankelijkheid erg belangrijk om haar doel te bereiken, want als je er voor wilt zorgen dat écht <strong>iedereen</strong> aan het sporten komt moet je er ook voor zorgen dat dan ook <strong>iedereen</strong> de website kan bedienen. Met onderstaande problemen en wensen en het reeds uitgewerkte design zijn we aan de slag gegaan om voor Breda Actief het best mogelijke resulaat te behalen.
+                    </p>
+                </Col>
+                <Col lg={5}>
+                    <Checklist>
+                        <CheckListItem>
+                            Geen <a href="https://nl.wikipedia.org/wiki/Responsive_webdesign">responsive design</a>
+                        </CheckListItem>
+                        <CheckListItem>
+                        Geen vrijheid om de content gemakkelijk aan te passen met de zekerheid dat dit binnen de huisstijl zou gebeuren
+                        </CheckListItem>
+                        <CheckListItem>
+                            Niet volledig toegankelijk voor gebruikers met een beperking
+                        </CheckListItem>
+                        <CheckListItem>
+                            Voldeed niet aan de laatste webstandaarden
+                        </CheckListItem>
+                    </Checklist>
+                </Col>
+            </Row>
+        </Container>
         <Container fluid>
-            <TextAndImage img={temp} alt="alt" reverse>
-                <p className="subtitle">Ontwikkeling</p>
-                <h2>Leg de focus op de webwinkel</h2>
+            <TextAndImage img={temp} alt="alt" fluid reverse>
+                <h2>Proces en techniek</h2>
+                <ol>
+                    <li>Design partner van Breda Actief Studio Maan heeft de website ontworpen en bij ons aangeleverd in Sketch.</li>
+                    <li>Aan de hand van dit design hebben wij, binnen een WordPress maatwerkomgeving, de contentblokken en alle pagina’s uitgewerkt. Op die manier hebben we ervoor gezorgd dat Breda Actief in staat is om de website nu zelf met content te vullen en hiermee bezoekers direct van de juiste informatie te voorzien.</li>
+                    <li>De contentblokken zijn gemaakt met Advanced Custom Fields Pro, en de pagina’s zijn opgebouwd met de Blade templating language binnen het Sage thema van roots.io. De CSS en Javascript worden binnen Sage met NodeJS/Webpack gecompiled.</li>
+                </ol>
                 <p>
                     <Big>
                         {' '}
-                        hebben Côte et Ciel in samenwerking met The Pumphouse
-                        geholpen om hun user flow te verbeteren.
+                        Deze technische tools stellen Breda Actief in staat hun website geheel naar eigen wens in te richten.
+                    </Big>
+                </p>
+            </TextAndImage>
+        </Container>
+        <Container fluid>
+            <TextAndImage img={temp}>
+                <h2>Oplossing</h2>
+                <p>
+                    <Big>
+                        {' '}
+                        Om Breda Actief zo goed mogelijk te helpen bij het neerzetten van een succesvolle website, hebben we besloten het volgende als oplossing te bieden, om bij te dragen aan de online groei en de prachtige gestelde doelen.
                     </Big>
                 </p>
                 <Checklist>
                     <CheckListItem>
-                        Altijd duidelijke en snelle communicatie
+                        Het platform met verschillende contentblokken ontwikkelen, die gebruikt worden voor het opbouwen van de pagina’s
                     </CheckListItem>
                     <CheckListItem>
-                        7 dagen per week, binnen een uur, reactie op vragen
+                        Door de contentblokken kan de content makkelijk beheerd worden, zonder problemen voor de layout
                     </CheckListItem>
                     <CheckListItem>
-                        Voor noodgevallen altijd bereikbaar te zijn
+                        De inhoud van de blokken wordt ingeladen in ee maatwerk Wordpress thema, zodat alle elementen goed toegankelijk zijn, zelfs voor mensen met een screenreader of gebruikers die geen muis kunnen bedienen
                     </CheckListItem>
                     <CheckListItem>
-                        Voor noodgevallen altijd bereikbaar te zijn
+                        Een grote rol voor semantische HTML, iets wat pagebuilders of templates vaak niet kunnen leveren
                     </CheckListItem>
                     <CheckListItem>
-                        Transparantie en openheid, zonder uitzonderingen
+                    oor het juridische deel van de website hebben we een multisite opgeze, met als positieve consequentie dat de styling van beide sites zonder dubbel werk aangepast kan worden
                     </CheckListItem>
                 </Checklist>
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={temp}>
-                <h2>Leg de focus op de webwinkel</h2>
+            <TextAndImage img={temp} alt="alt" fluid reverse>
+                <h2>Resultaten</h2>
                 <p>
                     <Big>
                         {' '}
-                        hebben Côte et Ciel in samenwerking met The Pumphouse
-                        geholpen om hun user flow te verbeteren.
+                        Het resultaat van dit project is te bekijken op breda-actief.nl. In overleg met Stichting Breda Actief is de broncode vrijgegeven onder GPL-3.0 licentie, hier te bekijken.
                     </Big>
                 </p>
-                <Checklist>
-                    <CheckListItem>
-                        Altijd duidelijke en snelle communicatie
-                    </CheckListItem>
-                    <CheckListItem>
-                        7 dagen per week, binnen een uur, reactie op vragen
-                    </CheckListItem>
-                    <CheckListItem>
-                        Voor noodgevallen altijd bereikbaar te zijn
-                    </CheckListItem>
-                    <CheckListItem>
-                        Voor noodgevallen altijd bereikbaar te zijn
-                    </CheckListItem>
-                    <CheckListItem>
-                        Transparantie en openheid, zonder uitzonderingen
-                    </CheckListItem>
-                </Checklist>
+            </TextAndImage>
+        </Container>
+        <Container fluid>
+            <TextAndImage img={temp} alt="Mooiwerk Breda" fluid>
+                <p className="subtitle">Mooiwerk Breda</p>
+                <h1>Brengt Breda dichter bij elkaar</h1>
+                <p>
+                    <Big>
+                        Behalve haar sportieve tak brengt Breda Actief de vrijwilligers en vrijwilligersorganisaties van Breda bij elkaar op haar platform: 'Mooiwerk Breda'. Over hoe Bytecode hier aan bij heeft kunnen dragen lees je <a href="/cases/mooiwerkbreda">hier</a> meer
+                    </Big>
+                </p>
             </TextAndImage>
         </Container>
     </Layout>
