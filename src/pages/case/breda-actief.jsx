@@ -18,7 +18,6 @@ const websiteImg3 = require('../../images/img/cases/breda-actief/website-3.png')
 const websiteImg4 = require('../../images/img/cases/breda-actief/website-4.png');
 const mooiwerkImg = require('../../images/img/cases/mooiwerkbreda/website-1.png');
 
-
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
