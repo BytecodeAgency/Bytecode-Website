@@ -56,8 +56,8 @@ const Case = () => (
                         dit ideaal in gedachte hebben ze een beslisboom gemaakt
                         die de hiervoor genoemde verdeling van werknemers
                         mogelijk maakt. De vraag voor ons bestond voor de
-                        uitwerking van de beslisboom naar een verkoopbaar
-                        softwareproduct, de allocator, met de volgende functies:
+                        uitwerking van de beslisboom naar een verkoopbaarder
+                        en schaalbaarder softwareproduct.
                     </Big>
                 </p>
             </TextAndImage>
