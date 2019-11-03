@@ -109,8 +109,8 @@ const Case = () => (
                 <h2>Proces en technische details</h2>
                 <p>
                     <Big>
-                        Na een kickoff-meeting zijn we begonnen met
-                        een eerste UX design en wireframe voor het allocator platform.
+                        Na een kickoff-meeting zijn we begonnen met een eerste
+                        UX design en wireframe voor het allocator platform.
                         Extra features die op basis van deze wireframes nog
                         gewenst waren zijn toegevoegd.
                     </Big>

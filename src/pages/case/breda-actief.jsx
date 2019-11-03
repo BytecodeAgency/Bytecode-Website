@@ -12,14 +12,17 @@ const pageSettings = {
     keywords: 'breda actief, mooiwerkbreda, case, bytecode digital agency',
 };
 
-const testImg2 = require('../../images/img/cases/breda-actief/website-1.jpg');
+const websiteImg1 = require('../../images/img/cases/breda-actief/website-1.jpg');
+const websiteImg2 = require('../../images/img/cases/breda-actief/website-2.png');
+const websiteImg3 = require('../../images/img/cases/breda-actief/website-3.png');
+const websiteImg4 = require('../../images/img/cases/breda-actief/website-4.png');
+const mooiwerkImg = require('../../images/img/cases/mooiwerkbreda/website-1.png');
 
-const temp = require('../../images/img/cases/breda-actief/website-2.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
-            <CaseHeader img={testImg2} />
+            <CaseHeader img={websiteImg1} />
         </Container>
         <Container>
             <Row align="center">
@@ -44,7 +47,7 @@ const Case = () => (
             </Row>
         </Container>
         <Container fluid>
-            <TextAndImage img={temp} alt="alt" fluid>
+            <TextAndImage img={websiteImg2} alt="alt" fluid>
                 <p className="subtitle">Analyze</p>
                 <h2>De uitdaging</h2>
                 <p>
@@ -60,9 +63,9 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container flluid>
-            <TextAndImage img={temp} alt="alt" fluid reverse>
+            <TextAndImage img={websiteImg3} alt="alt" fluid reverse>
                 <p className="subtitle">Analyze</p>
-                <h2>De verbeterpunten</h2>
+                <h2>De aandachtspunten</h2>
                 <Checklist>
                     <CheckListItem>
                         <a href="https://nl.wikipedia.org/wiki/Responsive_webdesign">
@@ -83,7 +86,7 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={temp} alt="alt" fluid>
+            <TextAndImage img={websiteImg4} alt="alt" fluid>
                 <p className="subtitle">Strategize</p>
                 <h2>Proces en techniek</h2>
                 <ol>
@@ -115,7 +118,7 @@ const Case = () => (
                 </p>
             </TextAndImage>
         </Container>
-        <Container fluid>
+        <Container>
             <Row align="center">
                 <Col lg={6}>
                     <Checklist>
@@ -173,7 +176,7 @@ const Case = () => (
             </Row>
         </Container>
         <Container fluid>
-            <TextAndImage img={temp} alt="Mooiwerk Breda" fluid>
+            <TextAndImage img={mooiwerkImg} alt="Mooiwerk Breda" fluid>
                 <p className="subtitle">Mooiwerk Breda</p>
                 <h1>Brengt Breda dichter bij elkaar</h1>
                 <p>
