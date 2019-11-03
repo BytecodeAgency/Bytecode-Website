@@ -12,13 +12,16 @@ const pageSettings = {
     keywords: 'functiewaardering,online,platform,webapp',
 };
 
-const testImg2 = require('../../images/img/cases/styr/website-2.png');
-const temp = require('../../images/img/cases/styr/website-1.png');
+const designImg1 = require('../../images/img/cases/styr/design-1.png');
+const designImg2 = require('../../images/img/cases/styr/design-2.png');
+const websiteImg1 = require('../../images/img/cases/styr/website-1.png');
+const websiteImg2 = require('../../images/img/cases/styr/website-2.png');
+const websiteImg3 = require('../../images/img/cases/styr/website-3.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
-            <CaseHeader img={testImg2} />
+            <CaseHeader img={websiteImg3} />
         </Container>
         <Container>
             <Row align="center">
@@ -29,41 +32,45 @@ const Case = () => (
                 <Col lg={5}>
                     <p>
                         <Big>
-                            STYR is een consultancybedrijf dat zich
-                            specialiseert in human resources met de missie om
-                            loonschaalindelingen te moderniseren met behulp van
-                            hun eigen STYR model. Met behulp van de STYR
-                            allocator tool kunnen bedrijven effectiever
-                            vacatures opstellen en werknemers waarderen en
-                            indelen binnen zeventien verschillende niveaus. STYR
-                            benaderde ons team voor de uitwerking van dit idee
-                            tot een digitaal platform dat perfect aansluit op
-                            haar klanten.
+                            Een HR consultancybedrijf met een missie:
+                            loonschaalindelingen moderniseren met behulp van het
+                            STYR model.
                         </Big>
+                    </p>
+                    <p>
+                        Door middel van de STYR allocator tool kunnen bedrijven
+                        effectiever vacatures opstellen en werknemers waarderen
+                        en indelen binnen zeventien verschillende niveaus. STYR
+                        benaderde ons team voor de uitwerking van dit idee tot
+                        een digitaal platform dat perfect aansluit op haar
+                        klanten.
                     </p>
                 </Col>
             </Row>
         </Container>
         <Container fluid>
-            <TextAndImage img={temp} alt="alt tag" fluid>
+            <TextAndImage img={websiteImg1} alt="alt tag" fluid>
                 <p className="subtitle">Analyze</p>
                 <h2>De uitdaging</h2>
                 <p>
                     <Big>
                         STYR’s doel is om de zwart/witte loonschalen van vroeger
                         aan de kant te schuiven voor een effectievere oplossing
-                        die met veel meer criteria rekening houdt. Met dit
-                        ideaal in gedachte hebben ze een beslisboom gemaakt die
-                        de hiervoor genoemde verdeling van werknemers mogelijk
-                        maakt. De vraag voor ons bestond voor de uitwerking van
-                        de beslisboom naar een verkoopbaarder en schaalbaarder
-                        softwareproduct.
+                        die met veel meer criteria rekening houdt.
                     </Big>
+                </p>
+                <p>
+                    {' '}
+                    Met dit ideaal in gedachte hebben ze een beslisboom gemaakt
+                    die de hiervoor genoemde verdeling van werknemers mogelijk
+                    maakt. De vraag voor ons bestond voor de uitwerking van de
+                    beslisboom naar een verkoopbaarder en schaalbaarder
+                    softwareproduct.
                 </p>
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={temp} alt="alt tag" fluid reverse>
+            <TextAndImage img={designImg1} alt="alt tag" fluid reverse>
                 <p className="subtitle">Analyze</p>
                 <h2>De functionaliteiten</h2>
                 <Checklist>
@@ -97,15 +104,15 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={temp} alt="alt" fluid>
+            <TextAndImage img={designImg2} alt="alt" fluid>
                 <p className="subtitle">Strategize</p>
                 <h2>Proces en technische details</h2>
                 <p>
                     <Big>
-                        Na een aantal productieve meetings zijn we begonnen met
-                        een eerste UX/UI design voor het allocator platform.
+                        Na een kickoff-meeting zijn we begonnen met
+                        een eerste UX design en wireframe voor het allocator platform.
                         Extra features die op basis van deze wireframes nog
-                        gewenst waren zijn ook toegevoegd.
+                        gewenst waren zijn toegevoegd.
                     </Big>
                     <Big>
                         De frontend van de allocator is gemaakt in React, en
@@ -116,7 +123,7 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={temp} reverse fluid>
+            <TextAndImage img={websiteImg2} reverse fluid>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing</h2>
                 <p>
