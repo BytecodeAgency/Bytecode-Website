@@ -8,7 +8,7 @@ import { Big } from '../../components/Typography';
 
 const pageSettings = {
     title: 'Styr',
-    description: 'Functiewaardering in 2019',
+    description: 'Moderne functiewaardering',
     keywords: 'functiewaardering,online,platform,webapp',
 };
 
@@ -46,11 +46,11 @@ const Case = () => (
         </Container>
         <Container fluid>
             <TextAndImage img={temp} alt="alt tag" fluid>
-                <p className="subtitle">Ontdekking</p>
-                <h2>Een high end shopbeleving</h2>
+                <p className="subtitle">Analyze</p>
+                <h2>De uitdaging</h2>
                 <p>
                     <Big>
-                        STYR’s’ doel is om de zwart/witte loonschalen van
+                        STYR’s doel is om de zwart/witte loonschalen van
                         vroeger aan de kant te schuiven voor een effectievere
                         oplossing die met veel meer criteria rekening houdt. Met
                         dit ideaal in gedachte hebben ze een beslisboom gemaakt
@@ -60,22 +60,20 @@ const Case = () => (
                         softwareproduct, de allocator, met de volgende functies:
                     </Big>
                 </p>
+            </TextAndImage>
+        </Container>
+        <Container fluid>
+            <TextAndImage img={temp} alt="alt tag" fluid reverse>
+                <p className="subtitle">Analyze</p>
+                <h2>De functionaliteiten</h2>
                 <Checklist>
                     <CheckListItem>
-                        Mogelijk dat meerdere HR Medewerkers tegelijkertijd de
-                        allocator gebruiken
+                        Het STYR Model toegankelijker maken. Zelfs zonder training te gebruiken.
                     </CheckListItem>
                     <CheckListItem>
-                        Het model toegankelijker maken: gebruik zonder training
-                        moet mogelijk zijn
-                    </CheckListItem>
-                    <CheckListItem>
-                        Verschillende soorten gebruikers (beheerder,
+                        Verschillende gebruikersrollen (beheerder,
                         administrator, professional) met verschillende rechten
                         voor het aanpassen van de beslisboom en content
-                    </CheckListItem>
-                    <CheckListItem>
-                        Overzicht van bedrijven met hun gebruikers en allocaties
                     </CheckListItem>
                     <CheckListItem>
                         Verschillende stappen binnen de allocator tool, zoals
@@ -88,8 +86,7 @@ const Case = () => (
                         opslaan of verwijderen
                     </CheckListItem>
                     <CheckListItem>
-                        Filteren van de gemaakte allocaties per bedrijf of op
-                        status
+                        Filteren van de gemaakte allocaties
                     </CheckListItem>
                     <CheckListItem>
                         Opzetten van een service desk voor vragen van gebruikers
@@ -99,8 +96,8 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={temp} alt="alt" reverse fluid>
-                <p className="subtitle">Proces</p>
+            <TextAndImage img={temp} alt="alt" fluid>
+                <p className="subtitle">Strategize</p>
                 <h2>Proces en technische details</h2>
                 <p>
                     <Big>
@@ -109,37 +106,17 @@ const Case = () => (
                         Extra features die op basis van deze wireframes nog
                         gewenst waren zijn ook toegevoegd.
                     </Big>
-                </p>
-            </TextAndImage>
-        </Container>
-        <Container fluid>
-            <TextAndImage img={temp} fluid>
-                <h2>In Invision zijn prototypes gemaakt van het platform</h2>
-                <p>
-                    <Big>
-                        In Invision zijn prototypes gemaakt van het platform
-                    </Big>
-                </p>
-            </TextAndImage>
-        </Container>
-        <Container fluid>
-            <TextAndImage img={temp} alt="alt" reverse fluid>
-                <h2>
-                    Het uiteindelijke design is zo goed als af, en kleine
-                    puntjes feedback worden nog verwerkt. De allocator tool is
-                    klaar om door bedrijven in gebruik genomen te worden.
-                </h2>
-                <p>
                     <Big>
                         De frontend van de allocator is gemaakt in React, en
                         voor de content van de beslisboom is een maatwerk
-                        oplossing gemaakt in WordPress.
+                        oplossing gemaakt binnen WordPress.
                     </Big>
                 </p>
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={temp}>
+            <TextAndImage img={temp} reverse fluid>
+                <p className="subtitle">Realize</p>
                 <h2>Oplossing</h2>
                 <p>
                     <Big>

@@ -19,7 +19,7 @@ const Cases = () => (
         <Container>
             <Row>
                 <PostThumbnail
-                    title="STYR: Functiewaardering in 2019"
+                    title="STYR: Moderne Functiewaardering"
                     category="Website"
                     big
                     slug="/case/styr"
