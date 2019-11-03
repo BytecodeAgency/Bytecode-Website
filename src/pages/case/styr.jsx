@@ -50,14 +50,14 @@ const Case = () => (
                 <h2>De uitdaging</h2>
                 <p>
                     <Big>
-                        STYR’s doel is om de zwart/witte loonschalen van
-                        vroeger aan de kant te schuiven voor een effectievere
-                        oplossing die met veel meer criteria rekening houdt. Met
-                        dit ideaal in gedachte hebben ze een beslisboom gemaakt
-                        die de hiervoor genoemde verdeling van werknemers
-                        mogelijk maakt. De vraag voor ons bestond voor de
-                        uitwerking van de beslisboom naar een verkoopbaarder
-                        en schaalbaarder softwareproduct.
+                        STYR’s doel is om de zwart/witte loonschalen van vroeger
+                        aan de kant te schuiven voor een effectievere oplossing
+                        die met veel meer criteria rekening houdt. Met dit
+                        ideaal in gedachte hebben ze een beslisboom gemaakt die
+                        de hiervoor genoemde verdeling van werknemers mogelijk
+                        maakt. De vraag voor ons bestond voor de uitwerking van
+                        de beslisboom naar een verkoopbaarder en schaalbaarder
+                        softwareproduct.
                     </Big>
                 </p>
             </TextAndImage>
@@ -68,7 +68,8 @@ const Case = () => (
                 <h2>De functionaliteiten</h2>
                 <Checklist>
                     <CheckListItem>
-                        Het STYR Model toegankelijker maken. Zelfs zonder training te gebruiken.
+                        Het STYR Model toegankelijker maken. Zelfs zonder
+                        training te gebruiken.
                     </CheckListItem>
                     <CheckListItem>
                         Verschillende gebruikersrollen (beheerder,
