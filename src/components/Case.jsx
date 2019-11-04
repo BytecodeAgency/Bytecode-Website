@@ -20,6 +20,7 @@ export const CheckListItemBase = styled.li`
     }
     img {
         width: 2rem;
+        height: 2rem;
         margin-right: 1.33em;
     }
 `;

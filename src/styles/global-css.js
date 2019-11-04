@@ -88,7 +88,10 @@ const GlobalStyles = createGlobalStyle`
     strong { font-weight: 700}
     ${textScaler}
     ul { list-style: circle};
-    ol { list-style: decimal};
+    ol {
+        list-style: decimal;
+        padding-left: 1rem;
+    };
 `;
 
 export { GlobalStyles };

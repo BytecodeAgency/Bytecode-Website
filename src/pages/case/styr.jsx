@@ -76,7 +76,7 @@ const Case = () => (
                 <Checklist>
                     <CheckListItem>
                         Het STYR Model toegankelijker maken. Zelfs zonder
-                        training te gebruiken.
+                        training te gebruiken
                     </CheckListItem>
                     <CheckListItem>
                         Verschillende gebruikersrollen (beheerder,

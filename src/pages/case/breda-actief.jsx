@@ -35,10 +35,10 @@ const Case = () => (
                         <Big>
                             Stichting Breda Actief&#39;s missie is om alle
                             inwoners van Breda de mogelijkheid te geven om te
-                            kunnen met sport en beweging. Naar dit doel wordt
-                            gestreefd door middel van het aanbieden van onder
-                            andere sport- en beweegmomenten, het inzetten van
-                            sportcoaches, het aanbieden van advies, en het
+                            sporten en bewegen. Naar dit doel wordt gestreefd
+                            door middel van het aanbieden van onder andere
+                            sport- en beweegmomenten, het inzetten van
+                            sportcoaches, het aanbieden van advies en het
                             helpen zoeken naar sportmogelijkheden voor mensen
                             met een beperking.
                         </Big>
@@ -131,7 +131,7 @@ const Case = () => (
                         worden, zonder problemen voor de layout
                     </CheckListItem>
                     <CheckListItem>
-                        De inhoud van de blokken wordt ingeladen in ee maatwerk
+                        De inhoud van de blokken wordt ingeladen in een maatwerk
                         Wordpress thema, zodat alle elementen goed toegankelijk
                         zijn, zelfs voor mensen met een screenreader of
                         gebruikers die geen muis kunnen bedienen
