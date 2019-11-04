@@ -142,10 +142,10 @@ const Case = () => (
                             pagebuilders of templates vaak niet kunnen leveren
                         </CheckListItem>
                         <CheckListItem>
-                            Voor het juridische deel van de website hebben we een
-                            multisite opgezet, met als positieve consequentie dat
-                            de styling van beide sites zonder dubbel werk
-                            aangepast kan worden
+                            Voor het juridische deel van de website hebben we
+                            een multisite opgezet, met als positieve
+                            consequentie dat de styling van beide sites zonder
+                            dubbel werk aangepast kan worden
                         </CheckListItem>
                     </Checklist>
                 </Col>
