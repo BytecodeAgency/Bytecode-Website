@@ -16,6 +16,7 @@ const websiteImg1 = require('../../images/img/cases/breda-actief/website-1.jpg')
 const websiteImg2 = require('../../images/img/cases/breda-actief/website-2.png');
 const websiteImg3 = require('../../images/img/cases/breda-actief/website-3.png');
 const websiteImg4 = require('../../images/img/cases/breda-actief/website-4.png');
+const websiteImg5 = require('../../images/img/cases/breda-actief/website-5.png');
 const mooiwerkImg = require('../../images/img/cases/mooiwerkbreda/website-1.png');
 
 const Case = () => (
@@ -46,7 +47,7 @@ const Case = () => (
             </Row>
         </Container>
         <Container fluid>
-            <TextAndImage img={websiteImg2} alt="alt" fluid>
+            <TextAndImage img={websiteImg2} alt="onderzoek" fluid>
                 <p className="subtitle">Analyze</p>
                 <h2>De uitdaging</h2>
                 <p>
@@ -62,7 +63,7 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container flluid>
-            <TextAndImage img={websiteImg3} alt="alt" fluid reverse>
+            <TextAndImage img={websiteImg3} alt="aandachtspunten" fluid reverse>
                 <p className="subtitle">Analyze</p>
                 <h2>De aandachtspunten</h2>
                 <Checklist>
@@ -85,7 +86,7 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={websiteImg4} alt="alt" fluid>
+            <TextAndImage img={websiteImg4} alt="proces" fluid>
                 <p className="subtitle">Strategize</p>
                 <h2>Proces en techniek</h2>
                 <ol>
@@ -118,61 +119,59 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container>
-            <Row align="center">
-                <Col lg={6}>
-                    <Checklist>
-                        <CheckListItem>
-                            Het platform met verschillende contentblokken
-                            ontwikkelen, die gebruikt worden voor het opbouwen
-                            van de pagina’s
-                        </CheckListItem>
-                        <CheckListItem>
-                            Door de contentblokken kan de content makkelijk
-                            beheerd worden, zonder problemen voor de layout
-                        </CheckListItem>
-                        <CheckListItem>
-                            De inhoud van de blokken wordt ingeladen in ee
-                            maatwerk Wordpress thema, zodat alle elementen goed
-                            toegankelijk zijn, zelfs voor mensen met een
-                            screenreader of gebruikers die geen muis kunnen
-                            bedienen
-                        </CheckListItem>
-                        <CheckListItem>
-                            Een grote rol voor semantische HTML, iets wat
-                            pagebuilders of templates vaak niet kunnen leveren
-                        </CheckListItem>
-                        <CheckListItem>
-                            Voor het juridische deel van de website hebben we een
-                            multisite opgezet, met als positieve consequentie dat
-                            de styling van beide sites zonder dubbel werk
-                            aangepast kan worden
-                        </CheckListItem>
-                    </Checklist>
-                </Col>
-                <Col lg={6}>
-                    <p className="subtitle">Realize</p>
-                    <h2>Oplossing en Resultaten</h2>
-                    <p>
-                        <Big>
-                            Om Breda Actief zo goed mogelijk te helpen bij het
-                            neerzetten van een succesvolle website, hebben we
-                            besloten het volgende als oplossing te bieden, om
-                            bij te dragen aan de online groei en de prachtige
-                            gestelde doelen.
-                        </Big>
-                    </p>
-                    <p>
-                        <Big>
-                            Het resultaat van dit project is te bekijken op
-                            breda-actief.nl. In overleg met Stichting Breda
-                            Actief is de broncode vrijgegeven onder GPL-3.0
-                            licentie,
-                            <a href="git.bytecode.nl/breda-actief"> hier </a>
-                            te bekijken.
-                        </Big>
-                    </p>
-                </Col>
-            </Row>
+            <TextAndImage img={websiteImg5} alt="functies" fluid reverse>
+                <Checklist>
+                    <CheckListItem>
+                        Het platform met verschillende contentblokken
+                        ontwikkelen, die gebruikt worden voor het opbouwen van
+                        de pagina’s
+                    </CheckListItem>
+                    <CheckListItem>
+                        Door de contentblokken kan de content makkelijk beheerd
+                        worden, zonder problemen voor de layout
+                    </CheckListItem>
+                    <CheckListItem>
+                        De inhoud van de blokken wordt ingeladen in ee maatwerk
+                        Wordpress thema, zodat alle elementen goed toegankelijk
+                        zijn, zelfs voor mensen met een screenreader of
+                        gebruikers die geen muis kunnen bedienen
+                    </CheckListItem>
+                    <CheckListItem>
+                        Een grote rol voor semantische HTML, iets wat
+                        pagebuilders of templates vaak niet kunnen leveren
+                    </CheckListItem>
+                    <CheckListItem>
+                        Voor het juridische deel van de website hebben we een
+                        multisite opgezet, met als positieve consequentie dat de
+                        styling van beide sites zonder dubbel werk aangepast kan
+                        worden
+                    </CheckListItem>
+                </Checklist>
+            </TextAndImage>
+        </Container>
+        <Container>
+            <TextAndImage img={websiteImg1} alt="resultaten" fluid>
+                <p className="subtitle">Realize</p>
+                <h2>Oplossing en Resultaten</h2>
+                <p>
+                    <Big>
+                        Om Breda Actief zo goed mogelijk te helpen bij het
+                        neerzetten van een succesvolle website, hebben we
+                        besloten het volgende als oplossing te bieden, om bij te
+                        dragen aan de online groei en de prachtige gestelde
+                        doelen.
+                    </Big>
+                </p>
+                <p>
+                    <Big>
+                        Het resultaat van dit project is te bekijken op
+                        breda-actief.nl. In overleg met Stichting Breda Actief
+                        is de broncode vrijgegeven onder GPL-3.0 licentie,
+                        <a href="git.bytecode.nl/breda-actief"> hier </a>
+                        te bekijken.
+                    </Big>
+                </p>
+            </TextAndImage>
         </Container>
         <Container fluid>
             <TextAndImage img={mooiwerkImg} alt="Mooiwerk Breda" fluid>
