@@ -38,9 +38,9 @@ const Case = () => (
                             sporten en bewegen. Naar dit doel wordt gestreefd
                             door middel van het aanbieden van onder andere
                             sport- en beweegmomenten, het inzetten van
-                            sportcoaches, het aanbieden van advies en het
-                            helpen zoeken naar sportmogelijkheden voor mensen
-                            met een beperking.
+                            sportcoaches, het aanbieden van advies en het helpen
+                            zoeken naar sportmogelijkheden voor mensen met een
+                            beperking.
                         </Big>
                     </p>
                 </Col>
