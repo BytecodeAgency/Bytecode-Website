@@ -165,7 +165,7 @@ const Footer = () => (
                     <p className="subtitle">Kom langs</p>
                 </FooterHeadingContainer>
                 <p>
-                    Verlengde Spiegelmakersstraat 13
+                    Verl. Spiegelmakersstraat 13
                     <br />
                     2645LZ Delfgauw
                     <br />
