@@ -27,7 +27,6 @@ export const NavbarContainer = styled.nav`
     }
 
     @media (${mediaQueryMin.sm}) {
-
     }
     @media (${mediaQueryMin.lg}) {
         margin: 1rem 8.5rem;

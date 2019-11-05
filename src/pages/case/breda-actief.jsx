@@ -167,7 +167,10 @@ const Case = () => (
                         Het resultaat van dit project is te bekijken op
                         breda-actief.nl. In overleg met Stichting Breda Actief
                         is de broncode vrijgegeven onder GPL-3.0 licentie,
-                        <a href="https://git.bytecode.nl/breda-actief"> hier </a>
+                        <a href="https://git.bytecode.nl/breda-actief">
+                            {' '}
+                            hier{' '}
+                        </a>
                         te bekijken.
                     </Big>
                 </p>
