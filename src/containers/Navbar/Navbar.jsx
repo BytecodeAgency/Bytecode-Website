@@ -65,7 +65,7 @@ class Navbar extends React.Component {
                         </CloseMenuButton>
                         <NavbarItem href="/" text="Home" />
                         <NavbarItem href="/services" text="Services" />
-                        <NavbarItem href="/cases" text="Work" />
+                        <NavbarItem href="/cases" text="Cases" />
                         <NavbarItem href="/insights" text="Insights" />
                         <NavbarItem href="/over" text="About" />
                         <NavbarItem href="/contact" text="Contact" />
