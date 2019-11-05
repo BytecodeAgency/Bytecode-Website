@@ -60,7 +60,6 @@ const Case = () => (
                     </Big>
                 </p>
                 <p>
-                    {' '}
                     Met dit ideaal in gedachte hebben ze een beslisboom gemaakt
                     die de hiervoor genoemde verdeling van werknemers mogelijk
                     maakt. De vraag voor ons bestond voor de uitwerking van de
