@@ -61,6 +61,7 @@ const FooterLink = styled.a`
     display: block;
     text-decoration: none;
     cursor: pointer;
+    color: ${theme.colors.lightgray};
 `;
 
 const FooterHeadingContainer = styled.div`
