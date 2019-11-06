@@ -85,6 +85,13 @@ export const TeamMemberPhoto = styled.figure`
         height: auto;
         max-width: 100%;
     }
+    @media (${mediaQueryMin.xs}) {
+        img {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+    }
 `;
 
 export const TeamMemberName = styled.h4`

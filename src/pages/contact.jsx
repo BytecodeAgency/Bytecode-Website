@@ -49,13 +49,13 @@ const Contact = () => (
                         <a href="tel:0152024222">015-2024222</a>
                     </ContactHeading>
                     <ContactHeading>
-                        Of kom een keertje langs bij ons op kantoor aan de&nbsp;
+                        Of kom eens bij ons langs op de&nbsp;
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://goo.gl/maps/9P6in4Qf6i62"
                         >
-                            Verlengde Spiegelmakerstraat 13, Delfgauw
+                            Verlengde Spiegelmakerstraat 13 in Delfgauw
                         </a>
                     </ContactHeading>
                     <Button

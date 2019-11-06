@@ -1,8 +1,8 @@
 # Bytecode Website
 
 [![Developed by](https://img.shields.io/badge/Developed%20by-Bytecode.nl-green.svg)](https://bytecode.nl)
-[![pipeline status](https://git.bytedev.io/bytecode/bytecode-website/badges/develop/pipeline.svg)](https://git.bytedev.io/bytecode/bytecode-website/commits/develop)
-[![coverage report](https://git.bytedev.io/bytecode/bytecode-website/badges/develop/coverage.svg)](https://git.bytedev.io/bytecode/bytecode-website/commits/develop)
+[![pipeline status](https://git.bytecode.nl/bytecode/bytecode-website/badges/develop/pipeline.svg)](https://git.bytedev.io/bytecode/bytecode-website/commits/develop)
+[![coverage report](https://git.bytecode.nl/bytecode/bytecode-website/badges/develop/coverage.svg)](https://git.bytedev.io/bytecode/bytecode-website/commits/develop)
 [![AGPLv3 license](https://img.shields.io/badge/License-AGPLv3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 
 Website for Bytecode Digital Agency B.V. built with GatsbyJS.
