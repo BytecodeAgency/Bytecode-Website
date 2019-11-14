@@ -16,7 +16,7 @@ const menu = 'Cousine';
 
 // Font weights
 const light = 300;
-const regular = 400;
+const regular = 300;
 const bold = 700;
 
 // Global Header settings
