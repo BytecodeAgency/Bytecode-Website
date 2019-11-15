@@ -33,16 +33,15 @@ const Case = () => (
                     <h1>Breda in beweging</h1>
                 </Col>
                 <Col lg={5}>
-                        <Big>
-                            Stichting Breda Actief&#39;s missie is om alle
-                            inwoners van Breda de mogelijkheid te geven om te
-                            sporten en bewegen. Naar dit doel wordt gestreefd
-                            door middel van het aanbieden van onder andere
-                            sport- en beweegmomenten, het inzetten van
-                            sportcoaches, het aanbieden van advies en het helpen
-                            zoeken naar sportmogelijkheden voor mensen met een
-                            beperking.
-                        </Big>
+                    <Big>
+                        Stichting Breda Actief&#39;s missie is om alle inwoners
+                        van Breda de mogelijkheid te geven om te sporten en
+                        bewegen. Naar dit doel wordt gestreefd door middel van
+                        het aanbieden van onder andere sport- en beweegmomenten,
+                        het inzetten van sportcoaches, het aanbieden van advies
+                        en het helpen zoeken naar sportmogelijkheden voor mensen
+                        met een beperking.
+                    </Big>
                 </Col>
             </Row>
         </Container>
@@ -110,10 +109,10 @@ const Case = () => (
                         NodeJS/Webpack gecompiled.
                     </li>
                 </ol>
-                    <Big>
-                        Deze technische tools stellen Breda Actief in staat om
-                        haar website geheel naar eigen wens in te richten.
-                    </Big>
+                <Big>
+                    Deze technische tools stellen Breda Actief in staat om haar
+                    website geheel naar eigen wens in te richten.
+                </Big>
             </TextAndImage>
         </Container>
         <Container>
@@ -177,16 +176,16 @@ const Case = () => (
             <TextAndImage img={mooiwerkImg} alt="Mooiwerk Breda" fluid>
                 <p className="subtitle">Mooiwerk Breda</p>
                 <h1>Brengt Breda dichter bij elkaar</h1>
-                    <Big>
-                        Behalve haar sportieve tak brengt Breda Actief de
+                <Big>
+                    Behalve haar sportieve tak brengt Breda Actief de
                     vrijwilligers en vrijwilligersorganisaties van Breda bij
-                    elkaar op haar platform: &#39;Mooiwerk Breda&#39;. Over
-                    hoe Bytecode hier aan bij heeft kunnen dragen lees je
-                        <Link to="/case/mooiwerk" aria-label="mooiwerk case">
+                    elkaar op haar platform: &#39;Mooiwerk Breda&#39;. Over hoe
+                    Bytecode hier aan bij heeft kunnen dragen lees je
+                    <Link to="/case/mooiwerk" aria-label="mooiwerk case">
                         &nbsp;hier&nbsp;
-                        </Link>
-                        meer
-                    </Big>
+                    </Link>
+                    meer
+                </Big>
             </TextAndImage>
         </Container>
     </Layout>
