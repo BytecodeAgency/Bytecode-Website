@@ -53,16 +53,15 @@ const Case = () => (
                 <h2>De uitdaging</h2>
                 <p>
                     Stichting Breda Actief heeft Bytecode benaderd voor het
-                    vernieuwen en verbeteren van een bestaand platform.
-                    Zelf hadden zij al een goed idee van de
-                    doelgroep en requirements die aan het platform gekoppeld
-                    zijn. De belangrijkste reden voor de vraag aan Bytecode was
-                    het feit dat zij zelf niet de controle hadden over het
-                    platform en de data, en dat ze hier graag wel onafhankelijk
-                    in wilden zijn. Bij Bytecode vinden wij eigen controle en
-                    een open omgeving ook erg belangrijk, en samen met het
-                    doel dat Mooiwerk ondersteunt waren wij daarom erg
-                    enthousiast om hier een bijdrage aan te leveren.
+                    vernieuwen en verbeteren van een bestaand platform. Zelf
+                    hadden zij al een goed idee van de doelgroep en requirements
+                    die aan het platform gekoppeld zijn. De belangrijkste reden
+                    voor de vraag aan Bytecode was het feit dat zij zelf niet de
+                    controle hadden over het platform en de data, en dat ze hier
+                    graag wel onafhankelijk in wilden zijn. Bij Bytecode vinden
+                    wij eigen controle en een open omgeving ook erg belangrijk,
+                    en samen met het doel dat Mooiwerk ondersteunt waren wij
+                    daarom erg enthousiast om hier een bijdrage aan te leveren.
                 </p>
             </TextAndImage>
         </Container>
@@ -139,8 +138,8 @@ const Case = () => (
                         ontwikkeling heeft in overleg, iteratief plaatsgevonden
                     </li>
                     <li>
-                        Functionaliteiten zoals het registratieformulier, zijn op
-                        basis van feedback ontwikkeld en verbeterd
+                        Functionaliteiten zoals het registratieformulier, zijn
+                        op basis van feedback ontwikkeld en verbeterd
                     </li>
                 </ol>
             </TextAndImage>
