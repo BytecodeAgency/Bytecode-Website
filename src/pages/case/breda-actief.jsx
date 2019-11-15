@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { Link } from 'gatsby';
 import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/MainLayout';
 import { Container, Row, Col } from '../../lib/Grid';
@@ -17,11 +18,12 @@ const websiteImg2 = require('../../images/img/cases/breda-actief/website-2.png')
 const websiteImg3 = require('../../images/img/cases/breda-actief/website-3.png');
 const websiteImg4 = require('../../images/img/cases/breda-actief/website-4.png');
 const websiteImg5 = require('../../images/img/cases/breda-actief/website-5.png');
-const mooiwerkImg = require('../../images/img/cases/mooiwerkbreda/website-1.png');
+const mooiwerkImg = require('../../images/img/cases/mooiwerk/website-1.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
+            <CaseHeader img={websiteImg1} />
             <CaseHeader img={websiteImg1} />
         </Container>
         <Container>
@@ -186,7 +188,11 @@ const Case = () => (
                         vrijwilligers en vrijwilligersorganisaties van Breda bij
                         elkaar op haar platform: &#39;Mooiwerk Breda&#39;. Over
                         hoe Bytecode hier aan bij heeft kunnen dragen lees je
-                        binnenkort op onze website.
+                        <Link to="/case/mooiwerk" aria-label="mooiwerk case">
+                            {' '}
+                            hier{' '}
+                        </Link>
+                        meer
                     </Big>
                 </p>
             </TextAndImage>
