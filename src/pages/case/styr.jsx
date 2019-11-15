@@ -30,13 +30,11 @@ const Case = () => (
                     <h1>Moderne functiewaardering</h1>
                 </Col>
                 <Col lg={5}>
-                    <p>
-                        <Big>
-                            Een HR consultancybedrijf met een missie:
-                            loonschaalindelingen moderniseren met behulp van het
-                            STYR model.
-                        </Big>
-                    </p>
+                    <Big>
+                        Een HR consultancybedrijf met een missie:
+                        loonschaalindelingen moderniseren met behulp van het
+                        STYR model.
+                    </Big>
                     <p>
                         Door middel van de STYR allocator tool kunnen bedrijven
                         effectiever vacatures opstellen en werknemers waarderen
@@ -52,13 +50,11 @@ const Case = () => (
             <TextAndImage img={websiteImg1} alt="alt tag" fluid>
                 <p className="subtitle">Analyze</p>
                 <h2>De uitdaging</h2>
-                <p>
-                    <Big>
-                        STYR’s doel is om de zwart/witte loonschalen van vroeger
-                        aan de kant te schuiven voor een effectievere oplossing
-                        die met veel meer criteria rekening houdt.
-                    </Big>
-                </p>
+                <Big>
+                    STYR’s doel is om de zwart/witte loonschalen van vroeger aan
+                    de kant te schuiven voor een effectievere oplossing die met
+                    veel meer criteria rekening houdt.
+                </Big>
                 <p>
                     Met dit ideaal in gedachte hebben ze een beslisboom gemaakt
                     die de hiervoor genoemde verdeling van werknemers mogelijk
@@ -106,33 +102,29 @@ const Case = () => (
             <TextAndImage img={designImg2} alt="alt" fluid>
                 <p className="subtitle">Strategize</p>
                 <h2>Proces en technische details</h2>
-                <p>
-                    <Big>
-                        Na een kickoff-meeting zijn we begonnen met een eerste
-                        UX design en wireframe voor het allocator platform.
-                        Extra features die op basis van deze wireframes nog
-                        gewenst waren zijn toegevoegd.
-                    </Big>
-                    <Big>
-                        De frontend van de allocator is gemaakt in React, en
-                        voor de content van de beslisboom is een maatwerk
-                        oplossing gemaakt binnen WordPress.
-                    </Big>
-                </p>
+                <Big>
+                    Na een kickoff-meeting zijn we begonnen met een eerste UX
+                    design en wireframe voor het allocator platform. Extra
+                    features die op basis van deze wireframes nog gewenst waren
+                    zijn toegevoegd.
+                </Big>
+                <Big>
+                    De frontend van de allocator is gemaakt in React, en voor de
+                    content van de beslisboom is een maatwerk oplossing gemaakt
+                    binnen WordPress.
+                </Big>
             </TextAndImage>
         </Container>
         <Container fluid>
             <TextAndImage img={websiteImg2} reverse fluid>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing</h2>
-                <p>
-                    <Big>
-                        Het design van de allocator is opgebouwd uit
-                        opeenvolgende pagina’s die de gebruiker doorloopt,
-                        waarbij keuzes gemaakt worden door op opties te klikken
-                        die bij een werknemerprofiel passen.
-                    </Big>
-                </p>
+                <Big>
+                    Het design van de allocator is opgebouwd uit opeenvolgende
+                    pagina’s die de gebruiker doorloopt, waarbij keuzes gemaakt
+                    worden door op opties te klikken die bij een
+                    werknemerprofiel passen.
+                </Big>
                 <Checklist>
                     <CheckListItem>
                         Een dashboard met recente allocaties en updates
