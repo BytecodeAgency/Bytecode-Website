@@ -32,7 +32,6 @@ const Case = () => (
                     <h1>Breng Breda dichter bij elkaar</h1>
                 </Col>
                 <Col lg={5}>
-                    <p>
                         <Big>
                             Mooiwerk Breda is een platform van Stichting Breda
                             Actief. Op dit platform kunnen organisaties
@@ -43,7 +42,6 @@ const Case = () => (
                             voor nieuwe contacten en hele mooie
                             samenwerkingsverbanden.
                         </Big>
-                    </p>
                 </Col>
             </Row>
         </Container>
@@ -148,34 +146,28 @@ const Case = () => (
             <TextAndImage img={websiteImg4} alt="resultaten" fluid reverse>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing en Resultaten</h2>
-                <p>
-                    <Big>
-                        Het uiteindelijke platform zorgt ervoor dat Mooiwerk
-                        Breda organisaties en vrijwilligers in Breda samen kan
-                        brengen, en met behulp van de doorgaande ontwikkeling
-                        blijven we Breda Actief ondersteunen.
-                    </Big>
-                </p>
-                <p>
-                    <Big>
-                        Het resultaat van dit project is te bekijken op{' '}
-                        <a href="https://mooiwerkbreda.nl">mooiwerkbreda.nl</a>.
-                        In overleg met Stichting Breda Actiefis de broncode
-                        vrijgegeven onder GPL-3.0 licentie,
-                        <a href="https://git.bytecode.nl/breda-actief">
-                            {' '}
-                            hier{' '}
-                        </a>
-                        te bekijken.
-                    </Big>
-                </p>
+                <Big>
+                    Het uiteindelijke platform zorgt ervoor dat Mooiwerk
+                    Breda organisaties en vrijwilligers in Breda samen kan
+                    brengen, en met behulp van de doorgaande ontwikkeling
+                    blijven we Breda Actief ondersteunen.
+                </Big>
+                <Big>
+                    Het resultaat van dit project is te bekijken op
+                    <a href="https://mooiwerkbreda.nl">&nbsp;mooiwerkbreda.nl</a>.
+                    In overleg met Stichting Breda Actiefis de broncode
+                    vrijgegeven onder GPL-3.0 licentie,
+                    <a href="https://git.bytecode.nl/breda-actief">
+                        &nbsp;hier&nbsp;
+                    </a>
+                    te bekijken.
+                </Big>
             </TextAndImage>
         </Container>
         <Container fluid>
             <TextAndImage img={bredaImg} alt="Breda-Actief" fluid>
                 <p className="subtitle">Breda Actief</p>
                 <h1>Brengt Breda in beweging!</h1>
-                <p>
                     <Big>
                         Mooiwerk Breda is slechts een deel van de mooie doelen
                         waar Stichting Breda Actief zich mee bezig houdt. Breda
@@ -184,17 +176,15 @@ const Case = () => (
                         andere sport- en beweegmomenten, het inzetten van
                         sportcoaches, advies en het helpen zoeken naar
                         sportmogelijkheden voor mensen met een beperking. Meer
-                        over onze samenwerking met Breda Actief is{' '}
+                        over onze samenwerking met Breda Actief is
                         <Link
                             to="/case/breda-actief"
                             aria-label="breda-actief case"
                         >
-                            {' '}
-                            hier{' '}
-                        </Link>{' '}
+                            &nbsp;hier&nbsp;
+                        </Link>
                         te lezen.
                     </Big>
-                </p>
             </TextAndImage>
         </Container>
     </Layout>

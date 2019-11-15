@@ -33,7 +33,6 @@ const Case = () => (
                     <h1>Breda in beweging</h1>
                 </Col>
                 <Col lg={5}>
-                    <p>
                         <Big>
                             Stichting Breda Actief&#39;s missie is om alle
                             inwoners van Breda de mogelijkheid te geven om te
@@ -44,7 +43,6 @@ const Case = () => (
                             zoeken naar sportmogelijkheden voor mensen met een
                             beperking.
                         </Big>
-                    </p>
                 </Col>
             </Row>
         </Container>
@@ -112,12 +110,10 @@ const Case = () => (
                         NodeJS/Webpack gecompiled.
                     </li>
                 </ol>
-                <p>
                     <Big>
                         Deze technische tools stellen Breda Actief in staat om
                         haar website geheel naar eigen wens in te richten.
                     </Big>
-                </p>
             </TextAndImage>
         </Container>
         <Container>
@@ -170,8 +166,7 @@ const Case = () => (
                         breda-actief.nl. In overleg met Stichting Breda Actief
                         is de broncode vrijgegeven onder GPL-3.0 licentie,
                         <a href="https://git.bytecode.nl/breda-actief">
-                            {' '}
-                            hier{' '}
+                            &nbsp;hier&nbsp;
                         </a>
                         te bekijken.
                     </Big>
@@ -182,19 +177,16 @@ const Case = () => (
             <TextAndImage img={mooiwerkImg} alt="Mooiwerk Breda" fluid>
                 <p className="subtitle">Mooiwerk Breda</p>
                 <h1>Brengt Breda dichter bij elkaar</h1>
-                <p>
                     <Big>
                         Behalve haar sportieve tak brengt Breda Actief de
-                        vrijwilligers en vrijwilligersorganisaties van Breda bij
-                        elkaar op haar platform: &#39;Mooiwerk Breda&#39;. Over
-                        hoe Bytecode hier aan bij heeft kunnen dragen lees je
+                    vrijwilligers en vrijwilligersorganisaties van Breda bij
+                    elkaar op haar platform: &#39;Mooiwerk Breda&#39;. Over
+                    hoe Bytecode hier aan bij heeft kunnen dragen lees je
                         <Link to="/case/mooiwerk" aria-label="mooiwerk case">
-                            {' '}
-                            hier{' '}
+                        &nbsp;hier&nbsp;
                         </Link>
                         meer
                     </Big>
-                </p>
             </TextAndImage>
         </Container>
     </Layout>
