@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from '../components/Button';
 import AllSocials from '../lib/Socials';
@@ -228,7 +228,7 @@ const Footer = () => (
             <hr />
             <p>
                 <small>
-                    &copy; {new Date().getFullYear()}
+                    <ComicSans>&copy;</ComicSans> {new Date().getFullYear()}
                     &nbsp;Bytecode Digital Agency B.V.
                     <br />
                     All Rights Reserved on text and image content,
@@ -243,3 +243,27 @@ const Footer = () => (
 );
 
 export default Footer;
+
+const ComicSans = ({ children }) => {
+    const [showComicSans, setShowComicSans] = useState(false);
+    const switchComicSans = () => setShowComicSans(!showComicSans);
+    const ComicSansText = styled.span`
+        cursor: pointer;
+    `;
+    const ComicSansCSS = createGlobalStyle`
+        html * {
+            font-family: "Comic Sans MS" !important;
+        }
+    `;
+
+    return (
+        <>
+            <ComicSansText onClick={switchComicSans}>{children}</ComicSansText>
+            {showComicSans && <ComicSansCSS />}
+        </>
+    );
+};
+
+ComicSans.propTypes = {
+    children: PropTypes.node.isRequired,
+};
