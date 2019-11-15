@@ -17,6 +17,7 @@ export const CheckListItemBase = styled.li`
     margin: 1.33em 0;
     p {
         margin: 0;
+        flex: 1;
     }
     img {
         width: 2rem;
