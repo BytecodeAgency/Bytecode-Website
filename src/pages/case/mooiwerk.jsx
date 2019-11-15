@@ -177,13 +177,22 @@ const Case = () => (
                 <h1>Brengt Breda in beweging!</h1>
                 <p>
                     <Big>
-                    Mooiwerk Breda is slechts een deel van de mooie doelen waar Stichting Breda Actief zich mee bezig houdt. Breda Actief heeft als missie om voor alle inwoners van Breda sport en beweging mogelijk te maken. Ze bieden onder andere sport- en beweegmomenten, het inzetten van sportcoaches, advies en het helpen zoeken naar sportmogelijkheden voor mensen met een beperking. Meer over onze samenwerking met Breda Actief is                         <Link
+                        Mooiwerk Breda is slechts een deel van de mooie doelen
+                        waar Stichting Breda Actief zich mee bezig houdt. Breda
+                        Actief heeft als missie om voor alle inwoners van Breda
+                        sport en beweging mogelijk te maken. Ze bieden onder
+                        andere sport- en beweegmomenten, het inzetten van
+                        sportcoaches, advies en het helpen zoeken naar
+                        sportmogelijkheden voor mensen met een beperking. Meer
+                        over onze samenwerking met Breda Actief is{' '}
+                        <Link
                             to="/case/breda-actief"
                             aria-label="breda-actief case"
                         >
                             {' '}
                             hier{' '}
-                        </Link> te lezen.
+                        </Link>{' '}
+                        te lezen.
                     </Big>
                 </p>
             </TextAndImage>
