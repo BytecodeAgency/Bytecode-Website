@@ -38,7 +38,6 @@ export const query = graphql`
                 title
                 description
                 keywords
-                subtitle
                 posted_on
                 article_image_url
                 author_name

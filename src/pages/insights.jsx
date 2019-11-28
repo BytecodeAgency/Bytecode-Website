@@ -73,7 +73,6 @@ export const pageQuery = graphql`
                         id
                         title
                         slug
-                        subtitle
                         posted_on
                         article_image_url
                         author_name
