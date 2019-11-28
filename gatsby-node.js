@@ -32,10 +32,8 @@ exports.createPages = async ({ actions, graphql }) => {
                             title
                             description
                             keywords
-                            subtitle
                             posted_on
                             article_image_url
-                            summary
                             author_name
                             author_role
                             author_image_url
