@@ -6,7 +6,10 @@ import Layout from '../layouts/MainLayout';
 import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 import ContactForm from '../containers/ContactForm/ContactForm';
-import { TextAndImage, ProfilePicture } from '../containers/ContentBlocks/ContentBlocks';
+import {
+    TextAndImage,
+    ProfilePicture,
+} from '../containers/ContentBlocks/ContentBlocks';
 import { Big, Quote } from '../components/Typography';
 import theme from '../styles/theme';
 
@@ -276,13 +279,18 @@ const Partners = () => (
                     <ProfilePicture
                         img={require('../images/img/content/jan-willem.jpg')}
                     />
-                    <Quote author='- Jan-Willem (The Pumphouse)' url='https://pumphouse.nl'>
-                        <strong>Bytecode heeft slimme, gedreven en ook communicatief
-                        sterke developers die met je meedenken en meegroeien
-                        naar gezamelijke doelen</strong>. Diverse en gespecificeerde
-                        skills en kennis die ze zowel op technisch als
-                        adviserend niveau inzetten om je te helpen bij de
-                        volgende stap van je organisatie.
+                    <Quote
+                        author="- Jan-Willem (The Pumphouse)"
+                        url="https://pumphouse.nl"
+                    >
+                        <strong>
+                            Bytecode heeft slimme, gedreven en ook communicatief
+                            sterke developers die met je meedenken en meegroeien
+                            naar gezamelijke doelen
+                        </strong>
+                        . Diverse en gespecificeerde skills en kennis die ze
+                        zowel op technisch als adviserend niveau inzetten om je
+                        te helpen bij de volgende stap van je organisatie.
                     </Quote>
                 </Col>
             </Row>

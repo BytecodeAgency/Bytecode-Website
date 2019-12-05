@@ -4,7 +4,7 @@ import Layout from '../layouts/MainLayout';
 import TextBlock from '../containers/TextBlock/TextBlock';
 import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import { Container, Row, Col } from '../lib/Grid';
-import ContactForm from '../containers/ContactForm/ContactForm'
+import ContactForm from '../containers/ContactForm/ContactForm';
 import Process from '../containers/Process/Process';
 import Thumbnail from '../containers/Thumbnails/Thumbnail';
 import Wrapper from '../components/Wrapper';
