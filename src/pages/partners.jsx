@@ -286,9 +286,12 @@ const Partners = () => (
                     />
                     <blockquote>
                         <h3>
-                            With Code School, we excelled as an early entry
-                            learn-to-code marketplace. Since then, we’ve
-                            consulted on and implemented platforms.
+                            Bytecode heeft slimme, gedreven en ook communicatief
+                            sterke developers die met je meedenken en meegroeien
+                            naar gezamelijke doelen. Diverse en gespecificeerde
+                            skills en kennis die ze zowel op technisch als
+                            adviserend niveau inzetten om je te helpen bij de
+                            volgende stap van je organisatie.
                         </h3>
                         <p>
                             - Jan-Willem (
