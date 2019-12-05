@@ -3,7 +3,6 @@ stages:
   - build
   - test
   - release
-  - deploy
   - analyze
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -52,31 +51,10 @@ release_docker:
     - docker pull $CI_REGISTRY_IMAGE:latest || true
     - docker build --tag $CI_REGISTRY_IMAGE:latest .
     - docker push $CI_REGISTRY_IMAGE:latest
-#   only:
-#     - master
-#     - tags
 
-deploy_prod:
-  stage: deploy
-#   when: manual
-  image: alpine:latest
-  before_script:
-    - apk add curl
-    - curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
-    - chmod +x ./kubectl
-    - mv ./kubectl /usr/local/bin/kubectl
-    - mkdir ~/.kube
-    - cat $K8S_CONFIG_BASE64 | base64 -d > ~/.kube/config
-    - kubectl version
-    - cd .gitlab/k8s
-  script:
-    - kubectl apply -f bytecode-k8s-prod.yaml
-#   only:
-#     - tags
-
-deploy_pages:
+release_pages:
   image: alpine:3.9
-  stage: deploy
+  stage: release
   dependencies:
     - build_node
   script:
@@ -85,10 +63,6 @@ deploy_pages:
   artifacts:
     paths:
       - public
-#   only:
-#     - master
-#     - develop
-#     - release/*
 
 include:
   - template: Code-Quality.gitlab-ci.yml
