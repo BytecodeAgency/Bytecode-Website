@@ -1,19 +1,19 @@
-image: node:10-alpine
+image: node:12-alpine
 stages:
   - build
   - test
-  - deploy
+  - release
   - analyze
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
   - node_modules/
 
-build:
+build_node:
   stage: build
   before_script:
     - npm i -g yarn
-    - yarn
+    - yarn install --production --frozen-lockfile
   script:
     - yarn run build --prefix-paths bytecode-website
     - mv public build
@@ -25,25 +25,38 @@ lint:
   stage: test
   before_script:
     - npm i -g yarn
-    - yarn
+    - yarn install --frozen-lockfile
   script:
     - yarn run lint
 
 test_jest:
   stage: test
-  dependencies:
-    - build
   before_script:
     - npm i -g yarn
-    - yarn
+    - yarn install --frozen-lockfile
   script:
     - yarn run test:ci
 
-pages:
+release_docker:
+  stage: release
+  image: docker:19.03.1
+  services:
+    - docker:19.03.1-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker pull $CI_REGISTRY_IMAGE:latest || true
+    - docker build --tag $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:latest
+
+release_pages:
   image: alpine:3.9
-  stage: deploy
+  stage: release
   dependencies:
-    - build
+    - build_node
   script:
     - rm -rf public
     - mv build public
