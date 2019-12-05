@@ -15,10 +15,9 @@ const paragraph = 'Lato';
 const menu = 'Cousine';
 
 // Font weights
-const regular = 400;
+const light = 300;
+const regular = 300;
 const bold = 700;
-const medium = 500;
-const extrabold = 900;
 
 // Global Header settings
 const GlobalHeadingSettings = {
@@ -40,6 +39,16 @@ const bytecode = {
         mediumgray,
         lightgray,
         white,
+    },
+    fonts: {
+        heading,
+        paragraph,
+        menu,
+    },
+    fontWeights: {
+        light,
+        regular,
+        bold,
     },
     typography: {
         body: {
@@ -92,7 +101,8 @@ const bytecode = {
             marginBottom: '0.33em',
         },
         p: {
-            spacing: '0em',
+            spacing: '0.015em',
+            height: '1.5em',
             font: paragraph,
             weight: regular,
             color: lightgray,
@@ -153,7 +163,7 @@ const bytecode = {
             color: white,
         },
     },
-    breakpointMobileMenu: '63rem',
+    breakpointMobileMenu: '68rem',
     containerWidths: [],
     breakpoint: {
         xs: '48em',

@@ -10,7 +10,7 @@ const { mediaQueryMin } = theme;
 export const NavbarContainer = styled.nav`
     position: relative;
     z-index: 10000;
-    padding: 1em 1em;
+    padding: 0 3rem;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         width: 100vw;
         height: 3.5em;
@@ -27,7 +27,6 @@ export const NavbarContainer = styled.nav`
     }
 
     @media (${mediaQueryMin.sm}) {
-        padding: 0 3rem;
     }
     @media (${mediaQueryMin.lg}) {
         margin: 1rem 8.5rem;

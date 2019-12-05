@@ -4,7 +4,6 @@ import theme from '../../styles/theme';
 export const AuthorBlock = styled.div`
     display: flex;
     align-items: center;
-    max-width: 40rem;
     p {
         margin: 0;
     }
@@ -18,14 +17,30 @@ export const AuthorBlock = styled.div`
     }
 `;
 
-export const AuthorBlockPhoto = styled.img`
-    min-width: 5rem;
-    width: 5rem;
-    min-height: 5rem;
-    height: 5rem;
-    margin-right: 2rem;
+export const AuthorBlockPhotoWrapper = styled.figure`
+    width: 2.11em;
+    height: 2.11em;
     border-radius: 50%;
     overflow: hidden;
-    background-image: url(${props => props.src});
-    background-size: cover;
+`;
+
+export const AuthorBlockPhoto = styled.img`
+    height: 100%;
+    width: auto;
+`;
+
+export const AuthorInfo = styled.div`
+    padding: 0 0.66em;
+`;
+
+export const Name = styled.h6`
+    margin: 0 !important;
+    padding: 0;
+    line-height: 1em;
+`;
+
+export const Position = styled.p`
+    margin: 0;
+    font-size: 0.8em;
+    line-height: 1.11em;
 `;

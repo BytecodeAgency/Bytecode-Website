@@ -191,7 +191,7 @@ const Partners = () => (
                     <h2>Diensten</h2>
                 </Row>
                 <Row>
-                    <Service iconName="website" title="Websites &amp Webshops">
+                    <Service iconName="website" title="Websites &amp; Webshops">
                         Dit is de plek waar alles gebeurt. De plek waar je laat
                         zien wie je bent, waar je mensen overtuigt en waar je
                         klanten binnenhaalt. Bytecode zal je hiertoe in staat
@@ -199,14 +199,14 @@ const Partners = () => (
                         creëren wij samen het beste voor jou, uiteenlopend van
                         simplistische websites tot ingewikkelde webapps.
                     </Service>
-                    <Service iconName="mobile" title="Apps &amp Webapps">
+                    <Service iconName="mobile" title="Apps &amp; Webapps">
                         Wil je een succesvolle webshop hebben? Dan heel veel
                         factoren denken. Bytecode weet precies welke factoren
                         dit zijn en wil je daar graag mee helpen. Zowel met de
                         techniek als met de specifieke marketing en SEO die bij
                         een succesvolle webshop komen kijken.
                     </Service>
-                    <Service iconName="api" title="APIs &amp automatisering">
+                    <Service iconName="api" title="APIs &amp; automatisering">
                         Alles draait om de beleving van de bezoeker van jouw
                         platform. Deze beleving optimaliseren wij door middel
                         middel van hoogstaand UX/UI-design. Onze developers
@@ -215,7 +215,7 @@ const Partners = () => (
                         designers ervoor dat het ontwerp van het platform in het
                         oog springt en perfect past bij wat jij wil uitstralen.
                     </Service>
-                    <Service iconName="cloud" title="Cloud &amp hosting">
+                    <Service iconName="cloud" title="Cloud &amp; hosting">
                         Tegenwoordig zijn mobiele applicaties belangrijk als
                         websites of webapps. Wij vinden het daarom belangrijk
                         dat apps net zo goed werken als websites en op elk
@@ -233,7 +233,7 @@ const Partners = () => (
                         creëren wij samen het beste voor jou, uiteenlopend van
                         simplistische websites tot ingewikkelde webapps.
                     </Service>
-                    <Service iconName="design" title="Design &amp Branding">
+                    <Service iconName="design" title="Design &amp; Branding">
                         Wil je een succesvolle webshop hebben? Dan heel veel
                         factoren denken. Bytecode weet precies welke factoren
                         dit zijn en wil je daar graag mee helpen. Zowel met de

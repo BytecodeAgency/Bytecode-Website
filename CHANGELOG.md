@@ -5,6 +5,84 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 2.2.4 (2019-12-03)
+
+### Added:
+
+* Semantic HTML article
+* Suzanne article
+
+### Fixed:
+
+* Incorrect dates for some articles
+
+## 2.2.3 (2019-11-26)
+
+### Added:
+
+* Article "Verhoog de conversie van je webshop in 10 stappen"
+* File to run SonarCloud on push to GitLab
+
+## 2.2.2 (2019-11-18)
+
+### Changed:
+
+* Temp. removed case for STYR
+
+## 2.2.1 (2019-11-15)
+
+### Added:
+
+* Mooiwerk Breda case
+* Comic Sans easter egg on copyright icon press in footer
+
+## 2.2.0 (2019-11-06)
+
+### Added:
+
+* Added cases overview page
+* Added Breda Actief case
+* Added Styr case
+
+### Changed:
+
+* Footer copy
+
+### Fixed:
+
+* Styling bugs
+
+## 2.1.9 (2019-10-12)
+
+### Added:
+
+* DigitalOcean partner logo on Services page
+
+### Changed:
+
+* Improved readability on the Single Insights page
+
+## 2.1.8 (2019-10-08)
+
+### Changed:
+
+* Changed "werknemer" to "teamlid" in articles
+
+## 2.1.7 (2019-10-08)
+
+### Added:
+
+* Article about Robin (new team member article)
+
+## 2.1.6 (2019-10-07)
+
+### Fixed:
+
+* Typo in footer
+* Contact form not sending data (rewrite contact form, #122 on GitLab)
+* Double image in cloud article
+* Capitalized file name for cloud article
+
 ## 2.1.5 (2019-10-03)
 
 ### Added:
@@ -35,7 +113,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed:
 
-* Re-added GTM and Drift to <head>
+* Re-added GTM and Drift to `<head>`
 
 ## 2.1.2 (2019-09-16)
 

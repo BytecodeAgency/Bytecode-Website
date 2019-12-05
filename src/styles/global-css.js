@@ -75,7 +75,7 @@ const GlobalStyles = createGlobalStyle`
     ${reset()}
     ${enableCssReset ? debug() : ''}
     html { font-size: 1em; background: ${theme.colors.background} }
-    a { color: inherit; text-decoration: none }
+    a { color: ${theme.colors.primary}; text-decoration: none }
     img { width: 100%; height: auto; margin:0; padding: 0}
     ${typographyElementStyling}
 
@@ -88,7 +88,10 @@ const GlobalStyles = createGlobalStyle`
     strong { font-weight: 700}
     ${textScaler}
     ul { list-style: circle};
-    ol { list-style: decimal};
+    ol {
+        list-style: decimal;
+        padding-left: 1rem;
+    };
 `;
 
 export { GlobalStyles };
