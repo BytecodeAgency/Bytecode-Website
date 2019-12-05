@@ -282,7 +282,7 @@ const Partners = () => (
                 </Col>
                 <Col lg={6}>
                     <ProfilePicture
-                        img={require('../images/img/authors/nick.jpeg')}
+                        img={require('../images/img/content/jan-willem.jpg')}
                     />
                     <blockquote>
                         <h3>
@@ -290,7 +290,7 @@ const Partners = () => (
                             learn-to-code marketplace. Since then, we’ve
                             consulted on and implemented platforms.
                         </h3>
-                        <p>- Jan-Willem (The Pumphouse)</p>
+                        <p>- Jan-Willem (<a href="https://pumphouse.nl/">The Pumphouse</a>)</p>
                     </blockquote>
                 </Col>
             </Row>
