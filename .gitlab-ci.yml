@@ -58,7 +58,7 @@ release_docker:
 
 deploy_prod:
   stage: deploy
-  when: manual
+#   when: manual
   image: alpine:latest
   before_script:
     - apk add curl
