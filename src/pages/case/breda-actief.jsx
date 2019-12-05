@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/MainLayout';
 import { Container, Row, Col } from '../../lib/Grid';
-import TextAndImage from '../../containers/ContentBlocks/ContentBlocks';
+import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
 import { Big } from '../../components/Typography';
 
 const pageSettings = {

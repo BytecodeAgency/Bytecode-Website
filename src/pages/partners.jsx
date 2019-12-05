@@ -6,8 +6,8 @@ import Layout from '../layouts/MainLayout';
 import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 import ContactForm from '../containers/ContactForm/ContactForm';
-import TextAndImage from '../containers/ContentBlocks/ContentBlocks';
-import { Big } from '../components/Typography';
+import { TextAndImage, ProfilePicture } from '../containers/ContentBlocks/ContentBlocks';
+import { Big, Quote } from '../components/Typography';
 import theme from '../styles/theme';
 
 import Service from '../containers/Service/Service';
@@ -20,14 +20,6 @@ const pageSettings = {
     keywords: 'tag1,tag2',
 };
 
-const ProfilePicture = styled.div`
-    width: 5rem;
-    height: 5rem;
-    border-radius: 100rem;
-    background-image: url(${props => props.img});
-    background-size: cover;
-    margin-bottom: 1.66em;
-`;
 const CheckListItemBase = styled.li`
     display: flex;
     align-items: center;
@@ -89,7 +81,7 @@ const Partners = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
             useGatsbyLink
-            img={require('../images/img/content/team.png')}
+            img={require('../images/img/header/postit-shadow.jpg')}
             subtitle="Bytecode Partner"
             title="Bytecode als partner"
             href="/contact"
@@ -284,20 +276,14 @@ const Partners = () => (
                     <ProfilePicture
                         img={require('../images/img/content/jan-willem.jpg')}
                     />
-                    <blockquote>
-                        <h3>
-                            Bytecode heeft slimme, gedreven en ook communicatief
-                            sterke developers die met je meedenken en meegroeien
-                            naar gezamelijke doelen. Diverse en gespecificeerde
-                            skills en kennis die ze zowel op technisch als
-                            adviserend niveau inzetten om je te helpen bij de
-                            volgende stap van je organisatie.
-                        </h3>
-                        <p>
-                            - Jan-Willem (
-                            <a href="https://pumphouse.nl/">The Pumphouse</a>)
-                        </p>
-                    </blockquote>
+                    <Quote author='- Jan-Willem (The Pumphouse)' url='https://pumphouse.nl'>
+                        <strong>Bytecode heeft slimme, gedreven en ook communicatief
+                        sterke developers die met je meedenken en meegroeien
+                        naar gezamelijke doelen</strong>. Diverse en gespecificeerde
+                        skills en kennis die ze zowel op technisch als
+                        adviserend niveau inzetten om je te helpen bij de
+                        volgende stap van je organisatie.
+                    </Quote>
                 </Col>
             </Row>
         </PaddedContainer>
