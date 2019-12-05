@@ -290,7 +290,10 @@ const Partners = () => (
                             learn-to-code marketplace. Since then, we’ve
                             consulted on and implemented platforms.
                         </h3>
-                        <p>- Jan-Willem (<a href="https://pumphouse.nl/">The Pumphouse</a>)</p>
+                        <p>
+                            - Jan-Willem (
+                            <a href="https://pumphouse.nl/">The Pumphouse</a>)
+                        </p>
                     </blockquote>
                 </Col>
             </Row>
