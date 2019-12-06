@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {
     ContentWrapper,
@@ -6,7 +7,7 @@ import {
     TextAndImageBase,
 } from './ContentBlocks.components';
 
-const TextAndImage = props => {
+export const TextAndImage = props => {
     const { children, img, alt, reverse, fluid } = props;
 
     const getImgPos = () => {
@@ -49,8 +50,6 @@ const TextAndImage = props => {
     );
 };
 
-export default TextAndImage;
-
 TextAndImage.propTypes = {
     children: PropTypes.node.isRequired,
     img: PropTypes.string.isRequired,
@@ -63,3 +62,12 @@ TextAndImage.defaultProps = {
     reverse: false,
     fluid: false,
 };
+
+export const ProfilePicture = styled.div`
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100rem;
+    background-image: url(${props => props.img});
+    background-size: cover;
+    margin-bottom: 1.66em;
+`;
