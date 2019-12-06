@@ -89,7 +89,6 @@ const Partners = () => (
             title="Bytecode als partner"
             href="/contact"
             button="Neem contact op"
-            bgSize="70%"
             text="Als marketingbureau wil je het liefst bezig zijn
                   met marketingactiviteiten die waarde creëren
                   voor jouw klanten. Wat als er een technische
