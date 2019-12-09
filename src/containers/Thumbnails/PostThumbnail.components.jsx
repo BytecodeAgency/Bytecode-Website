@@ -85,7 +85,9 @@ export const BigThumbnailImg = styled.div`
 
 export const ThumbnailImg = styled.div`
     background: url('${props => props.img}'), ${theme.colors.secondary};
+    background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
     transition: all 0.5s ease;
     height: 50vh;
     max-height: 40em;
