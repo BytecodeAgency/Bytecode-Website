@@ -13,17 +13,18 @@ const pageSettings = {
 
 const bredaImg = require('../images/img/cases/breda-actief/website-1.jpg');
 const mooiwerkImg = require('../images/img/cases/mooiwerk/website-1.png');
+const coteEtCielImage = require('../images/img/cases/cote-et-ciel/website-1.png');
 
 const Cases = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
             <Row>
                 <PostThumbnail
-                    title="Breda in beweging!"
-                    category="Breda-Actief"
+                    title="Hoge kwaliteit rugtassen"
+                    category="Côte et ciel"
                     big
-                    slug="/case/breda-actief"
-                    postImageUrl={bredaImg}
+                    slug="/case/cote-et-ciel"
+                    postImageUrl={coteEtCielImage}
                 />
             </Row>
         </Container>
@@ -34,6 +35,12 @@ const Cases = () => (
                     category="Mooiwerk"
                     slug="/case/mooiwerk"
                     postImageUrl={mooiwerkImg}
+                />
+                <PostThumbnail
+                    title="Breda in beweging!"
+                    category="Breda-Actief"
+                    slug="/case/breda-actief"
+                    postImageUrl={bredaImg}
                 />
             </Row>
         </Container>
