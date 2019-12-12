@@ -11,6 +11,7 @@ const pageSettings = {
     keywords: 'website,applicatie,portfolio',
 };
 
+const styrImg = require('../images/img/cases/styr/website-3.png');
 const bredaImg = require('../images/img/cases/breda-actief/website-1.jpg');
 const mooiwerkImg = require('../images/img/cases/mooiwerk/website-1.png');
 
@@ -19,16 +20,22 @@ const Cases = () => (
         <Container>
             <Row>
                 <PostThumbnail
-                    title="Breda in beweging!"
-                    category="Breda-Actief"
+                    title="Modern functiewaarderingsplatform"
+                    category="Styr"
                     big
-                    slug="/case/breda-actief"
-                    postImageUrl={bredaImg}
+                    slug="/case/styr"
+                    postImageUrl={styrImg}
                 />
             </Row>
         </Container>
         <Container>
             <Row>
+                <PostThumbnail
+                    title="Breda in beweging!"
+                    category="Breda-Actief"
+                    slug="/case/breda-actief"
+                    postImageUrl={bredaImg}
+                />
                 <PostThumbnail
                     title="Brengt Breda dichter bij elkaar."
                     category="Mooiwerk"
