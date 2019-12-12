@@ -3,7 +3,7 @@ import React from 'react';
 import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/MainLayout';
 import { Container, Row, Col } from '../../lib/Grid';
-import TextAndImage from '../../containers/ContentBlocks/ContentBlocks';
+import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
 import { Big } from '../../components/Typography';
 
 const pageSettings = {
@@ -12,11 +12,10 @@ const pageSettings = {
     keywords: 'functiewaardering,online,platform,webapp',
 };
 
-const designImg1 = require('../../images/img/cases/styr/design-1.png');
-const designImg2 = require('../../images/img/cases/styr/design-2.png');
+const designImg1 = require('../../images/img/cases/styr/website-1.png');
+const designImg2 = require('../../images/img/cases/styr/website-1.png');
 const websiteImg1 = require('../../images/img/cases/styr/website-1.png');
-const websiteImg2 = require('../../images/img/cases/styr/website-2.png');
-const websiteImg3 = require('../../images/img/cases/styr/website-3.png');
+const websiteImg3 = require('../../images/img/cases/styr/website-1.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
@@ -31,17 +30,19 @@ const Case = () => (
                 </Col>
                 <Col lg={5}>
                     <Big>
-                        Een HR consultancybedrijf met een missie:
-                        loonschaalindelingen moderniseren met behulp van het
-                        STYR model.
+                        STYR is een specialistisch adviesbureau op het gebied
+                        van organisatiedesign, waarderen en belonen. STYR heeft
+                        het STYR model ontwikkeld, een moderne en vernieuwende
+                        manier van (functie)waardering.
                     </Big>
                     <p>
-                        Door middel van de STYR allocator tool kunnen bedrijven
-                        effectiever vacatures opstellen en werknemers waarderen
-                        en indelen binnen zeventien verschillende niveaus. STYR
-                        benaderde ons team voor de uitwerking van dit idee tot
-                        een digitaal platform dat perfect aansluit op haar
-                        klanten.
+                        Centraal in het STYR model staat het benodigde
+                        probleemoplossend vermogen van de stoel (rol of functie)
+                        en de talenten en competenties van mensen op de stoel.
+                        STYR heeft Bytecode gevraagd om een online
+                        waarderingstool te ontwikkelen, waarmee functies en
+                        rollen kunnen worden gewaardeerd met behulp van het STYR
+                        model.
                     </p>
                 </Col>
             </Row>
@@ -51,17 +52,11 @@ const Case = () => (
                 <p className="subtitle">Analyze</p>
                 <h2>De uitdaging</h2>
                 <Big>
-                    STYR’s doel is om de zwart/witte loonschalen van vroeger aan
-                    de kant te schuiven voor een effectievere oplossing die met
-                    veel meer criteria rekening houdt.
+                    Ontwikkel een praktische online waarderingstool (STYR
+                    Allocator Tool) waarmee de klanten van STYR zelf de zwaarte
+                    van rollen en functies kunnen vaststellen en die voldoet aan
+                    de volgende criteria:
                 </Big>
-                <p>
-                    Met dit ideaal in gedachte hebben ze een beslisboom gemaakt
-                    die de hiervoor genoemde verdeling van werknemers mogelijk
-                    maakt. De vraag voor ons bestond voor de uitwerking van de
-                    beslisboom naar een verkoopbaarder en schaalbaarder
-                    softwareproduct.
-                </p>
             </TextAndImage>
         </Container>
         <Container fluid>
@@ -70,30 +65,46 @@ const Case = () => (
                 <h2>De functionaliteiten</h2>
                 <Checklist>
                     <CheckListItem>
-                        Het STYR Model toegankelijker maken. Zelfs zonder
-                        training te gebruiken
+                        De tool moet toegankelijk zijn via een webbrowser;
                     </CheckListItem>
                     <CheckListItem>
-                        Verschillende gebruikersrollen (beheerder,
-                        administrator, professional) met verschillende rechten
-                        voor het aanpassen van de beslisboom en content
+                        Meerdere klanten van STYR moeten tegelijker tijd toegang
+                        kunnen hebben tot de tool;
                     </CheckListItem>
                     <CheckListItem>
-                        Verschillende stappen binnen de allocator tool, zoals
-                        het invullen van de baan waarvoor de allocatie gedaan
-                        wordt, en het kiezen van een ‘career path’ en kenmerken
-                        die bij dit werk toepasbaar zijn
+                        Meerdere gebruikers moeten tegelijk toegang kunnen
+                        hebben tot de tool;
                     </CheckListItem>
                     <CheckListItem>
-                        Allocatie-resultaat opslaan als PDF, activeren, als test
-                        opslaan of verwijderen
+                        Er moeten meerdere gebruikers rollen komen met
+                        bijbehorende rechten;
                     </CheckListItem>
                     <CheckListItem>
-                        Filteren van de gemaakte allocaties
+                        Een digitale beslisboom om tot de juiste zwaarte van een
+                        functie of rol te komen;
                     </CheckListItem>
                     <CheckListItem>
-                        Opzetten van een service desk voor vragen van gebruikers
-                        inclusief een attachment-mogelijkheid en emailkoppeling
+                        Een dashboard met een overzicht van de gewaardeerde
+                        functies/rollen en een filter mogelijkheid;
+                    </CheckListItem>
+                    <CheckListItem>
+                        Een servicedesk, waar klanten ondersteuningen kunnen
+                        vragen
+                    </CheckListItem>
+                    <CheckListItem>
+                        Het downloaden en uitprinten van de indelingsresultaten
+                    </CheckListItem>
+                    <CheckListItem>
+                        Zowel in het Nederlands als Engls taal beschikbaar
+                    </CheckListItem>
+                    <CheckListItem>
+                        Makkelijk te koppelen aan andere tools
+                    </CheckListItem>
+                    <CheckListItem>
+                        Ondersteuning voor hosting en technisch support
+                    </CheckListItem>
+                    <CheckListItem>
+                        Advisering over de best passende techniek
                     </CheckListItem>
                 </Checklist>
             </TextAndImage>
@@ -103,10 +114,14 @@ const Case = () => (
                 <p className="subtitle">Strategize</p>
                 <h2>Proces en technische details</h2>
                 <Big>
-                    Na een kickoff-meeting zijn we begonnen met een eerste UX
-                    design en wireframe voor het allocator platform. Extra
-                    features die op basis van deze wireframes nog gewenst waren
-                    zijn toegevoegd.
+                    Na een grondige intake zijn we begonnen met een eerste UX/UI
+                    design voor het Allocator tool. Extra’s die op basis van
+                    deze wireframes nog gewenst waren zijn ook toegevoegd.
+                </Big>
+                <Big>
+                    In Invision zijn prototypes gemaakt van de Allocator tool.
+                    Op basis hiervan is feedback verzamelt en zijn de
+                    functionaliteiten en design aangescherpt.
                 </Big>
                 <Big>
                     De frontend van de allocator is gemaakt in React, en voor de
@@ -116,7 +131,7 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={websiteImg2} reverse fluid>
+            <TextAndImage img={websiteImg1} reverse fluid>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing</h2>
                 <Big>
@@ -125,23 +140,10 @@ const Case = () => (
                     worden door op opties te klikken die bij een
                     werknemerprofiel passen.
                 </Big>
-                <Checklist>
-                    <CheckListItem>
-                        Een dashboard met recente allocaties en updates
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een overzicht van bedrijven voor STYR gebruikers, met
-                        per bedrijf de allocator tool, resultaten en een
-                        beheeroptie
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een pagina met een overzicht van het STYR model
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een STYR servicedesk waar een supportticket kan worden
-                        aangemaakt
-                    </CheckListItem>
-                </Checklist>
+                <p>
+                    Meer informatie over het STYR model en de STYR Allocator
+                    Tool vind je op www.styrmodel.nl
+                </p>
             </TextAndImage>
         </Container>
     </Layout>
