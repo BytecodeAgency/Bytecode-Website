@@ -24,7 +24,6 @@ const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
             <CaseHeader img={websiteImg1} />
-            <CaseHeader img={websiteImg1} />
         </Container>
         <Container>
             <Row align="center">
