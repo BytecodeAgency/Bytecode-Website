@@ -114,7 +114,7 @@ const Case = () => (
                 </Big>
             </TextAndImage>
         </Container>
-        <Container>
+        <Container fluid>
             <TextAndImage img={websiteImg5} alt="functies" fluid reverse>
                 <Checklist>
                     <CheckListItem>
@@ -145,7 +145,7 @@ const Case = () => (
                 </Checklist>
             </TextAndImage>
         </Container>
-        <Container>
+        <Container fluid>
             <TextAndImage img={websiteImg1} alt="resultaten" fluid>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing en Resultaten</h2>
@@ -172,7 +172,7 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={mooiwerkImg} alt="Mooiwerk Breda" fluid>
+            <TextAndImage img={mooiwerkImg} alt="Mooiwerk Breda" reverse fluid>
                 <p className="subtitle">Mooiwerk Breda</p>
                 <h1>Brengt Breda dichter bij elkaar</h1>
                 <Big>
