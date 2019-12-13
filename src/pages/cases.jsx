@@ -13,7 +13,7 @@ const pageSettings = {
 
 const bredaImg = require('../images/img/cases/breda-actief/website-1.jpg');
 const mooiwerkImg = require('../images/img/cases/mooiwerk/website-1.png');
-const coteEtCielImage = require('../images/img/cases/cote-et-ciel/website-1.png');
+const coteEtCielImage = require('../images/img/cases/cote-et-ciel/homepage.png');
 
 const Cases = () => (
     <Layout pageSettings={pageSettings}>

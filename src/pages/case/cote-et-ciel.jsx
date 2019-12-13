@@ -7,60 +7,61 @@ import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
 import { Big } from '../../components/Typography';
 
 const pageSettings = {
-    title: 'Côte et ciel',
-    description: 'Rugtassen van hoge kwaliteit',
-    keywords: 'cote et ciel, rugtassen, case, bytecode digital agency',
+    title: 'côte&ciel?l',
+    description:
+        'Bytecode hielp côte&ciel met de stabiliteit van haar webshop.',
+    keywords: 'côte&ciel?, rugtassen, case, bytecode digital agency',
 };
 
-const websiteImg1 = require('../../images/img/cases/cote-et-ciel/website-1.png');
-const websiteImg2 = require('../../images/img/cases/cote-et-ciel/website-2.png');
-const websiteImg3 = require('../../images/img/cases/cote-et-ciel/website-3.png');
-const websiteImg4 = require('../../images/img/cases/cote-et-ciel/website-4.png');
-const websiteImg5 = require('../../images/img/cases/cote-et-ciel/website-5.png');
+const homePage = require('../../images/img/cases/cote-et-ciel/homepage.png');
+const dashboardImg = require('../../images/img/cases/cote-et-ciel/dashboard.png');
+const loginImg = require('../../images/img/cases/cote-et-ciel/login.png');
+const productImg = require('../../images/img/cases/cote-et-ciel/product.png');
+const countryImg = require('../../images/img/cases/cote-et-ciel/country.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
-            <CaseHeader img={websiteImg1} />
+            <CaseHeader img={homePage} />
         </Container>
         <Container>
             <Row align="center">
                 <Col offset={{ lg: 1 }} lg={5}>
-                    <p className="subtitle">Côte et ciel</p>
+                    <p className="subtitle">côte&ciel</p>
                     <h1>Rugtassen van hoge kwaliteit</h1>
                 </Col>
                 <Col lg={5}>
                     <Big>
-                        Côte et Ciel is gespecialiseerd in het ontwerpen en
-                        maken van designerrugtassen die verkocht worden via hun
-                        eigen webshop, maar ook via externe kanalen zoals
-                        bijvoorbeeld Amazon. Met hun tassen brengen ze de wereld
-                        van mode en industrieel ontwerp samen, wat leidt tot
-                        stijlvolle oplossingen en designs. Côte et Ciel heeft
-                        warenhuizen in Azië, Europa en Noord-Amerika.
+                        côte&ciel is gespecialiseerd in het ontwerpen en maken
+                        van designerrugtassen die verkocht worden via hun eigen
+                        webshop, maar ook via externe kanalen zoals bijvoorbeeld
+                        Amazon. Met hun tassen brengen ze de wereld van mode en
+                        industrieel ontwerp samen, wat leidt tot stijlvolle
+                        oplossingen en designs. côte&ciel heeft warenhuizen in
+                        Azië, Europa en Noord-Amerika.
                     </Big>
                 </Col>
             </Row>
         </Container>
         <Container fluid>
-            <TextAndImage img={websiteImg3} alt="onderzoek" fluid>
+            <TextAndImage img={loginImg} alt="onderzoek" fluid>
                 <p className="subtitle">Analyze</p>
                 <h2>De uitdaging</h2>
                 <p>
-                    De bestaande webshop van Côte et Ciel voldeed niet meer aan
-                    de wensen. Er bestonden technische mankementen en problemen
-                    bij het uitrollen van nieuwe versies. Daarnaast moest de
+                    De bestaande webshop van côte&ciel voldeed niet meer aan de
+                    wensen. Er bestonden technische mankementen en problemen bij
+                    het uitrollen van nieuwe versies. Daarnaast moest de
                     gebruiksvriendelijkheid onder handen genomen worden,
                     bijvoorbeeld door het toevoegen van nieuwe betaalmethodes.
-                    We ontdekten dat veel mogelijkheden voor online groei
-                    onbenut bleven, en dit hebben we ook meteen doorgevoerd om
-                    de resultaten van Côte et Ciel met hun nieuwe platform te
-                    verbeteren en optimaliseren.
+                    Wij ondersteunden côte&ciel bij het opzetten van haar nieuwe
+                    platform op Shopify, oplossen van kritieke problem op haar
+                    huidige Magento webshop en verzorgden zowel datamigratie als
+                    launch engineering.
                 </p>
             </TextAndImage>
         </Container>
-        <Container flluid>
-            <TextAndImage img={websiteImg4} alt="aandachtspunten" fluid reverse>
+        <Container fluid>
+            <TextAndImage img={productImg} alt="aandachtspunten" fluid reverse>
                 <p className="subtitle">Analyze</p>
                 <h2>De aandachtspunten</h2>
                 <p>
@@ -68,9 +69,12 @@ const Case = () => (
                     zijn opgesteld en uitgevoerd:
                 </p>
                 <Checklist>
+                    <CheckListItem>
+                        Gemakkelijker accounts aanmaken voor hogere conversie
+                    </CheckListItem>
                     <CheckListItem>Verkorten van de laadtijd</CheckListItem>
                     <CheckListItem>
-                        Automatisch deployen van nieuwe versies
+                        Automatisch deployen van nieuwe versies zonder downtime
                     </CheckListItem>
                     <CheckListItem>Minimaliseren van downtime</CheckListItem>
                     <CheckListItem>Gebruiksvriendelijke webshop</CheckListItem>
@@ -81,14 +85,11 @@ const Case = () => (
                     <CheckListItem>
                         Betere beveiliging van de webshop
                     </CheckListItem>
-                    <CheckListItem>
-                        Een mobiele app in de toekomst
-                    </CheckListItem>
                 </Checklist>
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={websiteImg2} alt="proces" fluid>
+            <TextAndImage img={dashboardImg} alt="proces" fluid>
                 <p className="subtitle">Strategize</p>
                 <h2>Proces en techniek</h2>
                 <p>
@@ -99,38 +100,34 @@ const Case = () => (
                     Tussendoor hebben we vanzelfsprekend genoeg evaluatie- en
                     feedbackmomenten ingelast.
                 </p>
-                <ul>
-                    <li>
+                <Checklist>
+                    <CheckListItem>
                         De webshop is ontwikkeld en gebouwd in Magento 2.3.
                         Gebruikers worden op basis van hun locatie direct naar
                         de juiste webshop geleid.
-                    </li>
-                    <li>
+                    </CheckListItem>
+                    <CheckListItem>
                         Gebruik van Redis en Varnish voor de caching, en
                         NewRelic voor de analyse.
-                    </li>
-                    <li>
+                    </CheckListItem>
+                    <CheckListItem>
                         De volledige cloud-infrastructuur draait op Amazon Web
                         Services (AWS).
-                    </li>
-                    <li>
+                    </CheckListItem>
+                    <CheckListItem>
                         De database draait onder een losse RDS-instantie met
-                        primary/replica (master/slave) opzet.
-                    </li>
-                    <li>
+                        primary/replica (leader/follower) opzet.
+                    </CheckListItem>
+                    <CheckListItem>
                         Automatische testing wordt gedaan met onder andere Jest
-                        (Javascript) en TestCafe/Cypress (E2E). Automatische
-                        deployments zijn geïntegreerd in onze GitLab-omgeving.
-                    </li>
-                </ul>
-                <Big>
-                    Deze technische tools stellen Breda Actief in staat om haar
-                    website geheel naar eigen wens in te richten.
-                </Big>
+                        (Javascript) en TestCafe (E2E). Automatische deployments
+                        zijn geïntegreerd in onze GitLab-omgeving.
+                    </CheckListItem>
+                </Checklist>
             </TextAndImage>
         </Container>
         <Container>
-            <TextAndImage img={websiteImg5} alt="functies" fluid reverse>
+            <TextAndImage img={countryImg} alt="functies" fluid reverse>
                 <Checklist>
                     <CheckListItem>
                         Om downtime te minimaliseren is er geswitcht naar
@@ -165,17 +162,15 @@ const Case = () => (
                 </Checklist>
             </TextAndImage>
         </Container>
-        <Container>
-            <TextAndImage img={websiteImg1} alt="resultaten" fluid>
+        <Container fluid>
+            <TextAndImage img={homePage} alt="resultaten" fluid>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing en Resultaten</h2>
                 <Big>
-                    Het Côte et Ciel project is inmiddels door ons overgezet
-                    naar Shopify voor een stabielere omgeving en snellere
-                    frontend ontwikkeling. Hiernaast zijn er ook nog
-                    langetermijnwensen, zoals het maken van een mobiele app,
-                    sterker inzetten op online marketing en de voorkant van de
-                    webshop omzetten naar een webapp.
+                    Het côte&ciel project is inmiddels door ons overgezet naar
+                    Shopify voor een stabielere omgeving en snellere frontend
+                    ontwikkeling. Hierbij hebben wij zowel de launch engineering
+                    als data migratie verzorgd.
                 </Big>
             </TextAndImage>
         </Container>
