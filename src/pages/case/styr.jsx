@@ -13,15 +13,15 @@ const pageSettings = {
     keywords: 'functiewaardering,online,platform,webapp',
 };
 
-const websiteImg1 = require('../../images/img/cases/styr/website-1.png');
-const websiteImg2 = require('../../images/img/cases/styr/website-2.png');
-const websiteImg3 = require('../../images/img/cases/styr/website-3.png');
-const websiteImg4 = require('../../images/img/cases/styr/website-4.png');
+const loginImg = require('../../images/img/cases/styr/login.png');
+const serviceDeskImg = require('../../images/img/cases/styr/service-desk.png');
+const modelImg = require('../../images/img/cases/styr/model.png');
+const invisionImg = require('../../images/img/cases/styr/invision.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
-            <CaseHeader img={websiteImg1} />
+            <CaseHeader img={loginImg} alt="login"/>
         </Container>
         <Container>
             <Row align="center">
@@ -40,7 +40,7 @@ const Case = () => (
             </Row>
         </Container>
         <Container fluid>
-            <TextAndImage img={websiteImg3} alt="alt tag" fluid>
+            <TextAndImage img={modelImg} alt="styr model" fluid>
                 <p className="subtitle">Analyze</p>
                 <h2>De uitdaging</h2>
                 <Big>
@@ -51,7 +51,7 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={websiteImg2} alt="alt tag" fluid reverse>
+            <TextAndImage img={serviceDeskImg} alt="service desk" fluid reverse>
                 <p className="subtitle">Analyze</p>
                 <h2>De functionaliteiten</h2>
                 <Checklist>
@@ -77,7 +77,7 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={websiteImg4} alt="alt" fluid>
+            <TextAndImage img={invisionImg} alt="invision example comments" fluid>
                 <p className="subtitle">Strategize</p>
                 <h2>Proces en technische details</h2>
                 <Big>
@@ -98,7 +98,7 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={websiteImg1} reverse fluid>
+            <TextAndImage img={loginImg} reverse fluid>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing</h2>
                 <Big>
