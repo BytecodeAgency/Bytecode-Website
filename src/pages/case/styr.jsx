@@ -8,7 +8,8 @@ import { Big } from '../../components/Typography';
 
 const pageSettings = {
     title: 'Styr',
-    description: 'Moderne functiewaardering',
+    description:
+        'De STYR Allocator tool is een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.',
     keywords: 'functiewaardering,online,platform,webapp',
 };
 
