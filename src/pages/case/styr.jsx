@@ -12,15 +12,15 @@ const pageSettings = {
     keywords: 'functiewaardering,online,platform,webapp',
 };
 
-const designImg1 = require('../../images/img/cases/styr/website-1.png');
-const designImg2 = require('../../images/img/cases/styr/website-1.png');
 const websiteImg1 = require('../../images/img/cases/styr/website-1.png');
-const websiteImg3 = require('../../images/img/cases/styr/website-1.png');
+const websiteImg2 = require('../../images/img/cases/styr/website-2.png');
+const websiteImg3 = require('../../images/img/cases/styr/website-3.png');
+const websiteImg4 = require('../../images/img/cases/styr/website-4.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
-            <CaseHeader img={websiteImg3} />
+            <CaseHeader img={websiteImg1} />
         </Container>
         <Container>
             <Row align="center">
@@ -35,50 +35,25 @@ const Case = () => (
                         het STYR model ontwikkeld, een moderne en vernieuwende
                         manier van (functie)waardering.
                     </Big>
-                    <p>
-                        Centraal in het STYR model staat het benodigde
-                        probleemoplossend vermogen van de stoel (rol of functie)
-                        en de talenten en competenties van mensen op de stoel.
-                        STYR heeft Bytecode gevraagd om een online
-                        waarderingstool te ontwikkelen, waarmee functies en
-                        rollen kunnen worden gewaardeerd met behulp van het STYR
-                        model.
-                    </p>
                 </Col>
             </Row>
         </Container>
         <Container fluid>
-            <TextAndImage img={websiteImg1} alt="alt tag" fluid>
+            <TextAndImage img={websiteImg3} alt="alt tag" fluid>
                 <p className="subtitle">Analyze</p>
                 <h2>De uitdaging</h2>
                 <Big>
                     Ontwikkel een praktische online waarderingstool (STYR
                     Allocator Tool) waarmee de klanten van STYR zelf de zwaarte
-                    van rollen en functies kunnen vaststellen en die voldoet aan
-                    de volgende criteria:
+                    van rollen en functies kunnen vaststellen.
                 </Big>
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={designImg1} alt="alt tag" fluid reverse>
+            <TextAndImage img={websiteImg2} alt="alt tag" fluid reverse>
                 <p className="subtitle">Analyze</p>
                 <h2>De functionaliteiten</h2>
                 <Checklist>
-                    <CheckListItem>
-                        De tool moet toegankelijk zijn via een webbrowser;
-                    </CheckListItem>
-                    <CheckListItem>
-                        Meerdere klanten van STYR moeten tegelijker tijd toegang
-                        kunnen hebben tot de tool;
-                    </CheckListItem>
-                    <CheckListItem>
-                        Meerdere gebruikers moeten tegelijk toegang kunnen
-                        hebben tot de tool;
-                    </CheckListItem>
-                    <CheckListItem>
-                        Er moeten meerdere gebruikers rollen komen met
-                        bijbehorende rechten;
-                    </CheckListItem>
                     <CheckListItem>
                         Een digitale beslisboom om tot de juiste zwaarte van een
                         functie of rol te komen;
@@ -92,25 +67,16 @@ const Case = () => (
                         vragen
                     </CheckListItem>
                     <CheckListItem>
-                        Het downloaden en uitprinten van de indelingsresultaten
+                        Zowel in het Nederlands als Engels beschikbaar
                     </CheckListItem>
                     <CheckListItem>
-                        Zowel in het Nederlands als Engls taal beschikbaar
-                    </CheckListItem>
-                    <CheckListItem>
-                        Makkelijk te koppelen aan andere tools
-                    </CheckListItem>
-                    <CheckListItem>
-                        Ondersteuning voor hosting en technisch support
-                    </CheckListItem>
-                    <CheckListItem>
-                        Advisering over de best passende techniek
+                        Gemakkelijk te koppelen aan andere tools
                     </CheckListItem>
                 </Checklist>
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={designImg2} alt="alt" fluid>
+            <TextAndImage img={websiteImg4} alt="alt" fluid>
                 <p className="subtitle">Strategize</p>
                 <h2>Proces en technische details</h2>
                 <Big>
