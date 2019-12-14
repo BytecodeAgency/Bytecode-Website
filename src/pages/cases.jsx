@@ -23,7 +23,7 @@ const Cases = () => (
                 <PostThumbnail
                     big
                     title="Modern functiewaarderingsplatform"
-                    category="STYR"
+                    category="STYR service desk"
                     slug="/case/styr"
                     postImageUrl={styrImg}
                 />
@@ -32,20 +32,20 @@ const Cases = () => (
         <Container>
             <Row>
                 <PostThumbnail
-                    title="Brengt Breda dichter bij elkaar."
-                    category="Mooiwerk"
+                    title="Brengt Breda dichter bij elkaar"
+                    category="Mooiwerk Breda"
                     slug="/case/mooiwerk"
                     postImageUrl={mooiwerkImg}
                 />
                 <PostThumbnail
                     title="Hoge kwaliteit rugtassen"
-                    category="Côte et ciel"
+                    category="côte&ciel"
                     slug="/case/cote-et-ciel"
                     postImageUrl={coteEtCielImage}
                 />
                 <PostThumbnail
                     title="Breda in beweging!"
-                    category="Breda-Actief"
+                    category="Breda Actief"
                     slug="/case/breda-actief"
                     postImageUrl={bredaImg}
                 />
