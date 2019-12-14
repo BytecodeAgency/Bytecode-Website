@@ -7,7 +7,7 @@ import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
 import { Big } from '../../components/Typography';
 
 const pageSettings = {
-    title: 'Styr',
+    title: 'STYR',
     description:
         'De STYR Allocator tool is een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.',
     keywords: 'functiewaardering,online,platform,webapp',
@@ -109,7 +109,7 @@ const Case = () => (
                 </Big>
                 <p>
                     Meer informatie over het STYR model en de STYR Allocator
-                    Tool vind je op <a href="https://www.styrmodel.com">de website van Styr</a>.
+                    Tool vind je op <a href="https://www.styrmodel.com">de website van STYR</a>.
                 </p>
             </TextAndImage>
         </Container>

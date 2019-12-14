@@ -6,7 +6,7 @@ import { Container, Row } from '../lib/Grid';
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 
 const pageSettings = {
-    title: 'Work',
+    title: 'Cases',
     description: 'Bekijk hier ons werk!',
     keywords: 'website,applicatie,portfolio',
 };
@@ -21,7 +21,7 @@ const Cases = () => (
             <Row>
                 <PostThumbnail
                     title="Modern functiewaarderingsplatform"
-                    category="Styr"
+                    category="STYR"
                     big
                     slug="/case/styr"
                     postImageUrl={styrImg}
