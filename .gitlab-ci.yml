@@ -54,7 +54,7 @@ release_docker:
   only:
     - master
 
-release_pages:
+pages:
   image: alpine:3.9
   stage: release
   dependencies:
