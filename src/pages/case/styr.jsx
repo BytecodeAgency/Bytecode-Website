@@ -21,7 +21,7 @@ const invisionImg = require('../../images/img/cases/styr/invision.png');
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
-            <CaseHeader img={loginImg} alt="login"/>
+            <CaseHeader img={loginImg} alt="login" />
         </Container>
         <Container>
             <Row align="center">
@@ -77,7 +77,11 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={invisionImg} alt="invision example comments" fluid>
+            <TextAndImage
+                img={invisionImg}
+                alt="invision example comments"
+                fluid
+            >
                 <p className="subtitle">Strategize</p>
                 <h2>Proces en technische details</h2>
                 <Big>
@@ -109,7 +113,8 @@ const Case = () => (
                 </Big>
                 <p>
                     Meer informatie over het STYR model en de STYR Allocator
-                    Tool vind je op <a href="https://www.styrmodel.com">de website van STYR</a>.
+                    Tool vind je op{' '}
+                    <a href="https://www.styrmodel.com">de website van STYR</a>.
                 </p>
             </TextAndImage>
         </Container>
