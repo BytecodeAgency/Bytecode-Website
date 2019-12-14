@@ -28,8 +28,9 @@ const QuoteText = styled.blockquote`
     margin: 1em 0;
 `;
 
-export const Big = styled.span`
+export const Big = styled.p`
     font-size: 1.33em;
+    margin: 20px 0px;
 `;
 
 export const Small = styled.span`

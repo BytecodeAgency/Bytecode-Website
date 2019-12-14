@@ -114,7 +114,7 @@ const Case = () => (
                 </Big>
             </TextAndImage>
         </Container>
-        <Container>
+        <Container fluid>
             <TextAndImage img={websiteImg5} alt="functies" fluid reverse>
                 <Checklist>
                     <CheckListItem>
@@ -145,34 +145,29 @@ const Case = () => (
                 </Checklist>
             </TextAndImage>
         </Container>
-        <Container>
+        <Container fluid>
             <TextAndImage img={websiteImg1} alt="resultaten" fluid>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing en Resultaten</h2>
-                <p>
-                    <Big>
-                        Om Breda Actief zo goed mogelijk te helpen bij het
-                        neerzetten van een succesvolle website, hebben we
-                        besloten het volgende als oplossing te bieden, om bij te
-                        dragen aan de online groei en de prachtige gestelde
-                        doelen.
-                    </Big>
-                </p>
-                <p>
-                    <Big>
-                        Het resultaat van dit project is te bekijken op
-                        breda-actief.nl. In overleg met Stichting Breda Actief
-                        is de broncode vrijgegeven onder GPL-3.0 licentie,
-                        <a href="https://git.bytecode.nl/breda-actief">
-                            &nbsp;hier&nbsp;
-                        </a>
-                        te bekijken.
-                    </Big>
-                </p>
+                <Big>
+                    Om Breda Actief zo goed mogelijk te helpen bij het
+                    neerzetten van een succesvolle website, hebben we besloten
+                    het volgende als oplossing te bieden, om bij te dragen aan
+                    de online groei en de prachtige gestelde doelen.
+                </Big>
+                <Big>
+                    Het resultaat van dit project is te bekijken op
+                    breda-actief.nl. In overleg met Stichting Breda Actief is de
+                    broncode vrijgegeven onder GPL-3.0 licentie,
+                    <a href="https://git.bytecode.nl/breda-actief">
+                        &nbsp;hier&nbsp;
+                    </a>
+                    te bekijken.
+                </Big>
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={mooiwerkImg} alt="Mooiwerk Breda" fluid>
+            <TextAndImage img={mooiwerkImg} alt="Mooiwerk Breda" reverse fluid>
                 <p className="subtitle">Mooiwerk Breda</p>
                 <h1>Brengt Breda dichter bij elkaar</h1>
                 <Big>
