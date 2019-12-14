@@ -23,7 +23,7 @@ const Cases = () => (
                 <PostThumbnail
                     big
                     title="Modern functiewaarderingsplatform"
-                    category="STYR service desk"
+                    category="STYR"
                     slug="/case/styr"
                     postImageUrl={styrImg}
                 />
