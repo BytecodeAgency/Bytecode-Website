@@ -3,6 +3,7 @@ stages:
   - build
   - test
   - release
+  - deploy
   - analyze
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -56,7 +57,7 @@ release_docker:
 
 pages:
   image: alpine:3.9
-  stage: release
+  stage: deploy
   dependencies:
     - build_node
   script:
