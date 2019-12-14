@@ -7,7 +7,7 @@ import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
 import { Big } from '../../components/Typography';
 
 const pageSettings = {
-    title: 'côte&ciel?l',
+    title: 'côte&ciel',
     description:
         'Bytecode hielp côte&ciel met de stabiliteit van haar webshop.',
     keywords: 'côte&ciel?, rugtassen, case, bytecode digital agency',
