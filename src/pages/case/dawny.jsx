@@ -64,18 +64,18 @@ const Case = () => (
                 <p className="subtitle">Analyze</p>
                 <h2>De functionaliteiten</h2>
                 We werken in verschillende opeenvolgende sprints. Zo wordt er op
-                dit moment onder andere gewerkt aan
+                dit moment gewerkt aan drie componenten
                 <Checklist>
                     <CheckListItem>
-                        Android app waarin slaapdata verzameld kan worden
+                        Een Android app waarin slaapdata verzameld kan worden
                         (hartslag, zuurstofwaarden, PAI en HRV) vanaf de Nonin
                         WristOx2 wearable
                     </CheckListItem>
                     <CheckListItem>
-                        API om data te kunnen ontvangen, analyseren en delen
+                        Een API om data te kunnen ontvangen, analyseren en delen
                     </CheckListItem>
                     <CheckListItem>
-                        React frontend dashboard om data uit de API visueel te
+                        Een dashboard om data uit de API visueel te
                         analyseren en exporteren
                     </CheckListItem>
                 </Checklist>
