@@ -106,8 +106,7 @@ const Case = () => (
                     Om op de hoogte te blijven van het project kun je altijd een
                     kijkje nemen op
                     <a href="https://dawny.nl/">
-                        &nbsp;
-                        de website van het Dawny project
+                        &nbsp; de website van het Dawny project
                     </a>
                     .
                 </p>
