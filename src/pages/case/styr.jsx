@@ -113,7 +113,7 @@ const Case = () => (
                 </Big>
                 <p>
                     Meer informatie over het STYR model en de STYR Allocator
-                    Tool vind je op{' '}
+                    Tool vind je op&nbsp;
                     <a href="https://www.styrmodel.com">de website van STYR</a>.
                 </p>
             </TextAndImage>

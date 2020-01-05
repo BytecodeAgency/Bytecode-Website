@@ -49,9 +49,9 @@ const Case = () => (
                 <Big>
                     Van de senioren (55 jaar en ouder) die een heup breken,
                     overlijdt bijna 25% binnen een jaar na het oplopen van de
-                    heupfractuur{' '}
+                    heupfractuur&nbsp;
                     <a href="http://dx.doi.org/10.1007/978-90-313-9265-0_8">
-                        (Verhaar et al., 2013).{' '}
+                        (Verhaar et al., 2013).&nbsp;
                     </a>
                 </Big>
                 <p>
@@ -106,7 +106,7 @@ const Case = () => (
                     Om op de hoogte te blijven van het project kun je altijd een
                     kijkje nemen op
                     <a href="https://dawny.nl/">
-                        {' '}
+                        &nbsp;
                         de website van het Dawny project
                     </a>
                     .
