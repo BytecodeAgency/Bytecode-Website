@@ -47,6 +47,14 @@ const Case = () => (
                 <p className="subtitle">Analyze</p>
                 <h2>De uitdaging</h2>
                 <Big>
+                    Van de senioren (55 jaar en ouder) die een heup breken,
+                    overlijdt bijna 25% binnen een jaar na het oplopen van de
+                    heupfractuur{' '}
+                    <a href="http://dx.doi.org/10.1007/978-90-313-9265-0_8">
+                        (Verhaar et al., 2013).{' '}
+                    </a>
+                </Big>
+                <p>
                     We zijn op dit moment bezig om met gemakkelijk beschikbare
                     tools slaappatronen te onderzoeken, om hiermee een delier te
                     herkennen en hierop te kunnen reageren. Op deze manier
@@ -56,7 +64,7 @@ const Case = () => (
                     onderzoek, en uiteindelijk voor gebruik in de praktijk. Zo
                     worden slaappatronen onderzocht, om te ontdekken wanneer
                     iemand kwetsbaar is voor nachtelijk vallen.
-                </Big>
+                </p>
             </TextAndImage>
         </Container>
         <Container fluid>
