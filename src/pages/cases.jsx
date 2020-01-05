@@ -15,6 +15,7 @@ const styrImg = require('../images/img/cases/styr/login.png');
 const bredaImg = require('../images/img/cases/breda-actief/website-1.jpg');
 const mooiwerkImg = require('../images/img/cases/mooiwerk/website-1.png');
 const coteEtCielImage = require('../images/img/cases/cote-et-ciel/homepage.png');
+const dawnyImage = require('../images/img/cases/dawny/dashboard.png');
 
 const Cases = () => (
     <Layout pageSettings={pageSettings}>
@@ -32,10 +33,10 @@ const Cases = () => (
         <Container>
             <Row>
                 <PostThumbnail
-                    title="Brengt Breda dichter bij elkaar"
-                    category="Mooiwerk Breda"
-                    slug="/case/mooiwerk"
-                    postImageUrl={mooiwerkImg}
+                    title="Valpreventie voor ouderen"
+                    category="Reinier de Graaf ziekenhuis"
+                    slug="/case/dawny"
+                    postImageUrl={dawnyImage}
                 />
                 <PostThumbnail
                     title="Hoge kwaliteit rugtassen"
@@ -43,6 +44,16 @@ const Cases = () => (
                     slug="/case/cote-et-ciel"
                     postImageUrl={coteEtCielImage}
                 />
+                <PostThumbnail
+                    title="Brengt Breda dichter bij elkaar"
+                    category="Mooiwerk Breda"
+                    slug="/case/mooiwerk"
+                    postImageUrl={mooiwerkImg}
+                />
+            </Row>
+        </Container>
+        <Container>
+            <Row>
                 <PostThumbnail
                     title="Breda in beweging!"
                     category="Breda Actief"

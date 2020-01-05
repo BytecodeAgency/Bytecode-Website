@@ -13,7 +13,6 @@ cache:
 build_node:
   stage: build
   before_script:
-    - npm i -g yarn
     - yarn install --production --frozen-lockfile
   script:
     - yarn run build --prefix-paths bytecode-website
@@ -25,7 +24,6 @@ build_node:
 lint:
   stage: test
   before_script:
-    - npm i -g yarn
     - yarn install --frozen-lockfile
   script:
     - yarn run lint
@@ -33,7 +31,6 @@ lint:
 test_jest:
   stage: test
   before_script:
-    - npm i -g yarn
     - yarn install --frozen-lockfile
   script:
     - yarn run test:ci
