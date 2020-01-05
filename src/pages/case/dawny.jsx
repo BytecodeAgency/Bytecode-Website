@@ -52,7 +52,7 @@ const Case = () => (
                     herkennen en hierop te kunnen reageren. Op deze manier
                     kunnen we uiteindelijk voorkomen dat ouderen vallen en een
                     heup breken. Door middel van verschillende
-                    &apos;wearables&apos; wordt patiëntendata verzameld voor
+                    &quot;wearables&quot; wordt patiëntendata verzameld voor
                     onderzoek, en uiteindelijk voor gebruik in de praktijk. Zo
                     worden slaappatronen onderzocht, om te ontdekken wanneer
                     iemand kwetsbaar is voor nachtelijk vallen.
@@ -73,6 +73,10 @@ const Case = () => (
                     </CheckListItem>
                     <CheckListItem>
                         Een API om data te kunnen ontvangen, analyseren en delen
+                    </CheckListItem>
+                    <CheckListItem>
+                        Een server die verbindt met een voor grote datastromen
+                        geoptimaliseerde database
                     </CheckListItem>
                     <CheckListItem>
                         Een dashboard om data uit de API visueel te analyseren
