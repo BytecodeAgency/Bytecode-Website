@@ -95,7 +95,7 @@ const Case = () => (
                     functionaliteiten en design aangescherpt.
                 </Big>
                 <Big>
-                    De frontend van de allocator is gemaakt in React, en voor de
+                    De frontend van de allocator is gemaakt in React en voor de
                     content van de beslisboom is een maatwerk oplossing gemaakt
                     binnen WordPress.
                 </Big>

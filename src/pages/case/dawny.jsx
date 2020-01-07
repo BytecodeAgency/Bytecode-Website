@@ -61,7 +61,7 @@ const Case = () => (
                     kunnen we uiteindelijk voorkomen dat ouderen vallen en een
                     heup breken. Door middel van verschillende
                     &quot;wearables&quot; wordt patiëntendata verzameld voor
-                    onderzoek, en uiteindelijk voor gebruik in de praktijk. Zo
+                    onderzoek en uiteindelijk voor gebruik in de praktijk. Zo
                     worden slaappatronen onderzocht, om te ontdekken wanneer
                     iemand kwetsbaar is voor nachtelijk vallen.
                 </p>
@@ -99,8 +99,8 @@ const Case = () => (
                 <h2>Ontwikkeling</h2>
                 <Big>
                     Het project blijft in ontwikkeling. Zo zullen de wearables
-                    Fitbit 2 en 3 worden geïntegreerd, en binnenkort zal een
-                    onderzoek gestart worden met 50 patiënten.
+                    Fitbit charge 2 en 3 worden geïntegreerd en binnenkort zal
+                    een onderzoek gestart worden met 50 patiënten.
                 </Big>
                 <p>
                     Om op de hoogte te blijven van het project kun je altijd een

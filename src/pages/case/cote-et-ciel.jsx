@@ -107,8 +107,8 @@ const Case = () => (
                         de juiste webshop geleid.
                     </CheckListItem>
                     <CheckListItem>
-                        Gebruik van Redis en Varnish voor de caching, en
-                        NewRelic voor de analyse.
+                        Gebruik van Redis en Varnish voor de caching en NewRelic
+                        voor de analyse.
                     </CheckListItem>
                     <CheckListItem>
                         De volledige cloud-infrastructuur draait op Amazon Web
