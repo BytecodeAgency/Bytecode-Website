@@ -102,7 +102,7 @@ const Case = () => (
                     </li>
                     <li>
                         De contentblokken zijn gemaakt met Advanced Custom
-                        Fields Pro, en de pagina’s zijn opgebouwd met de Blade
+                        Fields Pro en de pagina’s zijn opgebouwd met de Blade
                         templating language binnen het Sage thema van roots.io.
                         De CSS en Javascript worden binnen Sage met
                         NodeJS/Webpack gecompiled.

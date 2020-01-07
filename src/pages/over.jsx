@@ -37,12 +37,12 @@ const Over = () => (
                 <Col lg={5} offset={{ lg: 1 }}>
                     <p>
                         Door eerst de problemen te analyseren en doelen te
-                        stellen zorgen we voor resultaat, en voorkomen we
+                        stellen zorgen we voor resultaat en voorkomen we
                         veelgemaakte fouten. We weten waarom een project nodig
-                        is, niet alleen hoe het gemaakt moet worden, en helpen
+                        is, niet alleen hoe het gemaakt moet worden en helpen
                         daarnaast bij het duidelijk maken van de ‘waarom’ als
                         deze nog niet is vastgesteld. Zo zorgen we ervoor dat we
-                        mee kunnen denken tijdens een project, en nieuwe ideeën
+                        mee kunnen denken tijdens een project en nieuwe ideeën
                         aan kunnen dragen.
                     </p>
                 </Col>
