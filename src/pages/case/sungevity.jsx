@@ -59,18 +59,24 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={offerteAcceptImg} alt="accepteer offerte" fluid reverse>
+            <TextAndImage
+                img={offerteAcceptImg}
+                alt="accepteer offerte"
+                fluid
+                reverse
+            >
                 <p className="subtitle">Strategize</p>
                 <h2>De functionaliteiten</h2>
                 <Big>
-                    Om het platform te optimaliseren hebben we in de Python Flask
-                    applicatie verbeteringen doorgevoerd aan de offertetool en op
-                    het gebied van de code quality, zodat doorontwikkeling
-                    makkelijker mogelijk is. Daarnaast hebben we gezorgd voor
-                    schaalbare cloudhosting en Nginx routing- en
-                    serveroptimalisaties. Op het platform kunnen woningcorporaties
-                    nu zelf aanpassingen doorvoeren en is het gemakkelijk om een
-                    nieuwe corporatie op te zetten in enkele uren.
+                    Om het platform te optimaliseren hebben we in de Python
+                    Flask applicatie verbeteringen doorgevoerd aan de
+                    offertetool en op het gebied van de code quality, zodat
+                    doorontwikkeling makkelijker mogelijk is. Daarnaast hebben
+                    we gezorgd voor schaalbare cloudhosting en Nginx routing- en
+                    serveroptimalisaties. Op het platform kunnen
+                    woningcorporaties nu zelf aanpassingen doorvoeren en is het
+                    gemakkelijk om een nieuwe corporatie op te zetten in enkele
+                    uren.
                 </Big>
             </TextAndImage>
         </Container>
