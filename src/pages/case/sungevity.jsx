@@ -87,12 +87,12 @@ const Case = () => (
                 <Big>
                     Inmiddels zijn er al zeven woningcorporaties opgezet. Het
                     platform heeft nu een uptimepercentage van 99.95 tot 100%.
-                    Bij Mocht een van de websites downtime ondervinden dan
-                    krijgen onze server reliability engineers hier een melding
-                    van zodat er direct gehandeld kan worden. Het resultaat is
-                    te bekijken op onder andere&nbsp;
+                    Mocht een van de websites downtime ondervinden dan krijgen
+                    onze server reliability engineers hier een melding van zodat
+                    er direct gehandeld kan worden. Het resultaat is te bekijken
+                    op onder andere&nbsp;
                     <a href="https://mozaiek.sungevity.nl/">
-                        de Mozaiek offerte site
+                        de Mozaiek offerte site,
                     </a>
                     &nbsp; hoewel je voor een echte offerte natuurlijk lid moet
                     zijn van de woningcorporatie
