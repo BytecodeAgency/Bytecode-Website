@@ -16,6 +16,7 @@ const bredaImg = require('../images/img/cases/breda-actief/website-1.jpg');
 const mooiwerkImg = require('../images/img/cases/mooiwerk/website-1.png');
 const coteEtCielImage = require('../images/img/cases/cote-et-ciel/homepage.png');
 const dawnyImage = require('../images/img/cases/dawny/dashboard.png');
+const sungevityImg = require('../images/img/cases/sungevity/mozaiek.png');
 
 const Cases = () => (
     <Layout pageSettings={pageSettings}>
@@ -33,10 +34,10 @@ const Cases = () => (
         <Container>
             <Row>
                 <PostThumbnail
-                    title="Valpreventie voor ouderen"
-                    category="Reinier de Graaf ziekenhuis"
-                    slug="/case/dawny"
-                    postImageUrl={dawnyImage}
+                    title="Brengt Breda dichter bij elkaar"
+                    category="Mooiwerk Breda"
+                    slug="/case/mooiwerk"
+                    postImageUrl={mooiwerkImg}
                 />
                 <PostThumbnail
                     title="Hoge kwaliteit rugtassen"
@@ -45,15 +46,21 @@ const Cases = () => (
                     postImageUrl={coteEtCielImage}
                 />
                 <PostThumbnail
-                    title="Brengt Breda dichter bij elkaar"
-                    category="Mooiwerk Breda"
-                    slug="/case/mooiwerk"
-                    postImageUrl={mooiwerkImg}
+                    title="Valpreventie voor ouderen"
+                    category="Reinier de Graaf ziekenhuis"
+                    slug="/case/dawny"
+                    postImageUrl={dawnyImage}
                 />
             </Row>
         </Container>
         <Container>
             <Row>
+                <PostThumbnail
+                    title="Duurzaam met zonnepanelen"
+                    category="Sungevity"
+                    slug="/case/sungevity"
+                    postImageUrl={sungevityImg}
+                />
                 <PostThumbnail
                     title="Breda in beweging!"
                     category="Breda Actief"

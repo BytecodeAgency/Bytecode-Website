@@ -45,7 +45,7 @@ CheckListItem.propTypes = {
 export const CaseHeader = styled.header`
     background: url("${props => props.img}"), ${theme.colors.secondary};
     background-size: cover;
-    height: 75vh;
+    height: 50vh;
     border-radius: 0.5em;
     margin-bottom: 3em;
 `;
