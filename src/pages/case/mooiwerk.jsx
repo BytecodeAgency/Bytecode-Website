@@ -54,7 +54,7 @@ const Case = () => (
                     hadden zij al een goed idee van de doelgroep en requirements
                     die aan het platform gekoppeld zijn. De belangrijkste reden
                     voor de vraag aan Bytecode was het feit dat zij zelf niet de
-                    controle hadden over het platform en de data, en dat ze hier
+                    controle hadden over het platform en de data en dat ze hier
                     graag wel onafhankelijk in wilden zijn. Bij Bytecode vinden
                     wij eigen controle en een open omgeving ook erg belangrijk,
                     en samen met het doel dat Mooiwerk ondersteunt waren wij
@@ -77,7 +77,7 @@ const Case = () => (
                         Zelf en onafhankelijk data uit het platform kunnen halen
                     </CheckListItem>
                     <CheckListItem>
-                        Eigenaar zijn van de eigen data, en de controle hierover
+                        Eigenaar zijn van de eigen data en de controle hierover
                         behouden
                     </CheckListItem>
                     <CheckListItem>
@@ -101,7 +101,7 @@ const Case = () => (
                 <p>
                     Aan de hand van de vastgestelde doelgroep en requirements
                     hebben we een MVP opgesteld van 4 sprints. Hierna was er
-                    altijd de mogelijkheid voor doorontwikkeling, en toekomstige
+                    altijd de mogelijkheid voor doorontwikkeling en toekomstige
                     data-analyse hebben we in het achterhoofd gehouden.
                 </p>
                 <ol>
@@ -147,7 +147,7 @@ const Case = () => (
                 <h2>Oplossing en Resultaten</h2>
                 <Big>
                     Het uiteindelijke platform zorgt ervoor dat Mooiwerk Breda
-                    organisaties en vrijwilligers in Breda samen kan brengen, en
+                    organisaties en vrijwilligers in Breda samen kan brengen en
                     met behulp van de doorgaande ontwikkeling blijven we Breda
                     Actief ondersteunen.
                 </Big>
