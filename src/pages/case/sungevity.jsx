@@ -52,7 +52,7 @@ const Case = () => (
                     klanten benaderd. De corporaties zelf wilden hiernaast graag
                     de brieven die zij versturen een eigen look-en-feel kunnen
                     geven in samenwerking met Sungevity. Nadat deze brieven zijn
-                    uitegestuurd komen de huurders op het platform om aan te
+                    uitgestuurd komen de huurders op het platform om aan te
                     geven of zij akkoord gaan met de installatie van
                     zonnepanelen en hoeveel.
                 </Big>
