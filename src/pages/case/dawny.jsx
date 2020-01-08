@@ -72,7 +72,7 @@ const Case = () => (
                 <p className="subtitle">Analyze</p>
                 <h2>De functionaliteiten</h2>
                 We werken in verschillende opeenvolgende sprints. Zo wordt er op
-                dit moment gewerkt aan drie componenten
+                dit moment gewerkt aan vier componenten
                 <Checklist>
                     <CheckListItem>
                         Een Android app waarin slaapdata verzameld kan worden
