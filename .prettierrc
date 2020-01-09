@@ -1,4 +1,4 @@
-`{
+{
     "useTabs": false,
     "printWidth": 80,
     "tabWidth": 4,
@@ -7,4 +7,3 @@
     "jsxBracketSameLine": false,
     "parser": "babel"
 }
-`

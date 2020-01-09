@@ -16,13 +16,13 @@ const pageSettings = {
 
 const offerteImg = require('../../images/img/cases/sungevity/offerte.png');
 const offerteAcceptImg = require('../../images/img/cases/sungevity/accept.png');
-const mozaiekImg = require('../../images/img/cases/sungevity/mozaiek.png');
+const wocoImg = require('../../images/img/cases/sungevity/woco.png');
 const uptimeImg = require('../../images/img/cases/sungevity/uptime.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
-            <CaseHeader img={mozaiekImg} alt="Mozaiek offerte" />
+            <CaseHeader img={wocoImg} alt="Woning Corporatie offerte" />
         </Container>
         <Container>
             <Row align="center">
@@ -89,13 +89,7 @@ const Case = () => (
                     platform heeft nu een uptimepercentage van 99.95 tot 100%.
                     Mocht een van de websites downtime ondervinden dan krijgen
                     onze server reliability engineers hier een melding van zodat
-                    er direct gehandeld kan worden. Het resultaat is te bekijken
-                    op onder andere&nbsp;
-                    <a href="https://mozaiek.sungevity.nl/">
-                        de Mozaiek offerte site,
-                    </a>
-                    &nbsp; hoewel je voor een echte offerte natuurlijk lid moet
-                    zijn van de woningcorporatie
+                    er direct gehandeld kan worden.
                 </Big>
             </TextAndImage>
         </Container>
