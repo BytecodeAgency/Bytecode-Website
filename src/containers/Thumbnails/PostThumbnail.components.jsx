@@ -77,9 +77,6 @@ export const BigThumbnailImg = styled.div`
     background-size: cover;
     background-position: center center;
     height: 50vh;
-    @media (${mediaQueryMin.md}) {
-        height: 65vh;
-    }
     transition: all 0.3s ease;
 
 `;
