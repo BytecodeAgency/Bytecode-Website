@@ -48,9 +48,10 @@ const Case = () => (
                 <Big>
                     Sungevity had een basis voor een platform voor
                     woningcorporaties, maar dit was niet stabiel en er was veel
-                    downtime. Via deze woningcorporaties worden potentiële
-                    klanten benaderd. De corporaties zelf wilden hiernaast graag
-                    de brieven die zij versturen een eigen look-en-feel kunnen
+                    downtime. Daarnaast was er de wens om nog zeven
+                    woningcorporaties toe te voegen, maar hier was het platform
+                    niet op ingericht. De corporaties wilden hiernaast graag de
+                    brieven die zij versturen een eigen look-en-feel kunnen
                     geven in samenwerking met Sungevity. Nadat deze brieven zijn
                     uitgestuurd komen de huurders op het platform om aan te
                     geven of zij akkoord gaan met de installatie van
@@ -68,12 +69,11 @@ const Case = () => (
                 <p className="subtitle">Strategize</p>
                 <h2>De functionaliteiten</h2>
                 <Big>
-                    Om het platform te optimaliseren hebben we in de Python
-                    Flask applicatie verbeteringen doorgevoerd aan de
-                    offertetool en op het gebied van de code quality, zodat
-                    doorontwikkeling makkelijker mogelijk is. Daarnaast hebben
-                    we gezorgd voor schaalbare cloudhosting en Nginx routing- en
-                    serveroptimalisaties. Op het platform kunnen
+                    Om het platform te optimaliseren voor meerdere woning
+                    corporaties hebben we in de Python Flask applicatie
+                    verbeteringen doorgevoerd aan de offertetool. Daarnaast
+                    hebben we gezorgd voor schaalbare cloudhosting en Nginx
+                    routing- en serveroptimalisaties. Op het platform kunnen
                     woningcorporaties nu zelf aanpassingen doorvoeren en is het
                     gemakkelijk om een nieuwe corporatie op te zetten in enkele
                     uren.
@@ -85,10 +85,10 @@ const Case = () => (
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing en resultaten</h2>
                 <Big>
-                    Inmiddels zijn er al zeven woningcorporaties opgezet. Het
+                    Inmiddels zijn er al acht woningcorporaties opgezet. Het
                     platform heeft nu een uptimepercentage van 99.95 tot 100%.
                     Mocht een van de websites downtime ondervinden dan krijgen
-                    onze server reliability engineers hier een melding van zodat
+                    onze site reliability engineers hier een melding van zodat
                     er direct gehandeld kan worden.
                 </Big>
             </TextAndImage>
