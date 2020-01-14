@@ -67,7 +67,6 @@ module.exports = {
                 path: `${__dirname}/content/posts/`,
             },
         },
-        `gatsby-plugin-transition-link`,
         `gatsby-plugin-offline`,
         // this (optional) plugin enables Progressive Web
         // App + Offline functionality

@@ -16,12 +16,12 @@ const pageSettings = {
 const dashboardImg = require('../../images/img/cases/dawny/dashboard.png');
 const noninImg = require('../../images/img/cases/dawny/nonin.png');
 const teamImg = require('../../images/img/cases/dawny/team.png');
-const weekImage = require('../../images/img/cases/dawny/weekoverzicht.png');
+const weekImg = require('../../images/img/cases/dawny/weekoverzicht.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
-            <CaseHeader img={dashboardImg} alt="login" />
+            <CaseHeader img={dashboardImg} alt="dashboard" />
         </Container>
         <Container>
             <Row align="center">
@@ -43,8 +43,8 @@ const Case = () => (
             </Row>
         </Container>
         <Container fluid>
-            <TextAndImage img={noninImg} alt="styr model" fluid>
-                <p className="subtitle">Analyze</p>
+            <TextAndImage img={noninImg} alt="Nonin apparaat met app" fluid>
+                <p className="subtitle">Strategize</p>
                 <h2>De uitdaging</h2>
                 <Big>
                     Van de senioren (55 jaar en ouder) die een heup breken,
@@ -68,11 +68,11 @@ const Case = () => (
             </TextAndImage>
         </Container>
         <Container fluid>
-            <TextAndImage img={weekImage} alt="service desk" fluid reverse>
+            <TextAndImage img={weekImg} alt="weekoverzicht" fluid reverse>
                 <p className="subtitle">Analyze</p>
                 <h2>De functionaliteiten</h2>
                 We werken in verschillende opeenvolgende sprints. Zo wordt er op
-                dit moment gewerkt aan drie componenten
+                dit moment gewerkt aan vier componenten
                 <Checklist>
                     <CheckListItem>
                         Een Android app waarin slaapdata verzameld kan worden

@@ -35,10 +35,12 @@ const blogArchive = ({ data }) => {
         <Layout pageSettings={pageSettings}>
             <Container>
                 <Row>
-                    <Col md={5}>
+                    <Col md={12}>
                         <h1>Een frisse blik op het internet</h1>
                     </Col>
-                    <Col offset={{ md: 1 }} md={6}>
+                </Row>
+                <Row>
+                    <Col md={6}>
                         <p>
                             Hier zie je artikelen die met passie zijn geschreven
                             door Bytecode, een jonge en moderne web agency. Wij
@@ -46,7 +48,7 @@ const blogArchive = ({ data }) => {
                             internet kunt gebruiken om alles uit jezelf te
                             halen. Dit doen we door interessante artikelen te
                             schrijven, maar ook door deze inzichten in onze
-                            werkzaamheden te verwerken
+                            werkzaamheden te verwerken.
                         </p>
                     </Col>
                 </Row>

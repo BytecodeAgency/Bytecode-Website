@@ -77,17 +77,13 @@ export const BigThumbnailImg = styled.div`
     background-size: cover;
     background-position: center center;
     height: 50vh;
-    @media (${mediaQueryMin.md}) {
-        height: 65vh;
-    }
     transition: all 0.3s ease;
 
 `;
 
 export const ThumbnailImg = styled.div`
-    background: url('${props => props.img}'), ${theme.colors.secondary};
+    background: url('${props => props.img}') center center;
     background-size: cover;
-    background-position: center top;
     transition: all 0.5s ease;
     height: 50vh;
     max-height: 40em;
