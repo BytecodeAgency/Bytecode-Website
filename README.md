@@ -11,14 +11,10 @@ Website for Bytecode Digital Agency B.V. built with GatsbyJS.
 
 To run this develop environment, you need the follow dependencies:
 
-* NodeJS 10 LTS
+* NodeJS 12 LTS
 * Yarn (install using `npm i -g yarn`)
 
 To install all dependencies after cloning the Git repo, run `yarn`. Otherwise the project will not run.
-
-## Setup
-
-To setup the .env system, run `cp .env.example .env`, and set the desired variables.
 
 ## Development
 
@@ -30,17 +26,11 @@ yarn run dev
 
 ## Production
 
-This website can both be exported to static HTML or run as a live server itself.
-
-To use this project as a server for production, run
+This website can be exported to static HTML/CSS(/JS), and be served by f.e. Nginx.
 
 ```sh
-yarn run build && yarn run serve
+yarn run build
 ```
-
-#### Export
-
-If you want to export the project to static HTML/CSS/JS, run `yarn run export`.
 
 ## License and restrictions
 
