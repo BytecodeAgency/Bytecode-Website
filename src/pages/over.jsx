@@ -19,15 +19,10 @@ const Over = () => (
         <ContentPageHeader
             img={require('../images/img/content/teamv2.png')}
             subtitle="Over ons"
-            title="Partner in jouw doelen bereiken"
-            text="Door eerst de problemen te analyseren en doelen te
-            stellen zorgen we voor resultaat en voorkomen we
-            veelgemaakte fouten. We weten waarom een project nodig
-            is, niet alleen hoe het gemaakt moet worden en helpen
-            daarnaast bij het duidelijk maken van de ‘waarom’ als
-            deze nog niet is vastgesteld. Zo zorgen we ervoor dat we
-            mee kunnen denken tijdens een project en nieuwe ideeën
-            aan kunnen dragen."
+            title="Partner in jouw ambities"
+            text="Bytecode is collectief van ontwikkelaars, ontwerpers, researchers en marketeers die zoeken naar nieuwe manieren en inzichten om de digitale wereld naar jouw hand te zetten. Zo kunnen binnen jouw onderneming randzaken en repetitieve taken weggelaten worden en geven wij jou de vrijheid dingen te doen die echt een verschil maken. "
+            width={80}
+            align="flex-end"
             hero
         />
         <Container>

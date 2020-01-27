@@ -52,6 +52,7 @@ const Home = () => (
             ontwikkelen van alles wat je nodig hebt om je digitaal volledig te
             ontplooien."
             hero
+            bgSize={80}
         />
         <Container>
             <Row>

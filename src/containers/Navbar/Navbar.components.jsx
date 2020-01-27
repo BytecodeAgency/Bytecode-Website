@@ -126,7 +126,7 @@ export const Logo = styled.span`
     display: block;
     @media (min-width: ${theme.breakpointMobileMenu}) {
         img {
-            width: 10em;
+            width: 7em;
         }
     }
     img {

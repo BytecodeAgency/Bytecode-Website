@@ -15,24 +15,40 @@ export const MainHeader = styled.header`
     height: 100vh;
     max-height: 40em;
     transition: 0.5s ease-in-out;
-    @media (${mediaQueryMin.sm}) {
+    @media (${mediaQueryMin.xs}) {
         padding: 3em 3em;
-        align-items: center;
-    }
-    @media (${mediaQueryMin.md}) {
+        align-items: ${props => props.align || 'center'};
+        max-height: 75em;
+        min-height: 30em;
         background: url(${props => props.img}),
             linear-gradient(
-                to right,
+                to top,
                 rgba(0, 0, 0, 0.85) 0%,
-                rgba(0, 0, 0, 0.5) 50%,
-                rgba(0, 0, 0, 0) 85%,
-                rgba(0, 0, 0, 0) 98%
-            );
+                rgba(0, 0, 0, 0.8) 30%,
+                rgba(0, 0, 0, 0) 90%,
+                rgba(0, 0, 0, 0) 100%
+        );
         background-size: ${props => props.bgSize || 'cover'};
         background-repeat: no-repeat;
         background-position-x: ${props => props.bgX || '85%'};
         background-position-y: ${props => props.bgY || 0};
-        min-height: ${props => (props.hero ? '98vh' : '80vh')};
+    }
+    @media (${mediaQueryMin.lg}) {
+
+
+        background: url(${props => props.img}),
+            linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.85) 0%,
+                rgba(0, 0, 0, 0.6) 30%,
+                rgba(0, 0, 0, 0) 70%,
+                rgba(0, 0, 0, 0) 100%
+        );
+        background-size: ${props => props.bgSize || 'cover'};
+        background-repeat: no-repeat;
+        background-position-x: ${props => props.bgX || '85%'};
+        background-position-y: ${props => props.bgY || 0};
+        min-height: ${props => (props.hero ? '100vh' : '80vh')};
 
         background-blend-mode: ${props => props.blendMode || 'soft-light'};
     }

@@ -60,9 +60,12 @@ export const TeamMemberPhoto = styled.figure`
     }
     margin: 1rem;
     overflow: hidden;
-    height: 20em;
+    height: 25em;
     transition: 0.5s;
     position: relative;
+    @media (${mediaQueryMin.lg}) {
+        height: 30em;
+    }
 
     &::before {
         content: '';
