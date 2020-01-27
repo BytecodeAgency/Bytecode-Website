@@ -38,7 +38,7 @@ class Navbar extends React.Component {
     render() {
         const { menuIsOpen } = this.state;
         return (
-            <NavbarContainer>
+            <NavbarContainer atScrollTop={false}>
                 <Link to="/" aria-label="homePage">
                     <MobileNavLogo src={logoMin} alt="Logo" />
                 </Link>

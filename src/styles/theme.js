@@ -5,7 +5,7 @@ const black = '#0f0f0f';
 const darkgray = '#1a1a1a';
 const green = '#23be87';
 const lightgray = '#f2f2f2';
-const mediumgray = '#252525';
+const mediumgray = '#262626';
 const red = '#df5252';
 const white = '#ffffff';
 

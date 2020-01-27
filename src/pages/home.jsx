@@ -51,6 +51,7 @@ const Home = () => (
             mobiel. Ons team helpt je dolgraag met het analyseren, bedenken en
             ontwikkelen van alles wat je nodig hebt om je digitaal volledig te
             ontplooien."
+            hero
         />
         <Container>
             <Row>

@@ -20,13 +20,19 @@ export const MainHeader = styled.header`
         align-items: center;
     }
     @media (${mediaQueryMin.md}) {
-        background-color: ${colors.mediumgray};
-        background-image: url(${props => props.img});
+        background: url(${props => props.img}),
+            linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.85) 0%,
+                rgba(0, 0, 0, 0.5) 50%,
+                rgba(0, 0, 0, 0) 85%,
+                rgba(0, 0, 0, 0) 98%
+            );
         background-size: ${props => props.bgSize || 'cover'};
         background-repeat: no-repeat;
         background-position-x: ${props => props.bgX || '85%'};
         background-position-y: ${props => props.bgY || 0};
-        min-height: 80vh;
+        min-height: ${props => (props.hero ? '98vh' : '80vh')};
 
         background-blend-mode: ${props => props.blendMode || 'soft-light'};
     }

@@ -5,12 +5,15 @@ import { transparentize } from 'polished'; // TODO: Remove dependency
 import { Link } from 'gatsby';
 import theme from '../../styles/theme';
 
-const { mediaQueryMin } = theme;
+const { mediaQueryMin, colors } = theme;
 
 export const NavbarContainer = styled.nav`
-    position: relative;
+    position: fixed;
+    width: 100%;
     z-index: 10000;
     padding: 0 3rem;
+    background: ${props =>
+        props.atScrollTop ? 'transparent' : colors.background};
     @media (max-width: ${theme.breakpointMobileMenu}) {
         width: 100vw;
         height: 3.5em;
@@ -18,7 +21,7 @@ export const NavbarContainer = styled.nav`
         position: fixed;
         top: 0;
         left: 0;
-        background: ${transparentize(0.3, theme.colors.black)};
+        background: ${transparentize(0.3, colors.black)};
         display: flex;
         justify-content: space-between;
     }
@@ -29,7 +32,6 @@ export const NavbarContainer = styled.nav`
     @media (${mediaQueryMin.sm}) {
     }
     @media (${mediaQueryMin.lg}) {
-        margin: 1rem 8.5rem;
     }
 `;
 
@@ -107,7 +109,7 @@ NavbarItemBase.defaultProps = {
 
 export const NavbarItem = styled(NavbarItemBase)`
     display: inline-block;
-    padding: 0 2rem;
+    padding: 0 1.33em;
     &:last-child {
         padding-right: 0;
     }
@@ -124,7 +126,7 @@ export const Logo = styled.span`
     display: block;
     @media (min-width: ${theme.breakpointMobileMenu}) {
         img {
-            min-width: 10rem;
+            width: 10em;
         }
     }
     img {
