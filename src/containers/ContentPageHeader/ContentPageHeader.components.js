@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 
-const { mediaQueryMin, colors, containerWidth } = theme;
+const { mediaQueryMin, containerWidth } = theme;
 
 export const MainHeader = styled.header`
-    background-color: ${colors.mediumgray};
     background-image: url(${props => props.img});
     background-blend-mode: soft-light;
     display: flex;
@@ -17,33 +16,39 @@ export const MainHeader = styled.header`
     transition: 0.5s ease-in-out;
     @media (${mediaQueryMin.xs}) {
         padding: 3em 3em;
-        align-items: ${props => props.align || 'center'};
+        align-items: ${props => props.align || 'flex-end'};
         max-height: 75em;
         min-height: 30em;
-        background: url(${props => props.img}),
-            linear-gradient(
-                to top,
-                rgba(0, 0, 0, 0.85) 0%,
-                rgba(0, 0, 0, 0.8) 30%,
-                rgba(0, 0, 0, 0) 90%,
-                rgba(0, 0, 0, 0) 100%
-        );
+        background: url(${props => props.img})
+            ${props =>
+                props.shadow &&
+                `
+                ,linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.7) 0%,
+                    rgba(0, 0, 0, 0.6) 30%,
+                    rgba(0, 0, 0, 0) 90%,
+                    rgba(0, 0, 0, 0) 100%
+                );
+            `}
         background-size: ${props => props.bgSize || 'cover'};
         background-repeat: no-repeat;
         background-position-x: ${props => props.bgX || '85%'};
         background-position-y: ${props => props.bgY || 0};
     }
     @media (${mediaQueryMin.lg}) {
-
-
-        background: url(${props => props.img}),
-            linear-gradient(
-                to top,
-                rgba(0, 0, 0, 0.85) 0%,
-                rgba(0, 0, 0, 0.6) 30%,
-                rgba(0, 0, 0, 0) 70%,
-                rgba(0, 0, 0, 0) 100%
-        );
+        background: url(${props => props.img})
+        ${props =>
+            props.shadow &&
+            `
+                ,linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.85) 0%,
+                    rgba(0, 0, 0, 0.8) 30%,
+                    rgba(0, 0, 0, 0) 70%,
+                    rgba(0, 0, 0, 0) 100%
+                );
+            `}
         background-size: ${props => props.bgSize || 'cover'};
         background-repeat: no-repeat;
         background-position-x: ${props => props.bgX || '85%'};

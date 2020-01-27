@@ -24,6 +24,7 @@ const Over = () => (
             width={80}
             align="flex-end"
             hero
+            shadow
         />
         <Container>
             <Row gutterWidth={100} justify="center" align="center">
