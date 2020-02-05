@@ -30,7 +30,10 @@ export const Article = styled.article`
 `;
 
 export const ArticleHeader = styled.header`
-    max-width: 40em;
+    max-width: 80vw;
+    @media (${mediaQueryMin.md}) {
+        max-width: 40em;
+    }
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -62,7 +65,10 @@ export const ArticleImageWrapper = styled.figure`
 `;
 
 export const BlogContent = styled.div`
-    max-width: 40em;
+    max-width: 80vw;
+    @media (${mediaQueryMin.sm}) {
+        max-width: 40em;
+    }
     display: flex;
     align-items: center;
     flex-direction: column;
