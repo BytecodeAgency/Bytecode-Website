@@ -29,19 +29,19 @@ const Case = () => (
         <Header
             title="Levens redden met datavisualisatie"
             subtitle="Reinier De Graaf Gasthuis"
+            tagline="Wij hebben een systeem gebouwd waarmee dokters de gezondheid van ouderen langdurig kunnen meten en analyseren om proactief ongevallen te voorkomen"
             img={usecase}
         >
-           <p class='big'> Wij hebben een systeem gebouwd waarmee dokters de gezondheid van ouderen langdurig kunnen analyseren om ongevallen voortijdig te voorkomen.</p>
         </Header>
         <TextAndImage img={lockup} alt="Nonin apparaat met app">
                 <h2>Inroducing Dawny</h2>
-                <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class='introduction'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </TextAndImage>
         <Container>
             <Row>
                 <Col md={6}>
                 <h2>De uitdaging</h2>
-                <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class='introduction'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </Col>
             </Row>
         </Container>

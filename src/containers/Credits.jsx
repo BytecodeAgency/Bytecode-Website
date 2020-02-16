@@ -7,7 +7,15 @@ const { secondary } = colors;
 
 const CreditsBase = styled.section`
     background: ${secondary};
-    padding: 20vh 15vw;
+    padding: 15vh 15vw;
+    columns: 3;
+    p {
+        margin: 0em 0;
+        padding: 0;
+        .subtitle {
+            margin-bottom: 1em;
+        }
+    }
 `;
 
 const Meta = ({title, content}) => {
@@ -35,6 +43,7 @@ const Meta = ({title, content}) => {
 const Credits = ({ client, year, medium, contributors, recourses, copyright }) => {
     return (
        <CreditsBase>
+
            <Meta
                 title="Client"
                 content="Reinier de Graaf ziekehuis"

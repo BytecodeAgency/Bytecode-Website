@@ -9,6 +9,7 @@ const { secondary } = colors;
 const HeaderBase = styled.header`
     background: url(${props => props.backgroundImage});
     background-size: cover;
+    background-position: center;
     height: 100vh;
     padding: 5vh ${containerWidth.xs};
     display: flex;
@@ -31,9 +32,12 @@ const HeaderBase = styled.header`
 const HeaderInformation = styled.div`
     display: flex;
     align-items: center;
+    & > * {
+        width: 50%;
+    }
 `;
 
-const Header = ({title, subtitle, img, children}) => {
+const Header = ({title, subtitle, tagline, img, children}) => {
     return (
         <HeaderBase backgroundImage={img}>
             <HeaderInformation>
@@ -42,6 +46,7 @@ const Header = ({title, subtitle, img, children}) => {
                     <h1>{title}</h1>
                 </div>
                 <div>
+                    <p class="introduction">{tagline}</p>
                     {children}
                 </div>
             </HeaderInformation>

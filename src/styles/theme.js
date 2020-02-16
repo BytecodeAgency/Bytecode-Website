@@ -123,8 +123,8 @@ const bytecode = {
             marginRight: '1.66m',
         },
         introduction: {
-            size: '1.9rem',
-            height: '1.2em',
+            size: '2rem',
+            height: '1.33em',
             spacing: '0.01em',
             font: paragraph,
             weight: regular,

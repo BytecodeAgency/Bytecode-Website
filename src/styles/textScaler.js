@@ -17,7 +17,7 @@ const base = {
 };
 
 const headerSize = {
-    desktop: calcHeaderSize(base.scale.desktop, 1 * 1.125),
+    desktop: calcHeaderSize(base.scale.desktop, 1 * 1.5),
     mobile: calcHeaderSize(base.scale.mobile, 1 * 1.125),
 };
 
@@ -38,17 +38,17 @@ const textScaler = css`
         }
         /* ${headerSize.mobile} */
         @media (${mediaQueries.md}) {
-            font-size: calc(${base.fontSize} * 1.2);
+            font-size: calc(${base.fontSize} * 1.4);
             line-height: calc(${base.lineHeight.paragraph});
         };
         @media (${mediaQueries.lg}) {
-            font-size: calc(${base.fontSize}*1.3);
+            font-size: calc(${base.fontSize}*1.5);
         };
         @media (${mediaQueries.xl}) {
-            font-size: calc(${base.fontSize}*1.4);
+            font-size: calc(${base.fontSize}*1.6);
         };
         @media (${mediaQueries.xl}) and (${mediaQueries.xxl}) {
-            font-size: calc(${base.fontSize}*1.5);
+            font-size: calc(${base.fontSize}*1.66);
         };
     }
 
