@@ -8,7 +8,8 @@ import theme from '../../styles/theme';
 const { mediaQueryMin } = theme;
 
 export const NavbarContainer = styled.nav`
-    position: relative;
+    position: absolute;
+    width: 100vw;
     z-index: 10000;
     padding: 0 3rem;
     @media (max-width: ${theme.breakpointMobileMenu}) {
@@ -29,7 +30,6 @@ export const NavbarContainer = styled.nav`
     @media (${mediaQueryMin.sm}) {
     }
     @media (${mediaQueryMin.lg}) {
-        margin: 1rem 8.5rem;
     }
 `;
 
@@ -181,7 +181,7 @@ export const BlackOverlay = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background: #000;
+    background: black;
     transition: all 0.5s ease;
     opacity: 0;
     display: none;
