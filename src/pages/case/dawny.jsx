@@ -5,6 +5,7 @@ import Layout from '../../layouts/MainLayout';
 import { Container, Row, Col } from '../../lib/Grid';
 import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
 import { Big } from '../../components/Typography';
+import Header from '../../containers/Header';
 
 const pageSettings = {
     title: 'Dawny',
@@ -13,6 +14,7 @@ const pageSettings = {
     keywords: 'ouderen, zorg, platform, webapp, onderzoek',
 };
 
+const usecase = require('../../images/img/cases/dawny/usecase.png');
 const dashboardImg = require('../../images/img/cases/dawny/dashboard.png');
 const noninImg = require('../../images/img/cases/dawny/nonin.png');
 const teamImg = require('../../images/img/cases/dawny/team.png');
@@ -20,6 +22,13 @@ const weekImg = require('../../images/img/cases/dawny/weekoverzicht.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
+        <Header
+            title="Levens redden met datavisualisatie"
+            subtitle="Reinier De Graaf Gasthuis"
+            img={usecase}
+        >
+           <p class='big'> Wij hebben een systeem gebouwd waarmee dokters de gezondheid van ouderen langdurig kunnen analyseren om ongevallen voortijdig te voorkomen.</p>
+        </Header>
         <Container>
             <CaseHeader img={dashboardImg} alt="dashboard" />
         </Container>
