@@ -38,7 +38,7 @@ const textScaler = css`
         }
         /* ${headerSize.mobile} */
         @media (${mediaQueries.md}) {
-            font-size: calc(${base.fontSize} * 1.4);
+            font-size: calc(${base.fontSize} * 1.5);
             line-height: calc(${base.lineHeight.paragraph});
         };
         @media (${mediaQueries.lg}) {

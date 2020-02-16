@@ -33,7 +33,7 @@ ButtonBase.defaultProps = {
     className: '',
 };
 
-const Button = styled(ButtonBase)`
+const ArrowButton = styled(ButtonBase)`
     display: inline-block;
     background: transparent;
     padding: 0.66em 2em;
@@ -49,4 +49,4 @@ const Button = styled(ButtonBase)`
     }
 `;
 
-export default Button;
+export default ArrowButton;

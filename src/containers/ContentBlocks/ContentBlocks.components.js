@@ -13,16 +13,16 @@ export const TextAndImageBase = styled.div`
         display: grid;
         grid-template: auto / ${container.sm} 1fr 1fr ${container.sm};
         grid-template-areas: 'imgLeft imgLeft imgRight imgRight';
-        padding: 5vh 0;
+        padding: ${props => (props.padded ? '10vh' : 0)} 0;
         grid-column-gap: 3em;
     }
-    @media (${mediaQueryMin.md}) {
+    /* @media (${mediaQueryMin.md}) {
         grid-template: auto / ${container.md} 1fr 1fr ${container.md};
-    }
-    @media (${mediaQueryMin.lg}) {
+    } */
+    /* @media (${mediaQueryMin.lg}) {
         grid-template: auto / ${container.lg} 1fr 1fr ${container.lg};
         grid-column-gap: 5vw;
-    }
+    } */
     @media (${mediaQueryMin.xl}) {
         grid-template: auto / ${container.xl} 1fr 1fr ${container.xl};
     }

@@ -19,7 +19,7 @@ const HeaderBase = styled.header`
         padding: 3em ${containerWidth.sm};
     }
     @media (${mediaQueryMin.md}){
-        padding: 5em ${containerWidth.md};
+        padding: 2em ${containerWidth.md};
     }
     @media (${mediaQueryMin.lg}){
         padding: 5em ${containerWidth.lg};
@@ -46,7 +46,7 @@ const Header = ({title, subtitle, tagline, img, children}) => {
                     <h1>{title}</h1>
                 </div>
                 <div>
-                    <p class="introduction">{tagline}</p>
+                    <p>{tagline}</p>
                     {children}
                 </div>
             </HeaderInformation>

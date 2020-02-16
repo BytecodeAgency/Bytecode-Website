@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import React from 'react';
+import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/MainLayout';
 import { Container, Row, Col } from '../lib/Grid';
@@ -12,6 +13,10 @@ const pageSettings = {
         'Bytecode insights, vergroot je kennis en leer meer over hoe je digitale assets kan inzetten voor jouw business! Samen halen we alles uit jouw digitale zelf!',
     keywords: 'bytecode insights',
 };
+
+const Posts = styled(Container)`
+    padding-top: 15vh;
+`;
 
 const Blogpost = ({ data: post }, key) => (
     <PostThumbnail
@@ -33,10 +38,17 @@ const blogArchive = ({ data }) => {
     const { edges: posts } = data.allMdx;
     return (
         <Layout pageSettings={pageSettings}>
+            <Posts>
+                <Row>
+                    {posts.map(({ node: post }, _, key) => (
+                        <Blogpost data={post} key={key} />
+                    ))}
+                </Row>
+            </Posts>
             <Container>
                 <Row>
                     <Col md={12}>
-                        <h1>Een frisse blik op het internet</h1>
+                        <h3>Een frisse blik op het internet</h3>
                     </Col>
                 </Row>
                 <Row>
@@ -51,13 +63,6 @@ const blogArchive = ({ data }) => {
                             werkzaamheden te verwerken.
                         </p>
                     </Col>
-                </Row>
-            </Container>
-            <Container>
-                <Row>
-                    {posts.map(({ node: post }, _, key) => (
-                        <Blogpost data={post} key={key} />
-                    ))}
                 </Row>
             </Container>
         </Layout>

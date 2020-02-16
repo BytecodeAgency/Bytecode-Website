@@ -8,7 +8,7 @@ import {
 } from './ContentBlocks.components';
 
 export const TextAndImage = props => {
-    const { children, img, alt, reverse, fluid } = props;
+    const { children, img, alt, reverse, fluid, padded } = props;
 
     const getImgPos = () => {
         if (reverse) {
@@ -36,7 +36,7 @@ export const TextAndImage = props => {
     };
 
     return (
-        <TextAndImageBase>
+        <TextAndImageBase padded={padded}>
             <ImageWrapper
                 reverse={reverse}
                 fluid={fluid}
