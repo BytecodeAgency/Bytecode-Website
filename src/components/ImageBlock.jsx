@@ -8,17 +8,13 @@ const { mediaQueryMin, colors } = theme;
 const ImageBlockFigure = styled.figure`
     margin: 0;
     height: 100vh;
-    img {
-        height: 100vh;
-        width: auto;
-    }
+    object-fit: cover;
+    object-position: bottom;
     @media (${mediaQueryMin.xs}) {
-        max-height: 75vh;
+        max-height: 90vh;
         display: block;
         position: relative;
         right: 0px;
-        margin-left: 5%;
-        margin-top: 4rem;
         overflow: hidden;
     }
     &:after {
@@ -34,9 +30,6 @@ const ImageBlockFigure = styled.figure`
 
     .content {
         transition: all 0.3s ease;
-    }
-    &:hover img {
-        transform: scale(1.05);
     }
 
     @media (min-width: ${theme.breakpointMobileMenu}) {

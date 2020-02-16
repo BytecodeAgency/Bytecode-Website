@@ -21,7 +21,7 @@ export const TextAndImageBase = styled.div`
     }
     @media (${mediaQueryMin.lg}) {
         grid-template: auto / ${container.lg} 1fr 1fr ${container.lg};
-        grid-column-gap: 6em;
+        grid-column-gap: 5vw;
     }
     @media (${mediaQueryMin.xl}) {
         grid-template: auto / ${container.xl} 1fr 1fr ${container.xl};

@@ -6,6 +6,8 @@ import { Container, Row, Col } from '../../lib/Grid';
 import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
 import { Big } from '../../components/Typography';
 import Header from '../../containers/Header';
+import ImageBlock from '../../components/ImageBlock';
+import Credits from '../../containers/Credits';
 
 const pageSettings = {
     title: 'Dawny',
@@ -15,10 +17,12 @@ const pageSettings = {
 };
 
 const usecase = require('../../images/img/cases/dawny/usecase.png');
-const dashboardImg = require('../../images/img/cases/dawny/dashboard.png');
-const noninImg = require('../../images/img/cases/dawny/nonin.png');
-const teamImg = require('../../images/img/cases/dawny/team.png');
-const weekImg = require('../../images/img/cases/dawny/weekoverzicht.png');
+const lockup = require('../../images/img/cases/dawny/lockup.png');
+const analysing = require('../../images/img/cases/dawny/analysing.jpg');
+const graph = require('../../images/img/cases/dawny/graphs.png');
+const tools = require('../../images/img/cases/dawny/tools.png');
+const smilingGrandparents = require('../../images/img/cases/dawny/smiling_grandparents.jpg');
+
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
@@ -29,98 +33,50 @@ const Case = () => (
         >
            <p class='big'> Wij hebben een systeem gebouwd waarmee dokters de gezondheid van ouderen langdurig kunnen analyseren om ongevallen voortijdig te voorkomen.</p>
         </Header>
+        <TextAndImage img={lockup} alt="Nonin apparaat met app">
+                <h2>Inroducing Dawny</h2>
+                <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </TextAndImage>
         <Container>
-            <CaseHeader img={dashboardImg} alt="dashboard" />
-        </Container>
-        <Container>
-            <Row align="center">
-                <Col offset={{ lg: 1 }} lg={5}>
-                    <p className="subtitle">Reinier De Graaf Gasthuis</p>
-                    <h1>Valpreventie voor ouderen</h1>
-                </Col>
-                <Col lg={5}>
-                    Samen met onderzoeker Dr. A.W. Siegel en internist Dr. D.H.
-                    Schweitzer van Dawny en het Reinier de Graaf Gasthuis in
-                    Delft zijn we bezig met het vervullen van een fantastische
-                    missie. Een groot gedeelte van de ouderen die een heup
-                    breken overlijdt hierna binnen een aantal maanden. Dit kan
-                    en moet voorkomen worden. Bytecode en het Reinier de Graaf
-                    Gasthuis slaan daarom de handen ineen om een oplossing te
-                    vinden die kan leiden tot het voorkomen van een nachtelijke
-                    val en het vroegtijdig herkennen van risicofactoren.
+            <Row>
+                <Col md={6}>
+                <h2>De uitdaging</h2>
+                <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </Col>
             </Row>
         </Container>
-        <Container fluid>
-            <TextAndImage img={noninImg} alt="Nonin apparaat met app" fluid>
-                <p className="subtitle">Strategize</p>
-                <h2>De uitdaging</h2>
-                <Big>
-                    Van de senioren (55 jaar en ouder) die een heup breken,
-                    overlijdt bijna 25% binnen een jaar na het oplopen van de
-                    heupfractuur&nbsp;
-                    <a href="http://dx.doi.org/10.1007/978-90-313-9265-0_8">
-                        (Verhaar et al., 2013).&nbsp;
-                    </a>
-                </Big>
-                <p>
-                    We zijn op dit moment bezig om met gemakkelijk beschikbare
-                    tools slaappatronen te onderzoeken, om hiermee een delier te
-                    herkennen en hierop te kunnen reageren. Op deze manier
-                    kunnen we uiteindelijk voorkomen dat ouderen vallen en een
-                    heup breken. Door middel van verschillende
-                    &quot;wearables&quot; wordt patiëntendata verzameld voor
-                    onderzoek en uiteindelijk voor gebruik in de praktijk. Zo
-                    worden slaappatronen onderzocht, om te ontdekken wanneer
-                    iemand kwetsbaar is voor nachtelijk vallen.
-                </p>
-            </TextAndImage>
+        <TextAndImage img={analysing} alt="Nonin apparaat met app" fluid>
+                <p class="subtitle">Research</p>
+                <h2>Minder analyse. Meer controle</h2>
+                <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
+        </TextAndImage>
+        <TextAndImage img={graph} alt="Nonin apparaat met app" fluid>
+                <p class="subtitle">Research</p>
+                <h2>Minder analyse. Meer controle</h2>
+                <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
+        </TextAndImage>
+        <TextAndImage img={tools} alt="Nonin apparaat met app" reverse fluid>
+                <h2>Inzichtgevende Tools</h2>
+                <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
+        </TextAndImage>
+        <ImageBlock
+            src={smilingGrandparents}
+        />
+        <Container>
+            <Row>
+                <Col md={6}>
+                    <p class="subtitle">Resultaten</p>
+                    <h2>Langere en gelukkigere levens</h2>
+                </Col>
+                <Col md={6}>
+                    <p class="big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                </Col>
+            </Row>
         </Container>
-        <Container fluid>
-            <TextAndImage img={weekImg} alt="weekoverzicht" fluid reverse>
-                <p className="subtitle">Analyze</p>
-                <h2>De functionaliteiten</h2>
-                We werken in verschillende opeenvolgende sprints. Zo wordt er op
-                dit moment gewerkt aan vier componenten
-                <Checklist>
-                    <CheckListItem>
-                        Een Android app waarin slaapdata verzameld kan worden
-                        (hartslag, zuurstofwaarden, PAI en HRV) vanaf de Nonin
-                        WristOx2 wearable
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een API om data te kunnen ontvangen, analyseren en delen
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een server die verbindt met een voor grote datastromen
-                        geoptimaliseerde database
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een dashboard om data uit de API visueel te analyseren
-                        en exporteren
-                    </CheckListItem>
-                </Checklist>
-            </TextAndImage>
-        </Container>
-        <Container fluid>
-            <TextAndImage img={teamImg} fluid>
-                <p className="subtitle">Realize</p>
-                <h2>Ontwikkeling</h2>
-                <Big>
-                    Het project blijft in ontwikkeling. Zo zullen de wearables
-                    Fitbit charge 2 en 3 worden geïntegreerd en binnenkort zal
-                    een onderzoek gestart worden met 50 patiënten.
-                </Big>
-                <p>
-                    Om op de hoogte te blijven van het project kun je altijd een
-                    kijkje nemen op
-                    <a href="https://dawny.nl/">
-                        &nbsp; de website van het Dawny project
-                    </a>
-                    .
-                </p>
-            </TextAndImage>
-        </Container>
+        <Credits
+            client='Dawny'
+        />
     </Layout>
 );
 
