@@ -4,7 +4,8 @@ import { Link } from 'gatsby';
 import React from 'react';
 import theme from '../../styles/theme';
 
-const { mediaQueryMin } = theme;
+const { mediaQueryMin, colors } = theme;
+const {secondary} = colors;
 
 const SubtitleBase = ({ className, children }) => (
     <div className={`subtitle ${className}`}>{children}</div>
@@ -73,7 +74,7 @@ export const ThumbnailContent = styled.div`
 `;
 
 export const BigThumbnailImg = styled.div`
-    background: url('${props => props.img}'), ${theme.colors.secondary};
+    background: url('${props => props.img}'), ${secondary};
     background-size: cover;
     background-position: center center;
     height: 50vh;
@@ -82,13 +83,14 @@ export const BigThumbnailImg = styled.div`
 `;
 
 export const ThumbnailImg = styled.div`
-    background: url('${props => props.img}') center center;
+    background: url('${props => props.img}'), ${secondary};
+    background-position: center center;
     background-size: cover;
     transition: all 0.5s ease;
     height: 50vh;
     max-height: 40em;
     @media (${mediaQueryMin.md}) {
-        height: ${props => (props.big ? '50vh' : '18em')};
+        height: ${props => (props.big ? '50vh' : '15em')};
     }
 `;
 

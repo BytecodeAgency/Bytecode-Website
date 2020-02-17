@@ -38,13 +38,15 @@ const blogArchive = ({ data }) => {
     const { edges: posts } = data.allMdx;
     return (
         <Layout pageSettings={pageSettings}>
-            <Posts>
-                <Row>
+            <Posts >
+                <h1>Insights</h1>
+                <Row gutterWidth={30}>
                     {posts.map(({ node: post }, _, key) => (
                         <Blogpost data={post} key={key} />
                     ))}
                 </Row>
             </Posts>
+            <hr></hr>
             <Container>
                 <Row>
                     <Col md={12}>

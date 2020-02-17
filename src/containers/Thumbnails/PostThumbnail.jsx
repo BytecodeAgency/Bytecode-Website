@@ -31,14 +31,12 @@ const PostThumbnail = ({ big, title, slug, category, postImageUrl }) => {
         );
     }
     return (
-        <Col offset={{ md: 0.1 }} md={3.9}>
+        <Col lg={4} md={6}>
             <ThumbnailBase to={slug}>
                 <ThumbnailImg className="thumbnail-img" img={postImageUrl} />
                 <ThumbnailContent>
                     <Subtitle>{category}</Subtitle>
-                    <Big>
-                        <p>{title}</p>
-                    </Big>
+                    <h5>{title}</h5>
                     <a href={slug}>
                         <small className="thumbnail-cta">
                             Lees meer

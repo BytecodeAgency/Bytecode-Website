@@ -60,11 +60,11 @@ const Case = () => (
                 <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
         </TextAndImage>
         <TextAndImage img={graph} alt="Nonin apparaat met app" fluid>
-                <p class="subtitle">Research</p>
                 <h2>Minder analyse. Meer controle</h2>
                 <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
         </TextAndImage>
-        <TextAndImage padded img={tools} alt="Nonin apparaat met app" reverse fluid>
+        <TextAndImage img={tools} alt="Nonin apparaat met app" reverse fluid>
+                <p class="subtitle">Design</p>
                 <h2>Inzichtgevende Tools</h2>
                 <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
         </TextAndImage>

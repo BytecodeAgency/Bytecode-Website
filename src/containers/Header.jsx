@@ -22,7 +22,7 @@ const HeaderBase = styled.header`
         padding: 2em ${containerWidth.md};
     }
     @media (${mediaQueryMin.lg}){
-        padding: 5em ${containerWidth.lg};
+        padding: 2em ${containerWidth.lg};
     }
     @media (${mediaQueryMin.xxl}){
         padding: 5em ${containerWidth.xl};

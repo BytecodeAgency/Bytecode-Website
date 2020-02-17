@@ -11,10 +11,10 @@ export const TextAndImageBase = styled.div`
     align-items: center;
     @media (${mediaQueryMin.sm}) {
         display: grid;
-        grid-template: auto / ${container.sm} 1fr 1fr ${container.sm};
+        grid-template: auto / ${container.sm} ${props => props.grid} ${container.sm};
         grid-template-areas: 'imgLeft imgLeft imgRight imgRight';
-        padding: ${props => (props.padded ? '10vh' : 0)} 0;
-        grid-column-gap: 3em;
+        padding: ${props => (props.padded ? '15vh' : 0)} 0;
+        grid-column-gap: 2em;
     }
     /* @media (${mediaQueryMin.md}) {
         grid-template: auto / ${container.md} 1fr 1fr ${container.md};
