@@ -6,6 +6,7 @@ import {
     ImageWrapper,
     TextAndImageBase,
     GalleryWrapper,
+    IntroductionBase,
 } from './ContentBlocks.components';
 
 export const Gallery = ({ width, children }) => {
@@ -71,6 +72,10 @@ export const TextAndImage = ({
         </TextAndImageBase>
     );
 };
+
+export const Introduction = ({children}) => {
+    return <IntroductionBase>{children}</IntroductionBase>;
+}
 
 TextAndImage.propTypes = {
     children: PropTypes.node.isRequired,

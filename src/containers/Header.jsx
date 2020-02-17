@@ -14,7 +14,7 @@ const HeaderBase = styled.header`
     padding: 5vh ${containerWidth.xs};
     display: flex;
     align-items: flex-end;
-    box-shadow: inset 0 -15em 20em 1em rgba(0,0,0,0.66);
+    box-shadow: inset 0 -10em 15em 1em rgba(0,0,0,0.66);
     @media (${mediaQueryMin.sm}){
         padding: 3em ${containerWidth.sm};
     }

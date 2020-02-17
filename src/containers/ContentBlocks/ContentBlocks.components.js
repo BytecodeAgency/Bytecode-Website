@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 
-const container = theme.containerWidth;
-const { mediaQueryMin } = theme;
+const { mediaQueryMin, containerWidth } = theme;
 
 export const TextAndImageBase = styled.div`
     max-width: 100% !important;
@@ -11,20 +10,22 @@ export const TextAndImageBase = styled.div`
     align-items: center;
     @media (${mediaQueryMin.sm}) {
         display: grid;
-        grid-template: auto / ${container.sm} ${props => props.grid} ${container.sm};
+        grid-template: auto / ${containerWidth.sm} ${props => props.grid} ${
+    containerWidth.sm
+};
         grid-template-areas: 'imgLeft imgLeft imgRight imgRight';
         padding: ${props => (props.padded ? '2em' : 0)} 0;
         grid-column-gap: ${props => props.gutter};
     }
     /* @media (${mediaQueryMin.md}) {
-        grid-template: auto / ${container.md} 1fr 1fr ${container.md};
+        grid-template: auto / ${containerWidth.md} 1fr 1fr ${containerWidth.md};
     } */
     /* @media (${mediaQueryMin.lg}) {
-        grid-template: auto / ${container.lg} 1fr 1fr ${container.lg};
+        grid-template: auto / ${containerWidth.lg} 1fr 1fr ${containerWidth.lg};
         grid-column-gap: 5vw;
     } */
     @media (${mediaQueryMin.xl}) {
-        grid-template: auto / ${container.xl} 1fr 1fr ${container.xl};
+        grid-template: auto / ${containerWidth.xl} 1fr 1fr ${containerWidth.xl};
     }
 `;
 
@@ -57,5 +58,26 @@ export const GalleryWrapper = styled.section`
     & > * {
         width: ${props => props.width || 100}%;
         padding: 1em;
+    }
+`;
+
+const introPadding = '20vh';
+
+export const IntroductionBase = styled.div`
+    padding: ${introPadding} ${containerWidth.xs};
+    @media (${mediaQueryMin.sm}) {
+        padding: ${introPadding} ${containerWidth.sm};
+        width: 75%;
+    }
+    @media (${mediaQueryMin.md}) {
+        padding: ${introPadding} ${containerWidth.md};
+        width: 75%;
+    }
+    @media (${mediaQueryMin.lg}) {
+        padding: ${introPadding} ${containerWidth.lg};
+
+    }
+    @media (${mediaQueryMin.xl}) {
+        padding: ${introPadding} ${containerWidth.xl};
     }
 `;

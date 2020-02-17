@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/MainLayout';
 import { Container, Row, Col } from '../../lib/Grid';
-import { TextAndImage, Gallery } from '../../containers/ContentBlocks/ContentBlocks';
+import { TextAndImage, Gallery, Introduction } from '../../containers/ContentBlocks/ContentBlocks';
 import { Big } from '../../components/Typography';
 import Header from '../../containers/Header';
 import Credits from '../../containers/Credits';
@@ -30,10 +30,6 @@ const Section = styled.section`
     margin: 5em 0;
 `;
 
-const Introduction = styled.div`
-    width: 50%;
-    padding: 5em 0;
-`;
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Header
@@ -59,25 +55,25 @@ const Case = () => (
 
         <Section>
         <Introduction>
-            <p class="subtitle">De uitdaging</p>
+            <h2>De uitdaging</h2>
             <p class='introduction'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </Introduction>
         <TextAndImage img={analysing} alt="Nonin apparaat met app" fluid>
                 <p class="subtitle">Research</p>
-                <h2>Minder analyse. Meer controle</h2>
+                <h3>Minder analyse. Meer controle</h3>
                 <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
         </TextAndImage>
         <TextAndImage img={graph} alt="Nonin apparaat met app" fluid>
-                <h2>Minder analyse. Meer controle</h2>
+                <h3>Minder analyse. Meer controle</h3>
                 <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
         </TextAndImage>
         <TextAndImage img={tools} alt="Nonin apparaat met app" reverse padded fluid>
                 <p class="subtitle">Design</p>
-                <h2>Inzichtgevende Tools</h2>
+                <h3>Inzichtgevende Tools</h3>
                 <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
         </TextAndImage>
         <TextAndImage img={tools} alt="Nonin apparaat met app" fluid>
-                <h2>Inzichtgevende Tools</h2>
+                <h3>Inzichtgevende Tools</h3>
                 <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
         </TextAndImage>
         </Section>
@@ -85,18 +81,6 @@ const Case = () => (
         <Gallery width={100}>
          <img src={smilingGrandparents} alt="smiling grandparents" />
         </Gallery>
-        <Container>
-            <Row>
-                <Col md={6}>
-                    <p class="subtitle">Resultaten</p>
-                    <h2>Langere en gelukkigere levens</h2>
-                </Col>
-                <Col md={6}>
-                    <p class="big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                </Col>
-            </Row>
-        </Container>
         <Credits
             client='Dawny'
         />
