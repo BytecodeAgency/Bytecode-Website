@@ -15,12 +15,14 @@ export const TextAndImage = props => {
             if (fluid) {
                 return {
                     grid: '2fr 0.75fr',
+                    gutter: '2em',
                     pos: '1 / 1 / 1 / 3',
                     translate: '-3vw',
                 };
             }
             return {
                 grid: '1fr 1fr',
+                gutter: '5em',
                 pos: '1 / 2 / 1 / 3',
                 translate: '0',
             };
@@ -28,19 +30,25 @@ export const TextAndImage = props => {
         if (fluid) {
             return {
                 grid: '0.75fr 2fr',
+                gutter: '2em',
                 pos: '1 / 3 / 1 / 5',
                 translate: '3vw',
             };
         }
         return {
             grid: '1fr 1fr',
+            gutter: '5em',
             pos: '1 / 3 / 1 / 4',
             translate: '0',
         };
     };
 
     return (
-        <TextAndImageBase grid={getImgPos().grid} padded={padded}>
+        <TextAndImageBase
+            gutter={getImgPos().gutter}
+            grid={getImgPos().grid}
+            padded={padded}
+        >
             <ImageWrapper
                 reverse={reverse}
                 fluid={fluid}

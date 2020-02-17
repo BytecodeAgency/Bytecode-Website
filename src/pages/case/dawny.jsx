@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+import styled from 'styled-components';
 import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/MainLayout';
 import { Container, Row, Col } from '../../lib/Grid';
@@ -26,6 +27,14 @@ const smilingGrandparents = require('../../images/img/cases/dawny/smiling_grandp
 const usecase2 = require('../../images/img/cases/dawny/usecase2.jpg');
 const devices = require('../../images/img/cases/dawny/devices.svg');
 
+const Section = styled.section`
+    margin: 5em 0;
+`;
+
+const Introduction = styled.div`
+    width: 50%;
+    padding: 5em 0;
+`;
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Header
@@ -35,10 +44,12 @@ const Case = () => (
             img={usecase}
         >
         </Header>
+        <Section>
         <TextAndImage padded img={devices} alt="Nonin apparaat met app">
                 <h2>Inroducing Dawny</h2>
                 <p class='introduction'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </TextAndImage>
+        </Section>
         <Deliverables
             deliverables={['Graphic Design', 'SEO', 'Strategy', 'UX/UI-Design']}
             img={usecase2}
@@ -46,14 +57,12 @@ const Case = () => (
             client="Reinier de Graaf Gasthuis"
             clientBio="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         />
-        <Container>
-            <Row>
-                <Col md={6}>
-                <p class="subtitle">De uitdaging</p>
-                <p class='introduction'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </Col>
-            </Row>
-        </Container>
+
+        <Section>
+        <Introduction>
+            <p class="subtitle">De uitdaging</p>
+            <p class='introduction'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </Introduction>
         <TextAndImage img={analysing} alt="Nonin apparaat met app" fluid>
                 <p class="subtitle">Research</p>
                 <h2>Minder analyse. Meer controle</h2>
@@ -63,11 +72,17 @@ const Case = () => (
                 <h2>Minder analyse. Meer controle</h2>
                 <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
         </TextAndImage>
-        <TextAndImage img={tools} alt="Nonin apparaat met app" reverse fluid>
+        <TextAndImage img={tools} alt="Nonin apparaat met app" reverse padded fluid>
                 <p class="subtitle">Design</p>
                 <h2>Inzichtgevende Tools</h2>
                 <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
         </TextAndImage>
+        <TextAndImage img={tools} alt="Nonin apparaat met app" fluid>
+                <h2>Inzichtgevende Tools</h2>
+                <p class='big'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Minder analyse. Meer controle</p>
+        </TextAndImage>
+        </Section>
+
         <ImageBlock
             src={smilingGrandparents}
         />

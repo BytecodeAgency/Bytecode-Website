@@ -13,8 +13,8 @@ export const TextAndImageBase = styled.div`
         display: grid;
         grid-template: auto / ${container.sm} ${props => props.grid} ${container.sm};
         grid-template-areas: 'imgLeft imgLeft imgRight imgRight';
-        padding: ${props => (props.padded ? '15vh' : 0)} 0;
-        grid-column-gap: 2em;
+        padding: ${props => (props.padded ? '2em' : 0)} 0;
+        grid-column-gap: ${props => props.gutter};
     }
     /* @media (${mediaQueryMin.md}) {
         grid-template: auto / ${container.md} 1fr 1fr ${container.md};
