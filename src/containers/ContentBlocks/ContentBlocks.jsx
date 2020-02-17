@@ -5,11 +5,21 @@ import {
     ContentWrapper,
     ImageWrapper,
     TextAndImageBase,
+    GalleryWrapper,
 } from './ContentBlocks.components';
 
-export const TextAndImage = props => {
-    const { children, img, alt, reverse, fluid, padded } = props;
+export const Gallery = ({ width, children }) => {
+    return <GalleryWrapper width={width} >{children}</GalleryWrapper>;
+};
 
+export const TextAndImage = ({
+    children,
+    img,
+    alt,
+    reverse,
+    fluid,
+    padded,
+}) => {
     const getImgPos = () => {
         if (reverse) {
             if (fluid) {

@@ -52,3 +52,10 @@ export const ContentWrapper = styled.div`
         grid-area: ${props => (props.reverse ? reversed : normal)};
     }
 `;
+
+export const GalleryWrapper = styled.section`
+    & > * {
+        width: ${props => props.width || 100}%;
+        padding: 1em;
+    }
+`;

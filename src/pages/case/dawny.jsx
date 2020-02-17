@@ -4,10 +4,9 @@ import styled from 'styled-components';
 import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/MainLayout';
 import { Container, Row, Col } from '../../lib/Grid';
-import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
+import { TextAndImage, Gallery } from '../../containers/ContentBlocks/ContentBlocks';
 import { Big } from '../../components/Typography';
 import Header from '../../containers/Header';
-import ImageBlock from '../../components/ImageBlock';
 import Credits from '../../containers/Credits';
 import Deliverables from '../../containers/Deliverables';
 
@@ -83,9 +82,9 @@ const Case = () => (
         </TextAndImage>
         </Section>
 
-        <ImageBlock
-            src={smilingGrandparents}
-        />
+        <Gallery width={100}>
+         <img src={smilingGrandparents} alt="smiling grandparents" />
+        </Gallery>
         <Container>
             <Row>
                 <Col md={6}>
