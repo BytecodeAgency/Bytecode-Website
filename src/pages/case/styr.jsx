@@ -4,7 +4,6 @@ import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/MainLayout';
 import { Container, Row, Col } from '../../lib/Grid';
 import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
-import { Big } from '../../components/Typography';
 
 const pageSettings = {
     title: 'STYR',
@@ -30,12 +29,12 @@ const Case = () => (
                     <h1>Moderne functiewaardering</h1>
                 </Col>
                 <Col lg={5}>
-                    <Big>
+                    <p>
                         STYR is een specialistisch adviesbureau op het gebied
                         van organisatiedesign, waarderen en belonen. STYR heeft
                         het STYR model ontwikkeld, een moderne en vernieuwende
                         manier van (functie)waardering.
-                    </Big>
+                    </p>
                 </Col>
             </Row>
         </Container>
@@ -43,11 +42,11 @@ const Case = () => (
             <TextAndImage img={modelImg} alt="styr model" fluid>
                 <p className="subtitle">Analyze</p>
                 <h2>De uitdaging</h2>
-                <Big>
+                <p>
                     Ontwikkel een praktische online waarderingstool (STYR
                     Allocator Tool) waarmee de klanten van STYR zelf de zwaarte
                     van rollen en functies kunnen vaststellen.
-                </Big>
+                </p>
             </TextAndImage>
         </Container>
         <Container fluid>
@@ -84,33 +83,33 @@ const Case = () => (
             >
                 <p className="subtitle">Strategize</p>
                 <h2>Proces en technische details</h2>
-                <Big>
+                <p>
                     Na een grondige intake zijn we begonnen met een eerste UX/UI
                     design voor het Allocator tool. Extra’s die op basis van
                     deze wireframes nog gewenst waren zijn ook toegevoegd.
-                </Big>
-                <Big>
+                </p>
+                <p>
                     In Invision zijn prototypes gemaakt van de Allocator tool.
                     Op basis hiervan is feedback verzamelt en zijn de
                     functionaliteiten en design aangescherpt.
-                </Big>
-                <Big>
+                </p>
+                <p>
                     De frontend van de allocator is gemaakt in React en voor de
                     content van de beslisboom is een maatwerk oplossing gemaakt
                     binnen WordPress.
-                </Big>
+                </p>
             </TextAndImage>
         </Container>
         <Container fluid>
             <TextAndImage img={loginImg} reverse fluid>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing</h2>
-                <Big>
+                <p>
                     Het design van de allocator is opgebouwd uit opeenvolgende
                     pagina’s die de gebruiker doorloopt, waarbij keuzes gemaakt
                     worden door op opties te klikken die bij een
                     werknemerprofiel passen.
-                </Big>
+                </p>
                 <p>
                     Meer informatie over het STYR model en de STYR Allocator
                     Tool vind je op&nbsp;

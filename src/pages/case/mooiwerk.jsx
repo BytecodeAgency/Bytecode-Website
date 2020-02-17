@@ -5,7 +5,6 @@ import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/MainLayout';
 import { Container, Row, Col } from '../../lib/Grid';
 import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
-import { Big } from '../../components/Typography';
 
 const pageSettings = {
     title: 'Mooiwerk',
@@ -32,7 +31,7 @@ const Case = () => (
                     <h1>Breng Breda dichter bij elkaar</h1>
                 </Col>
                 <Col lg={5}>
-                    <Big>
+                    <p>
                         Mooiwerk Breda is een platform van Stichting Breda
                         Actief. Op dit platform kunnen organisaties vacatures
                         plaatsen als zij op zoek zijn naar vrijwilligerswerk,
@@ -40,7 +39,7 @@ const Case = () => (
                         vrijwilligersbaan te zoeken. Op deze manier zorgt het
                         Mooiwerk-platform voor nieuwe contacten en hele mooie
                         samenwerkingsverbanden.
-                    </Big>
+                    </p>
                 </Col>
             </Row>
         </Container>
@@ -145,13 +144,13 @@ const Case = () => (
             <TextAndImage img={websiteImg4} alt="resultaten" fluid reverse>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing en Resultaten</h2>
-                <Big>
+                <p>
                     Het uiteindelijke platform zorgt ervoor dat Mooiwerk Breda
                     organisaties en vrijwilligers in Breda samen kan brengen en
                     met behulp van de doorgaande ontwikkeling blijven we Breda
                     Actief ondersteunen.
-                </Big>
-                <Big>
+                </p>
+                <p>
                     Het resultaat van dit project is te bekijken op
                     <a href="https://mooiwerkbreda.nl">
                         &nbsp;mooiwerkbreda.nl
@@ -162,14 +161,14 @@ const Case = () => (
                         &nbsp;hier&nbsp;
                     </a>
                     te bekijken.
-                </Big>
+                </p>
             </TextAndImage>
         </Container>
         <Container fluid>
             <TextAndImage img={bredaImg} alt="Breda-Actief" fluid>
                 <p className="subtitle">Breda Actief</p>
                 <h1>Brengt Breda in beweging!</h1>
-                <Big>
+                <p>
                     Mooiwerk Breda is slechts een deel van de mooie doelen waar
                     Stichting Breda Actief zich mee bezig houdt. Breda Actief
                     heeft als missie om voor alle inwoners van Breda sport en
@@ -184,7 +183,7 @@ const Case = () => (
                         &nbsp;hier&nbsp;
                     </Link>
                     te lezen.
-                </Big>
+                </p>
             </TextAndImage>
         </Container>
     </Layout>

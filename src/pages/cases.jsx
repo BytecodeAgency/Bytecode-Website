@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../layouts/MainLayout';
-
+import styled from 'styled-components';
 import { Container, Row } from '../lib/Grid';
 
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
@@ -18,9 +18,12 @@ const coteEtCielImage = require('../images/img/cases/cote-et-ciel/homepage.png')
 const dawnyImage = require('../images/img/cases/dawny/dashboard.png');
 const sungevityImg = require('../images/img/cases/sungevity/woco.png');
 
+const CasesContainer = styled(Container)`
+    margin-top: 15vh !important;
+`;
 const Cases = () => (
     <Layout pageSettings={pageSettings}>
-        <Container>
+        <CasesContainer>
             <Row>
                 <PostThumbnail
                     big
@@ -30,7 +33,7 @@ const Cases = () => (
                     postImageUrl={styrImg}
                 />
             </Row>
-        </Container>
+        </CasesContainer>
         <Container>
             <Row>
                 <PostThumbnail

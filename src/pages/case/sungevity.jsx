@@ -4,7 +4,6 @@ import { CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/MainLayout';
 import { Container, Row, Col } from '../../lib/Grid';
 import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
-import { Big } from '../../components/Typography';
 
 const pageSettings = {
     title: 'Sungevity',
@@ -45,7 +44,7 @@ const Case = () => (
             <TextAndImage img={offerteImg} alt="offerte pagina" fluid>
                 <p className="subtitle">Analyze</p>
                 <h2>De uitdaging</h2>
-                <Big>
+                <p>
                     Sungevity had een basis voor een platform voor
                     woningcorporaties, maar dit was niet stabiel en er was veel
                     downtime. Daarnaast was er de wens om nog zeven
@@ -56,7 +55,7 @@ const Case = () => (
                     uitgestuurd komen de huurders op het platform om aan te
                     geven of zij akkoord gaan met de installatie van
                     zonnepanelen en hoeveel.
-                </Big>
+                </p>
             </TextAndImage>
         </Container>
         <Container fluid>
@@ -68,7 +67,7 @@ const Case = () => (
             >
                 <p className="subtitle">Strategize</p>
                 <h2>De functionaliteiten</h2>
-                <Big>
+                <p>
                     Om het platform te optimaliseren voor meerdere woning
                     corporaties hebben we in de Python Flask applicatie
                     verbeteringen doorgevoerd aan de offertetool. Daarnaast
@@ -77,20 +76,20 @@ const Case = () => (
                     woningcorporaties nu zelf aanpassingen doorvoeren en is het
                     gemakkelijk om een nieuwe corporatie op te zetten in enkele
                     uren.
-                </Big>
+                </p>
             </TextAndImage>
         </Container>
         <Container fluid>
             <TextAndImage img={uptimeImg} fluid>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing en resultaten</h2>
-                <Big>
+                <p>
                     Inmiddels zijn er al acht woningcorporaties opgezet. Het
                     platform heeft nu een uptimepercentage van 99.95 tot 100%.
                     Mocht een van de websites downtime ondervinden dan krijgen
                     onze site reliability engineers hier een melding van zodat
                     er direct gehandeld kan worden.
-                </Big>
+                </p>
             </TextAndImage>
         </Container>
     </Layout>

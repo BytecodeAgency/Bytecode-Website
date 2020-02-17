@@ -77,7 +77,8 @@ export const BigThumbnailImg = styled.div`
     background: url('${props => props.img}'), ${secondary};
     background-size: cover;
     background-position: center center;
-    height: 50vh;
+    height: 90vh;
+    min-height: 30em;
     transition: all 0.3s ease;
 
 `;

@@ -49,7 +49,7 @@ const Case = () => (
         <Container>
             <Row>
                 <Col md={6}>
-                <h2>De uitdaging</h2>
+                <p class="subtitle">De uitdaging</p>
                 <p class='introduction'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </Col>
             </Row>

@@ -22,9 +22,9 @@ const PostThumbnail = ({ big, title, slug, category, postImageUrl }) => {
                     />
                     <ThumbnailContent>
                         <Subtitle>{category}</Subtitle>
-                        <Big>
-                            <p>{title}</p>
-                        </Big>
+
+                            <h5>{title}</h5>
+
                     </ThumbnailContent>
                 </ThumbnailBase>
             </Col>

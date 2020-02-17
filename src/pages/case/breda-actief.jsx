@@ -5,7 +5,6 @@ import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/MainLayout';
 import { Container, Row, Col } from '../../lib/Grid';
 import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
-import { Big } from '../../components/Typography';
 
 const pageSettings = {
     title: 'Breda Actief',
@@ -32,15 +31,12 @@ const Case = () => (
                     <h1>Breda in beweging</h1>
                 </Col>
                 <Col lg={5}>
-                    <Big>
-                        Stichting Breda Actief&#39;s missie is om alle inwoners
-                        van Breda de mogelijkheid te geven om te sporten en
-                        bewegen. Naar dit doel wordt gestreefd door middel van
-                        het aanbieden van onder andere sport- en beweegmomenten,
-                        het inzetten van sportcoaches, het aanbieden van advies
-                        en het helpen zoeken naar sportmogelijkheden voor mensen
-                        met een beperking.
-                    </Big>
+                    Stichting Breda Actief&#39;s missie is om alle inwoners van
+                    Breda de mogelijkheid te geven om te sporten en bewegen.
+                    Naar dit doel wordt gestreefd door middel van het aanbieden
+                    van onder andere sport- en beweegmomenten, het inzetten van
+                    sportcoaches, het aanbieden van advies en het helpen zoeken
+                    naar sportmogelijkheden voor mensen met een beperking.
                 </Col>
             </Row>
         </Container>
@@ -108,10 +104,8 @@ const Case = () => (
                         NodeJS/Webpack gecompiled.
                     </li>
                 </ol>
-                <Big>
-                    Deze technische tools stellen Breda Actief in staat om haar
-                    website geheel naar eigen wens in te richten.
-                </Big>
+                Deze technische tools stellen Breda Actief in staat om haar
+                website geheel naar eigen wens in te richten.
             </TextAndImage>
         </Container>
         <Container fluid>
@@ -149,37 +143,30 @@ const Case = () => (
             <TextAndImage img={websiteImg1} alt="resultaten" fluid>
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing en Resultaten</h2>
-                <Big>
-                    Om Breda Actief zo goed mogelijk te helpen bij het
-                    neerzetten van een succesvolle website, hebben we besloten
-                    het volgende als oplossing te bieden, om bij te dragen aan
-                    de online groei en de prachtige gestelde doelen.
-                </Big>
-                <Big>
-                    Het resultaat van dit project is te bekijken op
-                    breda-actief.nl. In overleg met Stichting Breda Actief is de
-                    broncode vrijgegeven onder GPL-3.0 licentie,
-                    <a href="https://git.bytecode.nl/breda-actief">
-                        &nbsp;hier&nbsp;
-                    </a>
-                    te bekijken.
-                </Big>
+                Om Breda Actief zo goed mogelijk te helpen bij het neerzetten
+                van een succesvolle website, hebben we besloten het volgende als
+                oplossing te bieden, om bij te dragen aan de online groei en de
+                prachtige gestelde doelen. Het resultaat van dit project is te
+                bekijken op breda-actief.nl. In overleg met Stichting Breda
+                Actief is de broncode vrijgegeven onder GPL-3.0 licentie,
+                <a href="https://git.bytecode.nl/breda-actief">
+                    &nbsp;hier&nbsp;
+                </a>
+                te bekijken.
             </TextAndImage>
         </Container>
         <Container fluid>
             <TextAndImage img={mooiwerkImg} alt="Mooiwerk Breda" reverse fluid>
                 <p className="subtitle">Mooiwerk Breda</p>
                 <h1>Brengt Breda dichter bij elkaar</h1>
-                <Big>
-                    Behalve haar sportieve tak brengt Breda Actief de
-                    vrijwilligers en vrijwilligersorganisaties van Breda bij
-                    elkaar op haar platform: &#39;Mooiwerk Breda&#39;. Over hoe
-                    Bytecode hier aan bij heeft kunnen dragen lees je
-                    <Link to="/case/mooiwerk" aria-label="mooiwerk case">
-                        &nbsp;hier&nbsp;
-                    </Link>
-                    meer
-                </Big>
+                Behalve haar sportieve tak brengt Breda Actief de vrijwilligers
+                en vrijwilligersorganisaties van Breda bij elkaar op haar
+                platform: &#39;Mooiwerk Breda&#39;. Over hoe Bytecode hier aan
+                bij heeft kunnen dragen lees je
+                <Link to="/case/mooiwerk" aria-label="mooiwerk case">
+                    &nbsp;hier&nbsp;
+                </Link>
+                meer
             </TextAndImage>
         </Container>
     </Layout>

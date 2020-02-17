@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import theme from '../styles/theme';
-import { Big } from './Typography';
 
 export const Checklist = styled.ul`
     margin: 2em 0;
@@ -32,7 +31,7 @@ export const CheckListItem = props => {
         <CheckListItemBase>
             <img src={require('../images/icons/ui/check.svg')} alt="- " />
             <p>
-                <Big>{children}</Big>
+                {children}
             </p>
         </CheckListItemBase>
     );
