@@ -23,7 +23,7 @@ export const TextAndImageBase = styled.div`
         grid-column-gap: 5vw;
     } */
     @media (${mediaQueryMin.xl}) {
-        grid-template: auto / ${containerWidth.md} ${props => props.grid}  ${containerWidth.md};
+        grid-template: auto / ${props => props.fluid ? containerWidth.md : containerWidth.xl} ${props => props.grid}  ${containerWidth.md};
     }
 `;
 
@@ -53,6 +53,9 @@ export const ContentWrapper = styled.div`
     @media (${mediaQueryMin.sm}) {
         margin: 0;
 
+    }
+    @media (${mediaQueryMin.lg}) {
+        width: 85%;
     }
 `;
 

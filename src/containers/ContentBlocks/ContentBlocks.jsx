@@ -35,7 +35,7 @@ export const TextAndImage = ({
                 };
             }
             return {
-                grid: '2fr 1fr',
+                grid: '1fr 1fr',
                 gutter: '5em',
                 pos: '1 / 2 / 1 / 3',
                 translate: '0',
@@ -50,7 +50,7 @@ export const TextAndImage = ({
             };
         }
         return {
-            grid: '1.5fr 2fr',
+            grid: '1fr 1fr',
             gutter: '5em',
             pos: '1 / 3 / 1 / 4',
             translate: '0',
@@ -59,6 +59,7 @@ export const TextAndImage = ({
 
     return (
         <TextAndImageBase
+            fluid={fluid}
             gutter={getImgPos().gutter}
             grid={getImgPos().grid}
             padded={padded}

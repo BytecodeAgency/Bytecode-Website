@@ -24,7 +24,7 @@ const logo = require('../../images/img/cases/dawny/logo.svg')
 
 const pageSettings = {
     title: 'Hulpverlening op de weg',
-    client: 'Van Eijck International Car Rescu',
+    client: 'Van Eijck International Car Rescue',
     image: cover,
     description:
         'Bytecode werkt samen met het Reiner De Graaf Gasthuis aan valpreventie voor ouderen.',
@@ -43,7 +43,6 @@ const Case = () => (
             deliverables={['Graphic Design', 'SEO', 'Strategy', 'UX/UI-Design']}
             alt="grootouders die op de kleine passen"
             client={pageSettings.client}
-            clientLogo={logo}
             clientBio="Van Eijck is gespecialiseerd in auto- en vrachtwagentransport, berging van auto’s en vrachtwagens, hulpverlening en vervangend vervoer."
         />
 
@@ -53,23 +52,18 @@ const Case = () => (
             <p class='introduction'>De takelwagens van Van Eijck worden vanuit een centrale beheerd. Deze centrale stuurt tevens de bestuurders van de takelwagens aan. Op de plaats van een ongeval moeten bestuurders informatie vergaren en vastleggen voor de verzekering.
 Voor dit project is bij een outsourcing-partij een project ontwikkeld, maar nog niet alle gewenste functionaliteiten waren geïmplementeerd. Van Eijck werkt nu samen met Delta-N voor de backend van de centrale, met behulp van Microsoft Azure software.</p>
         </Introduction>
-            <TextAndImage img={code} alt="Nonin apparaat met app">
+            <TextAndImage img={code} reverse alt="Nonin apparaat met app">
                 <p class="subtitle">Research</p>
                 <h3>Oplossing</h3>
                 <p>We hebben de bestaande codebase bestudeerd, en voerden een analyse uit om pijnpunten te achterhalen. Deze punten pakken we in meerdere ‘sprints’ aan. Een aantal bestaande features zijn afgemaakt en kritieke bugs zijn opgelost. Zo zorgen we voor betere doorontwikkeling en stabiliteit. Er zijn minder administratieve handelingen nodig, zodat de focus meer kan liggen op het plannen en coördineren. Tot slot hebben we nice-to-have features toegevoegd.</p>
             </TextAndImage>
-        </Section>
-        <Section>
-        <TextAndImage padded fluid img={phones} alt="Nonin apparaat met app" >
+        <TextAndImage fluid img={phones} alt="Nonin apparaat met app" >
             <p class="subtitle">Resultaten</p>
             <h2>Realiseren</h2>
             <p class="introduction">Door onze analyse van de codebase is de kwaliteit significant verbeterd. Binnenkort gaat de nieuwe mobiele app live. We blijven doorontwikkelen aan het platform.</p>
         </TextAndImage>
         </Section>
 
-        <Credits
-            client='Dawny'
-        />
     </Layout>
 );
 
