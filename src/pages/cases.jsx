@@ -17,6 +17,7 @@ const mooiwerkImg = require('../images/img/cases/mooiwerk/website-1.png');
 const coteEtCielImage = require('../images/img/cases/cote-et-ciel/homepage.png');
 const dawnyImage = require('../images/img/cases/dawny/dashboard.png');
 const sungevityImg = require('../images/img/cases/sungevity/woco.png');
+const vrsImg = require('../images/img/cases/vrs/cover.svg');
 
 const CasesContainer = styled(Container)`
     margin-top: 15vh !important;
@@ -69,6 +70,12 @@ const Cases = () => (
                     category="Breda Actief"
                     slug="/case/breda-actief"
                     postImageUrl={bredaImg}
+                />
+                <PostThumbnail
+                    title="Hulpverlening op de weg"
+                    category="Van Eijck International Car Rescue"
+                    slug="/case/vrs"
+                    postImageUrl={vrsImg}
                 />
             </Row>
         </Container>

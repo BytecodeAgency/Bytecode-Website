@@ -29,11 +29,11 @@ const DeliverablesContent = styled.div`
     justify-content: center;
     @media (${mediaQueryMin.xs}) {
         columns: 2;
-        padding: 5vw;
+        padding: 10em 10vw;
     }
     @media (${mediaQueryMin.md}) {
         columns: 3;
-        padding: 10em 10vw;
+
     }
 `;
 
@@ -43,12 +43,15 @@ const ClientInfo = styled.div`
     padding: 0;
     display: flex;
     justify-content: flex-end;
-    align-items: baseline;
     flex-direction: column;
+    align-items: last baseline;
     & > * {
-        padding: 1em;
+        padding: 0 1em;
     }
-    @media (${mediaQueryMin.md}) {
+    p {
+        margin: 0;
+    }
+    @media (${mediaQueryMin.sm}) {
         max-height: 10em;
         flex-direction: row;
         & > * {

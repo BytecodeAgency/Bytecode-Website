@@ -5,7 +5,11 @@ import { transparentize } from 'polished'; // TODO: Remove dependency
 import { Link } from 'gatsby';
 import theme from '../../styles/theme';
 
-const { mediaQueryMin } = theme;
+const { mediaQueryMin, colors } = theme;
+
+const NavBarLi = styled.li`
+    margin: 1em 0;
+`;
 
 export const NavbarContainer = styled.nav`
     position: absolute;
@@ -23,6 +27,9 @@ export const NavbarContainer = styled.nav`
         display: flex;
         justify-content: space-between;
     }
+    @media (min-width: ${theme.breakpointMobileMenu}) {
+        background: ${props => props.background ? `linear-gradient(to bottom, ${colors.secondary}, transparent)` : 'transparent'};
+    }
 
     @media (${mediaQueryMin.md}) {
     }
@@ -37,7 +44,6 @@ export const NavbarContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 6rem;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         display: block;
         width: 100%;
@@ -88,11 +94,11 @@ const StyledLink = styled(Link)`
 `;
 
 const NavbarItemBase = ({ className, href, text }) => (
-    <li className={className}>
+    <NavBarLi className={className}>
         <StyledLink to={href} className="menuitem">
             {text}
         </StyledLink>
-    </li>
+    </NavBarLi>
 );
 
 NavbarItemBase.propTypes = {
@@ -107,7 +113,7 @@ NavbarItemBase.defaultProps = {
 
 export const NavbarItem = styled(NavbarItemBase)`
     display: inline-block;
-    padding: 0 2rem;
+    padding: 0 1.33rem;
     &:last-child {
         padding-right: 0;
     }

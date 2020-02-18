@@ -18,13 +18,14 @@ const hamburger = require('../../images/img/hamburger-menu.svg');
 const closeMenu = require('../../images/img/close-menu.svg');
 
 class Navbar extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             menuIsOpen: false,
         };
         this.openMenu = this.openMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
+
     }
 
     openMenu() {
@@ -38,7 +39,7 @@ class Navbar extends React.Component {
     render() {
         const { menuIsOpen } = this.state;
         return (
-            <NavbarContainer>
+            <NavbarContainer background={this.props.background}>
                 <Link to="/" aria-label="homePage">
                     <MobileNavLogo src={logoMin} alt="Logo" />
                 </Link>

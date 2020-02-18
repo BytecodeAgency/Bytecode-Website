@@ -39,7 +39,7 @@ const Layout = ({ children, pageSettings }) => {
             <HeadScripts />
             <GlobalStyles />
             <SEO title={title} description={description} keywords={keywords} />
-            <Navbar />
+            <Navbar background={true} />
             <Header
                 title={title}
                 subtitle={client}

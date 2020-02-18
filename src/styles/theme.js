@@ -105,7 +105,7 @@ const bytecode = {
         },
         p: {
             spacing: '0.015em',
-            height: '1.5em',
+            height: '1.33em',
             font: paragraph,
             weight: regular,
             color: lightgray2,
@@ -126,7 +126,7 @@ const bytecode = {
             marginRight: '1.66m',
         },
         introduction: {
-            size: '1.16em',
+            size: '1.22em',
             height: '1.33em',
             spacing: '0.01em',
             font: paragraph,
@@ -160,7 +160,7 @@ const bytecode = {
         menuitem: {
             size: '1.125rem',
             height: '1.2em',
-            spacing: '0.17em',
+            spacing: '0.05em',
             font: menu,
             weight: regular,
             color: lightgray,

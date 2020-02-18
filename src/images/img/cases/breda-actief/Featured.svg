@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1842px" height="1490px" viewBox="0 0 1842 1490" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
-    <title>Featured</title>
+    <title>featured</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <filter x="-13.4%" y="-20.4%" width="126.8%" height="141.0%" filterUnits="objectBoundingBox" id="filter-1">
@@ -13,18 +13,18 @@
                 <feMergeNode in="SourceGraphic"></feMergeNode>
             </feMerge>
         </filter>
-        <filter x="-22.1%" y="-11.6%" width="144.3%" height="123.2%" filterUnits="objectBoundingBox" id="filter-2">
+        <filter x="-42.4%" y="-22.2%" width="184.8%" height="144.3%" filterUnits="objectBoundingBox" id="filter-2">
             <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="19.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="37.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.24838833 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
             <feMerge>
                 <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
                 <feMergeNode in="SourceGraphic"></feMergeNode>
             </feMerge>
         </filter>
     </defs>
-    <g id="Featured" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect fill="#F8F8F8" x="0" y="0" width="1842" height="1490"></rect>
+    <g id="featured" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#F4F4F4" x="0" y="0" width="1842" height="1490"></rect>
         <circle id="Oval" fill="#A3BCD7" cx="1288.5" cy="169.5" r="1029.5"></circle>
         <g id="Group-5" transform="translate(737.000000, 257.000000)">
             <g id="Group-4" filter="url(#filter-1)">

@@ -72,7 +72,7 @@ export const TextAndImage = ({
             >
                 <img src={img} alt={alt} />
             </ImageWrapper>
-            <ContentWrapper reverse={reverse}>{children}</ContentWrapper>
+            <ContentWrapper  fluid={fluid} reverse={reverse}>{children}</ContentWrapper>
         </TextAndImageBase>
     );
 };

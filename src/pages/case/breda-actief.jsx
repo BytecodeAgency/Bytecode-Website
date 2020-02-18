@@ -17,11 +17,6 @@ const responsive = require('../../images/img/cases/breda-actief/responsive.svg')
 const administration = require('../../images/img/cases/breda-actief/administration.svg');
 const screens = require('../../images/img/cases/breda-actief/screens.png');
 const websiteImg1 = require('../../images/img/cases/breda-actief/website-1.jpg');
-const websiteImg2 = require('../../images/img/cases/breda-actief/website-2.png');
-const websiteImg3 = require('../../images/img/cases/breda-actief/website-3.png');
-const websiteImg4 = require('../../images/img/cases/breda-actief/website-4.png');
-const websiteImg5 = require('../../images/img/cases/breda-actief/website-5.png');
-const mooiwerkImg = require('../../images/img/cases/mooiwerk/website-1.png');
 
 const pageSettings = {
     title: 'Breng Breda in beweging',

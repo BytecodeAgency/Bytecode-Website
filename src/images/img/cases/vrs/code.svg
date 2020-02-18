@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="578px" height="726px" viewBox="0 0 578 726" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
-    <title>Code-base</title>
+    <title>code</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="0" width="313" height="523"></rect>
     </defs>
-    <g id="Code-base" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="code" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#1A1A1A" x="0" y="0" width="578" height="726"></rect>
         <circle id="Oval" fill="#2B2B2B" cx="289.5" cy="363.5" r="265.5"></circle>
         <g id="Group-3-Copy" transform="translate(121.000000, 47.000000)">
             <rect id="Rectangle-Copy" fill="#EDEDED" x="0" y="0" width="337" height="633" rx="6"></rect>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1138px" height="753px" viewBox="0 0 1138 753" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
-    <title>Phones</title>
+    <title>phones</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="0" width="245" height="413"></rect>
@@ -9,7 +9,7 @@
         <rect id="path-5" x="0" y="0" width="246" height="412"></rect>
         <rect id="path-7" x="0" y="0" width="245" height="414"></rect>
     </defs>
-    <g id="Phones" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="phones" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <rect id="Rectangle" fill="#FFFFFF" opacity="0.02" x="128" y="39" width="874" height="675"></rect>
         <g id="Group-4" transform="translate(39.000000, 164.000000)">
             <rect id="Rectangle" fill="#EDEDED" x="0" y="0" width="266" height="500" rx="6"></rect>

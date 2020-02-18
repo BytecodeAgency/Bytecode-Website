@@ -22,7 +22,7 @@ export const TextAndImageBase = styled.div`
         grid-template: auto / ${containerWidth.lg} 1fr 1fr ${containerWidth.lg};
         grid-column-gap: 5vw;
     } */
-    @media (${mediaQueryMin.xl}) {
+    @media (${mediaQueryMin.lg}) {
         grid-template: auto / ${props => props.fluid ? containerWidth.md : containerWidth.xl} ${props => props.grid}  ${containerWidth.md};
     }
 `;
@@ -55,7 +55,7 @@ export const ContentWrapper = styled.div`
 
     }
     @media (${mediaQueryMin.lg}) {
-        width: 85%;
+        width: ${props => props.fluid ? '100%' : '85%'};
     }
 `;
 
@@ -67,7 +67,7 @@ export const GalleryWrapper = styled.section`
     }
 `;
 
-const introPadding = '17vh';
+const introPadding = '5em';
 
 export const IntroductionBase = styled.div`
     padding: 10vh ${containerWidth.sm};
@@ -76,7 +76,7 @@ export const IntroductionBase = styled.div`
     }
     @media (${mediaQueryMin.md}) {
         padding: ${introPadding} ${containerWidth.md};
-        width: 60%;
+        width: 70%;
     }
     @media (${mediaQueryMin.lg}) {
         padding: ${introPadding} ${containerWidth.lg};

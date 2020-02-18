@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1277px" height="937px" viewBox="0 0 1277 937" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
-    <title>Desktop HD</title>
+    <title>cover</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="0" width="423.642496" height="714.555404"></rect>
@@ -11,7 +11,7 @@
         <rect id="path-9" x="0" y="0" width="424.175379" height="715.896033"></rect>
         <rect id="path-11" x="0" y="0" width="424.983137" height="712.600547"></rect>
     </defs>
-    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="cover" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <rect fill="#2B2B2B" x="0" y="0" width="1277" height="937"></rect>
         <g id="Group-4" transform="translate(-531.000000, 543.000000)">
             <path d="M173.579016,57.6455646 L621.420984,57.6455646 C624.734693,57.6455646 627.420984,60.3318561 627.420984,63.6455646 L627.420984,916.354435 C627.420984,919.668144 624.734693,922.354435 621.420984,922.354435 L173.579016,922.354435 C170.265307,922.354435 167.579016,919.668144 167.579016,916.354435 L167.579016,63.6455646 C167.579016,60.3318561 170.265307,57.6455646 173.579016,57.6455646 Z" id="Rectangle" fill="#EDEDED" transform="translate(397.500000, 490.000000) rotate(26.000000) translate(-397.500000, -490.000000) "></path>
