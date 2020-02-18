@@ -7,6 +7,7 @@ import Helmet from 'react-helmet';
 import SEO from './SEO';
 import Navbar from '../containers/Navbar/Navbar';
 import Footer from './Footer';
+import Header from '../containers/Header';
 import theme from '../styles/theme';
 import { GlobalStyles, TypographyClassStyling } from '../styles/global-css';
 import HeadScripts from '../lib/GetHeadScripts';
@@ -31,7 +32,7 @@ const HeadElements = () => (
 );
 
 const Layout = ({ children, pageSettings }) => {
-    const { title, description, keywords } = pageSettings;
+    const { title, description, client, image, keywords } = pageSettings;
     return (
         <div>
             <HeadElements />
@@ -39,6 +40,12 @@ const Layout = ({ children, pageSettings }) => {
             <GlobalStyles />
             <SEO title={title} description={description} keywords={keywords} />
             <Navbar />
+            <Header
+                title={title}
+                subtitle={client}
+                tagline={description}
+                img={image}
+            />
             <Main className="main">
                 <TypographyClassStyling />
                 {children}

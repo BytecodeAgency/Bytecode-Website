@@ -31,10 +31,17 @@ const HeaderBase = styled.header`
 
 const HeaderInformation = styled.div`
     display: flex;
-    align-items: center;
-    & > * {
-        width: 50%;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    @media (${mediaQueryMin.sm}){
+        flex-direction: row;
+        & > * {
+            width: 50%;
+            justify-content: center;
+        }
     }
+
 `;
 
 const Header = ({title, subtitle, tagline, img, children}) => {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="681px" height="537px" viewBox="0 0 681 537" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="739px" height="537px" viewBox="0 0 739 537" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
     <title>Group 16@3x</title>
     <desc>Created with Sketch.</desc>
@@ -27,8 +27,8 @@
         </filter>
     </defs>
     <g id="Case-Singe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Case-Single-v2-Copy" transform="translate(-759.000000, -1115.000000)">
-            <g id="Group-16" transform="translate(760.000000, 1115.000000)">
+        <g id="Case-Single-v2-Copy" transform="translate(-646.000000, -1114.000000)">
+            <g id="Group-16" transform="translate(647.000000, 1114.000000)">
                 <rect id="Rectangle" fill="#171717" x="101" y="56" width="480" height="432"></rect>
                 <g id="Group-12">
                     <g id="Group-11-Copy" transform="translate(281.000000, 374.000000)">
@@ -63,7 +63,7 @@
                             <mask id="mask-8" fill="white">
                                 <use xlink:href="#path-7"></use>
                             </mask>
-                            <use id="Mask" fill="#212121" xlink:href="#path-7"></use>
+                            <use id="Mask" fill="#434343" xlink:href="#path-7"></use>
                         </g>
                         <g id="Path-2" transform="translate(36.300000, 28.050000)">
                             <mask id="mask-10" fill="white">
@@ -75,7 +75,7 @@
                         <g id="Group-2" transform="translate(14.850000, 70.950000)">
                             <g id="Rectangle-Copy-4">
                                 <use fill="black" fill-opacity="1" filter="url(#filter-13)" xlink:href="#path-12"></use>
-                                <use stroke-opacity="0.18788243" stroke="#262626" stroke-width="1.2375" fill="#404040" fill-rule="evenodd" xlink:href="#path-12"></use>
+                                <use stroke-opacity="0.18788243" stroke="#262626" stroke-width="1.2375" fill="#555555" fill-rule="evenodd" xlink:href="#path-12"></use>
                             </g>
                             <rect id="Rectangle-Copy-5" fill="#292929" x="0" y="0" width="39.6" height="9.735"></rect>
                         </g>
@@ -86,7 +86,7 @@
                     <g id="Group-8-Copy" transform="translate(0.000000, 112.000000)">
                         <g id="Group-9">
                             <g id="Group-5" transform="translate(30.049038, 34.131588)">
-                                <rect id="Rectangle" fill="#212121" x="0" y="0" width="169.807212" height="283.287162" rx="8.6625"></rect>
+                                <rect id="Rectangle" fill="#404040" x="0" y="0" width="169.807212" height="283.287162" rx="8.6625"></rect>
                                 <path d="M16.7882212,20.6027027 L153.01899,20.6027027 C156.607115,20.6027027 159.515865,23.5114527 159.515865,27.0995777 L159.515865,256.187584 C159.515865,259.775709 156.607115,262.684459 153.01899,262.684459 L16.7882212,262.684459 C13.2000962,262.684459 10.2913462,259.775709 10.2913462,256.187584 L10.2913462,27.0995777 C10.2913462,23.5114527 13.2000962,20.6027027 16.7882212,20.6027027 Z" id="Rectangle-Copy" fill="#70C197"></path>
                             </g>
                             <g id="Group-7-Copy" opacity="0.895228795" transform="translate(13.020106, 14.109126) rotate(-90.000000) translate(-13.020106, -14.109126) translate(-0.979894, 1.109126)" stroke="#DF5252" stroke-width="1.44375">

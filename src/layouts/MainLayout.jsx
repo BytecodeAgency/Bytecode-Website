@@ -14,9 +14,6 @@ import HeadScripts from '../lib/GetHeadScripts';
 const Main = styled.main`
     max-width: 100vw !important;
     overflow-x: hidden;
-    @media (max-width: ${theme.breakpointMobileMenu}) {
-        padding-top: 5rem;
-    }
 `;
 
 const HeadElements = () => (

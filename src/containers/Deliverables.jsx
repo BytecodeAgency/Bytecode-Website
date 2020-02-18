@@ -8,12 +8,13 @@ const { colors, mediaQueryMin, containerWidth } = theme;
 const { secondary } = colors;
 
 const DeliverablesBase = styled.section`
-    @media (${mediaQueryMin.xs}) {
+    @media (${mediaQueryMin.sm}) {
         display: grid;
         grid-template-columns: 10vw 1fr 1fr 1fr 1fr 1fr 1fr 10vw;
         grid-template-rows: 2fr 3em 3fr;
         grid-gap: 2em;
         align-content: center;
+        align-self: end;
     }
 `;
 
@@ -22,22 +23,48 @@ const DeliverablesContent = styled.div`
     grid-column: 2/9;
     z-index: 1;
     background: ${secondary};
-    padding: 10vw;
+    padding: em 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (${mediaQueryMin.xs}) {
+        columns: 2;
+        padding: 5vw;
+    }
+    @media (${mediaQueryMin.xs}) {
+        columns: 3;
+        padding: 10vw;
+    }
+    @media (${mediaQueryMin.xs}) {
+        columns: 3;
+        padding: 10vw;
+    }
 `;
 
 const ClientInfo = styled.div`
     grid-row: 1;
     grid-column: 5/8;
-    padding: 1em;
+    padding: 0;
     display: flex;
     justify-content: flex-end;
+    align-items: baseline;
+    flex-direction: column;
     & > * {
-        width: 50%;
         padding: 1em;
     }
+    @media (${mediaQueryMin.md}) {
+        max-height: 10em;
+        flex-direction: row;
+        & > * {
+            width: 50%;
+        }
+    }
+    align-self: flex-end;
+
+`;
+
+const ClientInfoHeader = styled.div`
+    padding: 0 1em;
 `;
 
 const Figure = styled.figure`
@@ -48,9 +75,16 @@ const Figure = styled.figure`
 `;
 
 const List = styled.ul`
-    columns: 3;
-    list-style-position: outside;
-    list-style-image: url('${plusBullet}');
+    @media (${mediaQueryMin.xs}) {
+        columns: 2;
+        list-style-position: outside;
+        list-style-image: url('${plusBullet}');
+    }
+    @media (${mediaQueryMin.md}) {
+        columns: 3;
+    }
+
+
 `;
 
 const LI = styled.li`
@@ -59,9 +93,23 @@ const LI = styled.li`
     font-size: 1.11em;
 `;
 
-const Deliverables = ({img, client}) => {
+const Logo = styled.img`
+    height: 1em;
+    width: auto;
+    margin: 0.3em;
+    opacity: 0.66;
+`;
+
+const Deliverables = ({img, client, clientBio, clientLogo}) => {
     return (
         <DeliverablesBase>
+            <ClientInfo>
+                <ClientInfoHeader>
+                    <Logo src={clientLogo} />
+                    <h5>{client}</h5>
+                </ClientInfoHeader>
+                <p class="caption">{clientBio}</p>
+            </ClientInfo>
             <DeliverablesContent>
                 <p class="subtitle">Deliverables</p>
                 <List>
@@ -74,10 +122,6 @@ const Deliverables = ({img, client}) => {
                     <LI>Backend Development</LI>
                 </List>
             </DeliverablesContent>
-            <ClientInfo>
-                <h6>{client}</h6>
-                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </ClientInfo>
             <Figure>
                 <img alt="test" src={img} />
             </Figure>

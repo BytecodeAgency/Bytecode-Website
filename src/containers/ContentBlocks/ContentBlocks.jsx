@@ -8,6 +8,9 @@ import {
     GalleryWrapper,
     IntroductionBase,
 } from './ContentBlocks.components';
+import theme from '../../styles/theme';
+
+const { mediaQueryMin } = theme;
 
 export const Gallery = ({ width, children }) => {
     return <GalleryWrapper width={width} >{children}</GalleryWrapper>;
@@ -72,6 +75,13 @@ export const TextAndImage = ({
         </TextAndImageBase>
     );
 };
+
+export const Section = styled.section`
+    margin: 1em 0;
+    @media (${mediaQueryMin.sm}) {
+        margin: 5em 0;
+    }
+`;
 
 export const Introduction = ({children}) => {
     return <IntroductionBase>{children}</IntroductionBase>;

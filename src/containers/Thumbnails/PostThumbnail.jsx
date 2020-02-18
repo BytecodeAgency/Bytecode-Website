@@ -23,7 +23,7 @@ const PostThumbnail = ({ big, title, slug, category, postImageUrl }) => {
                     <ThumbnailContent>
                         <Subtitle>{category}</Subtitle>
 
-                            <h5>{title}</h5>
+                            <h6>{title}</h6>
 
                     </ThumbnailContent>
                 </ThumbnailBase>
@@ -36,7 +36,7 @@ const PostThumbnail = ({ big, title, slug, category, postImageUrl }) => {
                 <ThumbnailImg className="thumbnail-img" img={postImageUrl} />
                 <ThumbnailContent>
                     <Subtitle>{category}</Subtitle>
-                    <h5>{title}</h5>
+                    <h6>{title}</h6>
                     <a href={slug}>
                         <small className="thumbnail-cta">
                             Lees meer

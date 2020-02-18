@@ -5,6 +5,7 @@ const black = '#0f0f0f';
 const darkgray = '#1a1a1a';
 const green = '#23be87';
 const lightgray = '#f2f2f2';
+const lightgray2 = '#E7E7E7';
 const mediumgray = '#262626';
 const red = '#df5252';
 const white = '#ffffff';
@@ -38,6 +39,7 @@ const bytecode = {
         black,
         mediumgray,
         lightgray,
+        lightgray2,
         white,
     },
     fonts: {
@@ -89,13 +91,14 @@ const bytecode = {
         h5: {
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
-            weight: regular,
+            weight: GlobalHeadingSettings.weight,
             color: GlobalHeadingSettings.color,
             marginBottom: GlobalHeadingSettings.marginBottom,
         },
         h6: {
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
+            height: '1.1em',
             weight: regular,
             color: GlobalHeadingSettings.color,
             marginBottom: '0.33em',
@@ -105,7 +108,7 @@ const bytecode = {
             height: '1.5em',
             font: paragraph,
             weight: regular,
-            color: lightgray,
+            color: lightgray2,
             marginBottom: '1.33em',
         },
         li: {
@@ -123,7 +126,7 @@ const bytecode = {
             marginRight: '1.66m',
         },
         introduction: {
-            size: '1.33em',
+            size: '1.16em',
             height: '1.33em',
             spacing: '0.01em',
             font: paragraph,
@@ -136,7 +139,7 @@ const bytecode = {
             spacing: '0em',
             font: menu,
             weight: light,
-            color: mediumgray,
+            color: lightgray2,
         },
         subtitle: {
             size: '0.85rem',
