@@ -138,19 +138,21 @@ const Case = () => (
             </Checklist>
         </TextAndImage>
         </Section>
+        <Section>
+            <TextAndImage padded img={websiteImg1} alt="resultaten">
+                <p className="subtitle">Realize</p>
+                <h2>Oplossing en Resultaten</h2>
+                Om Breda Actief zo goed mogelijk te helpen bij het neerzetten van
+                een succesvolle website, hebben we besloten het volgende als
+                oplossing te bieden, om bij te dragen aan de online groei en de
+                prachtige gestelde doelen. Het resultaat van dit project is te
+                bekijken op breda-actief.nl. In overleg met Stichting Breda Actief
+                is de broncode vrijgegeven onder GPL-3.0 licentie,
+                <a href="https://git.bytecode.nl/breda-actief">&nbsp;hier&nbsp;</a>
+                te bekijken.
+            </TextAndImage>
+        </Section>
 
-        <TextAndImage img={websiteImg1} alt="resultaten" fluid>
-            <p className="subtitle">Realize</p>
-            <h2>Oplossing en Resultaten</h2>
-            Om Breda Actief zo goed mogelijk te helpen bij het neerzetten van
-            een succesvolle website, hebben we besloten het volgende als
-            oplossing te bieden, om bij te dragen aan de online groei en de
-            prachtige gestelde doelen. Het resultaat van dit project is te
-            bekijken op breda-actief.nl. In overleg met Stichting Breda Actief
-            is de broncode vrijgegeven onder GPL-3.0 licentie,
-            <a href="https://git.bytecode.nl/breda-actief">&nbsp;hier&nbsp;</a>
-            te bekijken.
-        </TextAndImage>
 
     </Layout>
 );

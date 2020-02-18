@@ -36,7 +36,7 @@ export const TextAndImage = ({
             }
             return {
                 grid: '2fr 1fr',
-                gutter: '3em',
+                gutter: '5em',
                 pos: '1 / 2 / 1 / 3',
                 translate: '0',
             };
@@ -51,7 +51,7 @@ export const TextAndImage = ({
         }
         return {
             grid: '1.5fr 2fr',
-            gutter: '3em',
+            gutter: '5em',
             pos: '1 / 3 / 1 / 4',
             translate: '0',
         };

@@ -11,7 +11,7 @@ const DeliverablesBase = styled.section`
     @media (${mediaQueryMin.sm}) {
         display: grid;
         grid-template-columns: 10vw 1fr 1fr 1fr 1fr 1fr 1fr 10vw;
-        grid-template-rows: 2fr 3em 3fr;
+        grid-template-rows: auto 3em auto;
         grid-gap: 2em;
         align-content: center;
         align-self: end;
@@ -31,13 +31,9 @@ const DeliverablesContent = styled.div`
         columns: 2;
         padding: 5vw;
     }
-    @media (${mediaQueryMin.xs}) {
+    @media (${mediaQueryMin.md}) {
         columns: 3;
-        padding: 10vw;
-    }
-    @media (${mediaQueryMin.xs}) {
-        columns: 3;
-        padding: 10vw;
+        padding: 10em 10vw;
     }
 `;
 
@@ -122,9 +118,11 @@ const Deliverables = ({img, client, clientBio, clientLogo}) => {
                     <LI>Backend Development</LI>
                 </List>
             </DeliverablesContent>
+            {img &&
             <Figure>
                 <img alt="test" src={img} />
             </Figure>
+            }
         </DeliverablesBase>
     )
 }
