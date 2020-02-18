@@ -5,6 +5,8 @@ import theme from '../styles/theme';
 const { colors, mediaQueryMin, containerWidth } = theme;
 const { secondary } = colors;
 
+const arrowDown = require('../images/icons/ui/carret-down.svg');
+
 const HeaderBase = styled.header`
     background: linear-gradient(to top, rgba(0,0,0,0.95), transparent 60%), url(${props => props.backgroundImage});
     background-size: cover !important;
@@ -18,7 +20,7 @@ const HeaderBase = styled.header`
     }
     @media (${mediaQueryMin.md}) {
         padding: 2em ${containerWidth.md};
-        background: linear-gradient(to top, rgba(0,0,0,0.66), transparent 50%),
+        background: linear-gradient(to top, rgba(0,0,0,0.85), transparent 50%),
             url(${props => props.backgroundImage});
     }
     @media (${mediaQueryMin.lg}) {
@@ -56,6 +58,14 @@ const StyledSubtitle = styled.p`
     color: ${colors.lightgray2};
 `;
 
+const ArrowDown = styled.img`
+    width: 1em;
+    position: absolute;
+    right: 50vw;
+    margin-right: 0.5em;
+    opacity: 0.5;
+`;
+
 const Header = ({ title, subtitle, tagline, img, children }) => {
     return (
         <HeaderBase backgroundImage={img}>
@@ -69,6 +79,7 @@ const Header = ({ title, subtitle, tagline, img, children }) => {
                     {children}
                 </div>
             </HeaderInformation>
+            <ArrowDown src={arrowDown} />
         </HeaderBase>
     );
 };
