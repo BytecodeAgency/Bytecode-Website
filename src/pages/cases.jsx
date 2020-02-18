@@ -12,7 +12,7 @@ const pageSettings = {
 };
 
 const styrImg = require('../images/img/cases/styr/login.png');
-const bredaImg = require('../images/img/cases/breda-actief/website-1.jpg');
+const bredaImg = require('../images/img/cases/breda-actief/featured.svg');
 const mooiwerkImg = require('../images/img/cases/mooiwerk/website-1.png');
 const coteEtCielImage = require('../images/img/cases/cote-et-ciel/homepage.png');
 const dawnyImage = require('../images/img/cases/dawny/dashboard.png');
