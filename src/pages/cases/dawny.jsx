@@ -21,7 +21,6 @@ const weekImg = require('../../images/img/cases/dawny/weekoverzicht.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-
         <Container>
             <CaseHeader img={dashboardImg} alt="dashboard" />
         </Container>

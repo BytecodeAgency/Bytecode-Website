@@ -28,7 +28,10 @@ export const NavbarContainer = styled.nav`
         justify-content: space-between;
     }
     @media (min-width: ${theme.breakpointMobileMenu}) {
-        background: ${props => props.background ? `linear-gradient(to bottom, ${colors.secondary}, transparent)` : 'transparent'};
+        background: ${props =>
+            props.background
+                ? `linear-gradient(to bottom, ${colors.secondary}, transparent)`
+                : 'transparent'};
     }
 
     @media (${mediaQueryMin.md}) {

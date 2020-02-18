@@ -25,7 +25,6 @@ class Navbar extends React.Component {
         };
         this.openMenu = this.openMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
-
     }
 
     openMenu() {

@@ -8,7 +8,8 @@ const { secondary } = colors;
 const arrowDown = require('../images/icons/ui/carret-down.svg');
 
 const HeaderBase = styled.header`
-    background: linear-gradient(to top, rgba(0,0,0,0.95), transparent 60%), url(${props => props.backgroundImage});
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent),
+        url(${props => props.backgroundImage});
     background-size: cover !important;
     background-position: center !important;
     height: 100vh;
@@ -17,15 +18,19 @@ const HeaderBase = styled.header`
     align-items: flex-end;
     @media (${mediaQueryMin.sm}) {
         padding: 3em ${containerWidth.sm};
+        background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.85),
+                transparent 50%
+            ),
+            url(${props => props.backgroundImage});
     }
     @media (${mediaQueryMin.md}) {
         padding: 2em ${containerWidth.md};
-        background: linear-gradient(to top, rgba(0,0,0,0.85), transparent 50%),
-            url(${props => props.backgroundImage});
+
     }
     @media (${mediaQueryMin.lg}) {
         padding: 2em ${containerWidth.lg};
-
     }
     @media (${mediaQueryMin.xxl}) {
         padding: 5em ${containerWidth.xl};
@@ -35,19 +40,21 @@ const HeaderBase = styled.header`
 const HeaderInformation = styled.div`
     display: flex;
     width: 100%;
-    justify-content: space-around
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    @media (${mediaQueryMin.sm}) {
+    align-items: baseline;
 
+    @media (${mediaQueryMin.xs}) {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: end;
         & > * {
             width: 50%;
+            padding: 1em;
             justify-content: center;
         }
     }
     @media (${mediaQueryMin.md}) {
-        flex-direction: row;
+
         & > * {
             width: 40%;
         }
@@ -71,7 +78,9 @@ const Header = ({ title, subtitle, tagline, img, children }) => {
         <HeaderBase backgroundImage={img}>
             <HeaderInformation>
                 <div>
-                    <StyledSubtitle className="white subtitle">{subtitle}</StyledSubtitle>
+                    <StyledSubtitle className="white subtitle">
+                        {subtitle}
+                    </StyledSubtitle>
                     <h3>{title}</h3>
                 </div>
                 <div>

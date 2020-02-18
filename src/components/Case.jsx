@@ -30,9 +30,7 @@ export const CheckListItem = props => {
     return (
         <CheckListItemBase>
             <img src={require('../images/icons/ui/check.svg')} alt="- " />
-            <p>
-                {children}
-            </p>
+            <p>{children}</p>
         </CheckListItemBase>
     );
 };

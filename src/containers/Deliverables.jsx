@@ -33,7 +33,6 @@ const DeliverablesContent = styled.div`
     }
     @media (${mediaQueryMin.md}) {
         columns: 3;
-
     }
 `;
 
@@ -59,7 +58,6 @@ const ClientInfo = styled.div`
         }
     }
     align-self: flex-end;
-
 `;
 
 const ClientInfoHeader = styled.div`
@@ -99,7 +97,7 @@ const Logo = styled.img`
     opacity: 0.66;
 `;
 
-const Deliverables = ({img, client, clientBio, clientLogo}) => {
+const Deliverables = ({ img, client, clientBio, clientLogo }) => {
     return (
         <DeliverablesBase>
             <ClientInfo>
@@ -107,10 +105,10 @@ const Deliverables = ({img, client, clientBio, clientLogo}) => {
                     <Logo src={clientLogo} />
                     <h5>{client}</h5>
                 </ClientInfoHeader>
-                <p class="caption">{clientBio}</p>
+                <p className="caption">{clientBio}</p>
             </ClientInfo>
             <DeliverablesContent>
-                <p class="subtitle">Deliverables</p>
+                <p className="subtitle">Deliverables</p>
                 <List>
                     <LI>Workflow Strategy</LI>
                     <LI>API-development</LI>
@@ -121,13 +119,13 @@ const Deliverables = ({img, client, clientBio, clientLogo}) => {
                     <LI>Backend Development</LI>
                 </List>
             </DeliverablesContent>
-            {img &&
-            <Figure>
-                <img alt="test" src={img} />
-            </Figure>
-            }
+            {img && (
+                <Figure>
+                    <img alt="test" src={img} />
+                </Figure>
+            )}
         </DeliverablesBase>
-    )
-}
+    );
+};
 
 export default Deliverables;

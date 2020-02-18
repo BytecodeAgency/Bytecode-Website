@@ -16,14 +16,18 @@ export const TextAndImageBase = styled.div`
         grid-column-gap: ${props => props.gutter};
     }
     @media (${mediaQueryMin.md}) {
-        grid-template: auto / ${containerWidth.sm} ${props => props.grid} ${containerWidth.sm};
+        grid-template: auto / ${containerWidth.sm} ${props => props.grid} ${
+    containerWidth.sm
+};
     }
     /* @media (${mediaQueryMin.lg}) {
         grid-template: auto / ${containerWidth.lg} 1fr 1fr ${containerWidth.lg};
         grid-column-gap: 5vw;
     } */
     @media (${mediaQueryMin.lg}) {
-        grid-template: auto / ${props => props.fluid ? containerWidth.md : containerWidth.xl} ${props => props.grid}  ${containerWidth.md};
+        grid-template: auto / ${props =>
+            props.fluid ? containerWidth.md : containerWidth.xl} ${props =>
+    props.grid}  ${containerWidth.md};
     }
 `;
 
@@ -52,10 +56,9 @@ export const ContentWrapper = styled.div`
     }
     @media (${mediaQueryMin.sm}) {
         margin: 0;
-
     }
     @media (${mediaQueryMin.lg}) {
-        width: ${props => props.fluid ? '100%' : '85%'};
+        width: ${props => (props.fluid ? '100%' : '85%')};
     }
 `;
 
@@ -80,7 +83,6 @@ export const IntroductionBase = styled.div`
     }
     @media (${mediaQueryMin.lg}) {
         padding: ${introPadding} ${containerWidth.lg};
-
     }
     @media (${mediaQueryMin.xl}) {
         padding: ${introPadding} ${containerWidth.xl};

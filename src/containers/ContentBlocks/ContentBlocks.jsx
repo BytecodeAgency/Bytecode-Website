@@ -13,7 +13,7 @@ import theme from '../../styles/theme';
 const { mediaQueryMin } = theme;
 
 export const Gallery = ({ width, children }) => {
-    return <GalleryWrapper width={width} >{children}</GalleryWrapper>;
+    return <GalleryWrapper width={width}>{children}</GalleryWrapper>;
 };
 
 export const TextAndImage = ({
@@ -72,21 +72,23 @@ export const TextAndImage = ({
             >
                 <img src={img} alt={alt} />
             </ImageWrapper>
-            <ContentWrapper  fluid={fluid} reverse={reverse}>{children}</ContentWrapper>
+            <ContentWrapper fluid={fluid} reverse={reverse}>
+                {children}
+            </ContentWrapper>
         </TextAndImageBase>
     );
 };
 
 export const Section = styled.section`
     margin: 1em 0;
-    @media (${mediaQueryMin.sm}) {
+    @media (${mediaQueryMin.md}) {
         margin: 5em 0;
     }
 `;
 
-export const Introduction = ({children}) => {
+export const Introduction = ({ children }) => {
     return <IntroductionBase>{children}</IntroductionBase>;
-}
+};
 
 TextAndImage.propTypes = {
     children: PropTypes.node.isRequired,

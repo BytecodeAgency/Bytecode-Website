@@ -38,7 +38,7 @@ const blogArchive = ({ data }) => {
     const { edges: posts } = data.allMdx;
     return (
         <Layout pageSettings={pageSettings}>
-            <Posts >
+            <Posts>
                 <h1>Insights</h1>
                 <Row gutterWidth={30}>
                     {posts.map(({ node: post }, _, key) => (
@@ -46,7 +46,7 @@ const blogArchive = ({ data }) => {
                     ))}
                 </Row>
             </Posts>
-            <hr></hr>
+            <hr />
             <Container>
                 <Row>
                     <Col md={12}>

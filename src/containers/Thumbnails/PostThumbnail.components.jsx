@@ -5,7 +5,7 @@ import React from 'react';
 import theme from '../../styles/theme';
 
 const { mediaQueryMin, colors } = theme;
-const {secondary} = colors;
+const { secondary } = colors;
 
 const SubtitleBase = ({ className, children }) => (
     <div className={`subtitle ${className}`}>{children}</div>

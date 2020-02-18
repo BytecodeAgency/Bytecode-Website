@@ -77,78 +77,81 @@ const Case = () => (
             </Checklist>
         </TextAndImage>
         <Section>
-        <TextAndImage img={administration} alt="proces" padded>
-            <p className="subtitle">Strategize</p>
-            <h2>Proces en techniek</h2>
-            <ol>
-                <li>
-                    Design partner van Breda Actief Studio Maan heeft de website
-                    ontworpen en bij ons aangeleverd in Sketch.
-                </li>
-                <li>
-                    Aan de hand van dit design hebben wij, binnen een WordPress
-                    maatwerkomgeving, de contentblokken en alle pagina’s
-                    uitgewerkt. Op die manier hebben we ervoor gezorgd dat Breda
-                    Actief in staat is om de website nu zelf met content te
-                    vullen maar toch binnen de huisstijl te blijven.
-                </li>
-                <li>
-                    De contentblokken zijn gemaakt met Advanced Custom Fields
-                    Pro en de pagina’s zijn opgebouwd met de Blade templating
-                    language binnen het Sage thema van roots.io. De CSS en
-                    Javascript worden binnen Sage met NodeJS/Webpack gecompiled.
-                </li>
-            </ol>
-            Deze technische tools stellen Breda Actief in staat om haar website
-            geheel naar eigen wens in te richten.
-        </TextAndImage>
+            <TextAndImage img={administration} alt="proces" padded>
+                <p className="subtitle">Strategize</p>
+                <h2>Proces en techniek</h2>
+                <ol>
+                    <li>
+                        Design partner van Breda Actief Studio Maan heeft de
+                        website ontworpen en bij ons aangeleverd in Sketch.
+                    </li>
+                    <li>
+                        Aan de hand van dit design hebben wij, binnen een
+                        WordPress maatwerkomgeving, de contentblokken en alle
+                        pagina’s uitgewerkt. Op die manier hebben we ervoor
+                        gezorgd dat Breda Actief in staat is om de website nu
+                        zelf met content te vullen maar toch binnen de huisstijl
+                        te blijven.
+                    </li>
+                    <li>
+                        De contentblokken zijn gemaakt met Advanced Custom
+                        Fields Pro en de pagina’s zijn opgebouwd met de Blade
+                        templating language binnen het Sage thema van roots.io.
+                        De CSS en Javascript worden binnen Sage met
+                        NodeJS/Webpack gecompiled.
+                    </li>
+                </ol>
+                Deze technische tools stellen Breda Actief in staat om haar
+                website geheel naar eigen wens in te richten.
+            </TextAndImage>
         </Section>
         <Section>
-        <TextAndImage img={screens} alt="functies" padded fluid>
-            <Checklist>
-                <CheckListItem>
-                    Het platform met verschillende contentblokken ontwikkelen,
-                    die gebruikt worden voor het opbouwen van de pagina’s
-                </CheckListItem>
-                <CheckListItem>
-                    Door de contentblokken kan de content makkelijk beheerd
-                    worden, zonder problemen voor de layout
-                </CheckListItem>
-                <CheckListItem>
-                    De inhoud van de blokken wordt ingeladen in een maatwerk
-                    Wordpress thema, zodat alle elementen goed toegankelijk
-                    zijn, zelfs voor mensen met een screenreader of gebruikers
-                    die geen muis kunnen bedienen
-                </CheckListItem>
-                <CheckListItem>
-                    Een grote rol voor semantische HTML, iets wat pagebuilders
-                    of templates vaak niet kunnen leveren
-                </CheckListItem>
-                <CheckListItem>
-                    Voor het juridische deel van de website hebben we een
-                    multisite opgezet, met als positieve consequentie dat de
-                    styling van beide sites zonder dubbel werk aangepast kan
-                    worden
-                </CheckListItem>
-            </Checklist>
-        </TextAndImage>
+            <TextAndImage img={screens} alt="functies" padded fluid>
+                <Checklist>
+                    <CheckListItem>
+                        Het platform met verschillende contentblokken
+                        ontwikkelen, die gebruikt worden voor het opbouwen van
+                        de pagina’s
+                    </CheckListItem>
+                    <CheckListItem>
+                        Door de contentblokken kan de content makkelijk beheerd
+                        worden, zonder problemen voor de layout
+                    </CheckListItem>
+                    <CheckListItem>
+                        De inhoud van de blokken wordt ingeladen in een maatwerk
+                        Wordpress thema, zodat alle elementen goed toegankelijk
+                        zijn, zelfs voor mensen met een screenreader of
+                        gebruikers die geen muis kunnen bedienen
+                    </CheckListItem>
+                    <CheckListItem>
+                        Een grote rol voor semantische HTML, iets wat
+                        pagebuilders of templates vaak niet kunnen leveren
+                    </CheckListItem>
+                    <CheckListItem>
+                        Voor het juridische deel van de website hebben we een
+                        multisite opgezet, met als positieve consequentie dat de
+                        styling van beide sites zonder dubbel werk aangepast kan
+                        worden
+                    </CheckListItem>
+                </Checklist>
+            </TextAndImage>
         </Section>
         <Section>
             <TextAndImage padded img={websiteImg1} alt="resultaten">
                 <p className="subtitle">Realize</p>
                 <h2>Oplossing en Resultaten</h2>
-                Om Breda Actief zo goed mogelijk te helpen bij het neerzetten van
-                een succesvolle website, hebben we besloten het volgende als
+                Om Breda Actief zo goed mogelijk te helpen bij het neerzetten
+                van een succesvolle website, hebben we besloten het volgende als
                 oplossing te bieden, om bij te dragen aan de online groei en de
                 prachtige gestelde doelen. Het resultaat van dit project is te
-                bekijken op breda-actief.nl. In overleg met Stichting Breda Actief
-                is de broncode vrijgegeven onder GPL-3.0 licentie,
-                <a href="https://git.bytecode.nl/breda-actief">&nbsp;hier&nbsp;</a>
+                bekijken op breda-actief.nl. In overleg met Stichting Breda
+                Actief is de broncode vrijgegeven onder GPL-3.0 licentie,
+                <a href="https://git.bytecode.nl/breda-actief">
+                    &nbsp;hier&nbsp;
+                </a>
                 te bekijken.
             </TextAndImage>
         </Section>
-
-
     </Layout>
 );
 
