@@ -20,7 +20,7 @@ const Over = () => (
             img={require('../images/img/content/teamv2.png')}
             subtitle="Over ons"
             title="Partner in jouw ambities"
-            text="Bytecode is collectief van ontwikkelaars, ontwerpers, researchers en marketeers die zoeken naar nieuwe manieren en inzichten om de digitale wereld naar jouw hand te zetten. Zo kunnen binnen jouw onderneming randzaken en repetitieve taken weggelaten worden en geven wij jou de vrijheid dingen te doen die echt een verschil maken. "
+            text="Bytecode is een collectief van ontwikkelaars, ontwerpers, researchers en marketeers die zoeken naar nieuwe manieren en inzichten om de digitale wereld naar jouw hand te zetten. Zo kunnen binnen jouw onderneming randzaken en repetitieve taken geautomatiseerd worden en geven wij jou de vrijheid dingen te doen die echt een verschil maken."
             width={80}
             align="flex-end"
             hero
@@ -67,20 +67,22 @@ const Over = () => (
             <Row>
                 {/* TODO: Generate from array, maybe later change via dashb. */}
                 <TeamMember
+                    name="Richard van 't Hof"
+                    title="=Junior art-director en front-end developer"
+                    img={require('../images/img/team/richard.jpg')}
+                    email="mailto:richard@bytecode.nl"
+                    link="https://www.therichard.space"
+                    linkedin="https://www.linkedin.com/in/richard-van-t-hof"
+                    behance="https://www.behance.net/therichartspace"
+                    github="https://www.github.com/RichART-Official"
+                />
+                <TeamMember
                     name="Thomas Bodlaender"
                     title="Sales- &amp; accountmanager"
                     img={require('../images/img/team/thomas.jpg')}
                     email="mailto:thomas@bytecode.nl"
                     instagram="https://www.instagram.com/thomasbodje"
                     linkedin="https://www.linkedin.com/in/thomasbodlaender"
-                />
-
-                <TeamMember
-                    name="Robin van Zeelst"
-                    title="Online Marketeer"
-                    img={require('../images/img/team/robin.jpg')}
-                    email="mailto:robin@bytecode.nl"
-                    linkedin="https://www.linkedin.com/in/robin-van-zeelst/"
                 />
                 <TeamMember
                     name="Julian van Dijk"
@@ -98,6 +100,19 @@ const Over = () => (
                     linkedin="https://www.linkedin.com/in/nickbroekarts"
                 />
                 <TeamMember
+                    name="Robin van Zeelst"
+                    title="Online Marketeer"
+                    img={require('../images/img/team/robin.jpg')}
+                    email="mailto:robin@bytecode.nl"
+                    linkedin="https://www.linkedin.com/in/robin-van-zeelst/"
+                />
+                <TeamMember
+                    name="Christiaan Färber"
+                    title="UI/UX Designer &amp; front-end developer"
+                    img={require('../images/img/team/chirs.jpg')}
+                    email="mailto:chris@bytecode.nl"
+                />
+                <TeamMember
                     name="Suzanne De Vries"
                     title="Marketing &amp; Communicatie"
                     img={require('../images/img/team/suzanne.jpg')}
@@ -105,32 +120,16 @@ const Over = () => (
                     linkedin="https://www.linkedin.com/in/suzanne-de-vries-11b088149/"
                 />
                 <TeamMember
-                    name="Tiko"
-                    title="Marketing &amp; Communicatie"
+                    name="Nahwin Chedoe"
+                    title="Junior UI &amp; UX Designer"
+                    img={require('../images/img/team/nawin.jpg')}
+                    email="mailto:nahwin@bytecode.nl"
+                />
+                <TeamMember
+                    name="T'iko Alarcón Rivero"
+                    title="Full-stack developer web &amp; mobiel"
                     img={require('../images/img/team/tiko.jpg')}
                     email="mailto:tiko@bytecode.nl"
-                />
-                <TeamMember
-                    name="Nawin"
-                    title="Marketing &amp; Communicatie"
-                    img={require('../images/img/team/nawin.jpg')}
-                    email="mailto:nawin@bytecode.nl"
-                />
-                <TeamMember
-                    name="Chis"
-                    title="Marketing &amp; Communicatie"
-                    img={require('../images/img/team/chirs.jpg')}
-                    email="mailto:chris@bytecode.nl"
-                />
-                <TeamMember
-                    name="Richard van 't Hof"
-                    title="Ontwerper &amp; front-end developer"
-                    img={require('../images/img/team/richard.jpg')}
-                    email="mailto:richard@bytecode.nl"
-                    link="https://www.therichard.space"
-                    linkedin="https://www.linkedin.com/in/richard-van-t-hof"
-                    behance="https://www.behance.net/therichartspace"
-                    github="https://www.github.com/RichART-Official"
                 />
             </Row>
         </Container>
