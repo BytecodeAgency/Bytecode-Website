@@ -60,7 +60,7 @@ const HeaderInformation = styled.div`
 `;
 
 const StyledSubtitle = styled.p`
-    color: ${colors.lightgray2};
+    color: ${colors.lightgray} !important;
 `;
 
 const ArrowDown = styled.img`
