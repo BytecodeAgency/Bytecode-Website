@@ -1,17 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
-import styled from 'styled-components';
-import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/CaseLayout';
-import { Container, Row, Col } from '../../lib/Grid';
 import {
     TextAndImage,
     Gallery,
     Introduction,
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
-import { Big } from '../../components/Typography';
-import Header from '../../containers/Header';
 import Credits from '../../containers/Credits';
 import Deliverables from '../../containers/Deliverables';
 
@@ -22,7 +17,6 @@ const graph = require('../../images/img/cases/dawny/graphs.png');
 const tools = require('../../images/img/cases/dawny/tools.png');
 const smilingGrandparents = require('../../images/img/cases/dawny/smiling_grandparents.jpg');
 const usecase2 = require('../../images/img/cases/dawny/usecase2.jpg');
-const devices = require('../../images/img/cases/dawny/devices.svg');
 const logo = require('../../images/img/cases/dawny/logo.svg');
 
 const pageSettings = {

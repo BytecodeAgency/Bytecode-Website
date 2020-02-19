@@ -7,7 +7,6 @@ import Helmet from 'react-helmet';
 import SEO from './SEO';
 import Navbar from '../containers/Navbar/Navbar';
 import Footer from './Footer';
-import theme from '../styles/theme';
 import { GlobalStyles, TypographyClassStyling } from '../styles/global-css';
 import HeadScripts from '../lib/GetHeadScripts';
 

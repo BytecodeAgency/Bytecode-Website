@@ -1,15 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Link } from 'gatsby';
-import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
+import { Checklist, CheckListItem } from '../../components/Case';
 import Layout from '../../layouts/CaseLayout';
-import { Container, Row, Col } from '../../lib/Grid';
 import {
     TextAndImage,
     Introduction,
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
-import Deliverables from '../../containers/Deliverables';
 
 const websiteImg0 = require('../../images/img/cases/breda-actief/featured.svg');
 const challange = require('../../images/img/cases/breda-actief/challange.svg');

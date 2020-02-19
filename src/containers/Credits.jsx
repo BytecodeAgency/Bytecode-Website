@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 
-const { colors, mediaQueryMin, containerWidth } = theme;
+const { colors } = theme;
 const { secondary } = colors;
 
 const CreditsBase = styled.section`
@@ -21,9 +22,8 @@ const CreditsBase = styled.section`
 const Meta = ({ title, content }) => {
     const addContent = entries => {
         if (typeof entries !== 'string') {
-            console.log(entries);
-            const elements = entries.map((entry, i) => {
-                return <p key={i}>{entry}</p>;
+            const elements = entries.map(entry => {
+                return <p key={entry.id}>{entry}</p>;
             });
             return elements;
         }
@@ -37,30 +37,38 @@ const Meta = ({ title, content }) => {
     );
 };
 
-const Credits = ({
-    client,
-    year,
-    medium,
-    contributors,
-    recourses,
-    copyright,
-}) => {
+const Credits = ({ client, year, medium, contributors, links, copyright }) => {
     return (
         <CreditsBase>
-            <Meta title="Client" content="Reinier de Graaf ziekehuis" />
-            <Meta title="Jaar" content="2019" />
-            <Meta
-                title="Disciplines"
-                content={['graphic design', 'strategy', 'seo']}
-            />
-            <Meta title="Strategy" content={['richard', 'jos']} />
+            <Meta title="Client" content={client} />
+            <Meta title="Jaar" content={year} />
+            <Meta title="Disciplines" content={medium} />
+            <Meta title="Contributors" content={contributors} />
+            <Meta title="Recources" content={links} />
             <p className="caption">
-                © 2020 Bytecode Digital Agency B.V. All Rights Reserved on text
-                and image content. Information is this section might not be
-                true.
+                {copyright ||
+                    '© 2020 Bytecode Digital Agency B.V. All Rights Reserved on text and image content. Information is this section might not be true.'}
             </p>
         </CreditsBase>
     );
 };
 
 export default Credits;
+
+Meta.propTypes = {
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string,
+};
+
+Meta.defaultProps = {
+    content: 'No data availible',
+};
+
+Credits.propTypes = {
+    client: PropTypes.string.isRequired,
+    year: PropTypes.string.isRequired,
+    medium: PropTypes.arrayOf(PropTypes.string).isRequired,
+    contributors: PropTypes.arrayOf(PropTypes.string).isRequired,
+    links: PropTypes.objectOf(PropTypes.string).isRequired,
+    copyright: PropTypes.string.isRequired,
+};

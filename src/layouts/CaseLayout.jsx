@@ -63,5 +63,7 @@ Layout.propTypes = {
         title: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         keywords: PropTypes.string.isRequired,
+        client: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
     }).isRequired,
 };

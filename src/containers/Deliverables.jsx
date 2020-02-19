@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 
 const plusBullet = require('../images/icons/ui/plus-bullet.svg');
 
-const { colors, mediaQueryMin, containerWidth } = theme;
+const { colors, mediaQueryMin } = theme;
 const { secondary } = colors;
 
 const DeliverablesBase = styled.section`
@@ -129,3 +130,10 @@ const Deliverables = ({ img, client, clientBio, clientLogo }) => {
 };
 
 export default Deliverables;
+
+Deliverables.propTypes = {
+    img: PropTypes.string.isRequired,
+    client: PropTypes.string.isRequired,
+    clientBio: PropTypes.string.isRequired,
+    clientLogo: PropTypes.string.isRequired,
+};

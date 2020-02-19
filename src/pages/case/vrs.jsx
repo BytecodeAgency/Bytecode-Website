@@ -1,18 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
-import styled from 'styled-components';
-import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
 import Layout from '../../layouts/CaseLayout';
-import { Container, Row, Col } from '../../lib/Grid';
 import {
     TextAndImage,
-    Gallery,
     Introduction,
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
-import { Big } from '../../components/Typography';
-import Header from '../../containers/Header';
-import Credits from '../../containers/Credits';
 import Deliverables from '../../containers/Deliverables';
 
 const cover = require('../../images/img/cases/vrs/cover.svg');

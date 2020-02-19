@@ -96,11 +96,26 @@ TextAndImage.propTypes = {
     alt: PropTypes.string.isRequired,
     reverse: PropTypes.bool,
     fluid: PropTypes.bool,
+    padded: PropTypes.bool,
 };
 
 TextAndImage.defaultProps = {
     reverse: false,
     fluid: false,
+    padded: false,
+};
+
+Gallery.propTypes = {
+    width: PropTypes.number,
+    children: PropTypes.node.isRequired,
+};
+
+Gallery.defaultProps = {
+    width: 100,
+};
+
+Introduction.propTypes = {
+    children: PropTypes.node.isRequired,
 };
 
 export const ProfilePicture = styled.div`

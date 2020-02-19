@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 
 const { colors, mediaQueryMin, containerWidth } = theme;
-const { secondary } = colors;
 
 const arrowDown = require('../images/icons/ui/carret-down.svg');
 
@@ -27,7 +27,6 @@ const HeaderBase = styled.header`
     }
     @media (${mediaQueryMin.md}) {
         padding: 2em ${containerWidth.md};
-
     }
     @media (${mediaQueryMin.lg}) {
         padding: 2em ${containerWidth.lg};
@@ -54,7 +53,6 @@ const HeaderInformation = styled.div`
         }
     }
     @media (${mediaQueryMin.md}) {
-
         & > * {
             width: 40%;
         }
@@ -94,3 +92,11 @@ const Header = ({ title, subtitle, tagline, img, children }) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    tagline: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+};
