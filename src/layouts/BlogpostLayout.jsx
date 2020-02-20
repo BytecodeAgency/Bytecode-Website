@@ -28,7 +28,7 @@ const BlogSingle = ({ content }) => (
         <Article>
             <ArticleHeader>
                 <SubtitleContainer>
-                    <Subtitle>{content.catergory_name}</Subtitle>
+                    <Subtitle>{content.category_name}</Subtitle>
                     <ReadingTime>
                         &nbsp;&nbsp;&#47;&#47; {content.reading_time} min. read
                     </ReadingTime>
@@ -87,7 +87,7 @@ BlogSingle.propTypes = {
             keywords: PropTypes.string.isRequired,
         }).isRequired,
         article_image_url: PropTypes.string.isRequired,
-        catergory_name: PropTypes.string.isRequired,
+        category_name: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         author_name: PropTypes.string.isRequired,
         author_role: PropTypes.string.isRequired,
