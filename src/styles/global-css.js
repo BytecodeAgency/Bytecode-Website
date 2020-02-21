@@ -92,6 +92,21 @@ const GlobalStyles = createGlobalStyle`
         list-style: decimal;
         padding-left: 1rem;
     };
+    blockquote {
+        margin-left: 10%;
+        font-style: italic;
+        position: relative;
+        ::before {
+            content: '‘‘';
+            color: ${theme.colors.primary};
+            font-size: 60px;
+            position: absolute;
+            top: 10px;
+            left: -30px;
+            letter-spacing: -4px;
+            font-family: "Times New Roman", Times, serif;
+        }
+    }
 `;
 
 export { GlobalStyles };
