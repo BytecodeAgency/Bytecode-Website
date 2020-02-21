@@ -80,7 +80,7 @@ export const pageQuery = graphql`
                         author_name
                         author_role
                         author_image_url
-                        catergory_name
+                        category_name
                         category_slug
                         reading_time
                         article_intro

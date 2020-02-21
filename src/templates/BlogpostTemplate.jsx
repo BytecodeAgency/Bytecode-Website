@@ -14,7 +14,7 @@ const BlogpostTemplate = ({ data }) => {
             keywords: mdx.frontmatter.keywords,
         },
         article_image_url: mdx.frontmatter.article_image_url,
-        catergory_name: mdx.frontmatter.catergory_name,
+        category_name: mdx.frontmatter.category_name,
         title: mdx.frontmatter.title,
         author_name: mdx.frontmatter.author_name,
         author_role: mdx.frontmatter.author_role,
@@ -43,7 +43,7 @@ export const query = graphql`
                 author_name
                 author_role
                 author_image_url
-                catergory_name
+                category_name
                 category_slug
                 reading_time
                 article_intro
