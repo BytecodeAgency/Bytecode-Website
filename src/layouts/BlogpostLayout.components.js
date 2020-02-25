@@ -62,6 +62,9 @@ export const ArticleHeader = styled.header`
 export const ArticleImageWrapper = styled.figure`
     width: 125%;
     margin: 0.66em 0;
+    margin-bottom: 1em;
+    height: 50rem;
+    overflow: hidden;
 `;
 
 export const BlogContent = styled.div`
@@ -122,7 +125,11 @@ export const ReadingTime = styled(Small)`
     margin-bottom: 2px;
 `;
 
-export const ArticleImage = styled.img``;
+export const ArticleImage = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+`;
 
 export const CallToActionContainer = styled.div`
     margin: 2rem 4rem;

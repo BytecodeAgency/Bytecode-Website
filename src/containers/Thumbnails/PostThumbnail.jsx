@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Col } from '../../lib/Grid';
 import {
     Arrow,
     BigThumbnailImg,
@@ -10,43 +9,41 @@ import {
     ThumbnailImg,
 } from './PostThumbnail.components';
 
+const cutOffText = (string, maxLength) => {
+    if (string.length > maxLength) {
+        const subString = `${string.substring(0,maxLength)}...`;
+        return subString;
+    }
+    return string;
+}
+
 const PostThumbnail = ({ big, title, slug, category, postImageUrl }) => {
     if (big) {
         return (
-            <Col>
-                <ThumbnailBase to={slug}>
-                    <BigThumbnailImg
+            <ThumbnailBase to={slug}>
+                <BigThumbnailImg
                         className="thumbnail-img"
                         img={postImageUrl}
-                    />
-                    <ThumbnailContent>
-                        <Subtitle>{category}</Subtitle>
-
-                        <h6>{title}</h6>
-                    </ThumbnailContent>
-                </ThumbnailBase>
-            </Col>
+                />
+                <ThumbnailContent>
+                    <p className="subtitle">{category}</p>
+                    <h6>{title}</h6>
+                </ThumbnailContent>
+            </ThumbnailBase>
         );
     }
     return (
-        <Col lg={4} md={6}>
             <ThumbnailBase to={slug}>
                 <ThumbnailImg className="thumbnail-img" img={postImageUrl} />
                 <ThumbnailContent>
-                    <Subtitle>{category}</Subtitle>
-                    <h6>{title}</h6>
-                    <a href={slug}>
-                        <small className="thumbnail-cta">
-                            Lees meer
-                            <Arrow
-                                src={require('../../images/icons/ui/arrow.svg')}
-                                alt=">"
-                            />
-                        </small>
+                    <p className="subtitle">{category}</p>
+                    <h5>{cutOffText(title, 65)}</h5>
+                    <a className="thumbnail-cta caption" href={slug}>
+                        Lees meer
                     </a>
                 </ThumbnailContent>
             </ThumbnailBase>
-        </Col>
+
     );
 };
 

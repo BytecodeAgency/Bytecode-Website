@@ -6,7 +6,7 @@ const { mediaQueryMin, containerWidth } = theme;
 const Container = styled.section`
     padding: 1em ${containerWidth.xs};
     display: flex;
-    align-items: center;
+    flex-direction: column;
     @media (${mediaQueryMin.sm}) {
         padding: 3em ${containerWidth.sm};
     }

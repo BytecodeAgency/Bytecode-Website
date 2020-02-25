@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../layouts/MainLayout';
-import { Container, Row } from '../lib/Grid';
+import Container from '../containers/Container';
 
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 
@@ -19,24 +19,21 @@ const dawnyImage = require('../images/img/cases/dawny/dashboard.png');
 const sungevityImg = require('../images/img/cases/sungevity/woco.png');
 const vrsImg = require('../images/img/cases/vrs/cover.svg');
 
-const CasesContainer = styled(Container)`
-    margin-top: 15vh !important;
-`;
+
 const Cases = () => (
-    <Layout pageSettings={pageSettings}>
-        <CasesContainer>
-            <Row>
-                <PostThumbnail
-                    big
-                    title="Modern functiewaarderingsplatform"
-                    category="STYR"
-                    slug="/case/styr"
-                    postImageUrl={styrImg}
-                />
-            </Row>
-        </CasesContainer>
+    <Layout padded pageSettings={pageSettings}>
         <Container>
-            <Row>
+            <PostThumbnail
+                big
+                title="Modern functiewaarderingsplatform"
+                category="STYR"
+                slug="/case/styr"
+                postImageUrl={styrImg}
+            />
+        </Container>
+
+
+        <Container>
                 <PostThumbnail
                     title="Brengt Breda dichter bij elkaar"
                     category="Mooiwerk Breda"
@@ -55,10 +52,8 @@ const Cases = () => (
                     slug="/case/dawny"
                     postImageUrl={dawnyImage}
                 />
-            </Row>
         </Container>
         <Container>
-            <Row>
                 <PostThumbnail
                     title="Duurzaam met zonnepanelen"
                     category="Sungevity"
@@ -77,7 +72,6 @@ const Cases = () => (
                     slug="/case/vrs"
                     postImageUrl={vrsImg}
                 />
-            </Row>
         </Container>
     </Layout>
 );

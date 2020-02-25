@@ -26,11 +26,14 @@ export const Subtitle = styled(SubtitleBase)`
 `;
 
 export const ThumbnailBase = styled(Link)`
-    background-color: ${theme.colors.secondary};
     padding-bottom: 2em;
     cursor: pointer;
     transition: all 0.4s ease;
     min-width: 10em;
+    width: 100%;
+    & > * {
+        box-shadow: 0 0 0.1em 0 rgba(0,0,0,0.05);
+    }
     .thumbnail-cta {
         transition: 0.3s ease all;
         transform: translate(0em, -1em);
@@ -54,23 +57,8 @@ export const ThumbnailBase = styled(Link)`
 
 export const ThumbnailContent = styled.div`
     padding: 1.33em;
-    big {
-        p {
-            margin-bottom: 1em;
-        }
-    }
-    small {
-        @media (${mediaQueryMin.md}) {
-            display: block;
-            margin: 1.66em 0em;
-        }
-
-        img {
-            width: 2em;
-            height: 0.5em;
-            margin-left: 0.66em;
-        }
-    }
+    background-color: ${theme.colors.secondary};
+    height: 13rem;
 `;
 
 export const BigThumbnailImg = styled.div`
@@ -82,18 +70,33 @@ export const BigThumbnailImg = styled.div`
     transition: all 0.3s ease;
 
 `;
-
-export const ThumbnailImg = styled.div`
-    background: url('${props => props.img}'), ${secondary};
+const ThumbnailImgBase = styled.figure`
+    background: ${secondary};
     background-position: center center;
     background-size: cover;
     transition: all 0.5s ease;
-    height: 50vh;
-    max-height: 40em;
+    height: 25rem;
+    overflow: hidden;
+    object-fit: cover;
     @media (${mediaQueryMin.md}) {
-        height: ${props => (props.big ? '50vh' : '15em')};
+        height: ${props => (props.big ? '50vh' : '20rem')};
     }
 `;
+
+const ThumbnailImgContent = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+    }
+`;
+export const ThumbnailImg = ({img, alt}) => (
+    <ThumbnailImgBase>
+        <ThumbnailImgContent src={img} alt={alt || 'featured image'} />
+    </ThumbnailImgBase>
+);
 
 export const Arrow = styled.img`
     margin-left: 0.01em;

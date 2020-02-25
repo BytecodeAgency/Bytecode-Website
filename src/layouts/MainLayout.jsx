@@ -13,6 +13,7 @@ import HeadScripts from '../lib/GetHeadScripts';
 const Main = styled.main`
     max-width: 100vw !important;
     overflow-x: hidden;
+    padding-top: ${props => props.padded ? '10vh' : 0};
 `;
 
 const HeadElements = () => (
@@ -26,21 +27,22 @@ const HeadElements = () => (
     </Helmet>
 );
 
-const Layout = ({ children, pageSettings }) => {
+
+const Layout = ({ children, pageSettings, padded }) => {
     const { title, description, keywords } = pageSettings;
     return (
-        <div>
+        <>
             <HeadElements />
             <HeadScripts />
             <GlobalStyles />
             <SEO title={title} description={description} keywords={keywords} />
             <Navbar />
-            <Main className="main">
+            <Main padded={padded} className="main">
                 <TypographyClassStyling />
                 {children}
             </Main>
             <Footer />
-        </div>
+        </>
     );
 };
 

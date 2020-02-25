@@ -24,7 +24,7 @@ import {
 } from './BlogpostLayout.components';
 
 const BlogSingle = ({ content }) => (
-    <Layout pageSettings={content.pageSettings}>
+    <Layout padded pageSettings={content.pageSettings}>
         <Article>
             <ArticleHeader>
                 <SubtitleContainer>

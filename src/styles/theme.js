@@ -91,7 +91,8 @@ const bytecode = {
         h5: {
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
-            weight: GlobalHeadingSettings.weight,
+            height: '1.33em',
+            weight: regular,
             color: GlobalHeadingSettings.color,
             marginBottom: GlobalHeadingSettings.marginBottom,
         },

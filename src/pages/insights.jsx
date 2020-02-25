@@ -4,8 +4,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/MainLayout';
-import { Container, Row, Col } from '../lib/Grid';
+import Container from '../containers/Container';
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
+import Gallery from '../containers/Gallery';
 
 const pageSettings = {
     title: 'Bytecode Insights - Bytecode Digital Agency B.V.',
@@ -13,10 +14,6 @@ const pageSettings = {
         'Bytecode insights, vergroot je kennis en leer meer over hoe je digitale assets kan inzetten voor jouw business! Samen halen we alles uit jouw digitale zelf!',
     keywords: 'bytecode insights',
 };
-
-const Posts = styled(Container)`
-    padding-top: 15vh;
-`;
 
 const Blogpost = ({ data: post }, key) => (
     <PostThumbnail
@@ -37,24 +34,22 @@ const Blogpost = ({ data: post }, key) => (
 const blogArchive = ({ data }) => {
     const { edges: posts } = data.allMdx;
     return (
-        <Layout pageSettings={pageSettings}>
-            <Posts>
+        <Layout padded pageSettings={pageSettings}>
+            <Container>
                 <h1>Insights</h1>
-                <Row gutterWidth={30}>
+                <Gallery xs={50} md={33}>
                     {posts.map(({ node: post }, _, key) => (
                         <Blogpost data={post} key={key} />
                     ))}
-                </Row>
-            </Posts>
-            <hr />
+                </Gallery>
+
+
+            </Container>
+            {/* <hr />
             <Container>
-                <Row>
-                    <Col md={12}>
                         <h3>Een frisse blik op het internet</h3>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={6}>
+
+
                         <p>
                             Hier zie je artikelen die met passie zijn geschreven
                             door Bytecode, een jonge en moderne web agency. Wij
@@ -64,9 +59,8 @@ const blogArchive = ({ data }) => {
                             schrijven, maar ook door deze inzichten in onze
                             werkzaamheden te verwerken.
                         </p>
-                    </Col>
-                </Row>
-            </Container>
+
+            </Container> */}
         </Layout>
     );
 };
