@@ -64,7 +64,7 @@ export const TeamMemberPhoto = styled.figure`
     transition: 0.5s;
     position: relative;
     @media (${mediaQueryMin.lg}) {
-        height: 40em;
+        height: 30em;
     }
 
     &::before {

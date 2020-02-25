@@ -13,7 +13,7 @@ const HeaderBase = styled.header`
     background-size: cover !important;
     background-position: center !important;
     height: 100vh;
-    padding: 5vh ${containerWidth.xs};
+    padding: 1em ${containerWidth.xs};
     display: flex;
     align-items: flex-end;
     @media (${mediaQueryMin.sm}) {
@@ -29,10 +29,10 @@ const HeaderBase = styled.header`
         padding: 2em ${containerWidth.md};
     }
     @media (${mediaQueryMin.lg}) {
-        padding: 2em ${containerWidth.lg};
+        padding: 1em ${containerWidth.lg};
     }
     @media (${mediaQueryMin.xxl}) {
-        padding: 5em ${containerWidth.xl};
+        padding: 1em ${containerWidth.xl};
     }
 `;
 
