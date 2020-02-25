@@ -31,9 +31,9 @@ export const NavbarContainer = styled.nav`
     }
     @media (min-width: ${theme.breakpointMobileMenu}) {
         background: ${props =>
-            props.background
-                ? `linear-gradient(to bottom, ${colors.secondary}, transparent)`
-                : 'transparent'};
+            props.noBackground
+                ? 'transparent'
+                : `linear-gradient(to bottom, ${colors.mediumgray}, transparent)`};
     }
 
     @media (${mediaQueryMin.md}) {

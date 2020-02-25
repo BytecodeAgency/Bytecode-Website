@@ -24,7 +24,7 @@ const DeliverablesContent = styled.div`
     grid-column: 2/9;
     z-index: 1;
     background: ${secondary};
-    padding: em 1em;
+    padding: 3em 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,12 +44,17 @@ const ClientInfo = styled.div`
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    align-items: last baseline;
+    align-items: flex-start;
+    padding: 5vh 0;
     & > * {
         padding: 0 1em;
     }
     p {
         margin: 0;
+    }
+    @media (${mediaQueryMin.sm}) {
+        align-items: last baseline;
+        padding: 0;
     }
     @media (${mediaQueryMin.sm}) {
         max-height: 10em;

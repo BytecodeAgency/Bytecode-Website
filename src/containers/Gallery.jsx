@@ -22,6 +22,7 @@ const Gallery = styled.section`
         }
     }
     @media (${mediaQueryMin.sm}) {
+        padding: ${props => props.padded ? '20vh' : 0} 0;
         & > * {
             padding: ${props => props.padded? '1.33em' : '0.5em'};
             width: ${props => props.sm + '%'|| 'inherit'};

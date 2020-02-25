@@ -155,7 +155,7 @@ const Case = () => (
             </TextAndImage>
         </Section>
 
-        <Credits client="Dawny" />
+        {/* <Credits client="Dawny" /> */}
     </Layout>
 );
 
