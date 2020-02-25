@@ -15,7 +15,7 @@ export const TeamMemberWrapper = styled.div`
     h5,
     h6,
     p {
-        margin: 1em 1em;
+        margin: 0.58em;
     }
     transition: 0.5s;
     * {
@@ -45,7 +45,7 @@ export const TeamMemberWrapper = styled.div`
         }
         & > div {
             opacity: 1;
-            transform: translate(0, -4em);
+            transform: translate(0, -3em);
         }
         & > p {
             opacity: 0;
@@ -55,16 +55,23 @@ export const TeamMemberWrapper = styled.div`
 `;
 
 export const TeamMemberPhoto = styled.figure`
-    @media (${mediaQueryMin.xs}) {
-        height: 30rem;
-    }
-    margin: 1rem;
+
+
     overflow: hidden;
     height: 25em;
     transition: 0.5s;
     position: relative;
+    @media (${mediaQueryMin.xs}) {
+        height: 40rem;
+    }
+    @media (${mediaQueryMin.md}) {
+        height: 45rem;
+    }
     @media (${mediaQueryMin.lg}) {
-        height: 30em;
+        height: 55rem;
+    }
+    @media (${mediaQueryMin.xxl}) {
+        height: 65rem;
     }
 
     &::before {
@@ -102,6 +109,6 @@ export const TeamMemberName = styled.h4`
     font-size: 0.9em;
 `;
 
-export const TeamMemberContainer = styled(Col)`
+export const TeamMemberContainer = styled.div`
     text-align: center;
 `;

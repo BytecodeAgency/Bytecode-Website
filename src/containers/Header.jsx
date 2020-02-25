@@ -14,7 +14,7 @@ const HeaderBase = styled.header`
     background-size: cover !important;
     background-position: center !important;
     height: 100vh;
-    padding: 1em ${containerWidth.xs};
+    padding: 1em;
     display: flex;
     align-items: flex-end;
     @media (${mediaQueryMin.sm}) {
@@ -62,6 +62,7 @@ const HeaderInformation = styled.div`
 
 const StyledSubtitle = styled.p`
     color: ${colors.lightgray} !important;
+    text-shadow: 0 0 1em #000;
 `;
 
 const ArrowDown = styled.img`
@@ -72,7 +73,9 @@ const ArrowDown = styled.img`
     opacity: 0.5;
 `;
 
-
+const Text = styled.p`
+    text-shadow: 0 0 1em #000;
+`;
 
 const Header = ({ title, subtitle, text, href, button, tagline, img, children, useGatsbyLink }) => {
     return (
@@ -85,7 +88,7 @@ const Header = ({ title, subtitle, text, href, button, tagline, img, children, u
                     <h2>{title}</h2>
                 </div>
                 <div>
-                    <p>{tagline || text}</p>
+                    <Text>{tagline || text}</Text>
                     {children}
                     {href && <ArrowButton useGatsbyLink={useGatsbyLink} href={href}>{button || 'Lees meer'}</ArrowButton>}
                 </div>

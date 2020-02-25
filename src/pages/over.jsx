@@ -3,8 +3,13 @@ import Layout from '../layouts/MainLayout';
 import TextBlock from '../containers/TextBlock/TextBlock';
 import Header from '../containers/Header';
 import TeamMember from '../containers/TeamMember/TeamMember';
-import { Container, Row, Col } from '../lib/Grid';
+import Container from '../containers/Container';
 import ContactForm from '../containers/ContactForm/ContactForm';
+
+import theme from '../styles/theme.js';
+const { mediaQueryMin, containerWidth } = theme;
+
+import styled from 'styled-components';
 
 const pageSettings = {
     title: `Over ons - Bytecode Digital Agency |
@@ -13,6 +18,45 @@ const pageSettings = {
      en hoe willen wij die bereiken? Kom meer te weten of het Bytecode-team!`,
     keywords: 'over ons',
 };
+
+const TeamMembers = styled.section`
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    & > * {
+        width: 100%;
+        flex-basis: 100%;
+        padding: 0.5em;
+    }
+    @media (${mediaQueryMin.xs}) {
+        flex-direction: row;
+        align-items: center;
+        & > * {
+            width: 50%;
+            flex-basis: 50%;
+            padding: 0.5em;
+            &:first-child {
+                padding-right: 3em;
+            }
+        }
+    }
+    @media (${mediaQueryMin.md}) {
+        & > * {
+            width: 33%;
+            flex-basis: 33%;
+            padding: 0.5em;
+            &:first-child {
+                padding-right: 3em;
+            }
+        }
+    }
+    /* @media (${mediaQueryMin.lg}) {
+        padding: 3em ${containerWidth.lg};
+    }
+    @media (${mediaQueryMin.xxl}) {
+        padding: 7em ${containerWidth.xl};
+    } */
+`;
 
 const Over = () => (
     <Layout pageSettings={pageSettings}>
@@ -27,14 +71,13 @@ const Over = () => (
             shadow
         />
         <Container>
-            <Row gutterWidth={100} justify="center" align="center">
-                <Col md={12} lg={5} xl={4}>
-                    <TextBlock
-                        subtitle="Het team"
+        <TeamMembers>
+            <TextBlock
+                subtitle="Het team"
                         alt="Het team"
                         title="Unieke perspectieven door unieke personen"
                         headingType="h2"
-                    >
+            >
                         Ons hechte team werkt keihard om jouw doelen te
                         bereiken! Door onze multidisciplinaire kennis versterken
                         we elkaar en delen we onze ervaring. Daarnaast krijgt
@@ -43,7 +86,7 @@ const Over = () => (
                         waardoor we niet alleen gebruik maken van de nieuwste
                         technieken, maar er ook aan bijdragen.
                     </TextBlock>
-                </Col>
+
                 <TeamMember
                     name="Jeroen van Steijn"
                     title="Co-founder &amp; Operations manager"
@@ -63,8 +106,6 @@ const Over = () => (
                     github="https://github.com/lucianonooijen"
                     linkedin="https://www.linkedin.com/in/lucianonooijen"
                 />
-            </Row>
-            <Row>
                 {/* TODO: Generate from array, maybe later change via dashb. */}
                 <TeamMember
                     name="Richard van 't Hof"
@@ -131,8 +172,9 @@ const Over = () => (
                     img={require('../images/img/team/tiko.jpg')}
                     email="mailto:tiko@bytecode.nl"
                 />
-            </Row>
-        </Container>
+                </TeamMembers>
+
+    </Container>
         <Container>
             <ContactForm />
         </Container>

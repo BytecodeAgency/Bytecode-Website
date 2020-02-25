@@ -134,7 +134,7 @@ const bytecode = {
             color: lightgray,
         },
         caption: {
-            size: '0.85rem',
+            size: '0.9rem',
             height: '1.48em',
             spacing: '0em',
             font: menu,
@@ -175,7 +175,6 @@ const bytecode = {
         },
     },
     breakpointMobileMenu: '68rem',
-    containerWidths: [],
     breakpoint: {
         xs: '48em',
         sm: '64em',
