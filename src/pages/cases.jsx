@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Layout from '../layouts/MainLayout';
 import Container from '../containers/Container';
 import Gallery from '../containers/Gallery';
@@ -20,7 +19,6 @@ const dawnyImage = require('../images/img/cases/dawny/dashboard.png');
 const sungevityImg = require('../images/img/cases/sungevity/woco.png');
 const vrsImg = require('../images/img/cases/vrs/cover.svg');
 
-
 const Cases = () => (
     <Layout padded pageSettings={pageSettings}>
         <Container>
@@ -32,7 +30,6 @@ const Cases = () => (
                 postImageUrl={styrImg}
             />
         </Container>
-
 
         <Container>
             <Gallery padded sm={33}>
@@ -56,9 +53,8 @@ const Cases = () => (
                 />
             </Gallery>
             <Gallery>
-
                 <PostThumbnail
-                big
+                    big
                     title="Breda in beweging!"
                     category="Breda Actief"
                     slug="/case/breda-actief"

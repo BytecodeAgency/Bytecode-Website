@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import Layout from '../layouts/MainLayout';
 import TextBlock from '../containers/TextBlock/TextBlock';
 import Header from '../containers/Header';
@@ -6,10 +7,10 @@ import TeamMember from '../containers/TeamMember/TeamMember';
 import Container from '../containers/Container';
 import ContactForm from '../containers/ContactForm/ContactForm';
 
+// eslint-disable-next-line import/extensions
 import theme from '../styles/theme.js';
-const { mediaQueryMin, containerWidth } = theme;
 
-import styled from 'styled-components';
+const { mediaQueryMin, containerWidth } = theme;
 
 const pageSettings = {
     title: `Over ons - Bytecode Digital Agency |
@@ -71,21 +72,20 @@ const Over = () => (
             shadow
         />
         <Container>
-        <TeamMembers>
-            <TextBlock
-                subtitle="Het team"
-                        alt="Het team"
-                        title="Unieke perspectieven door unieke personen"
-                        headingType="h2"
-            >
-                        Ons hechte team werkt keihard om jouw doelen te
-                        bereiken! Door onze multidisciplinaire kennis versterken
-                        we elkaar en delen we onze ervaring. Daarnaast krijgt
-                        iedereen ruimte tot inspraak in de toekomst van Bytecode
-                        en om bij te dragen aan vrije software projecten,
-                        waardoor we niet alleen gebruik maken van de nieuwste
-                        technieken, maar er ook aan bijdragen.
-                    </TextBlock>
+            <TeamMembers>
+                <TextBlock
+                    subtitle="Het team"
+                    alt="Het team"
+                    title="Unieke perspectieven door unieke personen"
+                    headingType="h2"
+                >
+                    Ons hechte team werkt keihard om jouw doelen te bereiken!
+                    Door onze multidisciplinaire kennis versterken we elkaar en
+                    delen we onze ervaring. Daarnaast krijgt iedereen ruimte tot
+                    inspraak in de toekomst van Bytecode en om bij te dragen aan
+                    vrije software projecten, waardoor we niet alleen gebruik
+                    maken van de nieuwste technieken, maar er ook aan bijdragen.
+                </TextBlock>
 
                 <TeamMember
                     name="Jeroen van Steijn"
@@ -172,9 +172,8 @@ const Over = () => (
                     img={require('../images/img/team/tiko.jpg')}
                     email="mailto:tiko@bytecode.nl"
                 />
-                </TeamMembers>
-
-    </Container>
+            </TeamMembers>
+        </Container>
         <Container>
             <ContactForm />
         </Container>

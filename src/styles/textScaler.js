@@ -45,7 +45,7 @@ const textScaler = css`
             font-size: calc(${base.fontSize}*1.5);
         };
         @media (${mediaQueries.xl}) {
-            font-size: calc(${base.fontSize}*1.5);
+            font-size: calc(${base.fontSize}*1.6);
         };
         @media (${mediaQueries.xl}) and (${mediaQueries.xxl}) {
             font-size: calc(${base.fontSize}*1.6);

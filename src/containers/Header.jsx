@@ -19,11 +19,7 @@ const HeaderBase = styled.header`
     align-items: flex-end;
     @media (${mediaQueryMin.sm}) {
         padding: 3em ${containerWidth.sm};
-        background: linear-gradient(
-                to top,
-                rgba(0, 0, 0, 0.9),
-                transparent 50%
-            ),
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent 50%),
             url(${props => props.backgroundImage});
     }
     @media (${mediaQueryMin.md}) {
@@ -77,7 +73,17 @@ const Text = styled.p`
     text-shadow: 0 0 1em #000;
 `;
 
-const Header = ({ title, subtitle, text, href, button, tagline, img, children, useGatsbyLink }) => {
+const Header = ({
+    title,
+    subtitle,
+    text,
+    href,
+    button,
+    tagline,
+    img,
+    children,
+    useGatsbyLink,
+}) => {
     return (
         <HeaderBase backgroundImage={img}>
             <HeaderInformation>
@@ -90,7 +96,11 @@ const Header = ({ title, subtitle, text, href, button, tagline, img, children, u
                 <div>
                     <Text>{tagline || text}</Text>
                     {children}
-                    {href && <ArrowButton useGatsbyLink={useGatsbyLink} href={href}>{button || 'Lees meer'}</ArrowButton>}
+                    {href && (
+                        <ArrowButton useGatsbyLink={useGatsbyLink} href={href}>
+                            {button || 'Lees meer'}
+                        </ArrowButton>
+                    )}
                 </div>
             </HeaderInformation>
             <ArrowDown src={arrowDown} />
@@ -106,4 +116,15 @@ Header.propTypes = {
     tagline: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
+    text: PropTypes.string,
+    href: PropTypes.string,
+    button: PropTypes.string,
+    useGatsbyLink: PropTypes.bool,
+};
+
+Header.defaultProps = {
+    text: null,
+    href: null,
+    button: null,
+    useGatsbyLink: false,
 };

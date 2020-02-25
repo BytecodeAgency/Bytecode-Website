@@ -6,7 +6,6 @@ import {
     TeamMemberName,
     TeamMemberPhoto,
     TeamMemberWrapper,
-    JobTitle,
 } from './TeamMember.components';
 
 const getAltText = (name, alt) => {
@@ -31,13 +30,13 @@ const TeamMember = props => {
     } = props;
 
     return (
-        <TeamMemberContainer sm={6} md={6} lg={4} xl={4}>
+        <TeamMemberContainer>
             <TeamMemberWrapper>
                 <TeamMemberPhoto img={img}>
                     <img src={img} alt={getAltText(name, alt)} />
                 </TeamMemberPhoto>
                 <TeamMemberName>{name}</TeamMemberName>
-                <p class="caption">{title}</p>
+                <p className="caption">{title}</p>
                 <AllSocials
                     link={link}
                     email={email}

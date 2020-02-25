@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import theme from '../../styles/theme';
-import { Col } from '../../lib/Grid';
 
 const { mediaQueryMin } = theme;
 
@@ -55,8 +54,6 @@ export const TeamMemberWrapper = styled.div`
 `;
 
 export const TeamMemberPhoto = styled.figure`
-
-
     overflow: hidden;
     height: 25em;
     transition: 0.5s;

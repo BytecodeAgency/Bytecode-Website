@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 
 import React from 'react';
-import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/MainLayout';
 import Container from '../containers/Container';
@@ -42,8 +41,6 @@ const blogArchive = ({ data }) => {
                         <Blogpost data={post} key={key} />
                     ))}
                 </Gallery>
-
-
             </Container>
             {/* <hr />
             <Container>

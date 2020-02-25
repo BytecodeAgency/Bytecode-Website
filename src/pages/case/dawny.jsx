@@ -7,7 +7,6 @@ import {
     Introduction,
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
-import Credits from '../../containers/Credits';
 import Deliverables from '../../containers/Deliverables';
 
 const usecase = require('../../images/img/cases/dawny/usecase.png');

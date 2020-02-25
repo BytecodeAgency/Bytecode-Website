@@ -5,7 +5,7 @@ import { Container, Row, Col } from '../lib/Grid';
 import ContactForm from '../containers/ContactForm/ContactForm';
 import ImageBlock from '../components/ImageBlock';
 import Process from '../containers/Process/Process';
-import Header  from '../containers/Header';
+import Header from '../containers/Header';
 import Wrapper from '../components/Wrapper';
 import Service from '../containers/Service/Service';
 import DigitalOceanPartnerLogo from '../components/DigitalOceanPartnerLogo';

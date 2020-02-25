@@ -13,7 +13,7 @@ import HeadScripts from '../lib/GetHeadScripts';
 const Main = styled.main`
     max-width: 100vw !important;
     overflow-x: hidden;
-    padding-top: ${props => props.padded ? '15vh' : 0};
+    padding-top: ${props => (props.padded ? '15vh' : 0)};
 `;
 
 const HeadElements = () => (
@@ -26,7 +26,6 @@ const HeadElements = () => (
         />
     </Helmet>
 );
-
 
 const Layout = ({ children, pageSettings, padded }) => {
     const { title, description, keywords } = pageSettings;
@@ -50,9 +49,14 @@ export default Layout;
 
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
+    padded: PropTypes.bool,
     pageSettings: PropTypes.shape({
         title: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         keywords: PropTypes.string.isRequired,
     }).isRequired,
+};
+
+Layout.defaultProps = {
+    padded: false,
 };

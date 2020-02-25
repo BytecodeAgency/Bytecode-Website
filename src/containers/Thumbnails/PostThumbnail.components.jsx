@@ -93,3 +93,13 @@ export const ThumbnailImg = ({ img, alt, big }) => (
 export const Arrow = styled.img`
     margin-left: 0.01em;
 `;
+
+ThumbnailImg.propTypes = {
+    img: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    big: PropTypes.bool,
+};
+
+ThumbnailImg.defaultProps = {
+    big: false,
+};
