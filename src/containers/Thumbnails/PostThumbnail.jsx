@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
     Arrow,
-    BigThumbnailImg,
     Subtitle,
     ThumbnailBase,
     ThumbnailContent,
     ThumbnailImg,
 } from './PostThumbnail.components';
+import {Big} from '../../components/Typography';
 
 const cutOffText = (string, maxLength) => {
     if (string.length > maxLength) {
@@ -18,25 +18,11 @@ const cutOffText = (string, maxLength) => {
 }
 
 const PostThumbnail = ({ big, title, slug, category, postImageUrl }) => {
-    if (big) {
-        return (
-            <ThumbnailBase to={slug}>
-                <BigThumbnailImg
-                        className="thumbnail-img"
-                        img={postImageUrl}
-                />
-                <ThumbnailContent>
-                    <p className="subtitle">{category}</p>
-                    <h6>{title}</h6>
-                </ThumbnailContent>
-            </ThumbnailBase>
-        );
-    }
     return (
-            <ThumbnailBase to={slug}>
-                <ThumbnailImg className="thumbnail-img" img={postImageUrl} />
-                <ThumbnailContent>
-                    <p className="subtitle">{category}</p>
+            <ThumbnailBase big={big} to={slug}>
+                <ThumbnailImg big={big} className="thumbnail-img" img={postImageUrl} />
+                <ThumbnailContent big={big}>
+                    <Subtitle className="subtitle">{category}</Subtitle>
                     <h5>{cutOffText(title, 65)}</h5>
                     <a className="thumbnail-cta caption" href={slug}>
                         Lees meer

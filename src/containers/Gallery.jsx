@@ -7,6 +7,7 @@ const Gallery = styled.section`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding: ${props => props.padded ? '10vh' : 0} 0;
     & > * {
         width: 100%;
         flex-basis: 100%;
@@ -22,6 +23,7 @@ const Gallery = styled.section`
     }
     @media (${mediaQueryMin.sm}) {
         & > * {
+            padding: ${props => props.padded? '1.33em' : '0.5em'};
             width: ${props => props.sm + '%'|| 'inherit'};
             flex-basis: ${props => props.sm + '%'|| 'inherit'};
         }

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from '../layouts/MainLayout';
 import Container from '../containers/Container';
+import Gallery from '../containers/Gallery';
 
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 
@@ -34,6 +35,7 @@ const Cases = () => (
 
 
         <Container>
+            <Gallery padded sm={33}>
                 <PostThumbnail
                     title="Brengt Breda dichter bij elkaar"
                     category="Mooiwerk Breda"
@@ -52,26 +54,31 @@ const Cases = () => (
                     slug="/case/dawny"
                     postImageUrl={dawnyImage}
                 />
-        </Container>
-        <Container>
+            </Gallery>
+            <Gallery>
+
                 <PostThumbnail
-                    title="Duurzaam met zonnepanelen"
-                    category="Sungevity"
-                    slug="/case/sungevity"
-                    postImageUrl={sungevityImg}
-                />
-                <PostThumbnail
+                big
                     title="Breda in beweging!"
                     category="Breda Actief"
                     slug="/case/breda-actief"
                     postImageUrl={bredaImg}
                 />
+            </Gallery>
+            <Gallery padded sm={33}>
                 <PostThumbnail
                     title="Hulpverlening op de weg"
                     category="Van Eijck International Car Rescue"
                     slug="/case/vrs"
                     postImageUrl={vrsImg}
                 />
+                <PostThumbnail
+                    title="Duurzaam met zonnepanelen"
+                    category="Sungevity"
+                    slug="/case/sungevity"
+                    postImageUrl={sungevityImg}
+                />
+            </Gallery>
         </Container>
     </Layout>
 );

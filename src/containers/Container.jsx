@@ -8,16 +8,16 @@ const Container = styled.section`
     display: flex;
     flex-direction: column;
     @media (${mediaQueryMin.sm}) {
-        padding: 3em ${containerWidth.sm};
+        padding: 0 ${containerWidth.sm};
     }
     @media (${mediaQueryMin.md}) {
-        padding: 2em ${containerWidth.md};
+        padding: 0 ${containerWidth.md};
     }
     @media (${mediaQueryMin.lg}) {
-        padding: 3em ${containerWidth.lg};
+        padding: 0 ${containerWidth.lg};
     }
     @media (${mediaQueryMin.xxl}) {
-        padding: 7em ${containerWidth.xl};
+        padding: 0 ${containerWidth.xl};
     }
 `;
 

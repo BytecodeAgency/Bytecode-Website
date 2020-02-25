@@ -13,7 +13,7 @@ import HeadScripts from '../lib/GetHeadScripts';
 const Main = styled.main`
     max-width: 100vw !important;
     overflow-x: hidden;
-    padding-top: ${props => props.padded ? '10vh' : 0};
+    padding-top: ${props => props.padded ? '15vh' : 0};
 `;
 
 const HeadElements = () => (

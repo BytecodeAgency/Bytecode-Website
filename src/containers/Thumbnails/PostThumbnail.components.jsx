@@ -32,7 +32,7 @@ export const ThumbnailBase = styled(Link)`
     min-width: 10em;
     width: 100%;
     & > * {
-        box-shadow: 0 0 0.1em 0 rgba(0,0,0,0.05);
+        box-shadow: 0 0 0.1em 0 rgba(0, 0, 0, 0.05);
     }
     .thumbnail-cta {
         transition: 0.3s ease all;
@@ -56,30 +56,22 @@ export const ThumbnailBase = styled(Link)`
 `;
 
 export const ThumbnailContent = styled.div`
-    padding: 1.33em;
-    background-color: ${theme.colors.secondary};
-    height: 13rem;
+    padding: 1.33em 1em;
+    background-color: ${props =>
+        props.big ? 'transparent' : theme.colors.secondary};
+    height: ${props => (props.big ? '5rem' : '13rem')};
 `;
 
-export const BigThumbnailImg = styled.div`
-    background: url('${props => props.img}'), ${secondary};
-    background-size: cover;
-    background-position: center center;
-    height: 90vh;
-    min-height: 30em;
-    transition: all 0.3s ease;
-
-`;
 const ThumbnailImgBase = styled.figure`
     background: ${secondary};
     background-position: center center;
     background-size: cover;
     transition: all 0.5s ease;
-    height: 25rem;
+    height: ${props => (props.big ? '80vh' : '40rem')};
     overflow: hidden;
     object-fit: cover;
     @media (${mediaQueryMin.md}) {
-        height: ${props => (props.big ? '50vh' : '20rem')};
+        height: ${props => (props.big ? '85vh' : '20rem')};
     }
 `;
 
@@ -92,8 +84,8 @@ const ThumbnailImgContent = styled.img`
         transform: scale(1.05);
     }
 `;
-export const ThumbnailImg = ({img, alt}) => (
-    <ThumbnailImgBase>
+export const ThumbnailImg = ({ img, alt, big }) => (
+    <ThumbnailImgBase big={big}>
         <ThumbnailImgContent src={img} alt={alt || 'featured image'} />
     </ThumbnailImgBase>
 );
