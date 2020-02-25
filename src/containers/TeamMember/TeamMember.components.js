@@ -6,7 +6,7 @@ const { mediaQueryMin } = theme;
 
 export const TeamMemberWrapper = styled.div`
     @media (${mediaQueryMin.md}) {
-        padding: 0rem 0 0rem 0;
+        padding: 0;
     }
     h1,
     h2,
@@ -64,7 +64,7 @@ export const TeamMemberPhoto = styled.figure`
     transition: 0.5s;
     position: relative;
     @media (${mediaQueryMin.lg}) {
-        height: 30em;
+        height: 40em;
     }
 
     &::before {

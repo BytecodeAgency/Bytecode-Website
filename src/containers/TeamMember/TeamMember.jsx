@@ -30,7 +30,7 @@ const TeamMember = props => {
     } = props;
 
     return (
-        <TeamMemberContainer sm={6} md={6} lg={3} xl={3}>
+        <TeamMemberContainer sm={6} md={6} lg={4} xl={4}>
             <TeamMemberWrapper>
                 <TeamMemberPhoto img={img}>
                     <img src={img} alt={getAltText(name, alt)} />
