@@ -45,12 +45,13 @@ const Home = () => (
             title="Specialisten in maatwerk voor web en mobiel"
             href="/contact"
             button="Neem contact op"
-            bgSize="70%"
             text="Bytecode Digital Agency is een kleinschalig full-service
             webbureau gespecialiseerd in maatwerkontwikkeling voor web en
             mobiel. Ons team helpt je dolgraag met het analyseren, bedenken en
             ontwikkelen van alles wat je nodig hebt om je digitaal volledig te
             ontplooien."
+            hero
+            shadow
         />
         <Container>
             <Row>

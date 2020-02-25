@@ -12,10 +12,12 @@ const NavBarLi = styled.li`
 `;
 
 export const NavbarContainer = styled.nav`
-    position: absolute;
-    width: 100vw;
+    position: fixed;
+    width: 100%;
     z-index: 10000;
     padding: 0 3rem;
+    background: ${props =>
+        props.atScrollTop ? 'transparent' : colors.background};
     @media (max-width: ${theme.breakpointMobileMenu}) {
         width: 100vw;
         height: 3.5em;
@@ -23,7 +25,7 @@ export const NavbarContainer = styled.nav`
         position: fixed;
         top: 0;
         left: 0;
-        background: ${transparentize(0.3, theme.colors.black)};
+        background: ${transparentize(0.3, colors.black)};
         display: flex;
         justify-content: space-between;
     }
@@ -116,7 +118,7 @@ NavbarItemBase.defaultProps = {
 
 export const NavbarItem = styled(NavbarItemBase)`
     display: inline-block;
-    padding: 0 1.33rem;
+    padding: 0 1.33em;
     &:last-child {
         padding-right: 0;
     }
@@ -133,7 +135,7 @@ export const Logo = styled.span`
     display: block;
     @media (min-width: ${theme.breakpointMobileMenu}) {
         img {
-            min-width: 10rem;
+            width: 7em;
         }
     }
     img {

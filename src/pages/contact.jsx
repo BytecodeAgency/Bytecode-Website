@@ -34,6 +34,7 @@ const Contact = () => (
             Dat weten wij ook wel."
             button="Plan een afspraak"
             bgSize="cover"
+            shadow
         />
         <Container>
             <Row>

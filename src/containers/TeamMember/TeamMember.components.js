@@ -6,7 +6,7 @@ const { mediaQueryMin } = theme;
 
 export const TeamMemberWrapper = styled.div`
     @media (${mediaQueryMin.md}) {
-        padding: 3rem 0 3rem 0;
+        padding: 0;
     }
     h1,
     h2,
@@ -60,9 +60,12 @@ export const TeamMemberPhoto = styled.figure`
     }
     margin: 1rem;
     overflow: hidden;
-
+    height: 25em;
     transition: 0.5s;
     position: relative;
+    @media (${mediaQueryMin.lg}) {
+        height: 40em;
+    }
 
     &::before {
         content: '';
@@ -82,8 +85,9 @@ export const TeamMemberPhoto = styled.figure`
         font-size: 3em;
         color: ${theme.colors.green} !important;
         min-height: 5em;
-        height: auto;
+        height: 100%;
         max-width: 100%;
+        object-fit: cover;
     }
     @media (${mediaQueryMin.xs}) {
         img {
