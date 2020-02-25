@@ -68,7 +68,7 @@ const Over = () => (
                 {/* TODO: Generate from array, maybe later change via dashb. */}
                 <TeamMember
                     name="Richard van 't Hof"
-                    title="=Junior art-director en front-end developer"
+                    title="Junior art-director en front-end developer"
                     img={require('../images/img/team/richard.jpg')}
                     email="mailto:richard@bytecode.nl"
                     link="https://www.therichard.space"
@@ -126,7 +126,7 @@ const Over = () => (
                     email="mailto:nahwin@bytecode.nl"
                 />
                 <TeamMember
-                    name="T'iko Alarcón Rivero"
+                    name="Tiko Alarcón Rivero"
                     title="Full-stack developer web &amp; mobiel"
                     img={require('../images/img/team/tiko.jpg')}
                     email="mailto:tiko@bytecode.nl"
