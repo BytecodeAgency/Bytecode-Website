@@ -127,7 +127,7 @@ const bytecode = {
         },
         introduction: {
             size: '1.22em',
-            height: '1.33em',
+            height: '1.44em',
             spacing: '0.01em',
             font: paragraph,
             weight: regular,

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import theme from '../styles/theme';
+import ArrowButton from '../components/ArrowButton';
 
 const { colors, mediaQueryMin, containerWidth } = theme;
 
@@ -20,7 +21,7 @@ const HeaderBase = styled.header`
         padding: 3em ${containerWidth.sm};
         background: linear-gradient(
                 to top,
-                rgba(0, 0, 0, 0.85),
+                rgba(0, 0, 0, 0.9),
                 transparent 50%
             ),
             url(${props => props.backgroundImage});
@@ -29,10 +30,10 @@ const HeaderBase = styled.header`
         padding: 2em ${containerWidth.md};
     }
     @media (${mediaQueryMin.lg}) {
-        padding: 1em ${containerWidth.lg};
+        padding: 3em ${containerWidth.lg};
     }
     @media (${mediaQueryMin.xxl}) {
-        padding: 1em ${containerWidth.xl};
+        padding: 7em ${containerWidth.xl};
     }
 `;
 
@@ -45,7 +46,7 @@ const HeaderInformation = styled.div`
     @media (${mediaQueryMin.xs}) {
         justify-content: space-between;
         flex-direction: row;
-        align-items: end;
+        align-items: center;
         & > * {
             width: 50%;
             padding: 1em;
@@ -71,7 +72,9 @@ const ArrowDown = styled.img`
     opacity: 0.5;
 `;
 
-const Header = ({ title, subtitle, tagline, img, children }) => {
+
+
+const Header = ({ title, subtitle, text, href, button, tagline, img, children, useGatsbyLink }) => {
     return (
         <HeaderBase backgroundImage={img}>
             <HeaderInformation>
@@ -79,11 +82,12 @@ const Header = ({ title, subtitle, tagline, img, children }) => {
                     <StyledSubtitle className="white subtitle">
                         {subtitle}
                     </StyledSubtitle>
-                    <h3>{title}</h3>
+                    <h2>{title}</h2>
                 </div>
                 <div>
-                    <p>{tagline}</p>
+                    <p>{tagline || text}</p>
                     {children}
+                    {href && <ArrowButton useGatsbyLink={useGatsbyLink} href={href}>{button || 'Lees meer'}</ArrowButton>}
                 </div>
             </HeaderInformation>
             <ArrowDown src={arrowDown} />

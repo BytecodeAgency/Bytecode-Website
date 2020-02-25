@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../layouts/MainLayout';
 import TextBlock from '../containers/TextBlock/TextBlock';
-import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
+import Header from '../containers/Header';
 import TeamMember from '../containers/TeamMember/TeamMember';
 import { Container, Row, Col } from '../lib/Grid';
 import ContactForm from '../containers/ContactForm/ContactForm';
@@ -16,7 +16,7 @@ const pageSettings = {
 
 const Over = () => (
     <Layout pageSettings={pageSettings}>
-        <ContentPageHeader
+        <Header
             img={require('../images/img/content/teamv2.png')}
             subtitle="Over ons"
             title="Partner in jouw ambities"

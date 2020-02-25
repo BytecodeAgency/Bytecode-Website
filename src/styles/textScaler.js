@@ -5,9 +5,9 @@ import calcHeaderSize from '../lib/calcHeaderSizes';
 const mediaQueries = theme.mediaQueryMin;
 
 const base = {
-    fontSize: '1.125em',
+    fontSize: '1.15em',
     scale: {
-        desktop: 1.25,
+        desktop: 1.33,
         mobile: 1.15,
     },
     lineHeight: {
@@ -17,7 +17,7 @@ const base = {
 };
 
 const headerSize = {
-    desktop: calcHeaderSize(base.scale.desktop, 1 * 1.5),
+    desktop: calcHeaderSize(base.scale.desktop, 1 * 1.125),
     mobile: calcHeaderSize(base.scale.mobile, 1 * 1.125),
 };
 
@@ -45,10 +45,10 @@ const textScaler = css`
             font-size: calc(${base.fontSize}*1.5);
         };
         @media (${mediaQueries.xl}) {
-            font-size: calc(${base.fontSize}*1.6);
+            font-size: calc(${base.fontSize}*1.5);
         };
         @media (${mediaQueries.xl}) and (${mediaQueries.xxl}) {
-            font-size: calc(${base.fontSize}*1.66);
+            font-size: calc(${base.fontSize}*1.6);
         };
     }
 
