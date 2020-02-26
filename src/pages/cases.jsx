@@ -11,68 +11,67 @@ const pageSettings = {
     keywords: 'website,applicatie,portfolio',
 };
 
-const styrImg = require('../images/img/cases/styr/login.png');
-const bredaImg = require('../images/img/cases/breda-actief/featured.svg');
-const mooiwerkImg = require('../images/img/cases/mooiwerk/website-1.png');
-const coteEtCielImage = require('../images/img/cases/cote-et-ciel/homepage.png');
-const dawnyImage = require('../images/img/cases/dawny/dashboard.png');
-const sungevityImg = require('../images/img/cases/sungevity/woco.png');
-const vrsImg = require('../images/img/cases/vrs/cover.svg');
+const styr = require('../images/img/cases/styr/model.png');
+const breda = require('../images/img/cases/breda-actief/featured.svg');
+const mooiwerk = require('../images/img/cases/mooiwerk/website-1.png');
+const coteetciel = require('../images/img/cases/cote-et-ciel/homepage.png');
+const dawny = require('../images/img/cases/dawny/dashboard.png');
+const sungevity = require('../images/img/cases/sungevity/woco.png');
+const vrs = require('../images/img/cases/vrs/cover.svg');
 
 const Cases = () => (
     <Layout padded pageSettings={pageSettings}>
         <Container>
-            <PostThumbnail
-                big
-                title="Modern functiewaarderingsplatform"
-                category="STYR"
-                slug="/case/styr"
-                postImageUrl={styrImg}
-            />
-        </Container>
-
-        <Container>
+            <Gallery>
+                <PostThumbnail
+                    big
+                    title="Brengt breda in beweging!"
+                    category="Breda Actief"
+                    slug="/case/breda-actief"
+                    postImageUrl={breda}
+                />
+            </Gallery>
             <Gallery padded sm={33}>
                 <PostThumbnail
-                    title="Brengt Breda dichter bij elkaar"
-                    category="Mooiwerk Breda"
-                    slug="/case/mooiwerk"
-                    postImageUrl={mooiwerkImg}
+                    title="Modern functiewaarderingsplatform"
+                    category="STYR"
+                    slug="/case/styr"
+                    postImageUrl={styr}
                 />
                 <PostThumbnail
-                    title="Hoge kwaliteit rugtassen"
-                    category="côte&ciel"
-                    slug="/case/cote-et-ciel"
-                    postImageUrl={coteEtCielImage}
+                    title="Een digitale omgeving voor zonnepanelen op huurdaken"
+                    category="Sungevity"
+                    slug="/case/sungevity"
+                    postImageUrl={sungevity}
                 />
                 <PostThumbnail
                     title="Valpreventie voor ouderen"
                     category="Reinier de Graaf ziekenhuis"
                     slug="/case/dawny"
-                    postImageUrl={dawnyImage}
+                    postImageUrl={dawny}
                 />
             </Gallery>
             <Gallery>
                 <PostThumbnail
+                    title="Hulpverlening op de weg"
+                    category="Van Eijck International Car Rescue"
+                    slug="/case/vrs"
+                    postImageUrl={vrs}
                     big
-                    title="Breda in beweging!"
-                    category="Breda Actief"
-                    slug="/case/breda-actief"
-                    postImageUrl={bredaImg}
                 />
             </Gallery>
             <Gallery padded sm={33}>
                 <PostThumbnail
-                    title="Hulpverlening op de weg"
-                    category="Van Eijck International Car Rescue"
-                    slug="/case/vrs"
-                    postImageUrl={vrsImg}
+                    title="Hoge kwaliteit rugtassen"
+                    category="côte&ciel"
+                    slug="/case/cote-et-ciel"
+                    postImageUrl={coteetciel}
                 />
                 <PostThumbnail
-                    title="Duurzaam met zonnepanelen"
-                    category="Sungevity"
-                    slug="/case/sungevity"
-                    postImageUrl={sungevityImg}
+                    title="Brengt Breda dichter bij elkaar"
+                    category="Mooiwerk Breda"
+                    slug="/case/mooiwerk"
+                    postImageUrl={mooiwerk}
                 />
             </Gallery>
         </Container>
