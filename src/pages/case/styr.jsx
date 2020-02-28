@@ -16,11 +16,10 @@ const invision = require('../../images/img/cases/styr/invision.png');
 
 const pageSettings = {
     client: 'STYR',
-    description:
-        'De STYR Allocator tool is een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.',
+    description: 'De STYR Allocator tool is een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.',
     image: login,
     title: 'STYR',
-    keywords: 'functiewaardering,online,platform,webapp',
+    keywords: 'functiewaardering, online, platform, webapp',
 };
 
 const Case = () => (
@@ -28,16 +27,16 @@ const Case = () => (
         <TextAndImage padded img={serviceDesk} alt="Moderne functiewaardering">
             <h2>Moderne functiewaardering</h2>
             <p className="introduction">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                Door het STYR functiewaarderingsmodel te digitaliseren kan het werk van de STYR consultants geautomatiseerd worden.
+                Zij kunnen hierdoor worden ingezet op hun echte expertise, en een meer adviserende rol innemen.
+                De digitalisering van het model heeft een radicale impact, doordat de stappen van het model zijn gestandaardiseerd.
+                Om dit voor elkaar te krijgen heeft bytecode advies geboden op strategisch niveau.
+            </p>
         </TextAndImage>
 
         <Deliverables
-            deliverables={['Graphic Design', 'SEO', 'Strategy', 'UX/UI-Design']}
+            deliverables={['Strategie', 'UX Research', 'UI Design', 'Webapp Development']}
             alt="het STYR model"
-            client={pageSettings.client}
             clientLogo={logo}
             img={serviceDesk}
             clientBio="STYR is een specialistisch adviesbureau op het gebied van organisatiedesign, waarderen en belonen. STYR heeft het STYR model ontwikkeld, een moderne en vernieuwende manier van (functie)waardering."
@@ -46,24 +45,30 @@ const Case = () => (
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    Ontwikkel een praktische online waarderingstool (STYR
-                    Allocator Tool) waarmee de klanten van STYR zelf de zwaarte
-                    van rollen en functies kunnen vaststellen.
+                    Ontwikkel een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.
                 </p>
             </Introduction>
             <TextAndImage img={invision} reverse alt="Ontwerp van de service desk">
-                <p className="subtitle">Research</p>
-                <h3>Oplossing</h3>
+                <p className="subtitle">Oplossing</p>
+                <h3>UX Research</h3>
                 <p>
                     Na een grondige intake zijn we begonnen met een eerste UX/UI
                     design voor het Allocator tool. Extra’s die op basis van
                     deze wireframes nog gewenst waren zijn ook toegevoegd.
                 </p>
+            </TextAndImage>
+            <TextAndImage img={invision} alt="Ontwerp van de service desk">
+                <p className="subtitle">Oplossing</p>
+                <h3>UI Design</h3>
                 <p>
                     In Invision zijn prototypes gemaakt van de Allocator tool.
                     Op basis hiervan is feedback verzamelt en zijn de
                     functionaliteiten en design aangescherpt.
                 </p>
+            </TextAndImage>
+            <TextAndImage img={invision} reverse alt="Ontwerp van de service desk">
+                <p className="subtitle">Oplossing</p>
+                <h3>Development</h3>
                 <p>
                     De frontend van de allocator is gemaakt in React en voor de
                     content van de beslisboom is een maatwerk oplossing gemaakt

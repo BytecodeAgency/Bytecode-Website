@@ -13,7 +13,7 @@ const pageSettings = {
 
 const styr = require('../images/img/cases/styr/login.png');
 const breda = require('../images/img/cases/breda-actief/featured.svg');
-const mooiwerk = require('../images/img/cases/mooiwerk/website-1.png');
+const mooiwerk = require('../images/img/cases/mooiwerk/home.png');
 const coteetciel = require('../images/img/cases/cote-et-ciel/homepage.png');
 const dawny = require('../images/img/cases/dawny/usecase.png');
 const sungevity = require('../images/img/cases/sungevity/woco.png');

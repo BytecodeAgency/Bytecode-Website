@@ -31,12 +31,9 @@ const Case = () => (
     <Layout pageSettings={pageSettings}>
         <Section>
             <TextAndImage padded img={lockup} alt="Nonin apparaat met app">
-                <h2>Inroducing Dawny</h2>
+                <h2>Introducing: Dawny</h2>
                 <p className="introduction">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Door databeheer te centraliseren, data inzichtelijk te maken.
                 </p>
             </TextAndImage>
         </Section>
@@ -46,7 +43,7 @@ const Case = () => (
             alt="grootouders die op de kleine passen"
             client="Reinier de Graaf Gasthuis"
             clientLogo={logo}
-            clientBio="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+            clientBio="Onderzoeker Dr. A.W. Siegel en internist Dr. D.H. Schweitzer zijn vanuit het Reinier de Graaf Gasthuis het Dawny intiatief gestart om onderzoek te doen naar het voorkomen van fatale vallen bij ouderen."
         />
 
         <Section>

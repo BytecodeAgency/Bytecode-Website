@@ -9,17 +9,18 @@ import {
 import Deliverables from '../../containers/Deliverables';
 
 const logo = require('../../images/img/cases/mooiwerk/logo.svg');
-const websiteImg1 = require('../../images/img/cases/mooiwerk/website-1.png');
-const websiteImg2 = require('../../images/img/cases/mooiwerk/website-2.png');
-const websiteImg3 = require('../../images/img/cases/mooiwerk/website-3.png');
-const websiteImg4 = require('../../images/img/cases/mooiwerk/website-4.png');
-const websiteImg5 = require('../../images/img/cases/mooiwerk/website-5.png');
+const home = require('../../images/img/cases/mooiwerk/home.png');
+const vacatures = require('../../images/img/cases/mooiwerk/vacatures.png');
+const team = require('../../images/img/cases/mooiwerk/team.png');
+const advies = require('../../images/img/cases/mooiwerk/advies.png');
+const registreren = require('../../images/img/cases/mooiwerk/registreren.png');
+const kennis = require('../../images/img/cases/mooiwerk/kennis.png');
 
 const pageSettings = {
     client: 'Mooiwerk Breda',
-    description: 'Een vrijwilligersplatform gemaakt door Bytecode.',
-    image: websiteImg1,
-    title: 'Mooiwerk',
+    description: 'Wij brachten Breda bij elkaar door vrijwilligerswerk vinden gemakkelijker te maken',
+    image: home,
+    title: 'MOOIWERK',
     keywords: 'breda actief, mooiwerkbreda, case, bytecode digital agency',
 };
 
@@ -27,30 +28,25 @@ const Case = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage
             padded
-            img={websiteImg2}
-            alt="Breng Breda dichter bij elkaar"
+            img={vacatures}
+            alt="Brengt Breda dichter bij elkaar"
         >
-            <h2>Breng Breda dichter bij elkaar</h2>
+            <h2>Brengt Breda dichter bij elkaar</h2>
             <p className="introduction">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                Door een platform te ontwikkelen waar vrijwilligers en organisaties elkaar kunnen vinden maakten wij vrijwilligerswerk toegankelijker.
+            </p>
         </TextAndImage>
 
         <Deliverables
             deliverables={['Webapp', 'Custom CMS', 'Cloud servers', 'Doorontwikkeling']}
             alt="website image mooiwerkbreda"
             clientLogo={logo}
-            img={websiteImg3}
+            img={team}
             clientBio="Mooiwerk Breda is een platform van Stichting Breda
                         Actief. Op dit platform kunnen organisaties vacatures
                         plaatsen als zij op zoek zijn naar vrijwilligerswerk,
-                        maar ook vrijwilligers kunnen hier terecht om een leuke
-                        vrijwilligersbaan te zoeken. Op deze manier zorgt het
-                        Mooiwerk-platform voor nieuwe contacten en hele mooie
-                        samenwerkingsverbanden."
+                        maar ook vrijwilligers kunnen hier terecht om een
+                        vrijwilligersbaan te zoeken."
         />
         <Section>
             <Introduction>
@@ -69,7 +65,7 @@ const Case = () => (
                 </p>
             </Introduction>
             <TextAndImage
-                img={websiteImg4}
+                img={registreren}
                 reverse
                 alt="Pagina op de mooiwerkbreda website"
             >
@@ -82,7 +78,20 @@ const Case = () => (
                     data-analyse hebben we in het achterhoofd gehouden.
                 </p>
             </TextAndImage>
-            <TextAndImage fluid img={websiteImg5} alt="Pagina op de mooiwerkbreda website">
+            <TextAndImage
+                img={kennis}
+                alt="Pagina op de mooiwerkbreda website"
+            >
+                <p className="subtitle">Research</p>
+                <h3>Oplossing</h3>
+                <p>
+                    Aan de hand van de vastgestelde doelgroep en requirements
+                    hebben we een MVP opgesteld van 4 sprints. Hierna was er
+                    altijd de mogelijkheid voor doorontwikkeling en toekomstige
+                    data-analyse hebben we in het achterhoofd gehouden.
+                </p>
+            </TextAndImage>
+            <TextAndImage fluid img={advies} alt="Pagina op de mooiwerkbreda website">
                 <p className="subtitle">Resultaten</p>
                 <h2>Realiseren</h2>
                 <p className="introduction">

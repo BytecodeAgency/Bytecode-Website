@@ -38,7 +38,6 @@ const Case = () => (
         <Deliverables
             deliverables={['Webapp', 'Cloud servers', 'Beheeromgeving', 'Doorontwikkeling']}
             alt="offerte acceptatie pagina"
-            client={pageSettings.client}
             clientLogo={logo}
             img={offerteAccept}
             clientBio="

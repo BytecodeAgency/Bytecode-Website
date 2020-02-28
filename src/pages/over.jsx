@@ -65,7 +65,7 @@ const Over = () => (
             img={require('../images/img/content/teamv2.png')}
             subtitle="Over ons"
             title="Partner in jouw ambities"
-            text="Bytecode is een collectief van ontwikkelaars, ontwerpers, researchers en marketeers die zoeken naar nieuwe manieren en inzichten om de digitale wereld naar jouw hand te zetten."
+            text="Bytecode is een collectief van ontwikkelaars, ontwerpers, researchers, strategen en marketeers die zoeken naar nieuwe manieren en inzichten om de digitale wereld naar jouw hand te zetten."
             width={80}
             align="flex-end"
             hero
