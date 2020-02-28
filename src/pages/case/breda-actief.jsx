@@ -8,7 +8,7 @@ import {
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
 
-const logo = require('../../images/img/cases/breda-actief/logo.jpg');
+const logo = require('../../images/img/cases/breda-actief/logo.png');
 const featured = require('../../images/img/cases/breda-actief/featured.svg');
 const challange = require('../../images/img/cases/breda-actief/challange.svg');
 const responsive = require('../../images/img/cases/breda-actief/responsive.svg');
