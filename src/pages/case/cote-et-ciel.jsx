@@ -42,7 +42,15 @@ const Case = () => (
         </TextAndImage>
 
         <Deliverables
-            deliverables={['Strategy', 'SEO', 'Magento Development', 'Shopify Development', 'Cloud Servers', 'Webshop migratie', 'Conversie optimalisatie']}
+            deliverables={[
+                'Strategy',
+                'SEO',
+                'Magento Development',
+                'Shopify Development',
+                'Cloud Servers',
+                'Webshop migratie',
+                'Conversie optimalisatie',
+            ]}
             alt="cote et ciel country selectie"
             clientLogo={logo}
             img={country}
@@ -56,11 +64,15 @@ const Case = () => (
                     Bytecode, hebben we een assessment opgesteld met de
                     verbeterpunten. Op basis hiervan hebben we een plan van
                     aanpak gemaakt en een planning voor de komende maanden.
-                    Gedurende het proces hebben we evaluatiemomenten ingelast
-                    om in te spelen op de nieuwste data.
+                    Gedurende het proces hebben we evaluatiemomenten ingelast om
+                    in te spelen op de nieuwste data.
                 </p>
             </Introduction>
-            <TextAndImage img={dashboard} reverse alt="Magento server dashboard">
+            <TextAndImage
+                img={dashboard}
+                reverse
+                alt="Magento server dashboard"
+            >
                 <p className="subtitle">Research</p>
                 <h3>Oplossing</h3>
                 <p>

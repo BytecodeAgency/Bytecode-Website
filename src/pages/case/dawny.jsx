@@ -33,12 +33,19 @@ const Case = () => (
             <TextAndImage padded img={lockup} alt="Nonin apparaat met app">
                 <h2>Introducing: Dawny</h2>
                 <p className="introduction">
-                    Door databeheer te centraliseren, data inzichtelijk te maken.
+                    Door databeheer te centraliseren, data inzichtelijk te
+                    maken.
                 </p>
             </TextAndImage>
         </Section>
         <Deliverables
-            deliverables={['Technical Research', 'Android App', 'Custom dashboard', 'Bluetooth connectivity ', 'Apple Watch research']}
+            deliverables={[
+                'Technical Research',
+                'Android App',
+                'Custom dashboard',
+                'Bluetooth connectivity ',
+                'Apple Watch research',
+            ]}
             img={usecase2}
             alt="grootouders die op de kleine passen"
             client="Reinier de Graaf Gasthuis"

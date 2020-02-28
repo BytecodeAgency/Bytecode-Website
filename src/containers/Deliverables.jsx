@@ -137,5 +137,5 @@ Deliverables.propTypes = {
     client: PropTypes.string.isRequired,
     clientBio: PropTypes.string.isRequired,
     clientLogo: PropTypes.string.isRequired,
-    deliverables: PropTypes.array.isRequired,
+    deliverables: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

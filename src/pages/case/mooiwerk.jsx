@@ -18,7 +18,8 @@ const kennis = require('../../images/img/cases/mooiwerk/kennis.png');
 
 const pageSettings = {
     client: 'Mooiwerk Breda',
-    description: 'Wij brachten Breda bij elkaar door vrijwilligerswerk vinden gemakkelijker te maken',
+    description:
+        'Wij brachten Breda bij elkaar door vrijwilligerswerk vinden gemakkelijker te maken',
     image: home,
     title: 'MOOIWERK',
     keywords: 'breda actief, mooiwerkbreda, case, bytecode digital agency',
@@ -33,12 +34,19 @@ const Case = () => (
         >
             <h2>Brengt Breda dichter bij elkaar</h2>
             <p className="introduction">
-                Door een platform te ontwikkelen waar vrijwilligers en organisaties elkaar kunnen vinden maakten wij vrijwilligerswerk toegankelijker.
+                Door een platform te ontwikkelen waar vrijwilligers en
+                organisaties elkaar kunnen vinden maakten wij vrijwilligerswerk
+                toegankelijker.
             </p>
         </TextAndImage>
 
         <Deliverables
-            deliverables={['Webapp', 'Custom CMS', 'Cloud servers', 'Doorontwikkeling']}
+            deliverables={[
+                'Webapp',
+                'Custom CMS',
+                'Cloud servers',
+                'Doorontwikkeling',
+            ]}
             alt="website image mooiwerkbreda"
             clientLogo={logo}
             img={team}
@@ -78,10 +86,7 @@ const Case = () => (
                     data-analyse hebben we in het achterhoofd gehouden.
                 </p>
             </TextAndImage>
-            <TextAndImage
-                img={kennis}
-                alt="Pagina op de mooiwerkbreda website"
-            >
+            <TextAndImage img={kennis} alt="Pagina op de mooiwerkbreda website">
                 <p className="subtitle">Research</p>
                 <h3>Oplossing</h3>
                 <p>
@@ -91,7 +96,11 @@ const Case = () => (
                     data-analyse hebben we in het achterhoofd gehouden.
                 </p>
             </TextAndImage>
-            <TextAndImage fluid img={advies} alt="Pagina op de mooiwerkbreda website">
+            <TextAndImage
+                fluid
+                img={advies}
+                alt="Pagina op de mooiwerkbreda website"
+            >
                 <p className="subtitle">Resultaten</p>
                 <h2>Realiseren</h2>
                 <p className="introduction">

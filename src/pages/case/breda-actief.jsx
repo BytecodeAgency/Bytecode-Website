@@ -18,14 +18,19 @@ const screens = require('../../images/img/cases/breda-actief/screens.png');
 const pageSettings = {
     title: 'Breng Breda in beweging',
     client: 'Breda Actief',
-    description: 'Wij brachten Breda bij elkaar door sporten in Breda toegankelijker te maken',
+    description:
+        'Wij brachten Breda bij elkaar door sporten in Breda toegankelijker te maken',
     image: featured,
     keywords: 'breda actief, mooiwerkbreda, case, bytecode digital agency',
 };
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <TextAndImage padded img={responsive} alt="Responsive website van Breda Actief">
+        <TextAndImage
+            padded
+            img={responsive}
+            alt="Responsive website van Breda Actief"
+        >
             <h2>Responsive website</h2>
             <p className="introduction">
                 Voor een maatschappelijk betrokken organisatie zoals stichting
@@ -37,7 +42,13 @@ const Case = () => (
             </p>
         </TextAndImage>
         <Deliverables
-            deliverables={['Online Strategie', 'Responsive Website', 'Maatwerk CMS', 'Cloud servers', 'Doorontwikkeling']}
+            deliverables={[
+                'Online Strategie',
+                'Responsive Website',
+                'Maatwerk CMS',
+                'Cloud servers',
+                'Doorontwikkeling',
+            ]}
             alt="breda-actief website"
             client={pageSettings.client}
             clientLogo={logo}
@@ -49,26 +60,36 @@ const Case = () => (
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    Breda Actief is een grote organisatie, en meerdere mensen binnen de organisatie willen de content op de website kunnen aanpassen. Toch is het belangrijk dat de website een consistente huissttijl heeft, toegankelijk is en goede prestaties levert.
+                    Breda Actief is een grote organisatie, en meerdere mensen
+                    binnen de organisatie willen de content op de website kunnen
+                    aanpassen. Toch is het belangrijk dat de website een
+                    consistente huissttijl heeft, toegankelijk is en goede
+                    prestaties levert.
                 </p>
             </Introduction>
             <TextAndImage img={administration} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
                 <h3>Toegankelijkheid</h3>
                 <p>
-                    De website is volledig toegankelijk voor mensen met een beperking,
-                    zodat iedereen gebruik kan maken van Breda Actief.
+                    De website is volledig toegankelijk voor mensen met een
+                    beperking, zodat iedereen gebruik kan maken van Breda
+                    Actief.
                 </p>
             </TextAndImage>
             <TextAndImage img={administration} alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
                 <h3>Consistente huisstijl</h3>
                 <p>
-                    De website is volledig toegankelijk voor mensen met een beperking,
-                    zodat iedereen gebruik kan maken van Breda Actief.
+                    De website is volledig toegankelijk voor mensen met een
+                    beperking, zodat iedereen gebruik kan maken van Breda
+                    Actief.
                 </p>
             </TextAndImage>
-            <TextAndImage fluid img={screens} alt="Meerdere schermen van de website">
+            <TextAndImage
+                fluid
+                img={screens}
+                alt="Meerdere schermen van de website"
+            >
                 <p className="subtitle">Resultaten</p>
                 <h2>Realiseren</h2>
                 <p className="introduction">

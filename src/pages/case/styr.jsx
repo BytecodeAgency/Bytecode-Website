@@ -16,7 +16,8 @@ const invision = require('../../images/img/cases/styr/invision.png');
 
 const pageSettings = {
     client: 'STYR',
-    description: 'De STYR Allocator tool is een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.',
+    description:
+        'De STYR Allocator tool is een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.',
     image: login,
     title: 'STYR',
     keywords: 'functiewaardering, online, platform, webapp',
@@ -27,28 +28,42 @@ const Case = () => (
         <TextAndImage padded img={serviceDesk} alt="Moderne functiewaardering">
             <h2>Moderne functiewaardering</h2>
             <p className="introduction">
-                Door het STYR functiewaarderingsmodel te digitaliseren kan het werk van de STYR consultants geautomatiseerd worden.
-                Zij kunnen hierdoor worden ingezet op hun echte expertise, en een meer adviserende rol innemen.
-                De digitalisering van het model heeft een radicale impact, doordat de stappen van het model zijn gestandaardiseerd.
-                Om dit voor elkaar te krijgen heeft bytecode advies geboden op strategisch niveau.
+                Door het STYR functiewaarderingsmodel te digitaliseren kan het
+                werk van de STYR consultants geautomatiseerd worden. Zij kunnen
+                hierdoor worden ingezet op hun echte expertise, en een meer
+                adviserende rol innemen. De digitalisering van het model heeft
+                een radicale impact, doordat de stappen van het model zijn
+                gestandaardiseerd. Om dit voor elkaar te krijgen heeft bytecode
+                advies geboden op strategisch niveau.
             </p>
         </TextAndImage>
 
         <Deliverables
-            deliverables={['Strategie', 'UX Research', 'UI Design', 'Webapp Development']}
+            deliverables={[
+                'Strategie',
+                'UX Research',
+                'UI Design',
+                'Webapp Development',
+            ]}
             alt="het STYR model"
             clientLogo={logo}
-            img={serviceDesk}
+            img={model}
             clientBio="STYR is een specialistisch adviesbureau op het gebied van organisatiedesign, waarderen en belonen. STYR heeft het STYR model ontwikkeld, een moderne en vernieuwende manier van (functie)waardering."
         />
         <Section>
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    Ontwikkel een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.
+                    Ontwikkel een praktische online waarderingstool waarmee de
+                    klanten van STYR zelf de zwaarte van rollen en functies
+                    kunnen vaststellen.
                 </p>
             </Introduction>
-            <TextAndImage img={invision} reverse alt="Ontwerp van de service desk">
+            <TextAndImage
+                img={invision}
+                reverse
+                alt="Ontwerp van de service desk"
+            >
                 <p className="subtitle">Oplossing</p>
                 <h3>UX Research</h3>
                 <p>
@@ -66,7 +81,11 @@ const Case = () => (
                     functionaliteiten en design aangescherpt.
                 </p>
             </TextAndImage>
-            <TextAndImage img={invision} reverse alt="Ontwerp van de service desk">
+            <TextAndImage
+                img={invision}
+                reverse
+                alt="Ontwerp van de service desk"
+            >
                 <p className="subtitle">Oplossing</p>
                 <h3>Development</h3>
                 <p>

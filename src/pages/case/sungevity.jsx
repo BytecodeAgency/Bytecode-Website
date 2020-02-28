@@ -17,26 +17,39 @@ const uptime = require('../../images/img/cases/sungevity/uptime.png');
 
 const pageSettings = {
     client: 'Sungevity',
-    description: 'Bytecode werkt samen met Sungevity aan het verduurzamen van Nederland.',
+    description:
+        'Bytecode werkt samen met Sungevity aan het verduurzamen van Nederland.',
     image: header,
     title: 'Duurzame digitale omgeving',
-    keywords: 'verduurzaming, energie, tranistie, offerte, tool, digitaal, onderzoek',
+    keywords:
+        'verduurzaming, energie, tranistie, offerte, tool, digitaal, onderzoek',
 };
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <TextAndImage padded img={woco} alt="Woning Corporatie offerte platform">
+        <TextAndImage
+            padded
+            img={woco}
+            alt="Woning Corporatie offerte platform"
+        >
             <h2>Woning Corporatie offerte platform</h2>
             <p className="introduction">
                 Sungevity had een basis voor een platform voor
                 woningcorporaties, maar dit was niet stabiel en er was veel
-                downtime. Daarnaast waren er een aantal wensen voor doorontwikkeling van de tool.
-                Door het gebruik van cloudservers heeft Bytecode de stabliteit van het platform weten te verbeteren en nieuwe features toegevoegd.
+                downtime. Daarnaast waren er een aantal wensen voor
+                doorontwikkeling van de tool. Door het gebruik van cloudservers
+                heeft Bytecode de stabliteit van het platform weten te
+                verbeteren en nieuwe features toegevoegd.
             </p>
         </TextAndImage>
 
         <Deliverables
-            deliverables={['Webapp', 'Cloud servers', 'Beheeromgeving', 'Doorontwikkeling']}
+            deliverables={[
+                'Webapp',
+                'Cloud servers',
+                'Beheeromgeving',
+                'Doorontwikkeling',
+            ]}
             alt="offerte acceptatie pagina"
             clientLogo={logo}
             img={offerteAccept}
@@ -49,22 +62,22 @@ const Case = () => (
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    Door een gedeelte van de tool te herschrijven, en een stabiele digitale omgeving te creeeren door het gebruik van verschillende cloud servers is de stabiliteit van het platform toegenomen en konden er hierna gemakkelijk nieuwe features aan worden toegevoegd.
+                    Door een gedeelte van de tool te herschrijven, en een
+                    stabiele digitale omgeving te creeeren door het gebruik van
+                    verschillende cloud servers is de stabiliteit van het
+                    platform toegenomen en konden er hierna gemakkelijk nieuwe
+                    features aan worden toegevoegd.
                 </p>
             </Introduction>
             <TextAndImage img={uptime} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
                 <h3>Cloud Servers</h3>
-                <p>
-                    Lorem ipsum
-                </p>
+                <p>Lorem ipsum</p>
             </TextAndImage>
             <TextAndImage img={uptime} alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
                 <h3>Aanpasbaarheid</h3>
-                <p>
-                    Lorem ipsum
-                </p>
+                <p>Lorem ipsum</p>
             </TextAndImage>
             <TextAndImage img={uptime} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
