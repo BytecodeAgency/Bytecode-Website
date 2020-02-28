@@ -8,6 +8,7 @@ import {
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
 
+const logo = require('../../images/img/cases/styr/logo.png');
 const login = require('../../images/img/cases/styr/login.png');
 const serviceDesk = require('../../images/img/cases/styr/service-desk.png');
 const model = require('../../images/img/cases/styr/model.png');
@@ -37,7 +38,7 @@ const Case = () => (
             deliverables={['Graphic Design', 'SEO', 'Strategy', 'UX/UI-Design']}
             alt="het STYR model"
             client={pageSettings.client}
-            clientLogo={model}
+            clientLogo={logo}
             img={serviceDesk}
             clientBio="STYR is een specialistisch adviesbureau op het gebied van organisatiedesign, waarderen en belonen. STYR heeft het STYR model ontwikkeld, een moderne en vernieuwende manier van (functie)waardering."
         />

@@ -8,6 +8,7 @@ import {
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
 
+const logo = require('../../images/img/cases/mooiwerk/logo.svg');
 const websiteImg1 = require('../../images/img/cases/mooiwerk/website-1.png');
 const websiteImg2 = require('../../images/img/cases/mooiwerk/website-2.png');
 const websiteImg3 = require('../../images/img/cases/mooiwerk/website-3.png');
@@ -41,8 +42,7 @@ const Case = () => (
         <Deliverables
             deliverables={['Responsive webapp', 'Custom CMS', 'Cloud servers', 'Doorontwikkeling']}
             alt="website image mooiwerkbreda"
-            client={pageSettings.client}
-            clientLogo={websiteImg3}
+            clientLogo={logo}
             img={websiteImg3}
             clientBio="Mooiwerk Breda is een platform van Stichting Breda
                         Actief. Op dit platform kunnen organisaties vacatures
