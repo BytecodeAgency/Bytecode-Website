@@ -17,7 +17,6 @@ const mooiwerk = require('../images/img/cases/mooiwerk/website-1.png');
 const coteetciel = require('../images/img/cases/cote-et-ciel/homepage.png');
 const dawny = require('../images/img/cases/dawny/dashboard.png');
 const sungevity = require('../images/img/cases/sungevity/woco.png');
-const vrs = require('../images/img/cases/vrs/cover.svg');
 
 const Cases = () => (
     <Layout padded pageSettings={pageSettings}>
@@ -33,16 +32,16 @@ const Cases = () => (
             </Gallery>
             <Gallery padded sm={33}>
                 <PostThumbnail
-                    title="Modern functiewaarderingsplatform"
-                    category="STYR"
-                    slug="/case/styr"
-                    postImageUrl={styr}
-                />
-                <PostThumbnail
                     title="Een digitale omgeving voor zonnepanelen op huurdaken"
                     category="Sungevity"
                     slug="/case/sungevity"
                     postImageUrl={sungevity}
+                />
+                <PostThumbnail
+                    title="Brengt Breda dichter bij elkaar"
+                    category="Mooiwerk Breda"
+                    slug="/case/mooiwerk"
+                    postImageUrl={mooiwerk}
                 />
                 <PostThumbnail
                     title="Valpreventie voor ouderen"
@@ -53,10 +52,10 @@ const Cases = () => (
             </Gallery>
             <Gallery>
                 <PostThumbnail
-                    title="Hulpverlening op de weg"
-                    category="Van Eijck International Car Rescue"
-                    slug="/case/vrs"
-                    postImageUrl={vrs}
+                    title="Modern functiewaarderingsplatform"
+                    category="STYR"
+                    slug="/case/styr"
+                    postImageUrl={styr}
                     big
                 />
             </Gallery>
@@ -66,12 +65,6 @@ const Cases = () => (
                     category="côte&ciel"
                     slug="/case/cote-et-ciel"
                     postImageUrl={coteetciel}
-                />
-                <PostThumbnail
-                    title="Brengt Breda dichter bij elkaar"
-                    category="Mooiwerk Breda"
-                    slug="/case/mooiwerk"
-                    postImageUrl={mooiwerk}
                 />
             </Gallery>
         </Container>

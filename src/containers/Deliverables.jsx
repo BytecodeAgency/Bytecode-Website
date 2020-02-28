@@ -90,7 +90,7 @@ const List = styled.ul`
 
 `;
 
-const LI = styled.li`
+const Deliverable = styled.li`
     margin: 0 0.1em;
     margin-bottom: 0.66em;
     font-size: 1.11em;
@@ -103,7 +103,7 @@ const Logo = styled.img`
     opacity: 0.66;
 `;
 
-const Deliverables = ({ img, client, clientBio, clientLogo }) => {
+const Deliverables = ({ img, client, clientBio, clientLogo, deliverables }) => {
     return (
         <DeliverablesBase>
             <ClientInfo>
@@ -116,13 +116,9 @@ const Deliverables = ({ img, client, clientBio, clientLogo }) => {
             <DeliverablesContent>
                 <p className="subtitle">Deliverables</p>
                 <List>
-                    <LI>Workflow Strategy</LI>
-                    <LI>API-development</LI>
-                    <LI>Cloud deployment</LI>
-                    <LI>Automatische deploystaat</LI>
-                    <LI>UX/UI-Design</LI>
-                    <LI>Service Design</LI>
-                    <LI>Backend Development</LI>
+                    {deliverables.map(item => {
+                        return <Deliverable>{item}</Deliverable>;
+                    })}
                 </List>
             </DeliverablesContent>
             {img && (
@@ -141,4 +137,5 @@ Deliverables.propTypes = {
     client: PropTypes.string.isRequired,
     clientBio: PropTypes.string.isRequired,
     clientLogo: PropTypes.string.isRequired,
+    deliverables: PropTypes.arrayOf.string.isRequired,
 };

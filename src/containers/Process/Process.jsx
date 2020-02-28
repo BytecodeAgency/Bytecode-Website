@@ -47,7 +47,7 @@ const Process = () => (
                     het tijd om de handen uit de mouwen te steken en het plan te
                     realiseren. Hierbij werken we volgens de scrum-methode. Op
                     het moment dat het plan uitgevoerd is, is het tijd om het
-                    resultaat te analyzeren en om te kijken hoe het nóg beter
+                    resultaat te analyseren en om te kijken hoe het nóg beter
                     kan. We blijven dus verbeteren en doorontwikkelen.
                 </TextBlock>
             </Step>

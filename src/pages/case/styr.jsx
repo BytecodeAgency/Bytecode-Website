@@ -1,88 +1,54 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
-import Layout from '../../layouts/MainLayout';
-import { Container, Row, Col } from '../../lib/Grid';
-import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
+import Layout from '../../layouts/CaseLayout';
+import {
+    TextAndImage,
+    Introduction,
+    Section,
+} from '../../containers/ContentBlocks/ContentBlocks';
+import Deliverables from '../../containers/Deliverables';
+
+const login = require('../../images/img/cases/styr/login.png');
+const serviceDesk = require('../../images/img/cases/styr/service-desk.png');
+const model = require('../../images/img/cases/styr/model.png');
+const invision = require('../../images/img/cases/styr/invision.png');
 
 const pageSettings = {
-    title: 'STYR',
+    client: 'STYR',
     description:
         'De STYR Allocator tool is een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.',
+    image: login,
+    title: 'STYR',
     keywords: 'functiewaardering,online,platform,webapp',
 };
 
-const loginImg = require('../../images/img/cases/styr/login.png');
-const serviceDeskImg = require('../../images/img/cases/styr/service-desk.png');
-const modelImg = require('../../images/img/cases/styr/model.png');
-const invisionImg = require('../../images/img/cases/styr/invision.png');
-
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <Container>
-            <CaseHeader img={loginImg} alt="login" />
-        </Container>
-        <Container>
-            <Row align="center">
-                <Col offset={{ lg: 1 }} lg={5}>
-                    <p className="subtitle">STYR</p>
-                    <h1>Moderne functiewaardering</h1>
-                </Col>
-                <Col lg={5}>
-                    <p>
-                        STYR is een specialistisch adviesbureau op het gebied
-                        van organisatiedesign, waarderen en belonen. STYR heeft
-                        het STYR model ontwikkeld, een moderne en vernieuwende
-                        manier van (functie)waardering.
-                    </p>
-                </Col>
-            </Row>
-        </Container>
-        <Container fluid>
-            <TextAndImage img={modelImg} alt="styr model" fluid>
-                <p className="subtitle">Analyze</p>
+        <TextAndImage padded img={serviceDesk} alt="Moderne functiewaardering">
+            <h2>Moderne functiewaardering</h2>
+            <p className="introduction">Lorem ipsum</p>
+        </TextAndImage>
+
+        <Deliverables
+            deliverables={['Graphic Design', 'SEO', 'Strategy', 'UX/UI-Design']}
+            alt="grootouders die op de kleine passen"
+            client={pageSettings.client}
+            clientLogo={model}
+            img={serviceDesk}
+            clientBio="STYR is een specialistisch adviesbureau op het gebied van organisatiedesign, waarderen en belonen. STYR heeft het STYR model ontwikkeld, een moderne en vernieuwende manier van (functie)waardering."
+        />
+        <Section>
+            <Introduction>
                 <h2>De uitdaging</h2>
-                <p>
+                <p className="introduction">
                     Ontwikkel een praktische online waarderingstool (STYR
                     Allocator Tool) waarmee de klanten van STYR zelf de zwaarte
                     van rollen en functies kunnen vaststellen.
                 </p>
-            </TextAndImage>
-        </Container>
-        <Container fluid>
-            <TextAndImage img={serviceDeskImg} alt="service desk" fluid reverse>
-                <p className="subtitle">Analyze</p>
-                <h2>De functionaliteiten</h2>
-                <Checklist>
-                    <CheckListItem>
-                        Een digitale beslisboom om tot de juiste zwaarte van een
-                        functie of rol te komen;
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een dashboard met een overzicht van de gewaardeerde
-                        functies/rollen en een filter mogelijkheid;
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een servicedesk, waar klanten ondersteuningen kunnen
-                        vragen
-                    </CheckListItem>
-                    <CheckListItem>
-                        Zowel in het Nederlands als Engels beschikbaar
-                    </CheckListItem>
-                    <CheckListItem>
-                        Gemakkelijk te koppelen aan andere tools
-                    </CheckListItem>
-                </Checklist>
-            </TextAndImage>
-        </Container>
-        <Container fluid>
-            <TextAndImage
-                img={invisionImg}
-                alt="invision example comments"
-                fluid
-            >
-                <p className="subtitle">Strategize</p>
-                <h2>Proces en technische details</h2>
+            </Introduction>
+            <TextAndImage img={invision} reverse alt="Nonin apparaat met app">
+                <p className="subtitle">Research</p>
+                <h3>Oplossing</h3>
                 <p>
                     Na een grondige intake zijn we begonnen met een eerste UX/UI
                     design voor het Allocator tool. Extra’s die op basis van
@@ -99,11 +65,9 @@ const Case = () => (
                     binnen WordPress.
                 </p>
             </TextAndImage>
-        </Container>
-        <Container fluid>
-            <TextAndImage img={loginImg} reverse fluid>
-                <p className="subtitle">Realize</p>
-                <h2>Oplossing</h2>
+            <TextAndImage fluid img={login} alt="Nonin apparaat met app">
+                <p className="subtitle">Resultaten</p>
+                <h2>Realiseren</h2>
                 <p>
                     Het design van de allocator is opgebouwd uit opeenvolgende
                     pagina’s die de gebruiker doorloopt, waarbij keuzes gemaakt
@@ -116,7 +80,7 @@ const Case = () => (
                     <a href="https://www.styrmodel.com">de website van STYR</a>.
                 </p>
             </TextAndImage>
-        </Container>
+        </Section>
     </Layout>
 );
 
