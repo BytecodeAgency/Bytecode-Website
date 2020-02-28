@@ -34,13 +34,11 @@ const Case = () => (
                 te bereiken, want als je er voor wil zorgen dat écht{' '}
                 <strong>iedereen</strong> aan het sporten komt moet je er ook
                 voor zorgen dat dan ook <strong>iedereen</strong> de website kan
-                bedienen. Met onderstaande problemen en wensen en het reeds
-                uitgewerkte design zijn we aan de slag gegaan om voor Breda
-                Actief het best mogelijke resulaat te behalen.
+                bedienen.
             </p>
         </TextAndImage>
         <Deliverables
-            deliverables={['Strategy', 'Responsive website', 'Custom CMS', 'Cloud servers', 'Doorontwikkeling']}
+            deliverables={['Online Strategie', 'Responsive Website', 'Maatwerk CMS', 'Cloud servers', 'Doorontwikkeling']}
             alt="breda-actief website"
             client={pageSettings.client}
             clientLogo={logo}
@@ -52,19 +50,23 @@ const Case = () => (
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    Breda Actief is een grote organisatie, en meerdere mensen binnen de organisatie willen de content op de website kunnen aanpassen. Toch is het belangrijk dat de website een consistente huissttijl heeft, toegankelijk is en goede prestaties levert.
+                </p>
             </Introduction>
             <TextAndImage img={administration} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
-                <h3>Lorem ipsum</h3>
+                <h3>Toegankelijkheid</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    De website is volledig toegankelijk voor mensen met een beperking,
+                    zodat iedereen gebruik kan maken van Breda Actief.
+                </p>
+            </TextAndImage>
+            <TextAndImage img={administration} alt="Uptime prestaties">
+                <p className="subtitle">prestaties</p>
+                <h3>Consistente huisstijl</h3>
+                <p>
+                    De website is volledig toegankelijk voor mensen met een beperking,
+                    zodat iedereen gebruik kan maken van Breda Actief.
                 </p>
             </TextAndImage>
             <TextAndImage fluid img={screens} alt="Meerdere schermen van de website">
