@@ -162,7 +162,7 @@ const Over = () => (
                 />
                 <TeamMember
                     name="Nahwin Chedoe"
-                    title="Junior UI &amp; UX Designer"
+                    title="Stagair UI &amp; UX Designer"
                     img={require('../images/img/team/nawin.jpg')}
                     email="mailto:nahwin@bytecode.nl"
                 />
@@ -171,6 +171,12 @@ const Over = () => (
                     title="Full-stack developer web &amp; mobiel"
                     img={require('../images/img/team/tiko.jpg')}
                     email="mailto:tiko@bytecode.nl"
+                />
+                <TeamMember
+                    name="Nigel Huijts"
+                    title="Stagair frontend development"
+                    img={require('../images/img/team/nigel.jpg')}
+                    email="mailto:nigel@bytecode.nl"
                 />
             </TeamMembers>
         </Container>
