@@ -27,13 +27,14 @@ const pageSettings = {
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <TextAndImage padded img={woco} alt="Woning Corporatie offerte">
-            <h2>Woning Corporatie offerte</h2>
+        <TextAndImage padded img={woco} alt="Woning Corporatie offerte platform">
+            <h2>Woning Corporatie offerte platform</h2>
             <p className="introduction">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                Sungevity had een basis voor een platform voor
+                woningcorporaties, maar dit was niet stabiel en er was veel
+                downtime. Daarnaast waren er een aantal wensen voor doorontwikkeling van de tool.
+                Door het gebruik van cloudservers heeft Bytecode de stabliteit van het platform weten te verbeteren en nieuwe features toegevoegd.
+            </p>
         </TextAndImage>
 
         <Deliverables
@@ -51,18 +52,23 @@ const Case = () => (
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    Sungevity had een basis voor een platform voor
-                    woningcorporaties, maar dit was niet stabiel en er was veel
-                    downtime. Daarnaast was er de wens om nog zeven
-                    woningcorporaties toe te voegen, maar hier was het platform
-                    niet op ingericht. De corporaties wilden hiernaast graag de
-                    brieven die zij versturen een eigen look-en-feel kunnen
-                    geven in samenwerking met Sungevity. Nadat deze brieven zijn
-                    uitgestuurd komen de huurders op het platform om aan te
-                    geven of zij akkoord gaan met de installatie van
-                    zonnepanelen en hoeveel.
+                    Door een gedeelte van de tool te herschrijven, en een stabiele digitale omgeving te creeeren door het gebruik van verschillende cloud servers is de stabiliteit van het platform toegenomen en konden er hierna gemakkelijk nieuwe features aan worden toegevoegd.
                 </p>
             </Introduction>
+            <TextAndImage img={uptime} reverse alt="Uptime prestaties">
+                <p className="subtitle">prestaties</p>
+                <h3>Cloud Servers</h3>
+                <p>
+                    Lorem ipsum
+                </p>
+            </TextAndImage>
+            <TextAndImage img={uptime} alt="Uptime prestaties">
+                <p className="subtitle">prestaties</p>
+                <h3>Aanpasbaarheid</h3>
+                <p>
+                    Lorem ipsum
+                </p>
+            </TextAndImage>
             <TextAndImage img={uptime} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
                 <h3>99.9%+ uptime</h3>

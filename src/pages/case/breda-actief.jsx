@@ -26,7 +26,7 @@ const pageSettings = {
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <TextAndImage padded img={responsive} alt="Woning Corporatie offerte">
+        <TextAndImage padded img={responsive} alt="Responsive website van Breda Actief">
             <h2>Responsive website</h2>
             <p className="introduction">
                 Voor een maatschappelijk betrokken organisatie zoals stichting
