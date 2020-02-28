@@ -51,14 +51,23 @@ const Case = () => (
         <Section>
             <Introduction>
                 <h2>De uitdaging</h2>
-                <p className="introduction">Lorem ipsum</p>
+                <p className="introduction">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </Introduction>
             <TextAndImage img={administration} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
                 <h3>Lorem ipsum</h3>
-                <p>Lorem ipsum</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
             </TextAndImage>
-            <TextAndImage fluid img={screens} alt="Nonin apparaat met app">
+            <TextAndImage fluid img={screens} alt="Meerdere schermen van de website">
                 <p className="subtitle">Resultaten</p>
                 <h2>Realiseren</h2>
                 <p className="introduction">

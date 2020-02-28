@@ -26,12 +26,16 @@ const Case = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={serviceDesk} alt="Moderne functiewaardering">
             <h2>Moderne functiewaardering</h2>
-            <p className="introduction">Lorem ipsum</p>
+            <p className="introduction">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </TextAndImage>
 
         <Deliverables
             deliverables={['Graphic Design', 'SEO', 'Strategy', 'UX/UI-Design']}
-            alt="grootouders die op de kleine passen"
+            alt="het STYR model"
             client={pageSettings.client}
             clientLogo={model}
             img={serviceDesk}
@@ -46,7 +50,7 @@ const Case = () => (
                     van rollen en functies kunnen vaststellen.
                 </p>
             </Introduction>
-            <TextAndImage img={invision} reverse alt="Nonin apparaat met app">
+            <TextAndImage img={invision} reverse alt="Ontwerp van de service desk">
                 <p className="subtitle">Research</p>
                 <h3>Oplossing</h3>
                 <p>
@@ -65,7 +69,7 @@ const Case = () => (
                     binnen WordPress.
                 </p>
             </TextAndImage>
-            <TextAndImage fluid img={login} alt="Nonin apparaat met app">
+            <TextAndImage fluid img={login} alt="STYR login pagina">
                 <p className="subtitle">Resultaten</p>
                 <h2>Realiseren</h2>
                 <p>

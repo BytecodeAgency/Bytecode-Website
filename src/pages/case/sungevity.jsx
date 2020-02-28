@@ -29,12 +29,16 @@ const Case = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={woco} alt="Woning Corporatie offerte">
             <h2>Woning Corporatie offerte</h2>
-            <p className="introduction">Lorem ipsum</p>
+            <p className="introduction">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </TextAndImage>
 
         <Deliverables
             deliverables={['Server management', 'Doorontwikkeling']}
-            alt="grootouders die op de kleine passen"
+            alt="offerte acceptatie pagina"
             client={pageSettings.client}
             clientLogo={logo}
             img={offerteAccept}
@@ -73,7 +77,7 @@ const Case = () => (
                     uren.
                 </p>
             </TextAndImage>
-            <TextAndImage fluid img={offerte} alt="Nonin apparaat met app">
+            <TextAndImage fluid img={offerte} alt="offerte pagina">
                 <p className="subtitle">Resultaten</p>
                 <h2>Realiseren</h2>
                 <p className="introduction">

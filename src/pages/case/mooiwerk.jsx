@@ -30,12 +30,17 @@ const Case = () => (
             alt="Breng Breda dichter bij elkaar"
         >
             <h2>Breng Breda dichter bij elkaar</h2>
-            <p className="introduction">Lorem ipsum</p>
+            <p className="introduction">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
         </TextAndImage>
 
         <Deliverables
             deliverables={['Responsive webapp', 'Custom CMS', 'Cloud servers', 'Doorontwikkeling']}
-            alt="grootouders die op de kleine passen"
+            alt="website image mooiwerkbreda"
             client={pageSettings.client}
             clientLogo={websiteImg3}
             img={websiteImg3}
@@ -66,7 +71,7 @@ const Case = () => (
             <TextAndImage
                 img={websiteImg4}
                 reverse
-                alt="Nonin apparaat met app"
+                alt="Pagina op de mooiwerkbreda website"
             >
                 <p className="subtitle">Research</p>
                 <h3>Oplossing</h3>
@@ -77,7 +82,7 @@ const Case = () => (
                     data-analyse hebben we in het achterhoofd gehouden.
                 </p>
             </TextAndImage>
-            <TextAndImage fluid img={websiteImg5} alt="Nonin apparaat met app">
+            <TextAndImage fluid img={websiteImg5} alt="Pagina op de mooiwerkbreda website">
                 <p className="subtitle">Resultaten</p>
                 <h2>Realiseren</h2>
                 <p className="introduction">
