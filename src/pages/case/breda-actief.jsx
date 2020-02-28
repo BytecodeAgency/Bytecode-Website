@@ -13,6 +13,7 @@ const featured = require('../../images/img/cases/breda-actief/featured.svg');
 const challange = require('../../images/img/cases/breda-actief/challange.svg');
 const responsive = require('../../images/img/cases/breda-actief/responsive.svg');
 const administration = require('../../images/img/cases/breda-actief/administration.svg');
+const wieiswie = require('../../images/img/cases/breda-actief/wie-is-wie.png');
 const screens = require('../../images/img/cases/breda-actief/screens.png');
 
 const pageSettings = {
@@ -67,7 +68,7 @@ const Case = () => (
                     prestaties levert.
                 </p>
             </Introduction>
-            <TextAndImage img={administration} reverse alt="Uptime prestaties">
+            <TextAndImage img={wieiswie} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
                 <h3>Toegankelijkheid</h3>
                 <p>
@@ -80,9 +81,9 @@ const Case = () => (
                 <p className="subtitle">prestaties</p>
                 <h3>Consistente huisstijl</h3>
                 <p>
-                    De website is volledig toegankelijk voor mensen met een
-                    beperking, zodat iedereen gebruik kan maken van Breda
-                    Actief.
+                    Door het gebruik van maatwerk velden in het CMS zorgen we
+                    voor een consistente huisstijl en blijft het invoeren van
+                    content gemakkelijk.
                 </p>
             </TextAndImage>
             <TextAndImage
