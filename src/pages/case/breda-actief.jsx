@@ -27,7 +27,7 @@ const pageSettings = {
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={responsive} alt="Woning Corporatie offerte">
-            <h2>Woning Corporatie offerte</h2>
+            <h2>Responsive website</h2>
             <p className="introduction">
                 Voor een maatschappelijk betrokken organisatie zoals stichting
                 Breda Actief is webtoegankelijkheid erg belangrijk om haar doel
@@ -39,19 +39,14 @@ const Case = () => (
                 Actief het best mogelijke resulaat te behalen.
             </p>
         </TextAndImage>
-
         <Deliverables
-            deliverables={['Server management', 'Doorontwikkeling']}
+            deliverables={['Strategy', 'Responsive website', 'Custom CMS', 'Cloud servers', 'Doorontwikkeling']}
             alt="breda-actief website"
             client={pageSettings.client}
             clientLogo={logo}
             img={challange}
             clientBio="Stichting Breda Actief&#39;s missie is om alle inwoners van
-                Breda de mogelijkheid te geven om te sporten en bewegen. Naar
-                dit doel wordt gestreefd door middel van het aanbieden van onder
-                andere sport- en beweegmomenten, het inzetten van sportcoaches,
-                het aanbieden van advies en het helpen zoeken naar
-                sportmogelijkheden voor mensen met een beperking."
+                Breda de mogelijkheid te geven om te sporten en bewegen."
         />
         <Section>
             <Introduction>

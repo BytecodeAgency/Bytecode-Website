@@ -41,7 +41,7 @@ const Case = () => (
             </TextAndImage>
         </Section>
         <Deliverables
-            deliverables={['Graphic Design', 'SEO', 'Strategy', 'UX/UI-Design']}
+            deliverables={['Technical Research', 'Android App', 'Custom dashboard', 'Bluetooth connectivity ', 'Apple Watch research']}
             img={usecase2}
             alt="grootouders die op de kleine passen"
             client="Reinier de Graaf Gasthuis"

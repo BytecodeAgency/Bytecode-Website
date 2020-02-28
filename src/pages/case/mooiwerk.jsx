@@ -34,7 +34,7 @@ const Case = () => (
         </TextAndImage>
 
         <Deliverables
-            deliverables={['Graphic Design', 'SEO', 'Strategy', 'UX/UI-Design']}
+            deliverables={['Responsive webapp', 'Custom CMS', 'Cloud servers', 'Doorontwikkeling']}
             alt="grootouders die op de kleine passen"
             client={pageSettings.client}
             clientLogo={websiteImg3}
