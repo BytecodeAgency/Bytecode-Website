@@ -18,8 +18,7 @@ const screens = require('../../images/img/cases/breda-actief/screens.png');
 const pageSettings = {
     title: 'Breng Breda in beweging',
     client: 'Breda Actief',
-    description:
-        'Wij brachten mensen bij elkaar door vrijwilligerswerk vinden toegankelijker te maken',
+    description: 'Wij brachten mensen bij elkaar door vrijwilligerswerk vinden toegankelijker te maken',
     image: featured,
     keywords: 'breda actief, mooiwerkbreda, case, bytecode digital agency',
 };

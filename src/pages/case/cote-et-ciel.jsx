@@ -42,7 +42,7 @@ const Case = () => (
         </TextAndImage>
 
         <Deliverables
-            deliverables={['Strategy', 'SEO', 'Magento Development', 'Shopify Development', 'Server management', 'Webshop migratie', 'Conversie optimalisatie']}
+            deliverables={['Strategy', 'SEO', 'Magento Development', 'Shopify Development', 'Cloud Servers', 'Webshop migratie', 'Conversie optimalisatie']}
             alt="cote et ciel country selectie"
             clientLogo={logo}
             img={country}

@@ -40,7 +40,7 @@ const Case = () => (
         </TextAndImage>
 
         <Deliverables
-            deliverables={['Responsive webapp', 'Custom CMS', 'Cloud servers', 'Doorontwikkeling']}
+            deliverables={['Webapp', 'Custom CMS', 'Cloud servers', 'Doorontwikkeling']}
             alt="website image mooiwerkbreda"
             clientLogo={logo}
             img={websiteImg3}

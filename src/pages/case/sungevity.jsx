@@ -17,12 +17,10 @@ const uptime = require('../../images/img/cases/sungevity/uptime.png');
 
 const pageSettings = {
     client: 'Sungevity',
-    description:
-        'Bytecode werkt samen met Sungevity aan het verduurzamen van Nederland.',
+    description: 'Bytecode werkt samen met Sungevity aan het verduurzamen van Nederland.',
     image: header,
     title: 'Duurzame digitale omgeving',
-    keywords:
-        'verduurzaming, energie, tranistie, offerte, tool, digitaal, onderzoek',
+    keywords: 'verduurzaming, energie, tranistie, offerte, tool, digitaal, onderzoek',
 };
 
 const Case = () => (
@@ -38,7 +36,7 @@ const Case = () => (
         </TextAndImage>
 
         <Deliverables
-            deliverables={['Server management', 'Doorontwikkeling']}
+            deliverables={['Webapp', 'Cloud servers', 'Beheeromgeving', 'Doorontwikkeling']}
             alt="offerte acceptatie pagina"
             client={pageSettings.client}
             clientLogo={logo}
