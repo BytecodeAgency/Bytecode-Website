@@ -9,7 +9,9 @@ import {
 import Deliverables from '../../containers/Deliverables';
 
 const logo = require('../../images/img/cases/sungevity/logo.svg');
+const cloud = require('../../images/img/cases/sungevity/cloud.png');
 const header = require('../../images/img/cases/sungevity/header.jpg');
+const houses = require('../../images/img/cases/sungevity/houses.jpg');
 const offerte = require('../../images/img/cases/sungevity/offerte.png');
 const offerteAccept = require('../../images/img/cases/sungevity/accept.png');
 const woco = require('../../images/img/cases/sungevity/woco.png');
@@ -34,10 +36,9 @@ const Case = () => (
         >
             <h2>Woning Corporatie offerte platform</h2>
             <p className="introduction">
-                Sungevity had een basis voor een platform voor
-                woningcorporaties, maar dit was niet stabiel en er was veel
-                downtime. Daarnaast waren er een aantal wensen voor
-                doorontwikkeling van de tool. Door het gebruik van cloudservers
+                Het sungevity woningcorporatie platform is een plek waar huurders zich kunnen inschrijven voor het Sungevity zonnepanelen programma.
+                Helaas was deze tool niet stabiel genoeg en er was veel
+                downtime. Door het gebruik van cloudservers
                 heeft Bytecode de stabliteit van het platform weten te
                 verbeteren en nieuwe features toegevoegd.
             </p>
@@ -69,15 +70,15 @@ const Case = () => (
                     features aan worden toegevoegd.
                 </p>
             </Introduction>
-            <TextAndImage img={uptime} reverse alt="Uptime prestaties">
+            <TextAndImage img={cloud} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
                 <h3>Cloud Servers</h3>
-                <p>Lorem ipsum</p>
+                <p>Het opzetten van cloud servers zorgde voor betere prestaties en het sneller kunnen toevoegen van nieuwe woningcorporaties.</p>
             </TextAndImage>
-            <TextAndImage img={uptime} alt="Uptime prestaties">
+            <TextAndImage img={houses} alt="Huurders">
                 <p className="subtitle">prestaties</p>
                 <h3>Aanpasbaarheid</h3>
-                <p>Lorem ipsum</p>
+                <p>Door het toevoegen van nieuwe huuradressen toegankelijk te maken voor werknemers van Sungevity wordt het platform vaker en gemakkelijker gebruikt.</p>
             </TextAndImage>
             <TextAndImage img={uptime} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
