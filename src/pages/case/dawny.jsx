@@ -11,10 +11,9 @@ import Deliverables from '../../containers/Deliverables';
 
 const usecase = require('../../images/img/cases/dawny/usecase.png');
 const lockup = require('../../images/img/cases/dawny/lockup.png');
-const analysing = require('../../images/img/cases/dawny/analysing.jpg');
 const graph = require('../../images/img/cases/dawny/graphs.png');
 const tools = require('../../images/img/cases/dawny/tools.png');
-const smilingGrandparents = require('../../images/img/cases/dawny/smiling_grandparents.jpg');
+const team = require('../../images/img/cases/dawny/team.png');
 const usecase2 = require('../../images/img/cases/dawny/usecase2.jpg');
 const logo = require('../../images/img/cases/dawny/logo.svg');
 
@@ -34,7 +33,10 @@ const Case = () => (
                 <h2>Introducing: Dawny</h2>
                 <p className="introduction">
                     Door databeheer te centraliseren, data inzichtelijk te
-                    maken.
+                    maken. Bytecode en het Reinier de Graaf Gasthuis slaan
+                    de handen ineen om een oplossing te vinden die kan leiden
+                    tot het voorkomen van een nachtelijke val en het vroegtijdig
+                    herkennen van risicofactoren.
                 </p>
             </TextAndImage>
         </Section>
@@ -42,8 +44,9 @@ const Case = () => (
             deliverables={[
                 'Technical Research',
                 'Android App',
-                'Custom dashboard',
-                'Bluetooth connectivity ',
+                'Overzichtelijk dashboard',
+                'Bluetooth connectivity',
+                'Fitbit connectie',
                 'Apple Watch research',
             ]}
             img={usecase2}
@@ -57,31 +60,14 @@ const Case = () => (
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Van de senioren (55 jaar en ouder) die een heup breken, overlijdt bijna 25% binnen een jaar na het oplopen van de heupfractuur <a href="http://dx.doi.org/10.1007/978-90-313-9265-0_8">(Verhaar et al., 2013)</a>
                 </p>
             </Introduction>
-            <TextAndImage img={analysing} alt="Nonin apparaat met app" fluid>
-                <p className="subtitle">Research</p>
-                <h3>Minder analyse. Meer controle</h3>
-                <p className="big">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Minder analyse. Meer controle
-                </p>
-            </TextAndImage>
             <TextAndImage img={graph} alt="Nonin apparaat met app" fluid>
+                <p className="subtitle">Development</p>
                 <h3>Minder analyse. Meer controle</h3>
                 <p className="big">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Minder analyse. Meer controle
+                    Een Android app verzameld de slaapdata (hartslag, zuurstofwaarden, PAI en HRV) vanaf de Nonin WristOx2 wearable.
                 </p>
             </TextAndImage>
         </Section>
@@ -95,70 +81,29 @@ const Case = () => (
                 <p className="subtitle">Design</p>
                 <h3>Inzichtgevende Tools</h3>
                 <p className="big">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Minder analyse. Meer controle
+                    Het dashboard biedt inzicht in de nachtelijke slaapdata.
+                    Correlaties tussen slaapdata en slaapstadia kunnen worden
+                    onderzocht, herkend en vergeleken.
                 </p>
             </TextAndImage>
             <TextAndImage img={tools} alt="Nonin apparaat met app" fluid>
-                <h3>Inzichtgevende Tools</h3>
+                <h3>Statistische analyse</h3>
                 <p className="big">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Minder analyse. Meer controle
+                    Doormiddel van verschillende export functies kan data
+                    gemakkelijk in SPSS worden ingeladen voor statistische
+                    analyses.
                 </p>
             </TextAndImage>
         </Section>
         <Section>
-            <TextAndImage img={tools} alt="Nonin apparaat met app">
-                <p className="subtitle">Development</p>
-                <h3>Inzichtgevende Tools</h3>
-                <p className="big">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Minder analyse. Meer controle
-                </p>
-            </TextAndImage>
-            <TextAndImage img={tools} alt="Nonin apparaat met app" reverse>
-                <h3>Inzichtgevende Tools</h3>
-                <p className="big">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Minder analyse. Meer controle
-                </p>
-            </TextAndImage>
-        </Section>
-
-        <Gallery width={100}>
-            <img src={smilingGrandparents} alt="smiling grandparents" />
-        </Gallery>
-        <Section>
-            <TextAndImage padded fluid img={tools} alt="Nonin apparaat met app">
+            <TextAndImage padded fluid img={team} alt="Nonin apparaat met app">
                 <p className="subtitle">Resultaten</p>
-                <h2>Inzichtgevende Tools</h2>
+                <h2>Altijd in ontwikkeling</h2>
                 <p className="big">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Minder analyse. Meer controle
+                    Er is een uitgebreide roadmap voor het project opgesteld.
                 </p>
-                <Gallery width={50}>
-                    <h1>50%</h1>
-                    <h1>2x</h1>
-                </Gallery>
             </TextAndImage>
         </Section>
-
-        {/* <Credits client="Dawny" /> */}
     </Layout>
 );
 

@@ -89,9 +89,9 @@ const Case = () => (
                 <p className="subtitle">Oplossing</p>
                 <h3>Development</h3>
                 <p>
-                    De frontend van de allocator is gemaakt in React en voor de
-                    content van de beslisboom is een maatwerk oplossing gemaakt
-                    binnen WordPress.
+                    De frontend van de allocator is ontwikkeld in React en voor de
+                    content van de beslisboom is een maatwerk oplossing ontwikkeld
+                    voor het WordPress CMS.
                 </p>
             </TextAndImage>
             <TextAndImage fluid img={login} alt="STYR login pagina">
