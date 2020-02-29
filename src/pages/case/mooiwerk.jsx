@@ -60,16 +60,8 @@ const Case = () => (
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    Stichting Breda Actief heeft Bytecode benaderd voor het
-                    vernieuwen en verbeteren van een bestaand platform. Zelf
-                    hadden zij al een goed idee van de doelgroep en requirements
-                    die aan het platform gekoppeld zijn. De belangrijkste reden
-                    voor de vraag aan Bytecode was het feit dat zij zelf niet de
-                    controle hadden over het platform en de data en dat ze hier
-                    graag wel onafhankelijk in wilden zijn. Bij Bytecode vinden
-                    wij eigen controle en een open omgeving ook erg belangrijk,
-                    en samen met het doel dat Mooiwerk ondersteunt waren wij
-                    daarom erg enthousiast om hier een bijdrage aan te leveren.
+                    De belangrijkste reden voor een maatwerk applicatie is
+                    controle over de functionaliteiten en de data.
                 </p>
             </Introduction>
             <TextAndImage
@@ -78,7 +70,7 @@ const Case = () => (
                 alt="Pagina op de mooiwerkbreda website"
             >
                 <p className="subtitle">Research</p>
-                <h3>Oplossing</h3>
+                <h3>Agile toepassing</h3>
                 <p>
                     Aan de hand van de vastgestelde doelgroep en requirements
                     hebben we een MVP opgesteld van 4 sprints. Hierna was er
@@ -87,13 +79,12 @@ const Case = () => (
                 </p>
             </TextAndImage>
             <TextAndImage img={kennis} alt="Pagina op de mooiwerkbreda website">
-                <p className="subtitle">Research</p>
-                <h3>Oplossing</h3>
+                <p className="subtitle">Development</p>
+                <h3>Open source</h3>
                 <p>
-                    Aan de hand van de vastgestelde doelgroep en requirements
-                    hebben we een MVP opgesteld van 4 sprints. Hierna was er
-                    altijd de mogelijkheid voor doorontwikkeling en toekomstige
-                    data-analyse hebben we in het achterhoofd gehouden.
+                    De codebase van het project is open source ontwikkeld.
+                    Door goede documentatie is het voor MOOIWERK altijd
+                    mogelijk om door te ontwikkelen.
                 </p>
             </TextAndImage>
             <TextAndImage
