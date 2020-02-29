@@ -82,9 +82,9 @@ const Case = () => (
                 <p className="subtitle">Development</p>
                 <h3>Open source</h3>
                 <p>
-                    De codebase van het project is open source ontwikkeld.
-                    Door goede documentatie is het voor MOOIWERK altijd
-                    mogelijk om door te ontwikkelen.
+                    De codebase van het project is open source ontwikkeld. Door
+                    goede documentatie is het voor MOOIWERK altijd mogelijk om
+                    door te ontwikkelen.
                 </p>
             </TextAndImage>
             <TextAndImage

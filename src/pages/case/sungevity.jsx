@@ -36,11 +36,12 @@ const Case = () => (
         >
             <h2>Woning Corporatie offerte platform</h2>
             <p className="introduction">
-                Het sungevity woningcorporatie platform is een plek waar huurders zich kunnen inschrijven voor het Sungevity zonnepanelen programma.
-                Helaas was deze tool niet stabiel genoeg en er was veel
-                downtime. Door het gebruik van cloudservers
-                heeft Bytecode de stabliteit van het platform weten te
-                verbeteren en nieuwe features toegevoegd.
+                Het sungevity woningcorporatie platform is een plek waar
+                huurders zich kunnen inschrijven voor het Sungevity zonnepanelen
+                programma. Helaas was deze tool niet stabiel genoeg en er was
+                veel downtime. Door het gebruik van cloudservers heeft Bytecode
+                de stabliteit van het platform weten te verbeteren en nieuwe
+                features toegevoegd.
             </p>
         </TextAndImage>
 
@@ -73,12 +74,20 @@ const Case = () => (
             <TextAndImage img={cloud} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
                 <h3>Cloud Servers</h3>
-                <p>Het opzetten van cloud servers zorgde voor betere prestaties en het sneller kunnen toevoegen van nieuwe woningcorporaties.</p>
+                <p>
+                    Het opzetten van cloud servers zorgde voor betere prestaties
+                    en het sneller kunnen toevoegen van nieuwe
+                    woningcorporaties.
+                </p>
             </TextAndImage>
             <TextAndImage img={houses} alt="Huurders">
                 <p className="subtitle">prestaties</p>
                 <h3>Aanpasbaarheid</h3>
-                <p>Door het toevoegen van nieuwe huuradressen toegankelijk te maken voor werknemers van Sungevity wordt het platform vaker en gemakkelijker gebruikt.</p>
+                <p>
+                    Door het toevoegen van nieuwe huuradressen toegankelijk te
+                    maken voor werknemers van Sungevity wordt het platform vaker
+                    en gemakkelijker gebruikt.
+                </p>
             </TextAndImage>
             <TextAndImage img={uptime} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>

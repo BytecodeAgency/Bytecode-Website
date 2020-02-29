@@ -3,7 +3,6 @@ import React from 'react';
 import Layout from '../../layouts/CaseLayout';
 import {
     TextAndImage,
-    Gallery,
     Introduction,
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
@@ -33,9 +32,9 @@ const Case = () => (
                 <h2>Introducing: Dawny</h2>
                 <p className="introduction">
                     Door databeheer te centraliseren, data inzichtelijk te
-                    maken. Bytecode en het Reinier de Graaf Gasthuis slaan
-                    de handen ineen om een oplossing te vinden die kan leiden
-                    tot het voorkomen van een nachtelijke val en het vroegtijdig
+                    maken. Bytecode en het Reinier de Graaf Gasthuis slaan de
+                    handen ineen om een oplossing te vinden die kan leiden tot
+                    het voorkomen van een nachtelijke val en het vroegtijdig
                     herkennen van risicofactoren.
                 </p>
             </TextAndImage>
@@ -60,14 +59,21 @@ const Case = () => (
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    Van de senioren (55 jaar en ouder) die een heup breken, overlijdt bijna 25% binnen een jaar na het oplopen van de heupfractuur <a href="http://dx.doi.org/10.1007/978-90-313-9265-0_8">(Verhaar et al., 2013)</a>
+                    Van de senioren (55 jaar en ouder) die een heup breken,
+                    overlijdt bijna 25% binnen een jaar na het oplopen van de
+                    heupfractuur{' '}
+                    <a href="http://dx.doi.org/10.1007/978-90-313-9265-0_8">
+                        (Verhaar et al., 2013)
+                    </a>
                 </p>
             </Introduction>
             <TextAndImage img={graph} alt="Nonin apparaat met app" fluid>
                 <p className="subtitle">Development</p>
                 <h3>Minder analyse. Meer controle</h3>
                 <p className="big">
-                    Een Android app verzameld de slaapdata (hartslag, zuurstofwaarden, PAI en HRV) vanaf de Nonin WristOx2 wearable.
+                    Een Android app verzameld de slaapdata (hartslag,
+                    zuurstofwaarden, PAI en HRV) vanaf de Nonin WristOx2
+                    wearable.
                 </p>
             </TextAndImage>
         </Section>
