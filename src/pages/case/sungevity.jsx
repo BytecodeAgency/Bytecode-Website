@@ -29,6 +29,7 @@ const pageSettings = {
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
+        <Section>
         <TextAndImage
             padded
             img={woco}
@@ -44,6 +45,8 @@ const Case = () => (
                 features toegevoegd.
             </p>
         </TextAndImage>
+        </Section>
+
 
         <Deliverables
             deliverables={[

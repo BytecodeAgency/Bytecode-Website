@@ -4,7 +4,18 @@ import theme from '../../styles/theme';
 const { mediaQueryMin, containerWidth } = theme;
 
 export const MainHeader = styled.header`
-    background-image: url(${props => props.img});
+     background: url(${props => props.img})
+            ${props =>
+                props.shadow &&
+                `
+                ,linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.7) 0%,
+                    rgba(0, 0, 0, 0.6) 30%,
+                    rgba(0, 0, 0, 0) 90%,
+                    rgba(0, 0, 0, 0) 100%
+                );
+            `};
     background-blend-mode: soft-light;
     display: flex;
     background-size: cover;

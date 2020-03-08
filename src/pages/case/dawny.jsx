@@ -9,7 +9,7 @@ import {
 import Deliverables from '../../containers/Deliverables';
 
 const usecase = require('../../images/img/cases/dawny/usecase.png');
-const lockup = require('../../images/img/cases/dawny/lockup.png');
+const lockup = require('../../images/img/cases/dawny/lockup2.png');
 const graph = require('../../images/img/cases/dawny/graphs.png');
 const tools = require('../../images/img/cases/dawny/tools.png');
 const team = require('../../images/img/cases/dawny/team.png');

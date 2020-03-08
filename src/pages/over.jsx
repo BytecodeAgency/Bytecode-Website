@@ -150,7 +150,7 @@ const Over = () => (
                 <TeamMember
                     name="Christiaan Färber"
                     title="UI/UX Designer &amp; front-end developer"
-                    img={require('../images/img/team/chirs.jpg')}
+                    img={require('../images/img/team/chris.jpg')}
                     email="mailto:chris@bytecode.nl"
                 />
                 <TeamMember
