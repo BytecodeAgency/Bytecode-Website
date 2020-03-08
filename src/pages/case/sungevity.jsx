@@ -12,10 +12,10 @@ const logo = require('../../images/img/cases/sungevity/logo.svg');
 const cloud = require('../../images/img/cases/sungevity/cloud.png');
 const header = require('../../images/img/cases/sungevity/header.jpg');
 const houses = require('../../images/img/cases/sungevity/houses.jpg');
-const offerte = require('../../images/img/cases/sungevity/offerte.png');
-const offerteAccept = require('../../images/img/cases/sungevity/accept.png');
-const woco = require('../../images/img/cases/sungevity/woco.png');
-const uptime = require('../../images/img/cases/sungevity/uptime.png');
+const offerte = require('../../images/img/cases/sungevity/result.png');
+const woco = require('../../images/img/cases/sungevity/startscreen.png');
+const uptime = require('../../images/img/cases/sungevity/results.png');
+const servers = require('../../images/img/cases/sungevity/servers.jpg');
 
 const pageSettings = {
     client: 'Sungevity',
@@ -57,7 +57,7 @@ const Case = () => (
             ]}
             alt="offerte acceptatie pagina"
             clientLogo={logo}
-            img={offerteAccept}
+            img={houses}
             clientBio="
                     Sungevity is een bedrijf gespecialiseerd in het ontwerpen en
                     installeren van zonnepanelen. Sungevity's missie is om groene energie op
@@ -74,7 +74,8 @@ const Case = () => (
                     features aan worden toegevoegd.
                 </p>
             </Introduction>
-            <TextAndImage img={cloud} reverse alt="Uptime prestaties">
+            <Section>
+            <TextAndImage img={servers} reverse alt="Uptime prestaties">
                 <p className="subtitle">prestaties</p>
                 <h3>Cloud Servers</h3>
                 <p>
@@ -83,6 +84,8 @@ const Case = () => (
                     woningcorporaties.
                 </p>
             </TextAndImage>
+            </Section>
+            <Section>
             <TextAndImage img={houses} alt="Huurders">
                 <p className="subtitle">prestaties</p>
                 <h3>Aanpasbaarheid</h3>
@@ -92,8 +95,7 @@ const Case = () => (
                     en gemakkelijker gebruikt.
                 </p>
             </TextAndImage>
-            <TextAndImage img={uptime} reverse alt="Uptime prestaties">
-                <p className="subtitle">prestaties</p>
+            <TextAndImage padded img={uptime} reverse alt="Uptime prestaties">
                 <h3>99.9%+ uptime</h3>
                 <p>
                     Om het platform te optimaliseren voor meerdere woning
@@ -106,7 +108,8 @@ const Case = () => (
                     uren.
                 </p>
             </TextAndImage>
-            <TextAndImage fluid img={offerte} alt="offerte pagina">
+            </Section>
+            <TextAndImage img={offerte} alt="offerte pagina">
                 <p className="subtitle">Resultaten</p>
                 <h2>Realiseren</h2>
                 <p className="introduction">
