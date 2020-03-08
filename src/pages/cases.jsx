@@ -16,7 +16,7 @@ const breda = require('../images/img/cases/breda-actief/featured.svg');
 const mooiwerk = require('../images/img/cases/mooiwerk/home.png');
 const coteetciel = require('../images/img/cases/cote-et-ciel/homepage.png');
 const dawny = require('../images/img/cases/dawny/usecase.png');
-const sungevity = require('../images/img/cases/sungevity/woco.png');
+const sungevity = require('../images/img/cases/sungevity/header.jpg');
 
 const Cases = () => (
     <Layout padded pageSettings={pageSettings}>
