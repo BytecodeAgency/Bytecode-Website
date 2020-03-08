@@ -80,7 +80,7 @@ const Home = () => (
                         </Col>
                         <Col sm={6}>
                             <Thumbnail
-                                serviceName="UI/UX Design"
+                                serviceName="Design en Strategie"
                                 serviceIcon={service4icon}
                                 backgroundImage={service4bg}
                             />
