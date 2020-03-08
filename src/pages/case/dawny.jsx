@@ -11,15 +11,19 @@ import Deliverables from '../../containers/Deliverables';
 const usecase = require('../../images/img/cases/dawny/usecase.png');
 const lockup = require('../../images/img/cases/dawny/lockup2.png');
 const graph = require('../../images/img/cases/dawny/graphs.png');
-const tools = require('../../images/img/cases/dawny/tools.png');
+const tools = require('../../images/img/cases/dawny/dashboard.png');
 const team = require('../../images/img/cases/dawny/team.png');
 const usecase2 = require('../../images/img/cases/dawny/usecase2.jpg');
 const logo = require('../../images/img/cases/dawny/logo.svg');
+const data = require('../../images/img/cases/dawny/data.png');
 
 const pageSettings = {
     title: 'Levens redden met datavisualisatie',
     client: 'Reinier de Graaf Gasthuis',
     image: usecase,
+    logo,
+    clientBio:
+        'Onderzoeker Dr. A.W. Siegel en internist Dr. D.H. Schweitzer zijn vanuit het Reinier de Graaf Gasthuis het Dawny intiatief gestart om onderzoek te doen naar het voorkomen van fatale vallen bij ouderen.',
     description:
         'Bytecode werkt samen met het Reiner De Graaf Gasthuis aan valpreventie voor ouderen.',
     keywords: 'ouderen, zorg, platform, webapp, onderzoek',
@@ -27,18 +31,16 @@ const pageSettings = {
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <Section>
-            <TextAndImage padded img={lockup} alt="Nonin apparaat met app">
-                <h2>Introducing: Dawny</h2>
-                <p className="introduction">
-                    Door databeheer te centraliseren, data inzichtelijk te
-                    maken. Bytecode en het Reinier de Graaf Gasthuis slaan de
-                    handen ineen om een oplossing te vinden die kan leiden tot
-                    het voorkomen van een nachtelijke val en het vroegtijdig
-                    herkennen van risicofactoren.
-                </p>
-            </TextAndImage>
-        </Section>
+        <TextAndImage padded img={lockup} alt="Nonin apparaat met app">
+            <h2>Introducing: Dawny</h2>
+            <p className="introduction">
+                Door databeheer te centraliseren, data inzichtelijk te maken.
+                Bytecode en het Reinier de Graaf Gasthuis slaan de handen ineen
+                om een oplossing te vinden die kan leiden tot het voorkomen van
+                een nachtelijke val en het vroegtijdig herkennen van
+                risicofactoren.
+            </p>
+        </TextAndImage>
         <Deliverables
             deliverables={[
                 'Technical Research',
@@ -52,7 +54,6 @@ const Case = () => (
             alt="grootouders die op de kleine passen"
             client="Reinier de Graaf Gasthuis"
             clientLogo={logo}
-            clientBio="Onderzoeker Dr. A.W. Siegel en internist Dr. D.H. Schweitzer zijn vanuit het Reinier de Graaf Gasthuis het Dawny intiatief gestart om onderzoek te doen naar het voorkomen van fatale vallen bij ouderen."
         />
 
         <Section>
@@ -92,7 +93,7 @@ const Case = () => (
                     onderzocht, herkend en vergeleken.
                 </p>
             </TextAndImage>
-            <TextAndImage img={tools} alt="Nonin apparaat met app" fluid>
+            <TextAndImage img={data} alt="Nonin apparaat met app" fluid>
                 <h3>Statistische analyse</h3>
                 <p className="big">
                     Doormiddel van verschillende export functies kan data

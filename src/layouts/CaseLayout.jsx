@@ -46,6 +46,11 @@ const Layout = ({ children, pageSettings }) => {
                 tagline={description}
                 img={image}
             />
+            {/* <Client
+                name={client}
+                logo={logo}
+                description={clientBio}
+            /> */}
             <Main className="main">
                 <TypographyClassStyling />
                 {children}

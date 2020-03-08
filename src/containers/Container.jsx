@@ -7,6 +7,7 @@ const Container = styled.section`
     padding: 1em ${containerWidth.xs};
     display: flex;
     flex-direction: column;
+    align-items: ${props => props.align || 'inherit'};
     @media (${mediaQueryMin.sm}) {
         padding: 0 ${containerWidth.sm};
     }
