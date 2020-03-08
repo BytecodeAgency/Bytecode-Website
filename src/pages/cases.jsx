@@ -24,7 +24,7 @@ const Cases = () => (
             <Gallery>
                 <PostThumbnail
                     big
-                    title="Brengt breda in beweging!"
+                    title="Brengt Breda in beweging!"
                     category="Breda Actief"
                     slug="/case/breda-actief"
                     postImageUrl={breda}

@@ -154,7 +154,7 @@ const Over = () => (
                     email="mailto:chris@bytecode.nl"
                 />
                 <TeamMember
-                    name="Suzanne De Vries"
+                    name="Suzanne de Vries"
                     title="Marketing &amp; Communicatie"
                     img={require('../images/img/team/suzanne.jpg')}
                     email="mailto:suzanne@bytecode.nl"
