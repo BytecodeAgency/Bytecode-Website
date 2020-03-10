@@ -1,56 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Col } from '../../lib/Grid';
-import { Big } from '../../components/Typography';
 import {
-    Arrow,
-    BigThumbnailImg,
     Subtitle,
     ThumbnailBase,
     ThumbnailContent,
     ThumbnailImg,
 } from './PostThumbnail.components';
 
-const PostThumbnail = ({ big, title, slug, category, postImageUrl }) => {
-    if (big) {
-        return (
-            <Col>
-                <ThumbnailBase to={slug}>
-                    <BigThumbnailImg
-                        className="thumbnail-img"
-                        img={postImageUrl}
-                    />
-                    <ThumbnailContent>
-                        <Subtitle>{category}</Subtitle>
-                        <Big>
-                            <p>{title}</p>
-                        </Big>
-                    </ThumbnailContent>
-                </ThumbnailBase>
-            </Col>
-        );
+const cutOffText = (string, maxLength) => {
+    if (string.length > maxLength) {
+        const subString = `${string.substring(0, maxLength)}...`;
+        return subString;
     }
+    return string;
+};
+
+const PostThumbnail = ({ big, title, slug, category, postImageUrl }) => {
     return (
-        <Col offset={{ md: 0.1 }} md={3.9}>
-            <ThumbnailBase to={slug}>
-                <ThumbnailImg className="thumbnail-img" img={postImageUrl} />
-                <ThumbnailContent>
-                    <Subtitle>{category}</Subtitle>
-                    <Big>
-                        <p>{title}</p>
-                    </Big>
-                    <a href={slug}>
-                        <small className="thumbnail-cta">
-                            Lees meer
-                            <Arrow
-                                src={require('../../images/icons/ui/arrow.svg')}
-                                alt=">"
-                            />
-                        </small>
-                    </a>
-                </ThumbnailContent>
-            </ThumbnailBase>
-        </Col>
+        <ThumbnailBase big={big} to={slug}>
+            <ThumbnailImg
+                big={big}
+                className="thumbnail-img"
+                img={postImageUrl}
+            />
+            <ThumbnailContent big={big}>
+                <Subtitle className="subtitle">{category}</Subtitle>
+                <h5>{cutOffText(title, 65)}</h5>
+                <a className="thumbnail-cta caption" href={slug}>
+                    Lees meer
+                </a>
+            </ThumbnailContent>
+        </ThumbnailBase>
     );
 };
 

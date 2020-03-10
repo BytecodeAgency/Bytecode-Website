@@ -5,12 +5,19 @@ import { transparentize } from 'polished'; // TODO: Remove dependency
 import { Link } from 'gatsby';
 import theme from '../../styles/theme';
 
-const { mediaQueryMin } = theme;
+const { mediaQueryMin, colors } = theme;
+
+const NavBarLi = styled.li`
+    margin: 1em 0;
+`;
 
 export const NavbarContainer = styled.nav`
-    position: relative;
+    position: fixed;
+    width: 100%;
     z-index: 10000;
     padding: 0 3rem;
+    background: ${props =>
+        props.atScrollTop ? 'transparent' : colors.background};
     @media (max-width: ${theme.breakpointMobileMenu}) {
         width: 100vw;
         height: 3.5em;
@@ -18,9 +25,15 @@ export const NavbarContainer = styled.nav`
         position: fixed;
         top: 0;
         left: 0;
-        background: ${transparentize(0.3, theme.colors.black)};
+        background: ${transparentize(0.3, colors.black)};
         display: flex;
         justify-content: space-between;
+    }
+    @media (min-width: ${theme.breakpointMobileMenu}) {
+        background: ${props =>
+            props.noBackground
+                ? 'transparent'
+                : `linear-gradient(to bottom, ${colors.mediumgray}, transparent)`};
     }
 
     @media (${mediaQueryMin.md}) {
@@ -29,7 +42,6 @@ export const NavbarContainer = styled.nav`
     @media (${mediaQueryMin.sm}) {
     }
     @media (${mediaQueryMin.lg}) {
-        margin: 1rem 8.5rem;
     }
 `;
 
@@ -37,7 +49,6 @@ export const NavbarContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 6rem;
     @media (max-width: ${theme.breakpointMobileMenu}) {
         display: block;
         width: 100%;
@@ -88,11 +99,11 @@ const StyledLink = styled(Link)`
 `;
 
 const NavbarItemBase = ({ className, href, text }) => (
-    <li className={className}>
+    <NavBarLi className={className}>
         <StyledLink to={href} className="menuitem">
             {text}
         </StyledLink>
-    </li>
+    </NavBarLi>
 );
 
 NavbarItemBase.propTypes = {
@@ -107,7 +118,7 @@ NavbarItemBase.defaultProps = {
 
 export const NavbarItem = styled(NavbarItemBase)`
     display: inline-block;
-    padding: 0 2rem;
+    padding: 0 1.33em;
     &:last-child {
         padding-right: 0;
     }
@@ -124,7 +135,7 @@ export const Logo = styled.span`
     display: block;
     @media (min-width: ${theme.breakpointMobileMenu}) {
         img {
-            min-width: 10rem;
+            width: 7em;
         }
     }
     img {

@@ -1,98 +1,121 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { CaseHeader } from '../../components/Case';
-import Layout from '../../layouts/MainLayout';
-import { Container, Row, Col } from '../../lib/Grid';
-import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
-import { Big } from '../../components/Typography';
+import Layout from '../../layouts/CaseLayout';
+import {
+    TextAndImage,
+    Introduction,
+    Section,
+} from '../../containers/ContentBlocks/ContentBlocks';
+import Deliverables from '../../containers/Deliverables';
+
+const logo = require('../../images/img/cases/sungevity/logo.svg');
+const header = require('../../images/img/cases/sungevity/header.jpg');
+const houses = require('../../images/img/cases/sungevity/houses.jpg');
+const offerte = require('../../images/img/cases/sungevity/result.png');
+const woco = require('../../images/img/cases/sungevity/startscreen.png');
+const uptime = require('../../images/img/cases/sungevity/results.png');
+const servers = require('../../images/img/cases/sungevity/servers.jpg');
 
 const pageSettings = {
-    title: 'Sungevity',
+    client: 'Sungevity',
     description:
         'Bytecode werkt samen met Sungevity aan het verduurzamen van Nederland.',
+    image: header,
+    title: 'Duurzame digitale omgeving',
+    logo,
     keywords:
         'verduurzaming, energie, tranistie, offerte, tool, digitaal, onderzoek',
+    clientBio:
+        "Sungevity is een bedrijf gespecialiseerd in het ontwerpen en installeren van zonnepanelen. Sungevity's missie is om groene energie op te wekken op alle daken die daarvoor geschikt zijn.",
 };
-
-const offerteImg = require('../../images/img/cases/sungevity/offerte.png');
-const offerteAcceptImg = require('../../images/img/cases/sungevity/accept.png');
-const wocoImg = require('../../images/img/cases/sungevity/woco.png');
-const uptimeImg = require('../../images/img/cases/sungevity/uptime.png');
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <Container>
-            <CaseHeader img={wocoImg} alt="Woning Corporatie offerte" />
-        </Container>
-        <Container>
-            <Row align="center">
-                <Col offset={{ lg: 1 }} lg={5}>
-                    <p className="subtitle">Sungevity</p>
-                    <h1>Duurzaam met zonnepanelen</h1>
-                </Col>
-                <Col lg={5}>
-                    Sungevity is een bedrijf gespecialiseerd in het ontwerpen en
-                    installeren van zonnepanelen. Het is het grootste
-                    zonnepanelenbedrijf in Europa, bekroond met de NRC Impact
-                    Award 2018. Sungevity&apos;s missie is om groene energie op
-                    te wekken op alle daken die daarvoor geschikt zijn. Om deze
-                    duurzame missie met een platform voor woningcorporaties nog
-                    beter tot zijn recht te laten komen, is Bytecode benaderd.
-                </Col>
-            </Row>
-        </Container>
-        <Container fluid>
-            <TextAndImage img={offerteImg} alt="offerte pagina" fluid>
-                <p className="subtitle">Analyze</p>
+        <TextAndImage padded img={woco} alt="Woningcorporatie offerte platform">
+            <h2>Woningcorporatie offerte platform</h2>
+            <p className="introduction">
+                Het Sungevity woningcorporatie platform is een plek waar
+                huurders zich kunnen inschrijven voor het Sungevity
+                zonnepanelenprogramma. Helaas was deze tool niet stabiel genoeg
+                en er was veel downtime. Door het gebruik van cloudservers heeft
+                Bytecode de stabliteit van het platform weten te verbeteren en
+                nieuwe features toegevoegd.
+            </p>
+        </TextAndImage>
+
+        <Deliverables
+            deliverables={[
+                'Webapp',
+                'Cloudservers',
+                'Beheeromgeving',
+                'Doorontwikkeling',
+            ]}
+            alt="offerte acceptatie pagina"
+            clientLogo={logo}
+            img={houses}
+        />
+        <Section>
+            <Introduction>
                 <h2>De uitdaging</h2>
-                <Big>
-                    Sungevity had een basis voor een platform voor
-                    woningcorporaties, maar dit was niet stabiel en er was veel
-                    downtime. Daarnaast was er de wens om nog zeven
-                    woningcorporaties toe te voegen, maar hier was het platform
-                    niet op ingericht. De corporaties wilden hiernaast graag de
-                    brieven die zij versturen een eigen look-en-feel kunnen
-                    geven in samenwerking met Sungevity. Nadat deze brieven zijn
-                    uitgestuurd komen de huurders op het platform om aan te
-                    geven of zij akkoord gaan met de installatie van
-                    zonnepanelen en hoeveel.
-                </Big>
+                <p className="introduction">
+                    Door een gedeelte van de tool te herschrijven, en een
+                    stabiele digitale omgeving te creëren door het gebruik van
+                    verschillende cloudservers is de stabiliteit van het
+                    platform toegenomen en konden er hierna gemakkelijk nieuwe
+                    features aan worden toegevoegd.
+                </p>
+            </Introduction>
+            <Section>
+                <TextAndImage img={servers} reverse alt="Uptime prestaties">
+                    <p className="subtitle">prestaties</p>
+                    <h3>Cloudservers</h3>
+                    <p>
+                        Het opzetten van cloudservers zorgde voor betere
+                        prestaties en het sneller kunnen toevoegen van nieuwe
+                        woningcorporaties.
+                    </p>
+                </TextAndImage>
+            </Section>
+            <Section>
+                <TextAndImage img={houses} alt="Huurders">
+                    <p className="subtitle">prestaties</p>
+                    <h3>Aanpasbaarheid</h3>
+                    <p>
+                        door de verbeterde toegankelijkheid van het platform
+                        voor werknemers kunnen zij gemakkelijk en vaker nieuwe
+                        huuradressen toevoegen.
+                    </p>
+                </TextAndImage>
+                <TextAndImage
+                    padded
+                    img={uptime}
+                    reverse
+                    alt="Uptime prestaties"
+                >
+                    <h3>99.9%+ uptime</h3>
+                    <p>
+                        Om het platform te optimaliseren voor meerdere woning
+                        corporaties hebben we in de Python Flask applicatie
+                        verbeteringen doorgevoerd aan de offertetool. Daarnaast
+                        hebben we gezorgd voor schaalbare cloudhosting en Nginx
+                        routing- en serveroptimalisaties. Op het platform kunnen
+                        woningcorporaties nu zelf aanpassingen doorvoeren en is
+                        het gemakkelijk om een nieuwe corporatie op te zetten in
+                        enkele uren.
+                    </p>
+                </TextAndImage>
+            </Section>
+            <TextAndImage img={offerte} alt="offerte pagina">
+                <p className="subtitle">Resultaten</p>
+                <h2>Realiseren</h2>
+                <p className="introduction">
+                    Inmiddels zijn er al acht woningcorporaties opgezet. Mocht
+                    een van de websites downtime ondervinden dan krijgen onze
+                    site reliability engineers hier een melding van zodat er
+                    direct gehandeld kan worden.
+                </p>
             </TextAndImage>
-        </Container>
-        <Container fluid>
-            <TextAndImage
-                img={offerteAcceptImg}
-                alt="accepteer offerte"
-                fluid
-                reverse
-            >
-                <p className="subtitle">Strategize</p>
-                <h2>De functionaliteiten</h2>
-                <Big>
-                    Om het platform te optimaliseren voor meerdere woning
-                    corporaties hebben we in de Python Flask applicatie
-                    verbeteringen doorgevoerd aan de offertetool. Daarnaast
-                    hebben we gezorgd voor schaalbare cloudhosting en Nginx
-                    routing- en serveroptimalisaties. Op het platform kunnen
-                    woningcorporaties nu zelf aanpassingen doorvoeren en is het
-                    gemakkelijk om een nieuwe corporatie op te zetten in enkele
-                    uren.
-                </Big>
-            </TextAndImage>
-        </Container>
-        <Container fluid>
-            <TextAndImage img={uptimeImg} fluid>
-                <p className="subtitle">Realize</p>
-                <h2>Oplossing en resultaten</h2>
-                <Big>
-                    Inmiddels zijn er al acht woningcorporaties opgezet. Het
-                    platform heeft nu een uptimepercentage van 99.95 tot 100%.
-                    Mocht een van de websites downtime ondervinden dan krijgen
-                    onze site reliability engineers hier een melding van zodat
-                    er direct gehandeld kan worden.
-                </Big>
-            </TextAndImage>
-        </Container>
+        </Section>
     </Layout>
 );
 

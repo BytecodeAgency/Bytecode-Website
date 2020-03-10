@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../layouts/MainLayout';
-
-import { Container, Row } from '../lib/Grid';
+import Container from '../containers/Container';
+import Gallery from '../containers/Gallery';
 
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 
@@ -11,63 +11,62 @@ const pageSettings = {
     keywords: 'website,applicatie,portfolio',
 };
 
-const styrImg = require('../images/img/cases/styr/login.png');
-const bredaImg = require('../images/img/cases/breda-actief/website-1.jpg');
-const mooiwerkImg = require('../images/img/cases/mooiwerk/website-1.png');
-const coteEtCielImage = require('../images/img/cases/cote-et-ciel/homepage.png');
-const dawnyImage = require('../images/img/cases/dawny/dashboard.png');
-const sungevityImg = require('../images/img/cases/sungevity/woco.png');
+const styr = require('../images/img/cases/styr/login.png');
+const breda = require('../images/img/cases/breda-actief/featured.svg');
+const mooiwerk = require('../images/img/cases/mooiwerk/home.png');
+const coteetciel = require('../images/img/cases/cote-et-ciel/homepage.png');
+const dawny = require('../images/img/cases/dawny/usecase.png');
+const sungevity = require('../images/img/cases/sungevity/header.jpg');
 
 const Cases = () => (
-    <Layout pageSettings={pageSettings}>
+    <Layout padded pageSettings={pageSettings}>
         <Container>
-            <Row>
+            <Gallery>
                 <PostThumbnail
                     big
-                    title="Modern functiewaarderingsplatform"
-                    category="STYR"
-                    slug="/case/styr"
-                    postImageUrl={styrImg}
+                    title="Brengt Breda in beweging!"
+                    category="Breda Actief"
+                    slug="/case/breda-actief"
+                    postImageUrl={breda}
                 />
-            </Row>
-        </Container>
-        <Container>
-            <Row>
+            </Gallery>
+            <Gallery padded sm={33}>
                 <PostThumbnail
-                    title="Brengt Breda dichter bij elkaar"
-                    category="Mooiwerk Breda"
-                    slug="/case/mooiwerk"
-                    postImageUrl={mooiwerkImg}
+                    title="Een digitale omgeving voor zonnepanelen op huurdaken"
+                    category="Sungevity"
+                    slug="/case/sungevity"
+                    postImageUrl={sungevity}
                 />
                 <PostThumbnail
                     title="Hoge kwaliteit rugtassen"
                     category="côte&ciel"
                     slug="/case/cote-et-ciel"
-                    postImageUrl={coteEtCielImage}
+                    postImageUrl={coteetciel}
                 />
                 <PostThumbnail
                     title="Valpreventie voor ouderen"
                     category="Reinier de Graaf ziekenhuis"
                     slug="/case/dawny"
-                    postImageUrl={dawnyImage}
+                    postImageUrl={dawny}
                 />
-            </Row>
-        </Container>
-        <Container>
-            <Row>
+            </Gallery>
+            <Gallery>
                 <PostThumbnail
-                    title="Duurzaam met zonnepanelen"
-                    category="Sungevity"
-                    slug="/case/sungevity"
-                    postImageUrl={sungevityImg}
+                    title="Modern functiewaarderingsplatform"
+                    category="STYR"
+                    slug="/case/styr"
+                    postImageUrl={styr}
+                    big
                 />
+            </Gallery>
+            <Gallery padded sm={33}>
                 <PostThumbnail
-                    title="Breda in beweging!"
-                    category="Breda Actief"
-                    slug="/case/breda-actief"
-                    postImageUrl={bredaImg}
+                    title="Brengt Breda dichter bij elkaar"
+                    category="Mooiwerk Breda"
+                    slug="/case/mooiwerk"
+                    postImageUrl={mooiwerk}
                 />
-            </Row>
+            </Gallery>
         </Container>
     </Layout>
 );

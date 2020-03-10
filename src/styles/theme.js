@@ -5,7 +5,8 @@ const black = '#0f0f0f';
 const darkgray = '#1a1a1a';
 const green = '#23be87';
 const lightgray = '#f2f2f2';
-const mediumgray = '#252525';
+const lightgray2 = '#E7E7E7';
+const mediumgray = '#262626';
 const red = '#df5252';
 const white = '#ffffff';
 
@@ -38,6 +39,7 @@ const bytecode = {
         black,
         mediumgray,
         lightgray,
+        lightgray2,
         white,
     },
     fonts: {
@@ -89,23 +91,25 @@ const bytecode = {
         h5: {
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
-            weight: GlobalHeadingSettings.weight,
+            height: '1.33em',
+            weight: regular,
             color: GlobalHeadingSettings.color,
             marginBottom: GlobalHeadingSettings.marginBottom,
         },
         h6: {
             spacing: GlobalHeadingSettings.spacing,
             font: heading,
-            weight: GlobalHeadingSettings.weight,
+            height: '1.1em',
+            weight: regular,
             color: GlobalHeadingSettings.color,
             marginBottom: '0.33em',
         },
         p: {
             spacing: '0.015em',
-            height: '1.5em',
+            height: '1.33em',
             font: paragraph,
             weight: regular,
-            color: lightgray,
+            color: lightgray2,
             marginBottom: '1.33em',
         },
         li: {
@@ -123,12 +127,20 @@ const bytecode = {
             marginRight: '1.66m',
         },
         introduction: {
-            size: '1.9rem',
-            height: '1.2em',
+            size: '1.22em',
+            height: '1.44em',
             spacing: '0.01em',
             font: paragraph,
             weight: regular,
             color: lightgray,
+        },
+        caption: {
+            size: '0.9rem',
+            height: '1.48em',
+            spacing: '0em',
+            font: menu,
+            weight: light,
+            color: lightgray2,
         },
         subtitle: {
             size: '0.85rem',
@@ -149,7 +161,7 @@ const bytecode = {
         menuitem: {
             size: '1.125rem',
             height: '1.2em',
-            spacing: '0.17em',
+            spacing: '0.05em',
             font: menu,
             weight: regular,
             color: lightgray,
@@ -164,7 +176,6 @@ const bytecode = {
         },
     },
     breakpointMobileMenu: '68rem',
-    containerWidths: [],
     breakpoint: {
         xs: '48em',
         sm: '64em',
