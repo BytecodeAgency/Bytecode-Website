@@ -24,6 +24,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Homepage content
 * About page content
 
+## 2.3.8 (2020-02-21)
+
+### Added:
+
+* Article: Citrix
+* Article: AI revolution
+* Support for blockquotes
+
+## 2.3.7 (2020-02-12)
+
+### Added:
+
+* Bytecast ep. 2 article
+* Brexit article
+
 ## 2.3.6 (2020-02-06)
 
 ### Added:
