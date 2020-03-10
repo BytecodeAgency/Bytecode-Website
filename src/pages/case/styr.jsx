@@ -13,8 +13,8 @@ const login = require('../../images/img/cases/styr/login.png');
 const serviceDesk = require('../../images/img/cases/styr/service-desk.png');
 const model = require('../../images/img/cases/styr/model.png');
 const invision = require('../../images/img/cases/styr/invision.png');
-const development = require('../../images/img/cases/styr/invision.png');
-const research = require('../../images/img/cases/styr/invision.png');
+const development = require('../../images/img/content/collaboration/code.svg');
+const research = require('../../images/img/content/collaboration/say.svg');
 
 const pageSettings = {
     client: 'STYR',
@@ -49,7 +49,6 @@ const Case = () => (
             ]}
             alt="het STYR model"
             clientLogo={logo}
-            img={model}
             clientBio="STYR is een specialistisch adviesbureau op het gebied van organisatiedesign, waarderen en belonen. STYR heeft het STYR model ontwikkeld, een moderne en vernieuwende manier van (functie)waardering."
         />
         <Section>
@@ -96,7 +95,7 @@ const Case = () => (
                     ontwikkeld voor het WordPress CMS.
                 </p>
             </TextAndImage>
-            <TextAndImage fluid img={login} alt="STYR login pagina">
+            <TextAndImage fluid img={model} alt="STYR login pagina">
                 <p className="subtitle">Resultaten</p>
                 <h2>Realiseren</h2>
                 <p>
