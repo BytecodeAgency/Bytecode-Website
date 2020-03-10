@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import {
     BlackOverlay,
     CloseMenuButton,
@@ -18,8 +19,8 @@ const hamburger = require('../../images/img/hamburger-menu.svg');
 const closeMenu = require('../../images/img/close-menu.svg');
 
 class Navbar extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             menuIsOpen: false,
         };
@@ -37,8 +38,9 @@ class Navbar extends React.Component {
 
     render() {
         const { menuIsOpen } = this.state;
+        const { background } = this.props;
         return (
-            <NavbarContainer>
+            <NavbarContainer background={background}>
                 <Link to="/" aria-label="homePage">
                     <MobileNavLogo src={logoMin} alt="Logo" />
                 </Link>
@@ -77,3 +79,7 @@ class Navbar extends React.Component {
 }
 
 export default Navbar;
+
+Navbar.propTypes = {
+    background: PropTypes.bool.isRequired,
+};

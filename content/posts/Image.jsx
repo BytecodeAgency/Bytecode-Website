@@ -9,15 +9,17 @@ const Figure = styled.figure`
 
 const Figcaption = styled.figcaption`
     font-size: 0.8em;
+    margin: 0 1em;
+    opacity: 0.8;
 `;
 
 const Image = props => {
-    const { src, alt, title } = props;
+    const { src, alt, caption } = props;
     const image = require(`../../src/images/img/articles/${src}`);
     return (
         <Figure>
             <img src={image} alt={alt} />
-            {title && <Figcaption>{title}</Figcaption>}
+            {caption && <Figcaption>{caption}</Figcaption>}
         </Figure>
     );
 

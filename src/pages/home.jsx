@@ -45,12 +45,13 @@ const Home = () => (
             title="Specialisten in maatwerk voor web en mobiel"
             href="/contact"
             button="Neem contact op"
-            bgSize="70%"
             text="Bytecode Digital Agency is een kleinschalig full-service
             webbureau gespecialiseerd in maatwerkontwikkeling voor web en
             mobiel. Ons team helpt je dolgraag met het analyseren, bedenken en
             ontwikkelen van alles wat je nodig hebt om je digitaal volledig te
             ontplooien."
+            hero
+            shadow
         />
         <Container>
             <Row>
@@ -79,7 +80,7 @@ const Home = () => (
                         </Col>
                         <Col sm={6}>
                             <Thumbnail
-                                serviceName="Branding, Design en Marketing"
+                                serviceName="Design en Strategie"
                                 serviceIcon={service4icon}
                                 backgroundImage={service4bg}
                             />
@@ -130,7 +131,7 @@ const Home = () => (
                     <Col offset={{ lg: 1 }} md={12} lg={6}>
                         <GroupImage
                             width="700"
-                            src={require('../images/img/content/team-700.png')}
+                            src={require('../images/img/content/group.png')}
                             alt="Onze mindset"
                         />
                     </Col>

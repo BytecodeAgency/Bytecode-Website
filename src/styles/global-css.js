@@ -18,6 +18,7 @@ const typographyElements = [
 
 const typographyClasses = [
     'introduction',
+    'caption',
     'subtitle',
     'button',
     'menuitem',

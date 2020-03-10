@@ -30,13 +30,13 @@ const TeamMember = props => {
     } = props;
 
     return (
-        <TeamMemberContainer sm={6} md={6} lg={3} xl={3}>
+        <TeamMemberContainer>
             <TeamMemberWrapper>
                 <TeamMemberPhoto img={img}>
                     <img src={img} alt={getAltText(name, alt)} />
                 </TeamMemberPhoto>
                 <TeamMemberName>{name}</TeamMemberName>
-                <p>{title}</p>
+                <p className="caption">{title}</p>
                 <AllSocials
                     link={link}
                     email={email}

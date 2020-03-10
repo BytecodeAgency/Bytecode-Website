@@ -5,7 +5,7 @@ import { Container, Row, Col } from '../lib/Grid';
 import ContactForm from '../containers/ContactForm/ContactForm';
 import ImageBlock from '../components/ImageBlock';
 import Process from '../containers/Process/Process';
-import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
+import Header from '../containers/Header';
 import Wrapper from '../components/Wrapper';
 import Service from '../containers/Service/Service';
 import DigitalOceanPartnerLogo from '../components/DigitalOceanPartnerLogo';
@@ -20,12 +20,12 @@ const pageSettings = {
 
 const Services = () => (
     <Layout pageSettings={pageSettings}>
-        <ContentPageHeader
+        <Header
             img={require('../images/img/header/postit-shadow.jpg')}
             subtitle="Services"
-            title="Wij doen alles om het beste digitale resultaat te behalen."
+            title="Wij doen alles om het beste digitale resultaat te behalen"
             text="Onze diensten zorgen voor de beste digitale resultaten
-            voor jouw bedrijf."
+            voor jouw bedrijf"
             bgSize="cover"
         />
         <Process />

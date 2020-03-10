@@ -3,8 +3,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/MainLayout';
-import { Container, Row, Col } from '../lib/Grid';
+import Container from '../containers/Container';
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
+import Gallery from '../containers/Gallery';
 
 const pageSettings = {
     title: 'Bytecode Insights - Bytecode Digital Agency B.V.',
@@ -32,33 +33,14 @@ const Blogpost = ({ data: post }, key) => (
 const blogArchive = ({ data }) => {
     const { edges: posts } = data.allMdx;
     return (
-        <Layout pageSettings={pageSettings}>
+        <Layout padded pageSettings={pageSettings}>
             <Container>
-                <Row>
-                    <Col md={12}>
-                        <h1>Een frisse blik op het internet</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={6}>
-                        <p>
-                            Hier zie je artikelen die met passie zijn geschreven
-                            door Bytecode, een jonge en moderne web agency. Wij
-                            laten jou graag zien hoe je de kracht van het
-                            internet kunt gebruiken om alles uit jezelf te
-                            halen. Dit doen we door interessante artikelen te
-                            schrijven, maar ook door deze inzichten in onze
-                            werkzaamheden te verwerken.
-                        </p>
-                    </Col>
-                </Row>
-            </Container>
-            <Container>
-                <Row>
+                <h1>Insights</h1>
+                <Gallery xs={50} md={33}>
                     {posts.map(({ node: post }, _, key) => (
                         <Blogpost data={post} key={key} />
                     ))}
-                </Row>
+                </Gallery>
             </Container>
         </Layout>
     );

@@ -1,117 +1,116 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Checklist, CheckListItem, CaseHeader } from '../../components/Case';
-import Layout from '../../layouts/MainLayout';
-import { Container, Row, Col } from '../../lib/Grid';
-import { TextAndImage } from '../../containers/ContentBlocks/ContentBlocks';
-import { Big } from '../../components/Typography';
+import Layout from '../../layouts/CaseLayout';
+import {
+    TextAndImage,
+    Introduction,
+    Section,
+} from '../../containers/ContentBlocks/ContentBlocks';
+import Deliverables from '../../containers/Deliverables';
+
+const usecase = require('../../images/img/cases/dawny/usecase.png');
+const lockup = require('../../images/img/cases/dawny/lockup2.png');
+const graph = require('../../images/img/cases/dawny/graphs.png');
+const tools = require('../../images/img/cases/dawny/dashboard.png');
+const team = require('../../images/img/cases/dawny/team.png');
+const usecase2 = require('../../images/img/cases/dawny/usecase2.jpg');
+const logo = require('../../images/img/cases/dawny/logo.svg');
+const data = require('../../images/img/cases/dawny/data.png');
 
 const pageSettings = {
-    title: 'Dawny',
+    title: 'Levens redden met datavisualisatie',
+    client: 'Reinier de Graaf Gasthuis',
+    image: usecase,
+    logo,
+    clientBio:
+        'Onderzoeker Dr. A.W. Siegel en internist Dr. D.H. Schweitzer zijn vanuit het Reinier de Graaf Gasthuis het Dawny intiatief gestart om onderzoek te doen naar het voorkomen van fatale vallen bij ouderen.',
     description:
         'Bytecode werkt samen met het Reiner De Graaf Gasthuis aan valpreventie voor ouderen.',
     keywords: 'ouderen, zorg, platform, webapp, onderzoek',
 };
 
-const dashboardImg = require('../../images/img/cases/dawny/dashboard.png');
-const noninImg = require('../../images/img/cases/dawny/nonin.png');
-const teamImg = require('../../images/img/cases/dawny/team.png');
-const weekImg = require('../../images/img/cases/dawny/weekoverzicht.png');
-
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <Container>
-            <CaseHeader img={dashboardImg} alt="dashboard" />
-        </Container>
-        <Container>
-            <Row align="center">
-                <Col offset={{ lg: 1 }} lg={5}>
-                    <p className="subtitle">Reinier De Graaf Gasthuis</p>
-                    <h1>Valpreventie voor ouderen</h1>
-                </Col>
-                <Col lg={5}>
-                    Samen met onderzoeker Dr. A.W. Siegel en internist Dr. D.H.
-                    Schweitzer van Dawny en het Reinier de Graaf Gasthuis in
-                    Delft zijn we bezig met het vervullen van een fantastische
-                    missie. Een groot gedeelte van de ouderen die een heup
-                    breken overlijdt hierna binnen een aantal maanden. Dit kan
-                    en moet voorkomen worden. Bytecode en het Reinier de Graaf
-                    Gasthuis slaan daarom de handen ineen om een oplossing te
-                    vinden die kan leiden tot het voorkomen van een nachtelijke
-                    val en het vroegtijdig herkennen van risicofactoren.
-                </Col>
-            </Row>
-        </Container>
-        <Container fluid>
-            <TextAndImage img={noninImg} alt="Nonin apparaat met app" fluid>
-                <p className="subtitle">Strategize</p>
+        <TextAndImage padded img={lockup} alt="Nonin apparaat met app">
+            <h2>Introducing: Dawny</h2>
+            <p className="introduction">
+                Data inzichtelijk maken door databeheer te centraliseren
+                Bytecode en het Reinier de Graaf Gasthuis slaan de handen ineen
+                om een oplossing te vinden die kan leiden tot het voorkomen van
+                een nachtelijke val en het vroegtijdig herkennen van
+                risicofactoren.
+            </p>
+        </TextAndImage>
+        <Deliverables
+            deliverables={[
+                'Technical Research',
+                'Android App',
+                'Overzichtelijk dashboard',
+                'Bluetooth connectivity',
+                'Fitbit connectie',
+                'Apple Watch research',
+            ]}
+            img={usecase2}
+            alt="grootouders die op de kleine passen"
+            client="Reinier de Graaf Gasthuis"
+            clientLogo={logo}
+        />
+
+        <Section>
+            <Introduction>
                 <h2>De uitdaging</h2>
-                <Big>
+                <p className="introduction">
                     Van de senioren (55 jaar en ouder) die een heup breken,
                     overlijdt bijna 25% binnen een jaar na het oplopen van de
-                    heupfractuur&nbsp;
+                    heupfractuur{' '}
                     <a href="http://dx.doi.org/10.1007/978-90-313-9265-0_8">
-                        (Verhaar et al., 2013).&nbsp;
+                        (Verhaar et al., 2013)
                     </a>
-                </Big>
-                <p>
-                    We zijn op dit moment bezig om met gemakkelijk beschikbare
-                    tools slaappatronen te onderzoeken, om hiermee een delier te
-                    herkennen en hierop te kunnen reageren. Op deze manier
-                    kunnen we uiteindelijk voorkomen dat ouderen vallen en een
-                    heup breken. Door middel van verschillende
-                    &quot;wearables&quot; wordt patiëntendata verzameld voor
-                    onderzoek en uiteindelijk voor gebruik in de praktijk. Zo
-                    worden slaappatronen onderzocht, om te ontdekken wanneer
-                    iemand kwetsbaar is voor nachtelijk vallen.
+                </p>
+            </Introduction>
+            <TextAndImage img={graph} alt="Nonin apparaat met app" fluid>
+                <p className="subtitle">Development</p>
+                <h3>Minder analyse, m eer controle</h3>
+                <p className="big">
+                    Een Android app verzameld de slaapdata (hartslag,
+                    zuurstofwaarden, PAI en HRV) vanaf de Nonin WristOx2
+                    wearable.
                 </p>
             </TextAndImage>
-        </Container>
-        <Container fluid>
-            <TextAndImage img={weekImg} alt="weekoverzicht" fluid reverse>
-                <p className="subtitle">Analyze</p>
-                <h2>De functionaliteiten</h2>
-                We werken in verschillende opeenvolgende sprints. Zo wordt er op
-                dit moment gewerkt aan vier componenten
-                <Checklist>
-                    <CheckListItem>
-                        Een Android app waarin slaapdata verzameld kan worden
-                        (hartslag, zuurstofwaarden, PAI en HRV) vanaf de Nonin
-                        WristOx2 wearable
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een API om data te kunnen ontvangen, analyseren en delen
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een server die verbindt met een voor grote datastromen
-                        geoptimaliseerde database
-                    </CheckListItem>
-                    <CheckListItem>
-                        Een dashboard om data uit de API visueel te analyseren
-                        en exporteren
-                    </CheckListItem>
-                </Checklist>
-            </TextAndImage>
-        </Container>
-        <Container fluid>
-            <TextAndImage img={teamImg} fluid>
-                <p className="subtitle">Realize</p>
-                <h2>Ontwikkeling</h2>
-                <Big>
-                    Het project blijft in ontwikkeling. Zo zullen de wearables
-                    Fitbit charge 2 en 3 worden geïntegreerd en binnenkort zal
-                    een onderzoek gestart worden met 50 patiënten.
-                </Big>
-                <p>
-                    Om op de hoogte te blijven van het project kun je altijd een
-                    kijkje nemen op
-                    <a href="https://dawny.nl/">
-                        &nbsp; de website van het Dawny project
-                    </a>
-                    .
+        </Section>
+        <Section>
+            <TextAndImage
+                img={tools}
+                alt="Nonin apparaat met app"
+                reverse
+                fluid
+            >
+                <p className="subtitle">Design</p>
+                <h3>Inzichtgevende tools</h3>
+                <p className="big">
+                    Het dashboard biedt inzicht in de nachtelijke slaapdata.
+                    Correlaties tussen slaapdata en slaapstadia kunnen worden
+                    onderzocht, herkend en vergeleken.
                 </p>
             </TextAndImage>
-        </Container>
+            <TextAndImage img={data} alt="Nonin apparaat met app" fluid>
+                <h3>Statistische analyse</h3>
+                <p className="big">
+                    Doormiddel van verschillende export functies kan data
+                    gemakkelijk in SPSS worden ingeladen voor statistische
+                    analyses.
+                </p>
+            </TextAndImage>
+        </Section>
+        <Section>
+            <TextAndImage padded fluid img={team} alt="Nonin apparaat met app">
+                <p className="subtitle">Resultaten</p>
+                <h2>Altijd in ontwikkeling</h2>
+                <p className="big">
+                    Er is een uitgebreide roadmap voor het project opgesteld.
+                </p>
+            </TextAndImage>
+        </Section>
     </Layout>
 );
 

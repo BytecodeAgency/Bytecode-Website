@@ -4,7 +4,7 @@ import Layout from '../layouts/MainLayout';
 import ContactForm from '../containers/ContactForm/ContactForm';
 import { Container, Row, Col } from '../lib/Grid';
 import Button from '../components/Button';
-import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
+import Header from '../containers/Header';
 
 const pageSettings = {
     title: `Contact - Bytecode Digital Agency B.V.
@@ -22,18 +22,17 @@ const ContactHeading = styled.h4`
 
 const Contact = () => (
     <Layout pageSettings={pageSettings}>
-        <ContentPageHeader
+        <Header
             img={require('../images/img/header/telefoon.jpg')}
             subtitle="Contact"
-            title="Een keertje langskomen? Gezellig!"
-            href="https://calendly.com/bytecode"
+            title="Langskomen? Gezellig!"
             text="Geef ons een belletje of stuur een mailtje
             en het is zo geregeld.
             De koffie, thee en koekjes staan al klaar.
             Bij wijze van spreken, natuurlijk. Koffie en thee moeten warm zijn.
             Dat weten wij ook wel."
-            button="Plan een afspraak"
             bgSize="cover"
+            shadow
         />
         <Container>
             <Row>
