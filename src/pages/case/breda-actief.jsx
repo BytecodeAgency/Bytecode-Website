@@ -17,7 +17,7 @@ const wieiswie = require('../../images/img/cases/breda-actief/wie-is-wie.png');
 const screens = require('../../images/img/cases/breda-actief/screens.png');
 
 const pageSettings = {
-    title: 'Breng Breda in beweging',
+    title: 'Brengt Breda in beweging',
     client: 'Breda Actief',
     description:
         'Wij brachten Breda bij elkaar door sporten in Breda toegankelijker te maken',
@@ -47,7 +47,7 @@ const Case = () => (
                 'Online Strategie',
                 'Responsive Website',
                 'Maatwerk CMS',
-                'Cloud servers',
+                'Cloudservers',
                 'Doorontwikkeling',
             ]}
             alt="breda-actief website"

@@ -31,26 +31,22 @@ const pageSettings = {
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <TextAndImage
-            padded
-            img={woco}
-            alt="Woning Corporatie offerte platform"
-        >
-            <h2>Woning Corporatie offerte platform</h2>
+        <TextAndImage padded img={woco} alt="Woningcorporatie offerte platform">
+            <h2>Woningcorporatie offerte platform</h2>
             <p className="introduction">
-                Het sungevity woningcorporatie platform is een plek waar
-                huurders zich kunnen inschrijven voor het Sungevity zonnepanelen
-                programma. Helaas was deze tool niet stabiel genoeg en er was
-                veel downtime. Door het gebruik van cloudservers heeft Bytecode
-                de stabliteit van het platform weten te verbeteren en nieuwe
-                features toegevoegd.
+                Het Sungevity woningcorporatie platform is een plek waar
+                huurders zich kunnen inschrijven voor het Sungevity
+                zonnepanelenprogramma. Helaas was deze tool niet stabiel genoeg
+                en er was veel downtime. Door het gebruik van cloudservers heeft
+                Bytecode de stabliteit van het platform weten te verbeteren en
+                nieuwe features toegevoegd.
             </p>
         </TextAndImage>
 
         <Deliverables
             deliverables={[
                 'Webapp',
-                'Cloud servers',
+                'Cloudservers',
                 'Beheeromgeving',
                 'Doorontwikkeling',
             ]}
@@ -63,8 +59,8 @@ const Case = () => (
                 <h2>De uitdaging</h2>
                 <p className="introduction">
                     Door een gedeelte van de tool te herschrijven, en een
-                    stabiele digitale omgeving te creeeren door het gebruik van
-                    verschillende cloud servers is de stabiliteit van het
+                    stabiele digitale omgeving te creëren door het gebruik van
+                    verschillende cloudservers is de stabiliteit van het
                     platform toegenomen en konden er hierna gemakkelijk nieuwe
                     features aan worden toegevoegd.
                 </p>
@@ -72,9 +68,9 @@ const Case = () => (
             <Section>
                 <TextAndImage img={servers} reverse alt="Uptime prestaties">
                     <p className="subtitle">prestaties</p>
-                    <h3>Cloud Servers</h3>
+                    <h3>Cloudservers</h3>
                     <p>
-                        Het opzetten van cloud servers zorgde voor betere
+                        Het opzetten van cloudservers zorgde voor betere
                         prestaties en het sneller kunnen toevoegen van nieuwe
                         woningcorporaties.
                     </p>
@@ -85,9 +81,9 @@ const Case = () => (
                     <p className="subtitle">prestaties</p>
                     <h3>Aanpasbaarheid</h3>
                     <p>
-                        Door het toevoegen van nieuwe huuradressen toegankelijk
-                        te maken voor werknemers van Sungevity wordt het
-                        platform vaker en gemakkelijker gebruikt.
+                        door de verbeterde toegankelijkheid van het platform
+                        voor werknemers kunnen zij gemakkelijk en vaker nieuwe
+                        huuradressen toevoegen.
                     </p>
                 </TextAndImage>
                 <TextAndImage

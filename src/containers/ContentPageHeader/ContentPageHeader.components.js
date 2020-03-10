@@ -10,8 +10,8 @@ export const MainHeader = styled.header`
                 `
                 ,linear-gradient(
                     to top,
-                    rgba(0, 0, 0, 0.7) 0%,
-                    rgba(0, 0, 0, 0.6) 30%,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0.8) 30%,
                     rgba(0, 0, 0, 0) 90%,
                     rgba(0, 0, 0, 0) 100%
                 );
@@ -55,7 +55,7 @@ export const MainHeader = styled.header`
                 ,linear-gradient(
                     to top,
                     rgba(0, 0, 0, 0.85) 0%,
-                    rgba(0, 0, 0, 0.8) 30%,
+                    rgba(0, 0, 0, 0.5) 30%,
                     rgba(0, 0, 0, 0) 70%,
                     rgba(0, 0, 0, 0) 100%
                 );
@@ -74,7 +74,7 @@ export const MainHeader = styled.header`
 `;
 
 export const MainHeaderContent = styled.div`
-    margin: 2em ${containerWidth.xs};
+    margin: 12em ${containerWidth.xs};
     @media (${mediaQueryMin.sm}) {
         margin: 2em ${containerWidth.sm};
         width: 66vw;

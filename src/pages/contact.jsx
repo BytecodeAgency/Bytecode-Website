@@ -25,7 +25,7 @@ const Contact = () => (
         <Header
             img={require('../images/img/header/telefoon.jpg')}
             subtitle="Contact"
-            title="Een keertje langskomen? Gezellig!"
+            title="Langskomen? Gezellig!"
             text="Geef ons een belletje of stuur een mailtje
             en het is zo geregeld.
             De koffie, thee en koekjes staan al klaar.

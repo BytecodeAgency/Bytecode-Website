@@ -34,7 +34,7 @@ const Case = () => (
         <TextAndImage padded img={lockup} alt="Nonin apparaat met app">
             <h2>Introducing: Dawny</h2>
             <p className="introduction">
-                Door databeheer te centraliseren, data inzichtelijk te maken.
+                Data inzichtelijk maken door databeheer te centraliseren
                 Bytecode en het Reinier de Graaf Gasthuis slaan de handen ineen
                 om een oplossing te vinden die kan leiden tot het voorkomen van
                 een nachtelijke val en het vroegtijdig herkennen van
@@ -70,7 +70,7 @@ const Case = () => (
             </Introduction>
             <TextAndImage img={graph} alt="Nonin apparaat met app" fluid>
                 <p className="subtitle">Development</p>
-                <h3>Minder analyse. Meer controle</h3>
+                <h3>Minder analyse, m eer controle</h3>
                 <p className="big">
                     Een Android app verzameld de slaapdata (hartslag,
                     zuurstofwaarden, PAI en HRV) vanaf de Nonin WristOx2
@@ -86,7 +86,7 @@ const Case = () => (
                 fluid
             >
                 <p className="subtitle">Design</p>
-                <h3>Inzichtgevende Tools</h3>
+                <h3>Inzichtgevende tools</h3>
                 <p className="big">
                     Het dashboard biedt inzicht in de nachtelijke slaapdata.
                     Correlaties tussen slaapdata en slaapstadia kunnen worden

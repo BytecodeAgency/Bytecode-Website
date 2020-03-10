@@ -33,8 +33,8 @@ const TeamMembers = styled.section`
         flex-direction: row;
         align-items: center;
         & > * {
-            width: 50%;
-            flex-basis: 50%;
+            width: 33%;
+            flex-basis: 33%;
             padding: 0.5em;
             &:first-child {
                 padding-right: 3em;
@@ -79,12 +79,13 @@ const Over = () => (
                     title="Unieke perspectieven door unieke personen"
                     headingType="h2"
                 >
-                    Ons hechte team werkt keihard om jouw doelen te bereiken!
+                    Ons hechte team werkt keihard om jouw doelen te bereiken.
                     Door onze multidisciplinaire kennis versterken we elkaar en
                     delen we onze ervaring. Daarnaast krijgt iedereen ruimte tot
-                    inspraak in de toekomst van Bytecode en om bij te dragen aan
-                    vrije software projecten, waardoor we niet alleen gebruik
-                    maken van de nieuwste technieken, maar er ook aan bijdragen.
+                    inspraak in de toekomst van Bytecode, bijvoorbeeld door bij
+                    te dragen aan vrije software-projecten. Hierdoor maken we
+                    niet alleen gebruik van de nieuwste technieken, maar voegen
+                    we er ook iets aan toe.
                 </TextBlock>
 
                 <TeamMember
@@ -109,7 +110,7 @@ const Over = () => (
                 {/* TODO: Generate from array, maybe later change via dashb. */}
                 <TeamMember
                     name="Richard van 't Hof"
-                    title="Junior art-director en front-end developer"
+                    title="Junior art-director & Front-end developer"
                     img={require('../images/img/team/richard.jpg')}
                     email="mailto:richard@bytecode.nl"
                     link="https://www.therichard.space"
@@ -119,7 +120,7 @@ const Over = () => (
                 />
                 <TeamMember
                     name="Thomas Bodlaender"
-                    title="Sales- &amp; accountmanager"
+                    title="Sales- &amp; Accountmanager"
                     img={require('../images/img/team/thomas.jpg')}
                     email="mailto:thomas@bytecode.nl"
                     instagram="https://www.instagram.com/thomasbodje"
@@ -149,7 +150,7 @@ const Over = () => (
                 />
                 <TeamMember
                     name="Christiaan Färber"
-                    title="UI/UX Designer &amp; front-end developer"
+                    title="UI/UX Designer &amp; Front-end developer"
                     img={require('../images/img/team/chris.jpg')}
                     email="mailto:chris@bytecode.nl"
                 />
@@ -174,7 +175,7 @@ const Over = () => (
                 />
                 <TeamMember
                     name="Nigel Huijts"
-                    title="Stagair frontend development"
+                    title="Stagair Frontend developer"
                     img={require('../images/img/team/nigel.jpg')}
                     email="mailto:nigel@bytecode.nl"
                 />

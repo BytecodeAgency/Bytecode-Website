@@ -13,11 +13,13 @@ const login = require('../../images/img/cases/styr/login.png');
 const serviceDesk = require('../../images/img/cases/styr/service-desk.png');
 const model = require('../../images/img/cases/styr/model.png');
 const invision = require('../../images/img/cases/styr/invision.png');
+const development = require('../../images/img/cases/styr/invision.png');
+const research = require('../../images/img/cases/styr/invision.png');
 
 const pageSettings = {
     client: 'STYR',
     description:
-        'De STYR Allocator tool is een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.',
+        'De STYR Allocatortool is een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.',
     image: login,
     title: 'STYR',
     keywords: 'functiewaardering, online, platform, webapp',
@@ -33,7 +35,7 @@ const Case = () => (
                 hierdoor worden ingezet op hun echte expertise, en een meer
                 adviserende rol innemen. De digitalisering van het model heeft
                 een radicale impact, doordat de stappen van het model zijn
-                gestandaardiseerd. Om dit voor elkaar te krijgen heeft bytecode
+                gestandaardiseerd. Om dit voor elkaar te krijgen heeft Bytecode
                 advies geboden op strategisch niveau.
             </p>
         </TextAndImage>
@@ -54,42 +56,42 @@ const Case = () => (
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    Ontwikkel een praktische online waarderingstool waarmee de
-                    klanten van STYR zelf de zwaarte van rollen en functies
-                    kunnen vaststellen.
+                    Wij hebben een praktische online waarderingstool ontwikkeld
+                    waarmee de klanten van STYR zelf de zwaarte van rollen en
+                    functies kunnen vaststellen.
                 </p>
             </Introduction>
             <TextAndImage
-                img={invision}
+                img={research}
                 reverse
-                alt="Ontwerp van de service desk"
+                alt="Onderzoek naar de allocatortool"
             >
                 <p className="subtitle">Oplossing</p>
                 <h3>UX Research</h3>
                 <p>
                     Na een grondige intake zijn we begonnen met een eerste UX/UI
-                    design voor het Allocator tool. Extra’s die op basis van
-                    deze wireframes nog gewenst waren zijn ook toegevoegd.
+                    design voor het Allocatortool. Extra’s die op basis van deze
+                    wireframes nog gewenst waren zijn ook toegevoegd.
                 </p>
             </TextAndImage>
             <TextAndImage img={invision} alt="Ontwerp van de service desk">
                 <p className="subtitle">Oplossing</p>
                 <h3>UI Design</h3>
                 <p>
-                    In Invision zijn prototypes gemaakt van de Allocator tool.
-                    Op basis hiervan is feedback verzamelt en zijn de
+                    In Invision zijn prototypes gemaakt van de Allocatortool. Op
+                    basis hiervan is feedback verzameld en zijn de
                     functionaliteiten en design aangescherpt.
                 </p>
             </TextAndImage>
             <TextAndImage
-                img={invision}
+                img={development}
                 reverse
-                alt="Ontwerp van de service desk"
+                alt="Ontwikkeling van de service desk"
             >
                 <p className="subtitle">Oplossing</p>
                 <h3>Development</h3>
                 <p>
-                    De frontend van de allocator is ontwikkeld in React en voor
+                    De frontend van de Allocator is ontwikkeld in React en voor
                     de content van de beslisboom is een maatwerk oplossing
                     ontwikkeld voor het WordPress CMS.
                 </p>
@@ -98,7 +100,7 @@ const Case = () => (
                 <p className="subtitle">Resultaten</p>
                 <h2>Realiseren</h2>
                 <p>
-                    Het design van de allocator is opgebouwd uit opeenvolgende
+                    Het design van de Allocator is opgebouwd uit opeenvolgende
                     pagina’s die de gebruiker doorloopt, waarbij keuzes gemaakt
                     worden door op opties te klikken die bij een
                     werknemerprofiel passen.

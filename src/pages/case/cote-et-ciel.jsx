@@ -26,7 +26,7 @@ const pageSettings = {
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <TextAndImage padded img={login} alt="Woning Corporatie offerte">
+        <TextAndImage padded img={login} alt="Woningcorporatie offerte">
             <h2>Prestaties en migraties</h2>
             <p className="introduction">
                 De bestaande webshop van côte&ciel voldeed niet meer aan de
@@ -47,7 +47,7 @@ const Case = () => (
                 'SEO',
                 'Magento Development',
                 'Shopify Development',
-                'Cloud Servers',
+                'Cloudservers',
                 'Webshop migratie',
                 'Conversie optimalisatie',
             ]}
@@ -85,10 +85,10 @@ const Case = () => (
                 <p className="subtitle">Resultaten</p>
                 <h2>Realiseren</h2>
                 <p className="introduction">
-                    Het côte&ciel project is inmiddels door ons overgezet naar
-                    Shopify voor een stabielere omgeving en snellere frontend
-                    ontwikkeling. Hierbij hebben wij zowel de launch engineering
-                    als data migratie verzorgd.
+                    Het côte&ciel-project is inmiddels door ons overgezet naar
+                    Shopify voor een stabielere omgeving en snellere
+                    frontend-ontwikkeling. Hierbij hebben wij zowel de launch
+                    engineering als datamigratie verzorgd.
                 </p>
             </TextAndImage>
         </Section>

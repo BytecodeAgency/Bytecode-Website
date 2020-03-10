@@ -44,7 +44,7 @@ const Case = () => (
             deliverables={[
                 'Webapp',
                 'Custom CMS',
-                'Cloud servers',
+                'Cloudservers',
                 'Doorontwikkeling',
             ]}
             alt="website image mooiwerkbreda"
@@ -60,7 +60,7 @@ const Case = () => (
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    De belangrijkste reden voor een maatwerk applicatie is
+                    De belangrijkste reden voor een maatwerkapplicatie is
                     controle over de functionaliteiten en de data.
                 </p>
             </Introduction>
@@ -70,7 +70,7 @@ const Case = () => (
                 alt="Pagina op de mooiwerkbreda website"
             >
                 <p className="subtitle">Research</p>
-                <h3>Agile toepassing</h3>
+                <h3>Agile-toepassing</h3>
                 <p>
                     Aan de hand van de vastgestelde doelgroep en requirements
                     hebben we een MVP opgesteld van 4 sprints. Hierna was er

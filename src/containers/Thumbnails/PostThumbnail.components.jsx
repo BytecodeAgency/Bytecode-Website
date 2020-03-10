@@ -67,7 +67,7 @@ const ThumbnailImgBase = styled.figure`
     background-position: center center;
     background-size: cover;
     transition: all 0.5s ease;
-    height: ${props => (props.big ? '80vh' : '40rem')};
+    height: ${props => (props.big ? '80vh' : '20rem')};
     overflow: hidden;
     object-fit: cover;
     @media (${mediaQueryMin.md}) {
