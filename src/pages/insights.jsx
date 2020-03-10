@@ -42,22 +42,6 @@ const blogArchive = ({ data }) => {
                     ))}
                 </Gallery>
             </Container>
-            {/* <hr />
-            <Container>
-                        <h3>Een frisse blik op het internet</h3>
-
-
-                        <p>
-                            Hier zie je artikelen die met passie zijn geschreven
-                            door Bytecode, een jonge en moderne web agency. Wij
-                            laten jou graag zien hoe je de kracht van het
-                            internet kunt gebruiken om alles uit jezelf te
-                            halen. Dit doen we door interessante artikelen te
-                            schrijven, maar ook door deze inzichten in onze
-                            werkzaamheden te verwerken.
-                        </p>
-
-            </Container> */}
         </Layout>
     );
 };

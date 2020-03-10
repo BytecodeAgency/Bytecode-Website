@@ -51,12 +51,6 @@ const TeamMembers = styled.section`
             }
         }
     }
-    /* @media (${mediaQueryMin.lg}) {
-        padding: 3em ${containerWidth.lg};
-    }
-    @media (${mediaQueryMin.xxl}) {
-        padding: 7em ${containerWidth.xl};
-    } */
 `;
 
 const Over = () => (

@@ -20,10 +20,6 @@ export const TextAndImageBase = styled.div`
     containerWidth.sm
 };
     }
-    /* @media (${mediaQueryMin.lg}) {
-        grid-template: auto / ${containerWidth.lg} 1fr 1fr ${containerWidth.lg};
-        grid-column-gap: 5vw;
-    } */
     @media (${mediaQueryMin.lg}) {
         grid-template: auto / ${props =>
             props.fluid ? containerWidth.md : containerWidth.xl} ${props =>

@@ -192,7 +192,7 @@ export const BlackOverlay = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background: black;
+    background: #000;
     transition: all 0.5s ease;
     opacity: 0;
     display: none;
