@@ -131,7 +131,7 @@ const Home = () => (
                     <Col offset={{ lg: 1 }} md={12} lg={6}>
                         <GroupImage
                             width="700"
-                            src={require('../images/img/content/team-700.png')}
+                            src={require('../images/img/content/group.png')}
                             alt="Onze mindset"
                         />
                     </Col>

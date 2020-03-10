@@ -38,10 +38,10 @@ const Cases = () => (
                     postImageUrl={sungevity}
                 />
                 <PostThumbnail
-                    title="Brengt Breda dichter bij elkaar"
-                    category="Mooiwerk Breda"
-                    slug="/case/mooiwerk"
-                    postImageUrl={mooiwerk}
+                    title="Hoge kwaliteit rugtassen"
+                    category="côte&ciel"
+                    slug="/case/cote-et-ciel"
+                    postImageUrl={coteetciel}
                 />
                 <PostThumbnail
                     title="Valpreventie voor ouderen"
@@ -61,10 +61,10 @@ const Cases = () => (
             </Gallery>
             <Gallery padded sm={33}>
                 <PostThumbnail
-                    title="Hoge kwaliteit rugtassen"
-                    category="côte&ciel"
-                    slug="/case/cote-et-ciel"
-                    postImageUrl={coteetciel}
+                    title="Brengt Breda dichter bij elkaar"
+                    category="Mooiwerk Breda"
+                    slug="/case/mooiwerk"
+                    postImageUrl={mooiwerk}
                 />
             </Gallery>
         </Container>
