@@ -16,14 +16,12 @@ export const TextAndImageBase = styled.div`
         grid-column-gap: ${props => props.gutter};
     }
     @media (${mediaQueryMin.md}) {
-        grid-template: auto / ${containerWidth.sm} ${props => props.grid} ${
-    containerWidth.sm
-};
+        grid-template: auto / ${containerWidth.sm} ${props => props.grid} ${containerWidth.sm};
     }
     @media (${mediaQueryMin.lg}) {
         grid-template: auto / ${props =>
-            props.fluid ? containerWidth.md : containerWidth.xl} ${props =>
-    props.grid}  ${containerWidth.md};
+                props.fluid ? containerWidth.md : containerWidth.xl} ${props =>
+                props.grid} ${containerWidth.md};
     }
 `;
 

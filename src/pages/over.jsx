@@ -10,7 +10,7 @@ import ContactForm from '../containers/ContactForm/ContactForm';
 // eslint-disable-next-line import/extensions
 import theme from '../styles/theme.js';
 
-const { mediaQueryMin, containerWidth } = theme;
+const { mediaQueryMin } = theme;
 
 const pageSettings = {
     title: `Over ons - Bytecode Digital Agency |
