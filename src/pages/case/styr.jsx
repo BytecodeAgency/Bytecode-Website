@@ -70,7 +70,7 @@ const Case = () => (
                 <p>
                     Na een grondige intake zijn we begonnen met een eerste UX/UI
                     design voor het Allocatortool. Extra’s die op basis van deze
-                    wireframes nog gewenst waren zijn ook toegevoegd.
+                    wireframes nog gewenst waren, zijn ook toegevoegd.
                 </p>
             </TextAndImage>
             <TextAndImage img={invision} alt="Ontwerp van de service desk">

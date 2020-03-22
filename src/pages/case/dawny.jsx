@@ -70,7 +70,7 @@ const Case = () => (
             </Introduction>
             <TextAndImage img={graph} alt="Nonin apparaat met app" fluid>
                 <p className="subtitle">Development</p>
-                <h3>Minder analyse, m eer controle</h3>
+                <h3>Minder analyse, meer controle</h3>
                 <p className="big">
                     Een Android app verzameld de slaapdata (hartslag,
                     zuurstofwaarden, PAI en HRV) vanaf de Nonin WristOx2
