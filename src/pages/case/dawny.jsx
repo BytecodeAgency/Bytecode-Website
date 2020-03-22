@@ -96,7 +96,7 @@ const Case = () => (
             <TextAndImage img={data} alt="Nonin apparaat met app" fluid>
                 <h3>Statistische analyse</h3>
                 <p className="big">
-                    Doormiddel van verschillende export functies kan data
+                    Door middel van verschillende export functies kan data
                     gemakkelijk in SPSS worden ingeladen voor statistische
                     analyses.
                 </p>

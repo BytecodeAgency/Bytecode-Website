@@ -24,7 +24,7 @@ const pageSettings = {
     title: 'Duurzame digitale omgeving',
     logo,
     keywords:
-        'verduurzaming, energie, tranistie, offerte, tool, digitaal, onderzoek',
+        'verduurzaming, energie, transitie, offerte, tool, digitaal, onderzoek',
     clientBio:
         "Sungevity is een bedrijf gespecialiseerd in het ontwerpen en installeren van zonnepanelen. Sungevity's missie is om groene energie op te wekken op alle daken die daarvoor geschikt zijn.",
 };
