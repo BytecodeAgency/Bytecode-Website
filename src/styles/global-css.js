@@ -86,7 +86,8 @@ const GlobalStyles = createGlobalStyle`
         background: ${theme.colors.tertiary};
         color: ${theme.colors.white}
     }
-    strong { font-weight: 700}
+    strong { font-weight: 700; }
+    em { font-style: italic; }
     ${textScaler}
     ul { list-style: circle};
     ol {

@@ -25,7 +25,7 @@ const PostThumbnail = ({ big, title, slug, category, postImageUrl }) => {
             />
             <ThumbnailContent big={big}>
                 <Subtitle className="subtitle">{category}</Subtitle>
-                <h5>{cutOffText(title, 65)}</h5>
+                <h5>{cutOffText(title, 80)}</h5>
                 <a className="thumbnail-cta caption" href={slug}>
                     Lees meer
                 </a>
