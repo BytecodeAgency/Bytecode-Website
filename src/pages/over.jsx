@@ -114,7 +114,7 @@ const Over = () => (
                 />
                 <TeamMember
                     name="Thomas Bodlaender"
-                    title="Sales- &amp; Accountmanager"
+                    title="Online Marketeer"
                     img={require('../images/img/team/thomas.jpg')}
                     email="mailto:thomas@bytecode.nl"
                     instagram="https://www.instagram.com/thomasbodje"
