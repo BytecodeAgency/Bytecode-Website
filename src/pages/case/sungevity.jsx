@@ -24,7 +24,7 @@ const pageSettings = {
     title: 'Duurzame digitale omgeving',
     logo,
     keywords:
-        'verduurzaming, energie, tranistie, offerte, tool, digitaal, onderzoek',
+        'verduurzaming, energie, transitie, offerte, tool, digitaal, onderzoek',
     clientBio:
         "Sungevity is een bedrijf gespecialiseerd in het ontwerpen en installeren van zonnepanelen. Sungevity's missie is om groene energie op te wekken op alle daken die daarvoor geschikt zijn.",
 };
@@ -38,7 +38,7 @@ const Case = () => (
                 huurders zich kunnen inschrijven voor het Sungevity
                 zonnepanelenprogramma. Helaas was deze tool niet stabiel genoeg
                 en er was veel downtime. Door het gebruik van cloudservers heeft
-                Bytecode de stabliteit van het platform weten te verbeteren en
+                Bytecode de stabiliteit van het platform weten te verbeteren en
                 nieuwe features toegevoegd.
             </p>
         </TextAndImage>
@@ -81,7 +81,7 @@ const Case = () => (
                     <p className="subtitle">prestaties</p>
                     <h3>Aanpasbaarheid</h3>
                     <p>
-                        door de verbeterde toegankelijkheid van het platform
+                        Door de verbeterde toegankelijkheid van het platform
                         voor werknemers kunnen zij gemakkelijk en vaker nieuwe
                         huuradressen toevoegen.
                     </p>

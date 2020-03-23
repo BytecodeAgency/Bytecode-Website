@@ -64,7 +64,7 @@ const Case = () => (
                     Breda Actief is een grote organisatie, en meerdere mensen
                     binnen de organisatie willen de content op de website kunnen
                     aanpassen. Toch is het belangrijk dat de website een
-                    consistente huissttijl heeft, toegankelijk is en goede
+                    consistente huisstijl heeft, toegankelijk is en goede
                     prestaties levert.
                 </p>
             </Introduction>
