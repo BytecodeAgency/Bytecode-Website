@@ -20,7 +20,7 @@ const pageSettings = {
     title: 'Brengt Breda in beweging',
     client: 'Breda Actief',
     description:
-        'Wij brachten Breda bij elkaar door sporten in Breda toegankelijker te maken',
+        'Wij brachten Breda bij elkaar door sporten in Breda toegankelijker te maken.',
     image: featured,
     keywords: 'breda actief, mooiwerkbreda, case, bytecode digital agency',
 };
@@ -74,7 +74,11 @@ const Case = () => (
                 <p>
                     De website is volledig toegankelijk voor mensen met een
                     beperking, zodat iedereen gebruik kan maken van Breda
-                    Actief.
+                    Actief. Dit betekent dat de website onder andere kan worden
+                    gebruikt door het gebruik van screenreaders voor blinden en
+                    slechtzienden en volledig genavigeerd kan worden met gebruik
+                    van het toetsenbord voor mensen die geen muis kunnen
+                    bedienen.
                 </p>
             </TextAndImage>
             <TextAndImage img={administration} alt="Uptime prestaties">

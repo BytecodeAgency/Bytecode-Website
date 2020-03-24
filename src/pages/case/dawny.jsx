@@ -34,7 +34,6 @@ const Case = () => (
         <TextAndImage padded img={lockup} alt="Nonin apparaat met app">
             <h2>Introducing: Dawny</h2>
             <p className="introduction">
-                Data inzichtelijk maken door databeheer te centraliseren
                 Bytecode en het Reinier de Graaf Gasthuis slaan de handen ineen
                 om een oplossing te vinden die kan leiden tot het voorkomen van
                 een nachtelijke val en het vroegtijdig herkennen van
@@ -62,17 +61,18 @@ const Case = () => (
                 <p className="introduction">
                     Van de senioren (55 jaar en ouder) die een heup breken,
                     overlijdt bijna 25% binnen een jaar na het oplopen van de
-                    heupfractuur{' '}
+                    heupfractuur
                     <a href="http://dx.doi.org/10.1007/978-90-313-9265-0_8">
-                        (Verhaar et al., 2013)
+                        &nbsp;(Verhaar et al., 2013)&nbsp;
                     </a>
+                    Met Dawny onderzoeken wij manieren om dit te voorkomen.
                 </p>
             </Introduction>
             <TextAndImage img={graph} alt="Nonin apparaat met app" fluid>
                 <p className="subtitle">Development</p>
                 <h3>Minder analyse, meer controle</h3>
                 <p className="big">
-                    Een Android app verzameld de slaapdata (hartslag,
+                    Een Android app verzamelt de slaapdata (hartslag,
                     zuurstofwaarden, PAI en HRV) vanaf de Nonin WristOx2
                     wearable.
                 </p>
@@ -108,6 +108,10 @@ const Case = () => (
                 <h2>Altijd in ontwikkeling</h2>
                 <p className="big">
                     Er is een uitgebreide roadmap voor het project opgesteld.
+                    Met verbeteringen in het garanderen van de privacy van
+                    patiënten en extra datapunten gaan de onderzoekers van het
+                    Reinier de Graaf ziekenhuis aan de slag om het ultieme doel
+                    te bereiken; geen doden meer door heupbreuken.
                 </p>
             </TextAndImage>
         </Section>
