@@ -61,9 +61,9 @@ const Case = () => (
                 <h2>De uitdaging</h2>
                 <p className="introduction">
                     Samen met The Pumphouse, een samenwerkingspartner van
-                    Bytecode, hebben we een assessment opgesteld met de
+                    Bytecode, hebben we een evaluatie opgesteld met de
                     verbeterpunten. Op basis hiervan hebben we een plan van
-                    aanpak gemaakt en een planning voor de komende maanden.
+                    aanpak en een planning voor de komende maanden gemaakt.
                     Gedurende het proces hebben we evaluatiemomenten ingelast om
                     in te spelen op de nieuwste data.
                 </p>

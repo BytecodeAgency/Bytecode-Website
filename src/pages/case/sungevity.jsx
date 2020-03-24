@@ -31,15 +31,15 @@ const pageSettings = {
 
 const Case = () => (
     <Layout pageSettings={pageSettings}>
-        <TextAndImage padded img={woco} alt="Woningcorporatie offerte platform">
-            <h2>Woningcorporatie offerte platform</h2>
+        <TextAndImage padded img={woco} alt="Woningcorporatie offerteplatform">
+            <h2>Woningcorporatie offerteplatform</h2>
             <p className="introduction">
                 Het Sungevity woningcorporatie platform is een plek waar
                 huurders zich kunnen inschrijven voor het Sungevity
                 zonnepanelenprogramma. Helaas was deze tool niet stabiel genoeg
-                en er was veel downtime. Door het gebruik van cloudservers heeft
-                Bytecode de stabiliteit van het platform weten te verbeteren en
-                nieuwe features toegevoegd.
+                en was er veel downtime. Door het gebruik van cloudservers heeft
+                Bytecode de stabiliteit van het platform weten te verbeteren.
+                Daarnaast zijn veel nieuwe features toegevoegd.
             </p>
         </TextAndImage>
 
@@ -58,10 +58,10 @@ const Case = () => (
             <Introduction>
                 <h2>De uitdaging</h2>
                 <p className="introduction">
-                    Door een gedeelte van de tool te herschrijven, en een
-                    stabiele digitale omgeving te creëren door het gebruik van
-                    verschillende cloudservers is de stabiliteit van het
-                    platform toegenomen en konden er hierna gemakkelijk nieuwe
+                    Door een gedeelte van de tool te herschrijven en een stabile
+                    digitale omgeving te creëren, door het gebruik van
+                    verschillende cloudservers, is de stabiliteit van het
+                    platform toegenomen en konden hierna gemakkelijk nieuwe
                     features aan worden toegevoegd.
                 </p>
             </Introduction>
@@ -94,14 +94,14 @@ const Case = () => (
                 >
                     <h3>99.9%+ uptime</h3>
                     <p>
-                        Om het platform te optimaliseren voor meerdere woning
-                        corporaties hebben we in de Python Flask applicatie
-                        verbeteringen doorgevoerd aan de offertetool. Daarnaast
-                        hebben we gezorgd voor schaalbare cloudhosting en Nginx
-                        routing- en serveroptimalisaties. Op het platform kunnen
-                        woningcorporaties nu zelf aanpassingen doorvoeren en is
-                        het gemakkelijk om een nieuwe corporatie op te zetten in
-                        enkele uren.
+                        Om het platform te optimaliseren voor meerdere
+                        woningcorporaties hebben we in de Python Flask
+                        applicatie verbeteringen doorgevoerd aan de offertetool.
+                        Daarnaast hebben we gezorgd voor schaalbare cloudhosting
+                        en Nginx routing- en serveroptimalisaties. Op het
+                        platform kunnen woningcorporaties nu zelf aanpassingen
+                        doorvoeren en is het gemakkelijk om een nieuwe
+                        corporatie op te zetten in enkele uren.
                     </p>
                 </TextAndImage>
             </Section>
@@ -110,8 +110,8 @@ const Case = () => (
                 <h2>Realiseren</h2>
                 <p className="introduction">
                     Inmiddels zijn er al acht woningcorporaties opgezet. Mocht
-                    een van de websites downtime ondervinden dan krijgen onze
-                    site reliability engineers hier een melding van zodat er
+                    een van de websites downtime ondervinden, dan krijgen onze
+                    site reliability engineers hier een melding van, zodat er
                     direct gehandeld kan worden.
                 </p>
             </TextAndImage>
