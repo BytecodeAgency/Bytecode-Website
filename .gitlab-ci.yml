@@ -4,7 +4,6 @@ stages:
   - test
   - release
   - deploy
-  - analyze
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
@@ -63,10 +62,4 @@ pages:
   artifacts:
     paths:
       - public
-
-include:
-  - template: Code-Quality.gitlab-ci.yml
-code_quality:
-  stage: analyze
-  dependencies: []
 
