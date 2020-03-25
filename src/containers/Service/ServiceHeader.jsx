@@ -32,40 +32,47 @@ const StyledText = styled.p`
     letter-spacing: 0;
     font-weight: 400;
     line-height: 4.2vh;
+    margin-top: 10%;
 `;
 
-const StyledImage = styled.img.attrs({
-    src: require('../../images/img/cases/dawny/mockup small.png'),
-})`
-    height: 123vh;
-    width: 46vw;
+const ImageContainer = styled.section`
+    height: 100vh;
+    width: 50%;
     padding-left: 5vh;
-
 `;
 
 const StyledTitleContainer = styled.section`
-    height: 42vh;
-    width: 50vw;
-    padding: 25vh 9vw 10vh 8vw;
+    height: 50%;
+    width: 50%;
+    padding: 50vh 9vw 10vh 8vw;
 `;
 
 const StyledContainer = styled.section`
-    height: 123vh;
-    width: 90vw;
+    height: 120%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-
+    margin-bottom: 20%;
 `;
 
-const ServiceHeader = ({ title, subtitle, text, img }) => (
-    <StyledContainer>
-        <StyledTitleContainer>
-            <StyledSubtitle>{subtitle}</StyledSubtitle>
-            <StyledTitle>{title}</StyledTitle>
-            <StyledText>{text}</StyledText>
-        </StyledTitleContainer>
-        <StyledImage />
-    </StyledContainer>
-);
+const StyledImage = styled.img`
+        max-width: 100%;
+    `;
+
+const ServiceHeader = ({ title, subtitle, text, src }) => {
+
+    return (
+        <StyledContainer>
+            <StyledTitleContainer>
+                <StyledSubtitle>{subtitle}</StyledSubtitle>
+                <StyledTitle>{title}</StyledTitle>
+                <StyledText>{text}</StyledText>
+            </StyledTitleContainer>
+            <ImageContainer>
+                <StyledImage src={src}/>
+            </ImageContainer>
+        </StyledContainer>
+    );
+};
 
 export default ServiceHeader;
