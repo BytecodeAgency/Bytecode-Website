@@ -55,3 +55,14 @@ export const ServiceBackgroundContainer = styled.section`
     height: 15vh;
     margin-bottom: 35vh;
 `
+
+export const StyledTitleMedium = styled.h3`
+    height: 20%;
+    width: ${props => (props.src ? '90%' : '70%')};
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 7vh;
+    font-weight: bold;
+    letter-spacing: 0.1vh;
+    line-height: 7vh;
+`;

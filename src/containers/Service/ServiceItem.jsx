@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import {
-    ServiceBackgroundContainer,
-    ServiceBackgroundImage
-} from "./Service.components";
+import LeesMeerButton from "../../components/LeesMeerButton";
 
 const StyledContainer = styled.section`
     min-height: ${props => (props.src ? '95vh' : '45vh')};
@@ -61,27 +57,6 @@ const StyledText = styled.p`
     text-align: left;
 `;
 
-const LeesMeerButton = styled(Link)`
-    height: 10vh;
-    width: 13vw;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-`;
-
-const ArrowText = styled.p`
-    width: 50%;
-    align-self: stretch;
-    color: #f7f7f7;
-    font-size: 2.3vh;
-`;
-const ArrowImage = styled.img`
-    padding-top: 7%;
-    width: 30%;
-    color: #f7f7f7;
-`;
-
 const StyledImage = styled.img`
     max-height: 100%;
     max-width: 100%;
@@ -122,7 +97,6 @@ const ServiceItem = ({
     link,
     listTitle,
     listItems,
-    listImage,
     light,
 }) => {
     return (
@@ -130,12 +104,7 @@ const ServiceItem = ({
             <StyledTextContainer image={src}>
                 <StyledTitle src={src}>{title}</StyledTitle>
                 <StyledText>{text}</StyledText>
-                <LeesMeerButton to={link}>
-                    <ArrowText>Lees meer</ArrowText>
-                    <ArrowImage
-                        src={require('../../images/img/arrow@3x.svg')}
-                    />
-                </LeesMeerButton>
+                <LeesMeerButton width={"30%"} link={link}/>
             </StyledTextContainer>
             {src ? (
                 <ImageContainer>

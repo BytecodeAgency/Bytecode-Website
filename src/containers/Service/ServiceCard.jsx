@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import {Link} from "gatsby";
+import React from 'react';
+import styled from 'styled-components';
+import LeesMeerButton from "../../components/LeesMeerButton";
 
 const CardContainer = styled.section`
-    margin-top:30vh;
-    width:80%;
+    margin-top: 30vh;
+    width: 80%;
     height: 100vh;
-    left:10%;
+    left: 10%;
     position: relative;
 `;
 
@@ -27,7 +27,7 @@ const StyledSubtitle = styled.p`
     font-weight: bold;
     line-height: 5vh;
     letter-spacing: 0.4vh;
-`
+`;
 
 const StyledTitle = styled.h3`
     height: 20%;
@@ -42,7 +42,7 @@ const StyledTitle = styled.h3`
 `;
 
 const StyledText = styled.p`
-    max-width:80%;
+    max-width: 80%;
     color: #ffffff;
     font-family: Lato;
     font-size: 2.2vh;
@@ -52,21 +52,7 @@ const StyledText = styled.p`
     margin-top: 10%;
 `;
 
-const LeesMeerButton = styled(Link)`
-    height: 10vh;
-    width: 13vw;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-`;
 
-const ArrowText = styled.p`
-    width: 50%;
-    align-self: stretch;
-    color: #f7f7f7;
-    font-size: 2.2vh;
-`;
 const ArrowImage = styled.img`
     padding-top: 7%;
     width: 26%;
@@ -74,42 +60,28 @@ const ArrowImage = styled.img`
 `;
 
 const ImageContainer = styled.section`
-     width: 40vw;
+    width: 40vw;
     height: 65vh;
-`
+`;
 
 const StyledImage = styled.img`
     position: relative;
     bottom: 40vh;
     left: 30vw;
     z-index: -1;
-`
-const ServiceCard = ({
-    subtitle,
-    title,
-    text,
-    src,
-    link,
-                     }) => (
-                         <CardContainer>
-                             <TextContainer>
-                                 <StyledSubtitle>{subtitle}</StyledSubtitle>
-                                 <StyledTitle>{title}</StyledTitle>
-                                 <StyledText>{text}</StyledText>
-                                 <LeesMeerButton to={link}>
-                                     <ArrowText>Lees meer</ArrowText>
-                                     <ArrowImage
-                                         src={require('../../images/img/arrow@3x.svg')}
-                                     />
-                                 </LeesMeerButton>
-                             </TextContainer>
-                             <ImageContainer>
-                                 <StyledImage
-                                    src={src}
-                                 />
-                             </ImageContainer>
-                         </CardContainer>
-
+`;
+const ServiceCard = ({ subtitle, title, text, src, link }) => (
+    <CardContainer>
+        <TextContainer>
+            <StyledSubtitle>{subtitle}</StyledSubtitle>
+            <StyledTitle>{title}</StyledTitle>
+            <StyledText>{text}</StyledText>
+            <LeesMeerButton width={"26%"} link={link}/>
+        </TextContainer>
+        <ImageContainer>
+            <StyledImage src={src} />
+        </ImageContainer>
+    </CardContainer>
 );
 
 export default ServiceCard;
