@@ -134,7 +134,6 @@ const ServiceItem = ({
                     <ArrowText>Lees meer</ArrowText>
                     <ArrowImage
                         src={require('../../images/img/arrow@3x.svg')}
-                        alt="Image couldnt load"
                     />
                 </LeesMeerButton>
             </StyledTextContainer>

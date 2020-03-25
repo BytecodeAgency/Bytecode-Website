@@ -9,6 +9,7 @@ import {
     ServiceBackgroundContainer,
     ServiceBackgroundImage,
 } from '../containers/Service/Service.components';
+import ServiceCard from "../containers/Service/ServiceCard";
 
 const pageSettings = {
     title: 'Services - Bytecode Digital Agency B.V.',
@@ -88,6 +89,14 @@ const Services = () => (
             src={require('../images/img/services/Shop Screenshot x2.png')}
             image
             link="/services"
+        />
+
+        <ServiceCard
+            subtitle="OPROEP"
+            title="Start-Up Mentoring"
+            text="Bytecode wil graag start-ups helpen ontspruiten"
+            link="/services"
+            src={require('../images/img/services/ServiceCardImage x3.svg')}
         />
         <Container>
             <ContactForm />
