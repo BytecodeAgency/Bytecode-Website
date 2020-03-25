@@ -10,6 +10,7 @@ export const StyledContainer = styled.section`
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
+    margin-bottom: 1%;
 `;
 
 export const StyledText = styled.p`
@@ -42,7 +43,7 @@ export const StyledText = styled.p`
 `;
 
 export const ImageContainer = styled.section`
-    height: 100%;
+    max-height: 100vmin;
     width: 45%;
     position: relative;
     top: 10%;
@@ -61,13 +62,13 @@ export const StyledTitleContainer = styled.section`
     top:25%;
     left:5%;
     @media (${mediaQueryMin.lg}) {
-        top:20%
+        top:20%;
     }
 `;
 
 export const StyledImage = styled.img`
     max-width: 90%;
-    max-height: 90$;
+    max-height: 120vmin;
 `;
 
 export const StyledTitle = styled.h1`

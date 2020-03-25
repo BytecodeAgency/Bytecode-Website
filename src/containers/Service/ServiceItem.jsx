@@ -24,13 +24,13 @@ const ServiceItem = ({
 }) => {
     return (
         <StyledContainer src={src} light={light}>
-            <StyledTextContainer image={src}>
+            <StyledTextContainer light={light} image={src}>
                 <StyledTitleMedium wide={src}>{title}</StyledTitleMedium>
                 <StyledText>{text}</StyledText>
                 <LeesMeerButton width="30%" link={link} />
             </StyledTextContainer>
             {src ? (
-                <ImageContainer>
+                <ImageContainer light={light}>
                     <StyledImage src={src} />
                 </ImageContainer>
             ) : (

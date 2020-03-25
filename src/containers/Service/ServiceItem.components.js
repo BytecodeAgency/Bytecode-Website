@@ -4,7 +4,7 @@ import theme from '../../styles/theme';
 const { mediaQueryMin } = theme;
 
 export const StyledContainer = styled.section`
-    height: ${props => (props.src ? '95vmin' : '45vmin')};
+    height: 55vmin;
     width: 95vw;
     margin-left: 5vw;
     display: flex;
@@ -14,12 +14,23 @@ export const StyledContainer = styled.section`
     margin-bottom: 5%;
     margin-top: 5%;
     overflow: hidden;
-
+    @media (${mediaQueryMin.xs}) {
+        height: 56vmin;
+    }
+    @media (${mediaQueryMin.sm}) {
+        height: 70vmin;
+    }
+    @media (${mediaQueryMin.md}) {
+        height: ${props => (props.src ? '95vmin' : '45vmin')};
+    }
+    @media (${mediaQueryMin.lg}) {
+        height: 103vmin;
+    }
 `;
 
 export const ImageContainer = styled.section`
     max-height: 90vmin;
-    max-width: 65vw;
+    width: ${props => (props.light ? '62vw' : '55vw')};
     position: absolute;
     right: 0;
     bottom: 0;
@@ -27,25 +38,52 @@ export const ImageContainer = styled.section`
 `;
 
 export const StyledTextContainer = styled.section`
-    height: 90vmin;
-    width: ${props => (props.image ? '26%' : '40%')};
-    margin-left: 5%;
-    padding-top: 6%;
+    max-height: 90%;
+    width: ${props => (props.image ? '24%' : '40%')};
+    margin: ${props => (props.light ? '7%' : '4%')};
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: ${props => (props.light ? '8%' : '0')};
+    @media (${mediaQueryMin.sm}) {
+        top: ${props => (props.light ? '8%' : '4.5%')};
+    }
+    @media (${mediaQueryMin.lg}) {
+        top: ${props => (props.light ? '8%' : '7%')};
+    }
+    @media (${mediaQueryMin.xl}) {
+        top: ${props => (props.light ? '8%' : '9%')};
+    }
 
+    z-index: +1;
 `;
 
 export const StyledText = styled.p`
-    max-height: 70vmin;
+    max-width: 100%;
     opacity: 0.99;
     color: #f7f7f7;
     font-family: Lato;
-    font-size: 2.3vmin;
+    font-size: 1.15vmin;
     letter-spacing: 0;
-    line-height: 3.6vmin;
+    line-height: 2.1vmin;
     font-weight: 400;
     text-align: left;
+    @media (${mediaQueryMin.xs}) {
+        font-size: 1.25vmin;
+        line-height: 2.2vmin;
+    }
+    @media (${mediaQueryMin.sm}) {
+        font-size: 1.4vmin;
+        line-height: 2.3vmin;
+    }
+    @media (${mediaQueryMin.md}) {
+        font-size: 2vmin;
+        line-height: 3.1vmin;
+    }
+    @media (${mediaQueryMin.lg}) {
+        font-size: 2.4vmin;
+        line-height: 3.5vmin;
+    }
 `;
 
 export const StyledImage = styled.img`
@@ -79,16 +117,35 @@ export const StyledSubtitle = styled.p`
     line-height: 5vh;
     letter-spacing: 0.4vmin;
     opacity: 75%;
-    margin-bottom: 2vmin;
+    margin-bottom: 1vmin;
 `;
 
 export const StyledTitleMedium = styled.h3`
-    height: 20%;
     width: ${props => (props.wide ? '90%' : '70%')};
     color: #ffffff;
     font-family: Lato;
-    font-size: 7vmin;
+    font-size: 3.4vmin;
     font-weight: bold;
     letter-spacing: 0.1vmin;
-    line-height: 7vmin;
+    line-height: 4vmin;
+    @media (${mediaQueryMin.xs}) {
+        font-size: 3.4vmin;
+        line-height: 5vmin;
+    }
+    @media (${mediaQueryMin.sm}) {
+        font-size: 4.2vmin;
+        line-height: 6vmin;
+    }
+    @media (${mediaQueryMin.md}) {
+        font-size: 5.6vmin;
+        line-height: 7.2vmin;
+    }
+    @media (${mediaQueryMin.lg}) {
+        font-size: 6.6vmin;
+        line-height: 7vmin;
+    }
+    @media(${mediaQueryMin.xl}) {
+        font-size: 6.5vmin;
+        line-height: 6vmin;
+    }
 `;

@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from "styled-components";
 import {Link} from "gatsby";
+import theme from '../styles/theme';
+
+const { mediaQueryMin } = theme;
 
 const image = require('../images/img/arrow@3x.svg');
 
@@ -11,13 +14,26 @@ const LeesMeerContainer = styled(Link)`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    color: #f7f7f7;
 `;
 
 const ArrowText = styled.p`
     width: 50%;
     align-self: stretch;
-    color: #f7f7f7;
-    font-size: 2.3vh;
+
+    font-size: 1.3vmin;
+    @media (${mediaQueryMin.xs}){
+        font-size: 1.35vmin;
+    }
+    @media (${mediaQueryMin.sm}){
+        font-size: 1.45vmin;
+    }
+    @media (${mediaQueryMin.md}){
+        font-size: 2vmin;
+    }
+    @media (${mediaQueryMin.lg}){
+        font-size: 2.4vmin;
+    }
 `;
 
 const ArrowImage = styled.img`

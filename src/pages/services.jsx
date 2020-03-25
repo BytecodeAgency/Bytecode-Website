@@ -38,7 +38,6 @@ const Services = () => (
             en de wensen van de bedenker en gebruiker."
             src={require('../images/img/services/Logox3.svg')}
         />
-        {/*
         <ServiceItem
             title="Digital Tools"
             text="Digitale gereedschappen zijn als een extensie van de gebruiker waardoor ze hun
@@ -51,6 +50,24 @@ const Services = () => (
             link="/services"
             light
         />
+
+        <ServiceItem
+            title="Digital Commerce"
+            text="Digitale  Commerce gaat er in essentie om hoe je de digitale wereld gebruikt
+            om jouw bedrijf zo aantrekkelijk mogelijk te maken.
+            Zoals digitale gereedschappen gaan om de gebruiker iets te laten doen wat ze zelf willen bereiken
+            gaat commerce erom de gebruiker iets te laten bereiken wat jij wil.
+            We kijken hier bijvoorbeeld hoe we een gebruikerservaring creeëren die meer verkopen oplevert,
+            maar ook hoe we je goed laten voorkomen in zoekresultaten
+            of hoe we digitaal adverteren in jouw voordeel kunnen gebruiken.
+            Hierdoor hoef je minder zorgen te maken om klanten werven waardoor je fijner kan werken
+            en nieuwe dingen kan verzinnen."
+            src={require('../images/img/services/Shop Screenshot x2.png')}
+            image
+            link="/services"
+        />
+        {/*
+
 
         <ServiceItem
             title="Digital Enviroment"
@@ -76,21 +93,7 @@ const Services = () => (
         </ServiceBackgroundContainer>
 
 
-        <ServiceItem
-            title="Digital Commerce"
-            text="Digitale  Commerce gaat er in essentie om hoe je de digitale wereld gebruikt
-            om jouw bedrijf zo aantrekkelijk mogelijk te maken.
-            Zoals digitale gereedschappen gaan om de gebruiker iets te laten doen wat ze zelf willen bereiken
-            gaat commerce erom de gebruiker iets te laten bereiken wat jij wil.
-            We kijken hier bijvoorbeeld hoe we een gebruikerservaring creeëren die meer verkopen oplevert,
-            maar ook hoe we je goed laten voorkomen in zoekresultaten
-            of hoe we digitaal adverteren in jouw voordeel kunnen gebruiken.
-            Hierdoor hoef je minder zorgen te maken om klanten werven waardoor je fijner kan werken
-            en nieuwe dingen kan verzinnen."
-            src={require('../images/img/services/Shop Screenshot x2.png')}
-            image
-            link="/services"
-        />
+
 
         <ServiceCard
             subtitle="OPROEP"
