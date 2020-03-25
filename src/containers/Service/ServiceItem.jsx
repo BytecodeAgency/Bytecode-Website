@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import {
+    ServiceBackgroundContainer,
+    ServiceBackgroundImage
+} from "./Service.components";
 
 const StyledContainer = styled.section`
-    min-height: 95vh;
+    min-height: ${props => (props.src ? '95vh' : '45vh')};
     width: 95%;
     margin-left: 5%;
     display: flex;
     flex-direction: row;
     background-color: ${props => (props.light ? '#262626' : '#1a1a1a')};
     position: relative;
+
     margin-bottom: 5%;
     margin-top: 5%;
     overflow: hidden;
@@ -117,10 +122,11 @@ const ServiceItem = ({
     link,
     listTitle,
     listItems,
+    listImage,
     light,
 }) => {
     return (
-        <StyledContainer light={light}>
+        <StyledContainer src={src} light={light}>
             <StyledTextContainer image={src}>
                 <StyledTitle src={src}>{title}</StyledTitle>
                 <StyledText>{text}</StyledText>
@@ -149,6 +155,7 @@ const ServiceItem = ({
                     </StyledList>
                 </ListContainer>
             )}
+
         </StyledContainer>
     );
 };

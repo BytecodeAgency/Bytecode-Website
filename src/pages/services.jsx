@@ -1,17 +1,14 @@
 import React from 'react';
 import Layout from '../layouts/MainLayout';
-import TextBlock from '../containers/TextBlock/TextBlock';
-import { Container, Row, Col } from '../lib/Grid';
+import { Container } from '../lib/Grid';
 import ContactForm from '../containers/ContactForm/ContactForm';
-import ImageBlock from '../components/ImageBlock';
-import Process from '../containers/Process/Process';
-import Header from '../containers/Header';
-import Wrapper from '../components/Wrapper';
-import Service from '../containers/Service/Service';
-import DigitalOceanPartnerLogo from '../components/DigitalOceanPartnerLogo';
 import ServiceHeader from '../containers/Service/ServiceHeader';
 import ServiceItemSmall from '../containers/Service/ServiceItemSmall';
 import ServiceItem from '../containers/Service/ServiceItem';
+import {
+    ServiceBackgroundContainer,
+    ServiceBackgroundImage,
+} from '../containers/Service/Service.components';
 
 const pageSettings = {
     title: 'Services - Bytecode Digital Agency B.V.',
@@ -52,15 +49,16 @@ const Services = () => (
             link="/services"
             light
         />
+
         <ServiceItem
             title="Digital Enviroment"
             text="Digitale omgeving gaat erom hoe jouw hele digitale workflow moet worden opgebouwd:
-            wat is de beste manier om mijn applicaties te draaien?
-            Hoe kan ik handmatig data knippen en plakken zoveel mogelijk voorkomen?
-            Maar ook: wat in het geval dat ik moet opschalen?
-            Het is een holistische strategie voor jouw digitale werkplek zodat er geen technical debt ontstaat.
-            Hierdoor creeëren we een omgeving waarin je fijn en flexiebe kan werken
-            zodat jij je kan richten op nieuwe dingen verzinnen in plaats van pleisters plakken."
+                wat is de beste manier om mijn applicaties te draaien?
+                Hoe kan ik handmatig data knippen en plakken zoveel mogelijk voorkomen?
+                Maar ook: wat in het geval dat ik moet opschalen?
+                Het is een holistische strategie voor jouw digitale werkplek zodat er geen technical debt ontstaat.
+                Hierdoor creeëren we een omgeving waarin je fijn en flexiebe kan werken
+                zodat jij je kan richten op nieuwe dingen verzinnen in plaats van pleisters plakken."
             link="/services"
             listTitle="EXPERIENCE"
             listItems={[
@@ -69,6 +67,13 @@ const Services = () => (
                 'IT-automatisering',
             ]}
         />
+        <ServiceBackgroundContainer>
+            <ServiceBackgroundImage
+                src={require('../images/img/services/abstract graphx2.png')}
+            />
+        </ServiceBackgroundContainer>
+
+
         <ServiceItem
             title="Digital Commerce"
             text="Digitale  Commerce gaat er in essentie om hoe je de digitale wereld gebruikt

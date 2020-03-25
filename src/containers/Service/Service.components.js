@@ -43,3 +43,15 @@ export const ServiceIcon = styled.div`
 export const ServiceText = styled.div`
     flex: 1;
 `;
+
+export const ServiceBackgroundImage = styled.img`
+    overflow: visible;
+    margin-bottom: 20vh;
+    position: relative;
+    bottom: 30vh;
+`;
+export const ServiceBackgroundContainer = styled.section`
+    width: 120vw;
+    height: 15vh;
+    margin-bottom: 35vh;
+`
