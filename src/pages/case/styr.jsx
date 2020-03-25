@@ -90,8 +90,8 @@ const Case = () => (
                 <p className="subtitle">Oplossing</p>
                 <h3>Development</h3>
                 <p>
-                    De frontend van de Allocator is ontwikkeld in React en voor
-                    de content van de beslisboom is een maatwerk oplossing
+                    De frontend van de Allocator is ontwikkeld in React. Voor de
+                    content van de beslisboom is een maatwerk oplossing
                     ontwikkeld voor het WordPress CMS.
                 </p>
             </TextAndImage>
