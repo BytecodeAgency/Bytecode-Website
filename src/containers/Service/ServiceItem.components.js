@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import theme from '../../styles/theme';
+
+const { mediaQueryMin } = theme;
 
 export const StyledContainer = styled.section`
     height: ${props => (props.src ? '95vmin' : '45vmin')};
@@ -43,7 +46,6 @@ export const StyledText = styled.p`
     line-height: 3.6vmin;
     font-weight: 400;
     text-align: left;
-
 `;
 
 export const StyledImage = styled.img`
@@ -66,4 +68,27 @@ export const StyledList = styled.p`
     font-weight: 400;
     letter-spacing: 0.04vh;
     line-height: 2.5vh;
+`;
+
+export const StyledSubtitle = styled.p`
+    height: 1.5vmin;
+    color: #70c197;
+    font-family: Lato;
+    font-size: 2vmin;
+    font-weight: bold;
+    line-height: 5vh;
+    letter-spacing: 0.4vmin;
+    opacity: 75%;
+    margin-bottom: 2vmin;
+`;
+
+export const StyledTitleMedium = styled.h3`
+    height: 20%;
+    width: ${props => (props.wide ? '90%' : '70%')};
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 7vmin;
+    font-weight: bold;
+    letter-spacing: 0.1vmin;
+    line-height: 7vmin;
 `;

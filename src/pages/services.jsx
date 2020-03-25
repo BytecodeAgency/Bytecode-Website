@@ -38,6 +38,7 @@ const Services = () => (
             en de wensen van de bedenker en gebruiker."
             src={require('../images/img/services/Logox3.svg')}
         />
+        {/*
         <ServiceItem
             title="Digital Tools"
             text="Digitale gereedschappen zijn als een extensie van de gebruiker waardoor ze hun
@@ -97,7 +98,7 @@ const Services = () => (
             text="Bytecode wil graag start-ups helpen ontspruiten"
             link="/services"
             src={require('../images/img/services/ServiceCardImage x3.svg')}
-        />
+        /> */}
         <Container>
             <ContactForm />
         </Container>

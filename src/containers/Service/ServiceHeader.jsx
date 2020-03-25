@@ -1,16 +1,15 @@
 import React from 'react';
-import { StyledTitleLarge, StyledSubtitle } from './Service.components';
-import {StyledText, ImageContainer, StyledTitleContainer, StyledContainer, StyledImage} from "./ServiceHeader.components";
+import {StyledTitle,StyledSubtitle, StyledText, ImageContainer, StyledTitleContainer, StyledContainer, StyledImage} from "./ServiceHeader.components";
 
 
 const ServiceHeader = ({ title, subtitle, text, src }) => {
     return (
         <StyledContainer>
             <StyledTitleContainer>
-                <StyledSubtitle width="24vw" lineHeight="3vmin">
+                <StyledSubtitle>
                     {subtitle}
                 </StyledSubtitle>
-                <StyledTitleLarge>{title}</StyledTitleLarge>
+                <StyledTitle>{title}</StyledTitle>
                 <StyledText>{text}</StyledText>
             </StyledTitleContainer>
             <ImageContainer>

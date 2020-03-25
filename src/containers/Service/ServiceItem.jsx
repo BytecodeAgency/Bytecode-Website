@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import LeesMeerButton from '../../components/LeesMeerButton';
-import { StyledTitleMedium, StyledSubtitle } from './Service.components';
 import {
+    StyledTitleMedium,
+    StyledSubtitle,
     StyledContainer,
     ImageContainer,
     StyledTextContainer,
@@ -35,7 +35,7 @@ const ServiceItem = ({
                 </ImageContainer>
             ) : (
                 <ListContainer>
-                    <StyledSubtitle lineHeight="5vh" opacity="75%">
+                    <StyledSubtitle>
                         {listTitle}
                     </StyledSubtitle>
                     <StyledList>

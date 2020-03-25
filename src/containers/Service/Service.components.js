@@ -56,17 +56,7 @@ export const ServiceBackgroundContainer = styled.section`
     margin-bottom: 35vh;
 `;
 
-export const StyledTitleLarge = styled.h1`
-    height: 18vmin;
-    width: 30vw;
-    color: #ffffff;
-    font-family: Lato;
-    font-size: 10vmin;
-    font-weight: 900;
-    line-height: 9vmin;
-    letter-spacing: 0.3vmin;
 
-`;
 
 export const StyledTitleMedium = styled.h3`
     height: 20%;
@@ -82,26 +72,6 @@ export const StyledTitleMedium = styled.h3`
 
 `;
 
-export const StyledTitleSmall = styled.h3`
-    height: 13vmin;
-    width: 40vw;
-    color: #ffffff;
-    font-family: Lato;
-    font-size: 7vmin;
-    font-weight: bold;
-    letter-spacing: 0.1vmin;
-    line-height: 7vmin;
-    text-align: center;
-`;
 
-export const StyledSubtitle = styled.p`
-    height: 1.5vmin;
-    width: ${props => props.width};
-    color: #70c197;
-    font-family: Lato;
-    font-size: 2vmin;
-    font-weight: bold;
-    line-height: ${props => props.lineHeight};
-    letter-spacing: 0.4vmin;
-    opacity: ${props => props.opacity};
-`;
+
+
