@@ -2,6 +2,8 @@ import React from 'react'
 import styled from "styled-components";
 import {Link} from "gatsby";
 
+const image = require('../images/img/arrow@3x.svg');
+
 const LeesMeerContainer = styled(Link)`
     height: 10vh;
     width: 13vw;
@@ -17,6 +19,7 @@ const ArrowText = styled.p`
     color: #f7f7f7;
     font-size: 2.3vh;
 `;
+
 const ArrowImage = styled.img`
     padding-top: 7%;
     width: ${props=>props.width};
@@ -29,7 +32,7 @@ const LeesMeerButton = ({width, link}) => (
             Lees meer
         </ArrowText>
         <ArrowImage
-            src={require('../images/img/arrow@3x.svg')}
+            src={image}
             width={width}
         />
     </LeesMeerContainer>
