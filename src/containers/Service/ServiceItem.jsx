@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import LeesMeerButton from '../../components/LeesMeerButton';
 import {
     StyledTitleMedium,
@@ -11,7 +12,6 @@ import {
     ListContainer,
     StyledList,
 } from './ServiceItem.components';
-
 
 const ServiceItem = ({
     title,
@@ -35,9 +35,7 @@ const ServiceItem = ({
                 </ImageContainer>
             ) : (
                 <ListContainer>
-                    <StyledSubtitle>
-                        {listTitle}
-                    </StyledSubtitle>
+                    <StyledSubtitle>{listTitle}</StyledSubtitle>
                     <StyledList>
                         {listItems.map(item => (
                             <>
@@ -53,3 +51,19 @@ const ServiceItem = ({
 };
 
 export default ServiceItem;
+
+ServiceItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    listTitle: PropTypes.string,
+    listItems: PropTypes.arrayOf(PropTypes.string),
+    light: PropTypes.bool,
+};
+
+ServiceItem.defaultProps = {
+    listTitle: '',
+    listItems: [],
+    light: false,
+};

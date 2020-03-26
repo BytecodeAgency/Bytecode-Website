@@ -11,20 +11,22 @@ export const StyledContainer = styled.section`
     flex-direction: row;
     background-color: ${props => (props.light ? '#262626' : '#1a1a1a')};
     position: relative;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    margin-bottom: 10vmin;
+    margin-top: 0%;
     overflow: hidden;
     @media (${mediaQueryMin.xs}) {
         height: 56vmin;
     }
     @media (${mediaQueryMin.sm}) {
-        height: 70vmin;
+        height: ${props => (props.src ? '70vmin' : '55vmin')};
     }
     @media (${mediaQueryMin.md}) {
-        height: ${props => (props.src ? '95vmin' : '45vmin')};
+        height: ${props => (props.src ? '95vmin' : '60vmin')};
+        margin-top: 15%;
     }
     @media (${mediaQueryMin.lg}) {
         height: 103vmin;
+        margin-top: 15%;
     }
 `;
 
@@ -54,8 +56,6 @@ export const StyledTextContainer = styled.section`
     @media (${mediaQueryMin.xl}) {
         top: ${props => (props.light ? '8%' : '9%')};
     }
-
-    z-index: +1;
 `;
 
 export const StyledText = styled.p`
@@ -81,7 +81,7 @@ export const StyledText = styled.p`
         line-height: 3.1vmin;
     }
     @media (${mediaQueryMin.lg}) {
-        font-size: 2.4vmin;
+        font-size: 2.2vmin;
         line-height: 3.5vmin;
     }
 `;
@@ -99,29 +99,45 @@ export const ListContainer = styled.section`
 
 export const StyledList = styled.p`
     opacity: 75%;
-    height: 4vh;
+    height: 4vmin;
     color: #f2f2f2;
     font-family: Lato;
-    font-size: 2.1vh;
+    font-size: 1.7vmin;
     font-weight: 400;
-    letter-spacing: 0.04vh;
-    line-height: 2.5vh;
+    letter-spacing: 0.04vmin;
+    line-height: 2.1vmin;
+    @media (${mediaQueryMin.xs}) {
+        font-size: 1.9vmin;
+        line-height: 2.6vmin;
+    }
+    @media (${mediaQueryMin.sm}) {
+        font-size: 2.1vmin;
+        line-height: 3.1vmin;
+    }
+    @media (${mediaQueryMin.md}) {
+        font-size: 2.2vmin;
+        line-height: 2.8vmin;
+    }
+    @media (${mediaQueryMin.lg}) {
+        font-size: 2.5vmin;
+        line-height: 3vmin;
+    }
 `;
 
 export const StyledSubtitle = styled.p`
     height: 1.5vmin;
     color: #70c197;
     font-family: Lato;
-    font-size: 2vmin;
+    font-size: 1.6vmin;
     font-weight: bold;
-    line-height: 5vh;
+    line-height: 5vmin;
     letter-spacing: 0.4vmin;
     opacity: 75%;
-    margin-bottom: 1vmin;
+    margin-bottom: 4vmin;
 `;
 
 export const StyledTitleMedium = styled.h3`
-    width: ${props => (props.wide ? '90%' : '70%')};
+    width: ${props => (props.wide ? '90%' : '60%')};
     color: #ffffff;
     font-family: Lato;
     font-size: 3.4vmin;
@@ -144,7 +160,7 @@ export const StyledTitleMedium = styled.h3`
         font-size: 6.6vmin;
         line-height: 7vmin;
     }
-    @media(${mediaQueryMin.xl}) {
+    @media (${mediaQueryMin.xl}) {
         font-size: 6.5vmin;
         line-height: 6vmin;
     }

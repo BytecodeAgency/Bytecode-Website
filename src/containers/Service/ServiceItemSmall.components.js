@@ -10,13 +10,11 @@ export const StyledContainer = styled.section`
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
-    left:22.5%;
-    @media (${mediaQueryMin.md}){
-      top:20vmin;
-      left:25%
+    left: 22.5%;
+    @media (${mediaQueryMin.md}) {
+        top: 20vmin;
+        left: 25%;
     }
-
-
 `;
 
 export const StyledText = styled.p`
@@ -30,20 +28,20 @@ export const StyledText = styled.p`
     font-weight: 400;
     line-height: 3vmin;
     text-align: center;
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         font-size: 1.9vmin;
         line-height: 2.6vmin;
     }
-    @media (${mediaQueryMin.sm}){
+    @media (${mediaQueryMin.sm}) {
         font-size: 2.1vmin;
         line-height: 3.1vmin;
     }
-    @media (${mediaQueryMin.md}){
+    @media (${mediaQueryMin.md}) {
         font-size: 2.3vmin;
         line-height: 3.6vmin;
         max-width: 80%;
     }
-    @media (${mediaQueryMin.lg}){
+    @media (${mediaQueryMin.lg}) {
         font-size: 3.2vmin;
         line-height: 4.2vmin;
         max-width: 80%;
@@ -53,8 +51,8 @@ export const StyledText = styled.p`
 export const StyledLogo = styled.img`
     height: 7vmin;
     position: relative;
-    @media (${mediaQueryMin.md}){
-        right:10%;
+    @media (${mediaQueryMin.md}) {
+        right: 10%;
     }
 `;
 
@@ -71,24 +69,24 @@ export const StyledTitle = styled.h3`
     line-height: 5.5vmin;
     text-align: center;
     position: relative;
-    left:13.5%;
+    left: 13.5%;
 
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         font-size: 5.2vmin;
         line-height: 5.4vmin;
         margin-bottom: 0;
     }
-    @media (${mediaQueryMin.sm}){
+    @media (${mediaQueryMin.sm}) {
         font-size: 6.2vmin;
         line-height: 6vmin;
         margin-bottom: 5vmin;
     }
-    @media (${mediaQueryMin.md}){
+    @media (${mediaQueryMin.md}) {
         font-size: 7vmin;
         line-height: 7.2vmin;
-        left:4%;
+        left: 4%;
     }
-    @media (${mediaQueryMin.lg}){
+    @media (${mediaQueryMin.lg}) {
         font-size: 8vmin;
         line-height: 8vmin;
     }

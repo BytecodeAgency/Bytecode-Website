@@ -1,6 +1,7 @@
-import React from 'react'
-import styled from "styled-components";
-import {Link} from "gatsby";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 
 const { mediaQueryMin } = theme;
@@ -22,36 +23,36 @@ const ArrowText = styled.p`
     align-self: stretch;
 
     font-size: 1.3vmin;
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         font-size: 1.35vmin;
     }
-    @media (${mediaQueryMin.sm}){
+    @media (${mediaQueryMin.sm}) {
         font-size: 1.45vmin;
     }
-    @media (${mediaQueryMin.md}){
+    @media (${mediaQueryMin.md}) {
         font-size: 2vmin;
     }
-    @media (${mediaQueryMin.lg}){
+    @media (${mediaQueryMin.lg}) {
         font-size: 2.4vmin;
     }
 `;
 
 const ArrowImage = styled.img`
     padding-top: 7%;
-    width: ${props=>props.width};
+    width: ${props => props.width};
     color: #f7f7f7;
 `;
 
-const LeesMeerButton = ({width, link}) => (
+const LeesMeerButton = ({ width, link }) => (
     <LeesMeerContainer to={link}>
-        <ArrowText>
-            Lees meer
-        </ArrowText>
-        <ArrowImage
-            src={image}
-            width={width}
-        />
+        <ArrowText>Lees meer</ArrowText>
+        <ArrowImage src={image} width={width} />
     </LeesMeerContainer>
 );
 
 export default LeesMeerButton;
+
+LeesMeerButton.propTypes = {
+    width: PropTypes.bool.isRequired,
+    link: PropTypes.string.isRequired,
+};

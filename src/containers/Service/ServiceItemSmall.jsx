@@ -1,6 +1,11 @@
-import React from 'react'
-import {StyledTitle, StyledContainer,StyledText,StyledLogo} from "./ServiceItemSmall.components";
-
+import React from 'react';
+import PropTypes from 'prop-types';
+import {
+    StyledTitle,
+    StyledContainer,
+    StyledText,
+    StyledLogo,
+} from './ServiceItemSmall.components';
 
 const ServiceItemSmall = ({ title, text, src }) => (
     <StyledContainer>
@@ -11,3 +16,9 @@ const ServiceItemSmall = ({ title, text, src }) => (
 );
 
 export default ServiceItemSmall;
+
+ServiceItemSmall.propTypes = {
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+};

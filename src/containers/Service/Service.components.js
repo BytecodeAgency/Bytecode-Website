@@ -44,34 +44,31 @@ export const ServiceText = styled.div`
     flex: 1;
 `;
 
+// Below are the components from the new Service Page
 export const ServiceBackgroundImage = styled.img`
     overflow: visible;
-    margin-bottom: 20vh;
     position: relative;
-    bottom: 30vh;
+    bottom: 40vmin;
+    @media (${mediaQueryMin.sm}) {
+        bottom: 38vmin;
+    }
+    @media (${mediaQueryMin.md}) {
+        bottom: 25vmin;
+    }
+    @media (${mediaQueryMin.lg}) {
+        bottom: 60vmin;
+    }
 `;
 export const ServiceBackgroundContainer = styled.section`
-    width: 120vw;
-    height: 15vh;
-    margin-bottom: 35vh;
+    width: 100vw;
+    height: 0vmin;
+    @media (${mediaQueryMin.sm}) {
+        margin-bottom: 7vmin;
+    }
+    @media (${mediaQueryMin.md}) {
+        margin-bottom: 35vmin;
+    }
+    @media (${mediaQueryMin.lg}) {
+        margin-bottom: 0;
+    }
 `;
-
-
-
-export const StyledTitleMedium = styled.h3`
-    height: 20%;
-    width: ${props => (props.wide ? '90%' : '70%')};
-    color: #ffffff;
-    font-family: Lato;
-    font-size: 7vmin;
-    font-weight: bold;
-    letter-spacing: 0.1vmin;
-    line-height: 7vmin;
-    margin-bottom: ${props => props.margin};
-
-
-`;
-
-
-
-
