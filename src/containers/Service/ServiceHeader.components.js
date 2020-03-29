@@ -17,6 +17,10 @@ export const StyledContainer = styled.section`
         flex-wrap: wrap;
         position: relative;
         margin-bottom: 1%;
+        bottom: 10vmin;
+    }
+    @media (${mediaQueryMin.sm}) {
+        bottom: 0;
     }
 }
 

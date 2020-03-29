@@ -4,18 +4,19 @@ import theme from '../../styles/theme';
 const { mediaQueryMin } = theme;
 
 export const CardContainer = styled.section`
-    width: 80%;
+    width: 70%;
     height: 70vmin;
     left: 10%;
     position: relative;
     bottom: 20vmin;
-    @media (${mediaQueryMin.xs}) {
+    @media (${mediaQueryMin.sm}) {
         margin-top: 30vmin;
         margin-bottom: 10vmin;
-        bottom:0;
+        bottom:30vmin;
     }
     @media (${mediaQueryMin.sm}) {
         margin-bottom: 30vmin;
+        bottom: 0;
     }
 `;
 
@@ -23,8 +24,9 @@ export const TextContainer = styled.section`
     width:90%;
     height: 90%;
     background: #262626;
+    padding: 12% 10%;
+    @media (${mediaQueryMin.sm}){
     padding: 10% 8% 10% 6%;
-    @media (${mediaQueryMin.xs}){
         width: 35vw;
         height: 35vw;
         margin-left: 10%;
@@ -38,9 +40,8 @@ export const StyledText = styled.p`
     font-size: 3.5vmin;
     letter-spacing: 0;
     font-weight: 400;
-    @media (${mediaQueryMin.xs}) {
-        font-size: 1.4vmin;
-        line-height: 2.4vmin;
+    @media (${mediaQueryMin.xs}){
+        font-size: 3vmin;
     }
     @media (${mediaQueryMin.sm}) {
         font-size: 2vmin;
@@ -58,7 +59,7 @@ export const StyledText = styled.p`
 
 export const ImageContainer = styled.section`
     width: 120vw;
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.sm}){
         width: 40vw;
         height: 65vmin;
     }
@@ -69,15 +70,9 @@ export const StyledImage = styled.img`
     bottom: 80vmin;
     left: 10vw;
     z-index: -1;
-    @media (${mediaQueryMin.xs}) {
-        bottom: 25vmin;
-        left: 30vw;
-    }
     @media (${mediaQueryMin.sm}) {
         bottom: 38vmin;
-    }
-    @media (${mediaQueryMin.md}) {
-        bottom: 38vmin;
+        left: 30vw;
     }
 `;
 
@@ -89,13 +84,13 @@ export const StyledSubtitle = styled.p`
     line-height: 0.1vmin;
     letter-spacing: 0.6vmin;
     margin-bottom: 3vmin;
-    @media (${mediaQueryMin.xs}) {
-        font-size: 1.6vmin;
-        letter-spacing: 0.4vmin;
-        margin-bottom: 1.33em;
+    @media (${mediaQueryMin.xs}){
+        font-size: 2.5vmin;
     }
     @media (${mediaQueryMin.sm}) {
         font-size: 1.6vmin;
+        letter-spacing: 0.4vmin;
+        margin-bottom: 1.33em;
     }
 `;
 
@@ -109,12 +104,13 @@ export const StyledTitleMedium = styled.h3`
     letter-spacing: 0.1vmin;
     line-height: 10vmin;
     margin-bottom: 4vmin;
-    @media (${mediaQueryMin.xs}) {
-    height: 20%;
-        font-size: 4.1vmin;
-        line-height: 4.3vmin;
+    @media (${mediaQueryMin.xs}){
+        font-size: 9vmin;
+        line-height: 9vmin;
+        margin-bottom: 3.4vmin;
     }
     @media (${mediaQueryMin.sm}) {
+        height:20%;
         font-size: 5.6vmin;
         line-height: 6vmin;
         margin-bottom: 6vmin;

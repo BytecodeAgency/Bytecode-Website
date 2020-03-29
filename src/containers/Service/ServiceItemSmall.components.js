@@ -18,7 +18,7 @@ export const StyledContainer = styled.section`
         flex-wrap: wrap;
         position: relative;
         left: 22.5%;
-        bottom: 0;
+        bottom: 30vmin;
     }
 
     @media (${mediaQueryMin.md}) {

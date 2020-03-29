@@ -17,7 +17,10 @@ const LeesMeerContainer = styled(Link)`
     color: #f7f7f7;
     z-index: +100;
     text-align: left;
-    @media(${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
+        height: 11vmin;
+    }
+    @media(${mediaQueryMin.sm}){
         height: 10vh;
         width: 10vw;
     }
@@ -27,9 +30,9 @@ const ArrowText = styled.p`
     width: 70%;
     align-self: stretch;
     font-weight: 400;
-    font-size: ${props => (props.small ? '4.7vmin' : '6vmin')};
-    @media (${mediaQueryMin.xs}) {
-        font-size: 1.35vmin;
+    font-size: ${props => (props.small ? '4.2vmin' : '6vmin')};
+    @media (${mediaQueryMin.xs}){
+        font-size: ${props => (props.small ? '4.4vmin' : '5.1vmin')};
     }
     @media (${mediaQueryMin.sm}) {
         font-size: 1.45vmin;
@@ -45,9 +48,13 @@ const ArrowText = styled.p`
 const ArrowImage = styled.img`
     position: relative;
     top: ${props => (props.small ? '20%' : '30%')};
-    right: ${props => (props.small ? '5%' : '15%')};
+    right: ${props => (props.small ? '0%' : '15%')};
     width: 40%;
     @media (${mediaQueryMin.xs}){
+        top: ${props => (props.small ? '30%' : '30%')};
+        right: ${props => (props.small ? '0%' : '20%')};
+    }
+    @media (${mediaQueryMin.sm}){
         top:15%;
         right:0;
     }
