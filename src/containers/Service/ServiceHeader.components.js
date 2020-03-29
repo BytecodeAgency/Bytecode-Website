@@ -4,27 +4,36 @@ import theme from '../../styles/theme';
 const { mediaQueryMin } = theme;
 
 export const StyledContainer = styled.section`
-    height: 120vmin;
-    width: 110vw;
+    width:100vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     position: relative;
-    margin-bottom: 1%;
+    @media (${mediaQueryMin.xs}){
+        height: 120vmin;
+        width: 110vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        margin-bottom: 1%;
+    }
+}
+
 `;
 
 export const StyledText = styled.p`
-    height: 19vmin;
-    max-width: 100%;
-    color: #ffffff;
-    font-family: Lato;
-    font-size: 1.7vmin;
-    letter-spacing: 0;
-    font-weight: 300;
-    line-height: 2.5vmin;
-    position: relative;
-    padding-right: 4rem;
+        max-width: 90%;
+        color: #ffffff;
+        font-family: Lato;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-size: 3.4vmin;
     @media (${mediaQueryMin.xs}) {
+        height: 19vmin;
+        max-width: 100%;
+        position: relative;
+        padding-right: 4rem;
         font-size: 1.9vmin;
         line-height: 2.6vmin;
     }
@@ -43,24 +52,42 @@ export const StyledText = styled.p`
 `;
 
 export const ImageContainer = styled.section`
-    max-height: 100vmin;
-    width: 45%;
+    width: 110vmin;
     position: relative;
-    top: 10%;
+    bottom: 6vmin;
+    @media (${mediaQueryMin.xs}){
+        max-height: 100vmin;
+        width: 45%;
+        position: relative;
+        top: 10%;
+        bottom: 0;
+    }
+
     @media (${mediaQueryMin.sm}) {
         top: 0%;
     }
 `;
 
 export const StyledTitleContainer = styled.section`
-    height: 70%;
-    width: 50%;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 6%;
-    top: 25%;
-    left: 5%;
+    width: 100%;
+    bottom: 45vmin;
+    z-index: +100;
+    padding-left: 10%;
+
+    @media (${mediaQueryMin.xs}) {
+        height: 70%;
+        width: 50%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 6%;
+        top: 25%;
+        left: 5%;
+    }
+
     @media (${mediaQueryMin.lg}) {
         top: 20%;
     }
@@ -68,20 +95,26 @@ export const StyledTitleContainer = styled.section`
 
 export const StyledImage = styled.img`
     max-width: 90%;
-    max-height: 120vmin;
+    @media (${mediaQueryMin.xs}){
+        max-width: 90%;
+        max-height: 120vmin;
+    }
 `;
 
 export const StyledTitle = styled.h1`
-    max-width: 90%;
+    font-size: 15vmin;
     color: #ffffff;
-    font-family: Lato;
-    font-size: 6vmin;
     font-weight: 900;
-    line-height: 5.6vmin;
-    letter-spacing: 0.3vmin;
+    letter-spacing: 0.6vmin;
+    line-height: 13.4vmin;
+    margin-bottom: 4vmin;
     @media (${mediaQueryMin.xs}) {
+        max-width: 90%;
+        font-family: Lato;
+        letter-spacing: 0.3vmin;
         font-size: 6.5vmin;
         line-height: 6.2vmin;
+        margin-bottom: 0.66em;
     }
     @media (${mediaQueryMin.sm}) {
         font-size: 8.4vmin;
@@ -102,9 +135,16 @@ export const StyledSubtitle = styled.p`
     width: 100%;
     color: #70c197;
     font-family: Lato;
-    font-size: 2vmin;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 5vmin;
+    letter-spacing: 0.6vmin;
     line-height: 3vmin;
-    letter-spacing: 0.4vmin;
-    margin-bottom: 2vmin;
+    @media (${mediaQueryMin.xs}){
+        height: 1.5vmin;
+        font-size: 2vmin;
+        line-height: 3vmin;
+        letter-spacing: 0.4vmin;
+        margin-bottom: 2vmin;
+    }
+
 `;

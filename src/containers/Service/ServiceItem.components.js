@@ -4,18 +4,26 @@ import theme from '../../styles/theme';
 const { mediaQueryMin } = theme;
 
 export const StyledContainer = styled.section`
-    height: 55vmin;
-    width: 95vw;
-    margin-left: 5vw;
-    display: flex;
-    flex-direction: row;
-    background-color: ${props => (props.light ? '#262626' : '#1a1a1a')};
+    width: ${props=>(props.src?'100vw':'90vw')};
     position: relative;
+    bottom: 20vmin;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
     margin-bottom: 10vmin;
-    margin-top: 0%;
-    overflow: hidden;
+    margin-top: 0;
+    margin-left: ${props => (props.src ? '10vw' : '0vw')};
+    background-color: ${props => (props.light ? '#262626' : '#1a1a1a')};
     @media (${mediaQueryMin.xs}) {
         height: 56vmin;
+        width: 95vw;
+        margin-left: 5vw;
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        margin-bottom: 10vmin;
+        margin-top: 0%;
+        overflow: hidden;
     }
     @media (${mediaQueryMin.sm}) {
         height: ${props => (props.src ? '70vmin' : '55vmin')};
@@ -31,24 +39,38 @@ export const StyledContainer = styled.section`
 `;
 
 export const ImageContainer = styled.section`
-    max-height: 90vmin;
-    width: ${props => (props.light ? '62vw' : '55vw')};
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    position: relative;
     background-color: #262626;
+    @media (${mediaQueryMin.xs}){
+        max-height: 90vmin;
+        width: ${props => (props.light ? '62vw' : '55vw')};
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+    }
+
 `;
 
 export const StyledTextContainer = styled.section`
     max-height: 90%;
-    width: ${props => (props.image ? '24%' : '40%')};
-    margin: ${props => (props.light ? '7%' : '4%')};
+    width: 80%;
+    padding-left: 11%;
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: ${props => (props.light ? '8%' : '0')};
+    margin-top: 5%;
+
     @media (${mediaQueryMin.sm}) {
+        padding-left: 0;
+        padding-right: 0;
+        max-height: 90%;
+        width: ${props => (props.image ? '24%' : '40%')};
+        margin: ${props => (props.light ? '7%' : '4%')};
+        display: flex;
+        flex-direction: column;
+        position: relative;
         top: ${props => (props.light ? '8%' : '4.5%')};
+        margin-top: 0;
     }
     @media (${mediaQueryMin.lg}) {
         top: ${props => (props.light ? '8%' : '7%')};
@@ -59,18 +81,17 @@ export const StyledTextContainer = styled.section`
 `;
 
 export const StyledText = styled.p`
-    max-width: 100%;
-    opacity: 0.99;
     color: #f7f7f7;
-    font-family: Lato;
-    font-size: 1.15vmin;
-    letter-spacing: 0;
-    line-height: 2.1vmin;
+    opacity: 0.99;
+    font-size: 3.5vmin;
     font-weight: 400;
     text-align: left;
     @media (${mediaQueryMin.xs}) {
+        max-width: 100%;
         font-size: 1.25vmin;
+        letter-spacing: 0;
         line-height: 2.2vmin;
+        text-align: left;
     }
     @media (${mediaQueryMin.sm}) {
         font-size: 1.4vmin;
@@ -93,21 +114,28 @@ export const StyledImage = styled.img`
 
 export const ListContainer = styled.section`
     width: 50%;
-    padding-top: 7%;
-    padding-left: 30%;
+    position: relative;
+    left: 35%;
+    @media (${mediaQueryMin.xs}){
+        left: 0;
+        padding-top: 7%;
+        padding-left: 30%;
+    }
+
+
 `;
 
 export const StyledList = styled.p`
     opacity: 75%;
-    height: 4vmin;
     color: #f2f2f2;
-    font-family: Lato;
-    font-size: 1.7vmin;
     font-weight: 400;
+    font-size: 5vmin;
     letter-spacing: 0.04vmin;
-    line-height: 2.1vmin;
+    line-height: 5.5vmin;
     @media (${mediaQueryMin.xs}) {
+        height: 4vmin;
         font-size: 1.9vmin;
+        letter-spacing: 0.04vmin;
         line-height: 2.6vmin;
     }
     @media (${mediaQueryMin.sm}) {
@@ -125,28 +153,33 @@ export const StyledList = styled.p`
 `;
 
 export const StyledSubtitle = styled.p`
-    height: 1.5vmin;
     color: #70c197;
-    font-family: Lato;
-    font-size: 1.6vmin;
     font-weight: bold;
-    line-height: 5vmin;
     letter-spacing: 0.4vmin;
     opacity: 75%;
-    margin-bottom: 4vmin;
+    margin-bottom: 3vmin;
+    @media (${mediaQueryMin.xs}){
+        height: 1.5vmin;
+
+        font-size: 1.6vmin;
+
+        line-height: 5vmin;
+        margin-bottom: 4vmin;
+    }
 `;
 
 export const StyledTitleMedium = styled.h3`
-    width: ${props => (props.wide ? '90%' : '60%')};
-    color: #ffffff;
-    font-family: Lato;
-    font-size: 3.4vmin;
-    font-weight: bold;
-    letter-spacing: 0.1vmin;
-    line-height: 4vmin;
+    font-size: 12vmin;
+    margin-bottom: 3vmin;
     @media (${mediaQueryMin.xs}) {
+        width: ${props => (props.wide ? '90%' : '60%')};
+        color: #ffffff;
+        font-family: Lato;
         font-size: 3.4vmin;
+        font-weight: bold;
+        letter-spacing: 0.1vmin;
         line-height: 5vmin;
+        margin-bottom: 0.66em;
     }
     @media (${mediaQueryMin.sm}) {
         font-size: 4.2vmin;

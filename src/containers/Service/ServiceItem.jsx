@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LeesMeerButton from '../../components/LeesMeerButton';
+import ReadMoreButton from '../../components/ReadMoreButton';
 import {
     StyledTitleMedium,
     StyledSubtitle,
@@ -27,7 +27,7 @@ const ServiceItem = ({
             <StyledTextContainer light={light} image={src}>
                 <StyledTitleMedium wide={src}>{title}</StyledTitleMedium>
                 <StyledText>{text}</StyledText>
-                <LeesMeerButton width="30%" link={link} />
+                <ReadMoreButton link={link} />
             </StyledTextContainer>
             {src ? (
                 <ImageContainer light={light}>

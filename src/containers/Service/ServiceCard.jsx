@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import LeesMeerButton from '../../components/LeesMeerButton';
+import ReadMoreButton from '../../components/ReadMoreButton';
 import {
     StyledTitleMedium,
     StyledSubtitle,
@@ -18,7 +18,7 @@ const ServiceCard = ({ subtitle, title, text, src, link }) => (
             <StyledSubtitle>{subtitle}</StyledSubtitle>
             <StyledTitleMedium>{title}</StyledTitleMedium>
             <StyledText>{text}</StyledText>
-            <LeesMeerButton width="26%" link={link} />
+            <ReadMoreButton small link={link} />
         </TextContainer>
         <ImageContainer>
             <StyledImage src={src} />

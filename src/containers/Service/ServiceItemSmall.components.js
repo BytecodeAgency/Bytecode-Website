@@ -4,13 +4,23 @@ import theme from '../../styles/theme';
 const { mediaQueryMin } = theme;
 
 export const StyledContainer = styled.section`
-    height: 60vmin;
-    width: 55vw;
-    display: flex;
+    width:100vw;
+    display:flex;
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
-    left: 22.5%;
+    bottom: 35vmin;
+    @media (${mediaQueryMin.xs}){
+        height: 60vmin;
+        width: 55vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+        left: 22.5%;
+        bottom: 0;
+    }
+
     @media (${mediaQueryMin.md}) {
         top: 20vmin;
         left: 25%;
@@ -18,19 +28,22 @@ export const StyledContainer = styled.section`
 `;
 
 export const StyledText = styled.p`
-    height: 16.8vmin;
     max-width: 100%;
-    opacity: 0.99;
-    color: #f7f7f7;
-    font-family: Lato;
-    font-size: 1.8vmin;
-    letter-spacing: 0;
-    font-weight: 400;
-    line-height: 3vmin;
     text-align: center;
+    opacity: 0.99;
+    font-size: 3.5vmin;
+    padding: 0 5vmin;
+    font-weight: 400;
+    color: #f7f7f7;
+    letter-spacing: 0;
+    line-height: 5.3vmin;
     @media (${mediaQueryMin.xs}) {
+        height: 16.8vmin;
         font-size: 1.9vmin;
+        letter-spacing: 0;
         line-height: 2.6vmin;
+        text-align: center;
+        padding: 0;
     }
     @media (${mediaQueryMin.sm}) {
         font-size: 2.1vmin;
@@ -49,32 +62,32 @@ export const StyledText = styled.p`
 `;
 
 export const StyledLogo = styled.img`
-    height: 7vmin;
-    position: relative;
+    height: 20vmin;
+    @media(${mediaQueryMin.xs}){
+        height: 7vmin;
+        position: relative;
+    }
+
     @media (${mediaQueryMin.md}) {
         right: 10%;
     }
 `;
 
 export const StyledTitle = styled.h3`
-    margin-bottom: 0;
-    margin-top: 4vmin;
-    height: 13vmin;
-    width: 40vw;
-    color: #ffffff;
-    font-family: Lato;
-    font-size: 5vmin;
-    font-weight: bold;
-    letter-spacing: 0.1vmin;
-    line-height: 5.5vmin;
     text-align: center;
-    position: relative;
-    left: 13.5%;
-
+    margin-top: 5vmin;
     @media (${mediaQueryMin.xs}) {
-        font-size: 5.2vmin;
-        line-height: 5.4vmin;
         margin-bottom: 0;
+        margin-top: 4vmin;
+        height: 13vmin;
+        width: 40vw;
+
+        font-size: 5.2vmin;
+        letter-spacing: 0.1vmin;
+        line-height: 5.4vmin;
+        text-align: center;
+        position: relative;
+        left: 13.5%;
     }
     @media (${mediaQueryMin.sm}) {
         font-size: 6.2vmin;
