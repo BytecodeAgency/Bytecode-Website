@@ -4,7 +4,7 @@ import theme from '../../styles/theme';
 const { mediaQueryMin } = theme;
 
 export const StyledContainer = styled.section`
-    width: ${props=>(props.src?'100vw':'90vw')};
+    width: ${props => (props.src ? '100vw' : '90vw')};
     position: relative;
     bottom: 20vmin;
     display: flex;
@@ -41,14 +41,14 @@ export const StyledContainer = styled.section`
 export const ImageContainer = styled.section`
     position: relative;
     background-color: #262626;
-    @media (${mediaQueryMin.sm}){
+    overflow: hidden;
+    @media (${mediaQueryMin.sm}) {
         max-height: 90vmin;
         width: ${props => (props.light ? '62vw' : '55vw')};
         position: absolute;
         right: 0;
         bottom: 0;
     }
-
 `;
 
 export const StyledTextContainer = styled.section`
@@ -84,7 +84,7 @@ export const StyledText = styled.p`
     font-size: 3.5vmin;
     font-weight: 400;
     text-align: left;
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         font-size: 3vmin;
         margin-bottom: 0.4em;
     }
@@ -115,16 +115,14 @@ export const ListContainer = styled.section`
     width: 50%;
     position: relative;
     left: 35%;
-    @media (${mediaQueryMin.xs}){
-        left:40%;
+    @media (${mediaQueryMin.xs}) {
+        left: 40%;
     }
-    @media (${mediaQueryMin.sm}){
+    @media (${mediaQueryMin.sm}) {
         left: 0;
         padding-top: 7%;
         padding-left: 30%;
     }
-
-
 `;
 
 export const StyledList = styled.p`
@@ -134,7 +132,7 @@ export const StyledList = styled.p`
     font-size: 5vmin;
     letter-spacing: 0.04vmin;
     line-height: 5.5vmin;
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         font-size: 4vmin;
         line-height: 4vmin;
     }
@@ -161,10 +159,10 @@ export const StyledSubtitle = styled.p`
     opacity: 75%;
     margin-bottom: 3vmin;
     font-size: 4.3vmin;
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         font-size: 3.5vmin;
     }
-    @media (${mediaQueryMin.sm}){
+    @media (${mediaQueryMin.sm}) {
         height: 1.5vmin;
 
         font-size: 1.6vmin;

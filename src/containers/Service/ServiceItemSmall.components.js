@@ -4,13 +4,13 @@ import theme from '../../styles/theme';
 const { mediaQueryMin } = theme;
 
 export const StyledContainer = styled.section`
-    width:100vw;
-    display:flex;
+    width: 100vw;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
     bottom: 35vmin;
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         height: 60vmin;
         width: 55vw;
         display: flex;
@@ -21,8 +21,9 @@ export const StyledContainer = styled.section`
         bottom: 30vmin;
     }
 
-    @media (${mediaQueryMin.md}) {
+    @media (${mediaQueryMin.sm}) {
         top: 20vmin;
+        bottom: 0;
         left: 25%;
     }
 `;
@@ -63,7 +64,7 @@ export const StyledText = styled.p`
 
 export const StyledLogo = styled.img`
     height: 20vmin;
-    @media(${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         height: 7vmin;
         position: relative;
     }

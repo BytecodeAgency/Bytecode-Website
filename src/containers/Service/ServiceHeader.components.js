@@ -27,12 +27,12 @@ export const StyledContainer = styled.section`
 `;
 
 export const StyledText = styled.p`
-        max-width: 90%;
-        color: #ffffff;
-        font-family: Lato;
-        letter-spacing: 0;
-        font-weight: 400;
-        font-size: 3.4vmin;
+    max-width: 90%;
+    color: #ffffff;
+    font-family: Lato;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-size: 3.4vmin;
     @media (${mediaQueryMin.xs}) {
         height: 19vmin;
         max-width: 100%;
@@ -59,7 +59,7 @@ export const ImageContainer = styled.section`
     width: 110vmin;
     position: relative;
     bottom: 6vmin;
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         max-height: 100vmin;
         width: 45%;
         position: relative;
@@ -99,7 +99,7 @@ export const StyledTitleContainer = styled.section`
 
 export const StyledImage = styled.img`
     max-width: 90%;
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         max-width: 90%;
         max-height: 120vmin;
     }
@@ -143,12 +143,11 @@ export const StyledSubtitle = styled.p`
     font-size: 5vmin;
     letter-spacing: 0.6vmin;
     line-height: 3vmin;
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         height: 1.5vmin;
         font-size: 2vmin;
         line-height: 3vmin;
         letter-spacing: 0.4vmin;
         margin-bottom: 2vmin;
     }
-
 `;

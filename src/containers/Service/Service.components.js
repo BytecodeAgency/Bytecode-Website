@@ -49,7 +49,7 @@ export const ServiceBackgroundImage = styled.img`
     overflow: visible;
     position: relative;
     bottom: 45vmin;
-    @media (${mediaQueryMin.xs}){
+    @media (${mediaQueryMin.xs}) {
         bottom: 60vmin;
     }
     @media (${mediaQueryMin.sm}) {
