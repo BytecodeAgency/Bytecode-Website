@@ -30,6 +30,7 @@ const Services = () => (
             Zo maken we jouw visie realiteit."
             src={require('../images/img/services/mockup-nobg+no-desktop@3x.svg')}
         />
+
         <ServiceItemSmall
             title="Research Based Development"
             text="Ons werkproces bestaat voor een groot en belangrijk deel uit het doen van onderzoek.
@@ -38,6 +39,7 @@ const Services = () => (
             en de wensen van de bedenker en gebruiker."
             src={require('../images/img/services/Logox3.svg')}
         />
+
         <ServiceItem
             title="Digital Tools"
             text="Digitale gereedschappen zijn als een extensie van de gebruiker waardoor ze hun
@@ -47,7 +49,7 @@ const Services = () => (
             waarin jij alle tijd hebt voor dingen waar je daadwerkelijk meer verder komt."
             src={require('../images/img/services/website-1-3a5d6696cffd856aeffc1f126868cf20@2x (copy).png')}
             image
-            link="/services"
+            link="/services/digitaltools"
             light
         />
 

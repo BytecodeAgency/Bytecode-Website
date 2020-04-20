@@ -29,7 +29,7 @@ export const StyledContainer = styled.section`
     }
 
     @media (${mediaQueryMin.md}) {
-        height: ${props => (props.src ? '95vmin' : '60vmin')};
+        height: ${props => (props.src ? '80vmin' : '60vmin')};
         margin-top: 15%;
     }
     @media (${mediaQueryMin.lg}) {
@@ -107,8 +107,11 @@ export const StyledText = styled.p`
 `;
 
 export const StyledImage = styled.img`
-    max-height: 100vmin;
-    max-width: 100%;
+    max-height: 70vh;
+    width: auto;
+    float: right;
+    //max-height: 100vmin; for old item
+    //max-width: 100%; for old item
 `;
 
 export const ListContainer = styled.section`
@@ -119,7 +122,7 @@ export const ListContainer = styled.section`
         left: 40%;
     }
     @media (${mediaQueryMin.sm}) {
-        left: 0;
+        //left: 0; for old item
         padding-top: 7%;
         padding-left: 30%;
     }

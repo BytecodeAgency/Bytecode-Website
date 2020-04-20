@@ -23,7 +23,7 @@ export const StyledContainer = styled.section`
 
     @media (${mediaQueryMin.sm}) {
         top: 20vmin;
-        bottom: 0;
+        bottom: 10vh;
         left: 25%;
     }
 `;
@@ -70,7 +70,7 @@ export const StyledLogo = styled.img`
     }
 
     @media (${mediaQueryMin.md}) {
-        right: 10%;
+        //right: 10%;
     }
 `;
 

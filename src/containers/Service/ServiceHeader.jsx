@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-    StyledTitle,
-    StyledSubtitle,
-    StyledText,
-    ImageContainer,
-    StyledTitleContainer,
-    StyledContainer,
-    StyledImage,
-} from './ServiceHeader.components';
+import styled from 'styled-components';
+import { StyledImage } from './ServiceHeader.components';
+import { Container, Col, Row } from '../../lib/Grid';
+import TextBlock from '../TextBlock/TextBlock';
+import theme from '../../styles/theme';
 
-const ServiceHeader = ({ title, subtitle, text, src }) => {
+const { mediaQueryMin } = theme;
+/*
+const oudHeader = ({ title, subtitle, text, src }) => {
     return (
         <StyledContainer>
             <StyledTitleContainer>
@@ -24,7 +22,35 @@ const ServiceHeader = ({ title, subtitle, text, src }) => {
         </StyledContainer>
     );
 };
+*/
 
+const TextCol = styled(Col)`
+    align-self: center;
+`;
+
+const Containment = styled(Container)`
+    @media (${mediaQueryMin.md}) {
+        margin-right: 0 !important;
+        margin-left: 8vw !important;
+    }
+`;
+
+const ServiceHeader = ({ title, subtitle, text, src }) => {
+    return (
+        <Containment>
+            <Row justify="between">
+                <TextCol md={3.3}>
+                    <TextBlock title={title} subtitle={subtitle}>
+                        {text}
+                    </TextBlock>
+                </TextCol>
+                <Col>
+                    <StyledImage src={src} />
+                </Col>
+            </Row>
+        </Containment>
+    );
+};
 export default ServiceHeader;
 
 ServiceHeader.propTypes = {

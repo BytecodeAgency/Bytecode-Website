@@ -98,6 +98,10 @@ export const StyledTitleContainer = styled.section`
 `;
 
 export const StyledImage = styled.img`
+    float: right;
+    position: relative;
+    bottom: 10vh;
+    left: 5vw;
     max-width: 90%;
     @media (${mediaQueryMin.xs}) {
         max-width: 90%;

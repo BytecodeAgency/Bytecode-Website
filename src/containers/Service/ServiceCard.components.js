@@ -73,6 +73,10 @@ export const StyledImage = styled.img`
         bottom: 38vmin;
         left: 30vw;
     }
+    @media (${mediaQueryMin.md}) {
+        bottom: 0;
+        left: 0;
+    }
 `;
 
 export const StyledSubtitle = styled.p`
