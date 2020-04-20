@@ -56,12 +56,12 @@ export const ServiceBackgroundImage = styled.img`
         bottom: 38vmin;
     }
     @media (${mediaQueryMin.md}) {
-        bottom: 50vmin;
+        bottom: 30vmin;
     }
 `;
 export const ServiceBackgroundContainer = styled.section`
     width: 100vw;
-    height: 0vmin;
+    height: 25vmin;
     margin-bottom: 12vmin;
     @media (${mediaQueryMin.sm}) {
         margin-bottom: 7vmin;

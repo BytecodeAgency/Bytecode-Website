@@ -24,7 +24,7 @@ const CenteredTextBlock = styled(TextBlock)`
 const Containment = styled(Container)`
     @media (${mediaQueryMin.md}) {
         margin-top: 0 !important;
-        margin-bottom: 5vw !important;
+        margin-bottom: 0vw !important;
         position: relative;
         bottom: 10vh;
     }

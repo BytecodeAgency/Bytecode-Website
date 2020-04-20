@@ -42,9 +42,7 @@ const Containment = styled(Container)`
     background-color: ${props => (props.light ? '#262626' : '#1a1a1a')};
 
     @media (${mediaQueryMin.md}) {
-        margin-right: 0em !important;
-        margin-left: 3em !important;
-        height: 40em;
+        margin: 5vh 0em 15vh 3em !important;
     }
 `;
 const StyledRow = styled(Row)`
