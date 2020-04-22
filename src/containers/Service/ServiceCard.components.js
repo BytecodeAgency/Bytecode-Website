@@ -66,14 +66,14 @@ export const ImageContainer = styled.section`
 
 export const StyledImage = styled.img`
     position: relative;
-    bottom: 80vmin;
-    left: 10vw;
+    bottom: 8em;
+    left: 4em;
     z-index: -1;
+    height: 45em;
+    width: 45em;
     @media (${mediaQueryMin.sm}) {
-        bottom: 38vmin;
-        left: 30vw;
-    }
-    @media (${mediaQueryMin.md}) {
+        height: 100%;
+        width: 100%;
         bottom: 0;
         left: 0;
     }

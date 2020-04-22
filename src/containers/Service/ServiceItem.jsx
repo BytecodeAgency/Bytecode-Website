@@ -39,34 +39,63 @@ const oudItem = ({ title, text, src, link, listTitle, listItems, light }) => {
 */
 
 const Containment = styled(Container)`
-    background-color: ${props => (props.light ? '#262626' : '#1a1a1a')};
-
-    @media (${mediaQueryMin.md}) {
+    background-color: ${props =>
+        props.light ? '#262626' : '#1a1a1a'}!important;
+    margin: 5vh 0em 15vh 0em !important;
+    @media (${mediaQueryMin.sm}) {
         margin: 5vh 0em 15vh 3em !important;
     }
+    min-height: 80vh;
 `;
 const StyledRow = styled(Row)`
-    height: 100%;
+    min-height: 90vh;
+    flex-direction: column-reverse;
+    @media (${mediaQueryMin.sm}) {
+        flex-direction: row;
+        min-height: 80vh;
+    }
 `;
 const StyledCol = styled(Col)`
-    margin-left: 6em !important;
-
+    margin-left: 3em !important;
+    @media (${mediaQueryMin.sm}) {
+        margin-left: 2.3em !important;
+    }
+    @media (${mediaQueryMin.lg}) {
+        margin-left: 6em !important;
+    }
     align-self: center;
 `;
 const ImageCol = styled(Col)`
+    //visibility: hidden;
     align-self: flex-end;
     background-color: #262626;
-    margin-left: ${props => (props.light ? 0 : '20em !important')};
+    overflow: hidden;
+    @media (${mediaQueryMin.xs}) {
+        visibility: visible;
+    }
 `;
 const ListCol = styled(Col)`
-    align-self: flex-start;
+    visibility: hidden;
+    position: relative;
+    top: 10em;
+    @media (${mediaQueryMin.xs}) {
+        visibility: visible;
+    }
+    @media (${mediaQueryMin.sm}) {
+        align-self: flex-start;
+        top: 0;
+    }
 `;
 
 const TextCol = ({ children, src }) =>
     src ? (
-        <StyledCol md={2.7}>{children}</StyledCol>
+        <StyledCol sm={10} lg={4} xl={3.6}>
+            {children}
+        </StyledCol>
     ) : (
-        <StyledCol md={3.8}>{children}</StyledCol>
+        <StyledCol lg={5} xl={3.8}>
+            {children}
+        </StyledCol>
     );
 
 const ServiceItem = ({ title, text, src, link, light }) => {

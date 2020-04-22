@@ -100,12 +100,14 @@ export const StyledTitleContainer = styled.section`
 export const StyledImage = styled.img`
     float: right;
     position: relative;
-    bottom: 10vh;
-    left: 5vw;
-    max-width: 90%;
-    @media (${mediaQueryMin.xs}) {
+    bottom: 5vh;
+    left: 10em;
+    max-width: 80%;
+    @media (${mediaQueryMin.sm}) {
         max-width: 90%;
         max-height: 120vmin;
+        bottom: 10vh;
+        left: 5vw;
     }
 `;
 

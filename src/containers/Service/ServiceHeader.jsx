@@ -22,32 +22,45 @@ const oudHeader = ({ title, subtitle, text, src }) => {
         </StyledContainer>
     );
 };
+
 */
 
 const TextCol = styled(Col)`
-    align-self: center;
+    position: relative;
+    bottom: 10em;
+    @media (${mediaQueryMin.sm}) {
+        align-self: center;
+        bottom: 0;
+    }
 `;
 
 const Containment = styled(Container)`
-    @media (${mediaQueryMin.md}) {
+    @media (${mediaQueryMin.sm}) {
         margin-right: 0 !important;
         margin-left: 8vw !important;
+    }
+`;
+
+const StyledRow = styled(Row)`
+    flex-direction: column-reverse;
+    @media (${mediaQueryMin.sm}) {
+        flex-direction: row;
     }
 `;
 
 const ServiceHeader = ({ title, subtitle, text, src }) => {
     return (
         <Containment>
-            <Row justify="between">
-                <TextCol md={3.3}>
+            <StyledRow justify="between">
+                <TextCol sm={6} lg={5.6} xl={4.3}>
                     <TextBlock title={title} subtitle={subtitle}>
                         {text}
                     </TextBlock>
                 </TextCol>
-                <Col>
+                <Col sm={9} lg={6.3} xl={7.6}>
                     <StyledImage src={src} />
                 </Col>
-            </Row>
+            </StyledRow>
         </Containment>
     );
 };

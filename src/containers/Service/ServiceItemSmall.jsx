@@ -22,17 +22,18 @@ const CenteredTextBlock = styled(TextBlock)`
     text-align: center;
 `;
 const Containment = styled(Container)`
-    @media (${mediaQueryMin.md}) {
-        margin-top: 0 !important;
-        margin-bottom: 0vw !important;
-        position: relative;
+    margin-top: 0 !important;
+    margin-bottom: 0vw !important;
+    position: relative;
+    bottom: 5em;
+    @media (${mediaQueryMin.sm}){
         bottom: 10vh;
     }
 `;
 const ServiceItemSmall = ({ title, text, src }) => (
     <Containment>
         <Row justify="center" style={{ textAlign: 'center' }}>
-            <Col md={5.6}>
+            <Col lg={7} xl={6}>
                 <StyledLogo src={src} />
                 <CenteredTextBlock title={title}>{text}</CenteredTextBlock>
             </Col>

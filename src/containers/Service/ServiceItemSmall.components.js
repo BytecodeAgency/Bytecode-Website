@@ -64,9 +64,9 @@ export const StyledText = styled.p`
 
 export const StyledLogo = styled.img`
     height: 20vmin;
-    @media (${mediaQueryMin.xs}) {
+    @media (${mediaQueryMin.sm}) {
         height: 7vmin;
-        position: relative;
+
     }
 
     @media (${mediaQueryMin.md}) {

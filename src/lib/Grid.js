@@ -20,7 +20,7 @@ export const Container = styled(ContainerBase)`
 
     @media (${mediaQueryMin.md}) {
         margin: 2em ${props => (props.fluid ? '0' : container.md)} !important;
-
+    }
 
     @media (${mediaQueryMin.lg}) {
         margin: 2.5vw ${props => (props.fluid ? '0' : container.lg)} !important;

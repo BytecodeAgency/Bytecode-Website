@@ -48,14 +48,9 @@ export const ServiceText = styled.div`
 export const ServiceBackgroundImage = styled.img`
     overflow: visible;
     position: relative;
-    bottom: 45vmin;
-    @media (${mediaQueryMin.xs}) {
-        bottom: 60vmin;
-    }
+    bottom: 15vmin;
+
     @media (${mediaQueryMin.sm}) {
-        bottom: 38vmin;
-    }
-    @media (${mediaQueryMin.md}) {
         bottom: 30vmin;
     }
 `;

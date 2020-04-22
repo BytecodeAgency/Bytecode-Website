@@ -107,11 +107,16 @@ export const StyledText = styled.p`
 `;
 
 export const StyledImage = styled.img`
-    max-height: 70vh;
+    max-width: 100%;
+    max-height: 50em;
     width: auto;
+    height: auto;
     float: right;
-    //max-height: 100vmin; for old item
-    //max-width: 100%; for old item
+    @media (${mediaQueryMin.sm}) {
+        max-height: 100%;
+        max-width: 60vw;
+    }
+
 `;
 
 export const ListContainer = styled.section`
