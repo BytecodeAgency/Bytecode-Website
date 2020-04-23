@@ -116,7 +116,6 @@ export const StyledImage = styled.img`
         max-height: 100%;
         max-width: 60vw;
     }
-
 `;
 
 export const ListContainer = styled.section`

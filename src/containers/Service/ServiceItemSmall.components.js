@@ -66,7 +66,6 @@ export const StyledLogo = styled.img`
     height: 20vmin;
     @media (${mediaQueryMin.sm}) {
         height: 7vmin;
-
     }
 
     @media (${mediaQueryMin.md}) {

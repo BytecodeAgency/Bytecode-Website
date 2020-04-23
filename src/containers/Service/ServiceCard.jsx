@@ -87,7 +87,6 @@ const ImageCol = styled(Col)`
     @media (${mediaQueryMin.xxl}) {
         top: 10vh !important;
     }
-
 `;
 const ServiceCard = ({ subtitle, title, text, src, link }) => (
     <StyledContainer>

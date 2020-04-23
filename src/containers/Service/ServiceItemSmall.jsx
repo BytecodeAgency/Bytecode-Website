@@ -26,7 +26,7 @@ const Containment = styled(Container)`
     margin-bottom: 0vw !important;
     position: relative;
     bottom: 5em;
-    @media (${mediaQueryMin.sm}){
+    @media (${mediaQueryMin.sm}) {
         bottom: 10vh;
     }
 `;
