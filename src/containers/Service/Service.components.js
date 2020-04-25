@@ -56,15 +56,6 @@ export const ServiceBackgroundImage = styled.img`
 `;
 export const ServiceBackgroundContainer = styled.section`
     width: 100vw;
-    height: 25vmin;
-    margin-bottom: 12vmin;
-    @media (${mediaQueryMin.sm}) {
-        margin-bottom: 7vmin;
-    }
-    @media (${mediaQueryMin.md}) {
-        margin-bottom: 35vmin;
-    }
-    @media (${mediaQueryMin.lg}) {
-        margin-bottom: 0;
-    }
+    height: 15em;
+    margin-bottom: 0;
 `;

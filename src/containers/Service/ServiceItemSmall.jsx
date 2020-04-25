@@ -8,27 +8,13 @@ import theme from '../../styles/theme';
 
 const { mediaQueryMin } = theme;
 
-/*
-const oldServiceItemSmall = ({ title, text, src }) => (
-    <StyledContainer>
-        <StyledLogo src={src} />
-        <StyledTitle>{title}</StyledTitle>
-        <StyledText>{text}</StyledText>
-    </StyledContainer>
-);
-*/
-
 const CenteredTextBlock = styled(TextBlock)`
     text-align: center;
 `;
 const Containment = styled(Container)`
     margin-top: 0 !important;
-    margin-bottom: 0vw !important;
-    position: relative;
-    bottom: 5em;
-    @media (${mediaQueryMin.sm}) {
-        bottom: 10vh;
-    }
+    margin-bottom: 3em !important;
+
 `;
 const ServiceItemSmall = ({ title, text, src }) => (
     <Containment>

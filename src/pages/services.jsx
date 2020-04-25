@@ -28,7 +28,7 @@ const Services = () => (
             belemmerende randzaken of fricties. Handmatig, tijdrovend werk is verleden tijd.
             Jij kan je volledig focussen op datgene waar jij passie voor hebt.
             Zo maken we jouw visie realiteit."
-            src={require('../images/img/services/mockup-nobg+no-desktop@3x.svg')}
+            src={require('../images/img/services/mockup-nobg+no-desktop@2x.png')}
         />
 
         <ServiceItemSmall

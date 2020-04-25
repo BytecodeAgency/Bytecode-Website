@@ -2,106 +2,53 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../../styles/theme';
-import { StyledImage, ListContainer } from './ServiceItem.components';
+import { StyledImage} from './ServiceItem.components';
 import TextBlock from '../TextBlock/TextBlock';
 import { Container, Col, Row } from '../../lib/Grid';
 
 const { mediaQueryMin } = theme;
-/*
-const oudItem = ({ title, text, src, link, listTitle, listItems, light }) => {
-    return (
-        <StyledContainer src={src} light={light}>
-            <StyledTextContainer light={light} image={src}>
-                <StyledTitleMedium wide={src}>{title}</StyledTitleMedium>
-                <StyledText>{text}</StyledText>
-                <ReadMoreButton link={link} />
-            </StyledTextContainer>
-            {src ? (
-                <ImageContainer light={light}>
-                    <StyledImage src={src} />
-                </ImageContainer>
-            ) : (
-                <ListContainer>
-                    <StyledSubtitle>{listTitle}</StyledSubtitle>
-                    <StyledList>
-                        {listItems.map(item => (
-                            <>
-                                {item}
-                                <br />
-                            </>
-                        ))}
-                    </StyledList>
-                </ListContainer>
-            )}
-        </StyledContainer>
-    );
-};
-*/
 
 const Containment = styled(Container)`
-    background-color: ${props =>
-        props.light ? '#262626' : '#1a1a1a'}!important;
-    margin: 5vh 0em 15vh 0em !important;
     @media (${mediaQueryMin.sm}) {
-        margin: 5vh 0em 15vh 3em !important;
+        margin: ${props =>
+            props.light || !props.src
+                ? '5em 0em 5em 3em'
+                : '5em 0 5em 0'} !important;
     }
-    min-height: 80vh;
 `;
 const StyledRow = styled(Row)`
-    min-height: 90vh;
+    background-color: ${props =>
+        props.light ? '#262626' : '#1a1a1a'}!important;
     flex-direction: column-reverse;
     @media (${mediaQueryMin.sm}) {
         flex-direction: row;
-        min-height: 80vh;
     }
+    min-height: 85vh;
 `;
 const StyledCol = styled(Col)`
-    margin-left: 3em !important;
-    @media (${mediaQueryMin.sm}) {
-        margin-left: 2.3em !important;
-    }
-    @media (${mediaQueryMin.lg}) {
-        margin-left: 6em !important;
-    }
     align-self: center;
+    padding-right: 7em !important;
+    padding-left: 7em !important;
 `;
 const ImageCol = styled(Col)`
-    //visibility: hidden;
-    align-self: flex-end;
     background-color: #262626;
-    overflow: hidden;
-    @media (${mediaQueryMin.xs}) {
-        visibility: visible;
-    }
+    align-self: flex-end;
 `;
 const ListCol = styled(Col)`
-    visibility: hidden;
-    position: relative;
-    top: 10em;
-    @media (${mediaQueryMin.xs}) {
-        visibility: visible;
-    }
-    @media (${mediaQueryMin.sm}) {
-        align-self: flex-start;
-        top: 0;
-    }
+    padding: 14em 8em !important;
 `;
 
 const TextCol = ({ children, src }) =>
     src ? (
-        <StyledCol sm={10} lg={4} xl={3.6}>
-            {children}
-        </StyledCol>
+        <StyledCol xl={5}>{children}</StyledCol>
     ) : (
-        <StyledCol lg={5} xl={3.8}>
-            {children}
-        </StyledCol>
+        <StyledCol xl={6}>{children}</StyledCol>
     );
 
 const ServiceItem = ({ title, text, src, link, light }) => {
     return (
-        <Containment light={light}>
-            <StyledRow>
+        <Containment src={src} light={light}>
+            <StyledRow justify="between" light={light}>
                 <TextCol src={src}>
                     <TextBlock
                         title={title}
@@ -113,21 +60,19 @@ const ServiceItem = ({ title, text, src, link, light }) => {
                     </TextBlock>
                 </TextCol>
                 {src ? (
-                    <ImageCol light={light}>
+                    <ImageCol xl={7} light={light}>
                         <StyledImage src={src} />
                     </ImageCol>
                 ) : (
-                    <ListCol>
-                        <ListContainer>
-                            <TextBlock subtitle="EXPERIENCE">
-                                API-Development
-                                <br />
-                                Cloudcomputing
-                                <br />
-                                IT-Automatisering
-                                <br />
-                            </TextBlock>
-                        </ListContainer>
+                    <ListCol xl={4}>
+                        <TextBlock subtitle="EXPERIENCE">
+                            API-Development
+                            <br />
+                            Cloudcomputing
+                            <br />
+                            IT-Automatisering
+                            <br />
+                        </TextBlock>
                     </ListCol>
                 )}
             </StyledRow>

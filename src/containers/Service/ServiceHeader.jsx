@@ -7,37 +7,16 @@ import TextBlock from '../TextBlock/TextBlock';
 import theme from '../../styles/theme';
 
 const { mediaQueryMin } = theme;
-/*
-const oudHeader = ({ title, subtitle, text, src }) => {
-    return (
-        <StyledContainer>
-            <StyledTitleContainer>
-                <StyledSubtitle>{subtitle}</StyledSubtitle>
-                <StyledTitle>{title}</StyledTitle>
-                <StyledText>{text}</StyledText>
-            </StyledTitleContainer>
-            <ImageContainer>
-                <StyledImage src={src} />
-            </ImageContainer>
-        </StyledContainer>
-    );
-};
-
-*/
 
 const TextCol = styled(Col)`
-    position: relative;
-    bottom: 10em;
-    @media (${mediaQueryMin.sm}) {
-        align-self: center;
-        bottom: 0;
-    }
+    align-self: center;
+    padding-left: 6em !important;
+    padding-right: 6em !important;
 `;
 
 const Containment = styled(Container)`
     @media (${mediaQueryMin.sm}) {
-        margin-right: 0 !important;
-        margin-left: 8vw !important;
+        margin: 0 !important;
     }
 `;
 
@@ -48,18 +27,20 @@ const StyledRow = styled(Row)`
     }
 `;
 
+const ImageCol = styled(Col)``;
+
 const ServiceHeader = ({ title, subtitle, text, src }) => {
     return (
         <Containment>
-            <StyledRow justify="between">
-                <TextCol sm={6} lg={5.6} xl={4.3}>
+            <StyledRow>
+                <TextCol xl={6}>
                     <TextBlock title={title} subtitle={subtitle}>
                         {text}
                     </TextBlock>
                 </TextCol>
-                <Col sm={9} lg={6.3} xl={7.6}>
+                <ImageCol xl={6}>
                     <StyledImage src={src} />
-                </Col>
+                </ImageCol>
             </StyledRow>
         </Containment>
     );
