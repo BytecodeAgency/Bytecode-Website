@@ -1,48 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import theme from '../../styles/theme';
-import { StyledImage} from './ServiceItem.components';
+import {
+    StyledImage,
+    Containment,
+    StyledCol,
+    StyledRow,
+    ImageCol,
+    ListCol,
+} from './ServiceItem.components';
 import TextBlock from '../TextBlock/TextBlock';
-import { Container, Col, Row } from '../../lib/Grid';
-
-const { mediaQueryMin } = theme;
-
-const Containment = styled(Container)`
-    @media (${mediaQueryMin.sm}) {
-        margin: ${props =>
-            props.light || !props.src
-                ? '5em 0em 5em 3em'
-                : '5em 0 5em 0'} !important;
-    }
-`;
-const StyledRow = styled(Row)`
-    background-color: ${props =>
-        props.light ? '#262626' : '#1a1a1a'}!important;
-    flex-direction: column-reverse;
-    @media (${mediaQueryMin.sm}) {
-        flex-direction: row;
-    }
-    min-height: 85vh;
-`;
-const StyledCol = styled(Col)`
-    align-self: center;
-    padding-right: 7em !important;
-    padding-left: 7em !important;
-`;
-const ImageCol = styled(Col)`
-    background-color: #262626;
-    align-self: flex-end;
-`;
-const ListCol = styled(Col)`
-    padding: 14em 8em !important;
-`;
 
 const TextCol = ({ children, src }) =>
     src ? (
-        <StyledCol xl={5}>{children}</StyledCol>
+        <StyledCol src={src} xl={5}>
+            {children}
+        </StyledCol>
     ) : (
-        <StyledCol xl={6}>{children}</StyledCol>
+        <StyledCol src={src} xl={6}>
+            {children}
+        </StyledCol>
     );
 
 const ServiceItem = ({ title, text, src, link, light }) => {

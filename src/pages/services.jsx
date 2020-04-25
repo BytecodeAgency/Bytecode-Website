@@ -49,7 +49,7 @@ const Services = () => (
             waarin jij alle tijd hebt voor dingen waar je daadwerkelijk meer verder komt."
             src={require('../images/img/services/website-1-3a5d6696cffd856aeffc1f126868cf20@2x (copy).png')}
             image
-            link="/services/digitaltools"
+            link="/services"
             light
         />
 

@@ -1,21 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { StyledLogo } from './ServiceItemSmall.components';
-import { Row, Col, Container } from '../../lib/Grid';
-import TextBlock from '../TextBlock/TextBlock';
-import theme from '../../styles/theme';
+import {
+    StyledLogo,
+    Containment,
+    CenteredTextBlock,
+} from './ServiceItemSmall.components';
+import { Row, Col } from '../../lib/Grid';
 
-const { mediaQueryMin } = theme;
-
-const CenteredTextBlock = styled(TextBlock)`
-    text-align: center;
-`;
-const Containment = styled(Container)`
-    margin-top: 0 !important;
-    margin-bottom: 3em !important;
-
-`;
 const ServiceItemSmall = ({ title, text, src }) => (
     <Containment>
         <Row justify="center" style={{ textAlign: 'center' }}>
