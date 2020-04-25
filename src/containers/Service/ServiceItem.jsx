@@ -21,7 +21,16 @@ const TextCol = ({ children, src }) =>
         </StyledCol>
     );
 
-const ServiceItem = ({ title, text, src, link, light }) => {
+const ServiceItem = ({
+    title,
+    subtitle,
+    text,
+    src,
+    link,
+    light,
+    listTitle,
+    listItems,
+}) => {
     return (
         <Containment src={src} light={light}>
             <StyledRow justify="between" light={light}>
@@ -31,6 +40,7 @@ const ServiceItem = ({ title, text, src, link, light }) => {
                         href={link}
                         headingType="h2"
                         button="Lees Meer"
+                        subtitle={subtitle}
                     >
                         {text}
                     </TextBlock>
@@ -41,13 +51,13 @@ const ServiceItem = ({ title, text, src, link, light }) => {
                     </ImageCol>
                 ) : (
                     <ListCol xl={4}>
-                        <TextBlock subtitle="EXPERIENCE">
-                            API-Development
-                            <br />
-                            Cloudcomputing
-                            <br />
-                            IT-Automatisering
-                            <br />
+                        <TextBlock subtitle={listTitle}>
+                            {listItems.map(item => (
+                                <>
+                                    {item}
+                                    <br />
+                                </>
+                            ))}
                         </TextBlock>
                     </ListCol>
                 )}
@@ -60,14 +70,19 @@ export default ServiceItem;
 
 ServiceItem.propTypes = {
     title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     light: PropTypes.bool,
+    listTitle: PropTypes.string,
+    listItems: PropTypes.arrayOf(PropTypes.string),
 };
 
 ServiceItem.defaultProps = {
     light: false,
+    listTitle: '',
+    listItems: [],
 };
 
 TextCol.propTypes = {

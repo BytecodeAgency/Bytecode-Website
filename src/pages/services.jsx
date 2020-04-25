@@ -32,21 +32,19 @@ const Services = () => (
         />
 
         <ServiceItemSmall
-            title="Research Based Development"
-            text="Ons werkproces bestaat voor een groot en belangrijk deel uit het doen van onderzoek.
-            Dit helpt ons om onder andere een duidelijk beeld te krijgen van de doelen
-            en prioriteiten van een project, de beschikbare middelen,
-            en de wensen van de bedenker en gebruiker."
+            title="Research-Based Development"
+            text="Ons werk is volledig gebaseerd op onderzoek.
+            Het is essentieel om bij het ontwikkelen van een project met echte validatie richting een passende oplossing te werken,
+            zonder aannames. Met ons unieke research-based development bouwen we mobiele apps en andere platforms,
+            UX/UI design, API development en nog veel meer."
             src={require('../images/img/services/Logox3.svg')}
         />
 
         <ServiceItem
-            title="Digital Tools"
-            text="Digitale gereedschappen zijn als een extensie van de gebruiker waardoor ze hun
-            kunnen kunnen vergroten. Hierdoor wordt het mogelijk sneller dingen te doen die eerst heel veel tijd
-            en moeite kosten. Zoals instant alle mogelijkheden voor een vrijwilligersbaan vinden
-            of declaraties invoeren. Door deze tools creeëren we de omstandigheden
-            waarin jij alle tijd hebt voor dingen waar je daadwerkelijk meer verder komt."
+            title="Bereik meer met minder werk"
+            subtitle="Digital Tools"
+            text="Als je een doel hebt, maar dit niet zelf kunt bereiken, vereist dit een oplossing die jouw vermogens vergroot.
+            Wij creëren overzicht en inzicht, brengen mensen samen en automatiseren handwerk."
             src={require('../images/img/services/website-1-3a5d6696cffd856aeffc1f126868cf20@2x (copy).png')}
             image
             link="/services"
@@ -54,18 +52,16 @@ const Services = () => (
         />
 
         <ServiceItem
-            title="Digital Enviroment"
-            text="Digitale omgeving gaat erom hoe jouw hele digitale workflow moet worden opgebouwd:
-                wat is de beste manier om mijn applicaties te draaien?
-                Hoe kan ik handmatig data knippen en plakken zoveel mogelijk voorkomen?
-                Maar ook: wat in het geval dat ik moet opschalen?
-                Het is een holistische strategie voor jouw digitale werkplek zodat er geen technical debt ontstaat.
-                Hierdoor creeëren we een omgeving waarin je fijn en flexiebe kan werken
-                zodat jij je kan richten op nieuwe dingen verzinnen in plaats van pleisters plakken."
+            title="Een betrouwbare en stabiele basis"
+            subtitle="Digital Enviroment"
+            text="We creëren een flexibele omgeving als basis, waarin jouw tools op een optimale manier met elkaar verbonden worden.
+            Door goede communicatie tussen deze tools win je tijd en wordt de infrastructuur gebruiksvriendelijk.
+            Zorgen en handwerk zijn verleden tijd."
             link="/services"
             listTitle="EXPERIENCE"
             listItems={[
-                'API-Development',
+                'Platformontwikkeling',
+                'API development',
                 'Cloudcomputing',
                 'IT-automatisering',
             ]}
@@ -77,16 +73,10 @@ const Services = () => (
         </ServiceBackgroundContainer>
 
         <ServiceItem
-            title="Digital Commerce"
-            text="Digitale  Commerce gaat er in essentie om hoe je de digitale wereld gebruikt
-            om jouw bedrijf zo aantrekkelijk mogelijk te maken.
-            Zoals digitale gereedschappen gaan om de gebruiker iets te laten doen wat ze zelf willen bereiken
-            gaat commerce erom de gebruiker iets te laten bereiken wat jij wil.
-            We kijken hier bijvoorbeeld hoe we een gebruikerservaring creeëren die meer verkopen oplevert,
-            maar ook hoe we je goed laten voorkomen in zoekresultaten
-            of hoe we digitaal adverteren in jouw voordeel kunnen gebruiken.
-            Hierdoor hoef je minder zorgen te maken om klanten werven waardoor je fijner kan werken
-            en nieuwe dingen kan verzinnen."
+            title="Advies voor een echt succes"
+            subtitle="Digital Expression"
+            text="Digitale expressie is essentieel om jouw tool zichtbaar te maken voor potentiële gebruikers.
+            Jouw tool wordt met ons advies representatief, toegankelijk en van hoge kwaliteit."
             src={require('../images/img/services/Shop Screenshot x2.png')}
             image
             link="/services"
