@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 import { Container, Col, Row } from '../../lib/Grid';
-import TextBlock from '../TextBlock/TextBlock';
 
 const { mediaQueryMin } = theme;
 
@@ -16,7 +15,6 @@ export const StyledImage = styled.img`
 `;
 
 export const Containment = styled(Container)`
-
     @media (${mediaQueryMin.sm}) {
         margin: ${props =>
             props.light || !props.src
@@ -45,7 +43,7 @@ export const StyledRow = styled(Row)`
         flex-direction: row;
     }
     min-height: 67vh;
-    max-height: 100vh;
+
     @media (${mediaQueryMin.md}) {
         min-height: 85vh;
     }
@@ -55,11 +53,11 @@ export const StyledCol = styled(Col)`
 `;
 
 export const DeliverableList = styled(Container)`
-    float: right;
     @media (${mediaQueryMin.lg}) {
         padding-right: 3em !important;
         padding-left: 3em !important;
-        margin: 0 0em 5em 20em !important;
+        margin: 0em !important;
+        float: right;
     }
 `;
 
@@ -86,7 +84,6 @@ export const StyledTextBlock = styled(Container)`
 `;
 
 export const ImageCol = styled(Col)`
-
     align-self: flex-end;
 `;
 export const ListCol = styled(Col)`
