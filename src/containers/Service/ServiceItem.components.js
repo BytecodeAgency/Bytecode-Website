@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 import { Container, Col, Row } from '../../lib/Grid';
+import TextBlock from '../TextBlock/TextBlock';
 
 const { mediaQueryMin } = theme;
 
@@ -11,9 +12,11 @@ export const StyledImage = styled.img`
     height: auto;
     width: auto;
     float: right;
+    background-color: #262626;
 `;
 
 export const Containment = styled(Container)`
+
     @media (${mediaQueryMin.sm}) {
         margin: ${props =>
             props.light || !props.src
@@ -42,30 +45,48 @@ export const StyledRow = styled(Row)`
         flex-direction: row;
     }
     min-height: 67vh;
+    max-height: 100vh;
     @media (${mediaQueryMin.md}) {
         min-height: 85vh;
     }
 `;
 export const StyledCol = styled(Col)`
+    align-self: center;
+`;
+
+export const DeliverableList = styled(Container)`
+    float: right;
+    @media (${mediaQueryMin.lg}) {
+        padding-right: 3em !important;
+        padding-left: 3em !important;
+        margin: 0 0em 5em 20em !important;
+    }
+`;
+
+export const StyledTextBlock = styled(Container)`
+    margin: 0 !important;
     padding-right: 1em !important;
     padding-left: 1em !important;
 
     @media (${mediaQueryMin.sm}) {
-        align-self: center;
+        margin: 0 !important;
         padding-right: 3em !important;
         padding-left: 3em !important;
     }
     @media (${mediaQueryMin.md}) {
+        margin: 0 !important;
         padding-left: 3em !important;
         padding-right: 3em !important;
     }
     @media (${mediaQueryMin.lg}) {
+        margin: 0 !important;
         padding-right: 7em !important;
         padding-left: 7em !important;
     }
 `;
+
 export const ImageCol = styled(Col)`
-    background-color: #262626;
+
     align-self: flex-end;
 `;
 export const ListCol = styled(Col)`

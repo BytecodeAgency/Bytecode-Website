@@ -6,9 +6,12 @@ import {
     StyledCol,
     StyledRow,
     ImageCol,
-    ListCol,
+    ListCol, StyledTextBlock, DeliverableList,
 } from './ServiceItem.components';
 import TextBlock from '../TextBlock/TextBlock';
+import styled from "styled-components";
+import theme from '../../styles/theme';
+const {mediaQueryMin} = theme;
 
 const TextCol = ({ children, src }) =>
     src ? (
@@ -20,6 +23,9 @@ const TextCol = ({ children, src }) =>
             {children}
         </StyledCol>
     );
+
+
+
 
 const ServiceItem = ({
     title,
@@ -35,18 +41,23 @@ const ServiceItem = ({
         <Containment src={src} light={light}>
             <StyledRow justify="between" light={light}>
                 <TextCol src={src}>
-                    <TextBlock
-                        title={title}
-                        href={link}
-                        headingType="h2"
-                        button="Lees Meer"
-                        subtitle={subtitle}
-                    >
-                        {text}
-                    </TextBlock>
+                    
+                    <StyledTextBlock>
+                        <TextBlock
+                            title={title}
+                            href={link}
+                            headingType="h2"
+                            button="Lees Meer"
+                            subtitle={subtitle}
+                        >
+                            {text}
+                        </TextBlock>
+                    </StyledTextBlock>
+
                 </TextCol>
                 {src ? (
                     <ImageCol xl={7} light={light}>
+
                         <StyledImage src={src} />
                     </ImageCol>
                 ) : (

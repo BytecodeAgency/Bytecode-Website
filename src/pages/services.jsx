@@ -49,6 +49,8 @@ const Services = () => (
             image
             link="/services"
             light
+            listTitle="APPLICATIONS"
+            listItems={['Mobiele apps', 'Webapps', 'Websites', 'Webshops']}
         />
 
         <ServiceItem
@@ -80,6 +82,14 @@ const Services = () => (
             src={require('../images/img/services/Shop Screenshot x2.png')}
             image
             link="/services"
+            listTitle="DEVELOPMENT"
+            listItems={[
+                'UX/UI design',
+                'Advies en strategie',
+                'Branding en identiteit',
+                'Start-up begeleiding',
+                'Partnership',
+            ]}
         />
 
         <ServiceCard
