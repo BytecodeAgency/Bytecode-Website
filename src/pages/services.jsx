@@ -45,7 +45,7 @@ const Services = () => (
             subtitle="Digital Tools"
             text="Als je een doel hebt, maar dit niet zelf kunt bereiken, vereist dit een oplossing die jouw vermogens vergroot.
             Wij creëren overzicht en inzicht, brengen mensen samen en automatiseren handwerk."
-            src={require('../images/img/services/website-1-3a5d6696cffd856aeffc1f126868cf20@2x (copy).png')}
+            src={require('../images/img/services/website-1-3a5d6696cffd856aeffc1f126868cf20@2x cropped.png')}
             image
             link="/services"
             light

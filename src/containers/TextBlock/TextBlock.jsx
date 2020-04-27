@@ -10,8 +10,6 @@ import {
     Subtitle,
 } from './TextBlock.components';
 
-// TODO: make it possible for TextBlock to work without a title (needed for ServiceItem without image)
-
 const getImage = (src, alt) => {
     if (src) {
         return (

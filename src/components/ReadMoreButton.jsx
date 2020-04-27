@@ -8,7 +8,7 @@ const { mediaQueryMin } = theme;
 
 const image = require('../images/img/arrow@3x.svg');
 
-const LeesMeerContainer = styled(Link)`
+const StyledContainer = styled(Link)`
     width: ${props => (props.small ? '70%' : '90%')};
     height: 15vmin;
     display: flex;
@@ -61,10 +61,10 @@ const ArrowImage = styled.img`
 `;
 
 const ReadMoreButton = ({ link, small }) => (
-    <LeesMeerContainer to={link} small={small}>
+    <StyledContainer to={link} small={small}>
         <ArrowText small={small}>Lees meer</ArrowText>
         <ArrowImage src={image} small={small} />
-    </LeesMeerContainer>
+    </StyledContainer>
 );
 
 export default ReadMoreButton;

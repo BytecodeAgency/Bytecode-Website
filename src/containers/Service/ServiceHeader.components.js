@@ -4,8 +4,6 @@ import { Container, Col, Row } from '../../lib/Grid';
 
 const { mediaQueryMin } = theme;
 
-// TODO: change float to flexbox
-
 export const StyledImage = styled.img`
     max-width: 100%;
     max-height: 75vh;
