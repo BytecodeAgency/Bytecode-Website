@@ -95,7 +95,7 @@ const Services = () => (
         <ServiceCard
             subtitle="oproep"
             title="Start-Up Mentoring"
-            text="Bytecode wil graag start-ups helpen ontspruiten"
+            text="Bytecode ondersteunt start-ups tijdens alle fases van hun groeiproces."
             link="/services"
             src={require('../images/img/services/AbstractCardBackground.svg')}
         />

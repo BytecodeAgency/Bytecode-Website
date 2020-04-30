@@ -86,7 +86,6 @@ const ServiceItem = ({
                             title={title}
                             href={link}
                             headingType="h2"
-                            button="Lees Meer"
                             subtitle={subtitle}
                         >
                             {text}

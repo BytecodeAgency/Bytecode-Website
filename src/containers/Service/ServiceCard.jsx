@@ -15,12 +15,7 @@ const ServiceCard = ({ subtitle, title, text, src, link }) => (
         <StyledRow src={src} justify="center">
             <StyledCol xl={8.4}>
                 <TextBlockContainer>
-                    <TextBlock
-                        title={title}
-                        subtitle={subtitle}
-                        href={link}
-                        button="Lees meer"
-                    >
+                    <TextBlock title={title} subtitle={subtitle} href={link}>
                         {text}
                     </TextBlock>
                 </TextBlockContainer>
