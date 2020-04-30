@@ -2,10 +2,22 @@ import styled from 'styled-components';
 import theme from '../../styles/theme';
 
 export const NewsletterSubscribeContainer = styled.div`
-    display: flex;
-    > input {
-        flex: 1;
+    margin-top: 2vh;
+    background: ${theme.colors.lightgray};
+    padding: 10vw;
+    @media (min-width: ${theme.breakpoint.md}) {
+        padding: 3vw;
     }
+`;
+
+export const NewsletterSubscribeForm = styled.form`
+    @media (min-width: ${theme.breakpoint.md}) {
+        display: flex;
+        > input {
+            flex: 1;
+        }
+    }
+
 `;
 
 export const SubscribeButton = styled.button`
