@@ -28,7 +28,7 @@ const Services = () => (
             belemmerende randzaken of fricties. Handmatig, tijdrovend werk is verleden tijd.
             Jij kan je volledig focussen op datgene waar jij passie voor hebt.
             Zo maken we jouw visie realiteit."
-            src={require('../images/img/services/DawnyHeader.png')}
+            src={require('../images/img/services/dawnyheader.png')}
         />
 
         <ServiceItemSmall
@@ -37,7 +37,7 @@ const Services = () => (
             Het is essentieel om bij het ontwikkelen van een project met echte validatie richting een passende oplossing te werken,
             zonder aannames. Met ons unieke research-based development bouwen we mobiele apps en andere platforms,
             UX/UI design, API development en nog veel meer."
-            src={require('../images/img/services/SmallServiceItemLogo.svg')}
+            src={require('../images/img/services/smallserviceitemlogo.svg')}
         />
 
         <ServiceItem
@@ -45,7 +45,7 @@ const Services = () => (
             subtitle="Digital Tools"
             text="Als je een doel hebt, maar dit niet zelf kunt bereiken, vereist dit een oplossing die jouw vermogens vergroot.
             Wij creëren overzicht en inzicht, brengen mensen samen en automatiseren handwerk."
-            src={require('../images/img/services/Mooiwerk.png')}
+            src={require('../images/img/services/mooiwerksite.png')}
             image
             link="/services"
             light
@@ -70,7 +70,7 @@ const Services = () => (
         />
         <ServiceBackgroundContainer>
             <ServiceBackgroundImage
-                src={require('../images/img/services/AbstractBackground.png')}
+                src={require('../images/img/services/abstractbackground.png')}
             />
         </ServiceBackgroundContainer>
 
@@ -79,7 +79,7 @@ const Services = () => (
             subtitle="Digital Expression"
             text="Digitale expressie is essentieel om jouw tool zichtbaar te maken voor potentiële gebruikers.
             Jouw tool wordt met ons advies representatief, toegankelijk en van hoge kwaliteit."
-            src={require('../images/img/services/ShopScreenshot.png')}
+            src={require('../images/img/services/shopscreenshot.png')}
             image
             link="/services"
             listTitle="DEVELOPMENT"
@@ -97,7 +97,7 @@ const Services = () => (
             title="Start-Up Mentoring"
             text="Bytecode ondersteunt start-ups tijdens alle fases van hun groeiproces."
             link="/services"
-            src={require('../images/img/services/AbstractCardBackground.svg')}
+            src={require('../images/img/services/abstractcardbackground.svg')}
         />
         <Container>
             <ContactForm />
