@@ -17,7 +17,6 @@ export const NewsletterSubscribeForm = styled.form`
             flex: 1;
         }
     }
-
 `;
 
 export const SubscribeButton = styled.button`
