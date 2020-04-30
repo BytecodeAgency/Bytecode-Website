@@ -17,8 +17,9 @@ const NewsletterSubscribe = () => {
         <NewsletterSubscribeContainer>
             <h4>Schrijf je in voor onze nieuwsbrief!</h4>
             <p>
-                Elke maand brengen wij een nieuwe nieuwsbrief uit, vul hieronder
-                je gegevens in om je in te schrijven!
+                Maandelijks brengen wij een interessante en leerzame nieuwsbrief
+                uit met onder andere onze ‘Bytecast’, nieuwe artikelen of
+                e-books, en natuurlijk updates over ons team en werkzaamheden.
             </p>
             <NewsletterSubscribeForm
                 action="https://bytecode.us4.list-manage.com/subscribe/post"
