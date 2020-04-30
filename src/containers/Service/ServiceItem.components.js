@@ -9,10 +9,10 @@ export const StyledImage = styled.img`
     height: auto;
     width: auto;
     float: right;
-    background-color: #262626;
+    background-color: ${theme.colors.secondary};
 `;
 
-export const Containment = styled(Container)`
+export const StyledContainer = styled(Container)`
     @media (${mediaQueryMin.sm}) {
         margin: ${props =>
             props.light || !props.src
@@ -35,7 +35,7 @@ export const Containment = styled(Container)`
 `;
 export const StyledRow = styled(Row)`
     background-color: ${props =>
-        props.light ? '#262626' : '#1a1a1a'}!important;
+        props.light ? theme.colors.secondary : theme.colors.background};
     flex-direction: column-reverse;
     @media (${mediaQueryMin.sm}) {
         flex-direction: row;

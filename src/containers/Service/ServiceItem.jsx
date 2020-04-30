@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
     StyledImage,
-    Containment,
+    StyledContainer,
     StyledCol,
     StyledRow,
     ImageCol,
@@ -34,9 +34,30 @@ const ServiceItem = ({
     listTitle,
     listItems,
 }) => {
-    return (
-        <Containment src={src} light={light}>
-            {src && (
+    const RightCol = () => {
+        if (src)
+            return (
+                <ImageCol xl={7} light={light}>
+                    <StyledImage src={src} />
+                </ImageCol>
+            );
+
+        return (
+            <ListCol xl={4}>
+                <TextBlock subtitle={listTitle}>
+                    {listItems.map(item => (
+                        <>
+                            {item}
+                            <br />
+                        </>
+                    ))}
+                </TextBlock>
+            </ListCol>
+        );
+    };
+    const Deliverables = () => {
+        if (src)
+            return (
                 <Row>
                     <Col xl={12}>
                         <DeliverableList>
@@ -51,8 +72,13 @@ const ServiceItem = ({
                         </DeliverableList>
                     </Col>
                 </Row>
-            )}
+            );
+        return null;
+    };
 
+    return (
+        <StyledContainer src={src} light={light}>
+            <Deliverables />
             <StyledRow justify="between" light={light}>
                 <TextCol src={src}>
                     <StyledTextBlock>
@@ -67,24 +93,9 @@ const ServiceItem = ({
                         </TextBlock>
                     </StyledTextBlock>
                 </TextCol>
-                {src ? (
-                    <ImageCol xl={7} light={light}>
-                        <StyledImage src={src} />
-                    </ImageCol>
-                ) : (
-                    <ListCol xl={4}>
-                        <TextBlock subtitle={listTitle}>
-                            {listItems.map(item => (
-                                <>
-                                    {item}
-                                    <br />
-                                </>
-                            ))}
-                        </TextBlock>
-                    </ListCol>
-                )}
+                <RightCol />
             </StyledRow>
-        </Containment>
+        </StyledContainer>
     );
 };
 

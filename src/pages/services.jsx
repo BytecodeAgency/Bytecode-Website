@@ -22,13 +22,13 @@ const pageSettings = {
 const Services = () => (
     <Layout pageSettings={pageSettings}>
         <ServiceHeader
-            subtitle="SERVICES"
+            subtitle="Services"
             title="Van inzicht tot impact"
             text="Door hulp bij onderzoek, ontwikkeling en uitvoering hoef jij je geen zorgen meer te maken om kleine,
             belemmerende randzaken of fricties. Handmatig, tijdrovend werk is verleden tijd.
             Jij kan je volledig focussen op datgene waar jij passie voor hebt.
             Zo maken we jouw visie realiteit."
-            src={require('../images/img/services/mockup-nobg+no-desktop@2x.png')}
+            src={require('../images/img/services/DawnyHeader.png')}
         />
 
         <ServiceItemSmall
@@ -37,7 +37,7 @@ const Services = () => (
             Het is essentieel om bij het ontwikkelen van een project met echte validatie richting een passende oplossing te werken,
             zonder aannames. Met ons unieke research-based development bouwen we mobiele apps en andere platforms,
             UX/UI design, API development en nog veel meer."
-            src={require('../images/img/services/Logox3.svg')}
+            src={require('../images/img/services/SmallServiceItemLogo.svg')}
         />
 
         <ServiceItem
@@ -45,7 +45,7 @@ const Services = () => (
             subtitle="Digital Tools"
             text="Als je een doel hebt, maar dit niet zelf kunt bereiken, vereist dit een oplossing die jouw vermogens vergroot.
             Wij creëren overzicht en inzicht, brengen mensen samen en automatiseren handwerk."
-            src={require('../images/img/services/website-1-3a5d6696cffd856aeffc1f126868cf20@2x cropped.png')}
+            src={require('../images/img/services/Mooiwerk.png')}
             image
             link="/services"
             light
@@ -70,7 +70,7 @@ const Services = () => (
         />
         <ServiceBackgroundContainer>
             <ServiceBackgroundImage
-                src={require('../images/img/services/abstract graphx2.png')}
+                src={require('../images/img/services/AbstractBackground.png')}
             />
         </ServiceBackgroundContainer>
 
@@ -79,7 +79,7 @@ const Services = () => (
             subtitle="Digital Expression"
             text="Digitale expressie is essentieel om jouw tool zichtbaar te maken voor potentiële gebruikers.
             Jouw tool wordt met ons advies representatief, toegankelijk en van hoge kwaliteit."
-            src={require('../images/img/services/Shop Screenshot x2.png')}
+            src={require('../images/img/services/ShopScreenshot.png')}
             image
             link="/services"
             listTitle="DEVELOPMENT"
@@ -93,11 +93,11 @@ const Services = () => (
         />
 
         <ServiceCard
-            subtitle="OPROEP"
+            subtitle="oproep"
             title="Start-Up Mentoring"
             text="Bytecode wil graag start-ups helpen ontspruiten"
             link="/services"
-            src={require('../images/img/services/ServiceCardImage x3.svg')}
+            src={require('../images/img/services/AbstractCardBackground.svg')}
         />
         <Container>
             <ContactForm />

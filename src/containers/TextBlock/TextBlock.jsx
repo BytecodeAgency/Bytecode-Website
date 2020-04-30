@@ -67,7 +67,7 @@ const TextBlock = props => {
     return (
         <div>
             {getImage(image, alt)}
-            <Subtitle title={title}>{subtitle}</Subtitle>
+            <Subtitle hasTitle={title}>{subtitle}</Subtitle>
             {getTitle(headingType, title)}
             <p>{children}</p>
             {getButton(href, button, useGatsbyLink)}

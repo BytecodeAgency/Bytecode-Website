@@ -4,14 +4,14 @@ import {
     StyledImage,
     StyledRow,
     TextCol,
-    Containment,
+    StyledContainer,
 } from './ServiceHeader.components';
 import { Col } from '../../lib/Grid';
 import TextBlock from '../TextBlock/TextBlock';
 
 const ServiceHeader = ({ title, subtitle, text, src }) => {
     return (
-        <Containment>
+        <StyledContainer>
             <StyledRow>
                 <TextCol xl={6}>
                     <TextBlock title={title} subtitle={subtitle}>
@@ -22,7 +22,7 @@ const ServiceHeader = ({ title, subtitle, text, src }) => {
                     <StyledImage src={src} />
                 </Col>
             </StyledRow>
-        </Containment>
+        </StyledContainer>
     );
 };
 export default ServiceHeader;

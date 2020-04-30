@@ -22,7 +22,7 @@ export const TextCol = styled(Col)`
     }
 `;
 
-export const Containment = styled(Container)`
+export const StyledContainer = styled(Container)`
     @media (${mediaQueryMin.sm}) {
         margin: 0 !important;
     }

@@ -44,7 +44,7 @@ export const ServiceText = styled.div`
     flex: 1;
 `;
 
-// Below are the components from the new Service Page
+// Below are the components for the servicepage
 export const ServiceBackgroundImage = styled.img`
     overflow: visible;
     position: relative;

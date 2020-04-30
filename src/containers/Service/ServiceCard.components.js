@@ -5,7 +5,7 @@ import { Container, Col, Row } from '../../lib/Grid';
 const { mediaQueryMin } = theme;
 
 export const TextBlockContainer = styled(Container)`
-    background-color: #262626;
+    background-color: ${theme.colors.secondary};
     padding: 10% !important;
     z-index: 1;
     margin: 40% auto !important;
