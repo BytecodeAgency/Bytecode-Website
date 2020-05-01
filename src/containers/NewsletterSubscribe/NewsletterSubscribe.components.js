@@ -3,7 +3,7 @@ import theme from '../../styles/theme';
 
 export const NewsletterSubscribeContainer = styled.div`
     margin-top: 2vh;
-    background: ${theme.colors.lightgray};
+    background: #1c1e1f;
     padding: 10vw;
     max-width: 800px;
     @media (min-width: ${theme.breakpoint.md}) {
