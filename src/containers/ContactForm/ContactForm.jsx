@@ -5,9 +5,9 @@
 import React from 'react';
 import axios from 'axios';
 import TextBlock from '../TextBlock/TextBlock';
+import InputField from '../../components/InputField';
 import {
     ContactFormContainer,
-    InputField,
     InputTextArea,
     SendButton,
     StyledNotification,

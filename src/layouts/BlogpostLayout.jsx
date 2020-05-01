@@ -6,7 +6,7 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import Layout from './MainLayout';
 import Author from '../containers/Author/Author';
 import { Subtitle, Small } from '../components/Typography';
-import ContactForm from '../containers/ContactForm/ContactForm';
+import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSubscribe';
 import {
     Article,
     ArticleHeader,
@@ -75,7 +75,7 @@ const CallToAction = () => (
             betekenen? <a href="/contact">Neem gerust contact met ons op</a> of
             kom een keer langs op de koffie!
         </CallToActionText>
-        <ContactForm />
+        <NewsletterSubscribe />
     </CallToActionContainer>
 );
 
