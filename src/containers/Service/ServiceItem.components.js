@@ -48,15 +48,16 @@ export const StyledRow = styled(Row)`
 `;
 export const StyledCol = styled(Col)`
     align-self: center;
+    margin: 20px 0;
 `;
 
-export const DeliverableList = styled(Container)`
-    @media (${mediaQueryMin.lg}) {
-        padding-right: 3em !important;
-        padding-left: 3em !important;
-        margin: 0em !important;
-        float: right;
-    }
+export const DeliverableList = styled.p`
+    font-family: Cousine;
+    color: #9c9c9c;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 1.58;
+    max-width: 600px;
 `;
 
 export const StyledTextBlock = styled(Container)`

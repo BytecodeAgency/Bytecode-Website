@@ -6,12 +6,10 @@ import {
     StyledCol,
     StyledRow,
     ImageCol,
-    ListCol,
     StyledTextBlock,
     DeliverableList,
 } from './ServiceItem.components';
 import TextBlock from '../TextBlock/TextBlock';
-import { Col, Row } from '../../lib/Grid';
 
 const TextCol = ({ children, src }) =>
     src ? (
@@ -31,7 +29,6 @@ const ServiceItem = ({
     src,
     link,
     light,
-    listTitle,
     listItems,
 }) => {
     const RightCol = () => {
@@ -42,43 +39,11 @@ const ServiceItem = ({
                 </ImageCol>
             );
 
-        return (
-            <ListCol xl={4}>
-                <TextBlock subtitle={listTitle}>
-                    {listItems.map(item => (
-                        <>
-                            {item}
-                            <br />
-                        </>
-                    ))}
-                </TextBlock>
-            </ListCol>
-        );
-    };
-    const Deliverables = () => {
-        if (src)
-            return (
-                <Row>
-                    <Col xl={12}>
-                        <DeliverableList>
-                            <TextBlock subtitle={listTitle}>
-                                {listItems.map(item => (
-                                    <>
-                                        {item}
-                                        <br />
-                                    </>
-                                ))}
-                            </TextBlock>
-                        </DeliverableList>
-                    </Col>
-                </Row>
-            );
         return null;
     };
 
     return (
         <StyledContainer src={src} light={light}>
-            <Deliverables />
             <StyledRow justify="between" light={light}>
                 <TextCol src={src}>
                     <StyledTextBlock>
@@ -90,6 +55,9 @@ const ServiceItem = ({
                         >
                             {text}
                         </TextBlock>
+                        <DeliverableList>
+                            {listItems.join(', ')}
+                        </DeliverableList>
                     </StyledTextBlock>
                 </TextCol>
                 <RightCol />
@@ -107,13 +75,11 @@ ServiceItem.propTypes = {
     src: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     light: PropTypes.bool,
-    listTitle: PropTypes.string,
     listItems: PropTypes.arrayOf(PropTypes.string),
 };
 
 ServiceItem.defaultProps = {
     light: false,
-    listTitle: '',
     listItems: [],
 };
 

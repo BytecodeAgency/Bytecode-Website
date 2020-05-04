@@ -49,7 +49,6 @@ const Services = () => (
             image
             link="/services"
             light
-            listTitle="APPLICATIONS"
             listItems={['Mobiele apps', 'Webapps', 'Websites', 'Webshops']}
         />
 
@@ -60,7 +59,6 @@ const Services = () => (
             Door goede communicatie tussen deze tools win je tijd en wordt de infrastructuur gebruiksvriendelijk.
             Zorgen en handwerk zijn verleden tijd."
             link="/services"
-            listTitle="EXPERIENCE"
             listItems={[
                 'Platformontwikkeling',
                 'API development',
@@ -82,7 +80,6 @@ const Services = () => (
             src={require('../images/img/services/shopscreenshot.png')}
             image
             link="/services"
-            listTitle="DEVELOPMENT"
             listItems={[
                 'UX/UI design',
                 'Advies en strategie',
