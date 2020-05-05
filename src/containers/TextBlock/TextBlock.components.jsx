@@ -26,7 +26,7 @@ export const Figure = styled.figure`
 `;
 
 export const Subtitle = styled(SubtitleBase)`
-    margin-bottom: 2rem;
+    margin-bottom: ${props => (props.hasTitle ? '2rem' : '1.2em')};
 `;
 
 export const H1 = styled.h1``;

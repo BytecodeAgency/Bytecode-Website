@@ -33,6 +33,9 @@ const getButton = (href, button, useGatsbyLink) => {
 };
 
 const getTitle = (type, title) => {
+    if (!title) {
+        return '';
+    }
     if (type === 'h1') {
         return <H1>{title}</H1>;
     }
@@ -64,7 +67,7 @@ const TextBlock = props => {
     return (
         <div>
             {getImage(image, alt)}
-            <Subtitle>{subtitle}</Subtitle>
+            <Subtitle hasTitle={title}>{subtitle}</Subtitle>
             {getTitle(headingType, title)}
             <p>{children}</p>
             {getButton(href, button, useGatsbyLink)}
