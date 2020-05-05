@@ -9,6 +9,7 @@ const lightgray2 = '#E7E7E7';
 const mediumgray = '#262626';
 const red = '#df5252';
 const white = '#ffffff';
+const lightgreen = '#70C197';
 
 // Fonts
 const heading = 'Lato';
