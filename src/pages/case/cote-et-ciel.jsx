@@ -35,7 +35,7 @@ const Case = () => (
                 gebruiksvriendelijkheid onder handen genomen worden,
                 bijvoorbeeld door het toevoegen van nieuwe betaalmethodes. Wij
                 ondersteunden côte&ciel bij het opzetten van haar nieuwe
-                platform op Shopify, het oplossen van kritieke problem op haar
+                platform op Shopify, het oplossen van kritieke problemen op haar
                 huidige Magento webshop en verzorgden zowel datamigratie als
                 launch engineering.
             </p>
