@@ -7,9 +7,10 @@ import {
     ResultsAndNumbers,
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
-import TextBlock from '../../containers/TextBlock/TextBlock';
+import Credits from '../../containers/Credits/Credits';
 
 // section for image imports in the form of const img = require(url);
+const useCase = require('../../images/img/cases/youngpwr/case-youngpwr-teamfoto.png');
 const match = '';
 const research = '';
 const fundering = '';
@@ -22,6 +23,7 @@ const pageSettings = {
     description:
         'Met een nieuw platform ondersteunen we de ontplooiing van scholieren en studenten met een wens om te werken of ondernemen.',
     keywords: '', // TODO: add keywords
+    image: useCase,
 };
 
 const Case = () => (
@@ -149,6 +151,16 @@ const Case = () => (
                 title="Cijfers tot nu toe"
             />
         </Section>
+            <Credits
+                partner="Youngpwr"
+                year="2020"
+                designers={['Chris Färber']}
+                backend={['Luciano Nooijen']}
+                frontend={['Luciano Nooijen','Chris Färber']}
+                special={['Youngpwr']}
+                resources={['Youngpwr Website']}
+                resourceLinks={["https://youngpwr.nl/"]}
+            />
     </Layout>
 );
 
