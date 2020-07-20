@@ -8,6 +8,8 @@ import {
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
 import Credits from '../../containers/Credits/Credits';
+import Gallery from "../../containers/Gallery";
+import PostThumbnail from "../../containers/Thumbnails/PostThumbnail";
 
 // section for image imports in the form of const img = require(url);
 const useCase = require('../../images/img/cases/youngpwr/case-youngpwr-teamfoto.png');
@@ -16,6 +18,10 @@ const research = require('../../images/img/cases/youngpwr/youngpwr-desktop-heatm
 const fundering = require('../../images/img/cases/youngpwr/youngpwr-desktop-login.png');
 const pipeline = require('../../images/img/cases/youngpwr/dev1-database-test-omgeving.png');
 const integration = require('../../images/img/cases/youngpwr/infographic.svg');
+
+const dawny = require('../../images/img/cases/dawny/usecase.png');
+const coteetciel = require('../../images/img/cases/cote-et-ciel/homepage.png');
+const sungevity = require('../../images/img/cases/sungevity/header.jpg');
 
 const pageSettings = {
     title: 'Platform voor een door jongeren',
@@ -118,6 +124,7 @@ const Case = () => (
                 reverse
                 padded
             >
+                <p className="subtitle">Research</p>
                 <h3>Efficiëntie voorop</h3>
                 <p className="big">
                     Omdat het matchingplatform niet direct gebouwd kon worden,
@@ -151,6 +158,7 @@ const Case = () => (
                 padded
                 reverse
             >
+                <p className="subtitle">Development</p>
                 <h3>De technische kant</h3>
                 <p className="big">
                     We hebben de achterkant van het matchingplatform al volledig
@@ -182,6 +190,26 @@ const Case = () => (
             resources={['Youngpwr Website']}
             resourceLinks={['https://youngpwr.nl/']}
         />
+        <Gallery padded sm={33}>
+            <PostThumbnail
+                title="Valpreventie voor ouderen"
+                category="Reinier de Graaf ziekenhuis"
+                slug="/case/dawny"
+                postImageUrl={dawny}
+            />
+            <PostThumbnail
+                title="Hoge kwaliteit rugtassen"
+                category="côte&ciel"
+                slug="/case/cote-et-ciel"
+                postImageUrl={coteetciel}
+            />
+            <PostThumbnail
+                title="Een digitale omgeving voor zonnepanelen op huurdaken"
+                category="Sungevity"
+                slug="/case/sungevity"
+                postImageUrl={sungevity}
+            />
+        </Gallery>
     </Layout>
 );
 

@@ -8,6 +8,8 @@ import {
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
 import Credits from '../../containers/Credits/Credits';
+import Gallery from "../../containers/Gallery";
+import PostThumbnail from "../../containers/Thumbnails/PostThumbnail";
 
 const header = '';
 const app = '';
@@ -19,6 +21,10 @@ const url = 'https://www.fantescy.com/';
 const appStoreUrl = 'https://apps.apple.com/nl/app/fantescy/id1500152267';
 const playStoreUrl =
     'https://play.google.com/store/apps/details?id=com.fantescyprod';
+
+const dawny = require('../../images/img/cases/dawny/usecase.png');
+const coteetciel = require('../../images/img/cases/cote-et-ciel/homepage.png');
+const sungevity = require('../../images/img/cases/sungevity/header.jpg');
 
 const creditsColumnOne = [
     {
@@ -147,6 +153,26 @@ const Case = () => (
             columnOne={creditsColumnOne}
             special={['FantESCy']}
         />
+        <Gallery padded sm={33}>
+            <PostThumbnail
+                title="Valpreventie voor ouderen"
+                category="Reinier de Graaf ziekenhuis"
+                slug="/case/dawny"
+                postImageUrl={dawny}
+            />
+            <PostThumbnail
+                title="Hoge kwaliteit rugtassen"
+                category="côte&ciel"
+                slug="/case/cote-et-ciel"
+                postImageUrl={coteetciel}
+            />
+            <PostThumbnail
+                title="Een digitale omgeving voor zonnepanelen op huurdaken"
+                category="Sungevity"
+                slug="/case/sungevity"
+                postImageUrl={sungevity}
+            />
+        </Gallery>
     </Layout>
 );
 

@@ -10,7 +10,7 @@ export const CreditsContainer = styled.div`
     background-color: ${theme.colors.secondary};
     padding: 0;
     @media (${mediaQueryMin.sm}) {
-        padding: 5em 10em 0em 10em;
+        padding: 5em 10em 5em 10em;
     }
 `;
 export const TitleContainer = styled.div`
