@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import {
     Column,
     Container,
-    CreditItem, CreditItemWithLinks, CreditsContainer, TitleContainer,
-} from '../Credits/Credits.components';
-
-
+    CreditItem,
+    CreditItemWithLinks,
+    CreditsContainer,
+    TitleContainer,
+} from './Credits.components';
 
 const Credits = ({
     partner,
@@ -24,21 +25,24 @@ const Credits = ({
         </TitleContainer>
         <Container>
             <Column>
-                <CreditItem credits={[partner]} title="Partner"/>
+                <CreditItem credits={[partner]} title="Partner" />
                 <CreditItem credits={[year]} title="Jaar" />
             </Column>
             <Column>
-                <CreditItem credits={designers} title="UX Design"/>
-                <CreditItem credits={backend} title="Back-end developer"/>
-                <CreditItem credits={frontend} title="Front-end developer"/>
+                <CreditItem credits={designers} title="UX Design" />
+                <CreditItem credits={backend} title="Back-end developer" />
+                <CreditItem credits={frontend} title="Front-end developer" />
             </Column>
             <Column>
-                <CreditItem credits={special} title="Special Thanks"/>
-                <CreditItemWithLinks credits={resources} links={resourceLinks} title="Resources"/>
+                <CreditItem credits={special} title="Special Thanks" />
+                <CreditItemWithLinks
+                    credits={resources}
+                    links={resourceLinks}
+                    title="Resources"
+                />
             </Column>
         </Container>
     </CreditsContainer>
-
 );
 
 Credits.propTypes = {

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import theme from '../../styles/theme';
 import ArrowButton from '../../components/ArrowButton';
 
-const {mediaQueryMin} = theme;
+const { mediaQueryMin } = theme;
 export const CreditsContainer = styled.div`
     width: 100vw;
     background-color: ${theme.colors.secondary};
@@ -16,10 +16,9 @@ export const TitleContainer = styled.div`
 export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    @media (${mediaQueryMin.md}){
+    @media (${mediaQueryMin.md}) {
         grid-template-columns: 1fr 1fr 1fr;
     }
-
 `;
 
 export const Column = styled.div`

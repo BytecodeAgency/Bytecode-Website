@@ -173,30 +173,28 @@ const Number = styled.h1`
     font-size: 3em;
     margin: 0;
     align-self: flex-end;
-    @media (${mediaQueryMin.sm}){
-      font-size: 5em;
+    @media (${mediaQueryMin.sm}) {
+        font-size: 5em;
     }
     @media (${mediaQueryMin.md}) {
-    font-size: 7.5em;
+        font-size: 7.5em;
     }
     @media (${mediaQueryMin.lg}) {
-    font-size: 10em;
+        font-size: 10em;
     }
-
-
 `;
 const NumberType = styled.h1`
     font-size: 1.5em;
     margin-bottom: 0.1em;
     align-self: flex-end;
-    @media (${mediaQueryMin.sm}){
-      font-size: 2.5em;
+    @media (${mediaQueryMin.sm}) {
+        font-size: 2.5em;
     }
     @media (${mediaQueryMin.md}) {
-    font-size: 3.5em;
+        font-size: 3.5em;
     }
-        @media (${mediaQueryMin.lg}) {
-    font-size: 5em;
+    @media (${mediaQueryMin.lg}) {
+        font-size: 5em;
     }
 `;
 const Subtitle = styled.div`
@@ -222,7 +220,9 @@ export const ResultsAndNumbers = ({
                             <Number>{number}</Number>
                             <NumberType>{numberTypes[index]}</NumberType>
                         </NumberContainer>
-                        <Subtitle><p>{subtitles[index]}</p></Subtitle>
+                        <Subtitle>
+                            <p>{subtitles[index]}</p>
+                        </Subtitle>
                     </SingleNumberContainer>
                 ))}
             </NumbersContainer>

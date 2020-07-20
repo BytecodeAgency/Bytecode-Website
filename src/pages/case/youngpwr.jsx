@@ -131,10 +131,11 @@ const Case = () => (
                     opgezet en solide gemaakt, zodat we bij de volgende
                     ontwikkelingsronde direct kunnen beginnen met ontwikkeling,
                     in plaats van met de fundering. We maken gebruik van
-                    microservices die <a>test-driven</a> zijn ontwikkeld. Dit
-                    betekent dat de achterkant van het platform opgedeeld is in
-                    kleinere onderdelen die individueel aangepast kunnen worden
-                    en direct ook als basis dienen voor de doorontwikkeling.
+                    microservices die <strong>test-driven</strong> zijn
+                    ontwikkeld. Dit betekent dat de achterkant van het platform
+                    opgedeeld is in kleinere onderdelen die individueel
+                    aangepast kunnen worden en direct ook als basis dienen voor
+                    de doorontwikkeling.
                 </p>
             </TextAndImage>
             <ResultsAndNumbers
