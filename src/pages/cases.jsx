@@ -17,6 +17,7 @@ const mooiwerk = require('../images/img/cases/mooiwerk/home.png');
 const coteetciel = require('../images/img/cases/cote-et-ciel/homepage.png');
 const dawny = require('../images/img/cases/dawny/usecase.png');
 const sungevity = require('../images/img/cases/sungevity/header.jpg');
+const youngpwr = require('../images/img/cases/youngpwr/case-youngpwr-teamfoto.png');
 
 const Cases = () => (
     <Layout padded pageSettings={pageSettings}>
@@ -65,6 +66,12 @@ const Cases = () => (
                     category="Mooiwerk Breda"
                     slug="/case/mooiwerk"
                     postImageUrl={mooiwerk}
+                />
+                <PostThumbnail
+                    slug="/case/youngpwr"
+                    title="Platform voor en door jongeren"
+                    postImageUrl={youngpwr}
+                    category="Youngpwr"
                 />
             </Gallery>
         </Container>

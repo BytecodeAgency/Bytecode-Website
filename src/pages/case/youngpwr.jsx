@@ -11,11 +11,12 @@ import Credits from '../../containers/Credits/Credits';
 
 // section for image imports in the form of const img = require(url);
 const useCase = require('../../images/img/cases/youngpwr/case-youngpwr-teamfoto.png');
-const match = '';
-const research = '';
-const fundering = '';
-const pipeline = '';
-const integration = '';
+const match = require('../../images/img/cases/youngpwr/its-a-match.svg');
+const research = require('../../images/img/cases/youngpwr/youngpwr-desktop-heatmap.png');
+const fundering = require('../../images/img/cases/youngpwr/youngpwr-desktop-login.png');
+const pipeline = require('../../images/img/cases/youngpwr/dev1-database-test-omgeving.png');
+const integration = require('../../images/img/cases/youngpwr/infographic.svg');
+
 const pageSettings = {
     title: 'Platform voor een door jongeren',
     client: 'youngpwr',
@@ -71,7 +72,6 @@ const Case = () => (
                 img={research}
                 alt="Onderzoek over waar mensen klikken op de website"
                 padded
-                fluid
             >
                 <p className="subtitle">Research</p>
                 <h2>Een platform dat aansluit</h2>
@@ -90,7 +90,6 @@ const Case = () => (
                 img={fundering}
                 alt="Fundering voor het opzetten van een platform"
                 reverse
-                fluid
                 padded
             >
                 <h3>Efficiëntie voorop</h3>
@@ -106,7 +105,6 @@ const Case = () => (
             <TextAndImage
                 img={pipeline}
                 alt="Automatisering van pipeline"
-                fluid
                 padded
             >
                 <p className="subtitle">Development</p>
@@ -125,7 +123,6 @@ const Case = () => (
                 img={integration}
                 alt="Continu ontwikkeling"
                 padded
-                fluid
                 reverse
             >
                 <h3>De technische kant</h3>
@@ -151,16 +148,16 @@ const Case = () => (
                 title="Cijfers tot nu toe"
             />
         </Section>
-            <Credits
-                partner="Youngpwr"
-                year="2020"
-                designers={['Chris Färber']}
-                backend={['Luciano Nooijen']}
-                frontend={['Luciano Nooijen','Chris Färber']}
-                special={['Youngpwr']}
-                resources={['Youngpwr Website']}
-                resourceLinks={["https://youngpwr.nl/"]}
-            />
+        <Credits
+            partner="Youngpwr"
+            year="2020"
+            designers={['Chris Färber']}
+            backend={['Luciano Nooijen']}
+            frontend={['Luciano Nooijen', 'Chris Färber']}
+            special={['Youngpwr']}
+            resources={['Youngpwr Website']}
+            resourceLinks={['https://youngpwr.nl/']}
+        />
     </Layout>
 );
 
