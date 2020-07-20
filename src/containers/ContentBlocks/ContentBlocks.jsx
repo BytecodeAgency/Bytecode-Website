@@ -133,27 +133,40 @@ const ResultsAndNumbersContainer = styled.div`
 `;
 const TextBlockContainer = styled.div`
     padding: 1em;
-    width: 30em;
-    margin: 3em;
+
+    margin: 0;
+    @media (${mediaQueryMin.sm}) {
+        margin: 3em;
+        width: 30em;
+    }
 `;
 const NumbersContainer = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 
     justify-content: center;
     z-index: 1;
     position: relative;
-    height: 20em;
+    height: 25em;
+    @media (${mediaQueryMin.sm}) {
+        height: 20em;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     &:before {
         position: absolute;
         top: 0;
-        left: 15%;
+        left: 2.5%;
         background-color: #262626;
-        width: 70%;
+        width: 95%;
         content: '';
         height: 100%;
         z-index: -1;
         opacity: 0.6;
+        @media (${mediaQueryMin.sm}) {
+            width: 70%;
+            left: 15%;
+        }
     }
 `;
 const SingleNumberContainer = styled.div`
@@ -173,6 +186,7 @@ const Number = styled.h1`
     font-size: 3em;
     margin: 0;
     align-self: flex-end;
+
     @media (${mediaQueryMin.sm}) {
         font-size: 5em;
     }

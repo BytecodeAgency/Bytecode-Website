@@ -8,15 +8,22 @@ const { mediaQueryMin } = theme;
 export const CreditsContainer = styled.div`
     width: 100vw;
     background-color: ${theme.colors.secondary};
-    padding: 5em 10em 10em 10em;
+    padding: 0;
+    @media (${mediaQueryMin.sm}) {
+        padding: 5em 10em 0em 10em;
+    }
 `;
 export const TitleContainer = styled.div`
-    margin-bottom: 6em;
+    padding: 3em 1em;
+    @media (${mediaQueryMin.sm}) {
+        padding: 3em 0;
+    }
 `;
 export const Container = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    @media (${mediaQueryMin.md}) {
+    grid-template-columns: 1fr;
+
+    @media (${mediaQueryMin.sm}) {
         grid-template-columns: 1fr 1fr 1fr;
     }
 `;
