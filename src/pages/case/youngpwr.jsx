@@ -27,6 +27,32 @@ const pageSettings = {
     image: useCase,
 };
 
+const creditColumnOne = [
+    {
+        title: 'Partner',
+        content: ['Youngpwr'],
+    },
+    {
+        title: 'Jaar',
+        content: ['2020'],
+    },
+];
+
+const creditColumnTwo = [
+    {
+        title: 'UX Design',
+        content: ['Chris Färber'],
+    },
+    {
+        title: 'Back-end developer',
+        content: ['Luciano Nooijen'],
+    },
+    {
+        title: 'Front-end developer',
+        content: ['Luciano Nooijen', 'Chris Färber'],
+    },
+];
+
 const Case = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={match} alt="Match tussen CEO en youngpwr">
@@ -150,11 +176,8 @@ const Case = () => (
             />
         </Section>
         <Credits
-            partner="Youngpwr"
-            year="2020"
-            designers={['Chris Färber']}
-            backend={['Luciano Nooijen']}
-            frontend={['Luciano Nooijen', 'Chris Färber']}
+            columnOne={creditColumnOne}
+            columnTwo={creditColumnTwo}
             special={['Youngpwr']}
             resources={['Youngpwr Website']}
             resourceLinks={['https://youngpwr.nl/']}

@@ -19,6 +19,8 @@ const dawny = require('../images/img/cases/dawny/usecase.png');
 const sungevity = require('../images/img/cases/sungevity/header.jpg');
 const youngpwr = require('../images/img/cases/youngpwr/case-youngpwr-teamfoto.png');
 
+const fantescy = '';
+
 const Cases = () => (
     <Layout padded pageSettings={pageSettings}>
         <Container>
@@ -72,6 +74,12 @@ const Cases = () => (
                     title="Platform voor en door jongeren"
                     postImageUrl={youngpwr}
                     category="Youngpwr"
+                />
+                <PostThumbnail
+                    slug="/case/fantescy"
+                    title="Spel voor Songfestival fans"
+                    postImageUrl={fantescy}
+                    category="Fantescy"
                 />
             </Gallery>
         </Container>

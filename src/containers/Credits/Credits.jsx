@@ -10,14 +10,11 @@ import {
 } from './Credits.components';
 
 const Credits = ({
-    partner,
-    year,
-    designers,
-    backend,
-    frontend,
     special,
     resources,
     resourceLinks,
+    columnOne,
+    columnTwo,
 }) => (
     <CreditsContainer>
         <TitleContainer>
@@ -25,13 +22,14 @@ const Credits = ({
         </TitleContainer>
         <Container>
             <Column>
-                <CreditItem credits={[partner]} title="Partner" />
-                <CreditItem credits={[year]} title="Jaar" />
+                {columnOne.map(item => (
+                    <CreditItem credits={item.content} title={item.title} />
+                ))}
             </Column>
             <Column>
-                <CreditItem credits={designers} title="UX Design" />
-                <CreditItem credits={backend} title="Back-end developer" />
-                <CreditItem credits={frontend} title="Front-end developer" />
+                {columnTwo.map(item => (
+                    <CreditItem credits={item.content} title={item.title} />
+                ))}
             </Column>
             <Column>
                 <CreditItem credits={special} title="Special Thanks" />
@@ -46,14 +44,21 @@ const Credits = ({
 );
 
 Credits.propTypes = {
-    partner: PropTypes.string.isRequired,
-    year: PropTypes.string.isRequired,
-    designers: PropTypes.arrayOf(PropTypes.string).isRequired,
-    backend: PropTypes.arrayOf(PropTypes.string).isRequired,
-    frontend: PropTypes.arrayOf(PropTypes.string).isRequired,
     special: PropTypes.arrayOf(PropTypes.string).isRequired,
     resources: PropTypes.arrayOf(PropTypes.string).isRequired,
     resourceLinks: PropTypes.arrayOf(PropTypes.string).isRequired,
+    columnOne: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            content: PropTypes.arrayOf(PropTypes.string).isRequired,
+        }),
+    ).isRequired,
+    columnTwo: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            content: PropTypes.arrayOf(PropTypes.string).isRequired,
+        }),
+    ).isRequired,
 };
 
 export default Credits;

@@ -177,7 +177,7 @@ const Number = styled.h1`
         font-size: 5em;
     }
     @media (${mediaQueryMin.md}) {
-        font-size: 7.5em;
+        font-size: 6em;
     }
     @media (${mediaQueryMin.lg}) {
         font-size: 10em;
