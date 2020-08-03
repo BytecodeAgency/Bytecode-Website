@@ -19,7 +19,7 @@ const kennis = require('../../images/img/cases/mooiwerk/kennis.png');
 const pageSettings = {
     client: 'Mooiwerk Breda',
     description:
-        'Wij brachten Breda bij elkaar door vrijwilligerswerk vinden gemakkelijker te maken.',
+        'Door het ontwikkelen van een platform op maat brachten wij de organisaties en vrijwilligers van Breda dichter bij elkaar. Zo maakten wij vrijwilligerswerk toegankelijker. Bekijk hier het resultaat!',
     image: home,
     title: 'MOOIWERK',
     keywords: 'breda actief, mooiwerkbreda, case, bytecode digital agency',

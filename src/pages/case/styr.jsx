@@ -19,7 +19,7 @@ const research = require('../../images/img/content/collaboration/say.svg');
 const pageSettings = {
     client: 'STYR',
     description:
-        'De STYR Allocatortool is een praktische online waarderingstool waarmee de klanten van STYR zelf de zwaarte van rollen en functies kunnen vaststellen.',
+        'Door de digitalisatie van het functiewaarderingsmodel, is het werk van de STYR consultants geautomatiseerd. Hierdoor kunnen zij worden ingezet op hun echte expertise. Lees hier het resultaat!',
     image: login,
     title: 'STYR',
     keywords: 'functiewaardering, online, platform, webapp',

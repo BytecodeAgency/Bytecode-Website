@@ -20,9 +20,9 @@ const pageSettings = {
     title: 'Brengt Breda in beweging',
     client: 'Breda Actief',
     description:
-        'Wij brachten Breda bij elkaar door sporten in Breda toegankelijker te maken.',
+        'Door het ontwikkelen van een platform op maat brachten wij de organisaties en vrijwilligers van Breda dichter bij elkaar. Zo maakten wij vrijwilligerswerk toegankelijker. Bekijk hier het resultaat!',
     image: featured,
-    keywords: 'breda actief, mooiwerkbreda, case, bytecode digital agency',
+    keywords: 'breda actief, mooiwerk breda, bytecode',
 };
 
 const Case = () => (

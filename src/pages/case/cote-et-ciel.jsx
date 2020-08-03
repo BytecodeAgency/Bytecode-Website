@@ -18,7 +18,7 @@ const country = require('../../images/img/cases/cote-et-ciel/country.png');
 const pageSettings = {
     client: 'côte&ciel',
     description:
-        'Bytecode hielp côte&ciel met de stabiliteit van haar webshop.',
+        'Het opzetten van een nieuw platform via Shopify heeft gezorgd voor een hogere gebruiksvriendelijkheid en een stabielere website. Lees de specificaties hier!',
     image: homePage,
     title: 'Backpack webshop',
     keywords: 'côte&ciel, rugtassen, case, bytecode digital agency',

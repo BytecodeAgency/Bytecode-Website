@@ -19,7 +19,7 @@ const servers = require('../../images/img/cases/sungevity/servers.jpg');
 const pageSettings = {
     client: 'Sungevity',
     description:
-        'Bytecode werkt samen met Sungevity aan het verduurzamen van Nederland.',
+        'Door het gebruik van cloudservers is het platform van Sungevity een stabiele digitale omgeving. Daarnaast kunnen met gemak nieuwe features worden toegevoegd. Samen met Sungevity werken we aan het verduurzamen van Nederland!',
     image: header,
     title: 'Duurzame digitale omgeving',
     logo,
