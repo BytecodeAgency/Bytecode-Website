@@ -19,7 +19,7 @@ const research = require('../../images/img/content/collaboration/say.svg');
 const pageSettings = {
     client: 'STYR',
     description:
-        'Door de digitalisatie van het functiewaarderingsmodel, is het werk van de STYR consultants geautomatiseerd. Hierdoor kunnen zij worden ingezet op hun echte expertise. Lees hier het resultaat!',
+        'Door de digitalisatie van het functiewaarderingsmodel, is het werk van de STYR consultants geautomatiseerd. Hierdoor kunnen zij worden ingezet op hun echte expertise. Lees hier het resultaat!.',
     image: login,
     title: 'STYR',
     keywords: 'functiewaardering, online, platform, webapp',
@@ -107,7 +107,7 @@ const Case = () => (
                 <p>
                     Meer informatie over het STYR model en de STYR Allocator
                     Tool vind je op&nbsp;
-                    <a href="https://www.styrmodel.com">de website van STYR</a>.
+                    <a href="https://styr.nl">de website van STYR</a>.
                 </p>
             </TextAndImage>
         </Section>
