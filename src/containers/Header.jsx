@@ -91,7 +91,7 @@ const Header = ({
                     <StyledSubtitle className="white subtitle">
                         {subtitle}
                     </StyledSubtitle>
-                    <h2>{title}</h2>
+                    <h1>{title}</h1>
                 </div>
                 <div>
                     <Text>{tagline || text}</Text>

@@ -19,10 +19,8 @@ const service3bg = require('../images/img/services/code.jpeg');
 const service4bg = require('../images/img/services/design.jpg');
 
 const pageSettings = {
-    title: `Bytecode Digital Agency B.V.`,
-    description: `Bytecode Digital Agency B.V. |
-    Gespecialiseerd in ✓Websites en Webshops ✓Webapps
-    ✓Cloud ✓Automatisering ✓Mobiele apps ✓API ontwikkeling`,
+    title: `Maatwerk Web & Mobiel Ontwikkeling`,
+    description: `Een kleinschalig full-service webbureau gespecialiseerd in platformontwikkeling op maat. Passie, kwaliteit en betrouwbaarheid als kernwaarden. | Bytecode Digital Agency`,
     keywords: 'bytecode, digital agency',
 };
 
@@ -117,6 +115,7 @@ const Home = () => (
                             Kennis en kwaliteit met een no-bullshit mentaliteit"
                             href="/over"
                             button="Meer over ons team"
+                            headingType="h2"
                         >
                             Wij staan voor een eerlijke en open samenwerking. We
                             werken met elkaar, niet langs elkaar. Ons zul je
