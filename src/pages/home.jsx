@@ -20,7 +20,7 @@ const service4bg = require('../images/img/services/design.jpg');
 
 const pageSettings = {
     title: `Maatwerk Web & Mobiel Ontwikkeling`,
-    description: `Een kleinschalig full-service webbureau gespecialiseerd in platformontwikkeling op maat. Passie, kwaliteit en betrouwbaarheid als kernwaarden. | Bytecode Digital Agency`,
+    description: `Een kleinschalig full-service webbureau gespecialiseerd in platformontwikkeling op maat. Passie, kwaliteit en betrouwbaarheid als kernwaarden`,
     keywords: 'bytecode, digital agency',
 };
 

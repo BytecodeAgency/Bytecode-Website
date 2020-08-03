@@ -4,7 +4,7 @@ import Layout from '../../layouts/MainLayout';
 import { Container, Row as RowBase } from '../../lib/Grid';
 
 const pageSettings = {
-    title: 'Privacy Policy - Bytecode Digital Agency',
+    title: 'Privacy Policy',
     description: `Dit is het privacybeleid van Bytecode Digital Agency B.V.
         (hierna te noemen Bytecode), wij ons ...`,
     keywords: 'privacy',

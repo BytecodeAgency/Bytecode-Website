@@ -5,7 +5,7 @@ import { Container, Row, Col } from '../lib/Grid';
 import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSubscribe';
 
 const pageSettings = {
-    title: `Nieuwsbrief - Bytecode Digital Agency |
+    title: `Nieuwsbrief |
         Blijf op de hoogte`,
     description: `Blijf op de hoogte van onze nieuwste content en ontwikkelingen bij Bytecode`,
     keywords: 'nieuwsbrief, bytecode',
