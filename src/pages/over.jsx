@@ -13,11 +13,9 @@ import theme from '../styles/theme.js';
 const { mediaQueryMin } = theme;
 
 const pageSettings = {
-    title: `Over ons - Bytecode Digital Agency |
-        Wie zijn de drijvende krachten achter Bytecode?`,
-    description: `Over ons. Wie of wat is Bytecode? Wat is onze missie
-     en hoe willen wij die bereiken? Kom meer te weten of het Bytecode-team!`,
-    keywords: 'over ons',
+    title: `De drijvende kracht achter Bytecode`,
+    description: `Een multidisciplinair team van ontwikkelaars, ontwerpers, researchers, strategen en marketeers. Samen zoeken wij naar nieuwe manieren en inzichten om de digitale wereld naar jouw hand te zetten. Ontdek hier de drijvende kracht achter Bytecode!`,
+    keywords: 'team',
 };
 
 const TeamMembers = styled.section`

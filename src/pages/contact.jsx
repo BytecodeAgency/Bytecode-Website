@@ -7,11 +7,8 @@ import Button from '../components/Button';
 import Header from '../containers/Header';
 
 const pageSettings = {
-    title: `Contact - Bytecode Digital Agency B.V.
-    | Eerste stap tot digitaal succes!`,
-    description: `Contact, neem contact met ons op door een belletje of door
-    een mailtje te sturen. Langskomen mag altijd,
-    Bytecode staat voor je klaar!`,
+    title: `Contact`,
+    description: `Neem vrijblijvend contact met ons op door te bellen naar 015-2024222 of door een mailtje te sturen naar info@bytecode.nl. Langskomen mag altijd, wij staan voor je klaar!`,
     keywords: 'contact',
 };
 

@@ -4,7 +4,7 @@ import Layout from '../../layouts/MainLayout';
 import { Container, Row as RowBase } from '../../lib/Grid';
 
 const pageSettings = {
-    title: 'Cookie Policy - Bytecode Digital Agency',
+    title: 'Cookie Policy',
     description: `Dit is het cookiebeleid van Bytecode Digital Agency B.V.
         (hierna te noemen Bytecode), wij ons ...`,
     keywords: 'cookies',

@@ -12,10 +12,8 @@ import {
 import ServiceCard from '../containers/Service/ServiceCard';
 
 const pageSettings = {
-    title: 'Services - Bytecode Digital Agency B.V.',
-    description: `Services, benieuwd wat Bytecode voor jou kan betekenen?
-    Met onze expertise en maatwerk helpen we je om alles uit je digitale
-    zelf te kunnen halen.`,
+    title: 'Services',
+    description: `Benieuwd wat Bytecode voor jou kan betekenen? Met onze expertise in maatwerk helpen we je om alles uit je digitale zelf te kunnen halen. Ontdek onze services!`,
     keywords: 'diensten',
 };
 

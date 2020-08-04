@@ -142,7 +142,7 @@ const Footer = () => (
                         facebook="https://www.facebook.com/bytecodeagency"
                         twitter="https://twitter.com/bytecodeagency"
                         instagram="https://www.instagram.com/bytecodeagency"
-                        linkedin="https://www.linkedin.com/company/bytecodeagency"
+                        linkedin="https://linkedin.com/company/bytecodeagency"
                     />
                     <FooterLink href="mailto:info@bytecode.nl">
                         info@bytecode.nl
@@ -213,13 +213,6 @@ const Footer = () => (
                     </FooterLink>
                     <FooterLink href="/legal/cookie-policy">
                         Cookie Policy
-                    </FooterLink>
-                    <FooterLink
-                        href="https://security.bytecode.nl"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        Security Policy
                     </FooterLink>
                 </p>
             </FooterCol>
