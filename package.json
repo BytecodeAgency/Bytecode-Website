@@ -2,7 +2,7 @@
   "name": "bytecode-website",
   "private": false,
   "description": "The Bytecode Digital Agency website, released as free software",
-  "version": "v2.5.4",
+  "version": "v2.5.5",
   "author": "Luciano Nooijen <luciano@bytecode.nl>",
   "keywords": [
     "bytecode"
