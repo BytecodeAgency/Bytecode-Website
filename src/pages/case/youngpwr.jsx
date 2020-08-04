@@ -8,8 +8,8 @@ import {
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
 import Credits from '../../containers/Credits/Credits';
-import Gallery from "../../containers/Gallery";
-import PostThumbnail from "../../containers/Thumbnails/PostThumbnail";
+import Gallery from '../../containers/Gallery';
+import PostThumbnail from '../../containers/Thumbnails/PostThumbnail';
 
 // section for image imports in the form of const img = require(url);
 const useCase = require('../../images/img/cases/youngpwr/case-youngpwr-teamfoto.png');
