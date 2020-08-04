@@ -8,9 +8,9 @@ import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 import Gallery from '../containers/Gallery';
 
 const pageSettings = {
-    title: 'Bytecode Insights - Bytecode Digital Agency B.V.',
+    title: 'Insights',
     description:
-        'Bytecode insights, vergroot je kennis en leer meer over hoe je digitale assets kan inzetten voor jouw business! Samen halen we alles uit jouw digitale zelf!',
+        'Vergoot jouw kennis en leer meer over hoe je digitale tools kan inzetten voor jouw organisatie! Met onze podcasts, opinieartikelen en downloadbare content bengen we onze digitale kennis naar jouw kantoor of huiskamer',
     keywords: 'bytecode insights',
 };
 

@@ -25,7 +25,7 @@ const pageSettings = {
     clientBio:
         'Onderzoeker Dr. A.W. Siegel en internist Dr. D.H. Schweitzer zijn vanuit het Reinier de Graaf Gasthuis het Dawny intiatief gestart om onderzoek te doen naar het voorkomen van fatale vallen bij ouderen.',
     description:
-        'Bytecode werkt samen met het Reiner De Graaf Gasthuis aan valpreventie voor ouderen.',
+        'Een samenwerking met het Reinier De Graaf Gasthuis naar een oplossing die kan leiden tot het voorkomen van een nachtelijke val en het vroegtijdig herkennen van risicofactoren. Lees hier alles over de Android App en de uitdaging!',
     keywords: 'ouderen, zorg, platform, webapp, onderzoek',
 };
 

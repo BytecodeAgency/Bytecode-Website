@@ -15,7 +15,7 @@ const Process = () => (
                 <TextBlock
                     className="padded"
                     subtitle="Stap 1"
-                    headingType="h2"
+                    headingType="h3"
                     title="Analyze"
                 >
                     Voordat we starten met ontwikkelen, maken we eerst een
@@ -29,7 +29,7 @@ const Process = () => (
                 <ProcessStepImage src={step2} alt="Strategize" />
                 <TextBlock
                     subtitle="Stap 2"
-                    headingType="h2"
+                    headingType="h3"
                     title="Strategize"
                 >
                     Vervolgens maken wij een duidelijke strategie, waarin we
@@ -42,7 +42,7 @@ const Process = () => (
             </Step>
             <Step md={5.55} lg={3.55}>
                 <ProcessStepImage src={step3} alt="Realize" />
-                <TextBlock subtitle="Stap 3" headingType="h2" title="Realize">
+                <TextBlock subtitle="Stap 3" headingType="h3" title="Realize">
                     Nadat we alles helemaal hebben geanalyseerd en gepland, is
                     het tijd om de handen uit de mouwen te steken en het plan te
                     realiseren. Hierbij werken we volgens de scrum-methode. Op
