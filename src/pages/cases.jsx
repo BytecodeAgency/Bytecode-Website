@@ -6,9 +6,10 @@ import Gallery from '../containers/Gallery';
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 
 const pageSettings = {
-    title: 'Cases',
-    description: 'Bekijk hier ons werk!',
-    keywords: 'website,applicatie,portfolio',
+    title: 'Softwareprojecten door Bytecode',
+    description:
+        'Benieuwd naar de waarde die we reeds voor onze klanten hebben kunnen leveren? Bekijk onze cases over strategie, platforms, webapps, automatisering, websites en meer!',
+    keywords: 'cases',
 };
 
 const styr = require('../images/img/cases/styr/login.png');
@@ -24,6 +25,7 @@ const fantescy = '';
 const Cases = () => (
     <Layout padded pageSettings={pageSettings}>
         <Container>
+            <h1>Cases van Bytecode</h1>
             <Gallery>
                 <PostThumbnail
                     big
