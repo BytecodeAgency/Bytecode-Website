@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 // const enableTagManager = process.env.ENABLE_TAGMANAGER === 'true';
 // const enableDrift = process.env.ENABLE_DRIFT === 'true';
 const enableTagManager = true;
-const enableDrift = true;
+const enableDrift = false;
 
 const tagManagerCode = `
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
