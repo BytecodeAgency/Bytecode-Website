@@ -57,7 +57,7 @@ const Over = () => (
             img={require('../images/img/content/teamv2.png')}
             subtitle="Over ons"
             title="Partner in jouw ambities"
-            text="Bytecode is een collectief van ontwikkelaars, ontwerpers, researchers, strategen en marketeers die zoeken naar nieuwe manieren en inzichten om de digitale wereld naar jouw hand te zetten."
+            text="Bytecode is een team van ontwikkelaars, ontwerpers, researchers, strategen en marketeers die zoeken naar nieuwe manieren en inzichten om de digitale wereld naar jouw hand te zetten."
             width={80}
             align="flex-end"
             hero
@@ -155,7 +155,7 @@ const Over = () => (
                 />
                 <TeamMember
                     name="Nahwin Chedoe"
-                    title="Stagair UI &amp; UX Designer"
+                    title="Junior UI &amp; UX Designer"
                     img={require('../images/img/team/nawin.jpg')}
                     email="mailto:nahwin@bytecode.nl"
                 />

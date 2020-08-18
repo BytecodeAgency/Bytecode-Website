@@ -25,7 +25,7 @@ const fantescy = '';
 const Cases = () => (
     <Layout padded pageSettings={pageSettings}>
         <Container>
-            <h1>Cases van Bytecode</h1>
+            <h1>Ons werk</h1>
             <Gallery>
                 <PostThumbnail
                     big

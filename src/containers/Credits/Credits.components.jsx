@@ -63,7 +63,7 @@ export const CreditItemWithLinks = ({ title, credits, links }) => (
             <>
                 <CreditText>{credit}</CreditText>
                 <CreditText>
-                    <ArrowButton href={links[index]}>Go to page</ArrowButton>
+                    <ArrowButton href={links[index]}>Ga naar pagina</ArrowButton>
                 </CreditText>
             </>
         ))}
