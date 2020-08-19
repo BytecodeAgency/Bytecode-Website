@@ -11,11 +11,11 @@ import Credits from '../../containers/Credits/Credits';
 import Gallery from '../../containers/Gallery';
 import PostThumbnail from '../../containers/Thumbnails/PostThumbnail';
 
-const header = '';
-const app = '';
-const research = '';
-const payment = '';
-const userexperience = '';
+const header = require('../../images/img/cases/fantescy/header.png');
+const app = require('../../images/img/cases/fantescy/intro.png');
+const research = require('../../images/img/cases/fantescy/research.png');
+const payment = require('../../images/img/cases/fantescy/dev1.png');
+const userexperience = require('../../images/img/cases/fantescy/dev2.gif');
 
 const url = 'https://www.fantescy.com/';
 const appStoreUrl = 'https://apps.apple.com/nl/app/fantescy/id1500152267';
