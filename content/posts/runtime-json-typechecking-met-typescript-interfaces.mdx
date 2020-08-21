@@ -78,6 +78,7 @@ const throwOrReturn = <T>(result: APIResult<T>, decoder: Decoder<T>): T => {
 };
 
 export default throwOrReturn;
+
 ```
 
 Indien de return body niet voldoet aan de decoder, wordt er nu een error gegooid, die bij het aanroepen van de API call dus gecatcht kan worden.

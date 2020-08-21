@@ -109,6 +109,11 @@ const GlobalStyles = createGlobalStyle`
             font-family: "Times New Roman", Times, serif;
         }
     }
+    code { font-family: monospace; }
+    pre {
+        white-space: pre-wrap;
+        font-size: 80%;
+    }
 `;
 
 export { GlobalStyles };
