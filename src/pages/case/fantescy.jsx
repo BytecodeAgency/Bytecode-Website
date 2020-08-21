@@ -23,7 +23,7 @@ const playStoreUrl =
     'https://play.google.com/store/apps/details?id=com.fantescyprod';
 
 const dawny = require('../../images/img/cases/dawny/usecase.png');
-const coteetciel = require('../../images/img/cases/cote-et-ciel/homepage.png');
+const youngpwr = require('../../images/img/cases/youngpwr/case-youngpwr-teamfoto.png');
 const sungevity = require('../../images/img/cases/sungevity/header.jpg');
 
 const creditsColumnOne = [
@@ -92,7 +92,7 @@ const Case = () => (
                     gebruikers, als een “fantasy” spel.
                 </p>
             </Introduction>
-            <TextAndImage img={research} alt="Marktonderzoek" padded>
+            <TextAndImage img={research} alt="Marktonderzoek" reverse>
                 <p className="subtitle">Research</p>
                 <h2>Strategie</h2>
                 <p className="big">
@@ -107,7 +107,7 @@ const Case = () => (
             </TextAndImage>
         </Section>
         <Section>
-            <TextAndImage img={payment} alt="Betalingen in de app" reverse>
+            <TextAndImage small img={payment} alt="Betalingen in de app">
                 <p className="subtitle">Development</p>
                 <h2>Berekeningen en betalingen</h2>
                 <p className="big">
@@ -118,7 +118,13 @@ const Case = () => (
                     en stabiele manier om in-app payments mogelijk te maken.
                 </p>
             </TextAndImage>
-            <TextAndImage img={userexperience} alt="Gebruikservaring">
+            <TextAndImage
+                small
+                img={userexperience}
+                alt="Gebruikservaring"
+                reverse
+            >
+                <p className="subtitle">User Experience</p>
                 <h2>Een betere gebruikservaring</h2>
                 <p className="big">
                     Om de app snel en gemakkelijk te kunnen delen hebben we
@@ -139,11 +145,11 @@ const Case = () => (
             />
             <Introduction>
                 <p className="subtitle">Download de app</p>
-                <h2>
+                <h3>
                     FantESCy is te downloaden via de{' '}
-                    <a href={appStoreUrl}>App Store</a> of{' '}
-                    <a href={playStoreUrl}>Play Store</a>.
-                </h2>
+                    <a href={appStoreUrl}>Apple App Store</a> of{' '}
+                    <a href={playStoreUrl}>Google Play Store</a>.
+                </h3>
             </Introduction>
         </Section>
         <Credits
@@ -151,7 +157,7 @@ const Case = () => (
             resourceLinks={[url]}
             resources={['FantESCy Website']}
             columnOne={creditsColumnOne}
-            special={['FantESCy']}
+            special={['Levent Akkaya']}
         />
         <Gallery padded sm={33}>
             <PostThumbnail
@@ -161,10 +167,10 @@ const Case = () => (
                 postImageUrl={dawny}
             />
             <PostThumbnail
-                title="Hoge kwaliteit rugtassen"
-                category="côte&ciel"
-                slug="/case/cote-et-ciel"
-                postImageUrl={coteetciel}
+                title="Platform voor jong ondernemen"
+                category="youngpwr"
+                slug="/case/youngpwr"
+                postImageUrl={youngpwr}
             />
             <PostThumbnail
                 title="Een digitale omgeving voor zonnepanelen op huurdaken"

@@ -24,7 +24,7 @@ const coteetciel = require('../../images/img/cases/cote-et-ciel/homepage.png');
 const sungevity = require('../../images/img/cases/sungevity/header.jpg');
 
 const pageSettings = {
-    title: 'Platform voor en door jongeren',
+    title: 'Platform voor jong ondernemen',
     client: 'youngpwr',
     clientBio: '', // TODO: add client bio
     description:

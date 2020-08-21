@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../layouts/MainLayout';
 import Container from '../containers/Container';
 import Gallery from '../containers/Gallery';
-
+import TextBlock from '../containers/TextBlock/TextBlock';
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 
 const pageSettings = {
@@ -12,29 +12,60 @@ const pageSettings = {
     keywords: 'cases',
 };
 
-const styr = require('../images/img/cases/styr/login.png');
+const styr = require('../images/img/cases/styr/allocator.png');
 const breda = require('../images/img/cases/breda-actief/featured.svg');
 const mooiwerk = require('../images/img/cases/mooiwerk/home.png');
 const coteetciel = require('../images/img/cases/cote-et-ciel/homepage.png');
 const dawny = require('../images/img/cases/dawny/usecase.png');
 const sungevity = require('../images/img/cases/sungevity/header.jpg');
 const youngpwr = require('../images/img/cases/youngpwr/case-youngpwr-teamfoto.png');
-const fantescy = require('../images/img/cases/fantescy/header.png');
+const fantescy = require('../images/img/cases/fantescy/thumbnail.png');
 
 const Cases = () => (
     <Layout padded pageSettings={pageSettings}>
         <Container>
-            <h1>Ons werk</h1>
-            <Gallery>
+            <TextBlock title="Onze recente projecten" subtitle="Cases" />
+            <Gallery sm={33}>
                 <PostThumbnail
-                    big
                     slug="/case/youngpwr"
-                    title="Platform voor en door jongeren"
+                    title="Platform voor jong ondernemen"
                     postImageUrl={youngpwr}
                     category="Youngpwr"
                 />
+                <PostThumbnail
+                    slug="/case/fantescy"
+                    title="Interactieve app voor Songfestival fans"
+                    postImageUrl={fantescy}
+                    category="Fantescy"
+                />
+                <PostThumbnail
+                    title="Veilig ouder worden door valpreventie"
+                    category="Reinier de Graaf ziekenhuis"
+                    slug="/case/dawny"
+                    postImageUrl={dawny}
+                />
             </Gallery>
-            <Gallery padded sm={33}>
+            <Gallery sm={33}>
+                <PostThumbnail
+                    title="Webshop met designer backpacks"
+                    category="côte&ciel"
+                    slug="/case/cote-et-ciel"
+                    postImageUrl={coteetciel}
+                />
+                <PostThumbnail
+                    title="Brengt Breda in beweging!"
+                    category="Breda Actief"
+                    slug="/case/breda-actief"
+                    postImageUrl={breda}
+                />
+                <PostThumbnail
+                    title="Brengt Breda dichter bij elkaar"
+                    category="Mooiwerk Breda"
+                    slug="/case/mooiwerk"
+                    postImageUrl={mooiwerk}
+                />
+            </Gallery>
+            <Gallery sm={33}>
                 <PostThumbnail
                     title="Een digitale omgeving voor zonnepanelen op huurdaken"
                     category="Sungevity"
@@ -42,45 +73,10 @@ const Cases = () => (
                     postImageUrl={sungevity}
                 />
                 <PostThumbnail
-                    title="Hoge kwaliteit rugtassen"
-                    category="côte&ciel"
-                    slug="/case/cote-et-ciel"
-                    postImageUrl={coteetciel}
-                />
-                <PostThumbnail
-                    title="Valpreventie voor ouderen"
-                    category="Reinier de Graaf ziekenhuis"
-                    slug="/case/dawny"
-                    postImageUrl={dawny}
-                />
-            </Gallery>
-            <Gallery>
-                <PostThumbnail
                     title="Modern functiewaarderingsplatform"
                     category="STYR"
                     slug="/case/styr"
                     postImageUrl={styr}
-                    big
-                />
-            </Gallery>
-            <Gallery padded sm={33}>
-                <PostThumbnail
-                    title="Brengt Breda dichter bij elkaar"
-                    category="Mooiwerk Breda"
-                    slug="/case/mooiwerk"
-                    postImageUrl={mooiwerk}
-                />
-                <PostThumbnail
-                    slug="/case/fantescy"
-                    title="Spel voor Songfestival fans"
-                    postImageUrl={fantescy}
-                    category="Fantescy"
-                />
-                <PostThumbnail
-                    title="Brengt Breda in beweging!"
-                    category="Breda Actief"
-                    slug="/case/breda-actief"
-                    postImageUrl={breda}
                 />
             </Gallery>
         </Container>

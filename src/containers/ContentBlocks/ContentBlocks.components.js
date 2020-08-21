@@ -27,7 +27,7 @@ export const TextAndImageBase = styled.div`
 
 export const ImageWrapper = styled.figure`
     grid-area: ${props => props.pos};
-
+    width: ${props => (props.small ? '70%' : '100%')};
     margin: 1em 1em;
     @media (${mediaQueryMin.sm}) {
         margin: 5em 0;

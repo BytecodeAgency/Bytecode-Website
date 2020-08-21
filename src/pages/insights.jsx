@@ -6,6 +6,7 @@ import Layout from '../layouts/MainLayout';
 import Container from '../containers/Container';
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 import Gallery from '../containers/Gallery';
+import TextBlock from '../containers/TextBlock/TextBlock';
 
 const pageSettings = {
     title: 'Insights',
@@ -35,7 +36,10 @@ const blogArchive = ({ data }) => {
     return (
         <Layout padded pageSettings={pageSettings}>
             <Container>
-                <h1>Insights</h1>
+                <TextBlock
+                    title="Bytecode Insights"
+                    subtitle="Artikelen & podcasts"
+                />
                 <Gallery xs={50} md={33}>
                     {posts.map(({ node: post }, _, key) => (
                         <Blogpost data={post} key={key} />

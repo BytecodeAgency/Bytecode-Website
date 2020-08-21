@@ -21,6 +21,7 @@ export const TextAndImage = ({
     children,
     img,
     alt,
+    small,
     reverse,
     fluid,
     padded,
@@ -70,6 +71,7 @@ export const TextAndImage = ({
                 fluid={fluid}
                 translate={getImgPos().translate}
                 pos={getImgPos().pos}
+                small={small}
             >
                 <img src={img} alt={alt} />
             </ImageWrapper>
@@ -97,12 +99,14 @@ TextAndImage.propTypes = {
     alt: PropTypes.string.isRequired,
     reverse: PropTypes.bool,
     fluid: PropTypes.bool,
+    small: PropTypes.bool,
     padded: PropTypes.bool,
 };
 
 TextAndImage.defaultProps = {
     reverse: false,
     fluid: false,
+    small: false,
     padded: false,
 };
 
@@ -143,7 +147,7 @@ const TextBlockContainer = styled.div`
 const NumbersContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-
+    margin: 30px;
     justify-content: center;
     z-index: 1;
     position: relative;
