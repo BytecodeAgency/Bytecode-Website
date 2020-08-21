@@ -63,8 +63,11 @@ export const ArticleImageWrapper = styled.figure`
     width: 125%;
     margin: 0.66em 0;
     margin-bottom: 1em;
-    height: 50rem;
     overflow: hidden;
+    height: 28rem;
+    @media (${mediaQueryMin.md}) {
+        height: 50rem;
+    }
 `;
 
 export const BlogContent = styled.div`
