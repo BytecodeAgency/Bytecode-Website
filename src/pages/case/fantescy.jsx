@@ -167,7 +167,7 @@ const Case = () => (
                 postImageUrl={dawny}
             />
             <PostThumbnail
-                title="Platform voor jong ondernemen"
+                title="Platform voor jonge ondernemers"
                 category="youngpwr"
                 slug="/case/youngpwr"
                 postImageUrl={youngpwr}

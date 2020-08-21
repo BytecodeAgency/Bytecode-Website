@@ -28,7 +28,7 @@ const Cases = () => (
             <Gallery sm={33}>
                 <PostThumbnail
                     slug="/case/youngpwr"
-                    title="Platform voor jong ondernemen"
+                    title="Platform voor jonge ondernemers"
                     postImageUrl={youngpwr}
                     category="Youngpwr"
                 />
