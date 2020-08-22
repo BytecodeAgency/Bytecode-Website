@@ -7,16 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 2.5.7 (2020-08-22)
 
-### Changed:
-
-* Cases page no longer contains 'big' cases, only a grid of small cases
-* Update content on multiple cases
-
 ### Added:
 
 * FantESCy case
 * YoungPWR case
 * TypeScript interfaces runtime check article
+* Pre and Code support in articles
+
+### Changed:
+
+* Cases page no longer contains 'big' cases, only a grid of small cases
+* Update content on multiple cases
+* Styling of mobile articles
+
+### Removed:
+
+* Drift embedded script
 
 ## 2.5.6 (2020-08-11)
 
