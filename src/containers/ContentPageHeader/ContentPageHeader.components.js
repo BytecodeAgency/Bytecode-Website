@@ -81,7 +81,7 @@ export const MainHeaderContent = styled.div`
     }
 
     @media (${mediaQueryMin.md}) {
-        margin: 2em ${containerWidth.md};
+        margin: 0 ${containerWidth.md};
         width: 40vw;
     }
 
