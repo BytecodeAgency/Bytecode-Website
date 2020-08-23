@@ -30,7 +30,7 @@ export const Article = styled.article`
 `;
 
 export const ArticleHeader = styled.header`
-    max-width: 80vw;
+    max-width: 90vw;
     @media (${mediaQueryMin.md}) {
         max-width: 40em;
     }
@@ -63,12 +63,15 @@ export const ArticleImageWrapper = styled.figure`
     width: 125%;
     margin: 0.66em 0;
     margin-bottom: 1em;
-    height: 50rem;
     overflow: hidden;
+    height: 28rem;
+    @media (${mediaQueryMin.md}) {
+        height: 50rem;
+    }
 `;
 
 export const BlogContent = styled.div`
-    max-width: 80vw;
+    max-width: 90vw;
     @media (${mediaQueryMin.sm}) {
         max-width: 40em;
     }

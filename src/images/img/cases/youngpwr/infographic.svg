@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="698px" height="413px" viewBox="0 0 698 413" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 62 (101010) - https://sketch.com -->
+    <title>FA542ED5-DA0D-4B30-AFCE-2D9FA75DEC9B</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M128,85 L144,94 L128,103 L127.999,98.5 L115.5,98.5 L115.5,89.5 L128,89.5 L128,85 Z" id="path-1"></path>
+        <filter x="-50.0%" y="-91.2%" width="208.9%" height="282.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0263876748 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M274,85 L290,94 L274,103 L273.999,98.5 L261.5,98.5 L261.5,89.5 L274,89.5 L274,85 Z" id="path-3"></path>
+        <filter x="-50.0%" y="-91.2%" width="208.9%" height="282.4%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0263876748 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M420,85 L436,94 L420,103 L419.999,98.5 L407.5,98.5 L407.5,89.5 L420,89.5 L420,85 Z" id="path-5"></path>
+        <filter x="-50.0%" y="-91.2%" width="208.9%" height="282.4%" filterUnits="objectBoundingBox" id="filter-6">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0263876748 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M566,85 L582,94 L566,103 L565.999,98.5 L553.5,98.5 L553.5,89.5 L566,89.5 L566,85 Z" id="path-7"></path>
+        <filter x="-50.0%" y="-91.2%" width="208.9%" height="282.4%" filterUnits="objectBoundingBox" id="filter-8">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0263876748 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M128,272 L144,281 L128,290 L127.999,285.5 L115.5,285.5 L115.5,276.5 L128,276.5 L128,272 Z" id="path-9"></path>
+        <filter x="-50.0%" y="-91.2%" width="208.9%" height="282.4%" filterUnits="objectBoundingBox" id="filter-10">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0263876748 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M274,272 L290,281 L274,290 L273.999,285.5 L261.5,285.5 L261.5,276.5 L274,276.5 L274,272 Z" id="path-11"></path>
+        <filter x="-50.0%" y="-91.2%" width="208.9%" height="282.4%" filterUnits="objectBoundingBox" id="filter-12">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0263876748 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M420,272 L436,281 L420,290 L419.999,285.5 L407.5,285.5 L407.5,276.5 L420,276.5 L420,272 Z" id="path-13"></path>
+        <filter x="-50.0%" y="-91.2%" width="208.9%" height="282.4%" filterUnits="objectBoundingBox" id="filter-14">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0263876748 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M215,380 L231,389 L215,398 L214.999,393.5 L202.5,393.5 L202.5,384.5 L215,384.5 L215,380 Z" id="path-15"></path>
+        <filter x="-50.0%" y="-91.2%" width="208.9%" height="282.4%" filterUnits="objectBoundingBox" id="filter-16">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0263876748 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M566,272 L582,281 L566,290 L565.999,285.5 L554.5,285.5 C553.947715,285.5 553.5,285.052285 553.5,284.5 L553.5,277.5 C553.5,276.947715 553.947715,276.5 554.5,276.5 L566,276.5 L566,272 Z" id="path-17"></path>
+        <filter x="-52.6%" y="-91.2%" width="212.6%" height="282.4%" filterUnits="objectBoundingBox" id="filter-18">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0263876748 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M376,380 L392,389 L376,398 L375.999,393.5 L363.5,393.5 L363.5,384.5 L376,384.5 L376,380 Z" id="path-19"></path>
+        <filter x="-50.0%" y="-91.2%" width="208.9%" height="282.4%" filterUnits="objectBoundingBox" id="filter-20">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0263876748 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="New-Case" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Case-Youngpwr---Desktop-HD" transform="translate(-69.000000, -5752.000000)">
+            <g id="infographic" transform="translate(70.000000, 5754.000000)">
+                <text id="Continous-integratio" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" line-spacing="12" fill="#FFFFFF">
+                    <tspan x="259.98" y="13.4669495">Continous integration</tspan>
+                </text>
+                <text id="Continous-delivery" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" line-spacing="12" fill="#FFFFFF">
+                    <tspan x="271.905" y="200.466949">Continous delivery</tspan>
+                </text>
+                <text id="Automatic-Trigger" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" line-spacing="24" fill="#FFFFFF">
+                    <tspan x="241" y="382">Automatic </tspan>
+                    <tspan x="241" y="406">Trigger</tspan>
+                </text>
+                <text id="Manual-Trigger" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" line-spacing="24" fill="#FFFFFF">
+                    <tspan x="402" y="382">Manual </tspan>
+                    <tspan x="402" y="406">Trigger</tspan>
+                </text>
+                <g id="step-1" transform="translate(0.000000, 57.000000)">
+                    <path d="M25.5,-21 L86.5,-21 C88.9852814,-21 91,-18.9852814 91,-16.5 L91,86.5 C91,88.9852814 88.9852814,91 86.5,91 L25.5,91 C23.0147186,91 21,88.9852814 21,86.5 L21,-16.5 C21,-18.9852814 23.0147186,-21 25.5,-21 Z" id="Rectangle-Copy" stroke-opacity="0.21170236" stroke="#F2F2F2" stroke-width="1.5" fill="#2E2E2E" transform="translate(56.000000, 35.000000) rotate(-270.000000) translate(-56.000000, -35.000000) "></path>
+                    <text id="Dev" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" line-spacing="27" fill="#FFFFFF">
+                        <tspan x="38.977" y="36">Dev</tspan>
+                    </text>
+                </g>
+                <g id="Combined-Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#70C197" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Combined-Shape-Copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#70C197" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <g id="Combined-Shape-Copy-3">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#70C197" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <g id="Combined-Shape-Copy-2">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    <use fill="#DF5252" fill-rule="evenodd" xlink:href="#path-7"></use>
+                </g>
+                <g id="Combined-Shape-Copy-7">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                    <use fill="#70C197" fill-rule="evenodd" xlink:href="#path-9"></use>
+                </g>
+                <g id="Combined-Shape-Copy-6">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
+                    <use fill="#70C197" fill-rule="evenodd" xlink:href="#path-11"></use>
+                </g>
+                <g id="Combined-Shape-Copy-5">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-14)" xlink:href="#path-13"></use>
+                    <use fill="#70C197" fill-rule="evenodd" xlink:href="#path-13"></use>
+                </g>
+                <g id="Combined-Shape-Copy-8">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-16)" xlink:href="#path-15"></use>
+                    <use fill="#70C197" fill-rule="evenodd" xlink:href="#path-15"></use>
+                </g>
+                <g id="Combined-Shape-Copy-4">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-18)" xlink:href="#path-17"></use>
+                    <use fill="#DF5252" fill-rule="evenodd" xlink:href="#path-17"></use>
+                </g>
+                <g id="Combined-Shape-Copy-9">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-20)" xlink:href="#path-19"></use>
+                    <use fill="#DF5252" fill-rule="evenodd" xlink:href="#path-19"></use>
+                </g>
+                <g id="step2" transform="translate(146.000000, 57.000000)">
+                    <path d="M25.5,-21 L86.5,-21 C88.9852814,-21 91,-18.9852814 91,-16.5 L91,86.5 C91,88.9852814 88.9852814,91 86.5,91 L25.5,91 C23.0147186,91 21,88.9852814 21,86.5 L21,-16.5 C21,-18.9852814 23.0147186,-21 25.5,-21 Z" id="Rectangle-Copy-3" stroke-opacity="0.21170236" stroke="#F2F2F2" stroke-width="1.5" fill="#2E2E2E" transform="translate(56.000000, 35.000000) rotate(-270.000000) translate(-56.000000, -35.000000) "></path>
+                    <text id="Application-test" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" line-spacing="12" fill="#FFFFFF">
+                        <tspan x="19.607" y="32.1409607">Application </tspan>
+                        <tspan x="42.756" y="51.8409607">test</tspan>
+                    </text>
+                </g>
+                <g id="Step3" transform="translate(292.000000, 57.000000)">
+                    <path d="M25.5,-21 L86.5,-21 C88.9852814,-21 91,-18.9852814 91,-16.5 L91,86.5 C91,88.9852814 88.9852814,91 86.5,91 L25.5,91 C23.0147186,91 21,88.9852814 21,86.5 L21,-16.5 C21,-18.9852814 23.0147186,-21 25.5,-21 Z" id="Rectangle-Copy-4" stroke-opacity="0.21170236" stroke="#F2F2F2" stroke-width="1.5" fill="#2E2E2E" transform="translate(56.000000, 35.000000) rotate(-270.000000) translate(-56.000000, -35.000000) "></path>
+                    <text id="Integration-test" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" line-spacing="12" fill="#FFFFFF">
+                        <tspan x="20.23" y="32.1409607">Integration</tspan>
+                        <tspan x="42.756" y="51.8409607">test</tspan>
+                    </text>
+                </g>
+                <g id="Step4" transform="translate(438.000000, 57.000000)">
+                    <path d="M25.5,-21 L86.5,-21 C88.9852814,-21 91,-18.9852814 91,-16.5 L91,86.5 C91,88.9852814 88.9852814,91 86.5,91 L25.5,91 C23.0147186,91 21,88.9852814 21,86.5 L21,-16.5 C21,-18.9852814 23.0147186,-21 25.5,-21 Z" id="Rectangle-Copy-5" stroke-opacity="0.21170236" stroke="#F2F2F2" stroke-width="1.5" fill="#2E2E2E" transform="translate(56.000000, 35.000000) rotate(-270.000000) translate(-56.000000, -35.000000) "></path>
+                    <text id="Acceptance-test" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" line-spacing="12" fill="#FFFFFF">
+                        <tspan x="18.865" y="32.1409607">Acceptance</tspan>
+                        <tspan x="42.756" y="51.8409607">test</tspan>
+                    </text>
+                </g>
+                <g id="Step5" transform="translate(584.000000, 57.000000)">
+                    <path d="M25.5,-21 L86.5,-21 C88.9852814,-21 91,-18.9852814 91,-16.5 L91,86.5 C91,88.9852814 88.9852814,91 86.5,91 L25.5,91 C23.0147186,91 21,88.9852814 21,86.5 L21,-16.5 C21,-18.9852814 23.0147186,-21 25.5,-21 Z" id="Rectangle-Copy-7" stroke-opacity="0.21170236" stroke="#F2F2F2" stroke-width="1.5" fill="#2E2E2E" transform="translate(56.000000, 35.000000) rotate(-270.000000) translate(-56.000000, -35.000000) "></path>
+                    <text id="Production-test" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" line-spacing="12" fill="#FFFFFF">
+                        <tspan x="20.433" y="32.1409607">Production</tspan>
+                        <tspan x="42.756" y="51.8409607">test</tspan>
+                    </text>
+                </g>
+                <g id="step-1-copy" transform="translate(0.000000, 244.000000)">
+                    <path d="M25.5,-21 L86.5,-21 C88.9852814,-21 91,-18.9852814 91,-16.5 L91,86.5 C91,88.9852814 88.9852814,91 86.5,91 L25.5,91 C23.0147186,91 21,88.9852814 21,86.5 L21,-16.5 C21,-18.9852814 23.0147186,-21 25.5,-21 Z" id="Rectangle-Copy" stroke-opacity="0.21170236" stroke="#F2F2F2" stroke-width="1.5" fill="#2E2E2E" transform="translate(56.000000, 35.000000) rotate(-270.000000) translate(-56.000000, -35.000000) "></path>
+                    <text id="Dev" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" line-spacing="27" fill="#FFFFFF">
+                        <tspan x="38.977" y="36">Dev</tspan>
+                    </text>
+                </g>
+                <g id="step2-copy" transform="translate(146.000000, 244.000000)">
+                    <path d="M25.5,-21 L86.5,-21 C88.9852814,-21 91,-18.9852814 91,-16.5 L91,86.5 C91,88.9852814 88.9852814,91 86.5,91 L25.5,91 C23.0147186,91 21,88.9852814 21,86.5 L21,-16.5 C21,-18.9852814 23.0147186,-21 25.5,-21 Z" id="Rectangle-Copy-3" stroke-opacity="0.21170236" stroke="#F2F2F2" stroke-width="1.5" fill="#2E2E2E" transform="translate(56.000000, 35.000000) rotate(-270.000000) translate(-56.000000, -35.000000) "></path>
+                    <text id="Application-test" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" line-spacing="12" fill="#FFFFFF">
+                        <tspan x="19.607" y="32.1409607">Application </tspan>
+                        <tspan x="42.756" y="51.8409607">test</tspan>
+                    </text>
+                </g>
+                <g id="Step3-Copy" transform="translate(292.000000, 244.000000)">
+                    <path d="M25.5,-21 L86.5,-21 C88.9852814,-21 91,-18.9852814 91,-16.5 L91,86.5 C91,88.9852814 88.9852814,91 86.5,91 L25.5,91 C23.0147186,91 21,88.9852814 21,86.5 L21,-16.5 C21,-18.9852814 23.0147186,-21 25.5,-21 Z" id="Rectangle-Copy-4" stroke-opacity="0.21170236" stroke="#F2F2F2" stroke-width="1.5" fill="#2E2E2E" transform="translate(56.000000, 35.000000) rotate(-270.000000) translate(-56.000000, -35.000000) "></path>
+                    <text id="Integration-test" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" line-spacing="12" fill="#FFFFFF">
+                        <tspan x="20.23" y="32.1409607">Integration</tspan>
+                        <tspan x="42.756" y="51.8409607">test</tspan>
+                    </text>
+                </g>
+                <g id="Step4-Copy" transform="translate(438.000000, 244.000000)">
+                    <path d="M25.5,-21 L86.5,-21 C88.9852814,-21 91,-18.9852814 91,-16.5 L91,86.5 C91,88.9852814 88.9852814,91 86.5,91 L25.5,91 C23.0147186,91 21,88.9852814 21,86.5 L21,-16.5 C21,-18.9852814 23.0147186,-21 25.5,-21 Z" id="Rectangle-Copy-5" stroke-opacity="0.21170236" stroke="#F2F2F2" stroke-width="1.5" fill="#2E2E2E" transform="translate(56.000000, 35.000000) rotate(-270.000000) translate(-56.000000, -35.000000) "></path>
+                    <text id="Acceptance-test" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" line-spacing="12" fill="#FFFFFF">
+                        <tspan x="18.865" y="32.1409607">Acceptance</tspan>
+                        <tspan x="42.756" y="51.8409607">test</tspan>
+                    </text>
+                </g>
+                <g id="Step5-Copy" transform="translate(584.000000, 244.000000)">
+                    <path d="M25.5,-21 L86.5,-21 C88.9852814,-21 91,-18.9852814 91,-16.5 L91,86.5 C91,88.9852814 88.9852814,91 86.5,91 L25.5,91 C23.0147186,91 21,88.9852814 21,86.5 L21,-16.5 C21,-18.9852814 23.0147186,-21 25.5,-21 Z" id="Rectangle-Copy-7" stroke-opacity="0.21170236" stroke="#F2F2F2" stroke-width="1.5" fill="#2E2E2E" transform="translate(56.000000, 35.000000) rotate(-270.000000) translate(-56.000000, -35.000000) "></path>
+                    <text id="Production-test" font-family="Lato-Regular, Lato" font-size="14" font-weight="normal" line-spacing="12" fill="#FFFFFF">
+                        <tspan x="20.433" y="32.1409607">Production</tspan>
+                        <tspan x="42.756" y="51.8409607">test</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
