@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 2.5.7 (2020-08-22)
+
+### Added:
+
+* FantESCy case
+* YoungPWR case
+* TypeScript interfaces runtime check article
+* Pre and Code support in articles
+
+### Changed:
+
+* Cases page no longer contains 'big' cases, only a grid of small cases
+* Update content on multiple cases
+* Styling of mobile articles
+
+### Removed:
+
+* Drift embedded script
+
 ## 2.5.6 (2020-08-11)
 
 ### Fixed:
