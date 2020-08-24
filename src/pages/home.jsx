@@ -4,7 +4,7 @@ import Layout from '../layouts/MainLayout';
 import TextBlock from '../containers/TextBlock/TextBlock';
 import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import { Container, Row, Col } from '../lib/Grid';
-import ContactForm from '../containers/ContactForm/ContactForm';
+import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSubscribe';
 import Process from '../containers/Process/Process';
 import Thumbnail from '../containers/Thumbnails/Thumbnail';
 import Wrapper from '../components/Wrapper';
@@ -41,13 +41,9 @@ const Home = () => (
             img={require('../images/img/header/web.svg')}
             subtitle="Welkom bij Bytecode"
             title="Specialisten in maatwerk voor web en mobiel"
-            href="/contact"
-            button="Neem contact op"
-            text="Bytecode Digital Agency is een kleinschalig full-service
-            webbureau gespecialiseerd in maatwerkontwikkeling voor web en
-            mobiel. Ons team helpt je dolgraag met het analyseren, bedenken en
-            ontwikkelen van alles wat je nodig hebt om je digitaal volledig te
-            ontplooien."
+            href="/cases"
+            button="Onze recente projecten"
+            text="Wij zijn Bytecode Digital Agency: een team van ontwikkelaars, ontwerpers, researchers, strategen en marketeers. Ons jonge, hechte team staat graag voor je klaar om uniek digitaal maatwerk te verzorgen."
             hero
             shadow
         />
@@ -89,17 +85,17 @@ const Home = () => (
                     <TextBlock
                         useGatsbyLink
                         subtitle="Hoe Bytecode kan helpen"
-                        title="Samen halen we alles uit jouw digitale zelf"
+                        title="Van inzicht tot impact"
                         href="/services"
-                        button="Meer over onze diensten"
+                        button="Bekijk onze diensten"
                         headingType="h2"
                     >
-                        Wij maken uitgebreide analyses en strategieën van alles
-                        wat je nodig hebt om je online ijzersterk te presenteren
-                        en profileren. In combinatie met onze expertise op het
-                        gebied van alle maatwerk webontwikkeling en
-                        IT-automatisering, zorgt dit ervoor dat je bij ons echt
-                        alles uit je digitale zelf kunt halen.
+                        Wij ontwikkelen maatwerksoftware op basis van verkregen
+                        inzichten en onderzoek, zodat onze digitale producten
+                        impact maken op jouw organisatie en klanten. Handmatig,
+                        tijdrovend werk wordt verleden tijd. Jij kan je volledig
+                        focussen op datgene waar jij passie voor hebt. Zo maken
+                        we jouw visie realiteit.
                     </TextBlock>
                 </CenterAlignedCol>
             </Row>
@@ -117,14 +113,12 @@ const Home = () => (
                             button="Meer over ons team"
                             headingType="h2"
                         >
-                            Wij staan voor een eerlijke en open samenwerking. We
-                            werken met elkaar, niet langs elkaar. Ons zul je
-                            nooit om de zaken heen zien draaien. Wij vertellen
-                            je hoe het zit en niet anders. Onze kennis en
-                            kwaliteit gebruiken we niet om met moeilijke termen
-                            te smijten, maar voor het volledig vervullen van al
-                            je digitale wensen. Zo leveren wij een kwalitatief
-                            hoogstaand en optimaal functionerend product op.
+                            Wij staan voor een eerlijke en open samenwerking,
+                            binnen ons team en daarbuiten. Door onze
+                            multidisciplinaire kennis versterken we elkaar en
+                            delen we onze ervaringen. Zo werken we naar nieuwe
+                            manieren en inzichten om de digitale wereld naar
+                            jouw hand te zetten.
                         </TextBlock>
                     </CenterAlignedCol>
                     <Col offset={{ lg: 1 }} md={12} lg={6}>
@@ -139,7 +133,7 @@ const Home = () => (
         </Wrapper>
         <Process />
         <Container>
-            <ContactForm />
+            <NewsletterSubscribe />
         </Container>
     </Layout>
 );
