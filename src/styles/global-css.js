@@ -114,6 +114,7 @@ const GlobalStyles = createGlobalStyle`
         white-space: pre-wrap;
         font-size: 80%;
     }
+    hr { margin: 42px 0; }
 `;
 
 export { GlobalStyles };
