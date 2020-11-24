@@ -15,6 +15,7 @@ const useCase = '';
 const duurzaam = '';
 const electra = '';
 const resultaat = '';
+const omschakelaar = 'https://www.eneco.nl/duurzaam-advies/';
 
 const dawny = require('../../images/img/cases/dawny/usecase.png');
 const coteetciel = require('../../images/img/cases/cote-et-ciel/homepage.png');
@@ -56,11 +57,11 @@ const Case = () => (
             <h3>Ga voor duurzaam</h3>
             <p className="Paragraph Big (introduction">
                 Energiebedrijf Eneco is in het afgelopen jaar bezig geweest met
-                de ontwikkeling <a>“De Omschakelaar”</a>, een nieuwe online
-                tool. Met behulp van deze tool kunnen gebruikers persoonlijk
-                advies krijgen over duurzaamheid. Luciano, onze co-founder en
-                technical lead, heeft op ad interim-basis geholpen met de
-                realisatie van De Omschakelaar.
+                de ontwikkeling <a href={omschakelaar}>“De Omschakelaar”</a>,
+                een nieuwe online tool. Met behulp van deze tool kunnen
+                gebruikers persoonlijk advies krijgen over duurzaamheid.
+                Luciano, onze co-founder en technical lead, heeft op ad
+                interim-basis geholpen met de realisatie van De Omschakelaar.
             </p>
         </TextAndImage>
         <Deliverables
@@ -92,9 +93,9 @@ const Case = () => (
                 <p className="big">
                     Eneco is een energiebedrijf met een grote focus op
                     duurzaamheid en maatschappelijke betrokkenheid. Met
-                    <a>De Omschakelaar</a> beantwoordt Eneco vragen over
-                    bijvoorbeeld energietransitie en het loslaten van gas als
-                    energiebron.
+                    <a href={omschakelaar}>De Omschakelaar</a> beantwoordt Eneco
+                    vragen over bijvoorbeeld energietransitie en het loslaten
+                    van gas als energiebron.
                 </p>
             </TextAndImage>
         </Section>
@@ -108,10 +109,10 @@ const Case = () => (
                 <h2>Resultaat</h2>
                 <p className="big">
                     Het resultaat van de “De Omschakelaar”-tool staat nu{' '}
-                    <a>online</a> en is klaar om mensen naar een duurzamere
-                    levensstijl te helpen. Op dit moment promoot Eneco de nieuwe
-                    tool via reclames op internet en tv. Deze tool is nu het
-                    hoofddoel van de marketing en op hun website.
+                    <a href={omschakelaar}>online</a> en is klaar om mensen naar
+                    een duurzamere levensstijl te helpen. Op dit moment promoot
+                    Eneco de nieuwe tool via reclames op internet en tv. Deze
+                    tool is nu het hoofddoel van de marketing en op hun website.
                 </p>
             </TextAndImage>
         </Section>

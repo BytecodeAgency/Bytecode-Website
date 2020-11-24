@@ -45,7 +45,6 @@ const Cases = () => (
                     postImageUrl={fantescy}
                     category="Fantescy"
                 />
-
             </Gallery>
             <Gallery sm={33}>
                 <PostThumbnail
@@ -66,7 +65,6 @@ const Cases = () => (
                     slug="/case/breda-actief"
                     postImageUrl={breda}
                 />
-
             </Gallery>
             <Gallery sm={33}>
                 <PostThumbnail
