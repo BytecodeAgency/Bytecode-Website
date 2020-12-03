@@ -12,7 +12,7 @@ const pageSettings = {
     keywords: 'cases',
 };
 
-const eneco = '';
+const eneco = require('../images/img/cases/eneco/header.png');
 const styr = require('../images/img/cases/styr/allocator.png');
 const breda = require('../images/img/cases/breda-actief/featured.svg');
 const mooiwerk = require('../images/img/cases/mooiwerk/home.png');
