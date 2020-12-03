@@ -24,6 +24,7 @@ export const NewsLetterSubscribePopupContainer = styled.div`
     bottom: 5%;
     border-radius: 10px;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 101010;
 `;
 
 export const NewsletterSubscribeForm = styled.form`
