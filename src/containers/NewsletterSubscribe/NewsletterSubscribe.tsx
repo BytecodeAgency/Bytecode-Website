@@ -1,12 +1,37 @@
 import React, { useState } from 'react';
 import InputField from '../../components/InputField';
 import {
+    CloseButton,
     NewsletterSubscribeContainer,
     NewsletterSubscribeForm,
+    NewsLetterSubscribePopupContainer,
     SubscribeButton,
 } from './NewsletterSubscribe.components';
 
-const NewsletterSubscribe = () => {
+interface ContainerProps {
+    children: React.ReactNode;
+    popup: boolean;
+}
+const Container: React.FC<ContainerProps> = ({ children, popup }) => {
+    if (popup)
+        return (
+            <NewsLetterSubscribePopupContainer>
+                {children}
+            </NewsLetterSubscribePopupContainer>
+        );
+    return (
+        <NewsletterSubscribeContainer>{children}</NewsletterSubscribeContainer>
+    );
+};
+
+interface NewsletterSubscribeProps {
+    popup?: boolean;
+    closePopup?: () => void;
+}
+const NewsletterSubscribe: React.FC<NewsletterSubscribeProps> = ({
+    popup = false,
+    closePopup = () => null,
+}) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
@@ -14,7 +39,8 @@ const NewsletterSubscribe = () => {
     const canSubmit = name !== '' && email !== '';
 
     return (
-        <NewsletterSubscribeContainer>
+        <Container popup={popup}>
+            {popup && <CloseButton onClick={closePopup}>X</CloseButton>}
             <h4>Schrijf je in voor onze nieuwsbrief!</h4>
             <p>
                 Maandelijks brengen wij een interessante en leerzame nieuwsbrief
@@ -58,7 +84,7 @@ const NewsletterSubscribe = () => {
                     Schrijf in
                 </SubscribeButton>
             </NewsletterSubscribeForm>
-        </NewsletterSubscribeContainer>
+        </Container>
     );
 };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import SEO from './SEO';
@@ -6,6 +6,7 @@ import Navbar from '../containers/Navbar/Navbar';
 import Footer from './Footer';
 import { GlobalStyles, TypographyClassStyling } from '../styles/global-css';
 import HeadScripts from '../lib/GetHeadScripts';
+import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSubscribe';
 
 interface MainProps {
     padded?: boolean;
@@ -38,13 +39,36 @@ interface LayoutProps {
         description: string,
         keywords: string,
     };
+    newsLetter?: number;
 }
 const Layout: React.FC<LayoutProps> = ({
     children,
     pageSettings,
     padded = false,
+    newsLetter = 0,
 }) => {
     const { title, description, keywords } = pageSettings;
+    const [popup, setPopup] = useState(false);
+    const [popupClosed, setPopupClosed] = useState(false);
+
+    const handleScroll = () => {
+        // eslint-disable-next-line no-undef
+        const position = window.pageYOffset;
+        // eslint-disable-next-line no-undef
+        const pageHeight = window.document.body.scrollHeight;
+        if (position / pageHeight > newsLetter) setPopup(true);
+    };
+    const closePopup = () => {
+        setPopupClosed(true);
+    };
+    useEffect(() => {
+        // eslint-disable-next-line no-undef
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            // eslint-disable-next-line no-undef
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <>
             <HeadElements />
@@ -55,6 +79,9 @@ const Layout: React.FC<LayoutProps> = ({
             <Main padded={padded} className="main">
                 <TypographyClassStyling />
                 {children}
+                {popup && !popupClosed && newsLetter && (
+                    <NewsletterSubscribe popup closePopup={closePopup} />
+                )}
             </Main>
             <Footer />
         </>

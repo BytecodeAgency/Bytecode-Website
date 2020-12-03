@@ -41,7 +41,7 @@ const CallToAction: React.FC<CallToActionProps> = () => (
 );
 
 const BlogSingle: React.FC<BlogpostSingleProps> = ({ content }) => (
-    <Layout padded pageSettings={content.pageSettings}>
+    <Layout newsLetter={0.5} padded pageSettings={content.pageSettings}>
         <Article>
             <ArticleHeader>
                 <SubtitleContainer>
@@ -75,5 +75,4 @@ const BlogSingle: React.FC<BlogpostSingleProps> = ({ content }) => (
         </Article>
     </Layout>
 );
-
 export default BlogSingle;
