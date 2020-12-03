@@ -15,6 +15,7 @@ const useCase = require('../../images/img/cases/eneco/header.png');
 const duurzaam = require('../../images/img/cases/eneco/intro.png');
 const electra = require('../../images/img/cases/eneco/eneco.png');
 const resultaat = require('../../images/img/cases/eneco/omschakelaar.png');
+
 const omschakelaar = 'https://www.eneco.nl/duurzaam-advies/';
 
 const dawny = require('../../images/img/cases/dawny/usecase.png');
