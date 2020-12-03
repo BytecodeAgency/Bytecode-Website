@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/camelcase */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
@@ -9,6 +9,7 @@ import Navbar from '../containers/Navbar/Navbar';
 import Footer from './Footer';
 import { GlobalStyles, TypographyClassStyling } from '../styles/global-css';
 import HeadScripts from '../lib/GetHeadScripts';
+import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSubscribe';
 
 const Main = styled.main`
     max-width: 100vw !important;
@@ -27,8 +28,29 @@ const HeadElements = () => (
     </Helmet>
 );
 
-const Layout = ({ children, pageSettings, padded }) => {
+const Layout = ({ children, pageSettings, padded, newsLetter }) => {
     const { title, description, keywords } = pageSettings;
+    const [popup, setPopup] = useState(false);
+    const [popupClosed, setPopupClosed] = useState(false);
+
+    const handleScroll = () => {
+        // eslint-disable-next-line no-undef
+        const position = window.pageYOffset;
+        // eslint-disable-next-line no-undef
+        const pageHeight = window.document.body.scrollHeight;
+        if (position / pageHeight > newsLetter) setPopup(true);
+    };
+    const closePopup = () => {
+        setPopupClosed(true);
+    };
+    useEffect(() => {
+        // eslint-disable-next-line no-undef
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            // eslint-disable-next-line no-undef
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <>
             <HeadElements />
@@ -39,6 +61,9 @@ const Layout = ({ children, pageSettings, padded }) => {
             <Main padded={padded} className="main">
                 <TypographyClassStyling />
                 {children}
+                {popup && !popupClosed && newsLetter && (
+                    <NewsletterSubscribe popup closePopup={closePopup} />
+                )}
             </Main>
             <Footer />
         </>
@@ -55,8 +80,10 @@ Layout.propTypes = {
         description: PropTypes.string.isRequired,
         keywords: PropTypes.string.isRequired,
     }).isRequired,
+    newsLetter: PropTypes.number,
 };
 
 Layout.defaultProps = {
     padded: false,
+    newsLetter: 0,
 };

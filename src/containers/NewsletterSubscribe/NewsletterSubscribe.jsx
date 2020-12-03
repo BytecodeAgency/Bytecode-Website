@@ -1,12 +1,27 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import InputField from '../../components/InputField';
 import {
+    CloseButton,
     NewsletterSubscribeContainer,
     NewsletterSubscribeForm,
+    NewsLetterSubscribePopupContainer,
     SubscribeButton,
 } from './NewsletterSubscribe.components';
 
-const NewsletterSubscribe = () => {
+const Container = ({ children, popup }) => {
+    if (popup)
+        return (
+            <NewsLetterSubscribePopupContainer>
+                {children}
+            </NewsLetterSubscribePopupContainer>
+        );
+    return (
+        <NewsletterSubscribeContainer>{children}</NewsletterSubscribeContainer>
+    );
+};
+
+const NewsletterSubscribe = ({ popup, closePopup }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
@@ -14,7 +29,8 @@ const NewsletterSubscribe = () => {
     const canSubmit = name !== '' && email !== '';
 
     return (
-        <NewsletterSubscribeContainer>
+        <Container popup={popup}>
+            {popup && <CloseButton onClick={closePopup}>X</CloseButton>}
             <h4>Schrijf je in voor onze nieuwsbrief!</h4>
             <p>
                 Maandelijks brengen wij een interessante en leerzame nieuwsbrief
@@ -58,8 +74,22 @@ const NewsletterSubscribe = () => {
                     Schrijf in
                 </SubscribeButton>
             </NewsletterSubscribeForm>
-        </NewsletterSubscribeContainer>
+        </Container>
     );
+};
+
+NewsletterSubscribe.propTypes = {
+    popup: PropTypes.bool,
+    closePopup: PropTypes.func,
+};
+NewsletterSubscribe.defaultProps = {
+    popup: false,
+    closePopup: () => null,
+};
+
+Container.propTypes = {
+    popup: PropTypes.bool.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 export default NewsletterSubscribe;
