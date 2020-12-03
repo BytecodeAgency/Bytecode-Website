@@ -38,7 +38,9 @@ const Layout = ({ children, pageSettings, padded, newsLetter }) => {
         const position = window.pageYOffset;
         // eslint-disable-next-line no-undef
         const pageHeight = window.document.body.scrollHeight;
-        if (position / pageHeight > newsLetter) setPopup(true);
+        // eslint-disable-next-line no-undef
+        const windowHeight = window.innerHeight;
+        if ((position + windowHeight) / pageHeight > newsLetter) setPopup(true);
     };
     const closePopup = () => {
         setPopupClosed(true);
@@ -46,9 +48,13 @@ const Layout = ({ children, pageSettings, padded, newsLetter }) => {
     useEffect(() => {
         // eslint-disable-next-line no-undef
         window.addEventListener('scroll', handleScroll, { passive: true });
+        // eslint-disable-next-line no-undef
+        window.addEventListener('resize', handleScroll);
         return () => {
             // eslint-disable-next-line no-undef
             window.removeEventListener('scroll', handleScroll);
+            // eslint-disable-next-line no-undef
+            window.removeEventListener('resize', handleScroll);
         };
     }, []);
     return (
