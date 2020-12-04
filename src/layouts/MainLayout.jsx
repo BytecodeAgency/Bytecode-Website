@@ -37,11 +37,19 @@ const Layout = ({ children, pageSettings, padded, newsLetter }) => {
         const position = window.pageYOffset;
         const pageHeight = window.document.body.scrollHeight;
         const windowHeight = window.innerHeight;
-        if ((position + windowHeight) / pageHeight > newsLetter) setPopup(true);
+        if ((position + windowHeight) / pageHeight > newsLetter) {
+            setPopup(true);
+        }
     };
     const closePopup = () => {
         setPopupClosed(true);
     };
+    const MaybeRenderPopup = () => {
+        if (popup && !popupClosed && newsLetter)
+            return <NewsletterSubscribe popup closePopup={closePopup} />;
+        return null;
+    };
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
         window.addEventListener('resize', handleScroll);
@@ -60,9 +68,7 @@ const Layout = ({ children, pageSettings, padded, newsLetter }) => {
             <Main padded={padded} className="main">
                 <TypographyClassStyling />
                 {children}
-                {popup && !popupClosed && newsLetter && (
-                    <NewsletterSubscribe popup closePopup={closePopup} />
-                )}
+                <MaybeRenderPopup />
             </Main>
             <Footer />
         </>
