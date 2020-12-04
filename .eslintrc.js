@@ -24,7 +24,10 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/no-var-requires': 0,
         '@typescript-eslint/no-empty-interface': 0,
-        'react/jsx-filename-extension': [2, { 'extensions': ['.js', '.jsx', '.ts', '.tsx'] }],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+        ],
         'global-require': 0,
         'import/no-dynamic-require': 0,
         'prettier/prettier': ['error'],
@@ -41,6 +44,7 @@ module.exports = {
     },
     env: {
         jest: true,
+        browser: true,
     },
     settings: {
         'import/resolver': {
