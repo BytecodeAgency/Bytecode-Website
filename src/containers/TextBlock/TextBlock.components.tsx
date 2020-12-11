@@ -1,27 +1,15 @@
 import React from 'react';
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../../components/Button' was resolved to '... Remove this comment to see the full error message
 import Button from '../../components/Button';
 
-type OwnProps = {
-    className?: string,
-    children?: React.ReactNode,
-};
-
-// @ts-expect-error ts-migrate(2456) FIXME: Type alias 'Props' circularly references itself.
-type Props = OwnProps & typeof SubtitleBase.defaultProps;
-
-// @ts-expect-error ts-migrate(7022) FIXME: 'SubtitleBase' implicitly has type 'any' because i... Remove this comment to see the full error message
-const SubtitleBase = ({ className, children }: Props) => (
-    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
-    <div className={`subtitle ${className}`}>{children}</div>
-);
-
-SubtitleBase.defaultProps = {
-    className: '',
-    children: undefined,
-};
+interface SubtitleBaseProps {
+    className?: string;
+    children?: React.ReactNode;
+}
+const SubtitleBase: React.FC<SubtitleBaseProps> = ({
+    className = '',
+    children = undefined,
+}) => <div className={`subtitle ${className}`}>{children}</div>;
 
 export const Figure = styled.figure`
     position: relative;
@@ -31,8 +19,14 @@ export const Figure = styled.figure`
     margin-bottom: 4rem;
 `;
 
-export const Subtitle = styled(SubtitleBase)`
-    margin-bottom: ${(props: any) => (props.hasTitle ? '2rem' : '1.2em')};
+interface SubtitleProps {
+    hasTitle?: string;
+}
+export const Subtitle =
+    styled(SubtitleBase) <
+    SubtitleProps >
+    `
+    margin-bottom: ${(props) => (props.hasTitle ? '2rem' : '1.2em')};
 `;
 
 export const H1 = styled.h1``;

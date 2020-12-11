@@ -1,8 +1,7 @@
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 
-const mediaQuery = theme;
+const { mediaQueryMin } = theme;
 
 export const ThumbnailContainer = styled.div`
     height: 22rem;
@@ -15,18 +14,23 @@ export const ThumbnailContainer = styled.div`
     &:focus div {
         background-color: #080808;
     }
-    @media (${// @ts-expect-error ts-migrate(2339) FIXME: Property 'md' does not exist on type '{ colors: { ... Remove this comment to see the full error message
-        mediaQuery.md}) {
+    @media (${mediaQueryMin.md}) {
         margin: 0 0.5em 3rem;
         width: 100%;
     }
 `;
 
-export const ServiceImageContainer = styled.div`
+interface ImageContainerProps {
+    backgroundURL?: string;
+}
+export const ServiceImageContainer =
+    styled.div <
+    ImageContainerProps >
+    `
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(${(props: any) => props.backgroundURL});
+    background-image: url(${(props) => props.backgroundURL});
     background-size: cover;
     background-blend-mode: overlay;
     background-color: #1a1a1a;
