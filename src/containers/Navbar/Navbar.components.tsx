@@ -1,23 +1,29 @@
 import React from 'react';
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
 import { transparentize } from 'polished'; // TODO: Remove dependency
 import { Link } from 'gatsby';
 import theme from '../../styles/theme';
 
-// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin, colors } = theme;
 
 const NavBarLi = styled.li`
     margin: 1em 0;
 `;
 
-export const NavbarContainer = styled.nav`
+interface ContainerProps {
+    atScrollTop?: boolean;
+    noBackground?: boolean;
+}
+
+export const NavbarContainer =
+    styled.nav <
+    ContainerProps >
+    `
     position: fixed;
     width: 100%;
     z-index: 10000;
     padding: 0 3rem;
-    background: ${(props: any) =>
+    background: ${(props) =>
         props.atScrollTop ? 'transparent' : colors.background};
     @media (max-width: ${theme.breakpointMobileMenu}) {
         width: 100vw;
@@ -31,7 +37,7 @@ export const NavbarContainer = styled.nav`
         justify-content: space-between;
     }
     @media (min-width: ${theme.breakpointMobileMenu}) {
-        background: ${(props: any) =>
+        background: ${(props) =>
             props.noBackground
                 ? 'transparent'
                 : `linear-gradient(to bottom, ${colors.mediumgray}, transparent)`};
@@ -45,8 +51,13 @@ export const NavbarContainer = styled.nav`
     @media (${mediaQueryMin.lg}) {
     }
 `;
-
-export const NavbarContent = styled.div`
+interface ContentProps {
+    menuIsOpen?: boolean;
+}
+export const NavbarContent =
+    styled.div <
+    ContentProps >
+    `
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,7 +69,7 @@ export const NavbarContent = styled.div`
 
         position: fixed;
         transform: translateX(
-            ${(props: any) => (props.menuIsOpen ? 0 : '65em')}
+            ${(props) => (props.menuIsOpen ? 0 : '65em')}
         );
         top: 0;
         bottom: 0;
@@ -101,29 +112,22 @@ const StyledLink = styled(Link)`
     }
 `;
 
-type OwnProps = {
-    className?: string,
-    href: string,
-    text: string,
-};
-
-// @ts-expect-error ts-migrate(2456) FIXME: Type alias 'Props' circularly references itself.
-type Props = OwnProps & typeof NavbarItemBase.defaultProps;
-
-// @ts-expect-error ts-migrate(7022) FIXME: 'NavbarItemBase' implicitly has type 'any' because... Remove this comment to see the full error message
-const NavbarItemBase = ({ className, href, text }: Props) => (
-    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
+interface ItemBaseProps {
+    className?: string;
+    href: string;
+    text: string;
+}
+const NavbarItemBase: React.FC<ItemBaseProps> = ({
+    className = '',
+    href,
+    text,
+}) => (
     <NavBarLi className={className}>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <StyledLink to={href} className="menuitem">
             {text}
         </StyledLink>
     </NavBarLi>
 );
-
-NavbarItemBase.defaultProps = {
-    className: '',
-};
 
 export const NavbarItem = styled(NavbarItemBase)`
     display: inline-block;
@@ -195,7 +199,13 @@ export const CloseMenuButton = styled(MenuButton)`
     }
 `;
 
-export const BlackOverlay = styled.div`
+interface OverlayProps {
+    menuIsOpen?: boolean;
+}
+export const BlackOverlay =
+    styled.div <
+    OverlayProps >
+    `
     position: fixed;
     top: 0;
     right: 0;
@@ -206,7 +216,7 @@ export const BlackOverlay = styled.div`
     opacity: 0;
     display: none;
     @media (max-width: ${theme.breakpointMobileMenu}) {
-        display: ${(props: any) => (props.menuIsOpen ? 'block' : 'none')};
-        opacity: ${(props: any) => (props.menuIsOpen ? 0.5 : 0)};
+        display: ${(props) => (props.menuIsOpen ? 'block' : 'none')};
+        opacity: ${(props) => (props.menuIsOpen ? 0.5 : 0)};
     }
 `;

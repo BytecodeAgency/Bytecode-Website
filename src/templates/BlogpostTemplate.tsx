@@ -1,12 +1,10 @@
-/* eslint-disable react/prop-types, @typescript-eslint/camelcase */
-
 import React from 'react';
 import { graphql } from 'gatsby';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../layouts/BlogpostLayout' was resolved to... Remove this comment to see the full error message
 import BlogpostLayout from '../layouts/BlogpostLayout';
+import { BlogpostTemplateProps } from './BlogpostTemplate.types';
 
 // TODO: Add props validation for Gatbsy query
-const BlogpostTemplate = ({ data }: any) => {
+const BlogpostTemplate: React.FC<BlogpostTemplateProps> = ({ data }) => {
     const { mdx } = data;
     const content = {
         pageSettings: {

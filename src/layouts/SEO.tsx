@@ -6,21 +6,24 @@
  */
 
 import React from 'react';
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'reac... Remove this comment to see the full error message
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-type OwnProps = {
-    description?: string,
-    lang?: string,
-    meta?: any[],
-    keywords?: string,
-    title: string,
-};
+interface SEOProps {
+    description?: string;
+    lang?: string;
+    meta?: any[];
+    keywords?: string;
+    title: string;
+}
 
-type Props = OwnProps & typeof SEO.defaultProps;
-
-function SEO({ description, lang, meta, keywords, title }: Props) {
+const SEO: React.FC<SEOProps> = ({
+    description = ``,
+    lang = `nl`,
+    meta = [],
+    keywords = [],
+    title,
+}) => {
     const { site } = useStaticQuery(
         graphql`
             query {
@@ -38,7 +41,6 @@ function SEO({ description, lang, meta, keywords, title }: Props) {
     const metaDescription = description || site.siteMetadata.description;
 
     return (
-        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <Helmet
             htmlAttributes={{
                 lang: lang || 'nl',
@@ -85,13 +87,6 @@ function SEO({ description, lang, meta, keywords, title }: Props) {
             ].concat(meta)}
         />
     );
-}
-
-SEO.defaultProps = {
-    lang: `nl`,
-    meta: [],
-    keywords: [],
-    description: ``,
 };
 
 export default SEO;

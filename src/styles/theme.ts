@@ -29,9 +29,18 @@ const GlobalHeadingSettings = {
     weight: bold,
     marginBottom: '0.66em',
 };
-
+interface Bytecode {
+    colors: any;
+    fonts: any;
+    fontWeights: any;
+    typography: any;
+    breakpoint: any;
+    containerWidth: any;
+    breakpointMobileMenu: any;
+    mediaQueryMin: any | null;
+}
 // Bytecode theme
-const bytecode = {
+const bytecode: Bytecode = {
     colors: {
         background: darkgray,
         primary: green,
@@ -192,9 +201,9 @@ const bytecode = {
         lg: '11vw',
         xl: '15vw',
     },
+    mediaQueryMin: null,
 };
 
-// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 bytecode.mediaQueryMin = {
     xs: `min-width: ${bytecode.breakpoint.xs}`,
     sm: `min-width: ${bytecode.breakpoint.sm}`,

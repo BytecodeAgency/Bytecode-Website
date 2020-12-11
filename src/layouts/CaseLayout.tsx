@@ -1,13 +1,7 @@
-/* eslint-disable @typescript-eslint/camelcase */
-
 import React from 'react';
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'reac... Remove this comment to see the full error message
 import Helmet from 'react-helmet';
-// @ts-expect-error ts-migrate(6142) FIXME: Module './SEO' was resolved to '/home/tiko-ubuntu/... Remove this comment to see the full error message
 import SEO from './SEO';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Navbar/Navbar' was resolved ... Remove this comment to see the full error message
 import Navbar from '../containers/Navbar/Navbar';
 // @ts-expect-error ts-migrate(6142) FIXME: Module './Footer' was resolved to '/home/tiko-ubun... Remove this comment to see the full error message
 import Footer from './Footer';
