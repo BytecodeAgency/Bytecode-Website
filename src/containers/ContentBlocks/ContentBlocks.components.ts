@@ -1,6 +1,8 @@
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 
+// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin, containerWidth } = theme;
 
 export const TextAndImageBase = styled.div`
@@ -12,29 +14,30 @@ export const TextAndImageBase = styled.div`
         display: grid;
         grid-template: auto / ${containerWidth.sm} 1fr 1fr ${containerWidth.sm};
         grid-template-areas: 'imgLeft imgLeft imgRight imgRight';
-        padding: ${props => (props.padded ? '2em' : 0)} 0;
-        grid-column-gap: ${props => props.gutter};
+        padding: ${(props: any) => (props.padded ? '2em' : 0)} 0;
+        grid-column-gap: ${(props: any) => props.gutter};
     }
     @media (${mediaQueryMin.md}) {
-        grid-template: auto / ${containerWidth.sm} ${props => props.grid} ${containerWidth.sm};
+        grid-template: auto / ${containerWidth.sm} ${(props: any) => props.grid} ${containerWidth.sm};
     }
     @media (${mediaQueryMin.lg}) {
-        grid-template: auto / ${props =>
-                props.fluid ? containerWidth.md : containerWidth.xl} ${props =>
-                props.grid} ${containerWidth.md};
+        grid-template: auto / ${(props: any) =>
+                props.fluid ? containerWidth.md : containerWidth.xl} ${(
+                props: any,
+            ) => props.grid} ${containerWidth.md};
     }
 `;
 
 export const ImageWrapper = styled.figure`
-    grid-area: ${props => props.pos};
-    width: ${props => (props.small ? '70%' : '100%')};
+    grid-area: ${(props: any) => props.pos};
+    width: ${(props: any) => (props.small ? '70%' : '100%')};
     margin: 1em 1em;
     @media (${mediaQueryMin.sm}) {
         margin: 5em 0;
     }
     @media (${mediaQueryMin.sm}) {
         margin: 1em 0;
-        transform: translateX(${props => props.translate});
+        transform: translateX(${(props: any) => props.translate});
     }
 `;
 
@@ -46,20 +49,20 @@ export const ContentWrapper = styled.div`
     max-width: 100vw;
     @media (${mediaQueryMin.xs}) {
         margin: 3em 1em;
-        grid-area: ${props => (props.reverse ? reversed : normal)};
+        grid-area: ${(props: any) => (props.reverse ? reversed : normal)};
     }
     @media (${mediaQueryMin.sm}) {
         margin: 0;
     }
     @media (${mediaQueryMin.lg}) {
-        width: ${props => (props.fluid ? '100%' : '85%')};
+        width: ${(props: any) => (props.fluid ? '100%' : '85%')};
     }
 `;
 
 export const GalleryWrapper = styled.section`
     display: flex;
     & > * {
-        width: ${props => props.width || 100}%;
+        width: ${(props: any) => props.width || 100}%;
         padding: 0.5em;
     }
 `;

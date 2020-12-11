@@ -1,9 +1,11 @@
 import React from 'react';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import theme from '../../styles/theme';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../../components/ArrowButton' was resolved... Remove this comment to see the full error message
 import ArrowButton from '../../components/ArrowButton';
 
+// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin } = theme;
 export const CreditsContainer = styled.div`
     width: 100vw;
@@ -42,27 +44,46 @@ export const CreditTitle = styled.p`
 export const CreditText = styled.p`
     margin-bottom: 0.5em;
 `;
-export const CreditItem = ({ title, credits }) => (
+
+type CreditItemProps = {
+    title: string,
+    credits: string[],
+};
+export const CreditItem = ({ title, credits }: CreditItemProps) => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <CreditItemContainer>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <CreditTitle className="subtitle">{title}</CreditTitle>
         {credits.map(credit => (
+            // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
             <CreditText className="Paragraph light">{credit}</CreditText>
         ))}
     </CreditItemContainer>
 );
 
-CreditItem.propTypes = {
-    title: PropTypes.string.isRequired,
-    credits: PropTypes.arrayOf(PropTypes.string).isRequired,
+type CreditItemWithLinksProps = {
+    title: string,
+    credits: string[],
+    links: string[],
 };
 
-export const CreditItemWithLinks = ({ title, credits, links }) => (
+export const CreditItemWithLinks = ({
+    title,
+    credits,
+    links,
+}: CreditItemWithLinksProps) => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <CreditItemContainer>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <CreditTitle className="subtitle">{title}</CreditTitle>
         {credits.map((credit, index) => (
+            // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
             <>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <CreditText>{credit}</CreditText>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <CreditText>
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <ArrowButton href={links[index]}>
                         Ga naar pagina
                     </ArrowButton>
@@ -71,9 +92,3 @@ export const CreditItemWithLinks = ({ title, credits, links }) => (
         ))}
     </CreditItemContainer>
 );
-
-CreditItemWithLinks.propTypes = {
-    title: PropTypes.string.isRequired,
-    credits: PropTypes.arrayOf(PropTypes.string).isRequired,
-    links: PropTypes.arrayOf(PropTypes.string).isRequired,
-};

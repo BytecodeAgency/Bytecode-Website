@@ -1,4 +1,6 @@
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import { reset, debug } from 'styled-components-style-utils';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import { css, createGlobalStyle } from 'styled-components';
 import theme from './theme';
 import textScaler from './textScaler';
@@ -25,7 +27,7 @@ const typographyClasses = [
     'form',
 ];
 
-const addStylingExceptions = element => {
+const addStylingExceptions = (element: any) => {
     switch (element) {
         case 'subtitle':
             return 'text-transform: uppercase;';
@@ -39,16 +41,26 @@ const addStylingExceptions = element => {
 const typographyElementStyling = typographyElements.map(
     element => css`
         ${element} {
-            font-size: ${theme.typography[element].size};
-            line-height: ${theme.typography[element].height};
-            letter-spacing: ${theme.typography[element].spacing};
-            font-family: ${theme.typography[element].font};
-            font-weight: ${theme.typography[element].weight};
-            color: ${theme.typography[element].color};
-            margin-top: ${theme.typography[element].marginTop};
-            margin-bottom: ${theme.typography[element].marginBottom};
-            margin-left: ${theme.typography[element].marginLeft};
-            margin-right: ${theme.typography[element].marginRight};
+            font-size: ${// @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+            theme.typography[element].size};
+            line-height: ${// @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+            theme.typography[element].height};
+            letter-spacing: ${// @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+            theme.typography[element].spacing};
+            font-family: ${// @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+            theme.typography[element].font};
+            font-weight: ${// @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+            theme.typography[element].weight};
+            color: ${// @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+            theme.typography[element].color};
+            margin-top: ${// @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+            theme.typography[element].marginTop};
+            margin-bottom: ${// @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+            theme.typography[element].marginBottom};
+            margin-left: ${// @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+            theme.typography[element].marginLeft};
+            margin-right: ${// @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+            theme.typography[element].marginRight};
             ${addStylingExceptions(element)};
         }
     `,
@@ -58,13 +70,34 @@ export const TypographyClassStyling = createGlobalStyle`
     ${typographyClasses
         .map(
             element => `.${element} {
-            font-size: ${theme.typography[element].size};
-            line-height: ${theme.typography[element].height};
-            letter-spacing: ${theme.typography[element].spacing};
-            font-family: ${theme.typography[element].font};
-            font-weight: ${theme.typography[element].weight};
-            color: ${theme.typography[element].color};
-            margin: ${theme.typography[element].margin};
+            font-size: ${
+                // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+                theme.typography[element].size
+            };
+            line-height: ${
+                // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+                theme.typography[element].height
+            };
+            letter-spacing: ${
+                // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+                theme.typography[element].spacing
+            };
+            font-family: ${
+                // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+                theme.typography[element].font
+            };
+            font-weight: ${
+                // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+                theme.typography[element].weight
+            };
+            color: ${
+                // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+                theme.typography[element].color
+            };
+            margin: ${
+                // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+                theme.typography[element].margin
+            };
             ${addStylingExceptions(element)};
         }`,
         )

@@ -1,8 +1,9 @@
 import React from 'react';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 
+// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin, colors } = theme;
 
 const ImageBlockFigure = styled.figure`
@@ -39,7 +40,14 @@ const ImageBlockFigure = styled.figure`
     }
 `;
 
-const ImageBlock = props => {
+type Props = {
+    src: string;
+    alt: string;
+};
+
+// @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'props'. Did you mean 'Props'?
+const ImageBlock =props: Props => {
+    // @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'props'. Did you mean 'Props'?
     const { src, alt } = props;
     return (
         <section>
@@ -51,8 +59,3 @@ const ImageBlock = props => {
 };
 
 export default ImageBlock;
-
-ImageBlock.propTypes = {
-    src: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
-};

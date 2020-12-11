@@ -2,10 +2,15 @@
 
 import React from 'react';
 import { graphql } from 'gatsby';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../layouts/MainLayout' was resolved to '/h... Remove this comment to see the full error message
 import Layout from '../layouts/MainLayout';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Container' was resolved to '... Remove this comment to see the full error message
 import Container from '../containers/Container';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Thumbnails/PostThumbnail' wa... Remove this comment to see the full error message
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Gallery' was resolved to '/h... Remove this comment to see the full error message
 import Gallery from '../containers/Gallery';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/TextBlock/TextBlock' was res... Remove this comment to see the full error message
 import TextBlock from '../containers/TextBlock/TextBlock';
 
 const pageSettings = {
@@ -15,7 +20,9 @@ const pageSettings = {
     keywords: 'bytecode insights',
 };
 
-const Blogpost = ({ data: post }, key) => (
+// @ts-expect-error ts-migrate(7031) FIXME: Binding element 'post' implicitly has an 'any' typ... Remove this comment to see the full error message
+const Blogpost = ({ data: post }, key: any) => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <PostThumbnail
         blog
         key={key}
@@ -31,17 +38,23 @@ const Blogpost = ({ data: post }, key) => (
     />
 );
 
-const blogArchive = ({ data }) => {
+const blogArchive = ({ data }: any) => {
     const { edges: posts } = data.allMdx;
     return (
+        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <Layout padded pageSettings={pageSettings}>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Container>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TextBlock
                     title="Bytecode Insights"
                     subtitle="Artikelen & podcasts"
                 />
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <Gallery xs={50} md={33}>
-                    {posts.map(({ node: post }, _, key) => (
+                    {/* @ts-expect-error ts-migrate(7031) FIXME: Binding element 'post' implicitly has an 'any' typ... Remove this comment to see the full error message */}
+                    {posts.map(({ node: post }, _: any, key: any) => (
+                        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
                         <Blogpost data={post} key={key} />
                     ))}
                 </Gallery>

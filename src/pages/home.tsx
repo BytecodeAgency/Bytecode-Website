@@ -1,12 +1,20 @@
 import React from 'react';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../layouts/MainLayout' was resolved to '/h... Remove this comment to see the full error message
 import Layout from '../layouts/MainLayout';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/TextBlock/TextBlock' was res... Remove this comment to see the full error message
 import TextBlock from '../containers/TextBlock/TextBlock';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/ContentPageHeader/ContentPag... Remove this comment to see the full error message
 import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import { Container, Row, Col } from '../lib/Grid';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/NewsletterSubscribe/Newslett... Remove this comment to see the full error message
 import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSubscribe';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Process/Process' was resolve... Remove this comment to see the full error message
 import Process from '../containers/Process/Process';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Thumbnails/Thumbnail' was re... Remove this comment to see the full error message
 import Thumbnail from '../containers/Thumbnails/Thumbnail';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../components/Wrapper' was resolved to '/h... Remove this comment to see the full error message
 import Wrapper from '../components/Wrapper';
 
 const service1icon = require('../images/icons/services/mobile.svg');
@@ -35,7 +43,9 @@ const GroupImage = styled.img`
 `;
 
 const Home = () => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Layout pageSettings={pageSettings}>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <ContentPageHeader
             useGatsbyLink
             img={require('../images/img/header/web.svg')}
@@ -47,32 +57,44 @@ const Home = () => (
             hero
             shadow
         />
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Container>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <Col md={12} lg={6} xl={6}>
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <Row gutterWidth={20}>
+                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                         <Col sm={6}>
+                            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                             <Thumbnail
                                 serviceName="Websites, Webshops en Webapps"
                                 serviceIcon={service1icon}
                                 backgroundImage={service1bg}
                             />
                         </Col>
+                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                         <Col sm={6}>
+                            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                             <Thumbnail
                                 serviceName="Cloud en Automatisering"
                                 serviceIcon={service2icon}
                                 backgroundImage={service2bg}
                             />
                         </Col>
+                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                         <Col sm={6}>
+                            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                             <Thumbnail
                                 serviceName="Mobile- en API-ontwikkeling"
                                 serviceIcon={service3icon}
                                 backgroundImage={service3bg}
                             />
                         </Col>
+                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                         <Col sm={6}>
+                            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                             <Thumbnail
                                 serviceName="Design en Strategie"
                                 serviceIcon={service4icon}
@@ -81,7 +103,9 @@ const Home = () => (
                         </Col>
                     </Row>
                 </Col>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5}>
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <TextBlock
                         useGatsbyLink
                         subtitle="Hoe Bytecode kan helpen"
@@ -100,10 +124,15 @@ const Home = () => (
                 </CenterAlignedCol>
             </Row>
         </Container>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Wrapper>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Container>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <Row justify="center" align="center">
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <CenterAlignedCol md={12} lg={5}>
+                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                         <TextBlock
                             useGatsbyLink
                             subtitle="Wie wij zijn"
@@ -121,7 +150,9 @@ const Home = () => (
                             jouw hand te zetten.
                         </TextBlock>
                     </CenterAlignedCol>
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <Col offset={{ lg: 1 }} md={12} lg={6}>
+                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                         <GroupImage
                             width="700"
                             src={require('../images/img/content/group.png')}
@@ -131,8 +162,11 @@ const Home = () => (
                 </Row>
             </Container>
         </Wrapper>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Process />
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Container>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <NewsletterSubscribe />
         </Container>
     </Layout>

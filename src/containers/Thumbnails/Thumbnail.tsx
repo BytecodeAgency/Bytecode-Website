@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
     ServiceImage,
     ServiceImageContainer,
@@ -8,11 +7,26 @@ import {
     Icon,
 } from './Thumbnail.components';
 
-const Thumbnail = ({ backgroundImage, serviceIcon, serviceName }) => (
+type OwnProps = {
+    backgroundImage: string,
+    serviceIcon?: string,
+    serviceName: string,
+};
+
+// @ts-expect-error ts-migrate(2456) FIXME: Type alias 'Props' circularly references itself.
+type Props = OwnProps & typeof Thumbnail.defaultProps;
+
+// @ts-expect-error ts-migrate(7022) FIXME: 'Thumbnail' implicitly has type 'any' because it d... Remove this comment to see the full error message
+const Thumbnail = ({ backgroundImage, serviceIcon, serviceName }: Props) => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <ThumbnailContainer>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <ServiceImageContainer backgroundURL={backgroundImage}>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Icon>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <ServiceImage src={serviceIcon} alt={serviceName} />
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <ServiceName>{serviceName}</ServiceName>
             </Icon>
         </ServiceImageContainer>
@@ -20,12 +34,6 @@ const Thumbnail = ({ backgroundImage, serviceIcon, serviceName }) => (
 );
 
 export default Thumbnail;
-
-Thumbnail.propTypes = {
-    backgroundImage: PropTypes.string.isRequired,
-    serviceIcon: PropTypes.string, // TODO: Change to enum
-    serviceName: PropTypes.string.isRequired,
-};
 
 Thumbnail.defaultProps = {
     serviceIcon: null,

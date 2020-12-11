@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
     AuthorBlock,
     AuthorBlockPhotoWrapper,
@@ -9,7 +8,15 @@ import {
     Position,
 } from './Author.components';
 
-const Author = props => {
+type Props = {
+    img: string;
+    name: string;
+    title?: string;
+};
+
+// @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'props'. Did you mean 'Props'?
+const Author =props: Props => {
+    // @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'props'. Did you mean 'Props'?
     const { img, name, title } = props;
     const image = require(`../../images/img/authors/${img}`);
     return (
@@ -26,12 +33,6 @@ const Author = props => {
 };
 
 export default Author;
-
-Author.propTypes = {
-    img: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    title: PropTypes.string,
-};
 
 Author.defaultProps = {
     title: '',

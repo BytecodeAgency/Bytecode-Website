@@ -4,7 +4,9 @@
 
 import React from 'react';
 import axios from 'axios';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../TextBlock/TextBlock' was resolved to '/... Remove this comment to see the full error message
 import TextBlock from '../TextBlock/TextBlock';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../../components/InputField' was resolved ... Remove this comment to see the full error message
 import InputField from '../../components/InputField';
 import {
     ContactFormContainer,
@@ -13,25 +15,29 @@ import {
     StyledNotification,
 } from './ContactForm.components';
 
-const Notification = ({ type, message }) => (
+const Notification = ({ type, message }: any) => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <StyledNotification className={type}>{message}</StyledNotification>
 );
 
-const sendFormInformation = async sendData =>
+const sendFormInformation = async (sendData: any) =>
     axios
         .post('https://api.bytecode.nl/contact', sendData)
         .then(() => true)
+        // @ts-expect-error ts-migrate(2345) FIXME: Argument of type 'false' is not assignable to para... Remove this comment to see the full error message
         .catch(false);
 
-const handleSend = formValues => {
+const handleSend = (formValues: any) => {
     const { contents, contact, email, phone } = formValues;
     const sendData = { contact, email, phone, contents };
 
     return sendFormInformation(sendData);
 };
 
-class ContactForm extends React.Component {
-    constructor(props) {
+type ContactFormState = any;
+
+class ContactForm extends React.Component<{}, ContactFormState> {
+    constructor(props: {}) {
         super(props);
         this.getNotifications = this.getNotifications.bind(this);
         this.addNotification = this.addNotification.bind(this);
@@ -49,8 +55,10 @@ class ContactForm extends React.Component {
 
     getNotifications() {
         const { notifications } = this.state;
-        return notifications.map(notification => (
+        return notifications.map((notification: any) => (
+            // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
             <Notification
+                // @ts-expect-error ts-migrate(2554) FIXME: Expected 0 arguments, but got 1.
                 key={notification.type + toString(Math.random() * 100)}
                 type={notification.type}
                 message={notification.message}
@@ -60,7 +68,7 @@ class ContactForm extends React.Component {
         ));
     }
 
-    addNotification(type, message) {
+    addNotification(type: any, message: any) {
         const { notifications } = this.state;
         notifications.push({
             type,
@@ -73,7 +81,7 @@ class ContactForm extends React.Component {
         this.setState({ notifications: [] });
     }
 
-    handleFormChange(key, value) {
+    handleFormChange(key: any, value: any) {
         // eslint-disable-next-line react/destructuring-assignment
         const previousFormValues = this.state.formValues;
         this.setState({
@@ -81,7 +89,7 @@ class ContactForm extends React.Component {
         });
     }
 
-    async handleFormSubmit({ contact, email, phone, contents }) {
+    async handleFormSubmit({ contact, email, phone, contents }: any) {
         if (await handleSend({ contact, email, phone, contents })) {
             this.addNotification('success', 'Je bericht is verstuurd!');
             setTimeout(() => {
@@ -101,9 +109,11 @@ class ContactForm extends React.Component {
     }
 
     renderText() {
+        // @ts-expect-error ts-migrate(2339) FIXME: Property 'hideText' does not exist on type 'Readon... Remove this comment to see the full error message
         const { hideText } = this.props;
         if (!hideText) {
             return (
+                // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
                 <TextBlock
                     subtitle="We staan voor je klaar"
                     headingType="h2"
@@ -117,49 +127,55 @@ class ContactForm extends React.Component {
     render() {
         const { contact, phone, email, contents } = this.state.formValues;
         return (
+            // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
             <ContactFormContainer>
                 {this.renderText()}
                 {this.getNotifications()}
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <form>
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <InputField
                         id="contact"
                         placeholder="Naam"
                         type="text"
                         aria-label="contact"
                         value={contact}
-                        onChange={event =>
+                        onChange={(event: any) =>
                             this.handleFormChange('contact', event.target.value)
                         }
                         className="text-input"
                     />
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <InputField
                         id="email"
                         placeholder="Email"
                         type="text"
                         aria-label="email"
                         value={email}
-                        onChange={event =>
+                        onChange={(event: any) =>
                             this.handleFormChange('email', event.target.value)
                         }
                         className="text-input"
                     />
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <InputField
                         id="phone"
                         placeholder="Telefoonnummer"
                         type="text"
                         aria-label="phone"
                         value={phone}
-                        onChange={event =>
+                        onChange={(event: any) =>
                             this.handleFormChange('phone', event.target.value)
                         }
                         className="text-input"
                     />
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <InputTextArea
                         id="contents"
                         placeholder="Bericht"
                         aria-label="message"
                         value={contents}
-                        onChange={event =>
+                        onChange={(event: any) =>
                             this.handleFormChange(
                                 'contents',
                                 event.target.value,
@@ -167,6 +183,7 @@ class ContactForm extends React.Component {
                         }
                         className="text"
                     />
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <SendButton
                         type="submit"
                         onClick={() =>

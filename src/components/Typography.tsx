@@ -1,24 +1,29 @@
 import React from 'react';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 
 const { fontWeights, fonts } = theme;
 
-export const Quote = ({ author, url, children }) => {
+type Props = {
+    author: string,
+    url: string,
+    children: string,
+};
+
+export const Quote = ({ author, url, children }: Props) => {
     return (
+        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <div>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <QuoteText>{children}</QuoteText>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <p>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <a href={url}>{author}</a>
             </p>
         </div>
     );
-};
-Quote.propTypes = {
-    author: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
-    children: PropTypes.string.isRequired,
 };
 
 const QuoteText = styled.blockquote`

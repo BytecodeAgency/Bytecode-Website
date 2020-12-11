@@ -1,5 +1,7 @@
 import React from 'react';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../../layouts/MainLayout' was resolved to ... Remove this comment to see the full error message
 import Layout from '../../layouts/MainLayout';
 import { Container, Row as RowBase } from '../../lib/Grid';
 
@@ -22,13 +24,19 @@ const Row = styled(RowBase)`
 `;
 
 const CookiePolicy = () => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Layout pageSettings={pageSettings}>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Container>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h1>Cookiebeleid</h1>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Dit is het cookiebeleid van Bytecode Digital Agency B.V.
                     (hierna te noemen &#34;
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <b>Bytecode</b>
                     &#34;, &#34;wij&#34;, &#34;ons&#34; of &#34;onze&#34;), een
                     onderneming met adres Verlengde Spiegelmakerstraat 13,
@@ -36,6 +44,7 @@ const CookiePolicy = () => (
                     Koophandel onder nummer 71497560. Dit cookiebeleid legt uit
                     hoe wij cookies gebruiken en hoe wij uw gegevens delen en
                     beschermen in relatie tot onze website bytecode.nl (de &#34;
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <b>Website</b>
                     &#34;). Het plaatsen van cookies en het verwerken van
                     persoonsgegevens gebeurt op een wijze die in overeenstemming
@@ -43,13 +52,17 @@ const CookiePolicy = () => (
                     inclusief uitvoeringswet van deze verordening, of de
                     voorafgaande wetgeving van de Wet Bescherming
                     Persoonsgegevens (de &#34;
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <b>AVG</b>
                     &#34;), de telecommunicatiewet en alle overige
                     privacywetgeving zoals die op dit moment geldt.
                 </p>
             </Row>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Wat zijn cookies?</h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Cookies zijn eenvoudige tekstbestanden die op uw computer,
                     tablet of telefoon worden opgeslagen, wanneer u onze Website
@@ -60,8 +73,11 @@ const CookiePolicy = () => (
                     ervaring op de Website te kunnen geven.
                 </p>
             </Row>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Functionele cookies</h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Functionele cookies zijn cookies die noodzakelijk zijn om
                     onze Website goed te laten werken. Zonder deze cookies kan
@@ -76,8 +92,11 @@ const CookiePolicy = () => (
                     wij inwinnen via deze cookies dan ook niet met derden.
                 </p>
             </Row>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Analytische cookies</h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Analytische cookies zijn cookies die ervoor zorgen dat de
                     site goed kan functioneren. Door analytische cookies weten
@@ -88,7 +107,9 @@ const CookiePolicy = () => (
                     cookies worden alleen met uw toestemming geplaatst. Wij
                     streven ernaar om altijd toestemming aan u te vragen bij het
                     gebruik van cookies.
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <br /> <br />
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <b>Google Analytics</b>: Voor onze analytische diensten
                     maken we gebruik van Google Analytics. Wij gebruiken deze
                     dienst om bij te houden en rapportages te ontvangen over hoe
@@ -113,13 +134,17 @@ const CookiePolicy = () => (
                     Amerikaanse Ministerie van Handel. Dit betekent dat er
                     sprake is van een passend beschermingsniveau voor de
                     verwerking van eventuele persoonsgegevens.
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <br /> <br />
                     Naast Google Analytics maken wij op de Website gebruik van
                     de volgende analytische cookies: Hotjar.
                 </p>
             </Row>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Sociale media cookies</h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Op deze pagina zijn buttons van sociale netwerken als
                     Facebook en Twitter opgenomen. Deze buttons werken door
@@ -139,11 +164,14 @@ const CookiePolicy = () => (
                     persoonsgegevens zoals bedoeld in de AVG.
                 </p>
             </Row>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>
                     Recht op inzage, correcties, recht op bezwaar en recht op
                     dataportabiliteit
                 </h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Wij bieden u graag de mogelijkheid om zo veel mogelijk
                     controle over uw persoonsgegevens te houden. Wanneer u
@@ -152,18 +180,27 @@ const CookiePolicy = () => (
                     geheel of gedeeltelijk wil laten overdragen aan u of aan een
                     derde, dan kunt u contact opnemen met Bytecode door een
                     e-mail te sturen naar&nbsp;
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <a href="mailto:support@bytecode.nl">support@bytecode.nl</a>
                     &nbsp;of een brief te sturen aan:
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <br />
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <br />
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     Bytecode Digital Agency B.V. <br />
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     tav. Administatie <br />
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     Verlengde Spiegelmakerstraat 13 <br />
                     2645KW Delfgauw, Nederland
                 </p>
             </Row>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Onvoorziene cookies</h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Wij proberen een zo goed mogelijk overzicht te houden van de
                     cookies op onze Website en proberen het plaatsen van cookies
@@ -174,12 +211,16 @@ const CookiePolicy = () => (
                     niet terug in dit overzicht. Komt u op onze Website een
                     cookie tegen die niet in dit overzicht staat? Dan kunt u
                     contact opnemen met ons door een mail te sturen naar&nbsp;
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <a href="mailto:support@bytecode.nl">support@bytecode.nl</a>
                     .
                 </p>
             </Row>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Hoe wordt de verzamelde informatie beveiligd?</h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     De beveiliging van uw gegevens is cruciaal voor ons. Daarom
                     hebben we de nodige technische en organisatorische
@@ -193,8 +234,11 @@ const CookiePolicy = () => (
                     u en Bytecode.
                 </p>
             </Row>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Zeggenschapswijziging</h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Wanneer Bytecode, of een deel daarvan, wordt verkocht of
                     overgedragen (bijvoorbeeld als gevolg van een fusie,
@@ -205,8 +249,11 @@ const CookiePolicy = () => (
                     vanzelfsprekend moeten opvolgen.
                 </p>
             </Row>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Zeggenschapswijziging</h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Het kan voorkomen dat wij dit Cookiebeleid in de loop van de
                     tijd zullen aanpassen of updaten. Daarom adviseren we u om
@@ -215,12 +262,16 @@ const CookiePolicy = () => (
                     gepubliceerd op deze pagina.
                 </p>
             </Row>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Row>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Contact</h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Mocht u vragen hebben over dit Cookiebeleid, dan
                     beantwoorden we deze graag. U kunt contact met ons opnemen
                     door een e-mail te sturen naar&nbsp;
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <a href="mailto:support@bytecode.nl">support@bytecode.nl</a>
                     .
                 </p>

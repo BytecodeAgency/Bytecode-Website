@@ -1,11 +1,22 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
 import React from 'react';
-import PropTypes from 'prop-types';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../TextBlock/TextBlock' was resolved to '/... Remove this comment to see the full error message
 import TextBlock from '../TextBlock/TextBlock';
 import { MainHeader, MainHeaderContent } from './ContentPageHeader.components';
 
-const ContentPageHeader = props => {
+type Props = {
+    subtitle?: string;
+    title?: string;
+    button?: string;
+    href?: string;
+    text?: React.ReactNode;
+    useGatsbyLink?: boolean;
+};
+
+// @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'props'. Did you mean 'Props'?
+const ContentPageHeader =props: Props => {
+    // @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'props'. Did you mean 'Props'?
     const { subtitle, title, button, href, text, useGatsbyLink } = props;
     return (
         <MainHeader {...props}>
@@ -25,15 +36,6 @@ const ContentPageHeader = props => {
 };
 
 export default ContentPageHeader;
-
-ContentPageHeader.propTypes = {
-    subtitle: PropTypes.string,
-    title: PropTypes.string,
-    button: PropTypes.string,
-    href: PropTypes.string,
-    text: PropTypes.node,
-    useGatsbyLink: PropTypes.bool,
-};
 
 ContentPageHeader.defaultProps = {
     subtitle: '',

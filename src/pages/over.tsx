@@ -1,15 +1,23 @@
 import React from 'react';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../layouts/MainLayout' was resolved to '/h... Remove this comment to see the full error message
 import Layout from '../layouts/MainLayout';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/TextBlock/TextBlock' was res... Remove this comment to see the full error message
 import TextBlock from '../containers/TextBlock/TextBlock';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Header' was resolved to '/ho... Remove this comment to see the full error message
 import Header from '../containers/Header';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/TeamMember/TeamMember' was r... Remove this comment to see the full error message
 import TeamMember from '../containers/TeamMember/TeamMember';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Container' was resolved to '... Remove this comment to see the full error message
 import Container from '../containers/Container';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/ContactForm/ContactForm' was... Remove this comment to see the full error message
 import ContactForm from '../containers/ContactForm/ContactForm';
 
 // eslint-disable-next-line import/extensions
 import theme from '../styles/theme.js';
 
+// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin } = theme;
 
 const pageSettings = {
@@ -52,7 +60,9 @@ const TeamMembers = styled.section`
 `;
 
 const Over = () => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Layout pageSettings={pageSettings}>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Header
             img={require('../images/img/content/teamv2.png')}
             subtitle="Over ons"
@@ -63,8 +73,11 @@ const Over = () => (
             hero
             shadow
         />
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Container>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <TeamMembers>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TextBlock
                     subtitle="Het team"
                     alt="Het team"
@@ -80,6 +93,7 @@ const Over = () => (
                     we er ook iets aan toe.
                 </TextBlock>
 
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TeamMember
                     name="Jeroen van Steijn"
                     title="Co-founder &amp; Operations manager"
@@ -90,6 +104,7 @@ const Over = () => (
                     instagram="https://www.instagram.com/jjvansteijn"
                     linkedin="https://www.linkedin.com/in/jjvansteijn"
                 />
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TeamMember
                     name="Luciano Nooijen"
                     title="Co-founder &amp; Technical lead"
@@ -100,6 +115,7 @@ const Over = () => (
                     linkedin="https://www.linkedin.com/in/lucianonooijen"
                 />
                 {/* TODO: Generate from array, maybe later change via dashb. */}
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TeamMember
                     name="Richard van 't Hof"
                     title="Junior art-director & Front-end developer"
@@ -110,6 +126,7 @@ const Over = () => (
                     behance="https://www.behance.net/therichartspace"
                     github="https://www.github.com/RichART-Official"
                 />
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TeamMember
                     name="Thomas Bodlaender"
                     title="Online Marketeer"
@@ -118,6 +135,7 @@ const Over = () => (
                     instagram="https://www.instagram.com/thomasbodje"
                     linkedin="https://www.linkedin.com/in/thomasbodlaender"
                 />
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TeamMember
                     name="Julian van Dijk"
                     title="Full-stack developer web &amp; mobiel"
@@ -125,6 +143,7 @@ const Over = () => (
                     email="mailto:julian@bytecode.nl"
                     linkedin="https://www.linkedin.com/in/julian-v-66b098116"
                 />
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TeamMember
                     name="Nick Broekarts"
                     title="Partner &amp; Business Developer"
@@ -133,6 +152,7 @@ const Over = () => (
                     instagram="https://www.instagram.com/nickbroekarts"
                     linkedin="https://www.linkedin.com/in/nickbroekarts"
                 />
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TeamMember
                     name="Robin van Zeelst"
                     title="Online Marketeer"
@@ -140,12 +160,14 @@ const Over = () => (
                     email="mailto:robin@bytecode.nl"
                     linkedin="https://www.linkedin.com/in/robin-van-zeelst/"
                 />
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TeamMember
                     name="Christiaan Färber"
                     title="UI/UX Designer &amp; Front-end developer"
                     img={require('../images/img/team/chris.jpg')}
                     email="mailto:chris@bytecode.nl"
                 />
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TeamMember
                     name="Suzanne de Vries"
                     title="Marketing &amp; Communicatie"
@@ -153,12 +175,14 @@ const Over = () => (
                     email="mailto:suzanne@bytecode.nl"
                     linkedin="https://www.linkedin.com/in/suzanne-de-vries-11b088149/"
                 />
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TeamMember
                     name="Nahwin Chedoe"
                     title="Junior UI &amp; UX Designer"
                     img={require('../images/img/team/nawin.jpg')}
                     email="mailto:nahwin@bytecode.nl"
                 />
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TeamMember
                     name="Tiko Alarcón Rivero"
                     title="Full-stack developer web &amp; mobiel"
@@ -167,7 +191,9 @@ const Over = () => (
                 />
             </TeamMembers>
         </Container>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Container>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <ContactForm />
         </Container>
     </Layout>

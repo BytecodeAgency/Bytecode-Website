@@ -2,10 +2,11 @@
 
 import React from 'react';
 import { graphql } from 'gatsby';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../layouts/BlogpostLayout' was resolved to... Remove this comment to see the full error message
 import BlogpostLayout from '../layouts/BlogpostLayout';
 
 // TODO: Add props validation for Gatbsy query
-const BlogpostTemplate = ({ data }) => {
+const BlogpostTemplate = ({ data }: any) => {
     const { mdx } = data;
     const content = {
         pageSettings: {
@@ -24,6 +25,7 @@ const BlogpostTemplate = ({ data }) => {
         article_intro: mdx.frontmatter.article_intro,
         post_content: mdx.code.body,
     };
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     return <BlogpostLayout content={content} />;
 };
 

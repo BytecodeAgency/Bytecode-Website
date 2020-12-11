@@ -1,3 +1,4 @@
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
 import {
     Container as ContainerBase,
@@ -7,6 +8,7 @@ import {
 } from 'react-grid-system';
 import theme from '../styles/theme';
 
+// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin } = theme;
 const container = theme.containerWidth;
 
@@ -14,20 +16,20 @@ const container = theme.containerWidth;
 
 export const Container = styled(ContainerBase)`
     max-width: unset !important;
-    margin: 1em ${props => (props.fluid ? '0' : container.sm)} !important;
+    margin: 1em ${(props: any) => (props.fluid ? '0' : container.sm)} !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
 
     @media (${mediaQueryMin.md}) {
-        margin: 2em ${props => (props.fluid ? '0' : container.md)} !important;
+        margin: 2em ${(props: any) => (props.fluid ? '0' : container.md)} !important;
     }
 
     @media (${mediaQueryMin.lg}) {
-        margin: 2.5vw ${props => (props.fluid ? '0' : container.lg)} !important;
+        margin: 2.5vw ${(props: any) => (props.fluid ? '0' : container.lg)} !important;
     }
 
     @media (${mediaQueryMin.xl}) {
-        margin: 4vw ${props => (props.fluid ? '0' : container.xl)} !important;
+        margin: 4vw ${(props: any) => (props.fluid ? '0' : container.xl)} !important;
     }
 `;
 

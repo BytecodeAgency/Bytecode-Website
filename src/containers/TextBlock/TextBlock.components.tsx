@@ -1,16 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../../components/Button' was resolved to '... Remove this comment to see the full error message
 import Button from '../../components/Button';
 
-const SubtitleBase = ({ className, children }) => (
+type OwnProps = {
+    className?: string,
+    children?: React.ReactNode,
+};
+
+// @ts-expect-error ts-migrate(2456) FIXME: Type alias 'Props' circularly references itself.
+type Props = OwnProps & typeof SubtitleBase.defaultProps;
+
+// @ts-expect-error ts-migrate(7022) FIXME: 'SubtitleBase' implicitly has type 'any' because i... Remove this comment to see the full error message
+const SubtitleBase = ({ className, children }: Props) => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <div className={`subtitle ${className}`}>{children}</div>
 );
-
-SubtitleBase.propTypes = {
-    className: PropTypes.string,
-    children: PropTypes.node,
-};
 
 SubtitleBase.defaultProps = {
     className: '',
@@ -26,7 +32,7 @@ export const Figure = styled.figure`
 `;
 
 export const Subtitle = styled(SubtitleBase)`
-    margin-bottom: ${props => (props.hasTitle ? '2rem' : '1.2em')};
+    margin-bottom: ${(props: any) => (props.hasTitle ? '2rem' : '1.2em')};
 `;
 
 export const H1 = styled.h1``;

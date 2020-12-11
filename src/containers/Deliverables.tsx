@@ -1,10 +1,11 @@
 import React from 'react';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import theme from '../styles/theme';
 
 const plusBullet = require('../images/icons/ui/plus-bullet.svg');
 
+// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { colors, mediaQueryMin } = theme;
 const { secondary } = colors;
 
@@ -53,13 +54,22 @@ const Deliverable = styled.li`
     font-size: 1.11em;
 `;
 
-const Deliverables = ({ deliverables }) => {
+type Props = {
+    deliverables: string[],
+};
+
+const Deliverables = ({ deliverables }: Props) => {
     return (
+        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <DeliverablesBase>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <DeliverablesContent>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="subtitle">Deliverables</p>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <List>
                     {deliverables.map(item => {
+                        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
                         return <Deliverable>{item}</Deliverable>;
                     })}
                 </List>
@@ -69,7 +79,3 @@ const Deliverables = ({ deliverables }) => {
 };
 
 export default Deliverables;
-
-Deliverables.propTypes = {
-    deliverables: PropTypes.arrayOf(PropTypes.string).isRequired,
-};

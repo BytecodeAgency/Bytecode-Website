@@ -194,6 +194,7 @@ const bytecode = {
     },
 };
 
+// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 bytecode.mediaQueryMin = {
     xs: `min-width: ${bytecode.breakpoint.xs}`,
     sm: `min-width: ${bytecode.breakpoint.sm}`,

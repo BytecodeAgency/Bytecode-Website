@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../TextBlock/TextBlock' was resolved to '/... Remove this comment to see the full error message
 import TextBlock from '../TextBlock/TextBlock';
 import {
     Icon,
@@ -8,14 +8,30 @@ import {
     ServiceText,
 } from './Service.components';
 
-const Service = ({ children, iconName, title, fullWidth }) => {
+type OwnProps = {
+    children: React.ReactNode,
+    iconName: string,
+    title: string,
+    fullWidth?: boolean,
+};
+
+// @ts-expect-error ts-migrate(2456) FIXME: Type alias 'Props' circularly references itself.
+type Props = OwnProps & typeof Service.defaultProps;
+
+// @ts-expect-error ts-migrate(7022) FIXME: 'Service' implicitly has type 'any' because it doe... Remove this comment to see the full error message
+const Service = ({ children, iconName, title, fullWidth }: Props) => {
     const iconSrc = require(`../../images/icons/services/${iconName}.svg`);
     return (
+        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <ServiceWrapper fullWidth={fullWidth}>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <ServiceIcon>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <Icon src={iconSrc} alt={iconName} />
             </ServiceIcon>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <ServiceText>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TextBlock title={title} headingType="h3">
                     {children}
                 </TextBlock>
@@ -25,13 +41,6 @@ const Service = ({ children, iconName, title, fullWidth }) => {
 };
 
 export default Service;
-
-Service.propTypes = {
-    children: PropTypes.node.isRequired,
-    iconName: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    fullWidth: PropTypes.bool,
-};
 
 Service.defaultProps = {
     fullWidth: false,

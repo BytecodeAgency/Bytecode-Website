@@ -1,10 +1,11 @@
 import React from 'react';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { transparentize } from 'polished'; // TODO: Remove dependency
 import { Link } from 'gatsby';
 import theme from '../../styles/theme';
 
+// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin, colors } = theme;
 
 const NavBarLi = styled.li`
@@ -16,7 +17,7 @@ export const NavbarContainer = styled.nav`
     width: 100%;
     z-index: 10000;
     padding: 0 3rem;
-    background: ${props =>
+    background: ${(props: any) =>
         props.atScrollTop ? 'transparent' : colors.background};
     @media (max-width: ${theme.breakpointMobileMenu}) {
         width: 100vw;
@@ -30,7 +31,7 @@ export const NavbarContainer = styled.nav`
         justify-content: space-between;
     }
     @media (min-width: ${theme.breakpointMobileMenu}) {
-        background: ${props =>
+        background: ${(props: any) =>
             props.noBackground
                 ? 'transparent'
                 : `linear-gradient(to bottom, ${colors.mediumgray}, transparent)`};
@@ -56,7 +57,9 @@ export const NavbarContent = styled.div`
         justify-content: space-between;
 
         position: fixed;
-        transform: translateX(${props => (props.menuIsOpen ? 0 : '65em')});
+        transform: translateX(
+            ${(props: any) => (props.menuIsOpen ? 0 : '65em')}
+        );
         top: 0;
         bottom: 0;
 
@@ -98,19 +101,25 @@ const StyledLink = styled(Link)`
     }
 `;
 
-const NavbarItemBase = ({ className, href, text }) => (
+type OwnProps = {
+    className?: string,
+    href: string,
+    text: string,
+};
+
+// @ts-expect-error ts-migrate(2456) FIXME: Type alias 'Props' circularly references itself.
+type Props = OwnProps & typeof NavbarItemBase.defaultProps;
+
+// @ts-expect-error ts-migrate(7022) FIXME: 'NavbarItemBase' implicitly has type 'any' because... Remove this comment to see the full error message
+const NavbarItemBase = ({ className, href, text }: Props) => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <NavBarLi className={className}>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <StyledLink to={href} className="menuitem">
             {text}
         </StyledLink>
     </NavBarLi>
 );
-
-NavbarItemBase.propTypes = {
-    className: PropTypes.string,
-    href: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-};
 
 NavbarItemBase.defaultProps = {
     className: '',
@@ -197,7 +206,7 @@ export const BlackOverlay = styled.div`
     opacity: 0;
     display: none;
     @media (max-width: ${theme.breakpointMobileMenu}) {
-        display: ${props => (props.menuIsOpen ? 'block' : 'none')};
-        opacity: ${props => (props.menuIsOpen ? 0.5 : 0)};
+        display: ${(props: any) => (props.menuIsOpen ? 'block' : 'none')};
+        opacity: ${(props: any) => (props.menuIsOpen ? 0.5 : 0)};
     }
 `;

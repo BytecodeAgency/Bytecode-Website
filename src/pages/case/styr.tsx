@@ -1,11 +1,14 @@
 /* eslint-disable max-len */
 import React from 'react';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../../layouts/CaseLayout' was resolved to ... Remove this comment to see the full error message
 import Layout from '../../layouts/CaseLayout';
 import {
     TextAndImage,
     Introduction,
     Section,
+    // @ts-expect-error ts-migrate(6142) FIXME: Module '../../containers/ContentBlocks/ContentBloc... Remove this comment to see the full error message
 } from '../../containers/ContentBlocks/ContentBlocks';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../../containers/Deliverables' was resolve... Remove this comment to see the full error message
 import Deliverables from '../../containers/Deliverables';
 
 const logo = require('../../images/img/cases/styr/logo.png');
@@ -26,9 +29,13 @@ const pageSettings = {
 };
 
 const Case = () => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Layout pageSettings={pageSettings}>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <TextAndImage padded img={serviceDesk} alt="Moderne functiewaardering">
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <h2>Moderne functiewaardering</h2>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <p className="introduction">
                 Door het STYR functiewaarderingsmodel te digitaliseren kan het
                 werk van de STYR consultants geautomatiseerd worden. Zij kunnen
@@ -40,6 +47,7 @@ const Case = () => (
             </p>
         </TextAndImage>
 
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Deliverables
             deliverables={[
                 'Strategie',
@@ -51,62 +59,84 @@ const Case = () => (
             clientLogo={logo}
             clientBio="STYR is een specialistisch adviesbureau op het gebied van organisatiedesign, waarderen en belonen. STYR heeft het STYR model ontwikkeld, een moderne en vernieuwende manier van (functie)waardering."
         />
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Section>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Introduction>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>De uitdaging</h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="introduction">
                     Wij hebben een praktische online waarderingstool ontwikkeld
                     waarmee de klanten van STYR zelf de zwaarte van rollen en
                     functies kunnen vaststellen.
                 </p>
             </Introduction>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <TextAndImage
                 img={research}
                 reverse
                 alt="Onderzoek naar de allocatortool"
             >
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="subtitle">Oplossing</p>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h3>UX Research</h3>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Na een grondige intake zijn we begonnen met een eerste UX/UI
                     design voor het Allocatortool. Extra’s die op basis van deze
                     wireframes nog gewenst waren, zijn ook toegevoegd.
                 </p>
             </TextAndImage>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <TextAndImage img={invision} alt="Ontwerp van de service desk">
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="subtitle">Oplossing</p>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h3>UI Design</h3>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     In Invision zijn prototypes gemaakt van de Allocatortool. Op
                     basis hiervan is feedback verzameld en zijn de
                     functionaliteiten en design aangescherpt.
                 </p>
             </TextAndImage>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <TextAndImage
                 img={development}
                 reverse
                 alt="Ontwikkeling van de service desk"
             >
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="subtitle">Oplossing</p>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h3>Development</h3>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     De frontend van de Allocator is ontwikkeld in React. Voor de
                     content van de beslisboom is een maatwerk oplossing
                     ontwikkeld voor het WordPress CMS.
                 </p>
             </TextAndImage>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <TextAndImage fluid img={model} alt="STYR login pagina">
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="subtitle">Resultaten</p>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Realiseren</h2>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Het design van de Allocator is opgebouwd uit opeenvolgende
                     pagina’s die de gebruiker doorloopt, waarbij keuzes gemaakt
                     worden door op opties te klikken die bij een
                     werknemerprofiel passen.
                 </p>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p>
                     Meer informatie over het STYR model en de STYR Allocator
                     Tool vind je op&nbsp;
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <a href="https://styr.nl">de website van STYR</a>.
                 </p>
             </TextAndImage>

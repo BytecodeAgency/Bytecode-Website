@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../../lib/Socials' was resolved to '/home/... Remove this comment to see the full error message
 import AllSocials from '../../lib/Socials';
 import {
     TeamMemberContainer,
@@ -8,6 +8,7 @@ import {
     TeamMemberWrapper,
 } from './TeamMember.components';
 
+// @ts-expect-error ts-migrate(7006) FIXME: Parameter 'name' implicitly has an 'any' type.
 const getAltText = (name, alt) => {
     if (alt) {
         return alt;
@@ -15,7 +16,21 @@ const getAltText = (name, alt) => {
     return `Een foto van ${name}`;
 };
 
-const TeamMember = props => {
+type TeamMemberProps = {
+    name: string;
+    title: string;
+    img: string;
+    alt: string;
+    link?: string;
+    email?: string;
+    github?: string;
+    instagram?: string;
+    facebook?: string;
+    twitter?: string;
+};
+
+// @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'props'.
+const TeamMember =props: TeamMemberProps => {
     const {
         name,
         title,
@@ -27,6 +42,7 @@ const TeamMember = props => {
         instagram,
         facebook,
         twitter,
+    // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'props'.
     } = props;
 
     return (
@@ -51,19 +67,6 @@ const TeamMember = props => {
 };
 
 export default TeamMember;
-
-TeamMember.propTypes = {
-    name: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
-    link: PropTypes.string,
-    email: PropTypes.string,
-    github: PropTypes.string,
-    instagram: PropTypes.string,
-    facebook: PropTypes.string,
-    twitter: PropTypes.string,
-};
 
 TeamMember.defaultProps = {
     link: undefined,

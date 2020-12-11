@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
     StyledImage,
     StyledContainer,
@@ -9,19 +8,45 @@ import {
     StyledTextBlock,
     DeliverableList,
 } from './ServiceItem.components';
+// @ts-expect-error ts-migrate(6142) FIXME: Module '../TextBlock/TextBlock' was resolved to '/... Remove this comment to see the full error message
 import TextBlock from '../TextBlock/TextBlock';
 
-const TextCol = ({ children, src }) =>
+type OwnTextColProps = {
+    children?: React.ReactNode,
+    src?: string,
+};
+
+// @ts-expect-error ts-migrate(2456) FIXME: Type alias 'TextColProps' circularly references it... Remove this comment to see the full error message
+type TextColProps = OwnTextColProps & typeof TextCol.defaultProps;
+
+// @ts-expect-error ts-migrate(7022) FIXME: 'TextCol' implicitly has type 'any' because it doe... Remove this comment to see the full error message
+const TextCol = ({ children, src }: TextColProps) =>
     src ? (
+        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <StyledCol src={src} xl={5}>
             {children}
         </StyledCol>
     ) : (
+        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <StyledCol src={src} xl={6}>
             {children}
         </StyledCol>
     );
 
+type OwnServiceItemProps = {
+    title: string,
+    subtitle: string,
+    text: string,
+    src: string,
+    link: string,
+    light?: boolean,
+    listItems?: string[],
+};
+
+// @ts-expect-error ts-migrate(2456) FIXME: Type alias 'ServiceItemProps' circularly reference... Remove this comment to see the full error message
+type ServiceItemProps = OwnServiceItemProps & typeof ServiceItem.defaultProps;
+
+// @ts-expect-error ts-migrate(7022) FIXME: 'ServiceItem' implicitly has type 'any' because it... Remove this comment to see the full error message
 const ServiceItem = ({
     title,
     subtitle,
@@ -30,11 +55,13 @@ const ServiceItem = ({
     link,
     light,
     listItems,
-}) => {
+}: ServiceItemProps) => {
     const RightCol = () => {
         if (src)
             return (
+                // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
                 <ImageCol xl={7} light={light}>
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <StyledImage src={src} />
                 </ImageCol>
             );
@@ -43,10 +70,15 @@ const ServiceItem = ({
     };
 
     return (
+        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <StyledContainer src={src} light={light}>
+            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <StyledRow justify="between" light={light}>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TextCol src={src}>
+                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <StyledTextBlock>
+                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                         <TextBlock
                             title={title}
                             href={link}
@@ -55,11 +87,13 @@ const ServiceItem = ({
                         >
                             {text}
                         </TextBlock>
+                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                         <DeliverableList>
                             {listItems.join(', ')}
                         </DeliverableList>
                     </StyledTextBlock>
                 </TextCol>
+                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <RightCol />
             </StyledRow>
         </StyledContainer>
@@ -68,24 +102,9 @@ const ServiceItem = ({
 
 export default ServiceItem;
 
-ServiceItem.propTypes = {
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    light: PropTypes.bool,
-    listItems: PropTypes.arrayOf(PropTypes.string),
-};
-
 ServiceItem.defaultProps = {
     light: false,
     listItems: [],
-};
-
-TextCol.propTypes = {
-    children: PropTypes.node,
-    src: PropTypes.string,
 };
 
 TextCol.defaultProps = {

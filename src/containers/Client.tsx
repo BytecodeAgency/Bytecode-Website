@@ -1,6 +1,7 @@
 import React from 'react';
+// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+// @ts-expect-error ts-migrate(6142) FIXME: Module './Container' was resolved to '/home/tiko-u... Remove this comment to see the full error message
 import Container from './Container';
 import theme from '../styles/theme';
 
@@ -47,20 +48,27 @@ const Logo = styled.img`
     width: unset;
 `;
 
-const Client = ({ logo, name, description }) => (
+type OwnProps = {
+    logo?: string,
+    name: string,
+    description: string,
+};
+
+// @ts-expect-error ts-migrate(2456) FIXME: Type alias 'Props' circularly references itself.
+type Props = OwnProps & typeof Client.defaultProps;
+
+// @ts-expect-error ts-migrate(7022) FIXME: 'Client' implicitly has type 'any' because it does... Remove this comment to see the full error message
+const Client = ({ logo, name, description }: Props) => (
+    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Content>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <div>{logo ? <Logo src={logo} alt={name} /> : <h5>{name}</h5>}</div>
+        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Bio className="caption">{description}</Bio>
     </Content>
 );
 
 export default Client;
-
-Client.propTypes = {
-    logo: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-};
 
 Client.defaultProps = {
     logo: null,
