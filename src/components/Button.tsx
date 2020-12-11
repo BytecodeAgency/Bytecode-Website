@@ -3,21 +3,23 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import theme from '../styles/theme';
 
-interface ButtonProps {
-    href: string;
-    useGatsbyLink?: boolean;
-    className?: string;
-    children: React.ReactNode;
-    props: any;
-}
+type OwnProps = {
+    href: string,
+    useGatsbyLink?: boolean,
+    className?: string,
+    children: React.ReactNode,
+};
 
-const ButtonBase: React.FC<ButtonProps> = ({
+type Props = OwnProps & typeof ButtonBase.defaultProps;
+
+// TODO: find a way to use both ...props and typescript
+const ButtonBase: React.FC<any> = ({
     href,
     useGatsbyLink = false,
     className = '',
     children,
     ...props
-}) => {
+}: Props) => {
     if (useGatsbyLink) {
         return (
             <Link to={href} className={`button ${className}`} {...props}>
@@ -30,6 +32,11 @@ const ButtonBase: React.FC<ButtonProps> = ({
             {children}
         </a>
     );
+};
+
+ButtonBase.defaultProps = {
+    useGatsbyLink: false,
+    className: '',
 };
 
 const Button = styled(ButtonBase)`

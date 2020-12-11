@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import SEO from './SEO';
 import Navbar from '../containers/Navbar/Navbar';
-// @ts-expect-error ts-migrate(6142) FIXME: Module './Footer' was resolved to '/home/tiko-ubun... Remove this comment to see the full error message
 import Footer from './Footer';
 // @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Header' was resolved to '/ho... Remove this comment to see the full error message
 import Header from '../containers/Header';

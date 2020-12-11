@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../components/Button' was resolved to '/ho... Remove this comment to see the full error message
 import Button from '../components/Button';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../lib/Socials' was resolved to '/home/tik... Remove this comment to see the full error message
 import AllSocials from '../lib/Socials';
 import theme from '../styles/theme';
 
-// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin } = theme;
 const container = theme.containerWidth;
 
@@ -32,7 +29,6 @@ type FooterColProps = {
 };
 
 const FooterCol = ({ children }: FooterColProps) => (
-    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <FooterColInnerContainer>{children}</FooterColInnerContainer>
 );
 
@@ -132,159 +128,10 @@ const Copyright = styled(FooterContainer)`
 
 const logo = require('../images/img/logo.svg');
 
-const Footer = () => (
-    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
-    <footer>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-        <FooterContainer>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-            <FooterCol>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                <FooterHeadingContainer>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <FooterLogo src={logo} alt="Bytecode" />
-                </FooterHeadingContainer>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                <FooterLinkContainer>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <AllSocials
-                        isFooter
-                        facebook="https://www.facebook.com/bytecodeagency"
-                        twitter="https://twitter.com/bytecodeagency"
-                        instagram="https://www.instagram.com/bytecodeagency"
-                        linkedin="https://linkedin.com/company/bytecodeagency"
-                    />
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <FooterLink href="mailto:info@bytecode.nl">
-                        info@bytecode.nl
-                    </FooterLink>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <FooterLink href="tel:+31152024222">015-2024222</FooterLink>
-
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <FooterSpacer />
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <p className="subtitle">Legal</p>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <p>
-                        KvK: 71497560
-                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                        <br />
-                        BTW: NL858738703B01
-                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                        <br />
-                        IBAN: NL77 BUNQ 2206 3628 13
-                    </p>
-                </FooterLinkContainer>
-            </FooterCol>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-            <FooterCol>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                <FooterHeadingContainer>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <p className="subtitle">Kom langs</p>
-                </FooterHeadingContainer>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                <p>
-                    Verl. Spiegelmakersstraat 13
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <br />
-                    2645LZ Delfgauw
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <br />
-                    Nederland
-                </p>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                <FooterButton
-                    href="https://calendly.com/bytecode"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    Plan een afspraak
-                </FooterButton>
-            </FooterCol>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-            <FooterCol>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                <FooterHeadingContainer>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <p className="subtitle">Broncode website</p>
-                </FooterHeadingContainer>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                <p>
-                    Wij dragen graag bij aan open source projecten en vrije
-                    software. Om de daad bij het woord te voegen hebben wij de
-                    broncode van deze website onder AGPL-3.0 licentie
-                    vrijgegeven.
-                </p>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                <FooterButton
-                    href="https://github.com/BytecodeBV/Bytecode-Website"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    Bekijk broncode
-                </FooterButton>
-            </FooterCol>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-            <FooterCol>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                <FooterHeadingContainer>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <p className="subtitle">Documenten</p>
-                </FooterHeadingContainer>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                <p>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <FooterLink
-                        href="https://cdn.bytecode.nl/algemene-voorwaarden.pdf"
-                        target="_blank"
-                    >
-                        Algemene Voorwaarden
-                    </FooterLink>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <FooterLink href="/legal/privacy-policy">
-                        Privacy Policy
-                    </FooterLink>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <FooterLink href="/legal/cookie-policy">
-                        Cookie Policy
-                    </FooterLink>
-                </p>
-            </FooterCol>
-        </FooterContainer>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-        <Copyright>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-            <hr />
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-            <p>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                <small>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <ComicSans>&copy;</ComicSans> {new Date().getFullYear()}
-                    &nbsp;Bytecode Digital Agency B.V.
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <br />
-                    All Rights Reserved on text and image content,
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-                    <a href="https://github.com/BytecodeBV/Bytecode-Website">
-                        &nbsp;source code&nbsp;
-                    </a>
-                    is available under the AGPL-3.0 license.
-                </small>
-            </p>
-        </Copyright>
-    </footer>
-);
-
-export default Footer;
-
-type ComicSansProps = {
-    children: React.ReactNode,
-};
-
-const ComicSans = ({ children }: ComicSansProps) => {
+interface ComicSansProps {
+    children: React.ReactNode;
+}
+const ComicSans: React.FC<ComicSansProps> = ({ children }) => {
     const [showComicSans, setShowComicSans] = useState(false);
     const switchComicSans = () => setShowComicSans(!showComicSans);
     const ComicSansText = styled.span`
@@ -297,12 +144,117 @@ const ComicSans = ({ children }: ComicSansProps) => {
     `;
 
     return (
-        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <ComicSansText onClick={switchComicSans}>{children}</ComicSansText>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             {showComicSans && <ComicSansCSS />}
         </>
     );
 };
+
+interface FooterProps {}
+const Footer: React.FC<FooterProps> = () => (
+    <footer>
+        <FooterContainer>
+            <FooterCol>
+                <FooterHeadingContainer>
+                    <FooterLogo src={logo} alt="Bytecode" />
+                </FooterHeadingContainer>
+                <FooterLinkContainer>
+                    <AllSocials
+                        isFooter
+                        facebook="https://www.facebook.com/bytecodeagency"
+                        twitter="https://twitter.com/bytecodeagency"
+                        instagram="https://www.instagram.com/bytecodeagency"
+                        linkedin="https://linkedin.com/company/bytecodeagency"
+                    />
+                    <FooterLink href="mailto:info@bytecode.nl">
+                        info@bytecode.nl
+                    </FooterLink>
+                    <FooterLink href="tel:+31152024222">015-2024222</FooterLink>
+                    <FooterSpacer />
+                    <p className="subtitle">Legal</p>
+                    <p>
+                        KvK: 71497560
+                        <br />
+                        BTW: NL858738703B01
+                        <br />
+                        IBAN: NL77 BUNQ 2206 3628 13
+                    </p>
+                </FooterLinkContainer>
+            </FooterCol>
+            <FooterCol>
+                <FooterHeadingContainer>
+                    <p className="subtitle">Kom langs</p>
+                </FooterHeadingContainer>
+                <p>
+                    Verl. Spiegelmakersstraat 13
+                    <br />
+                    2645LZ Delfgauw
+                    <br />
+                    Nederland
+                </p>
+                <FooterButton
+                    href="https://calendly.com/bytecode"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Plan een afspraak
+                </FooterButton>
+            </FooterCol>
+            <FooterCol>
+                <FooterHeadingContainer>
+                    <p className="subtitle">Broncode website</p>
+                </FooterHeadingContainer>
+                <p>
+                    Wij dragen graag bij aan open source projecten en vrije
+                    software. Om de daad bij het woord te voegen hebben wij de
+                    broncode van deze website onder AGPL-3.0 licentie
+                    vrijgegeven.
+                </p>
+                <FooterButton
+                    href="https://github.com/BytecodeBV/Bytecode-Website"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Bekijk broncode
+                </FooterButton>
+            </FooterCol>
+            <FooterCol>
+                <FooterHeadingContainer>
+                    <p className="subtitle">Documenten</p>
+                </FooterHeadingContainer>
+                <p>
+                    <FooterLink
+                        href="https://cdn.bytecode.nl/algemene-voorwaarden.pdf"
+                        target="_blank"
+                    >
+                        Algemene Voorwaarden
+                    </FooterLink>
+                    <FooterLink href="/legal/privacy-policy">
+                        Privacy Policy
+                    </FooterLink>
+                    <FooterLink href="/legal/cookie-policy">
+                        Cookie Policy
+                    </FooterLink>
+                </p>
+            </FooterCol>
+        </FooterContainer>
+        <Copyright>
+            <hr />
+            <p>
+                <small>
+                    <ComicSans>&copy;</ComicSans> {new Date().getFullYear()}
+                    &nbsp;Bytecode Digital Agency B.V.
+                    <br />
+                    All Rights Reserved on text and image content,
+                    <a href="https://github.com/BytecodeBV/Bytecode-Website">
+                        &nbsp;source code&nbsp;
+                    </a>
+                    is available under the AGPL-3.0 license.
+                </small>
+            </p>
+        </Copyright>
+    </footer>
+);
+
+export default Footer;
