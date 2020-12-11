@@ -1,1 +1,3 @@
-export interface NavbarProps {}
+export interface NavbarProps {
+    background?: boolean;
+}

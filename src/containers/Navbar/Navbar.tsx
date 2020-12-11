@@ -18,12 +18,12 @@ const logoMin = require('../../images/img/logo-min.svg');
 const hamburger = require('../../images/img/hamburger-menu.svg');
 const closeMenuImg = require('../../images/img/close-menu.svg');
 
-const Navbar: React.FC<NavbarProps> = () => {
+const Navbar: React.FC<NavbarProps> = ({ background }) => {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const closeMenu = () => setMenuIsOpen(false);
     const openMenu = () => setMenuIsOpen(true);
     return (
-        <NavbarContainer>
+        <NavbarContainer background={background}>
             <Link to="/" aria-label="homePage">
                 <MobileNavLogo src={logoMin} alt="Logo" />
             </Link>

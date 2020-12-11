@@ -12,7 +12,7 @@ const NavBarLi = styled.li`
 
 interface ContainerProps {
     atScrollTop?: boolean;
-    noBackground?: boolean;
+    background?: boolean;
 }
 
 export const NavbarContainer =
@@ -38,9 +38,9 @@ export const NavbarContainer =
     }
     @media (min-width: ${theme.breakpointMobileMenu}) {
         background: ${(props) =>
-            props.noBackground
-                ? 'transparent'
-                : `linear-gradient(to bottom, ${colors.mediumgray}, transparent)`};
+            props.background
+                ? `linear-gradient(to bottom, ${colors.mediumgray}, transparent)`
+                : 'transparent'};
     }
 
     @media (${mediaQueryMin.md}) {

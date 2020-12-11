@@ -3,7 +3,6 @@
 
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'reac... Remove this comment to see the full error message
 import { Helmet } from 'react-helmet';
 
 const enableTagManager = true;
@@ -15,24 +14,10 @@ const tagManagerCode = `
     })(window,document,'script','dataLayer','GTM-W4GHHL2');
 `;
 
-const HeadScripts = () => (
-    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
-    <Helmet>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-        <script type="text/javascript">
-            {enableTagManager && tagManagerCode}
-        </script>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
-        <NoscriptTag />
-    </Helmet>
-);
-
 const NoscriptTag = () => {
     if (enableTagManager) {
         return (
-            // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
             <noscript>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <iframe
                     src="https://www.googletagmanager.com/ns.html?id=GTM-W4GHHL2"
                     height="0"
@@ -44,5 +29,14 @@ const NoscriptTag = () => {
     }
     return null;
 };
+
+const HeadScripts = () => (
+    <Helmet>
+        <script type="text/javascript">
+            {enableTagManager && tagManagerCode}
+        </script>
+        <NoscriptTag />
+    </Helmet>
+);
 
 export default HeadScripts;
