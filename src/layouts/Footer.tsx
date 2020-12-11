@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled, { createGlobalStyle } from 'styled-components';
 // @ts-expect-error ts-migrate(6142) FIXME: Module '../components/Button' was resolved to '/ho... Remove this comment to see the full error message
 import Button from '../components/Button';
