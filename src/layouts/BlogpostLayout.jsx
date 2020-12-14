@@ -23,41 +23,44 @@ import {
     CallToActionText,
 } from './BlogpostLayout.components';
 
-const BlogSingle = ({ content }) => (
-    <Layout padded pageSettings={content.pageSettings}>
-        <Article>
-            <ArticleHeader>
-                <SubtitleContainer>
-                    <Subtitle>{content.category_name}</Subtitle>
-                    <ReadingTime>
-                        &nbsp;&nbsp;&#47;&#47; {content.reading_time} min. read
-                    </ReadingTime>
-                </SubtitleContainer>
-                <Title>{content.title}</Title>
-                <ArticleImageWrapper>
-                    <ArticleImage
-                        src={require(`../images/img/articles/${content.article_image_url}`)}
-                    />
-                </ArticleImageWrapper>
-                <MetaData>
-                    <Author
-                        name={content.author_name}
-                        title={content.author_role}
-                        img={content.author_image_url}
-                    />
-                    <PublishedOnContainer>
-                        <Small>Gepubliceerd op {content.posted_on}</Small>
-                    </PublishedOnContainer>
-                </MetaData>
-            </ArticleHeader>
-            <BlogContent>
-                <ArticleIntro>{content.article_intro}</ArticleIntro>
-                <MDXRenderer>{content.post_content}</MDXRenderer>
-                <CallToAction />
-            </BlogContent>
-        </Article>
-    </Layout>
-);
+const BlogSingle = ({ content }) => {
+    return (
+        <Layout newsLetter={0.5} padded pageSettings={content.pageSettings}>
+            <Article>
+                <ArticleHeader>
+                    <SubtitleContainer>
+                        <Subtitle>{content.category_name}</Subtitle>
+                        <ReadingTime>
+                            &nbsp;&nbsp;&#47;&#47; {content.reading_time} min.
+                            read
+                        </ReadingTime>
+                    </SubtitleContainer>
+                    <Title>{content.title}</Title>
+                    <ArticleImageWrapper>
+                        <ArticleImage
+                            src={require(`../images/img/articles/${content.article_image_url}`)}
+                        />
+                    </ArticleImageWrapper>
+                    <MetaData>
+                        <Author
+                            name={content.author_name}
+                            title={content.author_role}
+                            img={content.author_image_url}
+                        />
+                        <PublishedOnContainer>
+                            <Small>Gepubliceerd op {content.posted_on}</Small>
+                        </PublishedOnContainer>
+                    </MetaData>
+                </ArticleHeader>
+                <BlogContent>
+                    <ArticleIntro>{content.article_intro}</ArticleIntro>
+                    <MDXRenderer>{content.post_content}</MDXRenderer>
+                    <CallToAction />
+                </BlogContent>
+            </Article>
+        </Layout>
+    );
+};
 
 export default BlogSingle;
 
