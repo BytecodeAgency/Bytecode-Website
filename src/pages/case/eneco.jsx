@@ -93,7 +93,7 @@ const Case = () => (
                 <h2>Eneco</h2>
                 <p className="big">
                     Eneco is een energiebedrijf met een grote focus op
-                    duurzaamheid en maatschappelijke betrokkenheid. Met
+                    duurzaamheid en maatschappelijke betrokkenheid. Met&nbsp;
                     <a href={omschakelaar}>De Omschakelaar</a> beantwoordt Eneco
                     vragen over bijvoorbeeld energietransitie en het loslaten
                     van gas als energiebron.
