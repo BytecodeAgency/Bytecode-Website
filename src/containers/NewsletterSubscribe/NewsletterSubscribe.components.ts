@@ -46,6 +46,9 @@ export const SubscribeButton = styled.button`
     border: none;
     text-align: center;
     font-size: 1.35rem;
+    :disabled {
+        background: #888;
+    }
 `;
 
 export const CloseButton = styled.button`
