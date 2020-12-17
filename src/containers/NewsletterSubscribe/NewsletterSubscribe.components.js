@@ -11,6 +11,22 @@ export const NewsletterSubscribeContainer = styled.div`
     }
 `;
 
+export const NewsLetterSubscribePopupContainer = styled.div`
+    margin-top: 2vh;
+    background: #1c1e1f;
+    padding: 10vw;
+    max-width: 800px;
+    @media (min-width: ${theme.breakpoint.md}) {
+        padding: 3vw;
+    }
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+    border-radius: 10px;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 101010;
+`;
+
 export const NewsletterSubscribeForm = styled.form`
     @media (min-width: ${theme.breakpoint.md}) {
         display: flex;
@@ -30,4 +46,24 @@ export const SubscribeButton = styled.button`
     border: none;
     text-align: center;
     font-size: 1.35rem;
+    :disabled {
+        background: #888;
+    }
+`;
+
+export const CloseButton = styled.button`
+    background: ${theme.colors.primary};
+    color: ${theme.colors.white};
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+    font-weight: bold;
+    font-size: large;
 `;
