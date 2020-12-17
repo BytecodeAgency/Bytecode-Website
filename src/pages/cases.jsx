@@ -12,6 +12,7 @@ const pageSettings = {
     keywords: 'cases',
 };
 
+const eneco = require('../images/img/cases/eneco/header.png');
 const styr = require('../images/img/cases/styr/allocator.png');
 const breda = require('../images/img/cases/breda-actief/featured.svg');
 const mooiwerk = require('../images/img/cases/mooiwerk/home.png');
@@ -27,6 +28,12 @@ const Cases = () => (
             <TextBlock title="Onze recente projecten" subtitle="Cases" />
             <Gallery sm={33}>
                 <PostThumbnail
+                    slug="/case/eneco"
+                    title="Omschakelen met Eneco"
+                    postImageUrl={eneco}
+                    category="Eneco"
+                />
+                <PostThumbnail
                     slug="/case/youngpwr"
                     title="Platform voor jonge ondernemers"
                     postImageUrl={youngpwr}
@@ -38,14 +45,14 @@ const Cases = () => (
                     postImageUrl={fantescy}
                     category="Fantescy"
                 />
+            </Gallery>
+            <Gallery sm={33}>
                 <PostThumbnail
                     title="Veilig ouder worden door valpreventie"
                     category="Reinier de Graaf ziekenhuis"
                     slug="/case/dawny"
                     postImageUrl={dawny}
                 />
-            </Gallery>
-            <Gallery sm={33}>
                 <PostThumbnail
                     title="Webshop met designer backpacks"
                     category="côte&ciel"
@@ -58,14 +65,14 @@ const Cases = () => (
                     slug="/case/breda-actief"
                     postImageUrl={breda}
                 />
+            </Gallery>
+            <Gallery sm={33}>
                 <PostThumbnail
                     title="Brengt Breda dichter bij elkaar"
                     category="Mooiwerk Breda"
                     slug="/case/mooiwerk"
                     postImageUrl={mooiwerk}
                 />
-            </Gallery>
-            <Gallery sm={33}>
                 <PostThumbnail
                     title="Een digitale omgeving voor zonnepanelen op huurdaken"
                     category="Sungevity"
