@@ -54,9 +54,7 @@ const Gallery =
     @media (${mediaQueryMin.xxl}) {
         & > * {
             width: ${(props) => `${props.lg}%` || 'inherit'};
-            flex-basis: width: ${(props) =>
-                `${props.lg}%` ||
-                'inherit'}; // TODO: remove the word width (why is it even there)
+            flex-basis: ${(props) => `${props.lg}%` || 'inherit'};
             padding: 0.5em;
             &:first-child {
                 padding-right: 3em;

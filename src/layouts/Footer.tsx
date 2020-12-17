@@ -111,8 +111,7 @@ const Copyright = styled(FooterContainer)`
     justify-content: center;
     flex-direction: column !important;
     text-align: center;
-    padding: 0;
-    margin: 0;
+
     * {
     }
     hr {

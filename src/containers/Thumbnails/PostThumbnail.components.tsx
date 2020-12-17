@@ -21,7 +21,7 @@ export const Subtitle = styled(SubtitleBase)`
 `;
 
 export const ThumbnailBase = styled(Link)`
-    padding-bottom: 2em;
+    padding-bottom: 2em !important;
     cursor: pointer;
     transition: all 0.4s ease;
     min-width: 10em;

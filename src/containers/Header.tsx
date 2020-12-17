@@ -25,7 +25,7 @@ const HeaderBase =
     @media (${mediaQueryMin.sm}) {
         padding: 3em ${containerWidth.sm};
         background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent 50%),
-            url(${(props) => props.backgroundImage});
+        url(${(props) => props.backgroundImage});
     }
     @media (${mediaQueryMin.md}) {
         padding: 2em ${containerWidth.md};

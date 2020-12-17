@@ -82,7 +82,7 @@ const Layout: React.FC<LayoutProps> = ({
             <HeadScripts />
             <GlobalStyles />
             <SEO title={title} description={description} keywords={keywords} />
-            <Navbar />
+            <Navbar background />
             <Main padded={padded} className="main">
                 <TypographyClassStyling />
                 {children}
