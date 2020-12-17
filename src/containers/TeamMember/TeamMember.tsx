@@ -16,7 +16,7 @@ const getAltText = (name, alt) => {
     return `Een foto van ${name}`;
 };
 
-type TeamMemberProps = {
+interface TeamMemberProps {
     name: string;
     title: string;
     img: string;
@@ -27,24 +27,21 @@ type TeamMemberProps = {
     instagram?: string;
     facebook?: string;
     twitter?: string;
-};
+}
 
 // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'props'.
-const TeamMember =props: TeamMemberProps => {
-    const {
-        name,
-        title,
-        img,
-        alt,
-        link,
-        email,
-        github,
-        instagram,
-        facebook,
-        twitter,
-    // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'props'.
-    } = props;
-
+const TeamMember: React.FC<TeamMemberProps> = ({
+    name,
+    title,
+    img,
+    alt,
+    link = undefined,
+    email = undefined,
+    github = undefined,
+    instagram = undefined,
+    facebook = undefined,
+    twitter = undefined,
+}) => {
     return (
         <TeamMemberContainer>
             <TeamMemberWrapper>
@@ -67,12 +64,3 @@ const TeamMember =props: TeamMemberProps => {
 };
 
 export default TeamMember;
-
-TeamMember.defaultProps = {
-    link: undefined,
-    email: undefined,
-    github: undefined,
-    instagram: undefined,
-    facebook: undefined,
-    twitter: undefined,
-};

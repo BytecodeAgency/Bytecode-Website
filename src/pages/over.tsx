@@ -15,7 +15,7 @@ import Container from '../containers/Container';
 import ContactForm from '../containers/ContactForm/ContactForm';
 
 // eslint-disable-next-line import/extensions
-import theme from '../styles/theme.js';
+import theme from '../styles/theme';
 
 // @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin } = theme;

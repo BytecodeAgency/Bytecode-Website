@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import theme from '../styles/theme';
 
-type OwnProps = {
-    href: string,
-    useGatsbyLink?: boolean,
-    className?: string,
-    children: React.ReactNode,
-};
-
-type Props = OwnProps & typeof ButtonBase.defaultProps;
+// eslint-disable-next-line no-unused-vars
+interface OwnProps {
+    href: string;
+    useGatsbyLink?: boolean;
+    className?: string;
+    children: React.ReactNode;
+}
 
 // TODO: find a way to use both ...props and typescript
 const ButtonBase: React.FC<any> = ({
@@ -19,7 +18,7 @@ const ButtonBase: React.FC<any> = ({
     className = '',
     children,
     ...props
-}: Props) => {
+}) => {
     if (useGatsbyLink) {
         return (
             <Link to={href} className={`button ${className}`} {...props}>
@@ -32,11 +31,6 @@ const ButtonBase: React.FC<any> = ({
             {children}
         </a>
     );
-};
-
-ButtonBase.defaultProps = {
-    useGatsbyLink: false,
-    className: '',
 };
 
 const Button = styled(ButtonBase)`

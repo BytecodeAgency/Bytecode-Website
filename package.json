@@ -30,7 +30,7 @@
     "axios": "^0.21.0",
     "babel-preset-gatsby": "^0.8.0",
     "change-case": "^4.1.2",
-    "gatsby": "^2.18.21",
+    "gatsby": "^2.29.1",
     "gatsby-image": "^2.2.18",
     "gatsby-mdx": "^0.6.3",
     "gatsby-plugin-babel": "^1.0.0",

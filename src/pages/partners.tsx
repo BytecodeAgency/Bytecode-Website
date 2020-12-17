@@ -13,7 +13,7 @@ import ContactForm from '../containers/ContactForm/ContactForm';
 import {
     TextAndImage,
     ProfilePicture,
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/ContentBlocks/ContentBlocks'... Remove this comment to see the full error message
+    // @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/ContentBlocks/ContentBlocks'... Remove this comment to see the full error message
 } from '../containers/ContentBlocks/ContentBlocks';
 // @ts-expect-error ts-migrate(6142) FIXME: Module '../components/Typography' was resolved to ... Remove this comment to see the full error message
 import { Big, Quote } from '../components/Typography';
@@ -71,14 +71,14 @@ const SmallList = styled.ul`
     }
 `;
 
-type CheckListItemProps = {
+interface CheckListItemProps {
     children: React.ReactNode;
-};
+}
 
 // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'props'.
-const CheckListItem =props: CheckListItemProps => {
+const CheckListItem: React.FC<CheckListItemProps> = ({ children }) => {
     // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'props'.
-    const { children } = props;
+
     return (
         <CheckListItemBase>
             <img src={require('../images/icons/ui/check.svg')} alt="- " />

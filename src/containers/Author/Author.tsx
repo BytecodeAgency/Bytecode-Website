@@ -8,16 +8,13 @@ import {
     Position,
 } from './Author.components';
 
-type Props = {
+interface Props {
     img: string;
     name: string;
     title?: string;
-};
+}
 
-// @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'props'. Did you mean 'Props'?
-const Author =props: Props => {
-    // @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'props'. Did you mean 'Props'?
-    const { img, name, title } = props;
+const Author: React.FC<Props> = ({ img, name, title = '' }) => {
     const image = require(`../../images/img/authors/${img}`);
     return (
         <AuthorBlock>
@@ -33,7 +30,3 @@ const Author =props: Props => {
 };
 
 export default Author;
-
-Author.defaultProps = {
-    title: '',
-};

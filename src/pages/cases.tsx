@@ -3,7 +3,6 @@ import Layout from '../layouts/MainLayout';
 import Container from '../containers/Container';
 import Gallery from '../containers/Gallery';
 import TextBlock from '../containers/TextBlock/TextBlock';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Thumbnails/PostThumbnail' wa... Remove this comment to see the full error message
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 
 const pageSettings = {
@@ -23,29 +22,22 @@ const youngpwr = require('../images/img/cases/youngpwr/case-youngpwr-teamfoto.pn
 const fantescy = require('../images/img/cases/fantescy/thumbnail.png');
 
 const Cases = () => (
-    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Layout padded pageSettings={pageSettings}>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Container>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <TextBlock title="Onze recente projecten" subtitle="Cases" />
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Gallery sm={33}>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <PostThumbnail
                     slug="/case/youngpwr"
                     title="Platform voor jonge ondernemers"
                     postImageUrl={youngpwr}
                     category="Youngpwr"
                 />
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <PostThumbnail
                     slug="/case/fantescy"
                     title="Interactieve app voor Songfestival fans"
                     postImageUrl={fantescy}
                     category="Fantescy"
                 />
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <PostThumbnail
                     title="Veilig ouder worden door valpreventie"
                     category="Reinier de Graaf ziekenhuis"
@@ -53,23 +45,19 @@ const Cases = () => (
                     postImageUrl={dawny}
                 />
             </Gallery>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Gallery sm={33}>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <PostThumbnail
                     title="Webshop met designer backpacks"
                     category="côte&ciel"
                     slug="/case/cote-et-ciel"
                     postImageUrl={coteetciel}
                 />
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <PostThumbnail
                     title="Brengt Breda in beweging!"
                     category="Breda Actief"
                     slug="/case/breda-actief"
                     postImageUrl={breda}
                 />
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <PostThumbnail
                     title="Brengt Breda dichter bij elkaar"
                     category="Mooiwerk Breda"
@@ -77,16 +65,13 @@ const Cases = () => (
                     postImageUrl={mooiwerk}
                 />
             </Gallery>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Gallery sm={33}>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <PostThumbnail
                     title="Een digitale omgeving voor zonnepanelen op huurdaken"
                     category="Sungevity"
                     slug="/case/sungevity"
                     postImageUrl={sungevity}
                 />
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <PostThumbnail
                     title="Modern functiewaarderingsplatform"
                     category="STYR"
