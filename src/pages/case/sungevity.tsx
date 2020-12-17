@@ -1,14 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../../layouts/CaseLayout' was resolved to ... Remove this comment to see the full error message
 import Layout from '../../layouts/CaseLayout';
 import {
     TextAndImage,
     Introduction,
     Section,
-    // @ts-expect-error ts-migrate(6142) FIXME: Module '../../containers/ContentBlocks/ContentBloc... Remove this comment to see the full error message
 } from '../../containers/ContentBlocks/ContentBlocks';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../../containers/Deliverables' was resolve... Remove this comment to see the full error message
 import Deliverables from '../../containers/Deliverables';
 
 const logo = require('../../images/img/cases/sungevity/logo.svg');
@@ -33,13 +30,9 @@ const pageSettings = {
 };
 
 const Case = () => (
-    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Layout pageSettings={pageSettings}>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <TextAndImage padded img={woco} alt="Woningcorporatie offerteplatform">
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <h2>Woningcorporatie offerteplatform</h2>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <p className="introduction">
                 Het Sungevity woningcorporatie platform is een plek waar
                 huurders zich kunnen inschrijven voor het Sungevity
@@ -49,8 +42,6 @@ const Case = () => (
                 Daarnaast zijn veel nieuwe features toegevoegd.
             </p>
         </TextAndImage>
-
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Deliverables
             deliverables={[
                 'Webapp',
@@ -58,17 +49,10 @@ const Case = () => (
                 'Beheeromgeving',
                 'Doorontwikkeling',
             ]}
-            alt="offerte acceptatie pagina"
-            clientLogo={logo}
-            img={houses}
         />
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Section>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Introduction>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>De uitdaging</h2>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="introduction">
                     Door een gedeelte van de tool te herschrijven en een stabile
                     digitale omgeving te creëren, door het gebruik van
@@ -77,15 +61,10 @@ const Case = () => (
                     features aan worden toegevoegd.
                 </p>
             </Introduction>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Section>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TextAndImage img={servers} reverse alt="Uptime prestaties">
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <p className="subtitle">prestaties</p>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <h3>Cloudservers</h3>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <p>
                         Het opzetten van cloudservers zorgde voor betere
                         prestaties en het sneller kunnen toevoegen van nieuwe
@@ -93,31 +72,25 @@ const Case = () => (
                     </p>
                 </TextAndImage>
             </Section>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Section>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TextAndImage img={houses} alt="Huurders">
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <p className="subtitle">prestaties</p>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
                     <h3>Aanpasbaarheid</h3>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
                     <p>
                         Door de verbeterde toegankelijkheid van het platform
                         voor werknemers kunnen zij gemakkelijk en vaker nieuwe
                         huuradressen toevoegen.
                     </p>
                 </TextAndImage>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TextAndImage
                     padded
                     img={uptime}
                     reverse
                     alt="Uptime prestaties"
                 >
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <h3>99.9%+ uptime</h3>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <p>
                         Om het platform te optimaliseren voor meerdere
                         woningcorporaties hebben we in de Python Flask
@@ -130,13 +103,9 @@ const Case = () => (
                     </p>
                 </TextAndImage>
             </Section>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <TextAndImage img={offerte} alt="offerte pagina">
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="subtitle">Resultaten</p>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Realiseren</h2>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="introduction">
                     Inmiddels zijn er al acht woningcorporaties opgezet. Mocht
                     een van de websites downtime ondervinden, dan krijgen onze
