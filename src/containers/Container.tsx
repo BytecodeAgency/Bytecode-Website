@@ -1,15 +1,20 @@
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
 import theme from '../styles/theme';
 
-// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin, containerWidth } = theme;
 
-const Container = styled.section`
+interface ContainerProps {
+    align?: string;
+}
+const Container =
+    styled.section <
+    ContainerProps >
+    `
     padding: 1em ${containerWidth.xs};
     display: flex;
     flex-direction: column;
-    align-items: ${(props: any) => props.align || 'inherit'};
+    align-items: ${(props) =>
+        props.align || 'inherit'}; // TODO: check if the prop is still needed
     @media (${mediaQueryMin.sm}) {
         padding: 0 ${containerWidth.sm};
     }

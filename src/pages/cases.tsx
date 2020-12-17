@@ -1,11 +1,7 @@
 import React from 'react';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../layouts/MainLayout' was resolved to '/h... Remove this comment to see the full error message
 import Layout from '../layouts/MainLayout';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Container' was resolved to '... Remove this comment to see the full error message
 import Container from '../containers/Container';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Gallery' was resolved to '/h... Remove this comment to see the full error message
 import Gallery from '../containers/Gallery';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/TextBlock/TextBlock' was res... Remove this comment to see the full error message
 import TextBlock from '../containers/TextBlock/TextBlock';
 // @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Thumbnails/PostThumbnail' wa... Remove this comment to see the full error message
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
