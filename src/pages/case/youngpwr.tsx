@@ -1,20 +1,14 @@
 import React from 'react';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../../layouts/CaseLayout' was resolved to ... Remove this comment to see the full error message
 import Layout from '../../layouts/CaseLayout';
 import {
     TextAndImage,
     Introduction,
     Section,
     ResultsAndNumbers,
-    // @ts-expect-error ts-migrate(6142) FIXME: Module '../../containers/ContentBlocks/ContentBloc... Remove this comment to see the full error message
 } from '../../containers/ContentBlocks/ContentBlocks';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../../containers/Deliverables' was resolve... Remove this comment to see the full error message
 import Deliverables from '../../containers/Deliverables';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../../containers/Credits/Credits' was reso... Remove this comment to see the full error message
 import Credits from '../../containers/Credits/Credits';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../../containers/Gallery' was resolved to ... Remove this comment to see the full error message
 import Gallery from '../../containers/Gallery';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../../containers/Thumbnails/PostThumbnail'... Remove this comment to see the full error message
 import PostThumbnail from '../../containers/Thumbnails/PostThumbnail';
 
 // section for image imports in the form of const img = require(url);
@@ -66,15 +60,10 @@ const creditColumnTwo = [
 ];
 
 const Case = () => (
-    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Layout pageSettings={pageSettings}>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <TextAndImage padded img={match} alt="Match tussen CEO en youngpwr">
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <h3>Van leren naar matchen</h3>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <p className="Paragraph Big (introduction)">
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 Als partner van <a href="https://youngpwr.nl/">Youngpwr</a>{' '}
                 ontwikkelen we een platform waar jongeren terecht kunnen voor
                 informatie over ondernemen en werken. Dit platform is bedoeld om
@@ -86,7 +75,6 @@ const Case = () => (
                 opdoen en een account aanmaken.
             </p>
         </TextAndImage>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Deliverables
             deliverables={[
                 'Strategie',
@@ -96,14 +84,9 @@ const Case = () => (
                 'Doorgroeiplan',
             ]}
         />
-
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Section>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <Introduction>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h3>Ondersteuning bij werk en ondernemen</h3>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="Paragraph Big (introduction)">
                     Een plek waar jongeren hun ondernemende kant kunnen
                     ontwikkelen en opdrachten kunnen vinden: dat is het doel van
@@ -116,17 +99,13 @@ const Case = () => (
                     platform en een database.
                 </p>
             </Introduction>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <TextAndImage
                 img={research}
                 alt="Onderzoek over waar mensen klikken op de website"
                 padded
             >
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="subtitle">Research</p>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h2>Een platform dat aansluit</h2>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="big">
                     Tijdens de ontwikkeling en livegang is het contentplatform
                     getest met gebruikers, onder andere via een pilot. Met
@@ -137,20 +116,15 @@ const Case = () => (
                 </p>
             </TextAndImage>
         </Section>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Section>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <TextAndImage
                 img={fundering}
                 alt="Fundering voor het opzetten van een platform"
                 reverse
                 padded
             >
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="subtitle">Research</p>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h3>Efficiëntie voorop</h3>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="big">
                     Omdat het matchingplatform niet direct gebouwd kon worden,
                     is het belangrijk om wel tractie te genereren, terwijl we
@@ -160,17 +134,13 @@ const Case = () => (
                     worden.
                 </p>
             </TextAndImage>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <TextAndImage
                 img={pipeline}
                 alt="Automatisering van pipeline"
                 padded
             >
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="subtitle">Development</p>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h3>Een duurzame oplossing</h3>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="big">
                     Tijdens de ontwikkeling hebben we gezorgd dat de codebase
                     ook gebruikt kan worden voor de doorontwikkeling naar het
@@ -180,26 +150,20 @@ const Case = () => (
                 </p>
             </TextAndImage>
         </Section>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Section>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <TextAndImage
                 img={integration}
                 alt="Continu ontwikkeling"
                 padded
                 reverse
             >
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="subtitle">Development</p>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <h3>De technische kant</h3>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <p className="big">
                     We hebben de achterkant van het matchingplatform al volledig
                     opgezet en solide gemaakt, zodat we bij de volgende
                     ontwikkelingsronde direct kunnen beginnen met ontwikkeling,
                     in plaats van met de fundering. We maken gebruik van
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     microservices die <strong>test-driven</strong> zijn
                     ontwikkeld. Dit betekent dat de achterkant van het platform
                     opgedeeld is in kleinere onderdelen die individueel
@@ -207,7 +171,6 @@ const Case = () => (
                     de doorontwikkeling.
                 </p>
             </TextAndImage>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <ResultsAndNumbers
                 subtitles={[
                     'Platform laadtijd in seconden',
@@ -219,7 +182,6 @@ const Case = () => (
                 title="Cijfers tot nu toe"
             />
         </Section>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Credits
             columnOne={creditColumnOne}
             columnTwo={creditColumnTwo}
@@ -227,23 +189,19 @@ const Case = () => (
             resources={['Youngpwr Website']}
             resourceLinks={['https://youngpwr.nl/']}
         />
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <Gallery padded sm={33}>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <PostThumbnail
                 title="Valpreventie voor ouderen"
                 category="Reinier de Graaf ziekenhuis"
                 slug="/case/dawny"
                 postImageUrl={dawny}
             />
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <PostThumbnail
                 title="Hoge kwaliteit rugtassen"
                 category="côte&ciel"
                 slug="/case/cote-et-ciel"
                 postImageUrl={coteetciel}
             />
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <PostThumbnail
                 title="Een digitale omgeving voor zonnepanelen op huurdaken"
                 category="Sungevity"
