@@ -45,31 +45,31 @@ const BlogSingle: React.FC<BlogpostSingleProps> = ({ content }) => (
         <Article>
             <ArticleHeader>
                 <SubtitleContainer>
-                    <Subtitle>{content.categoryName}</Subtitle>
+                    <Subtitle>{content.category_name}</Subtitle>
                     <ReadingTime>
-                        &nbsp;&nbsp;&#47;&#47; {content.readingTime} min. read
+                        &nbsp;&nbsp;&#47;&#47; {content.reading_time} min. read
                     </ReadingTime>
                 </SubtitleContainer>
                 <Title>{content.title}</Title>
                 <ArticleImageWrapper>
                     <ArticleImage
-                        src={require(`../images/img/articles/${content.articleImageUrl}`)}
+                        src={require(`../images/img/articles/${content.article_image_url}`)}
                     />
                 </ArticleImageWrapper>
                 <MetaData>
                     <Author
-                        name={content.authorName}
-                        title={content.authorRole}
-                        img={content.authorImageUrl}
+                        name={content.author_name}
+                        title={content.author_role}
+                        img={content.author_image_url}
                     />
                     <PublishedOnContainer>
-                        <Small>Gepubliceerd op {content.postedOn}</Small>
+                        <Small>Gepubliceerd op {content.posted_on}</Small>
                     </PublishedOnContainer>
                 </MetaData>
             </ArticleHeader>
             <BlogContent>
-                <ArticleIntro>{content.articleIntro}</ArticleIntro>
-                <MDXRenderer>{content.postContent}</MDXRenderer>
+                <ArticleIntro>{content.article_intro}</ArticleIntro>
+                <MDXRenderer>{content.post_content}</MDXRenderer>
                 <CallToAction />
             </BlogContent>
         </Article>
