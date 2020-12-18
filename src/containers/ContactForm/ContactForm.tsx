@@ -1,12 +1,11 @@
 /* eslint-disable react/destructuring-assignment */
 // Ignore all ESLint issues as we have a TODO to rewrite this file
 /* eslint-disable react/prop-types, no-unused-vars, @typescript-eslint/no-unused-vars, react/no-unescaped-entities */
-
+// TODO: rewrite all components to have proper typing
+// TODO: Change class to be const Component = props => <JSX />
 import React from 'react';
 import axios from 'axios';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../TextBlock/TextBlock' was resolved to '/... Remove this comment to see the full error message
 import TextBlock from '../TextBlock/TextBlock';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../../components/InputField' was resolved ... Remove this comment to see the full error message
 import InputField from '../../components/InputField';
 import {
     ContactFormContainer,

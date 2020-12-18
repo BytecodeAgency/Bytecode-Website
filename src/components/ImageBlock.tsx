@@ -1,9 +1,7 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import theme from '../styles/theme';
 
-// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin, colors } = theme;
 
 const ImageBlockFigure = styled.figure`
@@ -40,15 +38,12 @@ const ImageBlockFigure = styled.figure`
     }
 `;
 
-type Props = {
+interface Props {
     src: string;
     alt: string;
-};
+}
 
-// @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'props'. Did you mean 'Props'?
-const ImageBlock =props: Props => {
-    // @ts-expect-error ts-migrate(2552) FIXME: Cannot find name 'props'. Did you mean 'Props'?
-    const { src, alt } = props;
+const ImageBlock: React.FC<Props> = ({ src, alt }) => {
     return (
         <section>
             <ImageBlockFigure>

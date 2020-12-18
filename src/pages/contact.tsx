@@ -1,14 +1,9 @@
 import React from 'react';
-
 import styled from 'styled-components';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../layouts/MainLayout' was resolved to '/h... Remove this comment to see the full error message
 import Layout from '../layouts/MainLayout';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/ContactForm/ContactForm' was... Remove this comment to see the full error message
 import ContactForm from '../containers/ContactForm/ContactForm';
 import { Container, Row, Col } from '../lib/Grid';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../components/Button' was resolved to '/ho... Remove this comment to see the full error message
 import Button from '../components/Button';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Header' was resolved to '/ho... Remove this comment to see the full error message
 import Header from '../containers/Header';
 
 const pageSettings = {
@@ -33,8 +28,6 @@ const Contact = () => (
             De koffie, thee en koekjes staan al klaar.
             Bij wijze van spreken, natuurlijk. Koffie en thee moeten warm zijn.
             Dat weten wij ook wel."
-            bgSize="cover"
-            shadow
         />
 
         <Container>

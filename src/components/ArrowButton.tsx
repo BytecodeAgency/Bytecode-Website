@@ -1,29 +1,25 @@
 /* eslint-disable react/jsx-props-no-spreading */
-
 import React from 'react';
-
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import theme from '../styles/theme';
 
-type OwnProps = {
-    href: string,
-    useGatsbyLink?: boolean,
-    className?: string,
-    children: React.ReactNode,
-};
+// eslint-disable-next-line no-unused-vars
+interface OwnProps {
+    href: string;
+    useGatsbyLink?: boolean;
+    className?: string;
+    children: React.ReactNode;
+}
 
-// @ts-expect-error ts-migrate(2456) FIXME: Type alias 'Props' circularly references itself.
-type Props = OwnProps & typeof ButtonBase.defaultProps;
-
-// @ts-expect-error ts-migrate(7022) FIXME: 'ButtonBase' implicitly has type 'any' because it ... Remove this comment to see the full error message
-const ButtonBase = ({
+// TODO: find a way to use both ...props and typescript
+const ButtonBase: React.FC<any> = ({
     href,
-    useGatsbyLink,
-    className,
+    useGatsbyLink = false,
+    className = '',
     children,
     ...props
-}: Props) => {
+}) => {
     if (useGatsbyLink) {
         return (
             <Link to={href} className={`button ${className}`} {...props}>
@@ -36,11 +32,6 @@ const ButtonBase = ({
             {children}
         </a>
     );
-};
-
-ButtonBase.defaultProps = {
-    useGatsbyLink: false,
-    className: '',
 };
 
 const ArrowButton = styled(ButtonBase)`

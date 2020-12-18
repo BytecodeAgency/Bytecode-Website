@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import theme from '../../styles/theme';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../../components/Button' was resolved to '... Remove this comment to see the full error message
 import Button from '../../components/Button';
 
+const { colors, typography } = theme;
 export const ContactFormContainer = styled.div`
     padding: 1em 0;
 `;
@@ -15,12 +15,12 @@ export const SendButton = styled(Button)`
 
 export const ErrorMessage = styled.div`
     margin-left: 1.33em;
-    color: ${theme.colors.tertiary};
+    color: ${colors.tertiary};
 `;
 
 export const InputTextArea = styled.textarea`
     font-size: 1.35rem;
-    background: ${theme.colors.secondary};
+    background: ${colors.secondary};
     border-radius: 0.1em;
     outline: none;
     border: none;
@@ -32,14 +32,14 @@ export const InputTextArea = styled.textarea`
         cursor: pointer;
     }
     &:focus {
-        border-bottom: 2px solid ${theme.colors.primary};
+        border-bottom: 2px solid ${colors.primary};
     }
     &.error {
-        border-bottom: 2px solid ${theme.colors.tertiary};
+        border-bottom: 2px solid ${colors.tertiary};
     }
     &.text {
-        font-family: ${theme.typography.form.font};
-        color: ${theme.colors.white};
+        font-family: ${typography.form.font};
+        color: ${colors.white};
     }
 `;
 
@@ -47,9 +47,9 @@ export const StyledNotification = styled.div`
     color: white;
     padding: 3rem;
     &.success {
-        background: ${theme.colors.primary};
+        background: ${colors.primary};
     }
     &.error {
-        background: ${theme.colors.tertiary};
+        background: ${colors.tertiary};
     }
 `;

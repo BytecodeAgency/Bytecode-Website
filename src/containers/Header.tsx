@@ -81,7 +81,7 @@ const Text = styled.p`
 interface HeaderProps {
     title: string;
     subtitle: string;
-    tagline: string;
+    tagline?: string;
     img: string;
     children?: React.ReactNode;
     text?: string;
