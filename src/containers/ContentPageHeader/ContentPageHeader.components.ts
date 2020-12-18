@@ -21,14 +21,14 @@ export const MainHeader =
             ${(props) =>
                 props.shadow &&
                 `
-,linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.8) 30%,
-    rgba(0, 0, 0, 0) 90%,
-    rgba(0, 0, 0, 0) 100%
-);
-`};
+                ,linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0.8) 30%,
+                    rgba(0, 0, 0, 0) 90%,
+                    rgba(0, 0, 0, 0) 100%
+                );
+            `};
     background-blend-mode: soft-light;
     display: flex;
     background-size: cover;
@@ -47,14 +47,14 @@ export const MainHeader =
             ${(props) =>
                 props.shadow &&
                 `
-,linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.6) 30%,
-    rgba(0, 0, 0, 0) 90%,
-    rgba(0, 0, 0, 0) 100%
-);
-`}
+                ,linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.7) 0%,
+                    rgba(0, 0, 0, 0.6) 30%,
+                    rgba(0, 0, 0, 0) 90%,
+                    rgba(0, 0, 0, 0) 100%
+                );
+            `}
         background-size: ${(props) => props.bgSize || 'cover'};
         background-repeat: no-repeat;
         background-position-x: ${(props) => props.bgX || '85%'};

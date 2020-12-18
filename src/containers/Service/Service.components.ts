@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 
-// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin } = theme;
 
 export const Icon = styled.img`
@@ -16,7 +15,13 @@ export const Icon = styled.img`
     }
 `;
 
-export const ServiceWrapper = styled.div`
+interface ServiceWrapperProps {
+    fullWidth?: boolean;
+}
+export const ServiceWrapper =
+    styled.div <
+    ServiceWrapperProps >
+    `
     min-height: 10em;
     display: flex;
     flex-direction: column;
@@ -27,7 +32,7 @@ export const ServiceWrapper = styled.div`
     }
     @media (${mediaQueryMin.md}) {
         padding: 0 6em 1em 0;
-        flex-basis: ${(props: any) => (props.fullWidth ? '100%' : '50%')};
+        flex-basis: ${(props) => (props.fullWidth ? '100%' : '50%')};
     }
 `;
 

@@ -1,25 +1,16 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import { Container, Row, Col } from '../lib/Grid';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../layouts/MainLayout' was resolved to '/h... Remove this comment to see the full error message
 import Layout from '../layouts/MainLayout';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/ContentPageHeader/ContentPag... Remove this comment to see the full error message
 import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../components/Wrapper' was resolved to '/h... Remove this comment to see the full error message
 import Wrapper from '../components/Wrapper';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/ContactForm/ContactForm' was... Remove this comment to see the full error message
 import ContactForm from '../containers/ContactForm/ContactForm';
 import {
     TextAndImage,
     ProfilePicture,
-    // @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/ContentBlocks/ContentBlocks'... Remove this comment to see the full error message
 } from '../containers/ContentBlocks/ContentBlocks';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../components/Typography' was resolved to ... Remove this comment to see the full error message
 import { Big, Quote } from '../components/Typography';
 import theme from '../styles/theme';
-
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Service/Service' was resolve... Remove this comment to see the full error message
 import Service from '../containers/Service/Service';
 
 const { colors } = theme;
@@ -75,10 +66,7 @@ interface CheckListItemProps {
     children: React.ReactNode;
 }
 
-// @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'props'.
 const CheckListItem: React.FC<CheckListItemProps> = ({ children }) => {
-    // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'props'.
-
     return (
         <CheckListItemBase>
             <img src={require('../images/icons/ui/check.svg')} alt="- " />
@@ -106,12 +94,10 @@ const Partners = () => (
                   Bytecode ondersteunt marketing- en communicatiebedrijven
                   volledig of gedeeltelijk met hun technische opdrachten."
         />
-
         <Container>
             <Row>
                 <Col style={{ margin: '1em' }} offset={{ lg: 1 }} lg={7}>
                     <h2>Waarom samenwerken?</h2>
-
                     <Big>
                         <p>
                             Wij komen als technisch partner in beeld wanneer er
@@ -124,13 +110,11 @@ const Partners = () => (
                 </Col>
             </Row>
         </Container>
-
         <TextAndImage
             img={require('../images/img/content/collaboration/worth.svg')}
             alt="worth"
         >
             <h2>Vergroot je waarde</h2>
-
             <p>
                 <Big>
                     Het aanbieden van technische diensten aan je klanten
@@ -139,14 +123,12 @@ const Partners = () => (
                 </Big>
             </p>
         </TextAndImage>
-
         <TextAndImage
             img={require('../images/img/content/collaboration/say.svg')}
             alt="1 contactpersoon"
             reverse
         >
             <h2>Eén contactpersoon</h2>
-
             <p>
                 <Big>
                     Met Bytecode als partner fungeren wij als de (enige) partij
@@ -155,14 +137,12 @@ const Partners = () => (
                 </Big>
             </p>
         </TextAndImage>
-
         <TextAndImage
             img={require('../images/img/content/collaboration/code.svg')}
             alt="1 contactpersoon"
             fluid
         >
             <h2>De nieuwste technieken</h2>
-
             <p>
                 <Big>
                     Bij het leveren van onze diensten zorgen wij dat we ons
@@ -172,7 +152,6 @@ const Partners = () => (
                     partner beheersen wij vrijwel alle veelgebruikte technieken.
                 </Big>
             </p>
-
             <SmallList>
                 <li>Front-end: HTML, CSS, Sass, Stylus, Typescript</li>
 
@@ -197,13 +176,11 @@ const Partners = () => (
                 </p>
             </SmallList>
         </TextAndImage>
-
         <Wrapper>
             <Container>
                 <Row>
                     <h2>Diensten</h2>
                 </Row>
-
                 <Row>
                     <Service iconName="website" title="Websites &amp; Webshops">
                         Een website is de plek waar je laat zien wie je bent,
@@ -212,7 +189,6 @@ const Partners = () => (
                         samen het beste voor jou, uiteenlopend van simplistische
                         websites tot ingewikkelde webapps.
                     </Service>
-
                     <Service iconName="mobile" title="Apps &amp; Webapps">
                         Droom je van een succesvolle webshop? Bytecode weet
                         precies welke factoren hiervoor belangrijk zijn. We
@@ -220,7 +196,6 @@ const Partners = () => (
                         marketing en SEO die bij een succesvolle webshop komen
                         kijken.
                     </Service>
-
                     <Service iconName="api" title="APIs &amp; automatisering">
                         Alles draait om de beleving van de bezoeker van jouw
                         platform. Deze beleving optimaliseren wij door middel
@@ -231,7 +206,6 @@ const Partners = () => (
                         in het oog springt en perfect past bij wat jij wil
                         uitstralen.
                     </Service>
-
                     <Service iconName="cloud" title="Cloud &amp; hosting">
                         Tegenwoordig zijn mobiele applicaties even belangrijk
                         als websites of webapps. Wij vinden het daarom van
@@ -241,7 +215,6 @@ const Partners = () => (
                         de website. Bytecode ontwikkelt zowel native applicaties
                         als progressive webapps.
                     </Service>
-
                     <Service iconName="ads" title="Support op afstand">
                         Naast &apos;full service&apos; zijn wij ook beschikbaar
                         voor de kleinere vragen of klusjes. Wanneer uw
@@ -250,7 +223,6 @@ const Partners = () => (
                         afstand advies en antwoorden te verschaffen over
                         technische vraagstukken.
                     </Service>
-
                     <Service iconName="design" title="Design &amp; Branding">
                         De identiteit van jouw bedrijf is van belang en een
                         bepalende factor voor je reputatie. Via onze ontwikkelde
@@ -261,11 +233,9 @@ const Partners = () => (
                 </Row>
             </Container>
         </Wrapper>
-
         <Container>
             <Row>
                 <h1>Werkwijze</h1>
-
                 <Big>
                     <p>
                         Voordat we als technisch partner aan de slag gaan,
@@ -283,37 +253,30 @@ const Partners = () => (
                 </Big>
             </Row>
         </Container>
-
         <PaddedContainer>
             <Row>
                 <Col lg={6}>
                     <h2>Garanties</h2>
-
                     <Checklist>
                         <CheckListItem>
                             Duidelijke en snelle communicatie
                         </CheckListItem>
-
                         <CheckListItem>
                             Ondersteuning bij digitale zelfontplooing
                         </CheckListItem>
-
                         <CheckListItem>
                             Kwalitatief hoogstaand en een optimaal functionerend
                             product
                         </CheckListItem>
-
                         <CheckListItem>
                             Transparantie en openheid, zonder uitzonderingen
                         </CheckListItem>
                     </Checklist>
                 </Col>
-
                 <Col lg={6}>
                     <ProfilePicture
                         img={require('../images/img/content/jan-willem.jpg')}
                     />
-
                     <Quote
                         author="- Jan-Willem (The Pumphouse)"
                         url="https://pumphouse.nl"
@@ -330,7 +293,6 @@ const Partners = () => (
                 </Col>
             </Row>
         </PaddedContainer>
-
         <Container>
             <ContactForm />
         </Container>

@@ -1,27 +1,28 @@
 import React from 'react';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../layouts/MainLayout' was resolved to '/h... Remove this comment to see the full error message
 import Layout from '../layouts/MainLayout';
 import { Container } from '../lib/Grid';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/ContactForm/ContactForm' was... Remove this comment to see the full error message
 import ContactForm from '../containers/ContactForm/ContactForm';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Service/ServiceHeader' was r... Remove this comment to see the full error message
 import ServiceHeader from '../containers/Service/ServiceHeader';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Service/ServiceItemSmall' wa... Remove this comment to see the full error message
 import ServiceItemSmall from '../containers/Service/ServiceItemSmall';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Service/ServiceItem' was res... Remove this comment to see the full error message
 import ServiceItem from '../containers/Service/ServiceItem';
 import {
     ServiceBackgroundContainer,
     ServiceBackgroundImage,
 } from '../containers/Service/Service.components';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/Service/ServiceCard' was res... Remove this comment to see the full error message
 import ServiceCard from '../containers/Service/ServiceCard';
 
+// TODO: remake this page using the Contentblocks available
 const pageSettings = {
     title: 'Services',
     description: `Benieuwd wat Bytecode voor jou kan betekenen? Met onze expertise in maatwerk helpen we je om alles uit je digitale zelf te kunnen halen. Ontdek onze services!`,
     keywords: 'diensten',
 };
+const dawny = require('../images/img/services/dawnyheader.png');
+const logo = require('../images/img/services/smallserviceitemlogo.svg');
+const website = require('../images/img/services/mooiwerksite.png');
+const abstractBackground = require('../images/img/services/abstractbackground.png');
+const webshop = require('../images/img/services/shopscreenshot.png');
+const abstractCardBackground = require('../images/img/services/abstractcardbackground.svg');
 
 const Services = () => (
     <Layout pageSettings={pageSettings}>
@@ -32,7 +33,7 @@ const Services = () => (
             belemmerende randzaken of fricties. Handmatig, tijdrovend werk is verleden tijd.
             Jij kan je volledig focussen op datgene waar jij passie voor hebt.
             Zo maken we jouw visie realiteit."
-            src={require('../images/img/services/dawnyheader.png')}
+            src={dawny}
         />
 
         <ServiceItemSmall
@@ -41,7 +42,7 @@ const Services = () => (
             Het is essentieel om bij het ontwikkelen van een project met echte validatie richting een passende oplossing te werken,
             zonder aannames. Met ons unieke research-based development bouwen we mobiele apps en andere platforms,
             UX/UI design, API development en nog veel meer."
-            src={require('../images/img/services/smallserviceitemlogo.svg')}
+            src={logo}
         />
 
         <ServiceItem
@@ -49,8 +50,7 @@ const Services = () => (
             subtitle="Digital Tools"
             text="Als je een doel hebt, maar dit niet zelf kunt bereiken, vereist dit een oplossing die jouw vermogens vergroot.
             Wij creëren overzicht en inzicht, brengen mensen samen en automatiseren handwerk."
-            src={require('../images/img/services/mooiwerksite.png')}
-            image
+            src={website}
             link="/services"
             light
             listItems={['Mobiele apps', 'Webapps', 'Websites', 'Webshops']}
@@ -72,9 +72,7 @@ const Services = () => (
         />
 
         <ServiceBackgroundContainer>
-            <ServiceBackgroundImage
-                src={require('../images/img/services/abstractbackground.png')}
-            />
+            <ServiceBackgroundImage src={abstractBackground} />
         </ServiceBackgroundContainer>
 
         <ServiceItem
@@ -82,8 +80,7 @@ const Services = () => (
             subtitle="Digital Expression"
             text="Digitale expressie is essentieel om jouw tool zichtbaar te maken voor potentiële gebruikers.
             Jouw tool wordt met ons advies representatief, toegankelijk en van hoge kwaliteit."
-            src={require('../images/img/services/shopscreenshot.png')}
-            image
+            src={webshop}
             link="/services"
             listItems={[
                 'UX/UI design',
@@ -99,7 +96,7 @@ const Services = () => (
             title="Start-Up Mentoring"
             text="Bytecode ondersteunt start-ups tijdens alle fases van hun groeiproces."
             link="/services"
-            src={require('../images/img/services/abstractcardbackground.svg')}
+            src={abstractCardBackground}
         />
 
         <Container>

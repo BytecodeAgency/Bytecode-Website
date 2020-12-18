@@ -28,10 +28,10 @@ const ContentPageHeader: React.FC<any> = ({
             <MainHeaderContent>
                 <TextBlock
                     useGatsbyLink={useGatsbyLink}
-                    subtitle={subtitle || ''}
-                    title={title || ''}
+                    subtitle={subtitle}
+                    title={title}
                     href={href}
-                    button={button || ''}
+                    button={button}
                 >
                     {text}
                 </TextBlock>

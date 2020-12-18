@@ -1,10 +1,7 @@
 import React from 'react';
-
 import styled from 'styled-components';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../layouts/MainLayout' was resolved to '/h... Remove this comment to see the full error message
 import Layout from '../layouts/MainLayout';
 import { Container, Row, Col } from '../lib/Grid';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../containers/NewsletterSubscribe/Newslett... Remove this comment to see the full error message
 import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSubscribe';
 
 const pageSettings = {
@@ -28,7 +25,6 @@ const Nieuwsbrief = () => (
                         alt="Team Bytecode"
                     />
                 </Col>
-
                 <Col md={6}>
                     <NewsletterSubscribe />
                 </Col>

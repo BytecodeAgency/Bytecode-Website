@@ -1,5 +1,7 @@
+import React from 'react';
+
 export interface QuoteProps {
     author: string;
     url: string;
-    children: string;
+    children: React.ReactNode;
 }

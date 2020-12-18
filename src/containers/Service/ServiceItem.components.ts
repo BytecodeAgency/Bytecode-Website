@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import theme from '../../styles/theme';
 import { Container, Col, Row } from '../../lib/Grid';
 
-// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const { mediaQueryMin } = theme;
 
 export const StyledImage = styled.img`
@@ -13,29 +12,43 @@ export const StyledImage = styled.img`
     background-color: ${theme.colors.secondary};
 `;
 
-export const StyledContainer = styled(Container)`
+interface StyledContainerProps {
+    light?: boolean;
+    src?: string;
+}
+export const StyledContainer =
+    styled(Container) <
+    StyledContainerProps >
+    `
     @media (${mediaQueryMin.sm}) {
-        margin: ${(props: any) =>
+        margin: ${(props) =>
             props.light || !props.src
                 ? '5em 0em 0em 3em'
                 : '0em 0 0em 0'} !important;
     }
 
     @media (${mediaQueryMin.md}) {
-        margin: ${(props: any) =>
+        margin: ${(props) =>
             props.light || !props.src
                 ? '2em 0em 3em 3em'
                 : '0em 0 0em 0'} !important;
     }
     @media (${mediaQueryMin.lg}) {
-        margin: ${(props: any) =>
+        margin: ${(props) =>
             props.light || !props.src
                 ? '5em 0em 5em 3em'
                 : '5em 0 5em 0'} !important;
     }
 `;
-export const StyledRow = styled(Row)`
-    background-color: ${(props: any) =>
+
+interface StyledRowProps {
+    light?: boolean;
+}
+export const StyledRow =
+    styled(Row) <
+    StyledRowProps >
+    `
+    background-color: ${(props) =>
         props.light ? theme.colors.secondary : theme.colors.background};
     flex-direction: column-reverse;
     @media (${mediaQueryMin.sm}) {

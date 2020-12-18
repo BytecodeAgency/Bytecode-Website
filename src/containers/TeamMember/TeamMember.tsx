@@ -1,5 +1,4 @@
 import React from 'react';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../../lib/Socials' was resolved to '/home/... Remove this comment to see the full error message
 import AllSocials from '../../lib/Socials';
 import {
     TeamMemberContainer,
@@ -8,8 +7,7 @@ import {
     TeamMemberWrapper,
 } from './TeamMember.components';
 
-// @ts-expect-error ts-migrate(7006) FIXME: Parameter 'name' implicitly has an 'any' type.
-const getAltText = (name, alt) => {
+const getAltText = (name: string, alt?: string) => {
     if (alt) {
         return alt;
     }
@@ -20,16 +18,16 @@ interface TeamMemberProps {
     name: string;
     title: string;
     img: string;
-    alt: string;
+    alt?: string;
     link?: string;
     email?: string;
     github?: string;
     instagram?: string;
     facebook?: string;
     twitter?: string;
+    linkedin?: string;
 }
 
-// @ts-expect-error ts-migrate(2304) FIXME: Cannot find name 'props'.
 const TeamMember: React.FC<TeamMemberProps> = ({
     name,
     title,
@@ -41,11 +39,12 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     instagram = undefined,
     facebook = undefined,
     twitter = undefined,
+    linkedin = undefined,
 }) => {
     return (
         <TeamMemberContainer>
             <TeamMemberWrapper>
-                <TeamMemberPhoto img={img}>
+                <TeamMemberPhoto>
                     <img src={img} alt={getAltText(name, alt)} />
                 </TeamMemberPhoto>
                 <TeamMemberName>{name}</TeamMemberName>
@@ -57,6 +56,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                     instagram={instagram}
                     facebook={facebook}
                     twitter={twitter}
+                    linkedin={linkedin}
                 />
             </TeamMemberWrapper>
         </TeamMemberContainer>
