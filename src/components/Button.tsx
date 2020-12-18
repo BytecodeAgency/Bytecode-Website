@@ -2,32 +2,42 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import theme from '../styles/theme';
-
-// eslint-disable-next-line no-unused-vars
-interface OwnProps {
-    href: string;
-    useGatsbyLink?: boolean;
-    className?: string;
-    children: React.ReactNode;
-}
+import { ButtonProps } from './Button.types';
 
 // TODO: find a way to use both ...props and typescript
-const ButtonBase: React.FC<any> = ({
+const ButtonBase: React.FC<ButtonProps> = ({
     href,
     useGatsbyLink = false,
     className = '',
+    rel,
+    type,
+    target,
+    onClick,
     children,
-    ...props
 }) => {
     if (useGatsbyLink) {
         return (
-            <Link to={href} className={`button ${className}`} {...props}>
+            <Link
+                to={href}
+                className={`button ${className}`}
+                rel={rel}
+                type={type}
+                target={target}
+                onClick={onClick}
+            >
                 {children}
             </Link>
         );
     }
     return (
-        <a href={href} className={`button ${className}`} {...props}>
+        <a
+            href={href}
+            className={`button ${className}`}
+            rel={rel}
+            type={type}
+            target={target}
+            onClick={onClick}
+        >
             {children}
         </a>
     );
