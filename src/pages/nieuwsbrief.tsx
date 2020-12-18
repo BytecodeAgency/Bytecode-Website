@@ -15,7 +15,7 @@ const NieuwsbriefContainer = styled(Container)`
     padding-top: 120px;
 `;
 
-const Nieuwsbrief = () => (
+const Nieuwsbrief: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <NieuwsbriefContainer>
             <Row>

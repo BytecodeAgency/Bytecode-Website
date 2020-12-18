@@ -33,13 +33,13 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     title,
     img,
     alt,
-    link = undefined,
-    email = undefined,
-    github = undefined,
-    instagram = undefined,
-    facebook = undefined,
-    twitter = undefined,
-    linkedin = undefined,
+    link,
+    email,
+    github,
+    instagram,
+    facebook,
+    twitter,
+    linkedin,
 }) => {
     return (
         <TeamMemberContainer>

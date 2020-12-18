@@ -1,4 +1,4 @@
-const calcHeaderSize = (scale: any, baseSize: any) => {
+const calcHeaderSize = (scale: number, baseSize: number) => {
     const elements = ['h6', 'h5', 'h4', 'h3', 'h2', 'h1'];
     const rawCSSArr = elements.map((element, count) => {
         const multiplier = baseSize * scale ** count;

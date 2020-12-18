@@ -56,7 +56,7 @@ const pageSettings = {
     image: header,
     keywords: '', // TODO: add keywords
 };
-const Case = () => (
+const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage img={app} alt="Fantescy applicatie" padded>
             <h3>Stemmen en jureren</h3>

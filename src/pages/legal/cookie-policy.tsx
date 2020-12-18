@@ -21,7 +21,7 @@ const Row = styled(RowBase)`
     }
 `;
 
-const CookiePolicy = () => (
+const CookiePolicy: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
             <Row>

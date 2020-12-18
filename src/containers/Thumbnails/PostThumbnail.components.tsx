@@ -98,7 +98,7 @@ interface ThumbnailImgProps {
 export const ThumbnailImg: React.FC<ThumbnailImgProps> = ({
     img,
     alt,
-    big = false,
+    big,
 }) => (
     <ThumbnailImgBase big={big}>
         <ThumbnailImgContent src={img} alt={alt || 'featured image'} />

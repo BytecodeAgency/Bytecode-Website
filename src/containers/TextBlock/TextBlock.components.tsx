@@ -8,7 +8,7 @@ interface SubtitleBaseProps {
 }
 const SubtitleBase: React.FC<SubtitleBaseProps> = ({
     className = '',
-    children = undefined,
+    children,
 }) => <div className={`subtitle ${className}`}>{children}</div>;
 
 export const Figure = styled.figure`

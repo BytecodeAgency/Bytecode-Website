@@ -22,7 +22,7 @@ const pageSettings = {
     keywords: 'côte&ciel, rugtassen, case, bytecode digital agency',
 };
 
-const Case = () => (
+const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={login} alt="Woningcorporatie offerte">
             <h2>Prestaties en migraties</h2>

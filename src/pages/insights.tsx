@@ -39,7 +39,16 @@ type Post = {
     },
 };
 
-const blogArchive = ({ data }: any) => {
+interface Props {
+    data: {
+        allMdx: {
+            edges: {
+                node: Post,
+            }[],
+        },
+    };
+}
+const blogArchive: React.FC<Props> = ({ data }) => {
     const { edges: posts } = data.allMdx;
     return (
         <Layout padded pageSettings={pageSettings}>
@@ -48,23 +57,16 @@ const blogArchive = ({ data }: any) => {
                     title="Bytecode Insights"
                     subtitle="Artikelen & podcasts"
                 />
-
                 <Gallery xs={50} md={33}>
-                    {posts.map(
-                        (
-                            { node: post }: { node: Post },
-                            _: any,
-                            key: number,
-                        ) => (
-                            <PostThumbnail
-                                key={key}
-                                title={post.frontmatter.title}
-                                slug={post.fields.slug}
-                                postImageUrl={require(`../images/img/articles/${post.frontmatter.article_image_url}`)}
-                                category={post.frontmatter.category_name}
-                            />
-                        ),
-                    )}
+                    {posts.map(({ node: post }) => (
+                        <PostThumbnail
+                            key={post.id}
+                            title={post.frontmatter.title}
+                            slug={post.fields.slug}
+                            postImageUrl={require(`../images/img/articles/${post.frontmatter.article_image_url}`)}
+                            category={post.frontmatter.category_name}
+                        />
+                    ))}
                 </Gallery>
             </Container>
         </Layout>

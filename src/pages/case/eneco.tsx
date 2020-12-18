@@ -48,7 +48,7 @@ const creditColumnTwo = [
     },
 ];
 
-const Case = () => (
+const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage
             padded

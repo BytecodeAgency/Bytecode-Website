@@ -15,7 +15,7 @@ interface ThumbnailProps {
 
 const Thumbnail: React.FC<ThumbnailProps> = ({
     backgroundImage,
-    serviceIcon = undefined,
+    serviceIcon,
     serviceName,
 }) => (
     <ThumbnailContainer>

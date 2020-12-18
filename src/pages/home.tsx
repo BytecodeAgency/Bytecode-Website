@@ -34,7 +34,7 @@ const GroupImage = styled.img`
     width: 100%;
 `;
 
-const Home = () => (
+const Home: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
             useGatsbyLink

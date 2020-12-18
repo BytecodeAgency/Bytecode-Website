@@ -24,7 +24,7 @@ const abstractBackground = require('../images/img/services/abstractbackground.pn
 const webshop = require('../images/img/services/shopscreenshot.png');
 const abstractCardBackground = require('../images/img/services/abstractcardbackground.svg');
 
-const Services = () => (
+const Services: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <ServiceHeader
             subtitle="Services"

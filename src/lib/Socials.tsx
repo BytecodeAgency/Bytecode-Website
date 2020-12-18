@@ -40,10 +40,7 @@ interface SocialIconProps {
     social: Social;
 }
 
-export const SocialIcon: React.FC<SocialIconProps> = ({
-    url = undefined,
-    social,
-}) => {
+export const SocialIcon: React.FC<SocialIconProps> = ({ url, social }) => {
     if (!url) {
         return null;
     }
@@ -78,14 +75,14 @@ interface AllSocialsProps {
     instagram?: string;
 }
 const AllSocials: React.FC<AllSocialsProps> = ({
-    isFooter = false,
-    link = undefined,
-    email = undefined,
-    github = undefined,
-    facebook = undefined,
-    twitter = undefined,
-    linkedin = undefined,
-    instagram = undefined,
+    isFooter,
+    link,
+    email,
+    github,
+    facebook,
+    twitter,
+    linkedin,
+    instagram,
 }) => (
     <SocialsContainer isFooter={isFooter}>
         <SocialIcon url={link} social="link" />

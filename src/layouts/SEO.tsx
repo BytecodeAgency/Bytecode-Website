@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 interface SEOProps {
     description?: string;
     lang?: string;
-    meta?: any[];
+    meta?: [];
     keywords?: string;
     title: string;
 }

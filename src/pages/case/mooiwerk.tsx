@@ -23,7 +23,7 @@ const pageSettings = {
     keywords: 'breda actief, mooiwerkbreda, case, bytecode digital agency',
 };
 
-const Case = () => (
+const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage
             padded

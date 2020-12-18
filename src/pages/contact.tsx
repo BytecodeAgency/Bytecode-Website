@@ -17,7 +17,7 @@ const ContactHeading = styled.h4`
     line-height: 1.4em;
 `;
 
-const Contact = () => (
+const Contact: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <Header
             img={require('../images/img/header/telefoon.jpg')}

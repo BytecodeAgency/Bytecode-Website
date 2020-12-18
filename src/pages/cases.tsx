@@ -22,7 +22,7 @@ const sungevity = require('../images/img/cases/sungevity/header.jpg');
 const youngpwr = require('../images/img/cases/youngpwr/case-youngpwr-teamfoto.png');
 const fantescy = require('../images/img/cases/fantescy/thumbnail.png');
 
-const Cases = () => (
+const Cases: React.FC<Record<string, never>> = () => (
     <Layout padded pageSettings={pageSettings}>
         <Container>
             <TextBlock title="Onze recente projecten" subtitle="Cases" />

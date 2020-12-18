@@ -49,7 +49,7 @@ const TeamMembers = styled.section`
     }
 `;
 
-const Over = () => (
+const Over: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <Header
             img={require('../images/img/content/teamv2.png')}

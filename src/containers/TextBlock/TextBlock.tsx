@@ -83,7 +83,7 @@ const TextBlock: React.FC<TextBlockProps> = ({
     headingType = 'h1',
     href,
     button,
-    useGatsbyLink = false,
+    useGatsbyLink,
     children,
 }) => {
     return (

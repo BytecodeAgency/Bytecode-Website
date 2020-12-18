@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
+// TODO: move to ContentBlocks folder
 
 const plusBullet = require('../images/icons/ui/plus-bullet.svg');
 

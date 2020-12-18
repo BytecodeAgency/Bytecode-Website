@@ -29,7 +29,7 @@ const pageSettings = {
         "Sungevity is een bedrijf gespecialiseerd in het ontwerpen en installeren van zonnepanelen. Sungevity's missie is om groene energie op te wekken op alle daken die daarvoor geschikt zijn.",
 };
 
-const Case = () => (
+const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={woco} alt="Woningcorporatie offerteplatform">
             <h2>Woningcorporatie offerteplatform</h2>

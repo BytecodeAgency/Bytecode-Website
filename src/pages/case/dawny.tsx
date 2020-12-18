@@ -28,7 +28,7 @@ const pageSettings = {
     keywords: 'ouderen, zorg, platform, webapp, onderzoek',
 };
 
-const Case = () => (
+const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={lockup} alt="Nonin apparaat met app">
             <h2>Introducing: Dawny</h2>

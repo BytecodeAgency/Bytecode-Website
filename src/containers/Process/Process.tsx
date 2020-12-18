@@ -7,13 +7,12 @@ const step1 = require('../../images/img/content/workflow/analyze.svg');
 const step2 = require('../../images/img/content/workflow/strategize.svg');
 const step3 = require('../../images/img/content/workflow/realize.svg');
 
-const Process = () => (
+const Process: React.FC<Record<string, never>> = () => (
     <Container>
         <Row gutterWidth={30}>
             <Step md={5.55} lg={3.55}>
                 <ProcessStepImage src={step1} alt="Analyze" />
                 <TextBlock subtitle="Stap 1" headingType="h3" title="Analyze">
-                    {/* classname="padded" */}
                     Voordat we starten met ontwikkelen, maken we eerst een
                     gedetailleerde analyse. Dit stelt ons in staat om een helder
                     en volledig overzicht te krijgen van de huidige situatie.

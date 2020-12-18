@@ -22,10 +22,10 @@ interface PostThumbnailProps {
     postImageUrl: string;
 }
 const PostThumbnail: React.FC<PostThumbnailProps> = ({
-    big = false,
+    big,
     title,
     slug,
-    category = undefined,
+    category,
     postImageUrl,
 }) => {
     return (

@@ -30,7 +30,7 @@ const NoscriptTag = () => {
     return null;
 };
 
-const HeadScripts = () => (
+const HeadScripts: React.FC<Record<string, never>> = () => (
     <Helmet>
         <script type="text/javascript">
             {enableTagManager && tagManagerCode}

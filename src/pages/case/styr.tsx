@@ -24,7 +24,7 @@ const pageSettings = {
     keywords: 'functiewaardering, online, platform, webapp',
 };
 
-const Case = () => (
+const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={serviceDesk} alt="Moderne functiewaardering">
             <h2>Moderne functiewaardering</h2>

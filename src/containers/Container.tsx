@@ -13,8 +13,7 @@ const Container =
     padding: 1em ${containerWidth.xs};
     display: flex;
     flex-direction: column;
-    align-items: ${(props) =>
-        props.align || 'inherit'}; // TODO: check if the prop is still needed
+    align-items: inherit;
     @media (${mediaQueryMin.sm}) {
         padding: 0 ${containerWidth.sm};
     }

@@ -14,7 +14,7 @@ const pageSettings = {
     keywords: 'error',
 };
 
-const NotFound = () => (
+const NotFound: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <Container404>
             <h1>Oeps, deze pagina bestaat niet...</h1>

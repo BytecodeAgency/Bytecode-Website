@@ -29,7 +29,7 @@ const Row = styled(RowBase)`
     }
 `;
 
-const PrivacyPolicy = () => (
+const PrivacyPolicy: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <Container>
             <Row>
