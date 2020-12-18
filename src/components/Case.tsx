@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
+
 import styled from 'styled-components';
 
 import theme from '../styles/theme';
@@ -42,7 +42,7 @@ export const CheckListItem =props: Props => {
 };
 
 export const CaseHeader = styled.header`
-    background: url("${    
+    background: url("${
 // @ts-expect-error ts-migrate(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
 props => props.img}"), ${theme.colors.secondary};
     background-size: cover;

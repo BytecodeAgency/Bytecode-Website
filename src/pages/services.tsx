@@ -24,9 +24,7 @@ const pageSettings = {
 };
 
 const Services = () => (
-    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Layout pageSettings={pageSettings}>
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <ServiceHeader
             subtitle="Services"
             title="Van inzicht tot impact"
@@ -37,7 +35,6 @@ const Services = () => (
             src={require('../images/img/services/dawnyheader.png')}
         />
 
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <ServiceItemSmall
             title="Research-Based Development"
             text="Ons werk is volledig gebaseerd op onderzoek.
@@ -47,7 +44,6 @@ const Services = () => (
             src={require('../images/img/services/smallserviceitemlogo.svg')}
         />
 
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <ServiceItem
             title="Bereik meer met minder werk"
             subtitle="Digital Tools"
@@ -60,7 +56,6 @@ const Services = () => (
             listItems={['Mobiele apps', 'Webapps', 'Websites', 'Webshops']}
         />
 
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <ServiceItem
             title="Een betrouwbare en stabiele basis"
             subtitle="Digital Enviroment"
@@ -75,15 +70,13 @@ const Services = () => (
                 'IT-automatisering',
             ]}
         />
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
         <ServiceBackgroundContainer>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <ServiceBackgroundImage
                 src={require('../images/img/services/abstractbackground.png')}
             />
         </ServiceBackgroundContainer>
 
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <ServiceItem
             title="Advies voor een echt succes"
             subtitle="Digital Expression"
@@ -101,7 +94,6 @@ const Services = () => (
             ]}
         />
 
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
         <ServiceCard
             subtitle="oproep"
             title="Start-Up Mentoring"
@@ -109,9 +101,8 @@ const Services = () => (
             link="/services"
             src={require('../images/img/services/abstractcardbackground.svg')}
         />
-        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
         <Container>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <ContactForm />
         </Container>
     </Layout>

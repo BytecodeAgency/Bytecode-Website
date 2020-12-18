@@ -22,12 +22,10 @@ type TextColProps = OwnTextColProps & typeof TextCol.defaultProps;
 // @ts-expect-error ts-migrate(7022) FIXME: 'TextCol' implicitly has type 'any' because it doe... Remove this comment to see the full error message
 const TextCol = ({ children, src }: TextColProps) =>
     src ? (
-        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <StyledCol src={src} xl={5}>
             {children}
         </StyledCol>
     ) : (
-        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <StyledCol src={src} xl={6}>
             {children}
         </StyledCol>
@@ -59,9 +57,7 @@ const ServiceItem = ({
     const RightCol = () => {
         if (src)
             return (
-                // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
                 <ImageCol xl={7} light={light}>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <StyledImage src={src} />
                 </ImageCol>
             );
@@ -72,13 +68,9 @@ const ServiceItem = ({
     return (
         // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <StyledContainer src={src} light={light}>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <StyledRow justify="between" light={light}>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TextCol src={src}>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <StyledTextBlock>
-                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                         <TextBlock
                             title={title}
                             href={link}
@@ -87,13 +79,13 @@ const ServiceItem = ({
                         >
                             {text}
                         </TextBlock>
-                        {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
                         <DeliverableList>
                             {listItems.join(', ')}
                         </DeliverableList>
                     </StyledTextBlock>
                 </TextCol>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
                 <RightCol />
             </StyledRow>
         </StyledContainer>

@@ -12,22 +12,29 @@ const container = theme.containerWidth;
 
 // TODO: Why is everything so !important?
 
-export const Container = styled(ContainerBase)`
+interface ContainerProps {
+    fluid?: boolean;
+}
+export const Container =
+    styled(ContainerBase) <
+    ContainerProps >
+    `
     max-width: unset !important;
-    margin: 1em ${(props: any) => (props.fluid ? '0' : container.sm)} !important;
+    margin: 1em ${(props) => (props.fluid ? '0' : container.sm)} !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
 
     @media (${mediaQueryMin.md}) {
-        margin: 2em ${(props: any) => (props.fluid ? '0' : container.md)} !important;
+        margin: 2em ${(props) => (props.fluid ? '0' : container.md)} !important;
     }
 
     @media (${mediaQueryMin.lg}) {
-        margin: 2.5vw ${(props: any) => (props.fluid ? '0' : container.lg)} !important;
+        margin: 2.5vw ${(props) =>
+            props.fluid ? '0' : container.lg} !important;
     }
 
     @media (${mediaQueryMin.xl}) {
-        margin: 4vw ${(props: any) => (props.fluid ? '0' : container.xl)} !important;
+        margin: 4vw ${(props) => (props.fluid ? '0' : container.xl)} !important;
     }
 `;
 

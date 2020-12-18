@@ -16,7 +16,6 @@ import {
 } from './ContactForm.components';
 
 const Notification = ({ type, message }: any) => (
-    // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <StyledNotification className={type}>{message}</StyledNotification>
 );
 
@@ -56,7 +55,6 @@ class ContactForm extends React.Component<{}, ContactFormState> {
     getNotifications() {
         const { notifications } = this.state;
         return notifications.map((notification: any) => (
-            // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
             <Notification
                 // @ts-expect-error ts-migrate(2554) FIXME: Expected 0 arguments, but got 1.
                 key={notification.type + toString(Math.random() * 100)}
@@ -113,7 +111,6 @@ class ContactForm extends React.Component<{}, ContactFormState> {
         const { hideText } = this.props;
         if (!hideText) {
             return (
-                // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
                 <TextBlock
                     subtitle="We staan voor je klaar"
                     headingType="h2"
@@ -127,13 +124,11 @@ class ContactForm extends React.Component<{}, ContactFormState> {
     render() {
         const { contact, phone, email, contents } = this.state.formValues;
         return (
-            // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
             <ContactFormContainer>
                 {this.renderText()}
                 {this.getNotifications()}
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
                 <form>
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                     <InputField
                         id="contact"
                         placeholder="Naam"
@@ -145,7 +140,7 @@ class ContactForm extends React.Component<{}, ContactFormState> {
                         }
                         className="text-input"
                     />
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
                     <InputField
                         id="email"
                         placeholder="Email"
@@ -157,7 +152,7 @@ class ContactForm extends React.Component<{}, ContactFormState> {
                         }
                         className="text-input"
                     />
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
                     <InputField
                         id="phone"
                         placeholder="Telefoonnummer"
@@ -169,7 +164,7 @@ class ContactForm extends React.Component<{}, ContactFormState> {
                         }
                         className="text-input"
                     />
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
                     <InputTextArea
                         id="contents"
                         placeholder="Bericht"
@@ -183,7 +178,7 @@ class ContactForm extends React.Component<{}, ContactFormState> {
                         }
                         className="text"
                     />
-                    {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
                     <SendButton
                         type="submit"
                         onClick={() =>

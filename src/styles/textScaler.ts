@@ -1,4 +1,3 @@
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import { css } from 'styled-components';
 import theme from './theme';
 import calcHeaderSize from '../lib/calcHeaderSizes';
@@ -28,33 +27,36 @@ const textScaler = css`
     ${headerSize.mobile}
     @media (${mediaQueries.sm}) {
         ${headerSize.desktop}
-    };
+    }
     body {
         /* Base Font Size */
         font-size: ${base.fontSize};
         line-height: ${base.lineHeight.paragraph};
         max-width: 100vw;
 
-        h1, h2, h3, h4, h5, h6 {
-            line-height: ${base.lineHeight.header}
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: ${base.lineHeight.header};
         }
         /* ${headerSize.mobile} */
         @media (${mediaQueries.xxl}) {
             font-size: calc(${base.fontSize}*1.5);
-        };
+        }
         @media (${mediaQueries.xl}) {
             font-size: calc(${base.fontSize}*1.4);
-        };
+        }
         @media (${mediaQueries.lg}) {
             font-size: calc(${base.fontSize}*1.3);
-        };
+        }
         @media (${mediaQueries.md}) {
             font-size: calc(${base.fontSize} * 1.15);
             line-height: calc(${base.lineHeight.paragraph});
-        };
+        }
     }
-
-
 `;
 
 export default textScaler;

@@ -22,16 +22,12 @@ type Props = OwnProps & typeof Service.defaultProps;
 const Service = ({ children, iconName, title, fullWidth }: Props) => {
     const iconSrc = require(`../../images/icons/services/${iconName}.svg`);
     return (
-        // @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <ServiceWrapper fullWidth={fullWidth}>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
             <ServiceIcon>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <Icon src={iconSrc} alt={iconName} />
             </ServiceIcon>
-            {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
+
             <ServiceText>
-                {/* @ts-expect-error ts-migrate(17004) FIXME: Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message */}
                 <TextBlock title={title} headingType="h3">
                     {children}
                 </TextBlock>

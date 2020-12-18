@@ -1,4 +1,3 @@
-// @ts-expect-error ts-migrate(7016) FIXME: Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 
@@ -33,8 +32,10 @@ export const TeamMemberWrapper = styled.div`
     }
     &:hover {
         & figure {
-            background: ${// @ts-expect-error ts-migrate(2339) FIXME: Property 'red' does not exist on type '{ backgroun... Remove this comment to see the full error message
-            theme.colors.red};
+            background: ${
+                // @ts-expect-error ts-migrate(2339) FIXME: Property 'red' does not exist on type '{ backgroun... Remove this comment to see the full error message
+                theme.colors.red
+            };
         }
     }
     &:hover {
@@ -42,8 +43,10 @@ export const TeamMemberWrapper = styled.div`
             transform: scale(1);
         }
         & figure::before {
-            background-color: ${// @ts-expect-error ts-migrate(2339) FIXME: Property 'green' does not exist on type '{ backgro... Remove this comment to see the full error message
-            theme.colors.green};
+            background-color: ${
+                // @ts-expect-error ts-migrate(2339) FIXME: Property 'green' does not exist on type '{ backgro... Remove this comment to see the full error message
+                theme.colors.green
+            };
             transform: translate(0, 30%) scale(0.85);
         }
         & > div {
@@ -91,8 +94,10 @@ export const TeamMemberPhoto = styled.figure`
         transform: scale(0.95);
         transition: 0.3s ease;
         font-size: 3em;
-        color: ${// @ts-expect-error ts-migrate(2339) FIXME: Property 'green' does not exist on type '{ backgro... Remove this comment to see the full error message
-        theme.colors.green} !important;
+        color: ${
+            // @ts-expect-error ts-migrate(2339) FIXME: Property 'green' does not exist on type '{ backgro... Remove this comment to see the full error message
+            theme.colors.green
+        } !important;
         min-height: 5em;
         height: 100%;
         max-width: 100%;
