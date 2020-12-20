@@ -35,8 +35,9 @@ interface NotificationType {
 }
 const ContactForm: React.FC<Record<string, never>> = () => {
     const [formValues, setFormValues] = useState(initialFormValues);
+    // eslint-disable-next-line prettier/prettier
     const [notifications, setNotifications] = useState<NotificationType[]>([]);
-    const handleChange = (e: any) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormValues({
             ...formValues,
             [e.target.id]: e.target.value,
@@ -114,10 +115,10 @@ const ContactForm: React.FC<Record<string, never>> = () => {
                     submit
                     onClick={()=>submit()}
                     disabled={(
-                        formValues.contact===''
-                        ||formValues.email===''
-                        ||formValues.phone===''
-                        ||formValues.contents===''
+                        formValues.contact==='' ||
+                        formValues.email==='' ||
+                        formValues.phone==='' ||
+                        formValues.contents===''
                     )}>
                     Verzenden
                 </Button>
