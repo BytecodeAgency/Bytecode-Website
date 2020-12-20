@@ -4,29 +4,40 @@ import { Link } from 'gatsby';
 import theme from '../styles/theme';
 import { ButtonProps } from './Button.types';
 
-// TODO: find a way to use both ...props and typescript
 const ButtonBase: React.FC<ButtonProps> = ({
     href,
     useGatsbyLink = false,
     className = '',
     rel,
-    type,
+    submit,
     target,
     onClick,
     children,
 }) => {
     if (useGatsbyLink) {
+        if (href) {
+            return (
+                <Link
+                    to={href}
+                    className={`button ${className}`}
+                    rel={rel}
+                    target={target}
+                    onClick={onClick}
+                >
+                    {children}
+                </Link>
+            );
+        }
+    }
+    if (submit) {
         return (
-            <Link
-                to={href}
+            <button
                 className={`button ${className}`}
-                rel={rel}
-                type={type}
-                target={target}
+                type="submit"
                 onClick={onClick}
             >
                 {children}
-            </Link>
+            </button>
         );
     }
     return (
@@ -34,7 +45,6 @@ const ButtonBase: React.FC<ButtonProps> = ({
             href={href}
             className={`button ${className}`}
             rel={rel}
-            type={type}
             target={target}
             onClick={onClick}
         >

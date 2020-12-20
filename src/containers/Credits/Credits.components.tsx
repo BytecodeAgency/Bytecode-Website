@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../../styles/theme';
-import ArrowButton from '../../components/ArrowButton';
+import Button from '../../components/Button';
 
 const { mediaQueryMin } = theme;
 export const CreditsContainer = styled.div`
@@ -72,9 +72,7 @@ export const CreditItemWithLinks: React.FC<CreditItemWithLinksProps> = ({
             <>
                 <CreditText>{credit}</CreditText>
                 <CreditText>
-                    <ArrowButton href={links[index]}>
-                        Ga naar pagina
-                    </ArrowButton>
+                    <Button href={links[index]}>Ga naar pagina</Button>
                 </CreditText>
             </>
         ))}

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
-import ArrowButton from '../components/ArrowButton';
+import Button from '../components/Button';
 
 const { colors, mediaQueryMin, containerWidth } = theme;
 
@@ -113,9 +113,9 @@ const Header: React.FC<HeaderProps> = ({
                     <Text>{tagline || text}</Text>
                     {children}
                     {href && (
-                        <ArrowButton useGatsbyLink={useGatsbyLink} href={href}>
+                        <Button useGatsbyLink={useGatsbyLink} href={href}>
                             {button || 'Lees meer'}
-                        </ArrowButton>
+                        </Button>
                     )}
                 </div>
             </HeaderInformation>

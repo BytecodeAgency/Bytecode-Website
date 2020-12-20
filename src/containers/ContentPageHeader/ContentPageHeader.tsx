@@ -1,30 +1,32 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import TextBlock from '../TextBlock/TextBlock';
 import { MainHeader, MainHeaderContent } from './ContentPageHeader.components';
 
-// eslint-disable-next-line no-unused-vars
 interface Props {
-    subtitle?: string;
-    title?: string;
-    button?: string;
-    href?: string;
-    text?: React.ReactNode;
+    subtitle: string;
+    title: string;
+    button: string;
+    href: string;
+    text: string;
     useGatsbyLink?: boolean;
+    img: string;
+    hero?: boolean;
+    shadow?: boolean;
 }
 
-// TODO: find a way to pass ...props in TypeScript
-const ContentPageHeader: React.FC<any> = ({
-    subtitle = '',
-    title = '',
-    button = '',
-    href = '',
-    text = '',
-    useGatsbyLink = false,
-    ...props
+const ContentPageHeader: React.FC<Props> = ({
+    subtitle,
+    title,
+    button,
+    href,
+    text,
+    useGatsbyLink,
+    img,
+    hero,
+    shadow,
 }) => {
     return (
-        <MainHeader {...props}>
+        <MainHeader img={img} shadow={shadow} hero={hero}>
             <MainHeaderContent>
                 <TextBlock
                     useGatsbyLink={useGatsbyLink}

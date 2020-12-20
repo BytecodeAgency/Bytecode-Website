@@ -179,7 +179,7 @@ class ContactForm extends React.Component<{}, ContactFormState> {
                     />
 
                     <SendButton
-                        type="submit"
+                        submit
                         onClick={() =>
                             this.handleFormSubmit(this.state.formValues)
                         }

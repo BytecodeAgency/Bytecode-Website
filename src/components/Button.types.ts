@@ -5,7 +5,7 @@ export interface ButtonProps {
     useGatsbyLink?: boolean;
     className?: string;
     rel?: string;
-    type?: string;
+    submit?: boolean;
     target?: string;
     onClick?: () => void;
     children: React.ReactNode;
