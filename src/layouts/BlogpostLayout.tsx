@@ -1,5 +1,4 @@
 import React from 'react';
-// @ts-expect-error ts-migrate(6142) FIXME: Module '../layouts/MainLayout' was resolved to '/h... Remove this comment to see the full error message
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'; // TODO: fix mdx to work with Typescript
 import { BlogpostSingleProps, CallToActionProps } from './BlogpostLayout.types';
 import Layout from './MainLayout';

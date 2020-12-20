@@ -2,7 +2,6 @@ import { css } from 'styled-components';
 import theme from './theme';
 import calcHeaderSize from '../lib/calcHeaderSizes';
 
-// @ts-expect-error ts-migrate(2339) FIXME: Property 'mediaQueryMin' does not exist on type '{... Remove this comment to see the full error message
 const mediaQueries = theme.mediaQueryMin;
 
 const base = {
