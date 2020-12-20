@@ -20,7 +20,7 @@ type Social =
     | 'link'
     | 'github';
 
-export const getMinifiedSocial = (social: Social) => {
+export const getMinifiedSocial = (social: Social): string => {
     const socialHtml = socialIcons[social];
     const twoOrMoreWhitespaceRegex = /\s{2,}/g;
     const minifiedHtml = socialHtml.replace(twoOrMoreWhitespaceRegex, ' ');

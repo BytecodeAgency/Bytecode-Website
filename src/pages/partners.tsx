@@ -77,7 +77,7 @@ const CheckListItem: React.FC<CheckListItemProps> = ({ children }) => {
     );
 };
 
-const Partners = () => (
+const Partners: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
             useGatsbyLink

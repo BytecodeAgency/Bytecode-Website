@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars, @typescript-eslint/no-unused-vars */
 
 // Colors
+import React from 'react';
+
 const black = '#0f0f0f';
 const darkgray = '#1a1a1a';
 const green = '#23be87';
@@ -29,15 +31,17 @@ const GlobalHeadingSettings = {
     weight: bold,
     marginBottom: '0.66em',
 };
+
+// TODO: add typing to theme interface, for now they will accept any object (Record<string, unknown>)
 interface Bytecode {
-    colors: any;
-    fonts: any;
-    fontWeights: any;
-    typography: any;
-    breakpoint: any;
-    containerWidth: any;
-    breakpointMobileMenu: any;
-    mediaQueryMin: any | null;
+    colors: Record<string, unknown>;
+    fonts: Record<string, unknown>;
+    fontWeights: Record<string, unknown>;
+    typography: Record<string, unknown>;
+    breakpoint: Record<string, unknown>;
+    containerWidth: Record<string, unknown>;
+    breakpointMobileMenu: string;
+    mediaQueryMin: Record<string, unknown> | null;
 }
 // Bytecode theme
 const bytecode: Bytecode = {
