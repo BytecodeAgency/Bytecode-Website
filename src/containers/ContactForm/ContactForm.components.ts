@@ -1,16 +1,9 @@
 import styled from 'styled-components';
 import theme from '../../styles/theme';
-import Button from '../../components/Button';
 
 const { colors, typography } = theme;
 export const ContactFormContainer = styled.div`
     padding: 1em 0;
-`;
-
-export const SendButton = styled(Button)`
-    &:hover {
-        cursor: pointer;
-    }
 `;
 
 export const ErrorMessage = styled.div`

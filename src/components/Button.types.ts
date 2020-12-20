@@ -8,5 +8,6 @@ export interface ButtonProps {
     submit?: boolean;
     target?: string;
     onClick?: () => void;
+    disabled?: boolean;
     children: React.ReactNode;
 }

@@ -12,6 +12,7 @@ const ButtonBase: React.FC<ButtonProps> = ({
     submit,
     target,
     onClick,
+    disabled,
     children,
 }) => {
     if (useGatsbyLink) {
@@ -32,9 +33,10 @@ const ButtonBase: React.FC<ButtonProps> = ({
     if (submit) {
         return (
             <button
+                type="button"
                 className={`button ${className}`}
-                type="submit"
                 onClick={onClick}
+                disabled={disabled}
             >
                 {children}
             </button>
@@ -52,8 +54,10 @@ const ButtonBase: React.FC<ButtonProps> = ({
         </a>
     );
 };
-
-const Button = styled(ButtonBase)`
+const Button =
+    styled(ButtonBase) <
+    ButtonProps >
+    `
     display: inline-block;
     background: transparent;
     padding: 0.66em 2em;
@@ -63,9 +67,13 @@ const Button = styled(ButtonBase)`
     border-radius: 10rem;
     transition: all 0.2s ease;
     &:hover {
-        color: ${theme.colors.white};
-        background: ${theme.colors.primary};
-        border-color: ${theme.colors.primary};
+        color: ${(props) =>
+            props.disabled ? theme.colors.tertiary : theme.colors.white};
+        background: ${(props) =>
+            props.disabled ? 'transparant' : theme.colors.primary};
+        border-color: ${(props) =>
+            props.disabled ? theme.colors.tertiary : theme.colors.primary};
+        cursor: pointer;
     }
 `;
 
