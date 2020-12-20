@@ -15,7 +15,7 @@ export const ThumbnailContainer = styled.div`
         background-color: #080808;
     }
     @media (${mediaQueryMin.md}) {
-        margin: 0 0.5em 3rem;
+        margin: 0 0.5em 0rem;
         width: 100%;
     }
 `;

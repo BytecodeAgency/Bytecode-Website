@@ -1,5 +1,4 @@
 import { reset, debug } from 'styled-components-style-utils';
-
 import { css, createGlobalStyle } from 'styled-components';
 import theme from './theme';
 import textScaler from './textScaler';
