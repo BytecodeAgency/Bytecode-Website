@@ -14,7 +14,7 @@ build_node:
   before_script:
     - yarn install --production --frozen-lockfile
   script:
-    - yarn run build --prefix-paths bytecode-website
+    - yarn run build
     - mv public build
   artifacts:
     paths:
