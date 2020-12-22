@@ -5,6 +5,7 @@ import {
     Introduction,
     Section,
     ResultsAndNumbers,
+    AppStoreBlock,
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
 import Credits from '../../containers/Credits/Credits';
@@ -20,6 +21,13 @@ const automatisering = require('../../images/img/cases/dearly/json-ts-checks.png
 const dawny = require('../../images/img/cases/dawny/usecase.png');
 const coteetciel = require('../../images/img/cases/cote-et-ciel/homepage.png');
 const sungevity = require('../../images/img/cases/sungevity/header.jpg');
+
+const paroolUrl =
+    'https://www.parool.nl/ps/samen-rouwen-met-app-dearly-een-veilige-plek-voor-gedeelde-smart~bbc8bda2/';
+const appStoreUrl = '';
+const playStoreUrl =
+    'https://play.google.com/store/apps/details?id=com.getdearly.dearly';
+const websiteUrl = 'https://www.getdearly.com/';
 
 const pageSettings = {
     title: 'Ondersteuning bij rouwverwerking',
@@ -101,14 +109,9 @@ const Dearly: React.FC<Record<string, never>> = () => (
                 <p className="Paragraph Big (introduction)">
                     Het is heel vet dat Dearly in deze pre-launch-fase al veel
                     media-aandacht krijgt, zoals in dit artikel van{' '}
-                    <a
-                        href="https://www.parool.nl/ps/
-                        samen-rouwen-met-app-dearly-een-veilige-plek-voor-gedeelde-smart~bbc8bda2/"
-                    >
-                        Het Parool
-                    </a>
-                    . We verwachten dat Dearly eind 2020 succesvol gelanceerd
-                    kan worden, waarna het in de app-stores te vinden is.
+                    <a href={paroolUrl}>Het Parool</a>. We verwachten dat Dearly
+                    eind 2020 succesvol gelanceerd kan worden, waarna het in de
+                    app-stores te vinden is.
                 </p>
             </Introduction>
             <TextAndImage img={rouwen} alt="Maak rouwen bespreekbaar" reverse>
@@ -167,6 +170,12 @@ const Dearly: React.FC<Record<string, never>> = () => (
                 numberTypes={['minuten', '+']}
                 subtitles={['van code review naar productie', 'Beta testers']}
                 title="Cijfers tot nu toe"
+            />
+            <AppStoreBlock
+                name="Dearly"
+                appStoreUrl={appStoreUrl}
+                playStoreUrl={playStoreUrl}
+                websiteUrl={websiteUrl}
             />
         </Section>
     </Layout>

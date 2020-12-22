@@ -5,6 +5,7 @@ import {
     Introduction,
     Section,
     ResultsAndNumbers,
+    AppStoreBlock,
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
 import Credits from '../../containers/Credits/Credits';
@@ -143,14 +144,11 @@ const Case: React.FC<Record<string, never>> = () => (
                 numberTypes={['+', '+', '+']}
                 title="Cijfers tot nu toe"
             />
-            <Introduction>
-                <p className="subtitle">Download de app</p>
-                <h3>
-                    FantESCy is te downloaden via de{' '}
-                    <a href={appStoreUrl}>Apple App Store</a> of{' '}
-                    <a href={playStoreUrl}>Google Play Store</a>.
-                </h3>
-            </Introduction>
+            <AppStoreBlock
+                name="FantESCy"
+                appStoreUrl={appStoreUrl}
+                playStoreUrl={playStoreUrl}
+            />
         </Section>
         <Credits
             columnTwo={creditsColumnTwo}

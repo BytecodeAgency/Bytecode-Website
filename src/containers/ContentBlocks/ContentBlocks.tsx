@@ -246,3 +246,31 @@ export const ResultsAndNumbers: React.FC<ResultsAndNumbersProps> = ({
         </ResultsAndNumbersContainer>
     );
 };
+interface AppStoreBlockProps {
+    name: string;
+    appStoreUrl?: string;
+    playStoreUrl?: string;
+    websiteUrl?: string;
+}
+export const AppStoreBlock: React.FC<AppStoreBlockProps> = ({
+    name,
+    appStoreUrl,
+    playStoreUrl,
+    websiteUrl,
+}) => (
+    <Introduction>
+        <p className="subtitle">Download de app</p>
+        <h3>
+            {name} is te downloaden via de{' '}
+            {appStoreUrl && <a href={appStoreUrl}>App Store</a>}
+            {appStoreUrl && playStoreUrl && ' en de '}
+            {playStoreUrl && <a href={playStoreUrl}>Play store</a>}
+        </h3>
+        {websiteUrl && (
+            <p>
+                Kijk voor meer informatie ook eens op de{' '}
+                <a href={websiteUrl}>website</a>.{' '}
+            </p>
+        )}
+    </Introduction>
+);
