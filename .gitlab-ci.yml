@@ -27,12 +27,13 @@ lint:
   script:
     - yarn run lint
 
-test_jest:
-  stage: test
-  before_script:
-    - yarn install --frozen-lockfile
-  script:
-    - yarn run test:ci
+# No need to run this since there are no tests
+#test_jest:
+#  stage: test
+#  before_script:
+#    - yarn install --frozen-lockfile
+#  script:
+#    - yarn run test:ci
 
 release_docker:
   stage: release
