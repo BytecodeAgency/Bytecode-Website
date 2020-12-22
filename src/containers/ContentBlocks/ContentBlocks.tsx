@@ -135,17 +135,18 @@ const TextBlockContainer = styled.div`
         width: 30em;
     }
 `;
+
 const NumbersContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     margin: 30px;
-    justify-content: center;
+    justify-content: space-around;
     z-index: 1;
     position: relative;
     height: 25em;
+    flex-direction: column;
     @media (${mediaQueryMin.sm}) {
         height: 20em;
-        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction: row;
     }
 
     &:before {
@@ -164,18 +165,18 @@ const NumbersContainer = styled.div`
         }
     }
 `;
+const NumberContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    margin: 0 auto;
+`;
 const SingleNumberContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
-`;
-const NumberContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-content: flex-end;
-    margin: 0 auto;
 `;
 const Number = styled.h1`
     font-size: 3em;
@@ -195,7 +196,7 @@ const Number = styled.h1`
 const NumberType = styled.h1`
     font-size: 1.5em;
     margin-bottom: 0.1em;
-    align-self: flex-end;
+    align-self: center;
     @media (${mediaQueryMin.sm}) {
         font-size: 2.5em;
     }
