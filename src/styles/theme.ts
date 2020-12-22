@@ -32,17 +32,127 @@ const GlobalHeadingSettings = {
     marginBottom: '0.66em',
 };
 
-// TODO: add typing to theme interface, for now they will accept any object (Record<string, unknown>)
+type Colors = {
+    background: string,
+    primary: string,
+    secondary: string,
+    tertiary: string,
+    black: string,
+    mediumgray: string,
+    lightgray: string,
+    lightgray2: string,
+    white: string,
+};
+type Fonts = {
+    heading: string,
+    paragraph: string,
+    menu: string,
+};
+
+type FontWeights = {
+    light: number,
+    regular: number,
+    bold: number,
+};
+
+type TypographyElement = {
+    size?: string,
+    height?: string,
+    spacing?: string,
+    font?: string,
+    weight?: number,
+    color?: string,
+    marginTop?: string,
+    marginBottom?: string,
+    marginLeft?: string,
+    marginRight?: string,
+};
+type Body = TypographyElement & {
+    height: string,
+    spacing: string,
+    font: string,
+    weight: number,
+    color: string,
+};
+type TextElement = TypographyElement & {
+    spacing: string,
+    font: string,
+    weight: number,
+    color: string,
+    marginBottom: string,
+};
+type ListItem = TypographyElement & {
+    spacing: string,
+    font: string,
+    weight: number,
+    color: string,
+    marginTop: string,
+    marginBottom: string,
+};
+type UnorderedList = TypographyElement & {
+    marginTop: string,
+    marginBottom: string,
+    marginLeft: string,
+    marginRight: string,
+};
+type HTMLElement = TypographyElement & {
+    size: string,
+    height: string,
+    spacing: string,
+    font: string,
+    weight: number,
+    color: string,
+};
+type Introduction = HTMLElement;
+type Caption = HTMLElement;
+type Subtitle = HTMLElement;
+type Button = HTMLElement;
+type MenuItem = HTMLElement;
+type Form = HTMLElement;
+export type Typography = {
+    body: Body,
+    h1: TextElement,
+    h2: TextElement,
+    h3: TextElement,
+    h4: TextElement,
+    h5: TextElement,
+    h6: TextElement,
+    p: TextElement,
+    li: ListItem,
+    ul: UnorderedList,
+    introduction: Introduction,
+    caption: Caption,
+    subtitle: Subtitle,
+    button: Button,
+    menuitem: MenuItem,
+    form: Form,
+};
+type Breakpoints = {
+    xs: string,
+    sm: string,
+    md: string,
+    lg: string,
+    xl: string,
+    xxl?: string,
+};
 interface Bytecode {
-    colors: Record<string, unknown>;
-    fonts: Record<string, unknown>;
-    fontWeights: Record<string, unknown>;
-    typography: Record<string, unknown>;
-    breakpoint: Record<string, unknown>;
-    containerWidth: Record<string, unknown>;
+    colors: Colors;
+    fonts: Fonts;
+    fontWeights: FontWeights;
+    typography: Typography;
+    breakpoint: Breakpoints;
+    containerWidth: Breakpoints;
     breakpointMobileMenu: string;
-    mediaQueryMin: Record<string, unknown> | null;
+    mediaQueryMin: Breakpoints;
 }
+const breakpoints: Breakpoints = {
+    xs: '48em',
+    sm: '64em',
+    md: '85.375em',
+    lg: '120em',
+    xl: '160em',
+    xxl: '200em',
+};
 // Bytecode theme
 const bytecode: Bytecode = {
     colors: {
@@ -190,14 +300,7 @@ const bytecode: Bytecode = {
         },
     },
     breakpointMobileMenu: '68rem',
-    breakpoint: {
-        xs: '48em',
-        sm: '64em',
-        md: '85.375em',
-        lg: '120em',
-        xl: '160em',
-        xxl: '200em',
-    },
+    breakpoint: breakpoints,
     containerWidth: {
         xs: '2vw',
         sm: '4vw',
@@ -205,18 +308,16 @@ const bytecode: Bytecode = {
         lg: '11vw',
         xl: '15vw',
     },
-    mediaQueryMin: null,
-};
-
-bytecode.mediaQueryMin = {
-    xs: `min-width: ${bytecode.breakpoint.xs}`,
-    sm: `min-width: ${bytecode.breakpoint.sm}`,
-    md: `min-width: ${bytecode.breakpoint.md}`,
-    lg: `min-width: ${bytecode.breakpoint.lg}`,
-    xl: `min-width: ${bytecode.breakpoint.xl}`,
-    xxl: `-webkit-min-device-pixel-ratio: 2) and
-    (min-resolution: 192dpi) and
-    (min-width: ${bytecode.breakpoint.xxl}`,
+    mediaQueryMin: {
+        xs: `min-width: ${breakpoints.xs}`,
+        sm: `min-width: ${breakpoints.sm}`,
+        md: `min-width: ${breakpoints.md}`,
+        lg: `min-width: ${breakpoints.lg}`,
+        xl: `min-width: ${breakpoints.xl}`,
+        xxl: `-webkit-min-device-pixel-ratio: 2) and
+             (min-resolution: 192dpi) and
+             (min-width: ${breakpoints.xxl}`,
+    },
 };
 
 const theme = bytecode;

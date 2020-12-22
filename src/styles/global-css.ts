@@ -1,6 +1,6 @@
 import { reset, debug } from 'styled-components-style-utils';
 import { css, createGlobalStyle } from 'styled-components';
-import theme from './theme';
+import theme, {Typography} from './theme';
 import textScaler from './textScaler';
 
 const typographyElements = [
@@ -39,16 +39,16 @@ const addStylingExceptions = (element: string) => {
 const typographyElementStyling = typographyElements.map(
     (element) => css`
         ${element} {
-            font-size: ${theme.typography[element].size};
-            line-height: ${theme.typography[element].height};
-            letter-spacing: ${theme.typography[element].spacing};
-            font-family: ${theme.typography[element].font};
-            font-weight: ${theme.typography[element].weight};
-            color: ${theme.typography[element].color};
-            margin-top: ${theme.typography[element].marginTop};
-            margin-bottom: ${theme.typography[element].marginBottom};
-            margin-left: ${theme.typography[element].marginLeft};
-            margin-right: ${theme.typography[element].marginRight};
+            font-size: ${theme.typography[element as keyof Typography].size};
+            line-height: ${theme.typography[element as keyof Typography].height};
+            letter-spacing: ${theme.typography[element as keyof Typography].spacing};
+            font-family: ${theme.typography[element as keyof Typography].font};
+            font-weight: ${theme.typography[element as keyof Typography].weight};
+            color: ${theme.typography[element as keyof Typography].color};
+            margin-top: ${theme.typography[element as keyof Typography].marginTop};
+            margin-bottom: ${theme.typography[element as keyof Typography].marginBottom};
+            margin-left: ${theme.typography[element as keyof Typography].marginLeft};
+            margin-right: ${theme.typography[element as keyof Typography].marginRight};
             ${addStylingExceptions(element)};
         }
     `,
@@ -58,13 +58,17 @@ export const TypographyClassStyling = createGlobalStyle`
     ${typographyClasses
         .map(
             (element) => `.${element} {
-            font-size: ${theme.typography[element].size};
-            line-height: ${theme.typography[element].height};
-            letter-spacing: ${theme.typography[element].spacing};
-            font-family: ${theme.typography[element].font};
-            font-weight: ${theme.typography[element].weight};
-            color: ${theme.typography[element].color};
-            margin: ${theme.typography[element].margin};
+            font-size: ${theme.typography[element as keyof Typography].size};
+            line-height: ${theme.typography[element as keyof Typography].height};
+            letter-spacing: ${theme.typography[element as keyof Typography].spacing};
+            font-family: ${theme.typography[element as keyof Typography].font};
+            font-weight: ${theme.typography[element as keyof Typography].weight};
+            color: ${theme.typography[element as keyof Typography].color};
+            margin:
+                ${theme.typography[element as keyof Typography].marginTop};
+                ${theme.typography[element as keyof Typography].marginRight};
+                ${theme.typography[element as keyof Typography].marginBottom};
+                ${theme.typography[element as keyof Typography].marginLeft};
             ${addStylingExceptions(element)};
         }`,
         )
