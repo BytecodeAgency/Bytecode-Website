@@ -24,9 +24,8 @@ const sungevity = require('../../images/img/cases/sungevity/header.jpg');
 
 const paroolUrl =
     'https://www.parool.nl/ps/samen-rouwen-met-app-dearly-een-veilige-plek-voor-gedeelde-smart~bbc8bda2/';
-const appStoreUrl = '';
-const playStoreUrl =
-    'https://play.google.com/store/apps/details?id=com.getdearly.dearly';
+const appStoreUrl = 'http://bit.ly/dearly-iphone';
+const playStoreUrl = 'http://bit.ly/dearly-android';
 const websiteUrl = 'https://www.getdearly.com/';
 
 const pageSettings = {
@@ -177,6 +176,35 @@ const Dearly: React.FC<Record<string, never>> = () => (
                 playStoreUrl={playStoreUrl}
                 websiteUrl={websiteUrl}
             />
+        </Section>
+        <Section>
+            <Credits
+                special={['Dearly']}
+                resources={['Dearly website']}
+                resourceLinks={[websiteUrl]}
+                columnOne={creditColumnOne}
+                columnTwo={creditColumnTwo}
+            />
+            <Gallery padded sm={33}>
+                <PostThumbnail
+                    title="Valpreventie voor ouderen"
+                    category="Reinier de Graaf ziekenhuis"
+                    slug="/case/dawny"
+                    postImageUrl={dawny}
+                />
+                <PostThumbnail
+                    title="Hoge kwaliteit rugtassen"
+                    category="côte&ciel"
+                    slug="/case/cote-et-ciel"
+                    postImageUrl={coteetciel}
+                />
+                <PostThumbnail
+                    title="Een digitale omgeving voor zonnepanelen op huurdaken"
+                    category="Sungevity"
+                    slug="/case/sungevity"
+                    postImageUrl={sungevity}
+                />
+            </Gallery>
         </Section>
     </Layout>
 );
