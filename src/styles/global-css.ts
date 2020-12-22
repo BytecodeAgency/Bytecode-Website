@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+// Prettier has been disabled due to a weird bug with the code on line 44
 import { reset, debug } from 'styled-components-style-utils';
 import { css, createGlobalStyle } from 'styled-components';
 import theme, {Typography} from './theme';
