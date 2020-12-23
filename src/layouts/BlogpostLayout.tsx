@@ -1,5 +1,5 @@
 import React from 'react';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'; // TODO: fix mdx to work with Typescript
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { BlogpostSingleProps, CallToActionProps } from './BlogpostLayout.types';
 import Layout from './MainLayout';
 import Author from '../containers/Author/Author';
@@ -19,6 +19,7 @@ import {
     ArticleIntro,
     CallToActionContainer,
     CallToActionText,
+    StyledSubtitle,
 } from './BlogpostLayout.components';
 
 const CallToAction: React.FC<CallToActionProps> = () => (
@@ -44,7 +45,7 @@ const BlogSingle: React.FC<BlogpostSingleProps> = ({ content }) => (
         <Article>
             <ArticleHeader>
                 <SubtitleContainer>
-                    <Subtitle>{content.category_name}</Subtitle>
+                    <StyledSubtitle>{content.category_name}</StyledSubtitle>
                     <ReadingTime>
                         &nbsp;&nbsp;&#47;&#47; {content.reading_time} min. read
                     </ReadingTime>

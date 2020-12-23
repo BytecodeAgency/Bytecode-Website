@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 import Button from '../../components/Button/Button';
+import { Subtitle } from '../../components/Typography';
 
 const { mediaQueryMin } = theme;
 export const CreditsContainer = styled.div`
@@ -51,7 +52,7 @@ interface CreditItemProps {
 }
 export const CreditItem: React.FC<CreditItemProps> = ({ title, credits }) => (
     <CreditItemContainer>
-        <CreditTitle className="subtitle">{title}</CreditTitle>
+        <Subtitle>{title}</Subtitle>
         {credits.map((credit) => (
             <CreditText className="Paragraph light">{credit}</CreditText>
         ))}
@@ -70,7 +71,7 @@ export const CreditItemWithLinks: React.FC<CreditItemWithLinksProps> = ({
     links,
 }: CreditItemWithLinksProps) => (
     <CreditItemContainer>
-        <CreditTitle className="subtitle">{title}</CreditTitle>
+        <Subtitle>{title}</Subtitle>
         {credits.map((credit, index) => (
             <>
                 <CreditText>{credit}</CreditText>

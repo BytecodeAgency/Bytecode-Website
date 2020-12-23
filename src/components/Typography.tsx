@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '../styles/theme';
 import { QuoteProps } from './Typography.types';
 
-const { fontWeights, fonts } = theme;
+const { fontWeights, fonts, typography } = theme;
 const QuoteText = styled.blockquote`
     font-weight: ${fontWeights.light};
     line-height: 1.2em;
@@ -20,12 +20,16 @@ export const Small = styled.span`
     font-size: 0.66em;
 `;
 
-export const Subtitle = styled.h6`
+export const Subtitle = styled.p`
     size: 0.85rem;
     height: 1.2em;
     font-family: ${fonts.paragraph};
     font-weight: ${fontWeights.bold};
     color: ${theme.colors.primary};
+    text-transform: uppercase;
+    letter-spacing: ${typography.subtitle.spacing};
+    font-size: 0.85rem;
+    margin-bottom: 0.5em;
 `;
 
 export const Quote: React.FC<QuoteProps> = ({ author, url, children }) => {
