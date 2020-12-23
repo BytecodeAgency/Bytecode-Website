@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../../components/Button';
+import Button from '../../components/Button/Button';
 
 interface SubtitleBaseProps {
     className?: string;
@@ -22,10 +22,7 @@ export const Figure = styled.figure`
 interface SubtitleProps {
     hasTitle?: string;
 }
-export const Subtitle =
-    styled(SubtitleBase) <
-    SubtitleProps >
-    `
+export const Subtitle = styled(SubtitleBase)<SubtitleProps>`
     margin-bottom: ${(props) => (props.hasTitle ? '2rem' : '1.2em')};
 `;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../../styles/theme';
-import Button from '../../components/Button';
+import Button from '../../components/Button/Button';
 
 const { mediaQueryMin } = theme;
 export const CreditsContainer = styled.div`
@@ -27,9 +27,12 @@ export const Container = styled.div`
     }
 `;
 
-export const Column = styled.div`
-    display: flex;
-    flex-direction: column;
+interface ColumnProps {
+    gridTemplateRows: string;
+}
+export const Column = styled.div<ColumnProps>`
+    display: grid;
+    grid-template-rows: ${(props) => props.gridTemplateRows};
 `;
 
 export const CreditItemContainer = styled.div`

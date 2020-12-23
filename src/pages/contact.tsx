@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Layout from '../layouts/MainLayout';
 import ContactForm from '../containers/ContactForm/ContactForm';
 import { Container, Row, Col } from '../lib/Grid';
-import Button from '../components/Button';
+import Button from '../components/Button/Button';
 import Header from '../containers/Header';
 
 const pageSettings = {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import Button from '../components/Button';
+import Button from '../components/Button/Button';
 import AllSocials from '../lib/Socials';
 import theme from '../styles/theme';
 
@@ -25,7 +25,7 @@ const FooterColInnerContainer = styled.div`
 `;
 
 type FooterColProps = {
-    children: React.ReactNode,
+    children: React.ReactNode;
 };
 
 const FooterCol = ({ children }: FooterColProps) => (

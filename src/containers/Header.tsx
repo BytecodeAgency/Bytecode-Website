@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
-import Button from '../components/Button';
+import Button from '../components/Button/Button';
 
 const { colors, mediaQueryMin, containerWidth } = theme;
 
@@ -10,10 +10,7 @@ const arrowDown = require('../images/icons/ui/carret-down.svg');
 interface HeaderBaseProps {
     backgroundImage: string;
 }
-const HeaderBase =
-    styled.header <
-    HeaderBaseProps >
-    `
+const HeaderBase = styled.header<HeaderBaseProps>`
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent),
         url(${(props) => props.backgroundImage});
     background-size: cover !important;
@@ -25,7 +22,7 @@ const HeaderBase =
     @media (${mediaQueryMin.sm}) {
         padding: 3em ${containerWidth.sm};
         background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent 50%),
-        url(${(props) => props.backgroundImage});
+            url(${(props) => props.backgroundImage});
     }
     @media (${mediaQueryMin.md}) {
         padding: 2em ${containerWidth.md};
