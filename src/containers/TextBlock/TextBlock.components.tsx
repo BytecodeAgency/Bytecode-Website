@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../../components/Button/Button';
+import { Subtitle } from '../../components/Typography';
 
 interface SubtitleBaseProps {
-    className?: string;
     children?: React.ReactNode;
 }
-const SubtitleBase: React.FC<SubtitleBaseProps> = ({
-    className = '',
-    children,
-}) => <div className={`subtitle ${className}`}>{children}</div>;
+const SubtitleBase: React.FC<SubtitleBaseProps> = ({ children }) => (
+    <Subtitle>{children}</Subtitle>
+);
 
 export const Figure = styled.figure`
     position: relative;
@@ -22,7 +21,7 @@ export const Figure = styled.figure`
 interface SubtitleProps {
     hasTitle?: string;
 }
-export const Subtitle = styled(SubtitleBase)<SubtitleProps>`
+export const StyledSubtitle = styled(SubtitleBase)<SubtitleProps>`
     margin-bottom: ${(props) => (props.hasTitle ? '2rem' : '1.2em')};
 `;
 

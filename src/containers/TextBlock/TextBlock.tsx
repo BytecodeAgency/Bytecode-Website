@@ -6,7 +6,7 @@ import {
     H3,
     H4,
     StyledButton,
-    Subtitle,
+    StyledSubtitle,
 } from './TextBlock.components';
 
 interface ImageProps {
@@ -89,7 +89,7 @@ const TextBlock: React.FC<TextBlockProps> = ({
     return (
         <div>
             <Image src={image} alt={alt} />
-            <Subtitle hasTitle={title}>{subtitle}</Subtitle>
+            <StyledSubtitle hasTitle={title}>{subtitle}</StyledSubtitle>
             <Title type={headingType} title={title} />
             <p>{children}</p>
             <Button button={button} href={href} useGatsbyLink={useGatsbyLink} />
