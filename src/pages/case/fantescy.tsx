@@ -10,6 +10,7 @@ import Deliverables from '../../containers/Deliverables';
 import Credits from '../../containers/Credits/Credits';
 import Gallery from '../../containers/Gallery';
 import PostThumbnail from '../../containers/Thumbnails/PostThumbnail';
+import { Subtitle } from '../../components/Typography';
 
 const header = require('../../images/img/cases/fantescy/header.png');
 const app = require('../../images/img/cases/fantescy/intro.png');
@@ -93,7 +94,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 </p>
             </Introduction>
             <TextAndImage img={research} alt="Marktonderzoek" reverse>
-                <p className="subtitle">Research</p>
+                <Subtitle>Research</Subtitle>
                 <h2>Strategie</h2>
                 <p className="big">
                     We hebben advies gegeven over marktonderzoek,
@@ -108,7 +109,7 @@ const Case: React.FC<Record<string, never>> = () => (
         </Section>
         <Section>
             <TextAndImage small img={payment} alt="Betalingen in de app">
-                <p className="subtitle">Development</p>
+                <Subtitle>Development</Subtitle>
                 <h2>Berekeningen en betalingen</h2>
                 <p className="big">
                     Omdat de scoreberekening complex kan zijn en veel spelers
@@ -124,7 +125,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 alt="Gebruikservaring"
                 reverse
             >
-                <p className="subtitle">User Experience</p>
+                <Subtitle>User Experience</Subtitle>
                 <h2>Een betere gebruikservaring</h2>
                 <p className="big">
                     Om de app snel en gemakkelijk te kunnen delen hebben we

@@ -11,10 +11,7 @@ import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSub
 interface MainProps {
     padded?: boolean;
 }
-const Main =
-    styled.main <
-    MainProps >
-    `
+const Main = styled.main<MainProps>`
     max-width: 100vw !important;
     overflow-x: hidden;
     padding-top: ${(props) => (props.padded ? '15vh' : 0)};
@@ -35,9 +32,9 @@ interface LayoutProps {
     children: React.ReactNode;
     padded?: boolean;
     pageSettings: {
-        title: string,
-        description: string,
-        keywords: string,
+        title: string;
+        description: string;
+        keywords: string;
     };
     newsLetter?: number;
 }

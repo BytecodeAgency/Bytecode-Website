@@ -15,10 +15,7 @@ interface ContainerProps {
     background?: boolean;
 }
 
-export const NavbarContainer =
-    styled.nav <
-    ContainerProps >
-    `
+export const NavbarContainer = styled.nav<ContainerProps>`
     position: fixed;
     width: 100%;
     z-index: 10000;
@@ -54,10 +51,7 @@ export const NavbarContainer =
 interface ContentProps {
     menuIsOpen?: boolean;
 }
-export const NavbarContent =
-    styled.div <
-    ContentProps >
-    `
+export const NavbarContent = styled.div<ContentProps>`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,9 +62,7 @@ export const NavbarContent =
         justify-content: space-between;
 
         position: fixed;
-        transform: translateX(
-            ${(props) => (props.menuIsOpen ? 0 : '65em')}
-        );
+        transform: translateX(${(props) => (props.menuIsOpen ? 0 : '65em')});
         top: 0;
         bottom: 0;
 
@@ -202,10 +194,7 @@ export const CloseMenuButton = styled(MenuButton)`
 interface OverlayProps {
     menuIsOpen?: boolean;
 }
-export const BlackOverlay =
-    styled.div <
-    OverlayProps >
-    `
+export const BlackOverlay = styled.div<OverlayProps>`
     position: fixed;
     top: 0;
     right: 0;

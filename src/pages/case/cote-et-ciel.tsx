@@ -7,6 +7,7 @@ import {
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
+import { Subtitle } from '../../components/Typography';
 
 const homePage = require('../../images/img/cases/cote-et-ciel/homepage.png');
 const dashboard = require('../../images/img/cases/cote-et-ciel/dashboard.png');
@@ -66,7 +67,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 reverse
                 alt="Magento server dashboard"
             >
-                <p className="subtitle">Research</p>
+                <Subtitle>Research</Subtitle>
                 <h3>Oplossing</h3>
                 <p>
                     De veranderingen aan de achterkant van de webshop hebben
@@ -75,7 +76,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 </p>
             </TextAndImage>
             <TextAndImage fluid img={product} alt="Shopify product pagina">
-                <p className="subtitle">Resultaten</p>
+                <Subtitle>Resultaten</Subtitle>
                 <h2>Realiseren</h2>
                 <p className="introduction">
                     Het côte&ciel-project is inmiddels door ons overgezet naar

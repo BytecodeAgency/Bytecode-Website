@@ -9,8 +9,8 @@ import {
 } from './Credits.components';
 
 type ColumnData = {
-    title: string,
-    content: string[],
+    title: string;
+    content: string[];
 };
 
 interface Props {

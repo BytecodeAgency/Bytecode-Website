@@ -31,11 +31,11 @@ const HeadElements = () => (
 interface LayoutProps {
     children: React.ReactNode;
     pageSettings: {
-        title: string,
-        description: string,
-        keywords: string,
-        client: string,
-        image: string,
+        title: string;
+        description: string;
+        keywords: string;
+        client: string;
+        image: string;
     };
 }
 

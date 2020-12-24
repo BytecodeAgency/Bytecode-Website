@@ -7,6 +7,7 @@ import {
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
+import { Subtitle } from '../../components/Typography';
 
 const home = require('../../images/img/cases/mooiwerk/home.png');
 const vacatures = require('../../images/img/cases/mooiwerk/vacatures.png');
@@ -59,7 +60,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 reverse
                 alt="Pagina op de mooiwerkbreda website"
             >
-                <p className="subtitle">Research</p>
+                <Subtitle>Research</Subtitle>
                 <h3>Agile-toepassing</h3>
                 <p>
                     Aan de hand van de vastgestelde doelgroep en requirements
@@ -69,7 +70,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 </p>
             </TextAndImage>
             <TextAndImage img={kennis} alt="Pagina op de mooiwerkbreda website">
-                <p className="subtitle">Development</p>
+                <Subtitle>Development</Subtitle>
                 <h3>Open source</h3>
                 <p>
                     De codebase van het project is open source ontwikkeld. Door
@@ -82,7 +83,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 img={advies}
                 alt="Pagina op de mooiwerkbreda website"
             >
-                <p className="subtitle">Resultaten</p>
+                <Subtitle>Resultaten</Subtitle>
                 <h2>Realiseren</h2>
                 <p className="introduction">
                     Het uiteindelijke platform zorgt ervoor dat Mooiwerk Breda

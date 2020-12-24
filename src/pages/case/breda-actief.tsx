@@ -7,6 +7,7 @@ import {
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
+import { Subtitle } from '../../components/Typography';
 
 const featured = require('../../images/img/cases/breda-actief/featured.svg');
 const responsive = require('../../images/img/cases/breda-actief/responsive.svg');
@@ -61,7 +62,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 </p>
             </Introduction>
             <TextAndImage img={wieiswie} reverse alt="Uptime prestaties">
-                <p className="subtitle">prestaties</p>
+                <Subtitle>prestaties</Subtitle>
                 <h3>Toegankelijkheid</h3>
                 <p>
                     De website is volledig toegankelijk voor mensen met een
@@ -74,7 +75,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 </p>
             </TextAndImage>
             <TextAndImage img={administration} alt="Uptime prestaties">
-                <p className="subtitle">prestaties</p>
+                <Subtitle>prestaties</Subtitle>
                 <h3>Consistente huisstijl</h3>
                 <p>
                     Door het gebruik van maatwerk velden in het CMS zorgen we
@@ -87,7 +88,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 img={screens}
                 alt="Meerdere schermen van de website"
             >
-                <p className="subtitle">Resultaten</p>
+                <Subtitle>Resultaten</Subtitle>
                 <h2>Realiseren</h2>
                 <p className="introduction">
                     Om Breda Actief zo goed mogelijk te helpen bij het

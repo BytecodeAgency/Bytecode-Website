@@ -111,10 +111,7 @@ export const Introduction: React.FC<IntroductionProps> = ({ children }) => {
 interface ProfilePictureProps {
     img: string;
 }
-export const ProfilePicture =
-    styled.div <
-    ProfilePictureProps >
-    `
+export const ProfilePicture = styled.div<ProfilePictureProps>`
     width: 5rem;
     height: 5rem;
     border-radius: 100rem;

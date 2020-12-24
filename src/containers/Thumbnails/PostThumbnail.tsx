@@ -5,6 +5,7 @@ import {
     ThumbnailContent,
     ThumbnailImg,
 } from './PostThumbnail.components';
+import { Caption } from '../../components/Typography';
 
 const cutOffText = (string: string, maxLength: number) => {
     if (string.length > maxLength) {
@@ -34,9 +35,7 @@ const PostThumbnail: React.FC<PostThumbnailProps> = ({
             <ThumbnailContent big={big}>
                 <StyledSubtitle>{category}</StyledSubtitle>
                 <h5>{cutOffText(title, 80)}</h5>
-                <a className="thumbnail-cta caption" href={slug}>
-                    Lees meer
-                </a>
+                <Caption href={slug}>Lees meer</Caption>
             </ThumbnailContent>
         </ThumbnailBase>
     );

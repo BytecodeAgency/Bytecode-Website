@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
+import { Subtitle } from '../components/Typography';
 // TODO: move to ContentBlocks folder
 
 const plusBullet = require('../images/icons/ui/plus-bullet.svg');
@@ -59,7 +60,7 @@ const Deliverables: React.FC<Props> = ({ deliverables }) => {
     return (
         <DeliverablesBase>
             <DeliverablesContent>
-                <p className="subtitle">Deliverables</p>
+                <Subtitle>Deliverables</Subtitle>
                 <List>
                     {deliverables.map((item) => {
                         return <Deliverable>{item}</Deliverable>;

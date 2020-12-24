@@ -6,7 +6,7 @@ declare module 'gatsby-mdx/mdx-renderer' {
 }
 
 declare module 'styled-components-style-utils' {
-    import {reset, debug} from 'styled-components-style-utils';
+    import { reset, debug } from 'styled-components-style-utils';
 
-    export {reset, debug};
+    export { reset, debug };
 }

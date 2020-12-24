@@ -7,6 +7,7 @@ import {
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
+import { Subtitle } from '../../components/Typography';
 
 const usecase = require('../../images/img/cases/dawny/usecase.png');
 const lockup = require('../../images/img/cases/dawny/lockup2.png');
@@ -63,7 +64,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 </p>
             </Introduction>
             <TextAndImage img={graph} alt="Nonin apparaat met app" fluid>
-                <p className="subtitle">Development</p>
+                <Subtitle>Development</Subtitle>
                 <h3>Minder analyse, meer controle</h3>
                 <p className="big">
                     Een Android app verzamelt de slaapdata (hartslag,
@@ -79,7 +80,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 reverse
                 fluid
             >
-                <p className="subtitle">Design</p>
+                <Subtitle>Design</Subtitle>
                 <h3>Inzichtgevende tools</h3>
                 <p className="big">
                     Het dashboard biedt inzicht in de nachtelijke slaapdata.
@@ -98,7 +99,7 @@ const Case: React.FC<Record<string, never>> = () => (
         </Section>
         <Section>
             <TextAndImage padded fluid img={team} alt="Nonin apparaat met app">
-                <p className="subtitle">Resultaten</p>
+                <Subtitle>Resultaten</Subtitle>
                 <h2>Altijd in ontwikkeling</h2>
                 <p className="big">
                     Er is een uitgebreide roadmap voor het project opgesteld.

@@ -18,34 +18,34 @@ const pageSettings = {
 
 // TODO: change variables from message to be camelCase
 type Post = {
-    id: string,
+    id: string;
     fields: {
-        slug: string,
-    },
+        slug: string;
+    };
     frontmatter: {
-        id: number,
-        title: string,
-        slug: string,
-        posted_on: number,
-        article_image_url: string,
-        author_name: string,
-        author_role: string,
-        author_image_url: string,
-        category_name: string,
-        category_slug: string,
-        reading_time: string,
-        article_intro: string,
-        post_content: string,
-    },
+        id: number;
+        title: string;
+        slug: string;
+        posted_on: number;
+        article_image_url: string;
+        author_name: string;
+        author_role: string;
+        author_image_url: string;
+        category_name: string;
+        category_slug: string;
+        reading_time: string;
+        article_intro: string;
+        post_content: string;
+    };
 };
 
 interface Props {
     data: {
         allMdx: {
             edges: {
-                node: Post,
-            }[],
-        },
+                node: Post;
+            }[];
+        };
     };
 }
 const blogArchive: React.FC<Props> = ({ data }) => {

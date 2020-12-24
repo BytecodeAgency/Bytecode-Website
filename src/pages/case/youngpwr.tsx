@@ -10,6 +10,7 @@ import Deliverables from '../../containers/Deliverables';
 import Credits from '../../containers/Credits/Credits';
 import Gallery from '../../containers/Gallery';
 import PostThumbnail from '../../containers/Thumbnails/PostThumbnail';
+import { Subtitle } from '../../components/Typography';
 
 // section for image imports in the form of const img = require(url);
 const useCase = require('../../images/img/cases/youngpwr/case-youngpwr-teamfoto.png');
@@ -104,7 +105,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 alt="Onderzoek over waar mensen klikken op de website"
                 padded
             >
-                <p className="subtitle">Research</p>
+                <Subtitle>Research</Subtitle>
                 <h2>Een platform dat aansluit</h2>
                 <p className="big">
                     Tijdens de ontwikkeling en livegang is het contentplatform
@@ -123,7 +124,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 reverse
                 padded
             >
-                <p className="subtitle">Research</p>
+                <Subtitle>Research</Subtitle>
                 <h3>Efficiëntie voorop</h3>
                 <p className="big">
                     Omdat het matchingplatform niet direct gebouwd kon worden,
@@ -139,7 +140,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 alt="Automatisering van pipeline"
                 padded
             >
-                <p className="subtitle">Development</p>
+                <Subtitle>Development</Subtitle>
                 <h3>Een duurzame oplossing</h3>
                 <p className="big">
                     Tijdens de ontwikkeling hebben we gezorgd dat de codebase
@@ -157,7 +158,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 padded
                 reverse
             >
-                <p className="subtitle">Development</p>
+                <Subtitle>Development</Subtitle>
                 <h3>De technische kant</h3>
                 <p className="big">
                     We hebben de achterkant van het matchingplatform al volledig

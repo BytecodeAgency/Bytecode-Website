@@ -7,6 +7,7 @@ import {
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
 import Deliverables from '../../containers/Deliverables';
+import { Subtitle } from '../../components/Typography';
 
 const login = require('../../images/img/cases/styr/login.png');
 const serviceDesk = require('../../images/img/cases/styr/service-desk.png');
@@ -61,7 +62,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 reverse
                 alt="Onderzoek naar de allocatortool"
             >
-                <p className="subtitle">Oplossing</p>
+                <Subtitle>Oplossing</Subtitle>
                 <h3>UX Research</h3>
                 <p>
                     Na een grondige intake zijn we begonnen met een eerste UX/UI
@@ -70,7 +71,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 </p>
             </TextAndImage>
             <TextAndImage img={invision} alt="Ontwerp van de service desk">
-                <p className="subtitle">Oplossing</p>
+                <Subtitle>Oplossing</Subtitle>
                 <h3>UI Design</h3>
                 <p>
                     In Invision zijn prototypes gemaakt van de Allocatortool. Op
@@ -84,7 +85,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 reverse
                 alt="Ontwikkeling van de service desk"
             >
-                <p className="subtitle">Oplossing</p>
+                <Subtitle>Oplossing</Subtitle>
 
                 <h3>Development</h3>
 
@@ -96,7 +97,7 @@ const Case: React.FC<Record<string, never>> = () => (
             </TextAndImage>
 
             <TextAndImage fluid img={model} alt="STYR login pagina">
-                <p className="subtitle">Resultaten</p>
+                <Subtitle>Resultaten</Subtitle>
 
                 <h2>Realiseren</h2>
 

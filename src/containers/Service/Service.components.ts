@@ -18,10 +18,7 @@ export const Icon = styled.img`
 interface ServiceWrapperProps {
     fullWidth?: boolean;
 }
-export const ServiceWrapper =
-    styled.div <
-    ServiceWrapperProps >
-    `
+export const ServiceWrapper = styled.div<ServiceWrapperProps>`
     min-height: 10em;
     display: flex;
     flex-direction: column;

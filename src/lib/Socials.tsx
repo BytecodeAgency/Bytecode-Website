@@ -55,10 +55,7 @@ export const SocialIcon: React.FC<SocialIconProps> = ({ url, social }) => {
 interface ContainerProps {
     isFooter?: boolean;
 }
-const SocialsContainer =
-    styled.div <
-    ContainerProps >
-    `
+const SocialsContainer = styled.div<ContainerProps>`
     display: flex;
     justify-content: ${(props) => (props.isFooter ? 'left' : 'center')};
     margin-top: ${(props) => (props.isFooter ? '-40px' : 'initial')};

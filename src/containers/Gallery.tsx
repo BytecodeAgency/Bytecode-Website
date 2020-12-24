@@ -10,10 +10,7 @@ interface GalleryProps {
     md?: number;
     lg?: number;
 }
-const Gallery =
-    styled.section <
-    GalleryProps >
-    `
+const Gallery = styled.section<GalleryProps>`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

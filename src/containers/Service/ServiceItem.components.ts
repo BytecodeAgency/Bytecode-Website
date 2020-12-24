@@ -16,10 +16,7 @@ interface StyledContainerProps {
     light?: boolean;
     src?: string;
 }
-export const StyledContainer =
-    styled(Container) <
-    StyledContainerProps >
-    `
+export const StyledContainer = styled(Container)<StyledContainerProps>`
     @media (${mediaQueryMin.sm}) {
         margin: ${(props) =>
             props.light || !props.src
@@ -44,10 +41,7 @@ export const StyledContainer =
 interface StyledRowProps {
     light?: boolean;
 }
-export const StyledRow =
-    styled(Row) <
-    StyledRowProps >
-    `
+export const StyledRow = styled(Row)<StyledRowProps>`
     background-color: ${(props) =>
         props.light ? theme.colors.secondary : theme.colors.background};
     flex-direction: column-reverse;

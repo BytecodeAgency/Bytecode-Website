@@ -4,6 +4,9 @@ import theme from '../styles/theme';
 import { QuoteProps } from './Typography.types';
 
 const { fontWeights, fonts, typography } = theme;
+
+const { caption } = typography;
+
 const QuoteText = styled.blockquote`
     font-weight: ${fontWeights.light};
     line-height: 1.2em;
@@ -30,6 +33,15 @@ export const Subtitle = styled.p`
     letter-spacing: ${typography.subtitle.spacing};
     font-size: 0.85rem;
     margin-bottom: 0.5em;
+`;
+
+export const Caption = styled.a`
+    font-size: ${caption.size};
+    line-height: ${caption.height};
+    letter-spacing: ${caption.spacing};
+    font-family: ${caption.font};
+    font-weight: ${caption.weight};
+    color: ${caption.color};
 `;
 
 export const Quote: React.FC<QuoteProps> = ({ author, url, children }) => {

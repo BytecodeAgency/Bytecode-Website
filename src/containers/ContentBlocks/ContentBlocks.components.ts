@@ -9,10 +9,7 @@ interface TextAndImageBaseProps {
     grid?: string;
     fluid?: boolean;
 }
-export const TextAndImageBase =
-    styled.div <
-    TextAndImageBaseProps >
-    `
+export const TextAndImageBase = styled.div<TextAndImageBaseProps>`
     max-width: 100% !important;
     display: flex;
     flex-direction: column;
@@ -25,14 +22,13 @@ export const TextAndImageBase =
         grid-column-gap: ${(props) => props.gutter};
     }
     @media (${mediaQueryMin.md}) {
-        grid-template: auto / ${containerWidth.sm} ${(props) => props.grid} ${
-        containerWidth.sm
-    };
+        grid-template: auto / ${containerWidth.sm} ${(props) => props.grid} ${containerWidth.sm};
     }
     @media (${mediaQueryMin.lg}) {
         grid-template: auto / ${(props) =>
-            props.fluid ? containerWidth.md : containerWidth.xl} ${(props) =>
-        props.grid} ${containerWidth.md};
+                props.fluid ? containerWidth.md : containerWidth.xl} ${(
+                props
+            ) => props.grid} ${containerWidth.md};
     }
 `;
 
@@ -41,10 +37,7 @@ interface ImageWrapperProps {
     small?: boolean;
     transform?: string;
 }
-export const ImageWrapper =
-    styled.figure <
-    ImageWrapperProps >
-    `
+export const ImageWrapper = styled.figure<ImageWrapperProps>`
     grid-area: ${(props) => props.pos};
     width: ${(props) => (props.small ? '70%' : '100%')};
     margin: 1em 1em;
@@ -64,10 +57,7 @@ interface ContentWrapperProps {
     reverse?: boolean;
     fluid?: boolean;
 }
-export const ContentWrapper =
-    styled.div <
-    ContentWrapperProps >
-    `
+export const ContentWrapper = styled.div<ContentWrapperProps>`
     margin: 2em 1em;
     max-width: 100vw;
     @media (${mediaQueryMin.xs}) {
@@ -85,10 +75,7 @@ export const ContentWrapper =
 interface GalleryWrapperProps {
     width?: number;
 }
-export const GalleryWrapper =
-    styled.section <
-    GalleryWrapperProps >
-    `
+export const GalleryWrapper = styled.section<GalleryWrapperProps>`
     display: flex;
     & > * {
         width: ${(props) => props.width || 100}%;

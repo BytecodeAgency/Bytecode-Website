@@ -13,10 +13,7 @@ interface MainHeaderProps {
     hero?: boolean;
     blendMode?: string;
 }
-export const MainHeader =
-    styled.header <
-    MainHeaderProps >
-    `
+export const MainHeader = styled.header<MainHeaderProps>`
      background: url(${(props) => props.img})
             ${(props) =>
                 props.shadow &&

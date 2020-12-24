@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Button from '../components/Button/Button';
 import AllSocials from '../lib/Socials';
 import theme from '../styles/theme';
+import { Subtitle } from '../components/Typography';
 
 const { mediaQueryMin } = theme;
 const container = theme.containerWidth;
@@ -171,7 +172,7 @@ const Footer: React.FC<FooterProps> = () => (
                     </FooterLink>
                     <FooterLink href="tel:+31152024222">015-2024222</FooterLink>
                     <FooterSpacer />
-                    <p className="subtitle">Legal</p>
+                    <Subtitle>Legal</Subtitle>
                     <p>
                         KvK: 71497560
                         <br />
@@ -183,7 +184,7 @@ const Footer: React.FC<FooterProps> = () => (
             </FooterCol>
             <FooterCol>
                 <FooterHeadingContainer>
-                    <p className="subtitle">Kom langs</p>
+                    <Subtitle>Kom langs</Subtitle>
                 </FooterHeadingContainer>
                 <p>
                     Verl. Spiegelmakersstraat 13
@@ -202,7 +203,7 @@ const Footer: React.FC<FooterProps> = () => (
             </FooterCol>
             <FooterCol>
                 <FooterHeadingContainer>
-                    <p className="subtitle">Broncode website</p>
+                    <Subtitle>Broncode website</Subtitle>
                 </FooterHeadingContainer>
                 <p>
                     Wij dragen graag bij aan open source projecten en vrije
@@ -220,7 +221,7 @@ const Footer: React.FC<FooterProps> = () => (
             </FooterCol>
             <FooterCol>
                 <FooterHeadingContainer>
-                    <p className="subtitle">Documenten</p>
+                    <Subtitle>Documenten</Subtitle>
                 </FooterHeadingContainer>
                 <p>
                     <FooterLink
