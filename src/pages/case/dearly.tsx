@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../../layouts/CaseLayout';
+import Layout from '../../layouts/CaseLayout/CaseLayout';
 import {
     TextAndImage,
     Introduction,
@@ -7,7 +7,7 @@ import {
     ResultsAndNumbers,
     AppStoreBlock,
 } from '../../containers/ContentBlocks/ContentBlocks';
-import Deliverables from '../../containers/Deliverables';
+import Deliverables from '../../containers/Deliverables/Deliverables';
 import Credits from '../../containers/Credits/Credits';
 import Gallery from '../../containers/Gallery';
 import PostThumbnail from '../../containers/Thumbnails/PostThumbnail';
@@ -96,7 +96,7 @@ const Dearly: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h3>Dearly</h3>
-                <p className="Paragraph Big (introduction)">
+                <p>
                     Dearly is opgericht door Quirine Wissink en Pieter van der
                     Oest, die maar al te goed weten hoe het is om een dierbare
                     te verliezen. Beide founders verloren één van hun ouders. Ze
