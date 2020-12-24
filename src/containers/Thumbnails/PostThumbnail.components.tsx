@@ -2,21 +2,12 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import React from 'react';
 import theme from '../../styles/theme';
+import { Subtitle } from '../../components/Typography';
 
 const { mediaQueryMin, colors } = theme;
 const { secondary } = colors;
 
-interface SubtitleBaseProps {
-    className?: string;
-    children?: React.ReactNode;
-}
-
-const SubtitleBase: React.FC<SubtitleBaseProps> = ({
-    className = '',
-    children = '',
-}) => <div className={`subtitle ${className}`}>{children}</div>;
-
-export const Subtitle = styled(SubtitleBase)`
+export const StyledSubtitle = styled(Subtitle)`
     margin-bottom: 0.66rem;
 `;
 
@@ -53,20 +44,14 @@ export const ThumbnailBase = styled(Link)`
 interface ThumbnailProps {
     big?: boolean;
 }
-export const ThumbnailContent =
-    styled.div <
-    ThumbnailProps >
-    `
+export const ThumbnailContent = styled.div<ThumbnailProps>`
     padding: 1.33em 1em;
     background-color: ${(props) =>
         props.big ? 'transparent' : theme.colors.secondary};
     height: ${(props) => (props.big ? '5rem' : '13rem')};
 `;
 
-const ThumbnailImgBase =
-    styled.figure <
-    ThumbnailProps >
-    `
+const ThumbnailImgBase = styled.figure<ThumbnailProps>`
     background: ${secondary};
     background-position: center center;
     background-size: cover;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Subtitle,
+    StyledSubtitle,
     ThumbnailBase,
     ThumbnailContent,
     ThumbnailImg,
@@ -32,7 +32,7 @@ const PostThumbnail: React.FC<PostThumbnailProps> = ({
         <ThumbnailBase to={slug}>
             <ThumbnailImg big={big} img={postImageUrl} />
             <ThumbnailContent big={big}>
-                <Subtitle className="subtitle">{category}</Subtitle>
+                <StyledSubtitle>{category}</StyledSubtitle>
                 <h5>{cutOffText(title, 80)}</h5>
                 <a className="thumbnail-cta caption" href={slug}>
                     Lees meer
