@@ -54,7 +54,7 @@ const Layout: React.FC<LayoutProps> = ({ children, pageSettings }) => {
                 tagline={description}
                 img={image}
             />
-            <Main className="main">
+            <Main>
                 <TypographyClassStyling />
                 {children}
             </Main>

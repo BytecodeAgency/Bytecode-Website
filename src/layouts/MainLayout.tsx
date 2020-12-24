@@ -80,7 +80,7 @@ const Layout: React.FC<LayoutProps> = ({
             <GlobalStyles />
             <SEO title={title} description={description} keywords={keywords} />
             <Navbar background />
-            <Main padded={padded} className="main">
+            <Main padded={padded}>
                 <TypographyClassStyling />
                 {children}
                 <MaybeRenderPopup />
