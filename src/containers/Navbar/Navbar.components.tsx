@@ -4,11 +4,8 @@ import { transparentize } from 'polished'; // TODO: Remove dependency
 import { Link } from 'gatsby';
 import theme from '../../styles/theme';
 
-const { mediaQueryMin, colors } = theme;
-
-const NavBarLi = styled.li`
-    margin: 1em 0;
-`;
+const { mediaQueryMin, colors, typography } = theme;
+const { menuitem, li } = typography;
 
 interface ContainerProps {
     atScrollTop?: boolean;
@@ -85,6 +82,12 @@ const StyledLink = styled(Link)`
     position: relative;
     transition: all 0.2s ease;
     text-decoration: none;
+    font-size: ${menuitem.size};
+    line-height: ${menuitem.height};
+    letter-spacing: ${menuitem.spacing};
+    font-family: ${menuitem.font};
+    font-weight: ${menuitem.weight};
+    color: ${menuitem.color};
     &::after {
         content: '';
         position: absolute;
@@ -104,26 +107,14 @@ const StyledLink = styled(Link)`
     }
 `;
 
-interface ItemBaseProps {
-    className?: string;
-    href: string;
-    text: string;
-}
-const NavbarItemBase: React.FC<ItemBaseProps> = ({
-    className = '',
-    href,
-    text,
-}) => (
-    <NavBarLi className={className}>
-        <StyledLink to={href} className="menuitem">
-            {text}
-        </StyledLink>
-    </NavBarLi>
-);
-
-export const NavbarItem = styled(NavbarItemBase)`
+const NavBarLi = styled.li`
+    margin: 1em 0;
     display: inline-block;
     padding: 0 1.33em;
+    letter-spacing: ${li.spacing};
+    font-family: ${li.font};
+    font-weight: ${li.weight};
+    color: ${li.color};
     &:last-child {
         padding-right: 0;
     }
@@ -135,6 +126,16 @@ export const NavbarItem = styled(NavbarItemBase)`
         }
     }
 `;
+
+interface ItemBaseProps {
+    href: string;
+    text: string;
+}
+export const NavbarItem: React.FC<ItemBaseProps> = ({ href, text }) => (
+    <NavBarLi>
+        <StyledLink to={href}>{text}</StyledLink>
+    </NavBarLi>
+);
 
 export const Logo = styled.span`
     display: block;

@@ -74,8 +74,6 @@ const ThumbnailImgContent = styled.img`
     }
 `;
 
-export const StyledLink = styled.a``;
-
 interface ThumbnailImgProps {
     img: string;
     alt?: string;
