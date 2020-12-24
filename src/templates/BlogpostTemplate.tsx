@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import BlogpostLayout from '../layouts/BlogpostLayout';
+import BlogpostLayout from '../layouts/BlogpostLayout/BlogpostLayout';
 import { BlogpostTemplateProps } from './BlogpostTemplate.types';
 
 // TODO: Add props validation for Gatbsy query

@@ -1,10 +1,10 @@
 import React from 'react';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { BlogpostSingleProps, CallToActionProps } from './BlogpostLayout.types';
-import Layout from './MainLayout';
-import Author from '../containers/Author/Author';
-import { Small } from '../components/Typography';
-import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSubscribe';
+import Layout from '../MainLayout';
+import Author from '../../containers/Author/Author';
+import { Small } from '../../components/Typography';
+import NewsletterSubscribe from '../../containers/NewsletterSubscribe/NewsletterSubscribe';
 import {
     Article,
     ArticleHeader,
@@ -53,7 +53,7 @@ const BlogSingle: React.FC<BlogpostSingleProps> = ({ content }) => (
                 <Title>{content.title}</Title>
                 <ArticleImageWrapper>
                     <ArticleImage
-                        src={require(`../images/img/articles/${content.article_image_url}`)}
+                        src={require(`../../images/img/articles/${content.article_image_url}`)}
                     />
                 </ArticleImageWrapper>
                 <MetaData>
