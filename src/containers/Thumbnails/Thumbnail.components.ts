@@ -20,13 +20,7 @@ export const ThumbnailContainer = styled.div`
     }
 `;
 
-interface ImageContainerProps {
-    backgroundURL?: string;
-}
-export const ServiceImageContainer =
-    styled.div <
-    ImageContainerProps >
-    `
+export const ServiceImageContainer = styled.div<{ backgroundURL?: string }>`
     display: flex;
     justify-content: center;
     align-items: center;

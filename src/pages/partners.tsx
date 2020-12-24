@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from '../lib/Grid';
-import Layout from '../layouts/MainLayout';
+import Layout from '../layouts/MainLayout/MainLayout';
 import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import Wrapper from '../components/Wrapper';
 import ContactForm from '../containers/ContactForm/ContactForm';
@@ -9,7 +9,7 @@ import {
     TextAndImage,
     ProfilePicture,
 } from '../containers/ContentBlocks/ContentBlocks';
-import { Big, Quote } from '../components/Typography';
+import { Big, Quote } from '../components/Typography/Typography';
 import theme from '../styles/theme';
 import Service from '../containers/Service/Service';
 

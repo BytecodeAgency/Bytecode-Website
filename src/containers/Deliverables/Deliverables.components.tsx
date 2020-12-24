@@ -1,14 +1,12 @@
-import React from 'react';
 import styled from 'styled-components';
-import theme from '../styles/theme';
-// TODO: move to ContentBlocks folder
+import theme from '../../styles/theme';
 
-const plusBullet = require('../images/icons/ui/plus-bullet.svg');
+const plusBullet = require('../../images/icons/ui/plus-bullet.svg');
 
 const { colors, mediaQueryMin } = theme;
 const { secondary } = colors;
 
-const DeliverablesBase = styled.section`
+export const DeliverablesBase = styled.section`
     @media (${mediaQueryMin.sm}) {
         margin-left: 5vw;
         align-content: center;
@@ -16,7 +14,7 @@ const DeliverablesBase = styled.section`
     }
 `;
 
-const DeliverablesContent = styled.div`
+export const DeliverablesContent = styled.div`
     grid-row: 2/4;
     grid-column: 2/9;
     z-index: 1;
@@ -34,7 +32,7 @@ const DeliverablesContent = styled.div`
     }
 `;
 
-const List = styled.ul`
+export const List = styled.ul`
     vertical-align: middle;
     display: table-cell;
     @media (${mediaQueryMin.xs}) {
@@ -47,29 +45,8 @@ const List = styled.ul`
     }
 `;
 
-const Deliverable = styled.li`
+export const Deliverable = styled.li`
     margin: 0 0.1em;
     margin-bottom: 0.66em;
     font-size: 1.11em;
 `;
-
-interface Props {
-    deliverables: string[];
-}
-
-const Deliverables: React.FC<Props> = ({ deliverables }) => {
-    return (
-        <DeliverablesBase>
-            <DeliverablesContent>
-                <p className="subtitle">Deliverables</p>
-                <List>
-                    {deliverables.map((item) => {
-                        return <Deliverable>{item}</Deliverable>;
-                    })}
-                </List>
-            </DeliverablesContent>
-        </DeliverablesBase>
-    );
-};
-
-export default Deliverables;

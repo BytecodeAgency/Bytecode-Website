@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import theme from '../styles/theme';
-import { Big, Small } from '../components/Typography';
+import theme from '../../styles/theme';
+import { Big, Small, Subtitle } from '../../components/Typography/Typography';
 
 const { mediaQueryMin, colors } = theme;
 
@@ -117,15 +117,12 @@ export const SubtitleContainer = styled.div`
     text-transform: uppercase;
     align-items: flex-end;
     padding: 0 1em;
-    span,
-    p {
-        opacity: 0.3;
-        color: ${colors.lightgray};
-    }
 `;
 
 export const ReadingTime = styled(Small)`
     margin-bottom: 2px;
+    opacity: 0.3;
+    color: ${colors.lightgray};
 `;
 
 export const ArticleImage = styled.img`
@@ -142,4 +139,11 @@ export const CallToActionText = styled.p`
     font-weight: ${theme.fontWeights.regular} !important;
     font-style: italic;
     color: ${theme.colors.lightgray} !important;
+`;
+
+export const StyledSubtitle = styled(Subtitle)`
+    margin-top: 0.66em;
+    margin-bottom: 0.33em;
+    font-weight: ${theme.fontWeights.regular};
+    font-size: 1.125rem;
 `;

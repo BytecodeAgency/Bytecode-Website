@@ -8,14 +8,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-
-interface SEOProps {
-    description?: string;
-    lang?: string;
-    meta?: [];
-    keywords?: string;
-    title: string;
-}
+import SEOProps from './SEO.types';
 
 const SEO: React.FC<SEOProps> = ({
     description = ``,
@@ -35,7 +28,7 @@ const SEO: React.FC<SEOProps> = ({
                     }
                 }
             }
-        `,
+        `
     );
 
     const metaDescription = description || site.siteMetadata.description;

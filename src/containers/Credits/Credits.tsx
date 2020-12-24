@@ -7,19 +7,8 @@ import {
     CreditsContainer,
     TitleContainer,
 } from './Credits.components';
+import CreditsProps from './Credits.types';
 
-type ColumnData = {
-    title: string,
-    content: string[],
-};
-
-interface Props {
-    special: string[];
-    resources: string[];
-    resourceLinks: string[];
-    columnOne: ColumnData[];
-    columnTwo: ColumnData[];
-}
 const getGridTemplateRows = (lengthOne: number, lengthTwo: number): string => {
     const largestNumber = Math.max(lengthOne, lengthTwo, 2);
     let gridTemplateRows = '';
@@ -29,7 +18,8 @@ const getGridTemplateRows = (lengthOne: number, lengthTwo: number): string => {
     gridTemplateRows += ';';
     return gridTemplateRows;
 };
-const Credits: React.FC<Props> = ({
+
+const Credits: React.FC<CreditsProps> = ({
     special,
     resources,
     resourceLinks,
@@ -38,7 +28,7 @@ const Credits: React.FC<Props> = ({
 }) => {
     const gridTemplate = getGridTemplateRows(
         columnOne.length,
-        columnTwo.length,
+        columnTwo.length
     );
     return (
         <CreditsContainer>

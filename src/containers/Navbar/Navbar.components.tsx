@@ -3,22 +3,15 @@ import styled from 'styled-components';
 import { transparentize } from 'polished'; // TODO: Remove dependency
 import { Link } from 'gatsby';
 import theme from '../../styles/theme';
+import { NavbarItemProps } from './Navbar.types';
 
-const { mediaQueryMin, colors } = theme;
+const { mediaQueryMin, colors, typography } = theme;
+const { menuitem, li } = typography;
 
-const NavBarLi = styled.li`
-    margin: 1em 0;
-`;
-
-interface ContainerProps {
+export const NavbarContainer = styled.nav<{
     atScrollTop?: boolean;
     background?: boolean;
-}
-
-export const NavbarContainer =
-    styled.nav <
-    ContainerProps >
-    `
+}>`
     position: fixed;
     width: 100%;
     z-index: 10000;
@@ -51,13 +44,8 @@ export const NavbarContainer =
     @media (${mediaQueryMin.lg}) {
     }
 `;
-interface ContentProps {
-    menuIsOpen?: boolean;
-}
-export const NavbarContent =
-    styled.div <
-    ContentProps >
-    `
+
+export const NavbarContent = styled.div<{ menuIsOpen?: boolean }>`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,9 +56,7 @@ export const NavbarContent =
         justify-content: space-between;
 
         position: fixed;
-        transform: translateX(
-            ${(props) => (props.menuIsOpen ? 0 : '65em')}
-        );
+        transform: translateX(${(props) => (props.menuIsOpen ? 0 : '65em')});
         top: 0;
         bottom: 0;
 
@@ -93,6 +79,12 @@ const StyledLink = styled(Link)`
     position: relative;
     transition: all 0.2s ease;
     text-decoration: none;
+    font-size: ${menuitem.size};
+    line-height: ${menuitem.height};
+    letter-spacing: ${menuitem.spacing};
+    font-family: ${menuitem.font};
+    font-weight: ${menuitem.weight};
+    color: ${menuitem.color};
     &::after {
         content: '';
         position: absolute;
@@ -112,26 +104,14 @@ const StyledLink = styled(Link)`
     }
 `;
 
-interface ItemBaseProps {
-    className?: string;
-    href: string;
-    text: string;
-}
-const NavbarItemBase: React.FC<ItemBaseProps> = ({
-    className = '',
-    href,
-    text,
-}) => (
-    <NavBarLi className={className}>
-        <StyledLink to={href} className="menuitem">
-            {text}
-        </StyledLink>
-    </NavBarLi>
-);
-
-export const NavbarItem = styled(NavbarItemBase)`
+const NavBarLi = styled.li`
+    margin: 1em 0;
     display: inline-block;
     padding: 0 1.33em;
+    letter-spacing: ${li.spacing};
+    font-family: ${li.font};
+    font-weight: ${li.weight};
+    color: ${li.color};
     &:last-child {
         padding-right: 0;
     }
@@ -143,6 +123,12 @@ export const NavbarItem = styled(NavbarItemBase)`
         }
     }
 `;
+
+export const NavbarItem: React.FC<NavbarItemProps> = ({ href, text }) => (
+    <NavBarLi>
+        <StyledLink to={href}>{text}</StyledLink>
+    </NavBarLi>
+);
 
 export const Logo = styled.span`
     display: block;
@@ -199,13 +185,7 @@ export const CloseMenuButton = styled(MenuButton)`
     }
 `;
 
-interface OverlayProps {
-    menuIsOpen?: boolean;
-}
-export const BlackOverlay =
-    styled.div <
-    OverlayProps >
-    `
+export const BlackOverlay = styled.div<{ menuIsOpen?: boolean }>`
     position: fixed;
     top: 0;
     right: 0;

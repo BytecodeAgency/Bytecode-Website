@@ -3,17 +3,13 @@ import theme from '../styles/theme';
 
 const { mediaQueryMin } = theme;
 
-interface GalleryProps {
+const Gallery = styled.section<{
     padded?: boolean;
     xs?: number;
     sm?: number;
     md?: number;
     lg?: number;
-}
-const Gallery =
-    styled.section <
-    GalleryProps >
-    `
+}>`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

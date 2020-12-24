@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../../layouts/MainLayout';
+import Layout from '../../layouts/MainLayout/MainLayout';
 import { Container, Row as RowBase } from '../../lib/Grid';
 
 const pageSettings = {

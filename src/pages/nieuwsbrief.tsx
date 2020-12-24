@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../layouts/MainLayout';
+import Layout from '../layouts/MainLayout/MainLayout';
 import { Container, Row, Col } from '../lib/Grid';
 import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSubscribe';
 

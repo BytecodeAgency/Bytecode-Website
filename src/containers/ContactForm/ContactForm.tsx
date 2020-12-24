@@ -5,7 +5,7 @@
 // TODO: Change class to be const Component = props => <JSX />
 import React, { useState } from 'react';
 import axios from 'axios';
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import TextBlock from '../TextBlock/TextBlock';
 import InputField from '../../components/InputField';
 import {
@@ -13,7 +13,7 @@ import {
     InputTextArea,
     StyledNotification,
 } from './ContactForm.components';
-import Button from '../../components/Button';
+import Button from '../../components/Button/Button';
 
 interface NotificationProps {
     type: string;
@@ -37,7 +37,9 @@ const ContactForm: React.FC<Record<string, never>> = () => {
     const [formValues, setFormValues] = useState(initialFormValues);
     // eslint-disable-next-line prettier/prettier
     const [notifications, setNotifications] = useState<NotificationType[]>([]);
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
         setFormValues({
             ...formValues,
             [e.target.id]: e.target.value,
@@ -83,7 +85,6 @@ const ContactForm: React.FC<Record<string, never>> = () => {
                     aria-label="contact"
                     value={formValues.contact}
                     onChange={handleChange}
-                    className="text-input"
                 />
                 <InputField
                     id="email"
@@ -92,7 +93,6 @@ const ContactForm: React.FC<Record<string, never>> = () => {
                     aria-label="email"
                     value={formValues.email}
                     onChange={handleChange}
-                    className="text-input"
                 />
                 <InputField
                     id="phone"
@@ -101,7 +101,6 @@ const ContactForm: React.FC<Record<string, never>> = () => {
                     aria-label="phone"
                     value={formValues.phone}
                     onChange={handleChange}
-                    className="text-input"
                 />
                 <InputTextArea
                     id="contents"
@@ -109,17 +108,17 @@ const ContactForm: React.FC<Record<string, never>> = () => {
                     aria-label="message"
                     value={formValues.contents}
                     onChange={handleChange}
-                    className="text"
                 />
                 <Button
                     submit
-                    onClick={()=>submit()}
-                    disabled={(
-                        formValues.contact==='' ||
-                        formValues.email==='' ||
-                        formValues.phone==='' ||
-                        formValues.contents===''
-                    )}>
+                    onClick={() => submit()}
+                    disabled={
+                        formValues.contact === '' ||
+                        formValues.email === '' ||
+                        formValues.phone === '' ||
+                        formValues.contents === ''
+                    }
+                >
                     Verzenden
                 </Button>
             </form>

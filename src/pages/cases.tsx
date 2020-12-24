@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../layouts/MainLayout';
+import Layout from '../layouts/MainLayout/MainLayout';
 import Container from '../containers/Container';
 import Gallery from '../containers/Gallery';
 import TextBlock from '../containers/TextBlock/TextBlock';

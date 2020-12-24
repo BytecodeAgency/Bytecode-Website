@@ -1,11 +1,11 @@
 import React from 'react';
-import Layout from '../../layouts/CaseLayout';
+import Layout from '../../layouts/CaseLayout/CaseLayout';
 import {
     Introduction,
     Section,
     TextAndImage,
 } from '../../containers/ContentBlocks/ContentBlocks';
-import Deliverables from '../../containers/Deliverables';
+import Deliverables from '../../containers/Deliverables/Deliverables';
 import Credits from '../../containers/Credits/Credits';
 import Gallery from '../../containers/Gallery';
 import PostThumbnail from '../../containers/Thumbnails/PostThumbnail';
@@ -56,7 +56,7 @@ const Case: React.FC<Record<string, never>> = () => (
             alt="Afbeelding van een eneco webpagina"
         >
             <h3>Ga voor duurzaam</h3>
-            <p className="Paragraph Big (introduction">
+            <p>
                 Energiebedrijf Eneco is in het afgelopen jaar bezig geweest met
                 de ontwikkeling <a href={omschakelaar}>“De Omschakelaar”</a>,
                 een nieuwe online tool. Met behulp van deze tool kunnen
@@ -75,7 +75,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h3>De uitdaging</h3>
-                <p className="Paragraph Big (introduction)">
+                <p>
                     Om bewust te worden van het “omschakeltype” dat zij zijn,
                     doorlopen gebruikers een aantal stellingen die ingaan op hun
                     houding tegenover duurzaamheid. Op basis van dit type en de
@@ -91,7 +91,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 padded
             >
                 <h2>Eneco</h2>
-                <p className="big">
+                <p>
                     Eneco is een energiebedrijf met een grote focus op
                     duurzaamheid en maatschappelijke betrokkenheid. Met&nbsp;
                     <a href={omschakelaar}>De Omschakelaar</a> beantwoordt Eneco
@@ -108,7 +108,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 padded
             >
                 <h2>Resultaat</h2>
-                <p className="big">
+                <p>
                     Het resultaat van de “De Omschakelaar”-tool staat nu{' '}
                     <a href={omschakelaar}>online</a> en is klaar om mensen naar
                     een duurzamere levensstijl te helpen. Op dit moment promoot

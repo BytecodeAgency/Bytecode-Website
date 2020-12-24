@@ -1,12 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
-import Layout from '../../layouts/CaseLayout';
+import Layout from '../../layouts/CaseLayout/CaseLayout';
 import {
     TextAndImage,
     Introduction,
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
-import Deliverables from '../../containers/Deliverables';
+import Deliverables from '../../containers/Deliverables/Deliverables';
+import { Subtitle } from '../../components/Typography/Typography';
 
 const usecase = require('../../images/img/cases/dawny/usecase.png');
 const lockup = require('../../images/img/cases/dawny/lockup2.png');
@@ -32,7 +33,7 @@ const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={lockup} alt="Nonin apparaat met app">
             <h2>Introducing: Dawny</h2>
-            <p className="introduction">
+            <p>
                 Bytecode en het Reinier de Graaf Gasthuis slaan de handen ineen
                 om een oplossing te vinden die kan leiden tot het voorkomen van
                 een nachtelijke val en het vroegtijdig herkennen van
@@ -52,7 +53,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h2>De uitdaging</h2>
-                <p className="introduction">
+                <p>
                     Van de senioren (55 jaar en ouder) die een heup breken,
                     overlijdt bijna 25% binnen een jaar na het oplopen van de
                     heupfractuur
@@ -63,9 +64,9 @@ const Case: React.FC<Record<string, never>> = () => (
                 </p>
             </Introduction>
             <TextAndImage img={graph} alt="Nonin apparaat met app" fluid>
-                <p className="subtitle">Development</p>
+                <Subtitle>Development</Subtitle>
                 <h3>Minder analyse, meer controle</h3>
-                <p className="big">
+                <p>
                     Een Android app verzamelt de slaapdata (hartslag,
                     zuurstofwaarden, PAI en HRV) vanaf de Nonin WristOx2
                     wearable.
@@ -79,9 +80,9 @@ const Case: React.FC<Record<string, never>> = () => (
                 reverse
                 fluid
             >
-                <p className="subtitle">Design</p>
+                <Subtitle>Design</Subtitle>
                 <h3>Inzichtgevende tools</h3>
-                <p className="big">
+                <p>
                     Het dashboard biedt inzicht in de nachtelijke slaapdata.
                     Correlaties tussen slaapdata en slaapstadia kunnen worden
                     onderzocht, herkend en vergeleken.
@@ -89,7 +90,7 @@ const Case: React.FC<Record<string, never>> = () => (
             </TextAndImage>
             <TextAndImage img={data} alt="Nonin apparaat met app" fluid>
                 <h3>Statistische analyse</h3>
-                <p className="big">
+                <p>
                     Door middel van verschillende export functies kan data
                     gemakkelijk in SPSS worden ingeladen voor statistische
                     analyses.
@@ -98,9 +99,9 @@ const Case: React.FC<Record<string, never>> = () => (
         </Section>
         <Section>
             <TextAndImage padded fluid img={team} alt="Nonin apparaat met app">
-                <p className="subtitle">Resultaten</p>
+                <Subtitle>Resultaten</Subtitle>
                 <h2>Altijd in ontwikkeling</h2>
-                <p className="big">
+                <p>
                     Er is een uitgebreide roadmap voor het project opgesteld.
                     Met verbeteringen in het garanderen van de privacy van
                     patiënten en extra datapunten gaan de onderzoekers van het

@@ -12,14 +12,10 @@ export const StyledImage = styled.img`
     background-color: ${theme.colors.secondary};
 `;
 
-interface StyledContainerProps {
+export const StyledContainer = styled(Container)<{
     light?: boolean;
     src?: string;
-}
-export const StyledContainer =
-    styled(Container) <
-    StyledContainerProps >
-    `
+}>`
     @media (${mediaQueryMin.sm}) {
         margin: ${(props) =>
             props.light || !props.src
@@ -41,13 +37,7 @@ export const StyledContainer =
     }
 `;
 
-interface StyledRowProps {
-    light?: boolean;
-}
-export const StyledRow =
-    styled(Row) <
-    StyledRowProps >
-    `
+export const StyledRow = styled(Row)<{ light?: boolean }>`
     background-color: ${(props) =>
         props.light ? theme.colors.secondary : theme.colors.background};
     flex-direction: column-reverse;

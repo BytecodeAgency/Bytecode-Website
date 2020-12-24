@@ -11,14 +11,9 @@ const { mediaQueryMin } = theme;
 const container = theme.containerWidth;
 
 // TODO: Why is everything so !important?
-
-interface ContainerProps {
+export const Container = styled(ContainerBase)<{
     fluid?: boolean;
-}
-export const Container =
-    styled(ContainerBase) <
-    ContainerProps >
-    `
+}>`
     max-width: unset !important;
     margin: 1em ${(props) => (props.fluid ? '0' : container.sm)} !important;
     padding-left: 0 !important;
@@ -29,8 +24,7 @@ export const Container =
     }
 
     @media (${mediaQueryMin.lg}) {
-        margin: 2.5vw ${(props) =>
-            props.fluid ? '0' : container.lg} !important;
+        margin: 2.5vw ${(props) => (props.fluid ? '0' : container.lg)} !important;
     }
 
     @media (${mediaQueryMin.xl}) {

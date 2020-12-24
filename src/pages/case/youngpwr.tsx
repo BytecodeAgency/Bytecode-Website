@@ -1,15 +1,16 @@
 import React from 'react';
-import Layout from '../../layouts/CaseLayout';
+import Layout from '../../layouts/CaseLayout/CaseLayout';
 import {
     TextAndImage,
     Introduction,
     Section,
     ResultsAndNumbers,
 } from '../../containers/ContentBlocks/ContentBlocks';
-import Deliverables from '../../containers/Deliverables';
+import Deliverables from '../../containers/Deliverables/Deliverables';
 import Credits from '../../containers/Credits/Credits';
 import Gallery from '../../containers/Gallery';
 import PostThumbnail from '../../containers/Thumbnails/PostThumbnail';
+import { Subtitle } from '../../components/Typography/Typography';
 
 // section for image imports in the form of const img = require(url);
 const useCase = require('../../images/img/cases/youngpwr/case-youngpwr-teamfoto.png');
@@ -63,7 +64,7 @@ const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={match} alt="Match tussen CEO en youngpwr">
             <h3>Van leren naar matchen</h3>
-            <p className="Paragraph Big (introduction)">
+            <p>
                 Als partner van <a href="https://youngpwr.nl/">Youngpwr</a>{' '}
                 ontwikkelen we een platform waar jongeren terecht kunnen voor
                 informatie over ondernemen en werken. Dit platform is bedoeld om
@@ -87,7 +88,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h3>Ondersteuning bij werk en ondernemen</h3>
-                <p className="Paragraph Big (introduction)">
+                <p>
                     Een plek waar jongeren hun ondernemende kant kunnen
                     ontwikkelen en opdrachten kunnen vinden: dat is het doel van
                     Youngpwr. Wij hebben ons als partner aangesloten, omdat we
@@ -104,9 +105,9 @@ const Case: React.FC<Record<string, never>> = () => (
                 alt="Onderzoek over waar mensen klikken op de website"
                 padded
             >
-                <p className="subtitle">Research</p>
+                <Subtitle>Research</Subtitle>
                 <h2>Een platform dat aansluit</h2>
-                <p className="big">
+                <p>
                     Tijdens de ontwikkeling en livegang is het contentplatform
                     getest met gebruikers, onder andere via een pilot. Met
                     kwalitatief en kwantitatief onderzoek is data verzameld. Op
@@ -123,9 +124,9 @@ const Case: React.FC<Record<string, never>> = () => (
                 reverse
                 padded
             >
-                <p className="subtitle">Research</p>
+                <Subtitle>Research</Subtitle>
                 <h3>Efficiëntie voorop</h3>
-                <p className="big">
+                <p>
                     Omdat het matchingplatform niet direct gebouwd kon worden,
                     is het belangrijk om wel tractie te genereren, terwijl we
                     efficient met het beschikbare budget omgaan. Door een sterke
@@ -139,9 +140,9 @@ const Case: React.FC<Record<string, never>> = () => (
                 alt="Automatisering van pipeline"
                 padded
             >
-                <p className="subtitle">Development</p>
+                <Subtitle>Development</Subtitle>
                 <h3>Een duurzame oplossing</h3>
-                <p className="big">
+                <p>
                     Tijdens de ontwikkeling hebben we gezorgd dat de codebase
                     ook gebruikt kan worden voor de doorontwikkeling naar het
                     matching platform. Ook is het configureren van de servers en
@@ -157,9 +158,9 @@ const Case: React.FC<Record<string, never>> = () => (
                 padded
                 reverse
             >
-                <p className="subtitle">Development</p>
+                <Subtitle>Development</Subtitle>
                 <h3>De technische kant</h3>
-                <p className="big">
+                <p>
                     We hebben de achterkant van het matchingplatform al volledig
                     opgezet en solide gemaakt, zodat we bij de volgende
                     ontwikkelingsronde direct kunnen beginnen met ontwikkeling,

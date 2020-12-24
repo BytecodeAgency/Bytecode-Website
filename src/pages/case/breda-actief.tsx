@@ -1,12 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
-import Layout from '../../layouts/CaseLayout';
+import Layout from '../../layouts/CaseLayout/CaseLayout';
 import {
     TextAndImage,
     Introduction,
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
-import Deliverables from '../../containers/Deliverables';
+import Deliverables from '../../containers/Deliverables/Deliverables';
+import { Subtitle } from '../../components/Typography/Typography';
 
 const featured = require('../../images/img/cases/breda-actief/featured.svg');
 const responsive = require('../../images/img/cases/breda-actief/responsive.svg');
@@ -31,7 +32,7 @@ const Case: React.FC<Record<string, never>> = () => (
             alt="Responsive website van Breda Actief"
         >
             <h2>Responsive website</h2>
-            <p className="introduction">
+            <p>
                 Voor een maatschappelijk betrokken organisatie zoals stichting
                 Breda Actief is webtoegankelijkheid erg belangrijk om haar doel
                 te bereiken, want als je er voor wil zorgen dat écht{' '}
@@ -52,7 +53,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h2>De uitdaging</h2>
-                <p className="introduction">
+                <p>
                     Breda Actief is een grote organisatie, en meerdere mensen
                     binnen de organisatie willen de content op de website kunnen
                     aanpassen. Toch is het belangrijk dat de website een
@@ -60,8 +61,8 @@ const Case: React.FC<Record<string, never>> = () => (
                     prestaties levert.
                 </p>
             </Introduction>
-            <TextAndImage img={wieiswie} reverse alt="Uptime prestaties">
-                <p className="subtitle">prestaties</p>
+            <TextAndImage img={wieiswie} reverse alt="Uptime prestaties" padded>
+                <Subtitle>prestaties</Subtitle>
                 <h3>Toegankelijkheid</h3>
                 <p>
                     De website is volledig toegankelijk voor mensen met een
@@ -73,8 +74,8 @@ const Case: React.FC<Record<string, never>> = () => (
                     bedienen.
                 </p>
             </TextAndImage>
-            <TextAndImage img={administration} alt="Uptime prestaties">
-                <p className="subtitle">prestaties</p>
+            <TextAndImage img={administration} alt="Uptime prestaties" padded>
+                <Subtitle>prestaties</Subtitle>
                 <h3>Consistente huisstijl</h3>
                 <p>
                     Door het gebruik van maatwerk velden in het CMS zorgen we
@@ -86,10 +87,11 @@ const Case: React.FC<Record<string, never>> = () => (
                 fluid
                 img={screens}
                 alt="Meerdere schermen van de website"
+                padded
             >
-                <p className="subtitle">Resultaten</p>
+                <Subtitle>Resultaten</Subtitle>
                 <h2>Realiseren</h2>
-                <p className="introduction">
+                <p>
                     Om Breda Actief zo goed mogelijk te helpen bij het
                     neerzetten van een succesvolle website, hebben we besloten
                     het volgende als oplossing te bieden, om bij te dragen aan

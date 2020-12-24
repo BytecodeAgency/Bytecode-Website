@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../../styles/theme';
-import Button from '../../components/Button';
+import Button from '../../components/Button/Button';
+import { Subtitle } from '../../components/Typography/Typography';
+import { CreditItemProps, CreditItemWithLinksProps } from './Credits.types';
 
 const { mediaQueryMin } = theme;
 export const CreditsContainer = styled.div`
@@ -27,13 +29,7 @@ export const Container = styled.div`
     }
 `;
 
-interface ColumnProps {
-    gridTemplateRows: string;
-}
-export const Column =
-    styled.div <
-    ColumnProps >
-    `
+export const Column = styled.div<{ gridTemplateRows: string }>`
     display: grid;
     grid-template-rows: ${(props) => props.gridTemplateRows};
 `;
@@ -50,24 +46,14 @@ export const CreditText = styled.p`
     margin-bottom: 0.5em;
 `;
 
-interface CreditItemProps {
-    title: string;
-    credits: string[];
-}
 export const CreditItem: React.FC<CreditItemProps> = ({ title, credits }) => (
     <CreditItemContainer>
-        <CreditTitle className="subtitle">{title}</CreditTitle>
+        <Subtitle>{title}</Subtitle>
         {credits.map((credit) => (
-            <CreditText className="Paragraph light">{credit}</CreditText>
+            <CreditText>{credit}</CreditText>
         ))}
     </CreditItemContainer>
 );
-
-interface CreditItemWithLinksProps {
-    title: string;
-    credits: string[];
-    links: string[];
-}
 
 export const CreditItemWithLinks: React.FC<CreditItemWithLinksProps> = ({
     title,
@@ -75,7 +61,7 @@ export const CreditItemWithLinks: React.FC<CreditItemWithLinksProps> = ({
     links,
 }: CreditItemWithLinksProps) => (
     <CreditItemContainer>
-        <CreditTitle className="subtitle">{title}</CreditTitle>
+        <Subtitle>{title}</Subtitle>
         {credits.map((credit, index) => (
             <>
                 <CreditText>{credit}</CreditText>

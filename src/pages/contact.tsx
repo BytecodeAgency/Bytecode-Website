@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../layouts/MainLayout';
+import Layout from '../layouts/MainLayout/MainLayout';
 import ContactForm from '../containers/ContactForm/ContactForm';
 import { Container, Row, Col } from '../lib/Grid';
-import Button from '../components/Button';
-import Header from '../containers/Header';
+import Button from '../components/Button/Button';
+import Header from '../containers/Header/Header';
 
 const pageSettings = {
     title: `Contact`,

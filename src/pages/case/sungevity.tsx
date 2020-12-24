@@ -1,12 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
-import Layout from '../../layouts/CaseLayout';
+import Layout from '../../layouts/CaseLayout/CaseLayout';
 import {
     TextAndImage,
     Introduction,
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
-import Deliverables from '../../containers/Deliverables';
+import Deliverables from '../../containers/Deliverables/Deliverables';
+import { Subtitle } from '../../components/Typography/Typography';
 
 const logo = require('../../images/img/cases/sungevity/logo.svg');
 const header = require('../../images/img/cases/sungevity/header.jpg');
@@ -33,7 +34,7 @@ const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={woco} alt="Woningcorporatie offerteplatform">
             <h2>Woningcorporatie offerteplatform</h2>
-            <p className="introduction">
+            <p>
                 Het Sungevity woningcorporatie platform is een plek waar
                 huurders zich kunnen inschrijven voor het Sungevity
                 zonnepanelenprogramma. Helaas was deze tool niet stabiel genoeg
@@ -53,7 +54,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h2>De uitdaging</h2>
-                <p className="introduction">
+                <p>
                     Door een gedeelte van de tool te herschrijven en een stabile
                     digitale omgeving te creëren, door het gebruik van
                     verschillende cloudservers, is de stabiliteit van het
@@ -63,7 +64,7 @@ const Case: React.FC<Record<string, never>> = () => (
             </Introduction>
             <Section>
                 <TextAndImage img={servers} reverse alt="Uptime prestaties">
-                    <p className="subtitle">prestaties</p>
+                    <Subtitle>prestaties</Subtitle>
                     <h3>Cloudservers</h3>
                     <p>
                         Het opzetten van cloudservers zorgde voor betere
@@ -74,7 +75,7 @@ const Case: React.FC<Record<string, never>> = () => (
             </Section>
             <Section>
                 <TextAndImage img={houses} alt="Huurders">
-                    <p className="subtitle">prestaties</p>
+                    <Subtitle>prestaties</Subtitle>
 
                     <h3>Aanpasbaarheid</h3>
 
@@ -104,9 +105,9 @@ const Case: React.FC<Record<string, never>> = () => (
                 </TextAndImage>
             </Section>
             <TextAndImage img={offerte} alt="offerte pagina">
-                <p className="subtitle">Resultaten</p>
+                <Subtitle>Resultaten</Subtitle>
                 <h2>Realiseren</h2>
-                <p className="introduction">
+                <p>
                     Inmiddels zijn er al acht woningcorporaties opgezet. Mocht
                     een van de websites downtime ondervinden, dan krijgen onze
                     site reliability engineers hier een melding van, zodat er

@@ -33,75 +33,75 @@ const GlobalHeadingSettings = {
 };
 
 type Colors = {
-    background: string,
-    primary: string,
-    secondary: string,
-    tertiary: string,
-    black: string,
-    mediumgray: string,
-    lightgray: string,
-    lightgray2: string,
-    white: string,
+    background: string;
+    primary: string;
+    secondary: string;
+    tertiary: string;
+    black: string;
+    mediumgray: string;
+    lightgray: string;
+    lightgray2: string;
+    white: string;
 };
 type Fonts = {
-    heading: string,
-    paragraph: string,
-    menu: string,
+    heading: string;
+    paragraph: string;
+    menu: string;
 };
 
 type FontWeights = {
-    light: number,
-    regular: number,
-    bold: number,
+    light: number;
+    regular: number;
+    bold: number;
 };
 
 type TypographyElement = {
-    size?: string,
-    height?: string,
-    spacing?: string,
-    font?: string,
-    weight?: number,
-    color?: string,
-    marginTop?: string,
-    marginBottom?: string,
-    marginLeft?: string,
-    marginRight?: string,
+    size?: string;
+    height?: string;
+    spacing?: string;
+    font?: string;
+    weight?: number;
+    color?: string;
+    marginTop?: string;
+    marginBottom?: string;
+    marginLeft?: string;
+    marginRight?: string;
 };
 type Body = TypographyElement & {
-    height: string,
-    spacing: string,
-    font: string,
-    weight: number,
-    color: string,
+    height: string;
+    spacing: string;
+    font: string;
+    weight: number;
+    color: string;
 };
 type TextElement = TypographyElement & {
-    spacing: string,
-    font: string,
-    weight: number,
-    color: string,
-    marginBottom: string,
+    spacing: string;
+    font: string;
+    weight: number;
+    color: string;
+    marginBottom: string;
 };
 type ListItem = TypographyElement & {
-    spacing: string,
-    font: string,
-    weight: number,
-    color: string,
-    marginTop: string,
-    marginBottom: string,
+    spacing: string;
+    font: string;
+    weight: number;
+    color: string;
+    marginTop: string;
+    marginBottom: string;
 };
 type UnorderedList = TypographyElement & {
-    marginTop: string,
-    marginBottom: string,
-    marginLeft: string,
-    marginRight: string,
+    marginTop: string;
+    marginBottom: string;
+    marginLeft: string;
+    marginRight: string;
 };
 type HTMLElement = TypographyElement & {
-    size: string,
-    height: string,
-    spacing: string,
-    font: string,
-    weight: number,
-    color: string,
+    size: string;
+    height: string;
+    spacing: string;
+    font: string;
+    weight: number;
+    color: string;
 };
 type Introduction = HTMLElement;
 type Caption = HTMLElement;
@@ -110,30 +110,30 @@ type Button = HTMLElement;
 type MenuItem = HTMLElement;
 type Form = HTMLElement;
 export type Typography = {
-    body: Body,
-    h1: TextElement,
-    h2: TextElement,
-    h3: TextElement,
-    h4: TextElement,
-    h5: TextElement,
-    h6: TextElement,
-    p: TextElement,
-    li: ListItem,
-    ul: UnorderedList,
-    introduction: Introduction,
-    caption: Caption,
-    subtitle: Subtitle,
-    button: Button,
-    menuitem: MenuItem,
-    form: Form,
+    body: Body;
+    h1: TextElement;
+    h2: TextElement;
+    h3: TextElement;
+    h4: TextElement;
+    h5: TextElement;
+    h6: TextElement;
+    p: TextElement;
+    li: ListItem;
+    ul: UnorderedList;
+    introduction: Introduction;
+    caption: Caption;
+    subtitle: Subtitle;
+    button: Button;
+    menuitem: MenuItem;
+    form: Form;
 };
 type Breakpoints = {
-    xs: string,
-    sm: string,
-    md: string,
-    lg: string,
-    xl: string,
-    xxl?: string,
+    xs: string;
+    sm: string;
+    md: string;
+    lg: string;
+    xl: string;
+    xxl?: string;
 };
 interface Bytecode {
     colors: Colors;
