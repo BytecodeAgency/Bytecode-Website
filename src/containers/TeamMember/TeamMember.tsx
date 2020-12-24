@@ -6,6 +6,7 @@ import {
     TeamMemberPhoto,
     TeamMemberWrapper,
 } from './TeamMember.components';
+import { Caption } from '../../components/Typography';
 
 const getAltText = (name: string, alt?: string) => {
     if (alt) {
@@ -48,7 +49,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                     <img src={img} alt={getAltText(name, alt)} />
                 </TeamMemberPhoto>
                 <TeamMemberName>{name}</TeamMemberName>
-                <p className="caption">{title}</p>
+                <Caption>{title}</Caption>
                 <AllSocials
                     link={link}
                     email={email}

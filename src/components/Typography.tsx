@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import theme from '../styles/theme';
 import { QuoteProps } from './Typography.types';
 
@@ -35,13 +35,20 @@ export const Subtitle = styled.p`
     margin-bottom: 0.5em;
 `;
 
-export const Caption = styled.a`
+const captionStyle = css`
     font-size: ${caption.size};
     line-height: ${caption.height};
     letter-spacing: ${caption.spacing};
     font-family: ${caption.font};
     font-weight: ${caption.weight};
     color: ${caption.color};
+`;
+export const CaptionWithLink = styled.a`
+    ${captionStyle}
+`;
+
+export const Caption = styled.p`
+    ${captionStyle}
 `;
 
 export const Quote: React.FC<QuoteProps> = ({ author, url, children }) => {
