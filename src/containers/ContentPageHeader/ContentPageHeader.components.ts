@@ -3,7 +3,7 @@ import theme from '../../styles/theme';
 
 const { mediaQueryMin, containerWidth } = theme;
 
-interface MainHeaderProps {
+export const MainHeader = styled.header<{
     img: string;
     shadow?: boolean;
     align?: string;
@@ -12,8 +12,7 @@ interface MainHeaderProps {
     bgY?: string;
     hero?: boolean;
     blendMode?: string;
-}
-export const MainHeader = styled.header<MainHeaderProps>`
+}>`
      background: url(${(props) => props.img})
             ${(props) =>
                 props.shadow &&

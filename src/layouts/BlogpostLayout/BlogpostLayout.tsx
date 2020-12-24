@@ -1,9 +1,9 @@
 import React from 'react';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { BlogpostSingleProps, CallToActionProps } from './BlogpostLayout.types';
-import Layout from '../MainLayout';
+import Layout from '../MainLayout/MainLayout';
 import Author from '../../containers/Author/Author';
-import { Small } from '../../components/Typography';
+import { Small } from '../../components/Typography/Typography';
 import NewsletterSubscribe from '../../containers/NewsletterSubscribe/NewsletterSubscribe';
 import {
     Article,

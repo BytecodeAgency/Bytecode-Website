@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../layouts/MainLayout';
+import Layout from '../layouts/MainLayout/MainLayout';
 import Container from '../containers/Container';
 import PostThumbnail from '../containers/Thumbnails/PostThumbnail';
 import Gallery from '../containers/Gallery';

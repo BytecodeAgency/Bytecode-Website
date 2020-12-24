@@ -1,6 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
-import theme from '../styles/theme';
+import theme from '../../styles/theme';
 
 const { mediaQueryMin, colors } = theme;
 
@@ -38,19 +37,4 @@ const ImageBlockFigure = styled.figure`
     }
 `;
 
-interface Props {
-    src: string;
-    alt: string;
-}
-
-const ImageBlock: React.FC<Props> = ({ src, alt }) => {
-    return (
-        <section>
-            <ImageBlockFigure>
-                <img src={src} alt={alt} />
-            </ImageBlockFigure>
-        </section>
-    );
-};
-
-export default ImageBlock;
+export default ImageBlockFigure;

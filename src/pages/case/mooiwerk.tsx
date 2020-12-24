@@ -1,13 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
-import Layout from '../../layouts/CaseLayout';
+import Layout from '../../layouts/CaseLayout/CaseLayout';
 import {
     TextAndImage,
     Introduction,
     Section,
 } from '../../containers/ContentBlocks/ContentBlocks';
-import Deliverables from '../../containers/Deliverables';
-import { Subtitle } from '../../components/Typography';
+import Deliverables from '../../containers/Deliverables/Deliverables';
+import { Subtitle } from '../../components/Typography/Typography';
 
 const home = require('../../images/img/cases/mooiwerk/home.png');
 const vacatures = require('../../images/img/cases/mooiwerk/vacatures.png');

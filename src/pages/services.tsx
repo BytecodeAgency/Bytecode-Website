@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../layouts/MainLayout';
+import Layout from '../layouts/MainLayout/MainLayout';
 import { Container } from '../lib/Grid';
 import ContactForm from '../containers/ContactForm/ContactForm';
 import ServiceHeader from '../containers/Service/ServiceHeader';

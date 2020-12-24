@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import React from 'react';
 import theme from '../../styles/theme';
-import { Subtitle } from '../../components/Typography';
+import { Subtitle } from '../../components/Typography/Typography';
+import { ThumbnailImgProps } from './PostThumbnail.types';
 
 const { mediaQueryMin, colors } = theme;
 const { secondary } = colors;
@@ -41,17 +42,18 @@ export const ThumbnailBase = styled(Link)`
     }
 `;
 
-interface ThumbnailProps {
+export const ThumbnailContent = styled.div<{
     big?: boolean;
-}
-export const ThumbnailContent = styled.div<ThumbnailProps>`
+}>`
     padding: 1.33em 1em;
     background-color: ${(props) =>
         props.big ? 'transparent' : theme.colors.secondary};
     height: ${(props) => (props.big ? '5rem' : '13rem')};
 `;
 
-const ThumbnailImgBase = styled.figure<ThumbnailProps>`
+const ThumbnailImgBase = styled.figure<{
+    big?: boolean;
+}>`
     background: ${secondary};
     background-position: center center;
     background-size: cover;
@@ -73,12 +75,6 @@ const ThumbnailImgContent = styled.img`
         transform: scale(1.05);
     }
 `;
-
-interface ThumbnailImgProps {
-    img: string;
-    alt?: string;
-    big?: boolean;
-}
 
 export const ThumbnailImg: React.FC<ThumbnailImgProps> = ({
     img,

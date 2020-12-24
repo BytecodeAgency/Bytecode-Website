@@ -7,21 +7,9 @@ import {
     CreditsContainer,
     TitleContainer,
 } from './Credits.components';
+import CreditsProps from './Credits.types';
 
-type ColumnData = {
-    title: string;
-    content: string[];
-};
-
-interface Props {
-    special: string[];
-    resources: string[];
-    resourceLinks: string[];
-    columnOne: ColumnData[];
-    columnTwo: ColumnData[];
-}
-
-const Credits: React.FC<Props> = ({
+const Credits: React.FC<CreditsProps> = ({
     special,
     resources,
     resourceLinks,

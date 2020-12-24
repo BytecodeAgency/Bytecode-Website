@@ -1,12 +1,12 @@
 import React from 'react';
-import AllSocials from '../../lib/Socials';
+import AllSocials from '../../lib/Socials/Socials';
 import {
     TeamMemberContainer,
     TeamMemberName,
     TeamMemberPhoto,
     TeamMemberWrapper,
 } from './TeamMember.components';
-import { Caption } from '../../components/Typography';
+import { Caption } from '../../components/Typography/Typography';
 
 const getAltText = (name: string, alt?: string) => {
     if (alt) {

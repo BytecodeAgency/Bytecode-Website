@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 import Button from '../../components/Button/Button';
-import { Subtitle } from '../../components/Typography';
+import { Subtitle } from '../../components/Typography/Typography';
+import { CreditItemProps, CreditItemWithLinksProps } from './Credits.types';
 
 const { mediaQueryMin } = theme;
 export const CreditsContainer = styled.div`
@@ -28,12 +29,9 @@ export const Container = styled.div`
     }
 `;
 
-interface ColumnProps {
-    gridTemplateRows: string;
-}
-export const Column = styled.div<ColumnProps>`
-    display: grid;
-    grid-template-rows: ${(props) => props.gridTemplateRows};
+export const Column = styled.div`
+    display: flex;
+    flex-direction: column;
 `;
 
 export const CreditItemContainer = styled.div`
@@ -46,10 +44,6 @@ export const CreditText = styled.p`
     margin-bottom: 0.5em;
 `;
 
-interface CreditItemProps {
-    title: string;
-    credits: string[];
-}
 export const CreditItem: React.FC<CreditItemProps> = ({ title, credits }) => (
     <CreditItemContainer>
         <Subtitle>{title}</Subtitle>
@@ -58,12 +52,6 @@ export const CreditItem: React.FC<CreditItemProps> = ({ title, credits }) => (
         ))}
     </CreditItemContainer>
 );
-
-interface CreditItemWithLinksProps {
-    title: string;
-    credits: string[];
-    links: string[];
-}
 
 export const CreditItemWithLinks: React.FC<CreditItemWithLinksProps> = ({
     title,

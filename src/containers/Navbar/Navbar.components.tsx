@@ -3,16 +3,15 @@ import styled from 'styled-components';
 import { transparentize } from 'polished'; // TODO: Remove dependency
 import { Link } from 'gatsby';
 import theme from '../../styles/theme';
+import { NavbarItemProps } from './Navbar.types';
 
 const { mediaQueryMin, colors, typography } = theme;
 const { menuitem, li } = typography;
 
-interface ContainerProps {
+export const NavbarContainer = styled.nav<{
     atScrollTop?: boolean;
     background?: boolean;
-}
-
-export const NavbarContainer = styled.nav<ContainerProps>`
+}>`
     position: fixed;
     width: 100%;
     z-index: 10000;
@@ -45,10 +44,10 @@ export const NavbarContainer = styled.nav<ContainerProps>`
     @media (${mediaQueryMin.lg}) {
     }
 `;
-interface ContentProps {
+
+export const NavbarContent = styled.div<{
     menuIsOpen?: boolean;
-}
-export const NavbarContent = styled.div<ContentProps>`
+}>`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -127,11 +126,7 @@ const NavBarLi = styled.li`
     }
 `;
 
-interface ItemBaseProps {
-    href: string;
-    text: string;
-}
-export const NavbarItem: React.FC<ItemBaseProps> = ({ href, text }) => (
+export const NavbarItem: React.FC<NavbarItemProps> = ({ href, text }) => (
     <NavBarLi>
         <StyledLink to={href}>{text}</StyledLink>
     </NavBarLi>
@@ -192,10 +187,9 @@ export const CloseMenuButton = styled(MenuButton)`
     }
 `;
 
-interface OverlayProps {
+export const BlackOverlay = styled.div<{
     menuIsOpen?: boolean;
-}
-export const BlackOverlay = styled.div<OverlayProps>`
+}>`
     position: fixed;
     top: 0;
     right: 0;

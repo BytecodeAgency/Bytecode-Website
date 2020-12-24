@@ -1,17 +1,12 @@
-import React from 'react';
 import styled from 'styled-components';
-import theme from '../styles/theme';
-import Button from '../components/Button/Button';
-import { Subtitle } from '../components/Typography';
+import theme from '../../styles/theme';
+import { Subtitle } from '../../components/Typography/Typography';
 
 const { colors, mediaQueryMin, containerWidth } = theme;
 
-const arrowDown = require('../images/icons/ui/carret-down.svg');
-
-interface HeaderBaseProps {
+export const HeaderBase = styled.header<{
     backgroundImage: string;
-}
-const HeaderBase = styled.header<HeaderBaseProps>`
+}>`
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent),
         url(${(props) => props.backgroundImage});
     background-size: cover !important;
@@ -36,7 +31,7 @@ const HeaderBase = styled.header<HeaderBaseProps>`
     }
 `;
 
-const HeaderInformation = styled.div`
+export const HeaderInformation = styled.div`
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -59,12 +54,12 @@ const HeaderInformation = styled.div`
     }
 `;
 
-const StyledSubtitle = styled(Subtitle)`
+export const StyledSubtitle = styled(Subtitle)`
     color: ${colors.lightgray} !important;
     text-shadow: 0 0 1em #000;
 `;
 
-const ArrowDown = styled.img`
+export const ArrowDown = styled.img`
     width: 1em;
     position: absolute;
     right: 50vw;
@@ -72,52 +67,6 @@ const ArrowDown = styled.img`
     opacity: 0.5;
 `;
 
-const Text = styled.p`
+export const Text = styled.p`
     text-shadow: 0 0 1em #000;
 `;
-
-interface HeaderProps {
-    title: string;
-    subtitle: string;
-    tagline?: string;
-    img: string;
-    children?: React.ReactNode;
-    text?: string;
-    href?: string;
-    button?: string;
-    useGatsbyLink?: boolean;
-}
-const Header: React.FC<HeaderProps> = ({
-    title,
-    subtitle,
-    text,
-    href,
-    button,
-    tagline,
-    img,
-    children,
-    useGatsbyLink,
-}) => {
-    return (
-        <HeaderBase backgroundImage={img}>
-            <HeaderInformation>
-                <div>
-                    <StyledSubtitle>{subtitle}</StyledSubtitle>
-                    <h1>{title}</h1>
-                </div>
-                <div>
-                    <Text>{tagline || text}</Text>
-                    {children}
-                    {href && (
-                        <Button useGatsbyLink={useGatsbyLink} href={href}>
-                            {button || 'Lees meer'}
-                        </Button>
-                    )}
-                </div>
-            </HeaderInformation>
-            <ArrowDown src={arrowDown} />
-        </HeaderBase>
-    );
-};
-
-export default Header;

@@ -2,14 +2,16 @@ import styled from 'styled-components';
 import theme from '../../styles/theme';
 
 const { mediaQueryMin, containerWidth } = theme;
+const reversed = '1 / 3 / 1 / 4';
+const normal = '1 / 2 / 1 / 3';
+const introPadding = '5em';
 
-interface TextAndImageBaseProps {
+export const TextAndImageBase = styled.div<{
     padded?: boolean;
     gutter?: string;
     grid?: string;
     fluid?: boolean;
-}
-export const TextAndImageBase = styled.div<TextAndImageBaseProps>`
+}>`
     max-width: 100% !important;
     display: flex;
     flex-direction: column;
@@ -32,12 +34,11 @@ export const TextAndImageBase = styled.div<TextAndImageBaseProps>`
     }
 `;
 
-interface ImageWrapperProps {
+export const ImageWrapper = styled.figure<{
     pos?: string;
     small?: boolean;
     transform?: string;
-}
-export const ImageWrapper = styled.figure<ImageWrapperProps>`
+}>`
     grid-area: ${(props) => props.pos};
     width: ${(props) => (props.small ? '70%' : '100%')};
     margin: 1em 1em;
@@ -50,14 +51,10 @@ export const ImageWrapper = styled.figure<ImageWrapperProps>`
     }
 `;
 
-const reversed = '1 / 3 / 1 / 4';
-const normal = '1 / 2 / 1 / 3';
-
-interface ContentWrapperProps {
+export const ContentWrapper = styled.div<{
     reverse?: boolean;
     fluid?: boolean;
-}
-export const ContentWrapper = styled.div<ContentWrapperProps>`
+}>`
     margin: 2em 1em;
     max-width: 100vw;
     @media (${mediaQueryMin.xs}) {
@@ -72,18 +69,15 @@ export const ContentWrapper = styled.div<ContentWrapperProps>`
     }
 `;
 
-interface GalleryWrapperProps {
+export const GalleryWrapper = styled.section<{
     width?: number;
-}
-export const GalleryWrapper = styled.section<GalleryWrapperProps>`
+}>`
     display: flex;
     & > * {
         width: ${(props) => props.width || 100}%;
         padding: 0.5em;
     }
 `;
-
-const introPadding = '5em';
 
 export const IntroductionBase = styled.div`
     padding: 10vh ${containerWidth.sm};

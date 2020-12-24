@@ -3,10 +3,7 @@ import theme from '../styles/theme';
 
 const { mediaQueryMin, containerWidth } = theme;
 
-interface ContainerProps {
-    align?: string;
-}
-const Container = styled.section<ContainerProps>`
+const Container = styled.section<{ align?: string }>`
     padding: 1em ${containerWidth.xs};
     display: flex;
     flex-direction: column;

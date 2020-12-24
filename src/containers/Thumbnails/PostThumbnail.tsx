@@ -5,7 +5,8 @@ import {
     ThumbnailContent,
     ThumbnailImg,
 } from './PostThumbnail.components';
-import { CaptionWithLink } from '../../components/Typography';
+import { CaptionWithLink } from '../../components/Typography/Typography';
+import PostThumbnailProps from './PostThumbnail.types';
 
 const cutOffText = (string: string, maxLength: number) => {
     if (string.length > maxLength) {
@@ -15,13 +16,6 @@ const cutOffText = (string: string, maxLength: number) => {
     return string;
 };
 
-interface PostThumbnailProps {
-    big?: boolean;
-    title: string;
-    slug: string;
-    category?: string;
-    postImageUrl: string;
-}
 const PostThumbnail: React.FC<PostThumbnailProps> = ({
     big,
     title,

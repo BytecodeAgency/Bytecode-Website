@@ -31,7 +31,7 @@ export const TeamMemberWrapper = styled.div`
     }
     &:hover {
         & figure {
-            background: ${theme.colors.red};
+            background: ${theme.colors.tertiary};
         }
     }
     &:hover {
@@ -39,7 +39,7 @@ export const TeamMemberWrapper = styled.div`
             transform: scale(1);
         }
         & figure::before {
-            background-color: ${theme.colors.green};
+            background-color: ${theme.colors.primary};
             transform: translate(0, 30%) scale(0.85);
         }
         & > div {
@@ -87,7 +87,7 @@ export const TeamMemberPhoto = styled.figure`
         transform: scale(0.95);
         transition: 0.3s ease;
         font-size: 3em;
-        color: ${theme.colors.green} !important;
+        color: ${theme.colors.primary} !important;
         min-height: 5em;
         height: 100%;
         max-width: 100%;

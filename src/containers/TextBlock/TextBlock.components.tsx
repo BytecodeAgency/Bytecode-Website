@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Button from '../../components/Button/Button';
-import { Subtitle } from '../../components/Typography';
+import { Subtitle } from '../../components/Typography/Typography';
 
 export const Figure = styled.figure`
     position: relative;
@@ -10,10 +10,9 @@ export const Figure = styled.figure`
     margin-bottom: 4rem;
 `;
 
-interface SubtitleProps {
+export const StyledSubtitle = styled(Subtitle)<{
     hasTitle?: string;
-}
-export const StyledSubtitle = styled(Subtitle)<SubtitleProps>`
+}>`
     margin-bottom: ${(props) => (props.hasTitle ? '2rem' : '1.2em')};
 `;
 

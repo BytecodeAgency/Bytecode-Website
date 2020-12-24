@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../styles/theme';
-import { Big, Small, Subtitle } from '../../components/Typography';
+import { Big, Small, Subtitle } from '../../components/Typography/Typography';
 
 const { mediaQueryMin, colors } = theme;
 
