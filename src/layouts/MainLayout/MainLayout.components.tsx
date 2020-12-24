@@ -2,15 +2,13 @@ import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import React from 'react';
 
-export const Main = styled.main<{
-    padded?: boolean;
-}>`
+export const Main = styled.main<{ padded?: boolean }>`
     max-width: 100vw !important;
     overflow-x: hidden;
     padding-top: ${(props) => (props.padded ? '15vh' : 0)};
 `;
 
-export const HeadElements = () => (
+export const HeadElements: React.FC<Record<string, never>> = () => (
     <Helmet>
         <meta name="robots" content="index, follow" />
         <link type="text/plain" rel="author" href="/humans.txt" />

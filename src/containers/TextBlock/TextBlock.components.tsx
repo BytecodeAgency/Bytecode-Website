@@ -10,9 +10,7 @@ export const Figure = styled.figure`
     margin-bottom: 4rem;
 `;
 
-export const StyledSubtitle = styled(Subtitle)<{
-    hasTitle?: string;
-}>`
+export const StyledSubtitle = styled(Subtitle)<{ hasTitle?: string }>`
     margin-bottom: ${(props) => (props.hasTitle ? '2rem' : '1.2em')};
 `;
 

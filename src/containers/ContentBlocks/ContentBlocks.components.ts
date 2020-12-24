@@ -69,9 +69,7 @@ export const ContentWrapper = styled.div<{
     }
 `;
 
-export const GalleryWrapper = styled.section<{
-    width?: number;
-}>`
+export const GalleryWrapper = styled.section<{ width?: number }>`
     display: flex;
     & > * {
         width: ${(props) => props.width || 100}%;

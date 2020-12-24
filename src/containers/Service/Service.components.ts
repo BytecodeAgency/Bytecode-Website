@@ -15,9 +15,7 @@ export const Icon = styled.img`
     }
 `;
 
-export const ServiceWrapper = styled.div<{
-    fullWidth?: boolean;
-}>`
+export const ServiceWrapper = styled.div<{ fullWidth?: boolean }>`
     min-height: 10em;
     display: flex;
     flex-direction: column;

@@ -45,9 +45,7 @@ export const NavbarContainer = styled.nav<{
     }
 `;
 
-export const NavbarContent = styled.div<{
-    menuIsOpen?: boolean;
-}>`
+export const NavbarContent = styled.div<{ menuIsOpen?: boolean }>`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -187,9 +185,7 @@ export const CloseMenuButton = styled(MenuButton)`
     }
 `;
 
-export const BlackOverlay = styled.div<{
-    menuIsOpen?: boolean;
-}>`
+export const BlackOverlay = styled.div<{ menuIsOpen?: boolean }>`
     position: fixed;
     top: 0;
     right: 0;

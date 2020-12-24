@@ -4,9 +4,7 @@ import { Subtitle } from '../../components/Typography/Typography';
 
 const { colors, mediaQueryMin, containerWidth } = theme;
 
-export const HeaderBase = styled.header<{
-    backgroundImage: string;
-}>`
+export const HeaderBase = styled.header<{ backgroundImage: string }>`
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent),
         url(${(props) => props.backgroundImage});
     background-size: cover !important;

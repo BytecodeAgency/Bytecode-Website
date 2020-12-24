@@ -42,18 +42,14 @@ export const ThumbnailBase = styled(Link)`
     }
 `;
 
-export const ThumbnailContent = styled.div<{
-    big?: boolean;
-}>`
+export const ThumbnailContent = styled.div<{ big?: boolean }>`
     padding: 1.33em 1em;
     background-color: ${(props) =>
         props.big ? 'transparent' : theme.colors.secondary};
     height: ${(props) => (props.big ? '5rem' : '13rem')};
 `;
 
-const ThumbnailImgBase = styled.figure<{
-    big?: boolean;
-}>`
+const ThumbnailImgBase = styled.figure<{ big?: boolean }>`
     background: ${secondary};
     background-position: center center;
     background-size: cover;

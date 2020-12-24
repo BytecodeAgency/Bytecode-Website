@@ -37,9 +37,7 @@ export const StyledContainer = styled(Container)<{
     }
 `;
 
-export const StyledRow = styled(Row)<{
-    light?: boolean;
-}>`
+export const StyledRow = styled(Row)<{ light?: boolean }>`
     background-color: ${(props) =>
         props.light ? theme.colors.secondary : theme.colors.background};
     flex-direction: column-reverse;
