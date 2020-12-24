@@ -47,7 +47,7 @@ const ImageBlock: React.FC<Props> = ({ src, alt }) => {
     return (
         <section>
             <ImageBlockFigure>
-                <img className="content" src={src} alt={alt} />
+                <img src={src} alt={alt} />
             </ImageBlockFigure>
         </section>
     );

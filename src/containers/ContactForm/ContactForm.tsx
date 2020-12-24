@@ -85,7 +85,6 @@ const ContactForm: React.FC<Record<string, never>> = () => {
                     aria-label="contact"
                     value={formValues.contact}
                     onChange={handleChange}
-                    className="text-input"
                 />
                 <InputField
                     id="email"
@@ -94,7 +93,6 @@ const ContactForm: React.FC<Record<string, never>> = () => {
                     aria-label="email"
                     value={formValues.email}
                     onChange={handleChange}
-                    className="text-input"
                 />
                 <InputField
                     id="phone"
@@ -103,7 +101,6 @@ const ContactForm: React.FC<Record<string, never>> = () => {
                     aria-label="phone"
                     value={formValues.phone}
                     onChange={handleChange}
-                    className="text-input"
                 />
                 <InputTextArea
                     id="contents"
@@ -111,7 +108,6 @@ const ContactForm: React.FC<Record<string, never>> = () => {
                     aria-label="message"
                     value={formValues.contents}
                     onChange={handleChange}
-                    className="text"
                 />
                 <Button
                     submit

@@ -29,7 +29,7 @@ const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={serviceDesk} alt="Moderne functiewaardering">
             <h2>Moderne functiewaardering</h2>
-            <p className="introduction">
+            <p>
                 Door het STYR functiewaarderingsmodel te digitaliseren kan het
                 werk van de STYR consultants geautomatiseerd worden. Zij kunnen
                 hierdoor worden ingezet op hun echte expertise, en een meer
@@ -51,7 +51,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h2>De uitdaging</h2>
-                <p className="introduction">
+                <p>
                     Wij hebben een praktische online waarderingstool ontwikkeld
                     waarmee de klanten van STYR zelf de zwaarte van rollen en
                     functies kunnen vaststellen.

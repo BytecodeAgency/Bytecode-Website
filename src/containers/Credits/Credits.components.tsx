@@ -54,7 +54,7 @@ export const CreditItem: React.FC<CreditItemProps> = ({ title, credits }) => (
     <CreditItemContainer>
         <Subtitle>{title}</Subtitle>
         {credits.map((credit) => (
-            <CreditText className="Paragraph light">{credit}</CreditText>
+            <CreditText>{credit}</CreditText>
         ))}
     </CreditItemContainer>
 );

@@ -32,7 +32,7 @@ const Case: React.FC<Record<string, never>> = () => (
             alt="Brengt Breda dichter bij elkaar"
         >
             <h2>Brengt Breda dichter bij elkaar</h2>
-            <p className="introduction">
+            <p>
                 Door een platform te ontwikkelen waar vrijwilligers en
                 organisaties elkaar kunnen vinden maakten wij vrijwilligerswerk
                 toegankelijker.
@@ -50,7 +50,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h2>De uitdaging</h2>
-                <p className="introduction">
+                <p>
                     De belangrijkste reden voor een maatwerkapplicatie, is het
                     kunnen controleren van functionaliteiten en de data.
                 </p>
@@ -85,7 +85,7 @@ const Case: React.FC<Record<string, never>> = () => (
             >
                 <Subtitle>Resultaten</Subtitle>
                 <h2>Realiseren</h2>
-                <p className="introduction">
+                <p>
                     Het uiteindelijke platform zorgt ervoor dat Mooiwerk Breda
                     organisaties en vrijwilligers in Breda samen kan brengen.
                     Met behulp van de doorgaande ontwikkeling blijven we Breda

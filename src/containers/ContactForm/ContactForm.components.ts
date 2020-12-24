@@ -21,6 +21,8 @@ export const InputTextArea = styled.textarea`
     margin: 0 0.1em 1.33em;
     width: 100%;
     min-height: 20em;
+    font-family: ${typography.form.font};
+    color: ${colors.white};
     &:hover {
         cursor: pointer;
     }
@@ -29,10 +31,6 @@ export const InputTextArea = styled.textarea`
     }
     &.error {
         border-bottom: 2px solid ${colors.tertiary};
-    }
-    &.text {
-        font-family: ${typography.form.font};
-        color: ${colors.white};
     }
 `;
 

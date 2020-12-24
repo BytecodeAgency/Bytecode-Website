@@ -34,7 +34,7 @@ const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={woco} alt="Woningcorporatie offerteplatform">
             <h2>Woningcorporatie offerteplatform</h2>
-            <p className="introduction">
+            <p>
                 Het Sungevity woningcorporatie platform is een plek waar
                 huurders zich kunnen inschrijven voor het Sungevity
                 zonnepanelenprogramma. Helaas was deze tool niet stabiel genoeg
@@ -54,7 +54,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h2>De uitdaging</h2>
-                <p className="introduction">
+                <p>
                     Door een gedeelte van de tool te herschrijven en een stabile
                     digitale omgeving te creëren, door het gebruik van
                     verschillende cloudservers, is de stabiliteit van het
@@ -107,7 +107,7 @@ const Case: React.FC<Record<string, never>> = () => (
             <TextAndImage img={offerte} alt="offerte pagina">
                 <Subtitle>Resultaten</Subtitle>
                 <h2>Realiseren</h2>
-                <p className="introduction">
+                <p>
                     Inmiddels zijn er al acht woningcorporaties opgezet. Mocht
                     een van de websites downtime ondervinden, dan krijgen onze
                     site reliability engineers hier een melding van, zodat er

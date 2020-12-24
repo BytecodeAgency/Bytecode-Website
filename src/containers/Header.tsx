@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
 import Button from '../components/Button/Button';
+import { Subtitle } from '../components/Typography';
 
 const { colors, mediaQueryMin, containerWidth } = theme;
 
@@ -58,7 +59,7 @@ const HeaderInformation = styled.div`
     }
 `;
 
-const StyledSubtitle = styled.p`
+const StyledSubtitle = styled(Subtitle)`
     color: ${colors.lightgray} !important;
     text-shadow: 0 0 1em #000;
 `;
@@ -101,9 +102,7 @@ const Header: React.FC<HeaderProps> = ({
         <HeaderBase backgroundImage={img}>
             <HeaderInformation>
                 <div>
-                    <StyledSubtitle className="white subtitle">
-                        {subtitle}
-                    </StyledSubtitle>
+                    <StyledSubtitle>{subtitle}</StyledSubtitle>
                     <h1>{title}</h1>
                 </div>
                 <div>

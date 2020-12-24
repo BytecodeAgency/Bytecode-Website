@@ -61,7 +61,7 @@ const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage img={app} alt="Fantescy applicatie" padded>
             <h3>Stemmen en jureren</h3>
-            <p className="Paragraph Bi (introduction)">
+            <p>
                 <a href={url}>FantESCy</a> is een mobiele app voor iOS en
                 Android, waarmee fans van het Songfestival in groepen
                 maandelijks kunnen stemmen en jureren in een gesimuleerde
@@ -82,7 +82,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h3>De uitdaging</h3>
-                <p className="Paragraph Big (introduction)">
+                <p>
                     Het originele plan was dat FantESCy gebruikt kon worden om
                     fans tijdens het Songfestival te laten raden welke optredens
                     de finale zouden halen of zouden winnen. We moesten vanwege
@@ -96,7 +96,7 @@ const Case: React.FC<Record<string, never>> = () => (
             <TextAndImage img={research} alt="Marktonderzoek" reverse>
                 <Subtitle>Research</Subtitle>
                 <h2>Strategie</h2>
-                <p className="big">
+                <p>
                     We hebben advies gegeven over marktonderzoek,
                     verdienmodellen en eventuele kosten voor gebruikers, zodat
                     de app optimaal op de doelgroep aan kon sluiten. Op dit
@@ -111,7 +111,7 @@ const Case: React.FC<Record<string, never>> = () => (
             <TextAndImage small img={payment} alt="Betalingen in de app">
                 <Subtitle>Development</Subtitle>
                 <h2>Berekeningen en betalingen</h2>
-                <p className="big">
+                <p>
                     Omdat de scoreberekening complex kan zijn en veel spelers
                     verwacht worden, was het nodig om de berekeningen te
                     optimaliseren. Zo kan iedere gebruiker op elk moment
@@ -127,7 +127,7 @@ const Case: React.FC<Record<string, never>> = () => (
             >
                 <Subtitle>User Experience</Subtitle>
                 <h2>Een betere gebruikservaring</h2>
-                <p className="big">
+                <p>
                     Om de app snel en gemakkelijk te kunnen delen hebben we
                     gebruik gemaakt van <strong>deep linking</strong> en{' '}
                     <strong>universal linking</strong>. Met het gebruik van deze
@@ -145,7 +145,7 @@ const Case: React.FC<Record<string, never>> = () => (
                 title="Cijfers tot nu toe"
             />
             <Introduction>
-                <p className="subtitle">Download de app</p>
+                <Subtitle>Download de app</Subtitle>
                 <h3>
                     FantESCy is te downloaden via de{' '}
                     <a href={appStoreUrl}>Apple App Store</a> of{' '}

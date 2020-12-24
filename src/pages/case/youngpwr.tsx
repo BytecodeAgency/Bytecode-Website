@@ -64,7 +64,7 @@ const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={match} alt="Match tussen CEO en youngpwr">
             <h3>Van leren naar matchen</h3>
-            <p className="Paragraph Big (introduction)">
+            <p>
                 Als partner van <a href="https://youngpwr.nl/">Youngpwr</a>{' '}
                 ontwikkelen we een platform waar jongeren terecht kunnen voor
                 informatie over ondernemen en werken. Dit platform is bedoeld om
@@ -88,7 +88,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h3>Ondersteuning bij werk en ondernemen</h3>
-                <p className="Paragraph Big (introduction)">
+                <p>
                     Een plek waar jongeren hun ondernemende kant kunnen
                     ontwikkelen en opdrachten kunnen vinden: dat is het doel van
                     Youngpwr. Wij hebben ons als partner aangesloten, omdat we
@@ -107,7 +107,7 @@ const Case: React.FC<Record<string, never>> = () => (
             >
                 <Subtitle>Research</Subtitle>
                 <h2>Een platform dat aansluit</h2>
-                <p className="big">
+                <p>
                     Tijdens de ontwikkeling en livegang is het contentplatform
                     getest met gebruikers, onder andere via een pilot. Met
                     kwalitatief en kwantitatief onderzoek is data verzameld. Op
@@ -126,7 +126,7 @@ const Case: React.FC<Record<string, never>> = () => (
             >
                 <Subtitle>Research</Subtitle>
                 <h3>Efficiëntie voorop</h3>
-                <p className="big">
+                <p>
                     Omdat het matchingplatform niet direct gebouwd kon worden,
                     is het belangrijk om wel tractie te genereren, terwijl we
                     efficient met het beschikbare budget omgaan. Door een sterke
@@ -142,7 +142,7 @@ const Case: React.FC<Record<string, never>> = () => (
             >
                 <Subtitle>Development</Subtitle>
                 <h3>Een duurzame oplossing</h3>
-                <p className="big">
+                <p>
                     Tijdens de ontwikkeling hebben we gezorgd dat de codebase
                     ook gebruikt kan worden voor de doorontwikkeling naar het
                     matching platform. Ook is het configureren van de servers en
@@ -160,7 +160,7 @@ const Case: React.FC<Record<string, never>> = () => (
             >
                 <Subtitle>Development</Subtitle>
                 <h3>De technische kant</h3>
-                <p className="big">
+                <p>
                     We hebben de achterkant van het matchingplatform al volledig
                     opgezet en solide gemaakt, zodat we bij de volgende
                     ontwikkelingsronde direct kunnen beginnen met ontwikkeling,

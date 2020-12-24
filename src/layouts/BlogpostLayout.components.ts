@@ -145,4 +145,5 @@ export const StyledSubtitle = styled(Subtitle)`
     margin-top: 0.66em;
     margin-bottom: 0.33em;
     font-weight: ${theme.fontWeights.regular};
+    font-size: 1.125rem;
 `;

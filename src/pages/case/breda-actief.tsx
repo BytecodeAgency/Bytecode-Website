@@ -32,7 +32,7 @@ const Case: React.FC<Record<string, never>> = () => (
             alt="Responsive website van Breda Actief"
         >
             <h2>Responsive website</h2>
-            <p className="introduction">
+            <p>
                 Voor een maatschappelijk betrokken organisatie zoals stichting
                 Breda Actief is webtoegankelijkheid erg belangrijk om haar doel
                 te bereiken, want als je er voor wil zorgen dat écht{' '}
@@ -53,7 +53,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <Introduction>
                 <h2>De uitdaging</h2>
-                <p className="introduction">
+                <p>
                     Breda Actief is een grote organisatie, en meerdere mensen
                     binnen de organisatie willen de content op de website kunnen
                     aanpassen. Toch is het belangrijk dat de website een
@@ -61,7 +61,7 @@ const Case: React.FC<Record<string, never>> = () => (
                     prestaties levert.
                 </p>
             </Introduction>
-            <TextAndImage img={wieiswie} reverse alt="Uptime prestaties">
+            <TextAndImage img={wieiswie} reverse alt="Uptime prestaties" padded>
                 <Subtitle>prestaties</Subtitle>
                 <h3>Toegankelijkheid</h3>
                 <p>
@@ -74,7 +74,7 @@ const Case: React.FC<Record<string, never>> = () => (
                     bedienen.
                 </p>
             </TextAndImage>
-            <TextAndImage img={administration} alt="Uptime prestaties">
+            <TextAndImage img={administration} alt="Uptime prestaties" padded>
                 <Subtitle>prestaties</Subtitle>
                 <h3>Consistente huisstijl</h3>
                 <p>
@@ -87,10 +87,11 @@ const Case: React.FC<Record<string, never>> = () => (
                 fluid
                 img={screens}
                 alt="Meerdere schermen van de website"
+                padded
             >
                 <Subtitle>Resultaten</Subtitle>
                 <h2>Realiseren</h2>
-                <p className="introduction">
+                <p>
                     Om Breda Actief zo goed mogelijk te helpen bij het
                     neerzetten van een succesvolle website, hebben we besloten
                     het volgende als oplossing te bieden, om bij te dragen aan
