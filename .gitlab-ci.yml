@@ -14,7 +14,7 @@ build_node:
   before_script:
     - yarn install --production --frozen-lockfile
   script:
-    - yarn run build --prefix-paths bytecode-website
+    - yarn run build
     - mv public build
   artifacts:
     paths:
@@ -26,13 +26,6 @@ lint:
     - yarn install --frozen-lockfile
   script:
     - yarn run lint
-
-test_jest:
-  stage: test
-  before_script:
-    - yarn install --frozen-lockfile
-  script:
-    - yarn run test:ci
 
 release_docker:
   stage: release
