@@ -40,8 +40,8 @@ const pageSettings = {
 
 const creditColumnOne = [
     {
-        title: 'Beheerpaneel',
-        content: ["T'iko Alarcon Rivero", 'Julian van Dijk', 'Luciano Nooijen'],
+        title: 'Architectuur',
+        content: ['Luciano Nooijen'],
     },
     {
         title: 'App',
