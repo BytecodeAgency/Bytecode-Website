@@ -33,13 +33,15 @@ export const DeliverablesContent = styled.div`
 `;
 
 export const List = styled.ul`
+    vertical-align: middle;
+    display: table-cell;
     @media (${mediaQueryMin.xs}) {
-        columns: 2;
+        columns: 1;
         list-style-position: outside;
         list-style-image: url('${plusBullet}');
     }
     @media (${mediaQueryMin.md}) {
-        columns: 3;
+        columns: 2;
     }
 `;
 

@@ -29,13 +29,15 @@ export const Container = styled.div`
     }
 `;
 
-export const Column = styled.div`
-    display: flex;
-    flex-direction: column;
+export const Column = styled.div<{ gridTemplateRows: string }>`
+    display: grid;
+    grid-template-rows: ${(props) => props.gridTemplateRows};
 `;
 
 export const CreditItemContainer = styled.div`
     margin: 1em;
+    display: flex;
+    flex-direction: column;
 `;
 export const CreditTitle = styled.p`
     margin-bottom: 0.5em;
