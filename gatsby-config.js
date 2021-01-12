@@ -26,14 +26,12 @@ module.exports = {
                 useMozJpeg: false,
                 stripMetadata: true,
                 defaultQuality: 75,
-                plugins: [
-                    {
-                        resolve: `gatsby-remark-images`,
-                        options: {
-                            maxWidth: 1000,
-                        },
-                    },
-                ],
+            },
+        },
+        {
+            resolve: `gatsby-remark-images`,
+            options: {
+                maxWidth: 1000,
             },
         },
         {

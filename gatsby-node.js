@@ -57,7 +57,7 @@ exports.createPages = async ({ actions, graphql }) => {
     data.allMdx.edges.forEach(edge => {
         const { id } = edge.node;
         const { slug } = edge.node.fields;
-        const template = path.resolve(`./src/templates/BlogpostTemplate.jsx`);
+        const template = path.resolve(`./src/templates/BlogpostTemplate.tsx`);
         actions.createPage({
             path: slug,
             component: template,
