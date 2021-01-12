@@ -165,9 +165,13 @@ const Dearly: React.FC<Record<string, never>> = () => (
         </Section>
         <Section>
             <ResultsAndNumbers
-                numbers={['20', '100']}
-                numberTypes={['minuten', '+']}
-                subtitles={['van code review naar productie', 'Beta testers']}
+                numbers={['20', '50', '200']}
+                numberTypes={['minuten', '+', '+']}
+                subtitles={[
+                    'van code review naar productie',
+                    'Beta testers',
+                    'Actieve gebruikers',
+                ]}
                 title="Cijfers tot nu toe"
             />
             <AppStoreBlock
