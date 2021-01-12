@@ -12,6 +12,7 @@ const pageSettings = {
     keywords: 'cases',
 };
 
+const dearly = require('../images/img/cases/dearly/header.png');
 const eneco = require('../images/img/cases/eneco/header.png');
 const styr = require('../images/img/cases/styr/allocator.png');
 const breda = require('../images/img/cases/breda-actief/featured.svg');
@@ -27,6 +28,12 @@ const Cases: React.FC<Record<string, never>> = () => (
         <Container>
             <TextBlock title="Onze recente projecten" subtitle="Cases" />
             <Gallery sm={33}>
+                <PostThumbnail
+                    title="Ondersteuning bij rouwverwerking"
+                    slug="/case/dearly"
+                    postImageUrl={dearly}
+                    category="Dearly"
+                />
                 <PostThumbnail
                     slug="/case/eneco"
                     title="Omschakelen met Eneco"
@@ -45,8 +52,6 @@ const Cases: React.FC<Record<string, never>> = () => (
                     postImageUrl={fantescy}
                     category="Fantescy"
                 />
-            </Gallery>
-            <Gallery sm={33}>
                 <PostThumbnail
                     title="Veilig ouder worden door valpreventie"
                     category="Reinier de Graaf ziekenhuis"
@@ -65,8 +70,6 @@ const Cases: React.FC<Record<string, never>> = () => (
                     slug="/case/breda-actief"
                     postImageUrl={breda}
                 />
-            </Gallery>
-            <Gallery sm={33}>
                 <PostThumbnail
                     title="Brengt Breda dichter bij elkaar"
                     category="Mooiwerk Breda"

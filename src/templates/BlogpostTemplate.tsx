@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import BlogpostLayout from '../layouts/BlogpostLayout/BlogpostLayout';
 import { BlogpostTemplateProps } from './BlogpostTemplate.types';
 
-// TODO: Add props validation for Gatbsy query
 const BlogpostTemplate: React.FC<BlogpostTemplateProps> = ({ data }) => {
     const { mdx } = data;
     const content = {
