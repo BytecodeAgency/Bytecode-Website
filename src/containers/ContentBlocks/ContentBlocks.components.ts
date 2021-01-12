@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 
-const { mediaQueryMin, containerWidth } = theme;
+const { mediaQueryMin, containerWidth, colors } = theme;
 const reversed = '1 / 3 / 1 / 4';
 const normal = '1 / 2 / 1 / 3';
 const introPadding = '5em';
@@ -124,7 +124,7 @@ export const NumbersContainer = styled.div`
         position: absolute;
         top: 0;
         left: 2.5%;
-        background-color: #262626;
+        background-color: ${colors.mediumgray};
         width: 95%;
         content: '';
         height: 100%;
@@ -149,7 +149,7 @@ export const SingleNumberContainer = styled.div`
     text-align: center;
     justify-content: center;
 `;
-export const Number = styled.h1`
+export const LargeNumber = styled.h1`
     font-size: 3em;
     margin: 0;
     align-self: flex-end;

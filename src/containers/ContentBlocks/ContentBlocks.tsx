@@ -8,7 +8,7 @@ import {
     IntroductionBase,
     ResultsAndNumbersContainer,
     TextBlockContainer,
-    Number,
+    LargeNumber,
     NumberContainer,
     NumbersContainer,
     NumberType,
@@ -132,7 +132,7 @@ export const ResultsAndNumbers: React.FC<ResultsAndNumbersProps> = ({
                 {numbers.map((number, index) => (
                     <SingleNumberContainer>
                         <NumberContainer>
-                            <Number>{number}</Number>
+                            <LargeNumber>{number}</LargeNumber>
                             <NumberType>{numberTypes[index]}</NumberType>
                         </NumberContainer>
                         <Subtitles>

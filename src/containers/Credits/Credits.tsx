@@ -11,11 +11,7 @@ import CreditsProps from './Credits.types';
 
 const getGridTemplateRows = (lengthOne: number, lengthTwo: number): string => {
     const largestNumber = Math.max(lengthOne, lengthTwo, 2);
-    let gridTemplateRows = '';
-    for (let i = 0; i < largestNumber; i++) {
-        gridTemplateRows += '1fr ';
-    }
-    gridTemplateRows += ';';
+    const gridTemplateRows = `${'1fr '.repeat(largestNumber)};`;
     return gridTemplateRows;
 };
 
