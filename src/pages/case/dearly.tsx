@@ -159,7 +159,14 @@ const Dearly: React.FC<Record<string, never>> = () => (
                     Om meer veiligheid te hebben rondom API-calls, hebben we
                     gekozen om tijdens runtime de types te valideren op basis
                     van Typescript interfaces. Luciano legt deze functionaliteit
-                    hier in detail uit.
+                    <a
+                        href="https://bytecode.nl/insights/runtime-json-typechecking-met-typescript-interfaces/"
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        &nbsp;in dit blogartikel&nbsp;
+                    </a>
+                    in detail uit.
                 </p>
             </TextAndImage>
         </Section>
