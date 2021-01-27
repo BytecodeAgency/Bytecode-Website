@@ -11,6 +11,7 @@ const lightgray2 = '#E7E7E7';
 const mediumgray = '#262626';
 const red = '#df5252';
 const white = '#ffffff';
+const offWhite = '#f5f5f5';
 const lightgreen = '#70C197';
 
 // Fonts
@@ -42,6 +43,7 @@ type Colors = {
     lightgray: string;
     lightgray2: string;
     white: string;
+    offWhite: string;
 };
 type Fonts = {
     heading: string;
@@ -165,6 +167,7 @@ const bytecode: Bytecode = {
         lightgray,
         lightgray2,
         white,
+        offWhite,
     },
     fonts: {
         heading,

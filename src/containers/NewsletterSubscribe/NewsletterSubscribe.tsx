@@ -83,7 +83,7 @@ const NewsletterSubscribe: React.FC<NewsletterSubscribeProps> = ({
                     name="subscribe"
                     id="mc-embedded-subscribe"
                 >
-                    Schrijf in
+                    Schrijf je in
                 </SubscribeButton>
             </NewsletterSubscribeForm>
         </Container>
