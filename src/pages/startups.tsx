@@ -13,29 +13,64 @@ const pageSettings = {
 const group = require('../images/img/startups/group.png');
 const meeting = require('../images/img/startups/meeting.png');
 
+const Header = styled.header`
+    min-height: 100vh;
+    display: flex;
+
+    flex-grow: 1;
+`;
+
+const HeaderContainer = styled(Container)`
+    height: 100%;
+`;
+
+const Process = styled.ol`
+    display: flex;
+    li {
+        flex-basis: 33%;
+    }
+`;
+
 const Startups = () => (
     <Layout pageSettings={pageSettings}>
-        <header>
-            <Container>
-                <Row>
-                    <Col>
+        <Header>
+            <HeaderContainer>
+                <Row align="center">
+                    <Col md={5}>
                         <Subtitle>Start-up development</Subtitle>
                         <h1>Samen maken we passie werkelijkheid</h1>
-                        <p>Als start-up draait het om jouw idee. Wij maken 
+                        <p>
+                            Als start-up draait het om jouw idee. Wij maken 
                             jouw missie tastbaar aan de hand van research, 
                             strategie, design en development. Bovendien 
                             leveren we je na het kennismakingsgesprek 
-                            gratis drie belangrijke analyses</p>
+                            gratis drie belangrijke analyses
+                        </p>
+                        <ul>
+                            <li>
+                                <p>Concurrentie- & MVP-advies</p>
+                            </li>
+                            <li>
+                                <p>Missie & strategie</p>
+                            </li>
+                            <li>
+                                <p>MVP-advies</p>
+                            </li>
+                        </ul>
                         <Button href="#">Maak een afspraak!</Button>
                     </Col>
-                    <Col></Col>
+                    <Col>
+                        <figure>
+                            <img src={group} alt="group of happy people" />
+                        </figure>
+                    </Col>
                 </Row>
-            </Container>
-        </header>
+            </HeaderContainer>
+        </Header>
         <section>
             <Container>
-                <Row>
-                    <Col>
+                <Row gutterWidth={6900}>
+                    <Col xs={12} sm={6} md={4}>
                         <h2>MVP-advies</h2>
                         <p>
                         De MVP is de eerste versie van je product. 
@@ -50,7 +85,7 @@ const Startups = () => (
                         ontwikkeld kunnen worden.
                         </p>
                     </Col>
-                    <Col>
+                    <Col xs={12} sm={6} md={4}>
                         <h2>Missie & strategie</h2>
                         <p>
                             Wat wil je bereiken met je passie? 
@@ -62,7 +97,7 @@ const Startups = () => (
                             kritisch naar het verdienmodel.
                         </p>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={4}>
                         <h2>Branding & concurerntie</h2>
                         <p>Wie ben je en hoe verhoud je je tot je 
                             concurrenten? Dit zijn cruciale vragen, 
@@ -83,7 +118,8 @@ const Startups = () => (
             <Container>
             <Subtitle>Het proces</Subtitle>
             <h2>Het gaan we je helpen?</h2>
-            <ol>
+            <Process>
+                
                 <li>
                     <h3>Strategie</h3>
                     <p>
@@ -124,7 +160,7 @@ const Startups = () => (
                     Jouw passie wordt werkelijkheid.
                     </p>
                 </li>
-            </ol>
+            </Process>
             </Container>
         </section>
         <section>
