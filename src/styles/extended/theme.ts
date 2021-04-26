@@ -4,8 +4,8 @@
 import React from 'react';
 
 const black = '#0f0f0f';
-const darkgray = '#1a1a1a';
-const green = '#23be87';
+const darkgray = '#21171F';
+const green = '#6CC39A';
 const lightgray = '#f2f2f2';
 const lightgray2 = '#E7E7E7';
 const mediumgray = '#262626';
@@ -158,16 +158,16 @@ const breakpoints: Breakpoints = {
 // Bytecode theme
 const bytecode: Bytecode = {
     colors: {
-        background: darkgray,
-        primary: green,
-        secondary: mediumgray,
-        tertiary: red,
+        background: '#21171F',
+        primary: '#6CC39A',
+        secondary: '#271C25',
+        tertiary: '#9B5B5B',
         black,
-        mediumgray,
+        mediumgray: '#392B37',
         lightgray,
         lightgray2,
         white,
-        offWhite,
+        offWhite: '#E8E8E8',
     },
     fonts: {
         heading,
