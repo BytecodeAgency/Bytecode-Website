@@ -31,6 +31,18 @@ const Process = styled.ol`
     }
 `;
 
+const CTA = styled.section`
+    background: #271C25;
+    min-height: 66vh;
+    text-align: center;
+`;
+
+const Deliverables = styled.ul`
+    display: flex;
+    list-style: none;
+    text-align: center;
+`;
+
 const Startups = () => (
     <Layout pageSettings={pageSettings}>
         <Header>
@@ -163,7 +175,7 @@ const Startups = () => (
             </Process>
             </Container>
         </section>
-        <section>
+        <CTA>
             <Container>
             <Subtitle>Intake</Subtitle>
             <h2>Kom gratis op adviesgesprek</h2>
@@ -173,7 +185,7 @@ const Startups = () => (
                 Zet de eerste stap en krijg de volgende gratis 
                 deliverables na het kennismakingsgesprek:
             </p>
-            <ul>
+            <Deliverables>
                 <li>
                     <p>Scherp en kritisch advies op MVP</p>
                 </li>
@@ -183,10 +195,10 @@ const Startups = () => (
                 <li>
                     <p>Moderne branding- en klantanalyse</p>
                 </li>
-            </ul>
+            </Deliverables>
             <Button href="#">Maak een afspraak!</Button>
             </Container>
-        </section>
+        </CTA>
     </Layout>
 );
 
