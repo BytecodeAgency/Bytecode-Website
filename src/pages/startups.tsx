@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../layouts/MainLayoutExtended/MainLayout';
-import { Subtitle } from '../components/Typography/Typography';
+import { Subtitle, Caption } from '../components/Typography/Typography';
 import Button from '../components/Button/Button';
 import {Container, Row, Col} from '../lib/Grid';
 const pageSettings = {
@@ -33,22 +33,144 @@ const Process = styled.ol`
 
 const CTA = styled.section`
     background: #271C25;
-    min-height: 66vh;
     text-align: center;
+    padding: 3em 0;
+    min-height: 35em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+`;
+
+const Icon = styled.img`
+    height: 3rem;
+    width: auto;
+`;
+
+const Circle = styled.div`
+    background:  #3D333B;
+    width: 6rem;
+    height: 6rem;
+    padding: 1em;
+    border-radius: 100rem;
+    display: flex;
+    align-items: center;
+
+`;
+
+const CircledIcon = ({src}) => (
+    <Circle>
+        <Icon src={src} />
+    </Circle>
+)
+
+const IconList = styled.ul`
+    list-style: none;
+    margin-left: 0;
+    transform: translateX(-0.33rem);
+    li {
+        display: inline-block;
+        width: 30%;
+        font-size: 0.8rem;
+        text-align: center;
+        img {
+            width: min-content;
+        }
+    }
+`;
+
+
+const HeaderFigure = styled.figure`
+    position: absolute;
+    left: 7vw;
+    width: 55vw;
+    transform: translateY(-45vh);
+    height: 85vh;
+    background: #271C25;
+    overflow: hidden;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform: scale(2);
+        object-position: left center;
+    }
 `;
 
 const Deliverables = styled.ul`
     display: flex;
     list-style: none;
     text-align: center;
+    align-items: center;
+    justify-items: center;
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        width: 33%;
+        margin: 0.5em 1em 0 1em;
+        & > * {
+            margin-top: 1rem;
+        }
+    }
+`;
+
+const PathsRight = styled.img`
+    position: absolute;
+    height: 120%;
+    width: fit-content;
+    right: -10%;
+    z-index: 0
+`;
+
+const PathsLeft = styled(PathsRight)`
+    left: -10%;
+    transform: scaleX(-1)
+`;
+
+const Card = styled.div`
+    background: #271C25;
+    padding: 3em;
+    margin: 0.5em;
+    border-radius: 0.1em;
+`;
+
+const SlantedBackground = styled.div`
+    width: 100%;
+    height: 35rem;
+    background: #271C25;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 88% 66%, 0 100%); 
+`;
+
+const GridFig = styled.img`
+    width: 7rem;
+    position: absolute;
+    transform: translate(-3rem, -3rem);
+`;
+
+const PathFig = styled.img`
+    position: absolute;
+    left: 0;
+    top: 30%;
+    z-index: -1;
+`;
+
+const Section = styled.section`
+    position: relative;
 `;
 
 const Startups = () => (
     <Layout pageSettings={pageSettings}>
         <Header>
             <HeaderContainer>
-                <Row align="center">
+                <Row style={{height: '100vh'}} align="center">
                     <Col md={5}>
+                        <GridFig src={require('../images/img/startups/grid.svg')} />
                         <Subtitle>Start-up development</Subtitle>
                         <h1>Samen maken we passie werkelijkheid</h1>
                         <p>
@@ -58,65 +180,78 @@ const Startups = () => (
                             leveren we je na het kennismakingsgesprek 
                             gratis drie belangrijke analyses
                         </p>
-                        <ul>
+                        <IconList>
                             <li>
-                                <p>Concurrentie- & MVP-advies</p>
+                                <Icon src={require('../images/img/startups/icons/concurrentie.svg')} />
+                                <Caption>Concurrentie- & MVP-advies</Caption>
                             </li>
                             <li>
-                                <p>Missie & strategie</p>
+                                <Icon src={require('../images/img/startups/icons/missie.svg')} /> 
+                                <Caption>Missie & strategie</Caption>
                             </li>
                             <li>
-                                <p>MVP-advies</p>
+                                <Icon src={require('../images/img/startups/icons/mvp.svg')} />
+                                <Caption>MVP-advies</Caption>
                             </li>
-                        </ul>
+                        </IconList>
                         <Button href="#">Maak een afspraak!</Button>
                     </Col>
                     <Col>
-                        <figure>
+                        <HeaderFigure>
                             <img src={group} alt="group of happy people" />
-                        </figure>
+                        </HeaderFigure>
                     </Col>
                 </Row>
             </HeaderContainer>
+            <SlantedBackground/>
         </Header>
         <section>
             <Container>
-                <Row gutterWidth={6900}>
-                    <Col xs={12} sm={6} md={4}>
-                        <h2>MVP-advies</h2>
-                        <p>
-                        De MVP is de eerste versie van je product. 
-                        Die wil je zo snel mogelijk afhebben zodat 
-                        je je idee kunt gaan testen en tractie en 
-                        omzet kunt genereren. Hierdoor kun je je 
-                        concept doorontwikkelen en mogelijke 
-                        investeerders overtuigen! Wij geven 
-                        daarom scherp advies over hoe het product 
-                        gebouwd moet worden en welke onderdelen 
-                        het beste op korte en lange termijn 
-                        ontwikkeld kunnen worden.
-                        </p>
+                <Row>
+                    <Col style={{alignItems: 'left'}} xs={12} sm={6} md={4}>
+                        <Card>
+                            <CircledIcon src={require('../images/img/startups/icons/mvp.svg')} />
+                            <h2>MVP-advies</h2>
+                            <p>
+                            De MVP is de eerste versie van je product. 
+                            Die wil je zo snel mogelijk afhebben zodat 
+                            je je idee kunt gaan testen en tractie en 
+                            omzet kunt genereren. Hierdoor kun je je 
+                            concept doorontwikkelen en mogelijke 
+                            investeerders overtuigen! Wij geven 
+                            daarom scherp advies over hoe het product 
+                            gebouwd moet worden en welke onderdelen 
+                            het beste op korte en lange termijn 
+                            ontwikkeld kunnen worden.
+                            </p>
+                        </Card>
                     </Col>
                     <Col xs={12} sm={6} md={4}>
-                        <h2>Missie & strategie</h2>
-                        <p>
-                            Wat wil je bereiken met je passie? 
-                            Misschien wel de belangrijkste vraag 
-                            voor een start-up. Wij geven daarom 
-                            deskundig en fris advies op je missie 
-                            en de strategie waarmee je die missie 
-                            wil bereiken. Bovendien kijken we 
-                            kritisch naar het verdienmodel.
-                        </p>
+                        <Card>
+                            <CircledIcon src={require('../images/img/startups/icons/missie.svg')} />
+                            <h2>Missie & strategie</h2>
+                            <p>
+                                Wat wil je bereiken met je passie? 
+                                Misschien wel de belangrijkste vraag 
+                                voor een start-up. Wij geven daarom 
+                                deskundig en fris advies op je missie 
+                                en de strategie waarmee je die missie 
+                                wil bereiken. Bovendien kijken we 
+                                kritisch naar het verdienmodel.
+                            </p>
+                        </Card>
                     </Col>
                     <Col xs={12} md={4}>
-                        <h2>Branding & concurerntie</h2>
-                        <p>Wie ben je en hoe verhoud je je tot je 
-                            concurrenten? Dit zijn cruciale vragen, 
-                            waarmee je boven je concurrenten uit 
-                            kunt steken. Met onze moderne  branding- 
-                            en concurrentieanalyse zetten we hier 
-                            samen een grote stap in.  </p>
+                        <Card>
+                            <CircledIcon src={require('../images/img/startups/icons/concurrentie.svg')} />
+                            <h2>Branding & concurerntie</h2>
+                            <p>Wie ben je en hoe verhoud je je tot je 
+                                concurrenten? Dit zijn cruciale vragen, 
+                                waarmee je boven je concurrenten uit 
+                                kunt steken. Met onze moderne  branding- 
+                                en concurrentieanalyse zetten we hier 
+                                samen een grote stap in.  </p>
+                        </Card>
                     </Col>
                 </Row>
             </Container>
@@ -126,7 +261,7 @@ const Startups = () => (
                 <img src={meeting} alt="meeting"/>
             </figure>
         </section>
-        <section>
+        <Section style={{height: '100vh', display: 'flex', alignItems: 'center'}}>
             <Container>
             <Subtitle>Het proces</Subtitle>
             <h2>Het gaan we je helpen?</h2>
@@ -174,30 +309,41 @@ const Startups = () => (
                 </li>
             </Process>
             </Container>
-        </section>
+            <PathFig src={require('../images/img/startups/path.svg')} />
+        </Section>
         <CTA>
-            <Container>
-            <Subtitle>Intake</Subtitle>
-            <h2>Kom gratis op adviesgesprek</h2>
-            <p>
-                Ons multidisciplinaire, ervaren team van strategen, 
-                designers en developers maken jouw passie werkelijkheid! 
-                Zet de eerste stap en krijg de volgende gratis 
-                deliverables na het kennismakingsgesprek:
-            </p>
-            <Deliverables>
-                <li>
-                    <p>Scherp en kritisch advies op MVP</p>
-                </li>
-                <li>
-                    <p>Deskundi8g en fris advies op je missie en strategie</p>
-                </li>
-                <li>
-                    <p>Moderne branding- en klantanalyse</p>
-                </li>
-            </Deliverables>
-            <Button href="#">Maak een afspraak!</Button>
+            <Container style={{zIndex: 2}}>
+                <Row>
+                    <Col md={8} lg={6} offset={{md: 2, lg: 3}}>
+                        <Subtitle>Intake</Subtitle>
+                    <h2>Kom gratis op adviesgesprek</h2>
+                    <p>
+                        Ons multidisciplinaire, ervaren team van strategen, 
+                        designers en developers maken jouw passie werkelijkheid! 
+                        Zet de eerste stap en krijg de volgende gratis 
+                        deliverables na het kennismakingsgesprek:
+                    </p>
+                    <Deliverables>
+                        <li>
+                            
+                            <CircledIcon src={require('../images/img/startups/icons/mvp.svg')} />
+                            <Caption>Scherp en kritisch advies op MVP</Caption>
+                        </li>
+                        <li>
+                            <CircledIcon src={require('../images/img/startups/icons/missie.svg')} />
+                            <Caption>Deskundig en fris advies op je missie en strategie</Caption>
+                        </li>
+                        <li>
+                            <CircledIcon src={require('../images/img/startups/icons/concurrentie.svg')} /> 
+                            <Caption>Moderne branding- en klantanalyse</Caption>
+                        </li>
+                    </Deliverables>
+                    <Button href="#">Maak een afspraak!</Button>
+                    </Col>
+                </Row>
             </Container>
+            <PathsRight src={require('../images/img/startups/routes/cta-right.svg')} />
+            <PathsLeft src={require('../images/img/startups/routes/cta-right.svg')} />
         </CTA>
     </Layout>
 );
