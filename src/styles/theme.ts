@@ -148,7 +148,7 @@ interface Bytecode {
     mediaQueryMin: Breakpoints;
 }
 const breakpoints: Breakpoints = {
-    xs: '48em',
+    xs: '45em',
     sm: '64em',
     md: '85.375em',
     lg: '120em',
@@ -181,7 +181,7 @@ const bytecode: Bytecode = {
     },
     typography: {
         body: {
-            height: '1.2em',
+            height: '1em',
             spacing: '0.0em',
             font: paragraph,
             weight: regular,
@@ -262,7 +262,7 @@ const bytecode: Bytecode = {
             color: lightgray,
         },
         caption: {
-            size: '0.9rem',
+            size: '0.95rem',
             height: '1.48em',
             spacing: '0em',
             font: menu,
@@ -278,12 +278,12 @@ const bytecode: Bytecode = {
             color: green,
         },
         button: {
-            size: '1.125rem',
+            size: '1rem',
             height: '1.2em',
             spacing: 'normal',
             font: paragraph,
             weight: regular,
-            color: red,
+            color: white,
         },
         menuitem: {
             size: '1.125rem',

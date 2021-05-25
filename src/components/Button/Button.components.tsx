@@ -10,7 +10,7 @@ const buttonStyle = css<{ disabled?: boolean }>`
     padding: 0.66em 2em;
     border-color: ${theme.colors.tertiary};
     border-style: solid;
-    border-width: 0.15rem;
+    border-width: 0.1rem;
     border-radius: 10rem;
     transition: all 0.2s ease;
     font-size: ${size};

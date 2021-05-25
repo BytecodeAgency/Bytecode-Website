@@ -1,4 +1,4 @@
-/*Enhanced/extended styles for the startup development landingpage*/
+/* Enhanced/extended styles for the startup development landingpage */
 
 /* eslint-disable prettier/prettier */
 // Prettier has been disabled due to a weird bug with the code on line 44

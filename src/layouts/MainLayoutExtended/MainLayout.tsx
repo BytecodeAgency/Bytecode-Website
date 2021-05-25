@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import SEO from '../SEO/SEO';
 import Navbar from '../../containers/Navbar/Navbar';
 import Footer from '../Footer/Footer';
-import { GlobalStyles, TypographyClassStyling } from '../../styles/extended/global-css';
+import {
+    GlobalStyles,
+    TypographyClassStyling,
+} from '../../styles/extended/global-css';
 import HeadScripts from '../../lib/GetHeadScripts';
 import NewsletterSubscribe from '../../containers/NewsletterSubscribe/NewsletterSubscribe';
 import { Main, HeadElements } from './MainLayout.components';

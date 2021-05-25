@@ -1,61 +1,78 @@
 import { css } from 'styled-components';
 import theme from './theme';
-import calcHeaderSize from '../../lib/calcHeaderSizes';
 
-const mediaQueries = theme.mediaQueryMin;
+const { mediaQueryMin } = theme;
 
-const base = {
-    fontSize: '1.15em',
-    scale: {
-        desktop: 1.33,
-        mobile: 1.15,
-    },
-    lineHeight: {
-        paragraph: '1.33em',
-        header: '1em',
-    },
-};
-
-const headerSize = {
-    desktop: calcHeaderSize(base.scale.desktop, 1 * 1.125),
-    mobile: calcHeaderSize(base.scale.mobile, 1 * 1.125),
-};
-
-// SCSS-version
 const textScaler = css`
-    ${headerSize.mobile}
-    @media (${mediaQueries.sm}) {
-        ${headerSize.desktop}
-    }
+    html,
     body {
-        /* Base Font Size */
-        font-size: ${base.fontSize};
-        line-height: ${base.lineHeight.paragraph};
-        max-width: 100vw;
+        font-size: 16px; //equals 16px;
+    }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            line-height: ${base.lineHeight.header};
+    p {
+        font-size: 0.875rem;
+    }
+    h1 {
+        font-size: 1.725rem;
+        line-height: 1.22em;
+    }
+    h2 {
+        font-size: 1.432rem;
+        line-height: 1.2em;
+    }
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 1.125rem;
+    }
+    .introduction {
+        font-size: 1rem;
+        line-height: 1.58em;
+    }
+    @media (${mediaQueryMin.xs}) {
+        h1 {
+            font-size: 2.5rem;
         }
-        /* ${headerSize.mobile} */
-        @media (${mediaQueries.xxl}) {
-            font-size: calc(${base.fontSize}*1.5);
+        h2 {
+            font-size: 1.938rem;
+            line-height: 1.2em;
         }
-        @media (${mediaQueries.xl}) {
-            font-size: calc(${base.fontSize}*1.4);
-        }
-        @media (${mediaQueries.lg}) {
-            font-size: calc(${base.fontSize}*1.3);
-        }
-        @media (${mediaQueries.md}) {
-            font-size: calc(${base.fontSize} * 1.15);
-            line-height: calc(${base.lineHeight.paragraph});
+        p {
+            font-size: 1rem;
         }
     }
+
+    @media (${mediaQueryMin.sm}) {
+        .introduction {
+            font-size: 1.115rem;
+        }
+    }
+
+    @media (${mediaQueryMin.md}) {
+        .introduction {
+            font-size: 1.115rem;
+        }
+    }
+
+    @media (${mediaQueryMin.lg}) {
+        h1 {
+            font-size: 3.33rem;
+            line-height: 1.15em;
+        }
+    }
+
+    @media (${mediaQueryMin.xl}) {
+        p {
+            font-size: 1.125rem;
+        }
+        .introduction {
+            font-size: 1.135rem;
+        }
+    }
+
+    @media (${mediaQueryMin.xxl}) {
+    } ;
 `;
 
 export default textScaler;
