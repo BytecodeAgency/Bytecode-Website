@@ -3,7 +3,12 @@ import styled from 'styled-components';
 import Layout from '../layouts/MainLayoutExtended/MainLayout';
 import { Subtitle, Caption } from '../components/Typography/Typography';
 import Button from '../components/Button/Button';
+import ImageBlock from '../components/ImageBlock/ImageBlock';
 import {Container, Row, Col} from '../lib/Grid';
+import theme from '../styles/theme';
+
+const {mediaQueryMin} = theme;
+
 const pageSettings = {
     title: `Maatwerk Web & Mobiel Ontwikkeling`,
     description: `Een kleinschalig full-service webbureau gespecialiseerd in platformontwikkeling op maat. Passie, kwaliteit en betrouwbaarheid als kernwaarden`,
@@ -16,8 +21,9 @@ const meeting = require('../images/img/startups/meeting.png');
 const Header = styled.header`
     min-height: 100vh;
     display: flex;
-
     flex-grow: 1;
+    max-height: 20rem;
+
 `;
 
 const HeaderContainer = styled(Container)`
@@ -26,6 +32,15 @@ const HeaderContainer = styled(Container)`
 
 const Process = styled.ol`
     display: flex;
+    flex-direction: column;
+    @media (${mediaQueryMin.xs}) {
+        width: 80%;
+    }
+    @media (${mediaQueryMin.sm}) {
+        flex-direction: row;
+        width: 100%;
+    }
+    
     li {
         flex-basis: 33%;
     }
@@ -81,6 +96,10 @@ const IconList = styled.ul`
 
 
 const HeaderFigure = styled.figure`
+    display: none;
+    @media (${mediaQueryMin.sm}) {
+        display: block;
+    }
     position: absolute;
     left: 7vw;
     width: 55vw;
@@ -109,19 +128,27 @@ const Deliverables = styled.ul`
         align-items: center;
         justify-items: center;
         width: 33%;
-        margin: 0.5em 1em 0 1em;
+        
         & > * {
             margin-top: 1rem;
         }
     }
+
+    @media (${mediaQueryMin.xs}) {
+        margin: 0.5em 1em 0 1em;
+    }
 `;
 
 const PathsRight = styled.img`
+    display: none;
     position: absolute;
     height: 120%;
     width: fit-content;
     right: -10%;
-    z-index: 0
+    z-index: 0;
+    @media (${mediaQueryMin.sm}) {
+        display: block;
+    }
 `;
 
 const PathsLeft = styled(PathsRight)`
@@ -131,20 +158,33 @@ const PathsLeft = styled(PathsRight)`
 
 const Card = styled.div`
     background: #271C25;
-    padding: 3em;
-    margin: 0.5em;
+    padding: 1em;
+    margin-top: 1em;
     border-radius: 0.1em;
+    @media (${mediaQueryMin.xs}) {
+        padding: 3em;
+        margin: 0.5em;
+    }
 `;
 
 const SlantedBackground = styled.div`
     width: 100%;
-    height: 35rem;
-    background: #271C25;
+    height: 50vh;
+    background-image: url(${group});
+    opacity: 0.58;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    clip-path: polygon(0 0, 100% 0, 88% 66%, 0 100%); 
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); 
+    background-size: 350%;
+    background-position: 29% 61%;
+    @media (${mediaQueryMin.sm}) {
+        background: #271C25;
+        opacity: 1;
+        clip-path: polygon(0 0, 100% 0, 100% 66%, 0 100%); 
+        35rem
+    }
 `;
 
 const GridFig = styled.img`
@@ -164,12 +204,22 @@ const Section = styled.section`
     position: relative;
 `;
 
+const HeaderRow = styled(Row)`
+/* !important used to overwrite standard behaviour react-grid-system*/
+    align-items: flex-end !important;
+    padding-bottom: 4rem;
+    @media (${mediaQueryMin.sm}) {
+        align-items: center !important;
+        padding-bottom: 0;
+    }
+`;
+
 const Startups = () => (
     <Layout pageSettings={pageSettings}>
         <Header>
             <HeaderContainer>
-                <Row style={{height: '100vh'}} align="center">
-                    <Col md={5}>
+                <HeaderRow style={{height: '100vh'}} >
+                    <Col md={10} lg={5} >
                         <GridFig src={require('../images/img/startups/grid.svg')} />
                         <Subtitle>Start-up development</Subtitle>
                         <h1>Samen maken we passie werkelijkheid</h1>
@@ -201,7 +251,7 @@ const Startups = () => (
                             <img src={group} alt="group of happy people" />
                         </HeaderFigure>
                     </Col>
-                </Row>
+                </HeaderRow>
             </HeaderContainer>
             <SlantedBackground/>
         </Header>
@@ -256,12 +306,8 @@ const Startups = () => (
                 </Row>
             </Container>
         </section>
-        <section>
-            <figure>
-                <img src={meeting} alt="meeting"/>
-            </figure>
-        </section>
-        <Section style={{height: '100vh', display: 'flex', alignItems: 'center'}}>
+        <ImageBlock src={meeting} alt="meeting" />
+        <Section style={{margin: '3em 0', display: 'flex', alignItems: 'center'}}>
             <Container>
             <Subtitle>Het proces</Subtitle>
             <h2>Het gaan we je helpen?</h2>
