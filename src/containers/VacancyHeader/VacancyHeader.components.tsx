@@ -36,7 +36,6 @@ export const VacancyHeaderInformation = styled.div`
         align-items: center;
         & > * {
             width: 50%;
-            padding: 1em;
             justify-content: center;
         }
     }
