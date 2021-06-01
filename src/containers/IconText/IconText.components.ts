@@ -7,6 +7,6 @@ export const IconStyle = styled.span`
 
 export const IconTextContainer = styled.div`
     display: inline-block;
-    margin: 1.33rem 0;
     margin-right: 1.33rem;
+    margin-bottom: 1.33rem;
 `;
