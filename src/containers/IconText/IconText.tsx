@@ -1,24 +1,30 @@
 import React from 'react';
-import IconTextProps from './IconText.types';
+import { IconTextProps, IconProps } from './IconText.types';
 import { IconTextContainer, IconStyle } from './IconText.components';
-import * as FontAwesome from 'react-icons/fa';
+import { FaRegClock, FaMapMarkerAlt } from "react-icons/fa";
 
-const Icon = (props: { iconName: string; size: string; color: string; }) => {
-    const { iconName, size, color } = props;
-    const icon = React.createElement(FontAwesome[iconName]);
-    return <IconStyle style={{ fontSize: size, color: color }}>{icon}</IconStyle>;
-};
+// Creates the Icon
+const Icon: React.FC<IconProps> = ({ iconName, iconColor }) => {
+    let icon;
+    if (iconName === "FaMapMarkerAlt") {
+        icon = <FaMapMarkerAlt />
+    }
+    if (iconName === "FaRegClock") {
+        icon = <FaRegClock />
+    }
+    return <IconStyle style={{ color: iconColor }}>{icon}</IconStyle>;
+}
 
+// Creates the Icon with Text
 const IconText: React.FC<IconTextProps> = ({
-    icon,
-    fSize,
+    iconName,
     iconColor,
     text
 }) => {
     return (
         <IconTextContainer>
-            <Icon iconName={icon} size={fSize} color={iconColor} />
-            <span style={{ fontSize: fSize, marginBottom: (parseInt(fSize) / 3) }}>{text}</span>
+            <Icon iconName={iconName} iconColor={iconColor} />
+            <span style={{ fontSize: "15px" }}>{text}</span>
         </IconTextContainer>
     );
 };

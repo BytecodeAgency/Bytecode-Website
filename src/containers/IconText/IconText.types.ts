@@ -1,6 +1,10 @@
-export default interface IconTextProps {
-    icon: string;
-    fSize: string;
+export interface IconTextProps {
+    iconName: string;
     iconColor: string;
     text: string;
+}
+
+export interface IconProps {
+    iconName: string;
+    iconColor: string;
 }

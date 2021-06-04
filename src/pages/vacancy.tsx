@@ -1,11 +1,9 @@
-// Global
 import React from 'react';
 import Layout from '../layouts/MainLayout/MainLayout';
 import styled from 'styled-components';
 import theme from '../styles/theme';
 const { colors, mediaQueryMin } = theme;
 
-// Components
 import IconText from '../containers/IconText/IconText';
 import VacancyHeader from '../containers/VacancyHeader/VacancyHeader';
 import { Container, Row, Col } from '../lib/Grid';
@@ -41,7 +39,7 @@ const VacancyList = styled.ul`
     margin-bottom: 40px;
 `;
 
-const Vacancy: React.FC<Record<string, never>> = () => (
+const Vacancy: React.FC = () => (
     <Layout pageSettings={pageSettings}>
         <VacancyHeader
             subtitle="Vacature"
@@ -52,14 +50,12 @@ const Vacancy: React.FC<Record<string, never>> = () => (
         <Container>
             <IconTextContainer>
                 <IconText
-                    icon="FaRegClock"
-                    fSize="15px"
+                    iconName="FaRegClock"
                     iconColor={colors.primary}
                     text="Deeltijd: 24-40 uur"
                 />
                 <IconText
-                    icon="FaMapMarkerAlt"
-                    fSize="15px"
+                    iconName="FaMapMarkerAlt"
                     iconColor={colors.primary}
                     text="Delfgauw"
                 />
@@ -134,9 +130,7 @@ const Vacancy: React.FC<Record<string, never>> = () => (
                             <span style={{ color: "grey" }}>Stuur ons een e-mail met je motivatie, cv en eventueel je LinkedIn of Github-profiel naar no-recruiters@bytecode.nl</span>
                             <div style={{ marginTop: "20px" }}>
                                 <Button
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href="https://calendly.com/bytecode">
+                                    href={"mailto:no-recruiters@bytecode.nl"}>
                                     Neem contact op
                                 </Button>
                             </div>
@@ -145,7 +139,7 @@ const Vacancy: React.FC<Record<string, never>> = () => (
                 </Col>
             </Row>
         </Container>
-    </Layout>
+    </Layout >
 );
 
 export default Vacancy;

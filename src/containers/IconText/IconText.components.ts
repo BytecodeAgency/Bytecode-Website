@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const IconStyle = styled.span`
     margin: 0 0.5rem;
     vertical-align: middle;
+    font-size: 15px;
 `;
 
 export const IconTextContainer = styled.div`
