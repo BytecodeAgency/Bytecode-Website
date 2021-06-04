@@ -172,7 +172,7 @@ const Dearly: React.FC<Record<string, never>> = () => (
         </Section>
         <Section>
             <ResultsAndNumbers
-                numbers={['20', '50', '200']}
+                numbers={['20', '50', '600']}
                 numberTypes={['minuten', '+', '+']}
                 subtitles={[
                     'van code review naar productie',

@@ -8,10 +8,6 @@ Full-stack developer: Jeroen van Steijn
 Site: https://bytecode.nl
 Location: Nootdorp, The Netherlands
 
-Full-stack developer: Julian van Dijk
-Site: https://bytecode.nl
-Location: Delft, The Netherlands
-
 Designer and front-end developer: Richard van 't Hof
 Site: https://therichart.space
 Location: Rotterdam, The Netherlands
