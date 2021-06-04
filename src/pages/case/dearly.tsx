@@ -31,10 +31,10 @@ const websiteUrl = 'https://www.getdearly.com/';
 const pageSettings = {
     title: 'Ondersteuning bij rouwverwerking',
     client: 'dearly',
-    clientBio: '', //  TODO: add client bio
+    clientBio: 'Dearly biedt ondersteuning bij het verlies van je dierbare(n).',
     description:
         'Een nieuwe mobiele rouwapp voor persoonlijke ondersteuning en maatschappelijke ontwikkeling',
-    keywords: '', // TODO: add keywords
+    keywords: 'rouwverwerking, app, dearly',
     image: header,
 };
 
