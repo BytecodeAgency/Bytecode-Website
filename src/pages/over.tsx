@@ -112,13 +112,6 @@ const Over: React.FC<Record<string, never>> = () => (
                     linkedin="https://www.linkedin.com/in/thomasbodlaender"
                 />
                 <TeamMember
-                    name="Julian van Dijk"
-                    title="Full-stack developer web &amp; mobiel"
-                    img={require('../images/img/team/julian.jpg')}
-                    email="mailto:julian@bytecode.nl"
-                    linkedin="https://www.linkedin.com/in/julian-v-66b098116"
-                />
-                <TeamMember
                     name="Nick Broekarts"
                     title="Partner &amp; Business Developer"
                     img={require('../images/img/team/nick.jpg')}

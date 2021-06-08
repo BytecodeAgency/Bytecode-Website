@@ -27,10 +27,11 @@ const sungevity = require('../../images/img/cases/sungevity/header.jpg');
 const pageSettings = {
     title: 'Platform voor jonge ondernemers',
     client: 'youngpwr',
-    clientBio: '', // TODO: add client bio
+    clientBio:
+        'YoungPWR helpt jou bij het vinden van betaalde leerzame opdrachten (klanten), een bijbaan of een stage. YoungPWR is jouw coach en geeft je het netwerk dat je nodig hebt om succesvol te starten en net dat beetje meer te verdienen',
     description:
         'Met een nieuw platform ondersteunen we de ontplooiing van scholieren en studenten met een wens om te werken of ondernemen.',
-    keywords: '', // TODO: add keywords
+    keywords: 'YoungPWR, platform development',
     image: useCase,
 };
 

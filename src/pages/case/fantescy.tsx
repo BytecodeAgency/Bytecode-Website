@@ -56,7 +56,7 @@ const pageSettings = {
         'We hebben de eerste interactieve Eurovisie Songfestival app ontwikkeld, ' +
         'waarmee fans van over de hele wereld elkaar ontmoeten en het tegen elkaar opnemen.',
     image: header,
-    keywords: '', // TODO: add keywords
+    keywords: 'FantESCy, app, development, custom',
 };
 const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
@@ -141,7 +141,7 @@ const Case: React.FC<Record<string, never>> = () => (
         <Section>
             <ResultsAndNumbers
                 subtitles={['Downloads', 'Groepen aangemaakt', 'Votes']}
-                numbers={['3.500', '280', '22.000']}
+                numbers={['7.000', '1.000', '90.000']}
                 numberTypes={['+', '+', '+']}
                 title="Cijfers tot nu toe"
             />
