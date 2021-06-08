@@ -6,7 +6,7 @@ import { IconTextContainer, IconStyle } from './IconText.components';
 
 // Creates the Icon
 const Icon: React.FC<IconProps> = ({ iconName, iconColor }) => {
-    let icon;
+    let icon = null;
     if (iconName === 'FaMapMarkerAlt') {
         icon = <FaMapMarkerAlt />;
     }
