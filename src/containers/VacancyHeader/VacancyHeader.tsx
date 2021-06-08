@@ -14,7 +14,7 @@ const VacancyHeader: React.FC<VacancyHeaderProps> = ({
     return (
         <VacancyHeaderBase backgroundImage={img}>
             <VacancyHeaderInformation>
-                <div style={{ width: '100%' }}>
+                <div style={{ width: '80%' }}>
                     <StyledSubtitle>{subtitle}</StyledSubtitle>
                     <h1>{title}</h1>
                 </div>
