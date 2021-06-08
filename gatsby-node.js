@@ -42,9 +42,8 @@ exports.createPages = async ({ actions, graphql }) => {
                             reading_time
                             article_intro
                         }
-                        code {
-                            body
-                        }
+                        body
+                        rawBody
                         fields {
                             slug
                         }
