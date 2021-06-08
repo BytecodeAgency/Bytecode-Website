@@ -8,17 +8,9 @@ module.exports = {
     },
     plugins: [
         {
-            resolve: `gatsby-mdx`,
+            resolve: `gatsby-plugin-mdx`,
             extensions: ['.mdx'],
         },
-        `gatsby-plugin-react-helmet`,
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         name: `images`,
-        //         path: `${__dirname}/src/images`,
-        //     },
-        // },
         `gatsby-transformer-sharp`,
         {
             resolve: `gatsby-plugin-sharp`,
