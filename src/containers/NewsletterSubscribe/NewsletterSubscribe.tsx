@@ -35,9 +35,10 @@ const NewsletterSubscribe: React.FC<NewsletterSubscribeProps> = ({
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
-    const stateChanger = (
-        setter: React.Dispatch<React.SetStateAction<string>>
-    ) => (e: React.ChangeEvent<HTMLInputElement>) => setter(e.target.value);
+    const stateChanger =
+        (setter: React.Dispatch<React.SetStateAction<string>>) =>
+        (e: React.ChangeEvent<HTMLInputElement>) =>
+            setter(e.target.value);
     const canSubmit = name !== '' && email !== '';
 
     return (
