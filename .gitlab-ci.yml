@@ -7,7 +7,7 @@ cache:
   - node_modules/
 
 .node_base: &node_base
-  stage: text
+  stage: test
   before_script:
     - apk add make nasm autoconf automake libtool dpkg pkgconfig libpng libpng-dev g++
     - yarn install --production --frozen-lockfile
