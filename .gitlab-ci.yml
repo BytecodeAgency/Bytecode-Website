@@ -1,27 +1,25 @@
 image: node:12-alpine
 stages:
-  - build
   - test
-  - release
-  - deploy
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
   - node_modules/
 
-build_node:
-  stage: build
+.node_base: &node_base
+  stage: text
   before_script:
     - apk add make nasm autoconf automake libtool dpkg pkgconfig libpng libpng-dev g++
     - yarn install --production --frozen-lockfile
+
+build:
+  <<: *node_base
+  stage: test
   script:
     - yarn run build
-    - mv public build
 
 lint:
-  stage: test
-  before_script:
-    - yarn install --frozen-lockfile
+  <<: *node_base
   script:
     - yarn run lint
 
