@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { BlogpostSingleProps, CallToActionProps } from './BlogpostLayout.types';
 import Layout from '../MainLayout/MainLayout';
 import Author from '../../containers/Author/Author';
@@ -69,9 +69,7 @@ const BlogSingle: React.FC<BlogpostSingleProps> = ({ content }) => (
             </ArticleHeader>
             <BlogContent>
                 <ArticleIntro>{content.article_intro}</ArticleIntro>
-                <MDXRenderer>
-{content.post_content}
-                </MDXRenderer>
+                <MDXRenderer>{content.post_content}</MDXRenderer>
                 <CallToAction />
             </BlogContent>
         </Article>

@@ -6,7 +6,6 @@ import {
     VacancyHeaderInformation,
 } from './VacancyHeader.components';
 
-
 const VacancyHeader: React.FC<VacancyHeaderProps> = ({
     title,
     subtitle,
@@ -15,7 +14,7 @@ const VacancyHeader: React.FC<VacancyHeaderProps> = ({
     return (
         <VacancyHeaderBase backgroundImage={img}>
             <VacancyHeaderInformation>
-                <div style={{ width: "100%" }}>
+                <div style={{ width: '100%' }}>
                     <StyledSubtitle>{subtitle}</StyledSubtitle>
                     <h1>{title}</h1>
                 </div>

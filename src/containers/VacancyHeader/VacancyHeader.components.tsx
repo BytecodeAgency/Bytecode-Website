@@ -5,7 +5,11 @@ import { Subtitle } from '../../components/Typography/Typography';
 const { colors, mediaQueryMin, containerWidth } = theme;
 
 export const VacancyHeaderBase = styled.header<{ backgroundImage: string }>`
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)
+        ),
         url(${(props) => props.backgroundImage});
     background-size: cover !important;
     background-position: center !important;
@@ -50,4 +54,3 @@ export const StyledSubtitle = styled(Subtitle)`
     color: ${colors.primary} !important;
     text-shadow: 0 0 1em #000;
 `;
-
