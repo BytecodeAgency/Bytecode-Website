@@ -59,8 +59,11 @@ const Case: React.FC<Record<string, never>> = () => (
             <h3>Ga voor duurzaam</h3>
             <p>
                 Energiebedrijf Eneco is in het afgelopen jaar bezig geweest met
-                de ontwikkeling <a target="_blank" href={omschakelaar}>“De Omschakelaar”</a>,
-                een nieuwe online tool. Met behulp van deze tool kunnen
+                de ontwikkeling{' '}
+                <a target="_blank" href={omschakelaar} rel="noreferrer">
+                    “De Omschakelaar”
+                </a>
+                , een nieuwe online tool. Met behulp van deze tool kunnen
                 gebruikers persoonlijk advies krijgen over duurzaamheid.
                 Luciano, onze co-founder en technical lead, heeft op ad
                 interim-basis geholpen met de realisatie van De Omschakelaar.
