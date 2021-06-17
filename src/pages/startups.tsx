@@ -3,11 +3,10 @@ import styled from 'styled-components';
 import Layout from '../layouts/MainLayoutExtended/MainLayout';
 import { Subtitle } from '../components/Typography/Typography';
 import Button from '../components/Button/Button';
-import ImageBlock from '../components/ImageBlock/ImageBlock';
 import { Container, Row, Col } from '../lib/Grid';
 import theme from '../styles/extended/theme';
 
-const { mediaQueryMin } = theme;
+const { mediaQueryMin, colors } = theme;
 
 const pageSettings = {
     title: `Maatwerk Web & Mobiel Ontwikkeling`,
@@ -23,6 +22,7 @@ const Header = styled.header`
     display: flex;
     flex-grow: 1;
     max-height: 20rem;
+    margin-top: 5em;
 `;
 
 const HeaderContainer = styled(Container)`
@@ -32,6 +32,9 @@ const HeaderContainer = styled(Container)`
 const Process = styled.ol`
     display: flex;
     flex-direction: column;
+    list-style-type: none;
+    counter-reset: elementcounter;
+    margin-left: -1em;
     @media (${mediaQueryMin.xs}) {
         width: 80%;
     }
@@ -42,9 +45,20 @@ const Process = styled.ol`
             padding-right: 3em;
         }
     }
-
     li {
         flex-basis: 33%;
+        font-size: 20px;
+        color: ${colors.primary};
+        position: relative;
+        &:before {
+            content: "0" counter(elementcounter) ". ";
+            counter-increment: elementcounter;
+            position: absolute;
+            left: -2em;
+        }
+        h3 {
+            display: inline-block;
+        }
     }
 `;
 
@@ -60,12 +74,22 @@ const CTA = styled.section`
 `;
 
 const Icon = styled.img`
-    height: 3rem;
+    height: 6rem;
     width: auto;
+`;
+
+const AdviceIcon = styled.img`
+    position: absolute;
+    width: 7rem !important;
+    height: auto !important;
+    opacity: 70%;
 `;
 
 const CircledIcon = styled(Icon)`
     height: 5rem;
+    width: auto;
+    display: block;
+    margin: 0 auto;
 `;
 
 const IconList = styled.ul`
@@ -77,11 +101,11 @@ const IconList = styled.ul`
     li {
         flex-direction: column;
         display: inline-flex;
-        width: 30%;
+        width: 100%;
         font-size: 0.8rem;
         text-align: center;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         img {
             width: min-content;
         }
@@ -102,19 +126,36 @@ const HeaderFigure = styled.figure`
         transform: translateY(-45vh);
     }
     position: absolute;
-    left: 7vw;
+    left: 10vw;
     width: 60vw;
     transform: translateY(-45vh);
     height: 85vh;
     background: #271c25;
     overflow: hidden;
     img {
-        height: 100%;
+        height: 80%;
         width: 100%;
         object-fit: cover;
-        transform: scale(2);
+        transform: scale(1.5);
         object-position: left center;
     }
+    div {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+`;
+
+const ParallaxImage = styled.div`
+    background-image: url(${meeting});
+    min-height: 500px;
+    width: 100%;
+    display: block;
+    border: none;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 `;
 
 const Deliverables = styled.ul`
@@ -162,10 +203,23 @@ const Card = styled.div`
     padding: 1em;
     margin-top: 1em;
     border-radius: 0.1em;
+    text-align: center;
     @media (${mediaQueryMin.xs}) {
         padding: 3em;
         margin: 0.5em;
     }
+    div {
+        position: relative;
+        height: 5em;
+        margin: 0 auto;
+    }
+    h3 {
+        margin: 2em 0;
+    }
+`;
+
+const FlexCol = styled(Col)`
+    display: flex;
 `;
 
 const SlantedBackground = styled.div`
@@ -177,14 +231,14 @@ const SlantedBackground = styled.div`
     top: 0;
     left: 0;
     z-index: -1;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); 
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     background-size: 350%;
     background-position: 29% 61%;
     @media (${mediaQueryMin.sm}) {
         background: #271C25;
         opacity: 1;
-        clip-path: polygon(0 0, 100% 0, 100% 66%, 0 100%); 
-        35rem
+        clip-path: polygon(0 0, 100% 0, 100% 66%, 0 100%);
+        /* 35rem */
     }
 `;
 
@@ -206,7 +260,7 @@ const Section = styled.section`
 `;
 
 const IconCaption = styled.p`
-    width: 66%;
+    width: 90%;
     text-align: center;
 `;
 
@@ -249,7 +303,7 @@ const Startups = () => (
                             </li>
                             <li>
                                 <Icon
-                                    src={require('../images/img/startups/icons/missie.svg')}
+                                    src={require('../images/img/startups/icons/mvp.svg')}
                                 />
                                 <IconCaption className="caption">
                                     Missie & strategie
@@ -257,7 +311,7 @@ const Startups = () => (
                             </li>
                             <li>
                                 <Icon
-                                    src={require('../images/img/startups/icons/mvp.svg')}
+                                    src={require('../images/img/startups/icons/missie.svg')}
                                 />
                                 <IconCaption className="caption">
                                     MVP-advies
@@ -268,22 +322,27 @@ const Startups = () => (
                     </Col>
                     <Col>
                         <HeaderFigure>
-                            <img src={group} alt="group of happy people" />
+                            <div>
+                                <img src={group} alt="group of happy people" />
+                                {/* <AdviceIcon src={require('../images/img/startups/advice-icon.svg')} /> */}
+                            </div>
                         </HeaderFigure>
                     </Col>
                 </HeaderRow>
             </HeaderContainer>
             <SlantedBackground />
         </Header>
-        <section>
+        <section style={{ marginBottom: '10em' }}>
             <Container>
                 <Row>
-                    <Col style={{ alignItems: 'left' }} xs={12} sm={6} md={4}>
+                    <FlexCol style={{ alignItems: 'left' }} xs={12} sm={6} md={4}>
                         <Card>
-                            <CircledIcon
-                                src={require('../images/img/startups/icons/mvp.svg')}
-                            />
-                            <h2>MVP-advies</h2>
+                            <div>
+                                <CircledIcon
+                                    src={require('../images/img/startups/icons-round/mvp.svg')}
+                                />
+                            </div>
+                            <h3>MVP-advies</h3>
                             <p>
                                 De MVP is de eerste versie van je product. Die
                                 wil je zo snel mogelijk afhebben zodat je je
@@ -296,13 +355,15 @@ const Startups = () => (
                                 ontwikkeld kunnen worden.
                             </p>
                         </Card>
-                    </Col>
-                    <Col xs={12} sm={6} md={4}>
+                    </FlexCol>
+                    <FlexCol xs={12} sm={6} md={4}>
                         <Card>
-                            <CircledIcon
-                                src={require('../images/img/startups/icons/missie.svg')}
-                            />
-                            <h2>Missie & strategie</h2>
+                            <div>
+                                <CircledIcon
+                                    src={require('../images/img/startups/icons-round/missie.svg')}
+                                />
+                            </div>
+                            <h3>Missie & strategie</h3>
                             <p>
                                 Wat wil je bereiken met je passie? Misschien wel
                                 de belangrijkste vraag voor een start-up. Wij
@@ -312,13 +373,15 @@ const Startups = () => (
                                 verdienmodel.
                             </p>
                         </Card>
-                    </Col>
-                    <Col xs={12} md={4}>
+                    </FlexCol>
+                    <FlexCol xs={12} md={4}>
                         <Card>
-                            <CircledIcon
-                                src={require('../images/img/startups/icons/concurrentie.svg')}
-                            />
-                            <h2>Branding & concurerntie</h2>
+                            <div>
+                                <CircledIcon
+                                    src={require('../images/img/startups/icons-round/concurrentie.svg')}
+                                />
+                            </div>
+                            <h3>Branding & concurrentie</h3>
                             <p>
                                 Wie ben je en hoe verhoud je je tot je
                                 concurrenten? Dit zijn cruciale vragen, waarmee
@@ -327,17 +390,19 @@ const Startups = () => (
                                 zetten we hier samen een grote stap in.{' '}
                             </p>
                         </Card>
-                    </Col>
+                    </FlexCol>
                 </Row>
             </Container>
         </section>
-        <ImageBlock src={meeting} alt="meeting" />
+        <section>
+            <ParallaxImage />
+        </section>
         <Section
             style={{ padding: '15vh 0', display: 'flex', alignItems: 'center' }}
         >
             <Container>
                 <Subtitle>Het proces</Subtitle>
-                <h2>Het gaan we je helpen?</h2>
+                <h2>Hoe gaan we je helpen?</h2>
                 <Process>
                     <li>
                         <h3>Strategie</h3>
@@ -428,7 +493,7 @@ const Startups = () => (
                 src={require('../images/img/startups/routes/cta-right.svg')}
             />
         </CTA>
-    </Layout>
+    </Layout >
 );
 
 export default Startups;
