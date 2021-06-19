@@ -4,7 +4,7 @@ import React from 'react';
 
 export const Main = styled.main<{ padded?: boolean }>`
     max-width: 100vw !important;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     padding-top: ${(props) => (props.padded ? '15vh' : 0)};
 `;
 

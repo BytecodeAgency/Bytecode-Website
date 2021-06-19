@@ -254,11 +254,12 @@ const bytecode: Bytecode = {
             marginRight: '1.66m',
         },
         introduction: {
+            size: '1.22em',
             height: '1.44em',
             spacing: '0.01em',
             font: paragraph,
             weight: regular,
-            color: lightgray,
+            color: lightgray
         },
         caption: {
             size: '0.85rem',

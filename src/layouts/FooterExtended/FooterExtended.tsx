@@ -12,11 +12,11 @@ import {
     FooterLinkContainer,
     FooterLogo,
     FooterSpacer,
-} from './Footer.components';
+} from './FooterExtended.components';
 
 const logo = require('../../images/img/logo.svg');
 
-const FooterExtended: React.FC<Record<string, never>> = () => (
+const Footer: React.FC<Record<string, never>> = () => (
     <footer>
         <FooterContainer>
             <FooterCol>
@@ -121,4 +121,4 @@ const FooterExtended: React.FC<Record<string, never>> = () => (
     </footer>
 );
 
-export default FooterExtended;
+export default Footer;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SEO from '../SEO/SEO';
 import Navbar from '../../containers/Navbar/Navbar';
-import Footer from '../Footer/Footer';
+import Footer from '../FooterExtended/FooterExtended';
 import {
     GlobalStyles,
     TypographyClassStyling,

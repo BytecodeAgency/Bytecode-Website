@@ -16,13 +16,15 @@ const pageSettings = {
 
 const group = require('../images/img/startups/group.png');
 const meeting = require('../images/img/startups/meeting.png');
+const team = require('../images/img/startups/bytecode-team.jpg');
 
 const Header = styled.header`
     min-height: 100vh;
-    display: flex;
-    flex-grow: 1;
     max-height: 20rem;
-    margin-top: 5em;
+    margin-top: 11em;
+    @media screen and (min-width: 400px) {
+        margin-top: 5em;
+    }
 `;
 
 const HeaderContainer = styled(Container)`
@@ -33,16 +35,18 @@ const Process = styled.ol`
     display: flex;
     flex-direction: column;
     list-style-type: none;
+    list-style-position: inside;
     counter-reset: elementcounter;
-    margin-left: -1em;
+    padding-left: 0;
     @media (${mediaQueryMin.xs}) {
         width: 80%;
     }
     @media (${mediaQueryMin.sm}) {
         flex-direction: row;
         width: 100%;
+        padding-left: 1em;
         li {
-            padding-right: 3em;
+            padding-right: 2em;
         }
     }
     li {
@@ -54,7 +58,10 @@ const Process = styled.ol`
             content: "0" counter(elementcounter) ". ";
             counter-increment: elementcounter;
             position: absolute;
-            left: -2em;
+            right: 1em;
+            @media (${mediaQueryMin.sm}) {
+                left: -2em;
+            }
         }
         h3 {
             display: inline-block;
@@ -74,15 +81,28 @@ const CTA = styled.section`
 `;
 
 const Icon = styled.img`
-    height: 6rem;
+    height: 4rem;
     width: auto;
+    @media (${mediaQueryMin.sm}) {
+        height: 4rem;
+    }
 `;
 
 const AdviceIcon = styled.img`
     position: absolute;
-    width: 7rem !important;
-    height: auto !important;
+    width: 4rem;
+    height: auto;
+    left: 65%;
+    top: 0;
     opacity: 70%;
+    @media (min-width: 500px) {
+        left: 90%;
+        width: 5rem;
+    }
+    @media (${mediaQueryMin.sm}) {
+        left: 40%;
+        width: 7rem;
+    }
 `;
 
 const CircledIcon = styled(Icon)`
@@ -90,6 +110,9 @@ const CircledIcon = styled(Icon)`
     width: auto;
     display: block;
     margin: 0 auto;
+    @media (${mediaQueryMin.xs}) {
+        height: 5rem;
+    }
 `;
 
 const IconList = styled.ul`
@@ -98,6 +121,7 @@ const IconList = styled.ul`
     transform: translateX(-0.33rem);
     display: flex;
     align-items: stretch;
+    max-width: 100%;
     li {
         flex-direction: column;
         display: inline-flex;
@@ -107,7 +131,9 @@ const IconList = styled.ul`
         align-items: center;
         justify-content: start;
         img {
-            width: min-content;
+            @media (${mediaQueryMin.sm}) {
+                width: min-content;
+            }
         }
         p {
             margin: 0;
@@ -126,28 +152,26 @@ const HeaderFigure = styled.figure`
         transform: translateY(-45vh);
     }
     position: absolute;
-    left: 10vw;
+    left: 120%;
     width: 60vw;
     transform: translateY(-45vh);
     height: 85vh;
     background: #271c25;
     overflow: hidden;
+    @media screen and (min-width: 988px) {
+        left: 10vw;
+    }
     img {
         height: 80%;
         width: 100%;
         object-fit: cover;
-        transform: scale(1.5);
+        transform: scale(1.8);
         object-position: left center;
-    }
-    div {
-        position: relative;
-        top: 0;
-        left: 0;
     }
 `;
 
 const ParallaxImage = styled.div`
-    background-image: url(${meeting});
+    background-image: url(${team});
     min-height: 500px;
     width: 100%;
     display: block;
@@ -156,13 +180,20 @@ const ParallaxImage = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @media (${mediaQueryMin.sm}) {
+        background-image: url(${meeting});
+    }
+    & img {
+        width: 100%;
+        height: auto;
+    }
 `;
 
 const Deliverables = styled.ul`
     display: flex;
     list-style: none;
     text-align: center;
-    align-items: center;
+    align-items: flex-start;
     justify-items: center;
     li {
         display: flex;
@@ -322,12 +353,10 @@ const Startups = () => (
                     </Col>
                     <Col>
                         <HeaderFigure>
-                            <div>
-                                <img src={group} alt="group of happy people" />
-                                {/* <AdviceIcon src={require('../images/img/startups/advice-icon.svg')} /> */}
-                            </div>
+                            <img src={group} alt="group of happy people" />
                         </HeaderFigure>
                     </Col>
+                    <AdviceIcon src={require('../images/img/startups/advice-icon.svg')} />
                 </HeaderRow>
             </HeaderContainer>
             <SlantedBackground />
