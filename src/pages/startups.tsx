@@ -354,7 +354,12 @@ const Startups = () => (
                                 </IconCaption>
                             </li>
                         </IconList>
-                        <Button href="#">Maak een afspraak!</Button>
+                        <Button
+                            href="https://calendly.com/bytecode"
+                            target="_blank"
+                            rel="noopener">
+                            Maak een afspraak!
+                        </Button>
                     </Col>
                     <Col>
                         <HeaderFigure>
@@ -516,7 +521,12 @@ const Startups = () => (
                                 </p>
                             </li>
                         </Deliverables>
-                        <Button href="#">Maak een afspraak!</Button>
+                        <Button
+                            href="https://calendly.com/bytecode"
+                            target="_blank"
+                            rel="noopener">
+                            Maak een afspraak!
+                        </Button>
                     </Col>
                 </Row>
             </Container>
