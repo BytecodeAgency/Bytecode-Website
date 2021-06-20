@@ -22,10 +22,7 @@ const team = require('../images/img/startups/bytecode-team.jpg');
 const Header = styled.header`
     min-height: 100vh;
     max-height: 20rem;
-    margin-top: 11em;
-    @media screen and (min-width: 400px) {
-        margin-top: 5em;
-    }
+    margin-top: 5em;
 `;
 
 const HeaderContainer = styled(Container)`
