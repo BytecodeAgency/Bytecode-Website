@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from '../layouts/MainLayoutExtended/MainLayout';
 import { Subtitle } from '../components/Typography/Typography';
+import NewsletterSubscribeExtended from '../containers/NewsletterSubscribeExtended/NewsletterSubscribeExtended';
 import Button from '../components/Button/Button';
 import { Container, Row, Col } from '../lib/Grid';
 import theme from '../styles/extended/theme';
@@ -40,6 +41,7 @@ const Process = styled.ol`
     padding-left: 0;
     @media (${mediaQueryMin.xs}) {
         width: 80%;
+        margin:0 auto;
     }
     @media (${mediaQueryMin.sm}) {
         flex-direction: row;
@@ -67,17 +69,6 @@ const Process = styled.ol`
             display: inline-block;
         }
     }
-`;
-
-const CTA = styled.section`
-    background: #271c25;
-    text-align: center;
-    padding: 3em 0;
-    min-height: 35em;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
 `;
 
 const Icon = styled.img`
@@ -162,7 +153,7 @@ const HeaderFigure = styled.figure`
         left: 10vw;
     }
     img {
-        height: 80%;
+        height: 60%;
         width: 100%;
         object-fit: cover;
         transform: scale(1.8);
@@ -288,6 +279,17 @@ const PathFig = styled.img`
 
 const Section = styled.section`
     position: relative;
+    padding: 3em 0;
+`;
+
+const CTA = styled(Section)`
+    background: #271c25;
+    text-align: center;
+    min-height: 35em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
 `;
 
 const IconCaption = styled.p`
@@ -303,6 +305,12 @@ const HeaderRow = styled(Row)`
         align-items: center !important;
         padding-bottom: 0;
     }
+`;
+
+const NewsletterSection = styled(Section)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const Startups = () => (
@@ -361,10 +369,45 @@ const Startups = () => (
             </HeaderContainer>
             <SlantedBackground />
         </Header>
-        <section style={{ marginBottom: '10em' }}>
+        <Section style={{ paddingTop: 0 }}>
             <Container>
                 <Row>
-                    <FlexCol style={{ alignItems: 'left' }} xs={12} sm={6} md={4}>
+                    <FlexCol style={{ alignItems: 'left' }} xs={12} sm={6} lg={4}>
+                        <Card>
+                            <div>
+                                <CircledIcon
+                                    src={require('../images/img/startups/icons-round/concurrentie.svg')}
+                                />
+                            </div>
+                            <h3>Branding & concurrentie</h3>
+                            <p>
+                                Wie ben je en hoe verhoud je je tot je
+                                concurrenten? Dit zijn cruciale vragen, waarmee
+                                je boven je concurrenten uit kunt steken. Met
+                                onze moderne branding- en concurrentieanalyse
+                                zetten we hier samen een grote stap in.{' '}
+                            </p>
+                        </Card>
+                    </FlexCol>
+                    <FlexCol xs={12} sm={6} lg={4}>
+                        <Card>
+                            <div>
+                                <CircledIcon
+                                    src={require('../images/img/startups/icons-round/missie.svg')}
+                                />
+                            </div>
+                            <h3>Missie & strategie</h3>
+                            <p>
+                                Wat wil je bereiken met je passie? Misschien wel
+                                de belangrijkste vraag voor een start-up. Wij
+                                geven daarom deskundig en fris advies op je
+                                missie en de strategie waarmee je die missie wil
+                                bereiken. Bovendien kijken we kritisch naar het
+                                verdienmodel.
+                            </p>
+                        </Card>
+                    </FlexCol>
+                    <FlexCol xs={12} lg={4}>
                         <Card>
                             <div>
                                 <CircledIcon
@@ -385,49 +428,14 @@ const Startups = () => (
                             </p>
                         </Card>
                     </FlexCol>
-                    <FlexCol xs={12} sm={6} md={4}>
-                        <Card>
-                            <div>
-                                <CircledIcon
-                                    src={require('../images/img/startups/icons-round/missie.svg')}
-                                />
-                            </div>
-                            <h3>Missie & strategie</h3>
-                            <p>
-                                Wat wil je bereiken met je passie? Misschien wel
-                                de belangrijkste vraag voor een start-up. Wij
-                                geven daarom deskundig en fris advies op je
-                                missie en de strategie waarmee je die missie wil
-                                bereiken. Bovendien kijken we kritisch naar het
-                                verdienmodel.
-                            </p>
-                        </Card>
-                    </FlexCol>
-                    <FlexCol xs={12} md={4}>
-                        <Card>
-                            <div>
-                                <CircledIcon
-                                    src={require('../images/img/startups/icons-round/concurrentie.svg')}
-                                />
-                            </div>
-                            <h3>Branding & concurrentie</h3>
-                            <p>
-                                Wie ben je en hoe verhoud je je tot je
-                                concurrenten? Dit zijn cruciale vragen, waarmee
-                                je boven je concurrenten uit kunt steken. Met
-                                onze moderne branding- en concurrentieanalyse
-                                zetten we hier samen een grote stap in.{' '}
-                            </p>
-                        </Card>
-                    </FlexCol>
                 </Row>
             </Container>
-        </section>
-        <section>
+        </Section>
+        <Section>
             <ParallaxImage />
-        </section>
+        </Section>
         <Section
-            style={{ padding: '15vh 0', display: 'flex', alignItems: 'center' }}
+            style={{ display: 'flex', alignItems: 'center' }}
         >
             <Container>
                 <Subtitle>Het proces</Subtitle>
@@ -522,6 +530,9 @@ const Startups = () => (
                 src={require('../images/img/startups/routes/cta-right.svg')}
             />
         </CTA>
+        <NewsletterSection>
+            <NewsletterSubscribeExtended />
+        </NewsletterSection>
     </Layout >
 );
 

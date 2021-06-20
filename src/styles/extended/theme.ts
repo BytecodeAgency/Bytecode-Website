@@ -64,6 +64,7 @@ type TypographyElement = {
     font?: string;
     weight?: number;
     color?: string;
+    border?: string;
     marginTop?: string;
     marginBottom?: string;
     marginLeft?: string;
@@ -284,7 +285,8 @@ const bytecode: Bytecode = {
             spacing: 'normal',
             font: paragraph,
             weight: regular,
-            color: red,
+            color: white,
+            border: '.1rem solid' + red,
         },
         menuitem: {
             size: '1.125rem',

@@ -92,7 +92,7 @@ export const FooterContainer = styled.section`
     @media screen and (${mediaQueryMin.xl}) {
         padding: 3em ${container.xl} 0 ${container.xl};
     }
-    background: ${theme.colors.background};
+    background: ${theme.colors.secondary};
 `;
 
 export const Copyright = styled(FooterContainer)`
