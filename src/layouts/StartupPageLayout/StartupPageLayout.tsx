@@ -8,10 +8,10 @@ import {
 } from '../../styles/extended/global-css';
 import HeadScripts from '../../lib/GetHeadScripts';
 import NewsletterSubscribe from '../../containers/NewsletterSubscribe/NewsletterSubscribe';
-import { Main, HeadElements } from './MainLayout.components';
-import LayoutProps from './MainLayout.types';
+import { Main, HeadElements } from './StartupPageLayout.components';
+import StartupPageLayoutProps from './StartupPageLayout.types';
 
-const Layout: React.FC<LayoutProps> = ({
+const StartupPageLayout: React.FC<StartupPageLayoutProps> = ({
     children,
     pageSettings,
     padded = false,
@@ -63,4 +63,4 @@ const Layout: React.FC<LayoutProps> = ({
     );
 };
 
-export default Layout;
+export default StartupPageLayout;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default interface LayoutProps {
+export default interface StartupPageLayoutProps {
     children: React.ReactNode;
     padded?: boolean;
     pageSettings: {
