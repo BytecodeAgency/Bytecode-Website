@@ -1,8 +1,8 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import React, { useState } from 'react';
-import theme from '../../styles/extended/theme';
-import Button from '../../components/Button/Button';
-import { ComicSansProps } from './FooterExtended.types';
+import theme from '../../styles/theme';
+import Button from '../../../components/Button/Button';
+import { ComicSansProps } from './Footer.types';
 
 const { mediaQueryMin } = theme;
 const container = theme.containerWidth;

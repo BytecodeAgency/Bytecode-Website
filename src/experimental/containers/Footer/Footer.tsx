@@ -1,6 +1,6 @@
 import React from 'react';
-import AllSocials from '../../lib/Socials/Socials';
-import { Subtitle } from '../../components/Typography/Typography';
+import AllSocials from '../../../lib/Socials/Socials';
+import { Subtitle } from '../../../components/Typography/Typography';
 import {
     FooterContainer,
     ComicSans,
@@ -12,9 +12,9 @@ import {
     FooterLinkContainer,
     FooterLogo,
     FooterSpacer,
-} from './FooterExtended.components';
+} from './Footer.components';
 
-const logo = require('../../images/img/logo.svg');
+const logo = require('../../../images/img/logo.svg');
 
 const Footer: React.FC<Record<string, never>> = () => (
     <footer>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Layout from '../layouts/StartupPageLayout/StartupPageLayout';
+import Layout from '../experimental/layouts/StartupPageLayout/StartupPageLayout';
 import { Subtitle } from '../components/Typography/Typography';
 import InputField from '../components/InputField';
 import Button from '../components/Button/Button';
 import { Container, Row, Col } from '../lib/Grid';
-import theme from '../styles/extended/theme';
+import theme from '../experimental/styles/theme';
 
 const { size, height, spacing, font, weight, color, border } = theme.typography.button;
 const { mediaQueryMin, colors } = theme;
