@@ -38,7 +38,7 @@ export const FooterLogo = styled.img`
     }
 `;
 
-export const FooterLinkContainer = styled.p`
+export const FooterLinkContainer = styled.div`
     margin: 1rem 0;
     font-size: 1.33rem;
     line-height: 1.33em;
