@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Layout from '../layouts/MainLayoutExtended/MainLayout';
+import Layout from '../layouts/StartupPageLayout/StartupPageLayout';
 import { Subtitle } from '../components/Typography/Typography';
 import InputField from '../components/InputField';
 import Button from '../components/Button/Button';
@@ -16,9 +16,9 @@ const pageSettings = {
     keywords: 'bytecode, digital agency',
 };
 
-const group = require('../images/img/startups/group.png');
-const meeting = require('../images/img/startups/meeting.png');
-const team = require('../images/img/startups/bytecode-team.jpg');
+const group = require('../images/img/startups/group.jpeg');
+const meeting = require('../images/img/startups/meeting.jpeg');
+const team = require('../images/img/startups/bytecode-team.jpeg');
 
 const Header = styled.header`
     min-height: 100vh;
@@ -151,11 +151,9 @@ const HeaderFigure = styled.figure`
         left: 10vw;
     }
     img {
-        height: 60%;
+        height: auto;
         width: 100%;
         object-fit: cover;
-        transform: scale(1.8);
-        object-position: left center;
     }
 `;
 
