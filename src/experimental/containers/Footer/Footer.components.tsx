@@ -113,17 +113,18 @@ export const Copyright = styled(FooterContainer)`
     }
 `;
 
+const ComicSansText = styled.span`
+    cursor: pointer;
+`;
+const ComicSansCSS = createGlobalStyle`
+    html * {
+        font-family: "Comic Sans MS" !important;
+    }
+`;
+
 export const ComicSans: React.FC<ComicSansProps> = ({ children }) => {
     const [showComicSans, setShowComicSans] = useState(false);
     const switchComicSans = () => setShowComicSans(!showComicSans);
-    const ComicSansText = styled.span`
-        cursor: pointer;
-    `;
-    const ComicSansCSS = createGlobalStyle`
-        html * {
-            font-family: "Comic Sans MS" !important;
-        }
-    `;
 
     return (
         <>
