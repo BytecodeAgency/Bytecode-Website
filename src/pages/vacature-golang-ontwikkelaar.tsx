@@ -53,7 +53,7 @@ const Vacancy: React.FC = () => (
                 <IconText
                     iconName="FaRegClock"
                     iconColor={colors.primary}
-                    text="Deeltijd: 24-40 uur"
+                    text="Deel-/voltijd: 24-40 uur"
                 />
                 <IconText
                     iconName="FaMapMarkerAlt"
@@ -179,7 +179,10 @@ const Vacancy: React.FC = () => (
                             Een marktconform salaris en vergoeding van
                             reiskosten
                         </li>
-                        <li>Een contract voor 32/40 uur per week</li>
+                        <li>
+                            Een contract voor 24 tot 40 uur per week (in
+                            overleg)
+                        </li>
                         <li>Snel uitzicht op een vast contract</li>
                         <li>
                             Toffe projecten om aan te werken, van klanten en
