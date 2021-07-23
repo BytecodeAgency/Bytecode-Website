@@ -27,7 +27,17 @@ const Header = styled.header`
 `;
 
 const HeaderContainer = styled(Container)`
-    height: 100%;
+    flex: 1;
+`;
+
+const HeaderRow = styled(Row)`
+    /* !important used to overwrite standard behaviour react-grid-system*/
+    align-items: flex-end !important;
+    padding-bottom: 4rem;
+    @media (${mediaQueryMin.sm}) {
+        align-items: center !important;
+        padding-bottom: 0;
+    }
 `;
 
 const Process = styled.ol`
@@ -133,25 +143,19 @@ const IconList = styled.ul`
 
 const HeaderFigure = styled.figure`
     display: none;
-    @media (${mediaQueryMin.xs}) {
-        display: block;
-        transform: translate(9vh, -82vh);
-    }
     @media (${mediaQueryMin.sm}) {
+        display: block;
         transform: translateY(-45vh);
     }
     position: absolute;
-    left: 120%;
+    left: 10vw;
     width: 60vw;
     transform: translateY(-45vh);
     height: 85vh;
     background: #271c25;
     overflow: hidden;
-    @media screen and (min-width: 988px) {
-        left: 10vw;
-    }
     img {
-        height: auto;
+        height: 100%;
         width: 100%;
         object-fit: cover;
     }
@@ -242,7 +246,7 @@ const FlexCol = styled(Col)`
 
 const SlantedBackground = styled.div`
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     background-image: url(${group});
     opacity: 0.58;
     position: absolute;
@@ -250,7 +254,7 @@ const SlantedBackground = styled.div`
     left: 0;
     z-index: -1;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    background-size: 350%;
+    background-size: 150%;
     background-position: 29% 61%;
     @media (${mediaQueryMin.sm}) {
         background: #271C25;
@@ -291,16 +295,6 @@ const CTA = styled(Section)`
 const IconCaption = styled.p`
     width: 90%;
     text-align: center;
-`;
-
-const HeaderRow = styled(Row)`
-    /* !important used to overwrite standard behaviour react-grid-system*/
-    align-items: flex-end !important;
-    padding-bottom: 4rem;
-    @media (${mediaQueryMin.sm}) {
-        align-items: center !important;
-        padding-bottom: 0;
-    }
 `;
 
 const NewsletterSection = styled(Section)`
@@ -376,13 +370,13 @@ const NewsletterSubscribeButton = styled.button`
 `;
 
 const Startups: React.FC = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
+    let [name, setName] = useState('');
+    let [email, setEmail] = useState('');
 
+    const canSubmit = name !== '' && email !== '';
     const stateChanger = (
         setter: React.Dispatch<React.SetStateAction<string>>
     ) => (e: React.ChangeEvent<HTMLInputElement>) => setter(e.target.value);
-    const canSubmit = name !== '' && email !== '';
 
     return (
         <Layout pageSettings={pageSettings}>
