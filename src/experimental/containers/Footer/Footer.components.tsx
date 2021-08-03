@@ -26,9 +26,9 @@ export const FooterCol = styled.div`
 
 export const FooterLogo = styled.img`
     transform: translateX(-1.5rem);
-    max-width: 60vw;
+    max-width: 40vw;
     height: 100%;
-    padding: 0.75em;
+    padding: 1em;
     width: auto;
     @media (${mediaQueryMin.md}) {
         max-width: unset;
@@ -57,7 +57,7 @@ export const FooterHeadingContainer = styled.div`
         margin-bottom: 0;
     }
     @media (${mediaQueryMin.sm}) {
-        height: 5rem;
+        height: 4.66rem;
         display: flex;
         align-items: end;
     }
@@ -87,7 +87,7 @@ export const FooterContainer = styled.section`
         padding: 3em ${container.md} 0 ${container.md};
     }
     @media screen and (${mediaQueryMin.lg}) {
-        padding: 3em ${container.lg} 0 1em;
+        padding: 3em ${container.lg} 0 ${container.lg};
     }
     @media screen and (${mediaQueryMin.xl}) {
         padding: 3em ${container.xl} 0 ${container.xl};

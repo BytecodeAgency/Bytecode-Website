@@ -67,6 +67,9 @@ const Process = styled.ol`
         padding-left: 1em;
         li {
             padding-right: 2em;
+            p {
+                padding-right: 4em;
+            }
         }
     }
     li {
@@ -303,6 +306,8 @@ const CTA = styled(Section)`
     align-items: center;
     overflow: hidden;
     position: relative;
+    justify-content: center;
+    padding: 10vh 2em;
 `;
 
 const IconCaption = styled.p`
@@ -380,6 +385,10 @@ const NewsletterSubscribeButton = styled.button`
         border-color: ${theme.colors.primary};
         cursor: pointer;
     }
+`;
+
+const CTAContent = styled.div`
+    max-width: 60em;    
 `;
 
 const HeaderContent = styled.div`
@@ -527,11 +536,11 @@ const Startups: React.FC = () => {
             >
                 <Container>
                     <Subtitle>Het proces</Subtitle>
-                    <h2>Hoe gaan we je helpen?</h2>
+                    <h2 style={{paddingBottom: '3em'}}>Hoe gaan we je helpen?</h2>
                     <Process>
                         <li>
                             <h3>Strategie</h3>
-                            <p>
+                            <p className="introduction">
                                 Als startup wil je innoveren en voorop lopen. De
                                 eerste stap is een online strategie. Wat is je doel,
                                 hoe ga je dit bereiken en wie wil je bereiken? Na
@@ -543,7 +552,7 @@ const Startups: React.FC = () => {
                         </li>
                         <li>
                             <h3>Design</h3>
-                            <p>
+                            <p className="introduction">
                                 Wij ontwerpen een technisch hoogstaand eindproduct
                                 dat jouw idee goed overbrengt. Een interactief web
                                 design, app of platform dat passie en creativiteit
@@ -555,7 +564,7 @@ const Startups: React.FC = () => {
                         </li>
                         <li>
                             <h3>Development</h3>
-                            <p>
+                            <p className="introduction">
                                 Als de basis goed is, kunnen we beginnen met het
                                 bouwen van jouw digitale idee. We zijn ooit gestart
                                 als webbureau en beschikken over de kennis en
@@ -568,54 +577,50 @@ const Startups: React.FC = () => {
                 <PathFig src={require('../images/img/startups/path.svg')} />
             </Section>
             <CTA>
-                <Container style={{ zIndex: 2 }}>
-                    <Row>
-                        <Col md={8} lg={6} offset={{ md: 2, lg: 3 }}>
-                            <Subtitle>Intake</Subtitle>
-                            <h1>Kom gratis op adviesgesprek</h1>
-                            <p className="introduction">
-                                Ons multidisciplinaire, ervaren team van strategen,
-                                designers en developers maken jouw passie
-                                werkelijkheid! Zet de eerste stap en krijg de
-                                volgende gratis deliverables na het
-                                kennismakingsgesprek:
+                <CTAContent>
+                    <Subtitle>Intake</Subtitle>
+                    <h1>Kom gratis op adviesgesprek</h1>
+                    <p className="introduction">
+                        Ons multidisciplinaire, ervaren team van strategen,
+                        designers en developers maken jouw passie
+                        werkelijkheid! Zet de eerste stap en krijg de
+                        volgende gratis deliverables na het
+                        kennismakingsgesprek:
+                    </p>
+                    <Deliverables>
+                        <li>
+                            <CircledIcon
+                                src={require('../images/img/startups/icons-round/mvp.svg')}
+                            />
+                            <p className="caption">
+                                Scherp en kritisch advies op MVP
                             </p>
-                            <Deliverables>
-                                <li>
-                                    <CircledIcon
-                                        src={require('../images/img/startups/icons-round/mvp.svg')}
-                                    />
-                                    <p className="caption">
-                                        Scherp en kritisch advies op MVP
-                                    </p>
-                                </li>
-                                <li>
-                                    <CircledIcon
-                                        src={require('../images/img/startups/icons-round/missie.svg')}
-                                    />
-                                    <p className="caption">
-                                        Deskundig en fris advies op je missie en
-                                        strategie
-                                    </p>
-                                </li>
-                                <li>
-                                    <CircledIcon
-                                        src={require('../images/img/startups/icons-round/concurrentie.svg')}
-                                    />
-                                    <p className="caption">
-                                        Moderne branding- en klantanalyse
-                                    </p>
-                                </li>
-                            </Deliverables>
-                            <Button
-                                href="https://calendly.com/bytecode"
-                                target="_blank"
-                                rel="noopener">
-                                Maak een afspraak!
-                            </Button>
-                        </Col>
-                    </Row>
-                </Container>
+                        </li>
+                        <li>
+                            <CircledIcon
+                                src={require('../images/img/startups/icons-round/missie.svg')}
+                            />
+                            <p className="caption">
+                                Deskundig en fris advies op je missie en
+                                strategie
+                            </p>
+                        </li>
+                        <li>
+                            <CircledIcon
+                                src={require('../images/img/startups/icons-round/concurrentie.svg')}
+                            />
+                            <p className="caption">
+                                Moderne branding- en klantanalyse
+                            </p>
+                        </li>
+                    </Deliverables>
+                    <Button
+                        href="https://calendly.com/bytecode"
+                        target="_blank"
+                        rel="noopener">
+                        Maak een afspraak!
+                    </Button>
+                </CTAContent>
                 <PathsRight
                     src={require('../images/img/startups/routes/cta-right.svg')}
                 />
