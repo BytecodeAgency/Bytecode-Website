@@ -7,7 +7,15 @@ import Button from '../components/Button/Button';
 import { Container, Row, Col } from '../lib/Grid';
 import theme from '../experimental/styles/theme';
 
-const { size, height, spacing, font, weight, color, border } = theme.typography.button;
+const {
+    size,
+    height,
+    spacing,
+    font,
+    weight,
+    color,
+    border,
+} = theme.typography.button;
 const { mediaQueryMin, colors } = theme;
 
 const pageSettings = {
@@ -27,10 +35,9 @@ const Header = styled.header`
     flex-direction: row;
     @media (max-width: ${theme.breakpoint.xs}) {
         flex-direction: column;
-        justify-content: flex-end
+        justify-content: flex-end;
     }
     align-items: center;
-    
 `;
 
 const HeaderContainer = styled(Container)`
@@ -40,13 +47,61 @@ const HeaderContainer = styled(Container)`
     margin-bottom: 0 !important;
 `;
 
-const HeaderRow = styled(Row)`
-    /* !important used to overwrite standard behaviour react-grid-system*/
-    align-items: flex-end !important;
-    padding-bottom: 4rem;
+const HeaderContent = styled.div`
+    grid-column: 1;
+    flex-basis: 30%;
+    @media (max-width: ${theme.breakpoint.sm}) {
+        padding-bottom: 5vh;
+    }
+    @media (max-width: ${theme.breakpoint.lg}) {
+        flex-basis: 60%;
+    }
+`;
+
+const GridFig = styled.img`
+    width: 7rem;
+    position: absolute;
+    transform: translate(-3rem, -3rem);
+`;
+
+const HeaderFigure = styled.figure`
+    display: none;
+    grid-column: 2;
+    height: 80vh;
+    width: 60vw;
+    transform: translateX(5vw);
     @media (${mediaQueryMin.sm}) {
-        align-items: center !important;
-        padding-bottom: 0;
+        display: block;
+    }
+    @media (max-width: ${theme.breakpoint.md}) {
+        height: 75vh;
+        width: 50vw;
+        transform: translateX(10vw);
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+`;
+
+const SlantedBackground = styled.div`
+    width: 100%;
+    height: 40vh;
+    background-image: url(${group});
+    opacity: 0.58;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    background-size: 150%;
+    background-position: 29% 61%;
+    @media (${mediaQueryMin.sm}) {
+        background: #271c25;
+        opacity: 1;
+        clip-path: polygon(0 0, 100% 0, 100% 66%, 0 100%);
+        /* 35rem */
     }
 `;
 
@@ -59,7 +114,7 @@ const Process = styled.ol`
     padding-left: 0;
     @media (${mediaQueryMin.xs}) {
         width: 80%;
-        margin:0 auto;
+        margin: 0 auto;
     }
     @media (${mediaQueryMin.sm}) {
         flex-direction: row;
@@ -78,7 +133,7 @@ const Process = styled.ol`
         color: ${colors.primary};
         position: relative;
         &:before {
-            content: "0" counter(elementcounter) ". ";
+            content: '0' counter(elementcounter) '. ';
             counter-increment: elementcounter;
             position: absolute;
             right: 1em;
@@ -97,23 +152,6 @@ const Icon = styled.img`
     width: auto;
     @media (${mediaQueryMin.sm}) {
         height: 4rem;
-    }
-`;
-
-const AdviceIcon = styled.img`
-    position: absolute;
-    width: 4rem;
-    height: auto;
-    left: 65%;
-    top: 0;
-    opacity: 70%;
-    @media (min-width: 500px) {
-        left: 90%;
-        width: 5rem;
-    }
-    @media (${mediaQueryMin.sm}) {
-        left: 40%;
-        width: 7rem;
     }
 `;
 
@@ -153,27 +191,6 @@ const IconList = styled.ul`
         p {
             margin: 0;
         }
-    }
-`;
-
-const HeaderFigure = styled.figure`
-    display: none;
-    grid-column: 2;
-    height: 80vh;
-    width: 60vw;
-    transform: translateX(5vw);
-    @media (${mediaQueryMin.sm}) {
-        display: block; 
-    }
-    @media (max-width: ${theme.breakpoint.md}) {
-        height: 75vh;
-        width: 50vw;
-        transform: translateX(10vw);
-    }
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
     }
 `;
 
@@ -258,32 +275,6 @@ const Card = styled.div`
 
 const FlexCol = styled(Col)`
     display: flex;
-`;
-
-const SlantedBackground = styled.div`
-    width: 100%;
-    height: 40vh;
-    background-image: url(${group});
-    opacity: 0.58;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    background-size: 150%;
-    background-position: 29% 61%;
-    @media (${mediaQueryMin.sm}) {
-        background: #271C25;
-        opacity: 1;
-        clip-path: polygon(0 0, 100% 0, 100% 66%, 0 100%);
-        /* 35rem */
-    }
-`;
-
-const GridFig = styled.img`
-    width: 7rem;
-    position: absolute;
-    transform: translate(-3rem, -3rem);
 `;
 
 const PathFig = styled.img`
@@ -388,24 +379,12 @@ const NewsletterSubscribeButton = styled.button`
 `;
 
 const CTAContent = styled.div`
-    max-width: 60em;    
-`;
-
-const HeaderContent = styled.div`
-    grid-column: 1;
-    flex-basis: 30%;
-    @media (max-width: ${theme.breakpoint.sm}) {
-        padding-bottom: 5vh;
-    }
-    @media (max-width: ${theme.breakpoint.lg}) {
-        flex-basis: 60%;
-    }
-    
+    max-width: 60em;
 `;
 
 const Startups: React.FC = () => {
-    let [name, setName] = useState('');
-    let [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
 
     const canSubmit = name !== '' && email !== '';
     const stateChanger = (
@@ -417,7 +396,9 @@ const Startups: React.FC = () => {
             <HeaderContainer>
                 <Header>
                     <HeaderContent>
-                        <GridFig src={require('../images/img/startups/grid.svg')}/>
+                        <GridFig
+                            src={require('../images/img/startups/grid.svg')}
+                        />
                         <p className="subtitle">Start-up development</p>
                         <h1>Samen maken we passie werkelijkheid</h1>
                         <p className="introduction">
@@ -456,20 +437,26 @@ const Startups: React.FC = () => {
                         <Button
                             href="https://calendly.com/bytecode"
                             target="_blank"
-                            rel="noopener">
+                            rel="noopener"
+                        >
                             Maak een afspraak!
                         </Button>
                     </HeaderContent>
                     <HeaderFigure>
-                                <img src={group} alt="group of happy people" />
+                        <img src={group} alt="group of happy people" />
                     </HeaderFigure>
-            </Header>
+                </Header>
             </HeaderContainer>
             <SlantedBackground />
             <Section style={{ paddingTop: 0 }}>
                 <Container>
                     <Row>
-                        <FlexCol style={{ alignItems: 'left' }} xs={12} sm={6} lg={4}>
+                        <FlexCol
+                            style={{ alignItems: 'left' }}
+                            xs={12}
+                            sm={6}
+                            lg={4}
+                        >
                             <Card>
                                 <div>
                                     <CircledIcon
@@ -479,10 +466,11 @@ const Startups: React.FC = () => {
                                 <h3>Branding & concurrentie</h3>
                                 <p>
                                     Wie ben je en hoe verhoud je je tot je
-                                    concurrenten? Dit zijn cruciale vragen, waarmee
-                                    je boven je concurrenten uit kunt steken. Met
-                                    onze moderne branding- en concurrentieanalyse
-                                    zetten we hier samen een grote stap in.{' '}
+                                    concurrenten? Dit zijn cruciale vragen,
+                                    waarmee je boven je concurrenten uit kunt
+                                    steken. Met onze moderne branding- en
+                                    concurrentieanalyse zetten we hier samen een
+                                    grote stap in.{' '}
                                 </p>
                             </Card>
                         </FlexCol>
@@ -495,12 +483,12 @@ const Startups: React.FC = () => {
                                 </div>
                                 <h3>Missie & strategie</h3>
                                 <p>
-                                    Wat wil je bereiken met je passie? Misschien wel
-                                    de belangrijkste vraag voor een start-up. Wij
-                                    geven daarom deskundig en fris advies op je
-                                    missie en de strategie waarmee je die missie wil
-                                    bereiken. Bovendien kijken we kritisch naar het
-                                    verdienmodel.
+                                    Wat wil je bereiken met je passie? Misschien
+                                    wel de belangrijkste vraag voor een
+                                    start-up. Wij geven daarom deskundig en fris
+                                    advies op je missie en de strategie waarmee
+                                    je die missie wil bereiken. Bovendien kijken
+                                    we kritisch naar het verdienmodel.
                                 </p>
                             </Card>
                         </FlexCol>
@@ -513,15 +501,16 @@ const Startups: React.FC = () => {
                                 </div>
                                 <h3>MVP-advies</h3>
                                 <p>
-                                    De MVP is de eerste versie van je product. Die
-                                    wil je zo snel mogelijk afhebben zodat je je
-                                    idee kunt gaan testen en tractie en omzet kunt
-                                    genereren. Hierdoor kun je je concept
-                                    doorontwikkelen en mogelijke investeerders
-                                    overtuigen! Wij geven daarom scherp advies over
-                                    hoe het product gebouwd moet worden en welke
-                                    onderdelen het beste op korte en lange termijn
-                                    ontwikkeld kunnen worden.
+                                    De MVP is de eerste versie van je product.
+                                    Die wil je zo snel mogelijk afhebben zodat
+                                    je je idee kunt gaan testen en tractie en
+                                    omzet kunt genereren. Hierdoor kun je je
+                                    concept doorontwikkelen en mogelijke
+                                    investeerders overtuigen! Wij geven daarom
+                                    scherp advies over hoe het product gebouwd
+                                    moet worden en welke onderdelen het beste op
+                                    korte en lange termijn ontwikkeld kunnen
+                                    worden.
                                 </p>
                             </Card>
                         </FlexCol>
@@ -531,45 +520,48 @@ const Startups: React.FC = () => {
             <Section>
                 <ParallaxImage />
             </Section>
-            <Section
-                style={{ display: 'flex', alignItems: 'center' }}
-            >
+            <Section style={{ display: 'flex', alignItems: 'center' }}>
                 <Container>
                     <Subtitle>Het proces</Subtitle>
-                    <h2 style={{paddingBottom: '3em'}}>Hoe gaan we je helpen?</h2>
+                    <h2 style={{ paddingBottom: '3em' }}>
+                        Hoe gaan we je helpen?
+                    </h2>
                     <Process>
                         <li>
                             <h3>Strategie</h3>
                             <p className="introduction">
                                 Als startup wil je innoveren en voorop lopen. De
-                                eerste stap is een online strategie. Wat is je doel,
-                                hoe ga je dit bereiken en wie wil je bereiken? Na
-                                ons eerste gesprek gaan we hier meteen mee aan de
-                                slag, door kwantitatief en kwalitatief onderzoek.
-                                Door creatief & innovatief denken, creëren we de
-                                perfecte online strategie. De basis van jouw succes.
+                                eerste stap is een online strategie. Wat is je
+                                doel, hoe ga je dit bereiken en wie wil je
+                                bereiken? Na ons eerste gesprek gaan we hier
+                                meteen mee aan de slag, door kwantitatief en
+                                kwalitatief onderzoek. Door creatief &
+                                innovatief denken, creëren we de perfecte online
+                                strategie. De basis van jouw succes.
                             </p>
                         </li>
                         <li>
                             <h3>Design</h3>
                             <p className="introduction">
-                                Wij ontwerpen een technisch hoogstaand eindproduct
-                                dat jouw idee goed overbrengt. Een interactief web
-                                design, app of platform dat passie en creativiteit
-                                uitstraalt. Daarbij hoort een geoptimaliseerde
-                                gebruikservaring en een passende user interface. Om
-                                dit te bereiken maken we regelmatig prototypes om te
-                                evalueren of het design werkt.
+                                Wij ontwerpen een technisch hoogstaand
+                                eindproduct dat jouw idee goed overbrengt. Een
+                                interactief web design, app of platform dat
+                                passie en creativiteit uitstraalt. Daarbij hoort
+                                een geoptimaliseerde gebruikservaring en een
+                                passende user interface. Om dit te bereiken
+                                maken we regelmatig prototypes om te evalueren
+                                of het design werkt.
                             </p>
                         </li>
                         <li>
                             <h3>Development</h3>
                             <p className="introduction">
                                 Als de basis goed is, kunnen we beginnen met het
-                                bouwen van jouw digitale idee. We zijn ooit gestart
-                                als webbureau en beschikken over de kennis en
-                                expertise om een stabiel product te bouwen dat snel
-                                getest kan worden! Jouw passie wordt werkelijkheid.
+                                bouwen van jouw digitale idee. We zijn ooit
+                                gestart als webbureau en beschikken over de
+                                kennis en expertise om een stabiel product te
+                                bouwen dat snel getest kan worden! Jouw passie
+                                wordt werkelijkheid.
                             </p>
                         </li>
                     </Process>
@@ -582,10 +574,9 @@ const Startups: React.FC = () => {
                     <h1>Kom gratis op adviesgesprek</h1>
                     <p className="introduction">
                         Ons multidisciplinaire, ervaren team van strategen,
-                        designers en developers maken jouw passie
-                        werkelijkheid! Zet de eerste stap en krijg de
-                        volgende gratis deliverables na het
-                        kennismakingsgesprek:
+                        designers en developers maken jouw passie werkelijkheid!
+                        Zet de eerste stap en krijg de volgende gratis
+                        deliverables na het kennismakingsgesprek:
                     </p>
                     <Deliverables>
                         <li>
@@ -617,7 +608,8 @@ const Startups: React.FC = () => {
                     <Button
                         href="https://calendly.com/bytecode"
                         target="_blank"
-                        rel="noopener">
+                        rel="noopener"
+                    >
                         Maak een afspraak!
                     </Button>
                 </CTAContent>
@@ -631,11 +623,14 @@ const Startups: React.FC = () => {
             <NewsletterSection>
                 <NewsletterContainer>
                     <Subtitle>Nieuwsbrief</Subtitle>
-                    <h3 style={{ margin: ".66em 0" }}>Abonneer je op onze nieuwsbrief</h3>
-                    <p style={{ margin: "2em 0" }}>
-                        Maandelijks brengen wij een interessante en leerzame nieuwsbrief
-                        uit met onder andere onze ‘Bytecast’, nieuwe artikelen of
-                        e-books, en natuurlijk updates over ons team en werkzaamheden.
+                    <h3 style={{ margin: '.66em 0' }}>
+                        Abonneer je op onze nieuwsbrief
+                    </h3>
+                    <p style={{ margin: '2em 0' }}>
+                        Maandelijks brengen wij een interessante en leerzame
+                        nieuwsbrief uit met onder andere onze ‘Bytecast’, nieuwe
+                        artikelen of e-books, en natuurlijk updates over ons
+                        team en werkzaamheden.
                     </p>
                     <NewsletterSubscribeForm
                         action="https://bytecode.us4.list-manage.com/Subscribe/post"
@@ -677,7 +672,7 @@ const Startups: React.FC = () => {
                 </NewsletterContainer>
             </NewsletterSection>
         </Layout>
-    )
+    );
 };
 
 export default Startups;

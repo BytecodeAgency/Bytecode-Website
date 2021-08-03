@@ -260,7 +260,7 @@ const bytecode: Bytecode = {
             spacing: '0.01em',
             font: paragraph,
             weight: regular,
-            color: lightgray
+            color: lightgray,
         },
         caption: {
             size: '0.85rem',
@@ -286,7 +286,7 @@ const bytecode: Bytecode = {
             font: paragraph,
             weight: regular,
             color: white,
-            border: '.1rem solid' + red,
+            border: `.1rem solid${red}`,
         },
         menuitem: {
             size: '1.125rem',
