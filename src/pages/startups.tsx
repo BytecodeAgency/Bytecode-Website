@@ -21,20 +21,15 @@ const meeting = require('../images/img/startups/meeting.jpeg');
 const team = require('../images/img/startups/bytecode-team.jpeg');
 
 const Header = styled.header`
-    min-height: 100vh;
-    max-height: 20rem;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
     @media (max-width: ${theme.breakpoint.sm}) {
-        display: flex;
         flex-direction: column;
         justify-content: flex-end
     }
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 5vw;
     align-items: center;
-    @media (min-width: ${theme.breakpoint.md}) {
-        grid-template-columns: 1fr 2fr;
-    }
     
 `;
 
@@ -135,7 +130,9 @@ const IconList = styled.ul`
     transform: translateX(-0.33rem);
     display: flex;
     align-items: stretch;
-    max-width: 100%;
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 0 2.66em 0;
     li {
         flex-direction: column;
         display: inline-flex;
@@ -144,6 +141,7 @@ const IconList = styled.ul`
         text-align: center;
         align-items: center;
         justify-content: start;
+        margin: 0;
         img {
             @media (${mediaQueryMin.sm}) {
                 width: min-content;
@@ -151,7 +149,6 @@ const IconList = styled.ul`
         }
         p {
             margin: 0;
-            margin-top: 1em;
         }
     }
 `;
@@ -159,8 +156,8 @@ const IconList = styled.ul`
 const HeaderFigure = styled.figure`
     display: none;
     grid-column: 2;
-    height: 75vh;
-    width: 50vw;
+    height: 80vh;
+    width: 60vw;
     transform: translateX(5vw);
     @media (${mediaQueryMin.sm}) {
         display: block; 
@@ -387,12 +384,14 @@ const NewsletterSubscribeButton = styled.button`
 
 const HeaderContent = styled.div`
     grid-column: 1;
-    @media (max-width: ${theme.breakpoint.md}) {
-        min-width: 40vw;
-    };
+    flex-basis: 30%;
     @media (max-width: ${theme.breakpoint.sm}) {
         padding-bottom: 5vh;
     }
+    @media (max-width: ${theme.breakpoint.lg}) {
+        flex-basis: 60%;
+    }
+    
 `;
 
 const Startups: React.FC = () => {
