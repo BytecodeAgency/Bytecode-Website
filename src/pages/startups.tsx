@@ -25,7 +25,7 @@ const Header = styled.header`
     min-height: 600px;
     display: flex;
     flex-direction: row;
-    @media (max-width: ${theme.breakpoint.sm}) {
+    @media (max-width: ${theme.breakpoint.xs}) {
         flex-direction: column;
         justify-content: flex-end
     }
