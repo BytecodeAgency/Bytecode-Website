@@ -16,7 +16,7 @@ const pageSettings = {
     keywords: 'bytecode, digital agency',
 };
 
-const group = require('../images/img/startups/group.jpeg');
+const group = require('../images/img/startups/group.jpg');
 const meeting = require('../images/img/startups/meeting.jpeg');
 const team = require('../images/img/startups/bytecode-team.jpeg');
 
