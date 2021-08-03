@@ -23,11 +23,26 @@ const team = require('../images/img/startups/bytecode-team.jpeg');
 const Header = styled.header`
     min-height: 100vh;
     max-height: 20rem;
-    margin-top: 5em;
+    @media (max-width: ${theme.breakpoint.sm}) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5vw;
+    align-items: center;
+    @media (min-width: ${theme.breakpoint.md}) {
+        grid-template-columns: 1fr 2fr;
+    }
+    
 `;
 
 const HeaderContainer = styled(Container)`
     flex: 1;
+    /* !important used to overwrite standard behaviour react-grid-system, may the code gods forgive me*/
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 `;
 
 const HeaderRow = styled(Row)`
@@ -143,17 +158,18 @@ const IconList = styled.ul`
 
 const HeaderFigure = styled.figure`
     display: none;
+    grid-column: 2;
+    height: 75vh;
+    width: 50vw;
+    transform: translateX(5vw);
     @media (${mediaQueryMin.sm}) {
-        display: block;
-        transform: translateY(-45vh);
+        display: block; 
     }
-    position: absolute;
-    left: 10vw;
-    width: 60vw;
-    transform: translateY(-45vh);
-    height: 85vh;
-    background: #271c25;
-    overflow: hidden;
+    @media (max-width: ${theme.breakpoint.md}) {
+        height: 75vh;
+        width: 50vw;
+        transform: translateX(10vw);
+    }
     img {
         height: 100%;
         width: 100%;
@@ -246,7 +262,7 @@ const FlexCol = styled(Col)`
 
 const SlantedBackground = styled.div`
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     background-image: url(${group});
     opacity: 0.58;
     position: absolute;
@@ -369,6 +385,16 @@ const NewsletterSubscribeButton = styled.button`
     }
 `;
 
+const HeaderContent = styled.div`
+    grid-column: 1;
+    @media (max-width: ${theme.breakpoint.md}) {
+        min-width: 40vw;
+    };
+    @media (max-width: ${theme.breakpoint.sm}) {
+        padding-bottom: 5vh;
+    }
+`;
+
 const Startups: React.FC = () => {
     let [name, setName] = useState('');
     let [email, setEmail] = useState('');
@@ -380,65 +406,58 @@ const Startups: React.FC = () => {
 
     return (
         <Layout pageSettings={pageSettings}>
-            <Header>
-                <HeaderContainer>
-                    <HeaderRow style={{ height: '100vh' }}>
-                        <Col md={10} lg={4}>
-                            <GridFig
-                                src={require('../images/img/startups/grid.svg')}
-                            />
-                            <p className="subtitle">Start-up development</p>
-                            <h1>Samen maken we passie werkelijkheid</h1>
-                            <p className="introduction">
-                                Als start-up draait het om jouw idee. Wij maken jouw
-                                missie tastbaar aan de hand van research, strategie,
-                                design en development. Bovendien leveren we je na
-                                het kennismakingsgesprek gratis drie belangrijke
-                                analyses
-                            </p>
-                            <IconList>
-                                <li>
-                                    <Icon
-                                        src={require('../images/img/startups/icons/concurrentie.svg')}
-                                    />
-                                    <IconCaption className="caption">
-                                        Concurrentie- & MVP-advies
-                                    </IconCaption>
-                                </li>
-                                <li>
-                                    <Icon
-                                        src={require('../images/img/startups/icons/mvp.svg')}
-                                    />
-                                    <IconCaption className="caption">
-                                        Missie & strategie
-                                    </IconCaption>
-                                </li>
-                                <li>
-                                    <Icon
-                                        src={require('../images/img/startups/icons/missie.svg')}
-                                    />
-                                    <IconCaption className="caption">
-                                        MVP-advies
-                                    </IconCaption>
-                                </li>
-                            </IconList>
-                            <Button
-                                href="https://calendly.com/bytecode"
-                                target="_blank"
-                                rel="noopener">
-                                Maak een afspraak!
-                            </Button>
-                        </Col>
-                        <Col>
-                            <HeaderFigure>
+            <HeaderContainer>
+                <Header>
+                    <HeaderContent>
+                        <GridFig src={require('../images/img/startups/grid.svg')}/>
+                        <p className="subtitle">Start-up development</p>
+                        <h1>Samen maken we passie werkelijkheid</h1>
+                        <p className="introduction">
+                            Als start-up draait het om jouw idee. Wij maken jouw
+                            missie tastbaar aan de hand van research, strategie,
+                            design en development. Bovendien leveren we je na
+                            het kennismakingsgesprek gratis drie belangrijke
+                            analyses
+                        </p>
+                        <IconList>
+                            <li>
+                                <Icon
+                                    src={require('../images/img/startups/icons/concurrentie.svg')}
+                                />
+                                <IconCaption className="caption">
+                                    Concurrentie- & MVP-advies
+                                </IconCaption>
+                            </li>
+                            <li>
+                                <Icon
+                                    src={require('../images/img/startups/icons/mvp.svg')}
+                                />
+                                <IconCaption className="caption">
+                                    Missie & strategie
+                                </IconCaption>
+                            </li>
+                            <li>
+                                <Icon
+                                    src={require('../images/img/startups/icons/missie.svg')}
+                                />
+                                <IconCaption className="caption">
+                                    MVP-advies
+                                </IconCaption>
+                            </li>
+                        </IconList>
+                        <Button
+                            href="https://calendly.com/bytecode"
+                            target="_blank"
+                            rel="noopener">
+                            Maak een afspraak!
+                        </Button>
+                    </HeaderContent>
+                    <HeaderFigure>
                                 <img src={group} alt="group of happy people" />
-                            </HeaderFigure>
-                        </Col>
-                        <AdviceIcon src={require('../images/img/startups/advice-icon.svg')} />
-                    </HeaderRow>
-                </HeaderContainer>
-                <SlantedBackground />
+                    </HeaderFigure>
             </Header>
+            </HeaderContainer>
+            <SlantedBackground />
             <Section style={{ paddingTop: 0 }}>
                 <Container>
                     <Row>

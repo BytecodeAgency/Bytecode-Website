@@ -10,7 +10,7 @@ const textScaler = css`
     }
 
     p {
-        font-size: 0.875rem;
+        font-size: 0.775rem;
     }
     h1 {
         font-size: 1.725rem;
