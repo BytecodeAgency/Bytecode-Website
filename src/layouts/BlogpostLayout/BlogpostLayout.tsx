@@ -1,5 +1,5 @@
 import React from 'react';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { BlogpostSingleProps, CallToActionProps } from './BlogpostLayout.types';
 import Layout from '../MainLayout/MainLayout';
 import Author from '../../containers/Author/Author';

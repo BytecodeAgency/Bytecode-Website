@@ -25,9 +25,10 @@ const sungevity = require('../../images/img/cases/sungevity/header.jpg');
 const pageSettings = {
     title: 'Omschakelen met Eneco',
     client: 'eneco',
-    clientBio: '', // TODO: add client bio
+    clientBio:
+        'Eneco staat als duurzaam energiebedrijf midden in de samenleving. Hun missie is: duurzame energie van iedereen.',
     description: 'Nieuwe tool voor persoonlijk duurzaamheidsadvies',
-    keywords: '', // TODO: add keywords
+    keywords: 'Eneco, omschakel advies, duurzaam, energietransitie, webapp',
     image: useCase,
 };
 
@@ -58,8 +59,11 @@ const Case: React.FC<Record<string, never>> = () => (
             <h3>Ga voor duurzaam</h3>
             <p>
                 Energiebedrijf Eneco is in het afgelopen jaar bezig geweest met
-                de ontwikkeling <a href={omschakelaar}>“De Omschakelaar”</a>,
-                een nieuwe online tool. Met behulp van deze tool kunnen
+                de ontwikkeling{' '}
+                <a target="_blank" href={omschakelaar} rel="noreferrer">
+                    “De Omschakelaar”
+                </a>
+                , een nieuwe online tool. Met behulp van deze tool kunnen
                 gebruikers persoonlijk advies krijgen over duurzaamheid.
                 Luciano, onze co-founder en technical lead, heeft op ad
                 interim-basis geholpen met de realisatie van De Omschakelaar.

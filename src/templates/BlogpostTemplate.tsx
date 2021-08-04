@@ -22,7 +22,7 @@ const BlogpostTemplate: React.FC<BlogpostTemplateProps> = ({ data }) => {
         posted_on: mdx.frontmatter.posted_on,
         reading_time: mdx.frontmatter.reading_time,
         article_intro: mdx.frontmatter.article_intro,
-        post_content: mdx.code.body,
+        post_content: mdx.body,
     };
 
     return <BlogpostLayout content={content} />;
@@ -49,9 +49,8 @@ export const query = graphql`
                 reading_time
                 article_intro
             }
-            code {
-                body
-            }
+            rawBody
+            body
         }
     }
 `;
