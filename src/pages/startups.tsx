@@ -7,15 +7,8 @@ import Button from '../components/Button/Button';
 import { Container, Row, Col } from '../lib/Grid';
 import theme from '../experimental/styles/theme';
 
-const {
-    size,
-    height,
-    spacing,
-    font,
-    weight,
-    color,
-    border,
-} = theme.typography.button;
+const { size, height, spacing, font, weight, color, border } =
+    theme.typography.button;
 const { mediaQueryMin, colors } = theme;
 
 const pageSettings = {
@@ -387,9 +380,10 @@ const Startups: React.FC = () => {
     const [email, setEmail] = useState('');
 
     const canSubmit = name !== '' && email !== '';
-    const stateChanger = (
-        setter: React.Dispatch<React.SetStateAction<string>>
-    ) => (e: React.ChangeEvent<HTMLInputElement>) => setter(e.target.value);
+    const stateChanger =
+        (setter: React.Dispatch<React.SetStateAction<string>>) =>
+        (e: React.ChangeEvent<HTMLInputElement>) =>
+            setter(e.target.value);
 
     return (
         <Layout pageSettings={pageSettings}>
