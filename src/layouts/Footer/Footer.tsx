@@ -16,7 +16,7 @@ import {
 
 const logo = require('../../images/img/logo.svg');
 
-const Footer: React.FC<Record<string, never>> = () => (
+const FooterExtended: React.FC<Record<string, never>> = () => (
     <footer>
         <FooterContainer>
             <FooterCol>
@@ -121,4 +121,4 @@ const Footer: React.FC<Record<string, never>> = () => (
     </footer>
 );
 
-export default Footer;
+export default FooterExtended;

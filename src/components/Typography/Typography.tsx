@@ -24,7 +24,7 @@ export const Small = styled.span`
 `;
 
 export const Subtitle = styled.p`
-    size: 0.85rem;
+    size: 0.75rem;
     height: 1.2em;
     font-family: ${fonts.paragraph};
     font-weight: ${fontWeights.bold};
