@@ -30,6 +30,12 @@ const ImageBlockFigure = styled.figure`
         transition: all 0.3s ease;
     }
 
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     @media (min-width: ${theme.breakpointMobileMenu}) {
         &:after {
             margin: 6rem 0 6rem 6rem;
