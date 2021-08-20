@@ -76,7 +76,7 @@ const Over: React.FC<Record<string, never>> = () => (
                 </TextBlock>
                 <TeamMember
                     name="Jeroen van Steijn"
-                    title="Co-founder &amp; Operations manager"
+                    title="Co-founder &amp; Software Engineer"
                     img={require('../images/img/team/jeroen.jpg')}
                     link="https://jeroenvansteijn.nl"
                     email="mailto:jeroen@bytecode.nl"
@@ -86,30 +86,21 @@ const Over: React.FC<Record<string, never>> = () => (
                 />
                 <TeamMember
                     name="Luciano Nooijen"
-                    title="Co-founder &amp; Technical lead"
+                    title="Co-founder &amp; Technical Lead"
                     img={require('../images/img/team/luciano.jpg')}
                     link="https://lucianonooijen.nl"
                     email="mailto:luciano@bytecode.nl"
                     github="https://github.com/lucianonooijen"
                     linkedin="https://www.linkedin.com/in/lucianonooijen"
                 />
-                {/* TODO: Generate from array, maybe later change via dashb. */}
                 <TeamMember
                     name="Richard van 't Hof"
-                    title="Junior art-director & Front-end developer"
+                    title="Junior art-director & Front-end Developer"
                     img={require('../images/img/team/richard.jpg')}
                     email="mailto:richard@bytecode.nl"
                     link="https://www.therichard.space"
                     linkedin="https://www.linkedin.com/in/richard-van-t-hof"
                     github="https://www.github.com/RichART-Official"
-                />
-                <TeamMember
-                    name="Thomas Bodlaender"
-                    title="Online Marketeer"
-                    img={require('../images/img/team/thomas.jpg')}
-                    email="mailto:thomas@bytecode.nl"
-                    instagram="https://www.instagram.com/thomasbodje"
-                    linkedin="https://www.linkedin.com/in/thomasbodlaender"
                 />
                 <TeamMember
                     name="Nick Broekarts"
@@ -128,7 +119,7 @@ const Over: React.FC<Record<string, never>> = () => (
                 />
                 <TeamMember
                     name="Christiaan Färber"
-                    title="UI/UX Designer &amp; Front-end developer"
+                    title="UI/UX Designer &amp; Front-end Developer"
                     img={require('../images/img/team/chris.jpg')}
                     email="mailto:chris@bytecode.nl"
                 />
@@ -139,16 +130,9 @@ const Over: React.FC<Record<string, never>> = () => (
                     email="mailto:suzanne@bytecode.nl"
                     linkedin="https://www.linkedin.com/in/suzanne-de-vries-11b088149/"
                 />
-
-                <TeamMember
-                    name="Nahwin Chedoe"
-                    title="Junior UI &amp; UX Designer"
-                    img={require('../images/img/team/nawin.jpg')}
-                    email="mailto:nahwin@bytecode.nl"
-                />
                 <TeamMember
                     name="Tiko Alarcón Rivero"
-                    title="Full-stack developer web &amp; mobiel"
+                    title="Full-stack Developer"
                     img={require('../images/img/team/tiko.jpg')}
                     email="mailto:tiko@bytecode.nl"
                 />

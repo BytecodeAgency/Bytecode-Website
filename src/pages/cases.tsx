@@ -13,10 +13,9 @@ const pageSettings = {
 };
 
 const dearly = require('../images/img/cases/dearly/header.png');
+const airchip = require('../images/img/cases/dearly/header.png');
 const eneco = require('../images/img/cases/eneco/header.png');
 const styr = require('../images/img/cases/styr/allocator.png');
-const breda = require('../images/img/cases/breda-actief/featured.svg');
-const mooiwerk = require('../images/img/cases/mooiwerk/home.png');
 const coteetciel = require('../images/img/cases/cote-et-ciel/homepage.png');
 const dawny = require('../images/img/cases/dawny/usecase.png');
 const sungevity = require('../images/img/cases/sungevity/header.jpg');
@@ -33,6 +32,12 @@ const Cases: React.FC<Record<string, never>> = () => (
                     slug="/case/dearly"
                     postImageUrl={dearly}
                     category="Dearly"
+                />
+                <PostThumbnail
+                    slug="/case/airchip"
+                    title="Barman in je broekzak"
+                    postImageUrl={airchip}
+                    category="Airchip"
                 />
                 <PostThumbnail
                     slug="/case/eneco"
@@ -65,25 +70,13 @@ const Cases: React.FC<Record<string, never>> = () => (
                     postImageUrl={coteetciel}
                 />
                 <PostThumbnail
-                    title="Brengt Breda in beweging!"
-                    category="Breda Actief"
-                    slug="/case/breda-actief"
-                    postImageUrl={breda}
-                />
-                <PostThumbnail
-                    title="Brengt Breda dichter bij elkaar"
-                    category="Mooiwerk Breda"
-                    slug="/case/mooiwerk"
-                    postImageUrl={mooiwerk}
-                />
-                <PostThumbnail
                     title="Een digitale omgeving voor zonnepanelen op huurdaken"
                     category="Sungevity"
                     slug="/case/sungevity"
                     postImageUrl={sungevity}
                 />
                 <PostThumbnail
-                    title="Modern functiewaarderingsplatform"
+                    title="Moderne en eerlijke functiewaardering"
                     category="STYR"
                     slug="/case/styr"
                     postImageUrl={styr}

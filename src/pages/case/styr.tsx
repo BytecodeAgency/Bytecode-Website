@@ -28,7 +28,7 @@ const pageSettings = {
 const Case: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <TextAndImage padded img={serviceDesk} alt="Moderne functiewaardering">
-            <h2>Moderne functiewaardering</h2>
+            <h2>Moderne en eerlijke functiewaardering</h2>
             <p>
                 Door het STYR functiewaarderingsmodel te digitaliseren kan het
                 werk van de STYR consultants geautomatiseerd worden. Zij kunnen
