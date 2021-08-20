@@ -4,7 +4,6 @@ import Layout from '../layouts/MainLayout/MainLayout';
 import TextBlock from '../containers/TextBlock/TextBlock';
 import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import { Container, Row, Col } from '../lib/Grid';
-import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSubscribe';
 import Process from '../containers/Process/Process';
 import Thumbnail from '../containers/Thumbnails/Thumbnail';
 import Wrapper from '../components/Wrapper';
@@ -19,9 +18,9 @@ const service3bg = require('../images/img/services/code.jpeg');
 const service4bg = require('../images/img/services/design.jpg');
 
 const pageSettings = {
-    title: `Maatwerk Web & Mobiel Ontwikkeling`,
-    description: `Een kleinschalig full-service webbureau gespecialiseerd in platformontwikkeling op maat. Passie, kwaliteit en betrouwbaarheid als kernwaarden`,
-    keywords: 'bytecode, digital agency',
+    title: `Technische Start-up Partner`,
+    description: `Opzoek naar een ervaren technische start-up partner die jou kan ondersteunen met strategie, ontwerp en software ontwikkeling?`,
+    keywords: 'bytecode, partner, tech start-up, start-up',
 };
 
 const CenterAlignedCol = styled(Col)`
@@ -34,16 +33,18 @@ const GroupImage = styled.img`
     width: 100%;
 `;
 
+const imageHome = require(`../images/img/header/youngpwr.png`);
+
 const Home: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
         <ContentPageHeader
             useGatsbyLink
-            img={require('../images/img/header/web.svg')}
-            subtitle="Welkom bij Bytecode"
-            title="Specialisten in maatwerk voor web en mobiel"
+            subtitle="Wij zijn Bytecode"
+            title="Technisch verlengstuk van jouw start-up"
             href="/cases"
             button="Onze recente projecten"
-            text="Wij zijn Bytecode Digital Agency: een team van ontwikkelaars, ontwerpers, researchers, strategen en marketeers. Ons jonge, hechte team staat graag voor je klaar om uniek digitaal maatwerk te verzorgen."
+            text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            img={imageHome}
             hero
             shadow
         />
@@ -132,9 +133,6 @@ const Home: React.FC<Record<string, never>> = () => (
             </Container>
         </Wrapper>
         <Process />
-        <Container>
-            <NewsletterSubscribe />
-        </Container>
     </Layout>
 );
 

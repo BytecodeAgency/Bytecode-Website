@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageBlock from '../../components/ImageBlock/ImageBlock';
 import TextBlock from '../TextBlock/TextBlock';
 import { MainHeader, MainHeaderContent } from './ContentPageHeader.components';
 
@@ -18,15 +19,15 @@ const ContentPageHeader: React.FC<Props> = ({
     subtitle,
     title,
     button,
+    img,
     href,
     text,
     useGatsbyLink,
-    img,
     hero,
     shadow,
 }) => {
     return (
-        <MainHeader img={img} shadow={shadow} hero={hero}>
+        <MainHeader shadow={shadow} hero={hero}>
             <MainHeaderContent>
                 <TextBlock
                     useGatsbyLink={useGatsbyLink}
@@ -37,6 +38,7 @@ const ContentPageHeader: React.FC<Props> = ({
                 >
                     {text}
                 </TextBlock>
+                <ImageBlock src={img} alt={title} />
             </MainHeaderContent>
         </MainHeader>
     );
