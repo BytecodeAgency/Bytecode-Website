@@ -8,7 +8,6 @@ import {
     StyledButton,
     StyledSubtitle,
 } from './TextBlock.components';
-
 interface ImageProps {
     src?: string;
     alt?: string;
@@ -73,6 +72,7 @@ interface TextBlockProps {
     button?: string;
     useGatsbyLink?: boolean;
     children?: React.ReactNode;
+    verticalCenter?: boolean;
 }
 
 const TextBlock: React.FC<TextBlockProps> = ({
@@ -85,16 +85,20 @@ const TextBlock: React.FC<TextBlockProps> = ({
     button,
     useGatsbyLink,
     children,
+    verticalCenter
 }) => {
+    
     return (
-        <div>
+        <TextBlockContainer verticalCenter={verticalCenter}>
             <Image src={image} alt={alt} />
             <StyledSubtitle hasTitle={title}>{subtitle}</StyledSubtitle>
             <Title type={headingType} title={title} />
             <p>{children}</p>
             <Button button={button} href={href} useGatsbyLink={useGatsbyLink} />
-        </div>
+        </TextBlockContainer>
     );
 };
+
+
 
 export default TextBlock;

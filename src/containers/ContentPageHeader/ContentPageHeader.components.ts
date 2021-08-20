@@ -37,4 +37,6 @@ export const MainHeaderContent = styled.div`
     @media screen and (${mediaQueryMin.sm}) {
         grid-template-columns: 1fr 1fr;
     }
+    max-width: 1300px;
+    margin: auto;
 `;
