@@ -49,7 +49,7 @@ const creditColumnOne = [
 const creditColumnTwo = [
     {
         title: 'UX Design',
-        content: ['Chris Färber'],
+        content: ['Christiaan Färber'],
     },
     {
         title: 'Back-end developer',
@@ -57,7 +57,7 @@ const creditColumnTwo = [
     },
     {
         title: 'Front-end developer',
-        content: ['Luciano Nooijen', 'Chris Färber'],
+        content: ['Luciano Nooijen', 'Christiaan Färber'],
     },
 ];
 
