@@ -7,6 +7,7 @@ import {
     H4,
     StyledButton,
     StyledSubtitle,
+    TextBlockContainer,
 } from './TextBlock.components';
 interface ImageProps {
     src?: string;
