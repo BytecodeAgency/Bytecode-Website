@@ -96,14 +96,7 @@ const Dearly: React.FC<Record<string, never>> = () => (
             <TextAndImage img={rouwen} alt="Maak rouwen bespreekbaar" reverse>
                 <h3>Doel van Airchip</h3>
                 <p>
-                    Helaas is rouw nog steeds een taboe. Op de werkvloer wordt
-                    het onderwerp bijvoorbeeld nog regelmatig vermeden.
-                    Rouwenden voelen zich vaak alleen. De Dearly app draagt bij
-                    aan ondersteuning op persoonlijk vlak en de ontwikkeling op
-                    maatschappelijk vlak. Wij geloven enorm in de visie dat rouw
-                    bespreekbaar wordt en willen aan de bestaande en eventuele
-                    nieuwe functies blijven ontwikkelen, ook nadat de app live
-                    staat.
+                    Airchip wil het maximale halen uit de tijd die jij met vrienden en geliefden besteedt. Je mist geen moment meer van je favoriete festival omdat jij de drankjes ging halen. Je wordt geholpen waar en wanneer je wilt. Het enige dat je nodig hebt is een telefoon en geld op je wallet. Airchip zorgt voor een betere en snellere bestel- en betaalmethode.
                 </p>
             </TextAndImage>
         </Section>
