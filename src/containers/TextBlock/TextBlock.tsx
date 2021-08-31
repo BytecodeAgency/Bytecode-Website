@@ -9,6 +9,7 @@ import {
     StyledSubtitle,
     TextBlockContainer,
 } from './TextBlock.components';
+
 interface ImageProps {
     src?: string;
     alt?: string;
@@ -86,9 +87,8 @@ const TextBlock: React.FC<TextBlockProps> = ({
     button,
     useGatsbyLink,
     children,
-    verticalCenter
+    verticalCenter,
 }) => {
-    
     return (
         <TextBlockContainer verticalCenter={verticalCenter}>
             <Image src={image} alt={alt} />
@@ -99,7 +99,5 @@ const TextBlock: React.FC<TextBlockProps> = ({
         </TextBlockContainer>
     );
 };
-
-
 
 export default TextBlock;

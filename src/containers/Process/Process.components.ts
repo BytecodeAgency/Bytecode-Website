@@ -4,8 +4,10 @@ import { Col } from '../../lib/Grid';
 
 const { mediaQueryMin } = theme;
 
-export const Step = styled(Col)`
+const Step = styled(Col)`
     @media (${mediaQueryMin.xs}) {
         margin: 0 2em;
     }
 `;
+
+export default Step;

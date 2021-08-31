@@ -3,7 +3,7 @@ import Button from '../../components/Button/Button';
 
 export const CenteredRow = styled.div`
     text-align: center;
-`
+`;
 
 export const StyledRow = styled.div`
     display: grid;
@@ -11,8 +11,8 @@ export const StyledRow = styled.div`
     max-width: 1400px;
     margin: auto;
     margin-top: 10px;
-    background: rgb(37,28,36);
-`
+    background: rgb(37, 28, 36);
+`;
 
 export const LeftInner = styled.div`
     position: absolute;
@@ -20,15 +20,13 @@ export const LeftInner = styled.div`
     transform: translateY(-50%);
     padding-left: 80px;
     max-width: 90%;
-`
+`;
 
 export const Left = styled.div`
     position: relative;
 `;
 
-export const Right = styled.div`
-
-`;
+export const Right = styled.div``;
 
 export const StyledButton = styled(Button)`
     width: 450px;

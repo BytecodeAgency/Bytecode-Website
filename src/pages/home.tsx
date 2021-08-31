@@ -42,8 +42,7 @@ const Home: React.FC<Record<string, never>> = () => (
         <Container>
             <Row>
                 <Col md={12} lg={6} xl={6}>
-                    <Row gutterWidth={20}>
-                    </Row>
+                    <Row gutterWidth={20} />
                 </Col>
                 <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5}>
                     <TextBlock

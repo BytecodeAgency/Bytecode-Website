@@ -1,7 +1,11 @@
 import React from 'react';
 import ImageBlock from '../../components/ImageBlock/ImageBlock';
 import TextBlock from '../TextBlock/TextBlock';
-import { MainHeader, MainHeaderContent } from './ContentPageHeader.components';
+import {
+    CenterParent,
+    MainHeader,
+    MainHeaderContent,
+} from './ContentPageHeader.components';
 
 interface Props {
     subtitle: string;
@@ -29,15 +33,18 @@ const ContentPageHeader: React.FC<Props> = ({
     return (
         <MainHeader shadow={shadow} hero={hero}>
             <MainHeaderContent>
-                <TextBlock
-                    useGatsbyLink={useGatsbyLink}
-                    subtitle={subtitle}
-                    title={title}
-                    href={href}
-                    button={button}
-                >
-                    {text}
-                </TextBlock>
+                <CenterParent>
+                    <TextBlock
+                        verticalCenter
+                        useGatsbyLink={useGatsbyLink}
+                        subtitle={subtitle}
+                        title={title}
+                        href={href}
+                        button={button}
+                    >
+                        {text}
+                    </TextBlock>
+                </CenterParent>
                 <ImageBlock src={img} alt={title} />
             </MainHeaderContent>
         </MainHeader>

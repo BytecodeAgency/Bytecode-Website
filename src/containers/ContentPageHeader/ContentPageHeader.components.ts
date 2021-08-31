@@ -35,8 +35,14 @@ export const MainHeaderContent = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     @media screen and (${mediaQueryMin.sm}) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 3fr 5fr;
     }
-    max-width: 1300px;
+    grid-gap: 50px;
+    max-width: 1400px;
     margin: auto;
+    margin-top: 45px;
+`;
+
+export const CenterParent = styled.div`
+    position: relative;
 `;

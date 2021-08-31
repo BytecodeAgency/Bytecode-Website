@@ -3,10 +3,6 @@ import TextBlock from '../TextBlock/TextBlock';
 import { Container, Row } from '../../lib/Grid';
 import { Step } from './Process.components';
 
-const step1 = require('../../images/img/content/workflow/analyze.svg');
-const step2 = require('../../images/img/content/workflow/strategize.svg');
-const step3 = require('../../images/img/content/workflow/realize.svg');
-
 const Process: React.FC<Record<string, never>> = () => (
     <Container>
         <Row gutterWidth={30}>
@@ -20,11 +16,7 @@ const Process: React.FC<Record<string, never>> = () => (
                 </TextBlock>
             </Step>
             <Step md={5.55} lg={3.55}>
-                <TextBlock
-                    subtitle="02."
-                    headingType="h3"
-                    title="Strategie"
-                >
+                <TextBlock subtitle="02." headingType="h3" title="Strategie">
                     Vervolgens maken wij een duidelijke strategie, waarin we
                     uiteenzetten welke punten we aan gaan pakken en vooral op
                     welke manier we dat doen. Bij het ontwikkelen van deze
@@ -34,7 +26,11 @@ const Process: React.FC<Record<string, never>> = () => (
                 </TextBlock>
             </Step>
             <Step md={5.55} lg={3.55}>
-                <TextBlock subtitle="03." headingType="h3" title="Technische uitvoering">
+                <TextBlock
+                    subtitle="03."
+                    headingType="h3"
+                    title="Technische uitvoering"
+                >
                     Nadat we alles helemaal hebben geanalyseerd en gepland, is
                     het tijd om de handen uit de mouwen te steken en het plan te
                     realiseren. Hierbij werken we volgens de scrum-methode. Op
