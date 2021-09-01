@@ -133,12 +133,7 @@ const Home: React.FC<Record<string, never>> = () => (
                             button="Meer over ons team"
                             headingType="h2"
                         >
-                            Wij staan voor een eerlijke en open samenwerking,
-                            binnen ons team en daarbuiten. Door onze
-                            multidisciplinaire kennis versterken we elkaar en
-                            delen we onze ervaringen. Zo werken we naar nieuwe
-                            manieren en inzichten om de digitale wereld naar
-                            jouw hand te zetten.
+                            Wij ondersteunen start-ups in elke fase van hun groeiproces. Hierin doorlopen we een aantal stappen, afgestemd op jouw behoeften en de fase waarin jouw start-up zich bevindt.
                         </TextBlock>
                     </CenterAlignedCol>
                     <Col offset={{ lg: 1 }} md={12} lg={6}>

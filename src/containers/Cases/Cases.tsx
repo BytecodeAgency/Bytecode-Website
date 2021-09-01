@@ -42,8 +42,7 @@ const Cases: React.FC = () => (
                         title="Barman in je broekzak"
                     >
                         Nooit meer in de rij op een festival of evenement:
-                        bestel en betaal met Airchip (Bekend van Dragon&apos;s
-                        Den).
+                        bestel en betaal met Airchip.
                     </TextBlock>
                     <Button href="/case/dearly">Bekijk case</Button>
                 </LeftInner>
