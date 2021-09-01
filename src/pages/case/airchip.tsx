@@ -10,10 +10,9 @@ import Credits from '../../containers/Credits/Credits';
 import Gallery from '../../containers/Gallery';
 import PostThumbnail from '../../containers/Thumbnails/PostThumbnail';
 
-const header = require('../../images/img/cases/dearly/header.png');
-const intro = require('../../images/img/cases/dearly/intro.png');
-const rouwen = require('../../images/img/cases/dearly/rouwen.png');
-const app = require('../../images/img/cases/dearly/app.png');
+const header = require('../../images/img/cases/airchip/header.png');
+const intro = require('../../images/img/cases/airchip/intro.png');
+const app = require('../../images/img/cases/airchip/app.png');
 
 const dawny = require('../../images/img/cases/dawny/usecase.png');
 const dearly = require('../../images/img/cases/dearly/header.png');
@@ -93,7 +92,7 @@ const Dearly: React.FC<Record<string, never>> = () => (
                     via Dragon’s Den een mooie investering binnengehaald.
                 </p>
             </Introduction>
-            <TextAndImage img={rouwen} alt="Maak rouwen bespreekbaar" reverse>
+            <TextAndImage img={header} alt="Maakt wachtrijen verledentijd" reverse>
                 <h3>Doel van Airchip</h3>
                 <p>
                     Airchip wil het maximale halen uit de tijd die jij met
