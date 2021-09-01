@@ -6,7 +6,7 @@ import { Container, Row, Col } from '../lib/Grid';
 import Wrapper from '../components/Wrapper';
 import Cases from '../containers/Cases/Cases';
 import Button from '../components/Button/Button';
-import { Card, CircledIcon, CTA, CTAContent, Deliverables, FlexCol, GridFig, Header, HeaderContainer, HeaderContent, HeaderFigure, Icon, IconCaption, IconList, NewsletterContainer, NewsletterSection, NewsletterSubscribeButton, NewsletterSubscribeForm, NewsletterSubscribeInputField, ParallaxImage, PathFig, PathsLeft, PathsRight, Process, Section, SlantedBackground } from '../components/New';
+import { ProcessSteps, GridFig, Header, HeaderContainer, HeaderContent, HeaderFigure } from '../components/New';
 
 const pageSettings = {
     title: `Technische Start-up Partner`,
@@ -25,6 +25,7 @@ const GroupImage = styled.img`
 `;
 
 const group = require('../images/img/startups/group.jpg');
+const idea = require('../images/img/content/idea.png');
 
 const Home: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
@@ -34,47 +35,15 @@ const Home: React.FC<Record<string, never>> = () => (
                     <GridFig
                         src={require('../images/img/startups/grid.svg')}
                     />
-                    <p className="subtitle">Start-up development</p>
-                    <h1>Samen maken we passie werkelijkheid</h1>
+                    <p className="subtitle">Wij zijn Bytecode</p>
+                    <h1>Technisch verlengstuk van jouw start-up</h1>
                     <p className="introduction">
-                        Als start-up draait het om jouw idee. Wij maken jouw
-                        missie tastbaar aan de hand van research, strategie,
-                        design en development. Bovendien leveren we je na
-                        het kennismakingsgesprek gratis drie belangrijke
-                        analyses
+                    Op zoek naar een ervaren technische start-up-partner die jou kan ondersteunen met strategie, ontwerp en ontwikkeling? Van het valideren van jouw idee tot de livegang van je eerste product (MVP), wij zijn het technische verlengstuk van jouw start-up.
                     </p>
-                    <IconList>
-                        <li>
-                            <Icon
-                                src={require('../images/img/startups/icons/concurrentie.svg')}
-                            />
-                            <IconCaption className="caption">
-                                Concurrentie- & MVP-advies
-                            </IconCaption>
-                        </li>
-                        <li>
-                            <Icon
-                                src={require('../images/img/startups/icons/mvp.svg')}
-                            />
-                            <IconCaption className="caption">
-                                Missie & strategie
-                            </IconCaption>
-                        </li>
-                        <li>
-                            <Icon
-                                src={require('../images/img/startups/icons/missie.svg')}
-                            />
-                            <IconCaption className="caption">
-                                MVP-advies
-                            </IconCaption>
-                        </li>
-                    </IconList>
                     <Button
-                        href="https://calendly.com/bytecode"
-                        target="_blank"
-                        rel="noopener"
+                        href="/cases"
                     >
-                        Maak een afspraak!
+                        Bekijk onze recente projecten
                     </Button>
                 </HeaderContent>
                 <HeaderFigure>
@@ -85,7 +54,9 @@ const Home: React.FC<Record<string, never>> = () => (
         <Container>
             <Row>
                 <Col md={12} lg={6} xl={6}>
-                    <Row gutterWidth={20} />
+                    <Row gutterWidth={20}>
+                        <img src={idea} alt="group of happy people" />
+                    </Row>
                 </Col>
                 <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5}>
                     <TextBlock
@@ -136,6 +107,7 @@ const Home: React.FC<Record<string, never>> = () => (
                 </Row>
             </Container>
         </Wrapper>
+        <ProcessSteps />
         <Cases />
         <Wrapper>
             <Container>

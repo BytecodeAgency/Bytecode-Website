@@ -11,6 +11,7 @@ import {
 import Button from '../../components/Button/Button';
 
 const dearlyImg = require('../../images/img/cases/dearly/home.png');
+const airchipImg = require('../../images/img/cases/airchip/airchip.png')
 
 const Cases: React.FC = () => (
     <div>
@@ -47,7 +48,7 @@ const Cases: React.FC = () => (
                 </LeftInner>
             </Left>
             <Right>
-                <img src={dearlyImg} alt="" />
+                <img src={airchipImg} alt="" />
             </Right>
         </StyledRow>
         <CenteredRow>

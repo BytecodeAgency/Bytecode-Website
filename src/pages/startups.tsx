@@ -3,7 +3,7 @@ import Layout from '../experimental/layouts/StartupPageLayout/StartupPageLayout'
 import { Subtitle } from '../components/Typography/Typography';
 import Button from '../components/Button/Button';
 import { Container, Row } from '../lib/Grid';
-import { Card, CircledIcon, CTA, CTAContent, Deliverables, FlexCol, GridFig, Header, HeaderContainer, HeaderContent, HeaderFigure, Icon, IconCaption, IconList, NewsletterContainer, NewsletterSection, NewsletterSubscribeButton, NewsletterSubscribeForm, NewsletterSubscribeInputField, ParallaxImage, PathFig, PathsLeft, PathsRight, Process, Section, SlantedBackground } from '../components/New';
+import { ProcessSteps, Card, CircledIcon, CTA, CTAContent, Deliverables, FlexCol, GridFig, Header, HeaderContainer, HeaderContent, HeaderFigure, Icon, IconCaption, IconList, NewsletterContainer, NewsletterSection, NewsletterSubscribeButton, NewsletterSubscribeForm, NewsletterSubscribeInputField, ParallaxImage, PathFig, PathsLeft, PathsRight, Process, Section, SlantedBackground } from '../components/New';
 
 
 const pageSettings = {
@@ -47,7 +47,7 @@ const Startups: React.FC = () => {
                                     src={require('../images/img/startups/icons/concurrentie.svg')}
                                 />
                                 <IconCaption className="caption">
-                                    Concurrentie- & MVP-advies
+                                    Positionering & Branding
                                 </IconCaption>
                             </li>
                             <li>
@@ -55,7 +55,7 @@ const Startups: React.FC = () => {
                                     src={require('../images/img/startups/icons/mvp.svg')}
                                 />
                                 <IconCaption className="caption">
-                                    Missie & strategie
+                                    Missie & Strategie
                                 </IconCaption>
                             </li>
                             <li>
@@ -63,7 +63,7 @@ const Startups: React.FC = () => {
                                     src={require('../images/img/startups/icons/missie.svg')}
                                 />
                                 <IconCaption className="caption">
-                                    MVP-advies
+                                    MVP-advies & Development
                                 </IconCaption>
                             </li>
                         </IconList>
@@ -152,54 +152,7 @@ const Startups: React.FC = () => {
             <Section>
                 <ParallaxImage />
             </Section>
-            <Section style={{ display: 'flex', alignItems: 'center' }}>
-                <Container>
-                    <Subtitle>Het proces</Subtitle>
-                    <h2 style={{ paddingBottom: '3em' }}>
-                        Hoe gaan we je helpen?
-                    </h2>
-                    <Process>
-                        <li>
-                            <h3>Strategie</h3>
-                            <p className="introduction">
-                                Als startup wil je innoveren en voorop lopen. De
-                                eerste stap is een strategie. Wat is je
-                                doel, hoe ga je dit bereiken en wie is je ideale gebruiker?
-                                Na ons eerste gesprek gaan we hier
-                                meteen mee aan de slag, door kwantitatief en
-                                kwalitatief onderzoek. Door creatief &
-                                innovatief te denken, creëren we de samen de juiste
-                                strategie. De basis van jouw (en dus ons) succes.
-                            </p>
-                        </li>
-                        <li>
-                            <h3>Design</h3>
-                            <p className="introduction">
-                                Wij ontwerpen een technisch hoogstaand
-                                eindproduct dat jouw idee goed overbrengt. Een
-                                interactief web design, app of platform dat
-                                passie en creativiteit uitstraalt. Daarbij hoort
-                                een geoptimaliseerde gebruikservaring en een
-                                passende user interface. Om dit te bereiken
-                                maken we regelmatig prototypes om te evalueren
-                                of het design werkt.
-                            </p>
-                        </li>
-                        <li>
-                            <h3>Development</h3>
-                            <p className="introduction">
-                                Als de basis goed is, kunnen we beginnen met het
-                                bouwen van jouw digitale idee. We zijn ooit
-                                gestart als webbureau en beschikken over de
-                                kennis en expertise om een stabiel product te
-                                bouwen dat snel getest kan worden! Jouw passie
-                                wordt werkelijkheid.
-                            </p>
-                        </li>
-                    </Process>
-                </Container>
-                <PathFig src={require('../images/img/startups/path.svg')} />
-            </Section>
+            <ProcessSteps />
             <CTA>
                 <CTAContent>
                     <Subtitle>Intake</Subtitle>
