@@ -92,7 +92,11 @@ const Dearly: React.FC<Record<string, never>> = () => (
                     via Dragon’s Den een mooie investering binnengehaald.
                 </p>
             </Introduction>
-            <TextAndImage img={header} alt="Maakt wachtrijen verledentijd" reverse>
+            <TextAndImage
+                img={header}
+                alt="Maakt wachtrijen verledentijd"
+                reverse
+            >
                 <h3>Doel van Airchip</h3>
                 <p>
                     Airchip wil het maximale halen uit de tijd die jij met

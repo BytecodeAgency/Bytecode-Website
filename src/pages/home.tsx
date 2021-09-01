@@ -6,7 +6,21 @@ import { Container, Row, Col } from '../lib/Grid';
 import Wrapper from '../components/Wrapper';
 import Cases from '../containers/Cases/Cases';
 import Button from '../components/Button/Button';
-import { ProcessSteps, GridFig, Header, HeaderContainer, HeaderContent, HeaderFigure } from '../components/New';
+import {
+    ProcessSteps,
+    GridFig,
+    Header,
+    HeaderContainer,
+    HeaderContent,
+    HeaderFigure,
+    CTA,
+    CircledIcon,
+    CTAContent,
+    Deliverables,
+    PathsLeft,
+    PathsRight,
+} from '../components/New';
+import { Subtitle } from '../components/Typography/Typography';
 
 const pageSettings = {
     title: `Technische Start-up Partner`,
@@ -32,19 +46,17 @@ const Home: React.FC<Record<string, never>> = () => (
         <HeaderContainer>
             <Header>
                 <HeaderContent>
-                    <GridFig
-                        src={require('../images/img/startups/grid.svg')}
-                    />
+                    <GridFig src={require('../images/img/startups/grid.svg')} />
                     <p className="subtitle">Wij zijn Bytecode</p>
                     <h1>Technisch verlengstuk van jouw start-up</h1>
                     <p className="introduction">
-                    Op zoek naar een ervaren technische start-up-partner die jou kan ondersteunen met strategie, ontwerp en ontwikkeling? Van het valideren van jouw idee tot de livegang van je eerste product (MVP), wij zijn het technische verlengstuk van jouw start-up.
+                        Op zoek naar een ervaren technische start-up-partner die
+                        jou kan ondersteunen met strategie, ontwerp en
+                        ontwikkeling? Van het valideren van jouw idee tot de
+                        livegang van je eerste product (MVP), wij zijn het
+                        technische verlengstuk van jouw start-up.
                     </p>
-                    <Button
-                        href="/cases"
-                    >
-                        Bekijk onze recente projecten
-                    </Button>
+                    <Button href="/cases">Bekijk onze recente projecten</Button>
                 </HeaderContent>
                 <HeaderFigure>
                     <img src={group} alt="group of happy people" />
@@ -139,6 +151,57 @@ const Home: React.FC<Record<string, never>> = () => (
                 </Row>
             </Container>
         </Wrapper>
+        <CTA>
+            <CTAContent>
+                <Subtitle>Intake</Subtitle>
+                <h1>Kom gratis op adviesgesprek</h1>
+                <p className="introduction">
+                    Ons multidisciplinaire, ervaren team van strategen,
+                    designers en developers maken jouw passie werkelijkheid! Zet
+                    de eerste stap en krijg de volgende gratis deliverables na
+                    het kennismakingsgesprek:
+                </p>
+                <Deliverables>
+                    <li>
+                        <CircledIcon
+                            src={require('../images/img/startups/icons-round/mvp.svg')}
+                        />
+                        <p className="caption">
+                            Scherp en kritisch advies op MVP
+                        </p>
+                    </li>
+                    <li>
+                        <CircledIcon
+                            src={require('../images/img/startups/icons-round/missie.svg')}
+                        />
+                        <p className="caption">
+                            Deskundig en fris advies op je missie en strategie
+                        </p>
+                    </li>
+                    <li>
+                        <CircledIcon
+                            src={require('../images/img/startups/icons-round/concurrentie.svg')}
+                        />
+                        <p className="caption">
+                            Moderne branding- en klantanalyse
+                        </p>
+                    </li>
+                </Deliverables>
+                <Button
+                    href="https://calendly.com/bytecode"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Maak een afspraak!
+                </Button>
+            </CTAContent>
+            <PathsRight
+                src={require('../images/img/startups/routes/cta-right.svg')}
+            />
+            <PathsLeft
+                src={require('../images/img/startups/routes/cta-right.svg')}
+            />
+        </CTA>
     </Layout>
 );
 

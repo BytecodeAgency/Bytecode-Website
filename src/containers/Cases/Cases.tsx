@@ -11,7 +11,7 @@ import {
 import Button from '../../components/Button/Button';
 
 const dearlyImg = require('../../images/img/cases/dearly/home.png');
-const airchipImg = require('../../images/img/cases/airchip/airchip.png')
+const airchipImg = require('../../images/img/cases/airchip/airchip.png');
 
 const Cases: React.FC = () => (
     <div>
@@ -42,7 +42,8 @@ const Cases: React.FC = () => (
                         title="Barman in je broekzak"
                     >
                         Nooit meer in de rij op een festival of evenement:
-                        bestel en betaal met Airchip. Bekend van Dragon&apos;s Den!
+                        bestel en betaal met Airchip (Bekend van Dragon&apos;s
+                        Den).
                     </TextBlock>
                     <Button href="/case/dearly">Bekijk case</Button>
                 </LeftInner>

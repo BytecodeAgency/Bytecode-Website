@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import InputField from '../components/InputField';
+import InputField from './InputField';
 import theme from '../experimental/styles/theme';
 import { Container, Col } from '../lib/Grid';
 import { Subtitle } from './Typography/Typography';
@@ -10,7 +10,7 @@ const team = require('../images/img/startups/bytecode-team.jpeg');
 const group = require('../images/img/startups/group.jpg');
 
 const { size, height, spacing, font, weight, color, border } =
-theme.typography.button;
+    theme.typography.button;
 const { mediaQueryMin, colors } = theme;
 
 export const Header = styled.header`
@@ -367,54 +367,48 @@ export const CTAContent = styled.div`
     max-width: 60em;
 `;
 
-export const ProcessSteps = () => (
-
+export const ProcessSteps : React.FC = () => (
     <Section style={{ display: 'flex', alignItems: 'center' }}>
-    <Container>
-        <Subtitle>Het proces</Subtitle>
-        <h2 style={{ paddingBottom: '3em' }}>
-            Hoe gaan we je helpen?
-        </h2>
-        <Process>
-            <li>
-                <h3>Strategie</h3>
-                <p className="introduction">
-                    Als startup wil je innoveren en voorop lopen. De
-                    eerste stap is een strategie. Wat is je
-                    doel, hoe ga je dit bereiken en wie is je ideale gebruiker?
-                    Na ons eerste gesprek gaan we hier
-                    meteen mee aan de slag, door kwantitatief en
-                    kwalitatief onderzoek. Door creatief &
-                    innovatief te denken, creëren we de samen de juiste
-                    strategie. De basis van jouw (en dus ons) succes.
-                </p>
-            </li>
-            <li>
-                <h3>Design</h3>
-                <p className="introduction">
-                    Wij ontwerpen een technisch hoogstaand
-                    eindproduct dat jouw idee goed overbrengt. Een
-                    interactief web design, app of platform dat
-                    passie en creativiteit uitstraalt. Daarbij hoort
-                    een geoptimaliseerde gebruikservaring en een
-                    passende user interface. Om dit te bereiken
-                    maken we regelmatig prototypes om te evalueren
-                    of het design werkt.
-                </p>
-            </li>
-            <li>
-                <h3>Development</h3>
-                <p className="introduction">
-                    Als de basis goed is, kunnen we beginnen met het
-                    bouwen van jouw digitale idee. We zijn ooit
-                    gestart als webbureau en beschikken over de
-                    kennis en expertise om een stabiel product te
-                    bouwen dat snel getest kan worden! Jouw passie
-                    wordt werkelijkheid.
-                </p>
-            </li>
-        </Process>
-    </Container>
-    <PathFig src={require('../images/img/startups/path.svg')} />
-</Section>
-)
+        <Container>
+            <Subtitle>Het proces</Subtitle>
+            <h2 style={{ paddingBottom: '3em' }}>Hoe gaan we je helpen?</h2>
+            <Process>
+                <li>
+                    <h3>Strategie</h3>
+                    <p className="introduction">
+                        Als startup wil je innoveren en voorop lopen. De eerste
+                        stap is een strategie. Wat is je doel, hoe ga je dit
+                        bereiken en wie is je ideale gebruiker? Na ons eerste
+                        gesprek gaan we hier meteen mee aan de slag, door
+                        kwantitatief en kwalitatief onderzoek. Door creatief &
+                        innovatief te denken, creëren we de samen de juiste
+                        strategie. De basis van jouw (en dus ons) succes.
+                    </p>
+                </li>
+                <li>
+                    <h3>Design</h3>
+                    <p className="introduction">
+                        Wij ontwerpen een technisch hoogstaand eindproduct dat
+                        jouw idee goed overbrengt. Een interactief web design,
+                        app of platform dat passie en creativiteit uitstraalt.
+                        Daarbij hoort een geoptimaliseerde gebruikservaring en
+                        een passende user interface. Om dit te bereiken maken we
+                        regelmatig prototypes om te evalueren of het design
+                        werkt.
+                    </p>
+                </li>
+                <li>
+                    <h3>Development</h3>
+                    <p className="introduction">
+                        Als de basis goed is, kunnen we beginnen met het bouwen
+                        van jouw digitale idee. We zijn ooit gestart als
+                        webbureau en beschikken over de kennis en expertise om
+                        een stabiel product te bouwen dat snel getest kan
+                        worden! Jouw passie wordt werkelijkheid.
+                    </p>
+                </li>
+            </Process>
+        </Container>
+        <PathFig src={require('../images/img/startups/path.svg')} />
+    </Section>
+);

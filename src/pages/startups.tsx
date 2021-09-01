@@ -3,8 +3,33 @@ import Layout from '../experimental/layouts/StartupPageLayout/StartupPageLayout'
 import { Subtitle } from '../components/Typography/Typography';
 import Button from '../components/Button/Button';
 import { Container, Row } from '../lib/Grid';
-import { ProcessSteps, Card, CircledIcon, CTA, CTAContent, Deliverables, FlexCol, GridFig, Header, HeaderContainer, HeaderContent, HeaderFigure, Icon, IconCaption, IconList, NewsletterContainer, NewsletterSection, NewsletterSubscribeButton, NewsletterSubscribeForm, NewsletterSubscribeInputField, ParallaxImage, PathFig, PathsLeft, PathsRight, Process, Section, SlantedBackground } from '../components/New';
-
+import {
+    ProcessSteps,
+    Card,
+    CircledIcon,
+    CTA,
+    CTAContent,
+    Deliverables,
+    FlexCol,
+    GridFig,
+    Header,
+    HeaderContainer,
+    HeaderContent,
+    HeaderFigure,
+    Icon,
+    IconCaption,
+    IconList,
+    NewsletterContainer,
+    NewsletterSection,
+    NewsletterSubscribeButton,
+    NewsletterSubscribeForm,
+    NewsletterSubscribeInputField,
+    ParallaxImage,
+    PathsLeft,
+    PathsRight,
+    Section,
+    SlantedBackground,
+} from '../components/New';
 
 const pageSettings = {
     title: `Maatwerk Web & Mobiel Ontwikkeling`,
@@ -21,8 +46,8 @@ const Startups: React.FC = () => {
     const canSubmit = name !== '' && email !== '';
     const stateChanger =
         (setter: React.Dispatch<React.SetStateAction<string>>) =>
-            (e: React.ChangeEvent<HTMLInputElement>) =>
-                setter(e.target.value);
+        (e: React.ChangeEvent<HTMLInputElement>) =>
+            setter(e.target.value);
 
     return (
         <Layout pageSettings={pageSettings}>
@@ -101,8 +126,8 @@ const Startups: React.FC = () => {
                                     Wie ben je en hoe verhoud je je tot je
                                     concurrenten? Dit zijn cruciale vragen,
                                     waarmee je boven je concurrenten uit kunt
-                                    steken. Met onze visie en analyse zetten we hier samen
-                                    grote stappen in.{' '}
+                                    steken. Met onze visie en analyse zetten we
+                                    hier samen grote stappen in.{' '}
                                 </p>
                             </Card>
                         </FlexCol>
