@@ -32,6 +32,7 @@ const pageSettings = {
 const CenterAlignedCol = styled(Col)`
     align-self: center;
     display: flex;
+    margin: 100px 0px;
 `;
 
 const GroupImage = styled.img`
@@ -181,7 +182,7 @@ const Home: React.FC<Record<string, never>> = () => (
                             src={require('../images/img/startups/icons-round/concurrentie.svg')}
                         />
                         <p className="caption">
-                            Moderne branding- en doelgroepanalyse
+                            Moderne doelgroep- en brandinganalyse
                         </p>
                     </li>
                 </Deliverables>

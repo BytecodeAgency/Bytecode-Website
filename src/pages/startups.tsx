@@ -211,7 +211,7 @@ const Startups: React.FC = () => {
                                 src={require('../images/img/startups/icons-round/concurrentie.svg')}
                             />
                             <p className="caption">
-                                Moderne branding- en doelgroepanalyse
+                                Moderne doelgroep- en brandinganalyse
                             </p>
                         </li>
                     </Deliverables>

@@ -21,6 +21,7 @@ const buttonStyle = css<{ disabled?: boolean; wide?: boolean }>`
     color: ${color};
     text-decoration: none;
     ${(props) => props.wide && 'width: 450px;'};
+    ${(props) => props.wide && 'max-width: 80vw;'};
     ${(props) => props.wide && 'margin: 100px 0;'};
     &:hover {
         color: ${(props) =>

@@ -203,25 +203,18 @@ export const ParallaxImage = styled.div`
 `;
 
 export const Deliverables = styled.ul`
-    display: flex;
     list-style: none;
-    text-align: center;
-    align-items: flex-start;
-    justify-items: center;
-    li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
-        width: 33%;
-
-        & > * {
-            margin-top: 1rem;
-        }
+    display: grid;
+    grid-template-columns: 1fr;
+    @media (${mediaQueryMin.sm}) {
+        grid-template-columns: 1fr 1fr 1fr;
     }
-
-    @media (${mediaQueryMin.xs}) {
-        margin: 0.5em 1em 0 1em;
+    li {
+        max-width: 300px;
+        margin: auto;
+        .caption {
+            padding-top: 20px;
+        }
     }
 `;
 
