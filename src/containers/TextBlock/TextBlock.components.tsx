@@ -25,3 +25,13 @@ export const H4 = styled.h4``;
 export const StyledButton = styled(Button)`
     margin: 1em 0;
 `;
+
+const verticalCenterCode = `
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+`;
+
+export const TextBlockContainer = styled.div<{ verticalCenter?: boolean }>`
+    ${(props) => (props.verticalCenter ? verticalCenterCode : '')}
+`;

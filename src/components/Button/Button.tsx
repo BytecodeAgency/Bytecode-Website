@@ -14,6 +14,7 @@ const Button: React.FC<ButtonProps> = ({
     target,
     onClick,
     disabled,
+    wide,
     children,
 }) => {
     if (useGatsbyLink) {
@@ -38,7 +39,13 @@ const Button: React.FC<ButtonProps> = ({
         );
     }
     return (
-        <StyledAnchor href={href} rel={rel} target={target} onClick={onClick}>
+        <StyledAnchor
+            wide={wide}
+            href={href}
+            rel={rel}
+            target={target}
+            onClick={onClick}
+        >
             {children}
         </StyledAnchor>
     );

@@ -7,6 +7,7 @@ export interface ButtonProps {
     submit?: boolean;
     target?: string;
     onClick?: () => void;
+    wide?: boolean;
     disabled?: boolean;
     children: React.ReactNode;
 }

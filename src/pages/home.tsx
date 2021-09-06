@@ -2,31 +2,37 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from '../layouts/MainLayout/MainLayout';
 import TextBlock from '../containers/TextBlock/TextBlock';
-import ContentPageHeader from '../containers/ContentPageHeader/ContentPageHeader';
 import { Container, Row, Col } from '../lib/Grid';
-import NewsletterSubscribe from '../containers/NewsletterSubscribe/NewsletterSubscribe';
-import Process from '../containers/Process/Process';
-import Thumbnail from '../containers/Thumbnails/Thumbnail';
 import Wrapper from '../components/Wrapper';
-
-const service1icon = require('../images/icons/services/mobile.svg');
-const service2icon = require('../images/icons/services/cloud.svg');
-const service3icon = require('../images/icons/services/api.svg');
-const service4icon = require('../images/icons/services/design.svg');
-const service1bg = require('../images/img/services/mobile.jpg');
-const service2bg = require('../images/img/services/servers.jpg');
-const service3bg = require('../images/img/services/code.jpeg');
-const service4bg = require('../images/img/services/design.jpg');
+import Cases from '../containers/Cases/Cases';
+import Button from '../components/Button/Button';
+import {
+    ProcessStepsHome,
+    GridFig,
+    Header,
+    HeaderContainer,
+    IdeaContainer,
+    HeaderContent,
+    HeaderFigure,
+    CTA,
+    CircledIcon,
+    CTAContent,
+    Deliverables,
+    PathsLeft,
+    PathsRight,
+} from '../components/New';
+import { Subtitle } from '../components/Typography/Typography';
 
 const pageSettings = {
-    title: `Maatwerk Web & Mobiel Ontwikkeling`,
-    description: `Een kleinschalig full-service webbureau gespecialiseerd in platformontwikkeling op maat. Passie, kwaliteit en betrouwbaarheid als kernwaarden`,
-    keywords: 'bytecode, digital agency',
+    title: `Technische Start-up Partner`,
+    description: `Opzoek naar een ervaren technische start-up partner die jou kan ondersteunen met strategie, ontwerp en software ontwikkeling?`,
+    keywords: 'bytecode, partner, tech start-up, start-up',
 };
 
 const CenterAlignedCol = styled(Col)`
     align-self: center;
     display: flex;
+    margin: 100px 0px;
 `;
 
 const GroupImage = styled.img`
@@ -34,91 +40,74 @@ const GroupImage = styled.img`
     width: 100%;
 `;
 
+const group = require('../images/img/startups/group.jpg');
+const idea = require('../images/img/content/idea.png');
+
 const Home: React.FC<Record<string, never>> = () => (
     <Layout pageSettings={pageSettings}>
-        <ContentPageHeader
-            useGatsbyLink
-            img={require('../images/img/header/web.svg')}
-            subtitle="Welkom bij Bytecode"
-            title="Specialisten in maatwerk voor web en mobiel"
-            href="/cases"
-            button="Onze recente projecten"
-            text="Wij zijn Bytecode Digital Agency: een team van ontwikkelaars, ontwerpers, researchers, strategen en marketeers. Ons jonge, hechte team staat graag voor je klaar om uniek digitaal maatwerk te verzorgen."
-            hero
-            shadow
-        />
-        <Container>
+        <HeaderContainer>
+            <Header>
+                <HeaderContent>
+                    <GridFig src={require('../images/img/startups/grid.svg')} />
+                    <p className="subtitle">Wij zijn Bytecode</p>
+                    <h1>Technisch verlengstuk van jouw start-up</h1>
+                    <p>
+                        Op zoek naar een ervaren technische start-up-partner die
+                        jou kan ondersteunen met strategie, ontwerp en
+                        ontwikkeling? Van het valideren van jouw idee tot de
+                        livegang van je eerste product (MVP), wij zijn het
+                        technische verlengstuk van jouw start-up.
+                    </p>
+                    <Button href="/cases">Bekijk onze recente projecten</Button>
+                </HeaderContent>
+                <HeaderFigure>
+                    <img src={group} alt="group of happy people" />
+                </HeaderFigure>
+            </Header>
+        </HeaderContainer>
+        <IdeaContainer>
             <Row>
                 <Col md={12} lg={6} xl={6}>
                     <Row gutterWidth={20}>
-                        <Col sm={6}>
-                            <Thumbnail
-                                serviceName="Websites, Webshops en Webapps"
-                                serviceIcon={service1icon}
-                                backgroundImage={service1bg}
-                            />
-                        </Col>
-                        <Col sm={6}>
-                            <Thumbnail
-                                serviceName="Cloud en Automatisering"
-                                serviceIcon={service2icon}
-                                backgroundImage={service2bg}
-                            />
-                        </Col>
-                        <Col sm={6}>
-                            <Thumbnail
-                                serviceName="Mobile- en API-ontwikkeling"
-                                serviceIcon={service3icon}
-                                backgroundImage={service3bg}
-                            />
-                        </Col>
-                        <Col sm={6}>
-                            <Thumbnail
-                                serviceName="Design en Strategie"
-                                serviceIcon={service4icon}
-                                backgroundImage={service4bg}
-                            />
-                        </Col>
+                        <img src={idea} alt="group of happy people" />
                     </Row>
                 </Col>
                 <CenterAlignedCol offset={{ lg: 1 }} md={12} lg={5}>
                     <TextBlock
                         useGatsbyLink
-                        subtitle="Hoe Bytecode kan helpen"
-                        title="Van inzicht tot impact"
+                        subtitle="Onze missie"
+                        title="Samen maken we ideeën tastbaar"
                         href="/services"
                         button="Bekijk onze diensten"
                         headingType="h2"
                     >
-                        Wij ontwikkelen maatwerksoftware op basis van verkregen
-                        inzichten en onderzoek, zodat onze digitale producten
-                        impact maken op jouw organisatie en klanten. Handmatig,
-                        tijdrovend werk wordt verleden tijd. Jij kan je volledig
-                        focussen op datgene waar jij passie voor hebt. Zo maken
-                        we jouw visie realiteit.
+                        Ons doel is simpel. Wij willen ideeën laten slagen. Jij
+                        hebt een passie, wij hebben de mensen, middelen en
+                        technieken om samen jouw passie werkelijkheid te laten
+                        worden. Een stabiel en kwalitatief hoogwaardig product
+                        is daarom essentieel.
                     </TextBlock>
                 </CenterAlignedCol>
             </Row>
-        </Container>
+        </IdeaContainer>
         <Wrapper>
             <Container>
                 <Row justify="center" align="center">
                     <CenterAlignedCol md={12} lg={5}>
                         <TextBlock
                             useGatsbyLink
-                            subtitle="Wie wij zijn"
-                            title="
-                            Kennis en kwaliteit met een no-bullshit mentaliteit"
+                            subtitle="Wat wij doen"
+                            title="Van inzicht tot impact"
                             href="/over"
                             button="Meer over ons team"
                             headingType="h2"
                         >
-                            Wij staan voor een eerlijke en open samenwerking,
-                            binnen ons team en daarbuiten. Door onze
-                            multidisciplinaire kennis versterken we elkaar en
-                            delen we onze ervaringen. Zo werken we naar nieuwe
-                            manieren en inzichten om de digitale wereld naar
-                            jouw hand te zetten.
+                            Bij een start-up komt veel kijken. Gelukkig hebben
+                            wij dit proces al vaak doorlopen. Daarmee hebben we
+                            de kennis en ervaring om niet alleen een technische
+                            uitwerking te verzorgen, maar jou ook echt te
+                            adviseren, begeleiden en een stabiel “minimal viable
+                            product” (MVP) neer te zetten.
                         </TextBlock>
                     </CenterAlignedCol>
                     <Col offset={{ lg: 1 }} md={12} lg={6}>
@@ -131,10 +120,87 @@ const Home: React.FC<Record<string, never>> = () => (
                 </Row>
             </Container>
         </Wrapper>
-        <Process />
-        <Container>
-            <NewsletterSubscribe />
-        </Container>
+        <ProcessStepsHome />
+        <Cases />
+        <Wrapper>
+            <Container>
+                <Row justify="center" align="center">
+                    <CenterAlignedCol md={12} lg={5}>
+                        <TextBlock
+                            useGatsbyLink
+                            subtitle="Ons proces"
+                            title="Jouw weg naar een waardevol product"
+                            href="/over"
+                            button="Meer over ons team"
+                            headingType="h2"
+                        >
+                            Wij ondersteunen start-ups in elke fase van hun
+                            groeiproces. Hierin doorlopen we een aantal stappen,
+                            afgestemd op jouw behoeften en de fase waarin jouw
+                            start-up zich bevindt.
+                        </TextBlock>
+                    </CenterAlignedCol>
+                    <Col offset={{ lg: 1 }} md={12} lg={6}>
+                        <GroupImage
+                            width="700"
+                            src={require('../images/img/content/process.png')}
+                            alt="Onze mindset"
+                        />
+                    </Col>
+                </Row>
+            </Container>
+        </Wrapper>
+        <CTA>
+            <CTAContent>
+                <Subtitle>Intake</Subtitle>
+                <h1>Kom gratis op adviesgesprek</h1>
+                <p className="introduction">
+                    Ons multidisciplinaire, ervaren team van strategen,
+                    designers en developers maken jouw passie werkelijkheid! Zet
+                    de eerste stap en krijg de volgende gratis deliverables na
+                    het kennismakingsgesprek:
+                </p>
+                <Deliverables>
+                    <li>
+                        <CircledIcon
+                            src={require('../images/img/startups/icons-round/mvp.svg')}
+                        />
+                        <p className="caption">
+                            Scherp en kritisch advies op MVP scoping
+                        </p>
+                    </li>
+                    <li>
+                        <CircledIcon
+                            src={require('../images/img/startups/icons-round/missie.svg')}
+                        />
+                        <p className="caption">
+                            Deskundige en frisse kijk op je missie en strategie
+                        </p>
+                    </li>
+                    <li>
+                        <CircledIcon
+                            src={require('../images/img/startups/icons-round/concurrentie.svg')}
+                        />
+                        <p className="caption">
+                            Moderne doelgroep- en brandinganalyse
+                        </p>
+                    </li>
+                </Deliverables>
+                <Button
+                    href="https://calendly.com/bytecode"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Maak een afspraak!
+                </Button>
+            </CTAContent>
+            <PathsRight
+                src={require('../images/img/startups/routes/cta-right.svg')}
+            />
+            <PathsLeft
+                src={require('../images/img/startups/routes/cta-right.svg')}
+            />
+        </CTA>
     </Layout>
 );
 

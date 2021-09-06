@@ -35,7 +35,7 @@ const creditsColumnOne = [
     },
     {
         title: 'App',
-        content: ['Christiaan Farber', 'Luciano Nooijen', 'Jeroen van Steijn'],
+        content: ['Christiaan Färber', 'Luciano Nooijen', 'Jeroen van Steijn'],
     },
 ];
 const creditsColumnTwo = [

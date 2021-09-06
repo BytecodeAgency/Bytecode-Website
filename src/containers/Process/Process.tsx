@@ -1,18 +1,13 @@
 import React from 'react';
 import TextBlock from '../TextBlock/TextBlock';
 import { Container, Row } from '../../lib/Grid';
-import { ProcessStepImage, Step } from './Process.components';
-
-const step1 = require('../../images/img/content/workflow/analyze.svg');
-const step2 = require('../../images/img/content/workflow/strategize.svg');
-const step3 = require('../../images/img/content/workflow/realize.svg');
+import { Step } from './Process.components';
 
 const Process: React.FC<Record<string, never>> = () => (
     <Container>
         <Row gutterWidth={30}>
             <Step md={5.55} lg={3.55}>
-                <ProcessStepImage src={step1} alt="Analyze" />
-                <TextBlock subtitle="Stap 1" headingType="h3" title="Analyze">
+                <TextBlock subtitle="01." headingType="h3" title="Advies">
                     Voordat we starten met ontwikkelen, maken we eerst een
                     gedetailleerde analyse. Dit stelt ons in staat om een helder
                     en volledig overzicht te krijgen van de huidige situatie.
@@ -21,12 +16,7 @@ const Process: React.FC<Record<string, never>> = () => (
                 </TextBlock>
             </Step>
             <Step md={5.55} lg={3.55}>
-                <ProcessStepImage src={step2} alt="Strategize" />
-                <TextBlock
-                    subtitle="Stap 2"
-                    headingType="h3"
-                    title="Strategize"
-                >
+                <TextBlock subtitle="02." headingType="h3" title="Strategie">
                     Vervolgens maken wij een duidelijke strategie, waarin we
                     uiteenzetten welke punten we aan gaan pakken en vooral op
                     welke manier we dat doen. Bij het ontwikkelen van deze
@@ -36,8 +26,11 @@ const Process: React.FC<Record<string, never>> = () => (
                 </TextBlock>
             </Step>
             <Step md={5.55} lg={3.55}>
-                <ProcessStepImage src={step3} alt="Realize" />
-                <TextBlock subtitle="Stap 3" headingType="h3" title="Realize">
+                <TextBlock
+                    subtitle="03."
+                    headingType="h3"
+                    title="Technische uitvoering"
+                >
                     Nadat we alles helemaal hebben geanalyseerd en gepland, is
                     het tijd om de handen uit de mouwen te steken en het plan te
                     realiseren. Hierbij werken we volgens de scrum-methode. Op

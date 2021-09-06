@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ background }) => {
                         <img src={closeMenuImg} alt="Close menu" width="100%" />
                     </CloseMenuButton>
                     <NavbarItem href="/" text="Home" />
-                    <NavbarItem href="/services" text="Services" />
+                    <NavbarItem href="/startups" text="Services" />
                     <NavbarItem href="/cases" text="Cases" />
                     <NavbarItem href="/insights" text="Insights" />
                     <NavbarItem href="/over" text="About" />
