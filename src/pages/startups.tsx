@@ -37,7 +37,7 @@ const pageSettings = {
     keywords: 'bytecode, digital agency',
 };
 
-const group = require('../images/img/startups/group.jpg');
+const group = require('../images/img/startups/bytecode-team.jpeg');
 
 const Startups: React.FC = () => {
     const [name, setName] = useState('');
@@ -194,7 +194,7 @@ const Startups: React.FC = () => {
                                 src={require('../images/img/startups/icons-round/mvp.svg')}
                             />
                             <p className="caption">
-                                Scherp en kritisch advies op MVP
+                                Scherp en kritisch advies op MVP scoping
                             </p>
                         </li>
                         <li>
@@ -202,7 +202,7 @@ const Startups: React.FC = () => {
                                 src={require('../images/img/startups/icons-round/missie.svg')}
                             />
                             <p className="caption">
-                                Deskundig en fris advies op je missie en
+                                Deskundige en frisse kijk op je missie en
                                 strategie
                             </p>
                         </li>
@@ -211,7 +211,7 @@ const Startups: React.FC = () => {
                                 src={require('../images/img/startups/icons-round/concurrentie.svg')}
                             />
                             <p className="caption">
-                                Moderne branding- en klantanalyse
+                                Moderne branding- en doelgroepanalyse
                             </p>
                         </li>
                     </Deliverables>

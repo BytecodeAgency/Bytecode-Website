@@ -7,10 +7,11 @@ import Wrapper from '../components/Wrapper';
 import Cases from '../containers/Cases/Cases';
 import Button from '../components/Button/Button';
 import {
-    ProcessSteps,
+    ProcessStepsHome,
     GridFig,
     Header,
     HeaderContainer,
+    IdeaContainer,
     HeaderContent,
     HeaderFigure,
     CTA,
@@ -49,7 +50,7 @@ const Home: React.FC<Record<string, never>> = () => (
                     <GridFig src={require('../images/img/startups/grid.svg')} />
                     <p className="subtitle">Wij zijn Bytecode</p>
                     <h1>Technisch verlengstuk van jouw start-up</h1>
-                    <p className="introduction">
+                    <p>
                         Op zoek naar een ervaren technische start-up-partner die
                         jou kan ondersteunen met strategie, ontwerp en
                         ontwikkeling? Van het valideren van jouw idee tot de
@@ -63,7 +64,7 @@ const Home: React.FC<Record<string, never>> = () => (
                 </HeaderFigure>
             </Header>
         </HeaderContainer>
-        <Container>
+        <IdeaContainer>
             <Row>
                 <Col md={12} lg={6} xl={6}>
                     <Row gutterWidth={20}>
@@ -74,21 +75,20 @@ const Home: React.FC<Record<string, never>> = () => (
                     <TextBlock
                         useGatsbyLink
                         subtitle="Onze missie"
-                        title="Samen maken we ideeen tastbaar"
+                        title="Samen maken we ideeën tastbaar"
                         href="/services"
                         button="Bekijk onze diensten"
                         headingType="h2"
                     >
-                        Wij ontwikkelen maatwerksoftware op basis van verkregen
-                        inzichten en onderzoek, zodat onze digitale producten
-                        impact maken op jouw organisatie en klanten. Handmatig,
-                        tijdrovend werk wordt verleden tijd. Jij kan je volledig
-                        focussen op datgene waar jij passie voor hebt. Zo maken
-                        we jouw visie realiteit.
+                        Ons doel is simpel. Wij willen ideeën laten slagen. Jij
+                        hebt een passie, wij hebben de mensen, middelen en
+                        technieken om samen jouw passie werkelijkheid te laten
+                        worden. Een stabiel en kwalitatief hoogwaardig product
+                        is daarom essentieel.
                     </TextBlock>
                 </CenterAlignedCol>
             </Row>
-        </Container>
+        </IdeaContainer>
         <Wrapper>
             <Container>
                 <Row justify="center" align="center">
@@ -101,12 +101,12 @@ const Home: React.FC<Record<string, never>> = () => (
                             button="Meer over ons team"
                             headingType="h2"
                         >
-                            Wij staan voor een eerlijke en open samenwerking,
-                            binnen ons team en daarbuiten. Door onze
-                            multidisciplinaire kennis versterken we elkaar en
-                            delen we onze ervaringen. Zo werken we naar nieuwe
-                            manieren en inzichten om de digitale wereld naar
-                            jouw hand te zetten.
+                            Bij een start-up komt veel kijken. Gelukkig hebben
+                            wij dit proces al vaak doorlopen. Daarmee hebben we
+                            de kennis en ervaring om niet alleen een technische
+                            uitwerking te verzorgen, maar jou ook echt te
+                            adviseren, begeleiden en een stabiel “minimal viable
+                            product” (MVP) neer te zetten.
                         </TextBlock>
                     </CenterAlignedCol>
                     <Col offset={{ lg: 1 }} md={12} lg={6}>
@@ -119,7 +119,7 @@ const Home: React.FC<Record<string, never>> = () => (
                 </Row>
             </Container>
         </Wrapper>
-        <ProcessSteps />
+        <ProcessStepsHome />
         <Cases />
         <Wrapper>
             <Container>
@@ -133,7 +133,10 @@ const Home: React.FC<Record<string, never>> = () => (
                             button="Meer over ons team"
                             headingType="h2"
                         >
-                            Wij ondersteunen start-ups in elke fase van hun groeiproces. Hierin doorlopen we een aantal stappen, afgestemd op jouw behoeften en de fase waarin jouw start-up zich bevindt.
+                            Wij ondersteunen start-ups in elke fase van hun
+                            groeiproces. Hierin doorlopen we een aantal stappen,
+                            afgestemd op jouw behoeften en de fase waarin jouw
+                            start-up zich bevindt.
                         </TextBlock>
                     </CenterAlignedCol>
                     <Col offset={{ lg: 1 }} md={12} lg={6}>
@@ -162,7 +165,7 @@ const Home: React.FC<Record<string, never>> = () => (
                             src={require('../images/img/startups/icons-round/mvp.svg')}
                         />
                         <p className="caption">
-                            Scherp en kritisch advies op MVP
+                            Scherp en kritisch advies op MVP scoping
                         </p>
                     </li>
                     <li>
@@ -170,7 +173,7 @@ const Home: React.FC<Record<string, never>> = () => (
                             src={require('../images/img/startups/icons-round/missie.svg')}
                         />
                         <p className="caption">
-                            Deskundig en fris advies op je missie en strategie
+                            Deskundige en frisse kijk op je missie en strategie
                         </p>
                     </li>
                     <li>
@@ -178,7 +181,7 @@ const Home: React.FC<Record<string, never>> = () => (
                             src={require('../images/img/startups/icons-round/concurrentie.svg')}
                         />
                         <p className="caption">
-                            Moderne branding- en klantanalyse
+                            Moderne branding- en doelgroepanalyse
                         </p>
                     </li>
                 </Deliverables>

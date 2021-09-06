@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Button from '../../components/Button/Button';
 import theme from '../../styles/theme';
 
 const { mediaQueryMin } = theme;
@@ -34,8 +33,3 @@ export const Left = styled.div`
 `;
 
 export const Right = styled.div``;
-
-export const StyledButton = styled(Button)`
-    width: 450px;
-    padding: 10px;
-`;

@@ -6,7 +6,6 @@ import {
     LeftInner,
     StyledRow,
     CenteredRow,
-    StyledButton,
 } from './Cases.components';
 import Button from '../../components/Button/Button';
 
@@ -52,7 +51,9 @@ const Cases: React.FC = () => (
             </Right>
         </StyledRow>
         <CenteredRow>
-            <StyledButton href="/cases">Bekijk meer cases</StyledButton>
+            <Button wide href="/cases">
+                Bekijk meer cases
+            </Button>
         </CenteredRow>
     </div>
 );

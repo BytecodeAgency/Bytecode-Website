@@ -4,7 +4,7 @@ import theme from '../../styles/theme';
 
 const { size, height, spacing, font, weight, color } = theme.typography.button;
 
-const buttonStyle = css<{ disabled?: boolean }>`
+const buttonStyle = css<{ disabled?: boolean; wide?: boolean }>`
     display: inline-block;
     background: transparent;
     padding: 0.66em 2em;
@@ -20,6 +20,8 @@ const buttonStyle = css<{ disabled?: boolean }>`
     font-weight: ${weight};
     color: ${color};
     text-decoration: none;
+    ${(props) => props.wide && 'width: 450px;'};
+    ${(props) => props.wide && 'margin: 100px 0;'};
     &:hover {
         color: ${(props) =>
             props.disabled ? theme.colors.tertiary : theme.colors.white};
@@ -37,6 +39,6 @@ export const StyledGatsbyButton = styled(Link)<{ disabled?: boolean }>`
 export const StyledButton = styled.button<{ disabled?: boolean }>`
     ${buttonStyle}
 `;
-export const StyledAnchor = styled.a<{ disabled?: boolean }>`
+export const StyledAnchor = styled.a<{ disabled?: boolean; wide?: boolean }>`
     ${buttonStyle}
 `;

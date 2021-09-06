@@ -5,7 +5,7 @@ import theme from '../experimental/styles/theme';
 import { Container, Col } from '../lib/Grid';
 import { Subtitle } from './Typography/Typography';
 
-const meeting = require('../images/img/startups/meeting.jpeg');
+const meeting = require('../images/img/content/teamv2.png');
 const team = require('../images/img/startups/bytecode-team.jpeg');
 const group = require('../images/img/startups/group.jpg');
 
@@ -23,6 +23,10 @@ export const Header = styled.header`
         justify-content: flex-end;
     }
     align-items: center;
+`;
+
+export const IdeaContainer = styled(Container)`
+    margin: 50px 0;
 `;
 
 export const HeaderContainer = styled(Container)`
@@ -367,7 +371,7 @@ export const CTAContent = styled.div`
     max-width: 60em;
 `;
 
-export const ProcessSteps : React.FC = () => (
+export const ProcessSteps: React.FC = () => (
     <Section style={{ display: 'flex', alignItems: 'center' }}>
         <Container>
             <Subtitle>Het proces</Subtitle>
@@ -375,7 +379,7 @@ export const ProcessSteps : React.FC = () => (
             <Process>
                 <li>
                     <h3>Strategie</h3>
-                    <p className="introduction">
+                    <p>
                         Als startup wil je innoveren en voorop lopen. De eerste
                         stap is een strategie. Wat is je doel, hoe ga je dit
                         bereiken en wie is je ideale gebruiker? Na ons eerste
@@ -387,7 +391,7 @@ export const ProcessSteps : React.FC = () => (
                 </li>
                 <li>
                     <h3>Design</h3>
-                    <p className="introduction">
+                    <p>
                         Wij ontwerpen een technisch hoogstaand eindproduct dat
                         jouw idee goed overbrengt. Een interactief web design,
                         app of platform dat passie en creativiteit uitstraalt.
@@ -399,12 +403,52 @@ export const ProcessSteps : React.FC = () => (
                 </li>
                 <li>
                     <h3>Development</h3>
-                    <p className="introduction">
+                    <p>
                         Als de basis goed is, kunnen we beginnen met het bouwen
                         van jouw digitale idee. We zijn ooit gestart als
                         webbureau en beschikken over de kennis en expertise om
                         een stabiel product te bouwen dat snel getest kan
                         worden! Jouw passie wordt werkelijkheid.
+                    </p>
+                </li>
+            </Process>
+        </Container>
+        <PathFig src={require('../images/img/startups/path.svg')} />
+    </Section>
+);
+
+export const ProcessStepsHome: React.FC = () => (
+    <Section style={{ display: 'flex', alignItems: 'center' }}>
+        <Container>
+            <Process>
+                <li>
+                    <h3>Advies</h3>
+                    <p>
+                        Aan de hand van jouw idee kiezen we de meest geschikte
+                        uitwerking. Heb je bijvoorbeeld een webapp of mobiele
+                        app nodig? Ook geven we advies over businessen
+                        verdienmodellen, en denken we mee over het verkrijgen
+                        van financiering.
+                    </p>
+                </li>
+                <li>
+                    <h3>Strategie</h3>
+                    <p>
+                        Welke functionaliteiten bieden waarde voor jouw
+                        gebruikers? Hoe ga jij je positioneren in de markt? We
+                        voorzien je van strategische hulp over bijvoorbeeld jouw
+                        MVP, het lanceren van jouw product en het verzamelen van
+                        feedback.
+                    </p>
+                </li>
+                <li>
+                    <h3>Technische Uitvoering</h3>
+                    <p>
+                        We werken “lean” en flexibel toe naar een stabiele en
+                        kwalitatieve eerste versie van jouw product (MVP). Jouw
+                        idee kan getest worden, waarna we de focus tijdens
+                        ontwikkeling op de meest belangrijke functionaliteiten
+                        kunnen leggen.
                     </p>
                 </li>
             </Process>
