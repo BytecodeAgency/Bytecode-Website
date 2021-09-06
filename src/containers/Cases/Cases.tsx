@@ -43,7 +43,7 @@ const Cases: React.FC = () => (
                         Nooit meer in de rij op een festival of evenement:
                         bestel en betaal met Airchip.
                     </TextBlock>
-                    <Button href="/case/dearly">Bekijk case</Button>
+                    <Button href="/case/airchip">Bekijk case</Button>
                 </LeftInner>
             </Left>
             <Right>
