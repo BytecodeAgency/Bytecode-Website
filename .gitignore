@@ -1,5 +1,7 @@
 # Temp
-gatsby-gen/
+.next
+node_modules
+.vercel
 next/
 .cache/
 public

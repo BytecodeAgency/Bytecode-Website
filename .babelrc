@@ -1,17 +1,4 @@
-        {
-            "presets": [
-              [
-                "babel-preset-gatsby",
-                {
-                  "targets": {
-                    "browsers": [">0.25%", "not dead"]
-                  }
-                }
-              ]
-            ],
-            "env" : {
-                "test": {
-                    "plugins": ["@babel/plugin-transform-modules-commonjs"]
-                }
-            }
-          }
+{
+    "presets": ["next/babel"],
+    "plugins": [["styled-components", { "ssr": true }]]
+}
