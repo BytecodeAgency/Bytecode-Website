@@ -12,14 +12,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "postinstall": "rm -rf ./node_modules/@bytecode/components/node_modules/react"
   },
   "dependencies": {
+    "@bytecode/components": "file:./../components/",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "next": "11.1.2",
+    "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "styled-components": "^5.3.1"
@@ -35,5 +38,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/BytecodeBV"
+  },
+  "resolutions": {
+    "react": "^17.0.2"
   }
 }

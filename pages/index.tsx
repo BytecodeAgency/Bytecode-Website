@@ -1,6 +1,7 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { Button } from '@bytecode/components'
 
 const content = {
   title: "Bytecode",
@@ -22,9 +23,10 @@ const Home: NextPage = () => {
 
 const HomeBody = () => (
   <>
-      <h1>
-        Hi
-      </h1>
+    <h1>
+      Hello
+    </h1>
+      <Button>Hi</Button>
   </>
 )
 
