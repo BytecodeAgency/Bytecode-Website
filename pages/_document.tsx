@@ -30,9 +30,6 @@ export default class MyDocument extends Document {
         }
     }
 
-
-
-
     render(): ReactElement {
         return (
             <Html>
