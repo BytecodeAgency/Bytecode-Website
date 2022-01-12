@@ -58,7 +58,7 @@ const Footer: React.FC<Record<string, never>> = () => (
                     Nederland
                 </p>
                 <FooterButton
-                    href="https://calendly.com/bytecode"
+                    href="https://calendly.com/nickbroekarts-bytecode"
                     target="_blank"
                     rel="noopener"
                 >

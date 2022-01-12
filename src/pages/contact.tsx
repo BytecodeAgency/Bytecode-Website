@@ -57,7 +57,7 @@ const Contact: React.FC<Record<string, never>> = () => (
                     <Button
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://calendly.com/bytecode"
+                        href="https://calendly.com/nickbroekarts-bytecode"
                     >
                         Plan een afspraak
                     </Button>

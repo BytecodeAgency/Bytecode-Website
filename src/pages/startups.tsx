@@ -93,7 +93,7 @@ const Startups: React.FC = () => {
                             </li>
                         </IconList>
                         <Button
-                            href="https://calendly.com/bytecode"
+                            href="https://calendly.com/nickbroekarts-bytecode"
                             target="_blank"
                             rel="noopener"
                         >
@@ -216,7 +216,7 @@ const Startups: React.FC = () => {
                         </li>
                     </Deliverables>
                     <Button
-                        href="https://calendly.com/bytecode"
+                        href="https://calendly.com/nickbroekarts-bytecode"
                         target="_blank"
                         rel="noopener"
                     >
