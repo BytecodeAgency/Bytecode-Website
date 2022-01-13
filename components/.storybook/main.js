@@ -1,6 +1,6 @@
 module.exports = {
   stories: [
-    '../src/components/**/*.stories.tsx',
+    '../src/**/*.stories.tsx',
   ],
   addons: [
     'storybook-addon-styled-component-theme/dist/preset',
