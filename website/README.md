@@ -16,28 +16,6 @@ To install all dependencies after cloning the Git repo, run `yarn`. Otherwise th
 
 ## Local development
 
-To run the development environment, first download the components library in the same folder as the bytecode-website root, such that the folder structure is:
-
-```
-root (probably git or Bytecode folder)
-├── components
-│
-└── bytecode-website
-    └── README.MD (this file)
-```
-
-You can find the components folder by running the following command in your root folder:
-
-`git clone git@git.bytecode.nl:bytecode/components.git`
-
-Then run the following in the bytecode-website folder to install dependencies:
-
-```sh
-yarn
-```
-
-and run the following command to start to start the webserver with hot reloading:
-
 ```
 yarn run dev
 ```

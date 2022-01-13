@@ -18,6 +18,6 @@ export default buttonStory
 
 export const allButtons = () => (
   <>
-    <Button>Primary (default)</Button>
+    <Button />
   </>
 )

@@ -1,5 +1,10 @@
 {
     "name": "@bytecode/monorepo",
     "private": true,
-    "workspaces": ["website", "components"]
+    "workspaces": ["website", "components"],
+    "scripts": {
+        "dev:components": "cd components && yarn dev",
+        "dev:website": "cd website && yarn dev",
+        "dev": "yarn dev:components && yarn dev:website"
+    }
 }

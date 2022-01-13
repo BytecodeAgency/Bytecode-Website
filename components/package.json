@@ -9,14 +9,15 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "docs"
   ],
   "scripts": {
     "build": "tsc",
+    "dev": "tsc -w",
     "build:storybook": "build-storybook -c .storybook -o build",
     "lint": "eslint .",
     "start": "yarn run storybook",
