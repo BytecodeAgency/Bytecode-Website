@@ -1,0 +1,87 @@
+{
+  "name": "@bytecode/components",
+  "version": "0.1.0-alpha",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "https://git.bytecode.nl/bytecode/components.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:storybook": "build-storybook -c .storybook -o build",
+    "lint": "eslint .",
+    "start": "yarn run storybook",
+    "start:first-time": "yarn run storybook --no-manager-cache",
+    "storybook": "start-storybook -p 9001 -c .storybook --ci",
+    "test": "jest",
+    "prepublishOnly": "yarn run build"
+  },
+  "peerDependencies": {
+    "react": "17.x",
+    "react-dom": "17.x",
+    "styled-components": "5.x"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.15.7",
+    "@babel/core": "7.15.8",
+    "@babel/plugin-transform-runtime": "7.15.8",
+    "@babel/preset-env": "7.15.8",
+    "@babel/preset-react": "7.14.5",
+    "@storybook/addon-docs": "6.3.12",
+    "@storybook/addon-links": "6.3.12",
+    "@storybook/addon-viewport": "6.3.12",
+    "@storybook/addons": "6.3.12",
+    "@storybook/preset-create-react-app": "3.2.0",
+    "@storybook/react": "6.3.12",
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "12.1.2",
+    "@types/styled-components": "5.1.15",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "8.2.2",
+    "babel-plugin-styled-components": "1.13.3",
+    "cross-env": "7.0.3",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-config-react": "1.1.7",
+    "eslint-config-standard": "16.0.3",
+    "eslint-config-standard-jsx": "10.0.0",
+    "eslint-config-standard-react": "11.0.1",
+    "eslint-import-resolver-node": "0.3.6",
+    "eslint-plugin-header": "3.1.1",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-jest": "24.7.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-promise": "5.1.0",
+    "eslint-plugin-react": "7.26.1",
+    "eslint-plugin-security": "1.4.0",
+    "eslint-plugin-standard": "4.1.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "27.3.1",
+    "jest-environment-jsdom": "27.3.1",
+    "lint-staged": "11.2.3",
+    "prettier": "2.4.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "5.3.0",
+    "react-scripts": "4.0.3",
+    "react-select-event": "5.3.0",
+    "rimraf": "3.0.2",
+    "storybook-addon-styled-component-theme": "2.0.0",
+    "styled-components": "5.3.3",
+    "typescript": "4.4.4",
+    "yup": "0.32.11"
+  },
+  "dependencies": {
+    "styled-normalize": "8.0.7"
+  }
+}
