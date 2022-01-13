@@ -12,11 +12,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --fix",
-    "postinstall": "rm -rf ./node_modules/@bytecode/components/node_modules/react"
+    "lint": "eslint . --fix"
   },
   "dependencies": {
-    "@bytecode/components": "file:./../components/",
+    "@bytecode/components": "0.1.0-alpha",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",

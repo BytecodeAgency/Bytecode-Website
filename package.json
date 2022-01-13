@@ -1,4 +1,5 @@
 {
+    "name": "@bytecode/monorepo",
     "private": true,
-    "workspaces": ["@bytecode/website", "@bytecode/components"]
+    "workspaces": ["website", "components"]
 }
