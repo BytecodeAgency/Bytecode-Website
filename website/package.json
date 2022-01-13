@@ -1,5 +1,5 @@
 {
-  "name": "bytecode-website",
+  "name": "@bytecode/website",
   "private": false,
   "description": "The Bytecode Digital Agency website, released as free software",
   "version": "v3.0.0-alpha",
