@@ -1,9 +1,8 @@
 import React from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { useState } from "react"
 import { MenuInterface } from "./Menu.types"
-import * as cross from "../../assets/cross.png"
+import { CrossSVG } from "src/assets/CrossSVG"
 
 export const MobileMenu: React.FC<MenuInterface> = ({navLinks, children}) => {
     const [isOpen] = useState(true);
@@ -16,12 +15,12 @@ export const MobileMenu: React.FC<MenuInterface> = ({navLinks, children}) => {
                         {children}
                     </div>
                     <div>
-                        <Image src={cross} />
+                        <CrossSVG />
                     </div>
                 </div>
                 <ul>
                     {navLinks.map((item) => (
-                        <li>
+                        <li key={item.name}>
                             <Link key={item.name} href={item.href}>{item.name}</Link>
                         </li>
                     ))}
