@@ -35,6 +35,16 @@ const MobileMenuContainer = styled.div<{ isOpen: boolean }>`
     }
 `
 
+const MenuList = styled.ul`
+    margin: auto;
+    width: 60%;
+`
+
+const ContactContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+`
+
 export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, children }) => {
     const [isOpen, setOpen] = useState(false);
 
@@ -71,21 +81,21 @@ export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, children }) => {
                             <CrossSVG />
                         </div>
                     </MobileMenuBarTopContainer>
-                    <ul>
+                    <MenuList>
                         {navLinks.map((item) => (
                             <li key={item.name}>
                                 <Link key={item.name} href={item.href}>{item.name}</Link>
                             </li>
                         ))}
-                    </ul>
-                    <div>
+                    </MenuList>
+                    <ContactContainer>
                         <div>
                             Send us an email
                         </div>
                         <div>
                             Plan a meeting
                         </div>
-                    </div>
+                    </ContactContainer>
                 </MobileMenuContainer>
         )
     }
