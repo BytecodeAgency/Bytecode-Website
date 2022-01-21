@@ -12,4 +12,9 @@ export default createGlobalStyle`
   a[disabled] {
     pointer-events: none;
   }
+
+  a {
+    text-decoration: none;
+    color: unset;
+  }
 `

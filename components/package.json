@@ -16,8 +16,8 @@
     "docs"
   ],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc -w",
+    "build": "webpack",
+    "dev": "webpack watch",
     "build:storybook": "build-storybook -c .storybook -o build",
     "lint": "eslint .",
     "start": "yarn run storybook",
@@ -27,6 +27,7 @@
     "prepublishOnly": "yarn run build"
   },
   "peerDependencies": {
+    "next": "11.1.2",
     "react": "17.x",
     "react-dom": "17.x",
     "styled-components": "5.x"
@@ -66,6 +67,7 @@
     "eslint-plugin-react": "7.26.1",
     "eslint-plugin-security": "1.4.0",
     "eslint-plugin-standard": "4.1.0",
+    "file-loader": "6.2.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.3.1",
     "jest-environment-jsdom": "27.3.1",
@@ -79,7 +81,10 @@
     "rimraf": "3.0.2",
     "storybook-addon-styled-component-theme": "2.0.0",
     "styled-components": "5.3.3",
+    "ts-loader": "9.2.6",
     "typescript": "4.4.4",
+    "webpack": "5.66.0",
+    "webpack-cli": "4.9.1",
     "yup": "0.32.11"
   },
   "dependencies": {
