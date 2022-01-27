@@ -8,16 +8,33 @@ const breakpoints = {
 }
 
 export const layout = {
-    margin: 16,
     gutter: 24,
-    spacing: [{
-        0: 20,
-        1: 40,
-        2: 60,
-        3: 100,
-        4: 160,
-        5: 260,
-    }]
+    columns: 12,
+    container: {
+        margin: {
+            sm: '12px',
+            md: '16px',
+            lg: '32px',
+            xl: '48px',
+            xxl: '64px'
+        },
+        sizes: { // Max Width
+            sm: '540px',
+            md: '720px',
+            lg: '960px',
+            xl: '1140px',
+            xxl: '1320px',
+            fluid: '100%'
+        },
+        spacing: {
+            sm: 20,
+            md: 40,
+            lg: 60,
+            xl: 100,
+            xxl: 160
+        }
+    },
+
 }
 
 export default breakpoints
