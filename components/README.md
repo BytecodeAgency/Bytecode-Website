@@ -6,6 +6,8 @@ The Bytecode component library architecture is inspired by [The Commonground Des
 
 run `yarn` in the root directory (one up from here).
 
+Note that this package assumes that Biotif and Gilroy fonts exist in the browser/website environment.
+
 ## Development
 
 run `yarn run dev` in the root directory to run the bytecode website project. It will automatically hot-reload code changes in /components and /website.

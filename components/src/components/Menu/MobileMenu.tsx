@@ -35,7 +35,6 @@ const ContactContainer = styled.div`
 export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, children }) => {
     const [isOpen, setOpen] = useState(false);
 
-
     const Opened = () => {
         return (
             <MobileMenuContainer >

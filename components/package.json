@@ -20,8 +20,8 @@
     "dev": "tsc -watch",
     "lint": "eslint .",
     "test": "jest",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 6006 -s ./src",
+    "build-storybook": "build-storybook -s ./src"
   },
   "peerDependencies": {
     "next": "11.1.2",

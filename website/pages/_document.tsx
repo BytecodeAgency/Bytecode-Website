@@ -1,7 +1,20 @@
 import React, { ReactElement } from "react";
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document';
-import  { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet } from 'styled-components';
 import { GoogleTagManagerHead, GoogleTagManagerBody } from "helpers/tagManager";
+
+const Fonts = () => (
+    <>
+        <link
+            href="/fonts/gilroy/Gilroy.css"
+            rel="stylesheet"
+        />
+        <link
+            href="/fonts/biotif/Biotif.css"
+            rel="stylesheet"
+        />
+    </>
+)
 
 export default class MyDocument extends Document {
 
@@ -35,8 +48,9 @@ export default class MyDocument extends Document {
             <Html>
                 <Head>
                     <GoogleTagManagerHead />
+                    <Fonts />
                 </Head>
-                <body> 
+                <body>
                     <GoogleTagManagerBody />
                     <Main />
                     <NextScript />

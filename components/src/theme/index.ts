@@ -1,8 +1,8 @@
 import breakpoints, { layout } from './defaults/breakpoints'
 import { typography } from './defaults/typography'
 
-const tokens = {
-    // Brand
+const colors = {
+  // Brand
   colorBrand1: '#DFE4E1',
   colorBrand2: '#295D59',
   colorBrand3: '#093632',
@@ -21,7 +21,7 @@ const tokens = {
 
 const theme = {
     name: 'light',
-    tokens,
+    colors,
     breakpoints,
     layout,
     typography,

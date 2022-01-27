@@ -1,8 +1,8 @@
 import React from 'react'
 import { MainLayoutInterface } from './Layout.types'
 import Head from 'next/head'
+import Image from 'next/image'
 import { GlobalStyles, Menu } from '@bytecode/components'
-import { images } from 'assets';
 
 const navLinks = [
     {
@@ -37,7 +37,7 @@ const MainLayout: React.FC<MainLayoutInterface> = ({ children, content }) => (
         <GlobalStyles/>
         <div>
             <Menu navLinks={navLinks}>
-                <images.Logo />
+                <img src="images/logo.png" />
             </Menu>
             {children}
         </div>
