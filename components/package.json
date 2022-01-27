@@ -16,8 +16,8 @@
     "docs"
   ],
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack watch",
+    "build": "tsc",
+    "dev": "tsc -watch",
     "build:storybook": "build-storybook -c .storybook -o build",
     "lint": "eslint .",
     "start": "yarn run storybook",
@@ -78,16 +78,13 @@
     "react-router-dom": "5.3.0",
     "react-scripts": "4.0.3",
     "react-select-event": "5.3.0",
-    "rimraf": "3.0.2",
-    "storybook-addon-styled-component-theme": "2.0.0",
     "styled-components": "5.3.3",
     "ts-loader": "9.2.6",
     "typescript": "4.4.4",
-    "webpack": "5.66.0",
-    "webpack-cli": "4.9.1",
     "yup": "0.32.11"
   },
   "dependencies": {
+    "hamburger-react": "2.4.1",
     "styled-normalize": "8.0.7"
   }
 }
