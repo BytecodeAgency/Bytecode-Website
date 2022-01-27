@@ -1,7 +1,6 @@
 import React from "react";
 import { MenuInterface } from "./Menu.types";
 import styled from "styled-components";
-import { Body } from "../Typography";
 import Spacer from "../Spacer";
 import theme from "../../theme";
 
@@ -24,11 +23,9 @@ export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks, Logo }) => (
         </div>
         <NavLinksContainer>
             {navLinks.map((item) => (
-                <Body key={item.name}>
-                    <item.Link />
-                </Body>
+                <item.Link />
             ))}
         </NavLinksContainer>
-        <Spacer />
+        <Spacer color="black" />
     </DesktopMenuContainer>
 )

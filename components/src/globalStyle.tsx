@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { normalize } from 'styled-normalize'
+import theme from './theme'
 
 export default createGlobalStyle`
   ${normalize}
@@ -25,5 +26,9 @@ export default createGlobalStyle`
       margin-inline-start: 0;
       margin-inline-end: 0;
       padding-inline-start: 0;    
+  }
+
+  body {
+    font-family: ${theme.typography.paragraph.font};
   }
 `

@@ -18,9 +18,6 @@ const Home: NextPage = () => {
 
 const HomeBody = () => (
   <>
-    <h1>
-      Hello
-    </h1>
       <Button>Hi</Button>
   </>
 )

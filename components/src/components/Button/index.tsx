@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Button = styled.button`
-    font-family: Gilroy;
+    font-family: Biotif;
     background: yellow;
 `;
 

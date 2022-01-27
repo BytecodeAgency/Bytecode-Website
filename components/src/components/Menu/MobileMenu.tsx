@@ -3,7 +3,7 @@ import { useState } from "react"
 import Hamburger from 'hamburger-react'
 import { MenuInterface } from "./Menu.types"
 import styled from "styled-components"
-import { Body } from "../Typography"
+import { Paragraph } from "../Typography"
 
 const MobileMenuBarTopContainer = styled.div`
     display: grid;
@@ -24,7 +24,6 @@ const MobileMenuContainer = styled.div`
 
 const MenuList = styled.ul`
     margin: auto;
-    width: 60%;
 `
 
 const ContactContainer = styled.div`
@@ -41,19 +40,13 @@ export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, Logo }) => {
                 <MenuList>
                     {navLinks.map((item) => (
                         <li key={item.name}>
-                            <Body>
-                                <item.Link />
-                            </Body>
+                            <item.Link />
                         </li>
                     ))}
                 </MenuList>
                 <ContactContainer>
-                    <Body>
-                        Send us an email
-                    </Body>
-                    <Body>
-                        Plan a meeting
-                    </Body>
+                    <Paragraph text="Send us an email" />
+                    <Paragraph text="Plan a meeting" />
                 </ContactContainer>
             </MobileMenuContainer>
         )

@@ -6,10 +6,6 @@ import { GoogleTagManagerHead, GoogleTagManagerBody } from "helpers/tagManager";
 const Fonts = () => (
     <>
         <link
-            href="/fonts/gilroy/Gilroy.css"
-            rel="stylesheet"
-        />
-        <link
             href="/fonts/biotif/Biotif.css"
             rel="stylesheet"
         />

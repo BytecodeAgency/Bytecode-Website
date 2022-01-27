@@ -6,7 +6,7 @@ The Bytecode component library architecture is inspired by [The Commonground Des
 
 run `yarn` in the root directory (one up from here).
 
-Note that this package assumes that Biotif and Gilroy fonts exist in the browser/website environment.
+Note that this package assumes fonts exist in the browser/website environment and thus are not exported outside of this package.
 
 ## Development
 
