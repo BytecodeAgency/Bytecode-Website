@@ -1,5 +1,4 @@
 import React from "react"
-import Link from "next/link"
 import { useState } from "react"
 import Hamburger from 'hamburger-react'
 import { MenuInterface } from "./Menu.types"
@@ -33,7 +32,7 @@ const ContactContainer = styled.div`
     grid-template-columns: 1fr 1fr;
 `
 
-export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, children }) => {
+export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, Logo }) => {
     const [isOpen, setOpen] = useState(false);
 
     const Opened = () => {
@@ -43,7 +42,7 @@ export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, children }) => {
                     {navLinks.map((item) => (
                         <li key={item.name}>
                             <Body>
-                                <Link key={item.name} href={item.href}>{item.name}</Link>
+                                <item.Link />
                             </Body>
                         </li>
                     ))}
@@ -64,7 +63,7 @@ export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, children }) => {
         <>
             <MobileMenuBarTopContainer>
                 <div>
-                    {children}
+                    <Logo />
                 </div>
                 <Hamburger toggled={isOpen} toggle={setOpen} />
             </MobileMenuBarTopContainer>

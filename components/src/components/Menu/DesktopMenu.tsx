@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { MenuInterface } from "./Menu.types";
 import styled from "styled-components";
 import { Body } from "../Typography";
@@ -18,15 +17,15 @@ const NavLinksContainer = styled.div`
     justify-content: end;
 `
 
-export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks, children }) => (
+export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks, Logo }) => (
     <DesktopMenuContainer>
         <div>
-            {children}
+            <Logo />
         </div>
         <NavLinksContainer>
             {navLinks.map((item) => (
                 <Body key={item.name}>
-                    <Link href={item.href}>{item.name}</Link>
+                    <item.Link />
                 </Body>
             ))}
         </NavLinksContainer>

@@ -1,10 +1,12 @@
 import React from 'react'
 import { MainLayoutInterface } from './Layout.types'
 import Head from 'next/head'
+import Image from 'next/image'
 import { GlobalStyles, Menu, responsiveMarginsCSS } from '@bytecode/components'
 import styled from 'styled-components'
+import Link from 'next/link'
 
-const navLinks = [
+const navLinksHref = [
     {
         name: "Home",
         href: "/"
@@ -15,7 +17,7 @@ const navLinks = [
     },
     {
         name: "Team",
-        href: "/"
+        href: "/who-we-are"
     },
     {
         name: "Our cases",
@@ -27,9 +29,18 @@ const navLinks = [
     },
 ];
 
+const navLinks = navLinksHref.map((item) => ({
+    name: item.name,
+    Link: () => (<Link href={item.href}>{item.name}</Link>)
+}))
+
 const BodyContainer = styled.main`
     ${responsiveMarginsCSS}
 `
+
+const Logo = () => (
+    <Image src="/images/logo.png" width={166} height={33} />
+)
 
 const MainLayout: React.FC<MainLayoutInterface> = ({ children, content }) => {
     return (
@@ -41,9 +52,7 @@ const MainLayout: React.FC<MainLayoutInterface> = ({ children, content }) => {
             </Head>
             <GlobalStyles />
             <BodyContainer>
-                <Menu navLinks={navLinks}>
-                    <img src="images/logo.png" />
-                </Menu>
+                <Menu Logo={Logo} navLinks={navLinks} />
                 {children}
             </BodyContainer>
         </>
