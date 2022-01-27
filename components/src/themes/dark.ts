@@ -2,10 +2,10 @@ import breakpoints from './defaults/breakpoints'
 
 const tokens = {
     // Brand
-    colorBrand1: '#FFBC2C',
-    colorBrand2: '#33373E',
-    colorBrand3: '#474E57',
-    colorBrand4: '#36C6FF',
+    colorBrand1: '#DFE4E1',
+    colorBrand2: '#295D59',
+    colorBrand3: '#093632',
+    colorBrand4: '#B791C4',
   
     // Sub-colors
     colorInfo: '#36C6FF',

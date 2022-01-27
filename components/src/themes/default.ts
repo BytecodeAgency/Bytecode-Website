@@ -1,11 +1,12 @@
 import breakpoints from './defaults/breakpoints'
+import { typography } from './defaults/typography'
 
 const tokens = {
     // Brand
-  colorBrand1: '#FFBC2C',
-  colorBrand2: '#E0E4EA',
-  colorBrand3: '#262D30',
-  colorBrand4: '#474E57',
+  colorBrand1: '#DFE4E1',
+  colorBrand2: '#295D59',
+  colorBrand3: '#093632',
+  colorBrand4: '#B791C4',
 
   // Sub-colors
   colorInfo: '#0B71A1',
@@ -22,6 +23,7 @@ const theme = {
     name: 'light',
     tokens,
     breakpoints,
+    typography,
 }
   
 export default theme
