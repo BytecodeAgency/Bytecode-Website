@@ -19,7 +19,7 @@ const SpacerStyling = styled.div<{ color: SpacerColor }>`
 
 type SpacerColor = "black" | "white";
 
-const Spacer: React.FC<{ color: SpacerColor }> = ({ color }) => {
+const Spacer: React.FC<{ color: SpacerColor}> = ({ color }) => {
     return <SpacerStyling color={color} />
 }
 

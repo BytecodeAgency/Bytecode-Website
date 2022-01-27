@@ -1,5 +1,6 @@
 export interface MainLayoutInterface {
-    content: Content
+    content: Content;
+    altBackgroundHeader?: boolean;
 }
 
 export interface Content {

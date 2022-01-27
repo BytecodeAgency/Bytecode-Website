@@ -3,9 +3,11 @@ import { useState } from "react"
 import Hamburger from 'hamburger-react'
 import { MenuInterface } from "./Menu.types"
 import styled from "styled-components"
-import { Paragraph } from "../Typography"
+import { Paragraph } from "../Typography/Typography"
+import { MenuContainer } from "../Container/Container"
+import theme from "../../theme"
 
-const MobileMenuBarTopContainer = styled.div`
+const MobileMenuBarTopContainer = styled(MenuContainer)`
     display: grid;
     grid-template-columns: 1fr 60px;
     padding-top: 25px;
@@ -54,7 +56,7 @@ export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, Logo }) => {
 
     return (
         <>
-            <MobileMenuBarTopContainer>
+            <MobileMenuBarTopContainer background={isOpen ? theme.colors.white : undefined}>
                 <div>
                     <Logo />
                 </div>

@@ -1,10 +1,11 @@
 import React from "react";
 import { MenuInterface } from "./Menu.types";
 import styled from "styled-components";
-import Spacer from "../Spacer";
+import Spacer from "../Spacer/Spacer";
 import theme from "../../theme";
+import { MenuContainer } from "../Container/Container";
 
-const DesktopMenuContainer = styled.div`
+const DesktopMenuContainer = styled(MenuContainer)`
     display: grid;
     grid-template-columns: 200px 1fr;
     padding-top: 44px;
@@ -23,7 +24,7 @@ export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks, Logo }) => (
         </div>
         <NavLinksContainer>
             {navLinks.map((item) => (
-                <item.Link />
+                <item.Link key={item.name} />
             ))}
         </NavLinksContainer>
         <Spacer color="black" />

@@ -1,14 +1,5 @@
-type BreakpointName = "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
-type BreakpointKeyValue = { [K in BreakpointName]: number; } ;
-
-export const breakpoints : BreakpointKeyValue = {
-    xs: 400, // mobile
-    sm: 576, // mobile landscape
-    md: 768, // tablets
-    lg: 992, // Wide
-    xl: 1200, // Extra large
-    xxl: 1400, // Extra extra large
-}
+export type BreakpointName = "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+export type BreakpointKeyValue = { [K in BreakpointName]: number; } ;
 
 const layout = {
     gutter: 24,
@@ -41,37 +32,13 @@ const layout = {
     },
 }
 
-const responsiveValuesCSS = (
-    cssProp = "margin", // the CSS property to apply to the breakpoints
-    cssPropUnits = "px", // the units of the CSS property (can set equal to "" and apply units to values directly)
-    values: {[K in number]: number}[], // array of objects, e.g. [{ 800: 60 }, ...] <-- 800 (key) = screen breakpoint, 60 (value) = CSS prop breakpoint
-    mediaQueryType = "min-width" // media query breakpoint type, i.e.: max-width, min-width, max-height, min-height
-) => {
-    const breakpointProps = values.reduce((mediaQueries, value) => {
-        const [screenBreakpoint, cssPropBreakpoint] = [
-            Object.keys(value)[0],
-            Object.values(value)[0],
-        ];
-        return (mediaQueries += `
-      @media screen and (${mediaQueryType}: ${screenBreakpoint}px) {
-        ${cssProp}: ${cssPropBreakpoint}${cssPropUnits};
-      }
-      `);
-    }, "");
-
-    return breakpointProps;
-};
-
-const breakpointNameToPx = (input: BreakpointKeyValue): { [K in number]: number }[] => {
-    return Object.entries(input).map(([inputKey, inputValue]) => {
-        const newKey = breakpoints[inputKey];
-        return {[newKey]: inputValue};
-    });
+export const breakpoints : BreakpointKeyValue = {
+    xs: 400, // mobile
+    sm: 576, // mobile landscape
+    md: 768, // tablets
+    lg: 992, // Wide
+    xl: 1200, // Extra large
+    xxl: 1400, // Extra extra large
 }
-
-const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx(layout.container.margin));
-const marginRight = responsiveValuesCSS("margin-right", "px", breakpointNameToPx(layout.container.margin));
-
-export const responsiveMarginsCSS = marginLeft + marginRight;
 
 export default layout;

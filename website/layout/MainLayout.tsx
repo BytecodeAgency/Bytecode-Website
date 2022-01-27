@@ -2,8 +2,7 @@ import React from 'react'
 import { MainLayoutInterface } from './Layout.types'
 import Head from 'next/head'
 import Image from 'next/image'
-import { GlobalStyles, Menu, responsiveMarginsCSS } from '@bytecode/components'
-import styled from 'styled-components'
+import { GlobalStyles, Menu } from '@bytecode/components'
 import Link from 'next/link'
 
 const navLinksHref = [
@@ -34,15 +33,11 @@ const navLinks = navLinksHref.map((item) => ({
     Link: () => (<Link href={item.href}>{item.name}</Link>)
 }))
 
-const BodyContainer = styled.main`
-    ${responsiveMarginsCSS}
-`
-
 const Logo = () => (
     <Image src="/images/logo.png" width={166} height={33} />
 )
 
-const MainLayout: React.FC<MainLayoutInterface> = ({ children, content }) => {
+const MainLayout: React.FC<MainLayoutInterface> = ({ children, content, altBackgroundHeader }) => {
     return (
         <>
             <Head>
@@ -51,10 +46,10 @@ const MainLayout: React.FC<MainLayoutInterface> = ({ children, content }) => {
                 <meta name="description" content={content.metaDescription} />
             </Head>
             <GlobalStyles />
-            <BodyContainer>
-                <Menu Logo={Logo} navLinks={navLinks} />
+            <Menu Logo={Logo} navLinks={navLinks} />
+            <main>
                 {children}
-            </BodyContainer>
+            </main>
         </>
     )
 }
