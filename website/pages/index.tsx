@@ -1,25 +1,25 @@
-import React from 'react'
-import type { NextPage } from 'next'
-import { Button } from '@bytecode/components'
-import MainLayout from 'layout/MainLayout'
+import React from "react";
+import type { NextPage } from "next";
+import { Button } from "@bytecode/components";
+import MainLayout from "layout/MainLayout";
 
 const content = {
-  title: "Bytecode",
-  metaDescription: "Bytecode is a technical partner and CTO for technology based start-ups."
-}
+	title: "Bytecode",
+	metaDescription: "Bytecode is a technical partner and CTO for technology based start-ups."
+};
 
 const Home: NextPage = () => {
-  return (
-    <MainLayout content={content}>
-      <HomeBody />
-    </MainLayout>
-  )
-}
+	return (
+		<MainLayout content={content}>
+			<HomeBody />
+		</MainLayout>
+	);
+};
 
 const HomeBody = () => (
-  <>
-      <Button>Hi</Button>
-  </>
-)
+	<>
+		<Button>Hi</Button>
+	</>
+);
 
-export default Home
+export default Home;

@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
-import { normalize } from 'styled-normalize'
-import theme from './theme'
+import { createGlobalStyle } from "styled-components";
+import { normalize } from "styled-normalize";
+import theme from "./theme";
 
 export default createGlobalStyle`
   ${normalize}
@@ -30,5 +30,6 @@ export default createGlobalStyle`
 
   body {
     font-family: ${theme.typography.paragraph.font};
+    font-size: ${theme.typography.baseSize}px;
   }
-`
+`;

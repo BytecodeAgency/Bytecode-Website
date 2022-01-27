@@ -6,4 +6,4 @@ declare type StaticImageData = {
     placeholder?: string;
 };
 
-declare module '*.ttf';
+declare module "*.ttf";

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const withTM = require('next-transpile-modules')(['../components']);
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const withTM = require("next-transpile-modules")(["../components"]);
 module.exports = withTM({
-  reactStrictMode: true,
+	reactStrictMode: true,
 });

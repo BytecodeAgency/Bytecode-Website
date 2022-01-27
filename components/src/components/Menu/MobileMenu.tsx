@@ -1,11 +1,11 @@
-import React from "react"
-import { useState } from "react"
-import Hamburger from 'hamburger-react'
-import { MenuInterface } from "./Menu.types"
-import styled from "styled-components"
-import { Paragraph } from "../Typography/Typography"
-import { MenuContainer } from "../Container/Container"
-import theme from "../../theme"
+import React from "react";
+import { useState } from "react";
+import Hamburger from "hamburger-react";
+import { MenuInterface } from "./Menu.types";
+import styled from "styled-components";
+import { MenuContainer } from "../Container/Container";
+import theme from "../../theme";
+import ContactBox from "./ContactBox";
 
 const MobileMenuBarTopContainer = styled(MenuContainer)`
     display: grid;
@@ -13,56 +13,65 @@ const MobileMenuBarTopContainer = styled(MenuContainer)`
     padding-top: 25px;
     padding-right: 25px;
     height: 75px;
-`
+`;
 
 const MobileMenuContainer = styled.div`
-    height: calc(100vh - 150px);
+    display: grid;
+    grid-template-rows: 1fr 200px;
+    height: calc(100vh - 100px);
     width: 100vw;
     position: absolute;
     top: 75px;
     left: 0;
     background: white;
-`
+`;
 
 const MenuList = styled.ul`
-    margin: auto;
-`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: ${theme.layout.gutter}px;
+    & > li {
+        text-align: center;
+        font-size: ${theme.typography.menu.mobile}em;
+    }
+`;
 
 const ContactContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-`
+`;
 
 export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, Logo }) => {
-    const [isOpen, setOpen] = useState(false);
+	const [isOpen, setOpen] = useState(false);
 
-    const Opened = () => {
-        return (
-            <MobileMenuContainer >
-                <MenuList>
-                    {navLinks.map((item) => (
-                        <li key={item.name}>
-                            <item.Link />
-                        </li>
-                    ))}
-                </MenuList>
-                <ContactContainer>
-                    <Paragraph text="Send us an email" />
-                    <Paragraph text="Plan a meeting" />
-                </ContactContainer>
-            </MobileMenuContainer>
-        )
-    }
+	const Opened = () => {
+		return (
+			<MobileMenuContainer >
+				<MenuList>
+					{navLinks.map((item) => (
+						<li key={item.name} onClick={() => { setOpen(false); }}>
+							<item.Link />
+						</li>
+					))}
+				</MenuList>
+				<ContactContainer>
+					<ContactBox icon="email" text="Send us an email" />
+					<ContactBox icon="email" text="Plan a meeting" />
+				</ContactContainer>
+			</MobileMenuContainer>
+		);
+	};
 
-    return (
-        <>
-            <MobileMenuBarTopContainer background={isOpen ? theme.colors.white : undefined}>
-                <div>
-                    <Logo />
-                </div>
-                <Hamburger toggled={isOpen} toggle={setOpen} />
-            </MobileMenuBarTopContainer>
-            {isOpen && <Opened />}
-        </>
-    )
-}
+	return (
+		<>
+			<MobileMenuBarTopContainer background={isOpen ? theme.colors.white : undefined}>
+				<div>
+					<Logo />
+				</div>
+				<Hamburger toggled={isOpen} toggle={setOpen} />
+			</MobileMenuBarTopContainer>
+			{isOpen && <Opened />}
+		</>
+	);
+};

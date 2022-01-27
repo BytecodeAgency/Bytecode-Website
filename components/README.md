@@ -18,7 +18,5 @@ run `yarn run storybook` to develop component separatly within storybook.
 
 ## TODO
 
-1. Integrate fonts
-2. Integrate grid 
-3. Add sufficient testing
-4. Publish to NPM
+1. Integrate all fonts
+2. Integrate icons
