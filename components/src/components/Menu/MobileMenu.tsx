@@ -4,6 +4,7 @@ import { useState } from "react"
 import Hamburger from 'hamburger-react'
 import { MenuInterface } from "./Menu.types"
 import styled from "styled-components"
+import { Body } from "../Typography"
 
 const MobileMenuBarTopContainer = styled.div`
     display: grid;
@@ -41,17 +42,19 @@ export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, children }) => {
                 <MenuList>
                     {navLinks.map((item) => (
                         <li key={item.name}>
-                            <Link key={item.name} href={item.href}>{item.name}</Link>
+                            <Body>
+                                <Link key={item.name} href={item.href}>{item.name}</Link>
+                            </Body>
                         </li>
                     ))}
                 </MenuList>
                 <ContactContainer>
-                    <div>
+                    <Body>
                         Send us an email
-                    </div>
-                    <div>
+                    </Body>
+                    <Body>
                         Plan a meeting
-                    </div>
+                    </Body>
                 </ContactContainer>
             </MobileMenuContainer>
         )

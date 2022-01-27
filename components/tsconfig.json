@@ -1,11 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "src/*": [
-        "./src/*"
-      ],
-    },
+    "baseUrl": ".",
     "outDir": "./dist/",
     "sourceMap": true,
     "module": "es2015",

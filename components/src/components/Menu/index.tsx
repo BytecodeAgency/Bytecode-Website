@@ -1,6 +1,6 @@
 import React from 'react'
 import theme from '../../theme';
-import { useWindowSize } from '../../helpers/device'; //TODO: absolute imports for component lib
+import { useWindowSize } from '../../helpers/device';
 import { DesktopMenu } from './DesktopMenu';
 import { MenuInterface } from './Menu.types';
 import { MobileMenu } from './MobileMenu';
