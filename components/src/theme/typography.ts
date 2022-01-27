@@ -1,4 +1,4 @@
-export const typography = {
+const typography = {
     baseSize: 18,
     heading: {
         font: '"Avenir", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
@@ -32,3 +32,5 @@ export const typography = {
         }   
     }
 }
+
+export default typography

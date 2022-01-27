@@ -1,5 +1,7 @@
-import breakpoints, { layout } from './defaults/breakpoints'
-import { typography } from './defaults/typography'
+import { breakpoints } from './layout'
+import layout from './layout'
+export { responsiveMarginsCSS } from './layout'
+import typography from './typography'
 
 const colors = {
   // Brand
@@ -20,11 +22,11 @@ const colors = {
 }
 
 const theme = {
-    name: 'light',
-    colors,
-    breakpoints,
-    layout,
-    typography,
+  name: 'light',
+  colors,
+  breakpoints,
+  layout,
+  typography,
 }
-  
+
 export default theme

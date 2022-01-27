@@ -3,18 +3,18 @@ import Link from "next/link";
 import { MenuInterface } from "./Menu.types";
 import styled from "styled-components";
 import { Body } from "../Typography";
+import Spacer from "../Spacer";
+import theme from "../../theme";
 
 const DesktopMenuContainer = styled.div`
     display: grid;
     grid-template-columns: 200px 1fr;
-    padding-top: 20px;
-    padding-left: 40px;
+    padding-top: 44px;
 `;
 
-const NavLinksContainer = styled.div<{ count: number }>`
-    display: inline-grid;
-    grid-template-columns: repeat(${props => props.count}, 100px);
-    grid-gap: 10px;
+const NavLinksContainer = styled.div`
+    display: flex;
+    gap: ${theme.layout.gutter}px;
     justify-content: end;
 `
 
@@ -23,12 +23,13 @@ export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks, children }) => 
         <div>
             {children}
         </div>
-        <NavLinksContainer count={navLinks.length}>
+        <NavLinksContainer>
             {navLinks.map((item) => (
                 <Body key={item.name}>
                     <Link href={item.href}>{item.name}</Link>
                 </Body>
             ))}
         </NavLinksContainer>
+        <Spacer />
     </DesktopMenuContainer>
 )
