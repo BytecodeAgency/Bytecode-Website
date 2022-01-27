@@ -20,7 +20,7 @@ const colors = {
 	colorSuccessLight: "#DCE8D1",
 
 	// Basic colors
-	black: "#000000",
+	black: "#1B1B1",
 	white: "#FFFFFF",
 	lightGray: "#F6F9F6"
 };
