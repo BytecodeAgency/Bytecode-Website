@@ -4,7 +4,6 @@ The Bytecode component library architecture is inspired by [The Commonground Des
 
 ## TODO
 
-1. Add Typescript
-2. Write Readme
-3. Add sufficient testing
-4. Publish to NPM
+1. Write Readme
+2. Add sufficient testing
+3. Publish to NPM

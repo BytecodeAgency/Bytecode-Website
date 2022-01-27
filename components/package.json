@@ -16,8 +16,8 @@
     "docs"
   ],
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack watch",
+    "build": "tsc",
+    "dev": "tsc -watch",
     "build:storybook": "build-storybook -c .storybook -o build",
     "lint": "eslint .",
     "start": "yarn run storybook",
@@ -88,6 +88,7 @@
     "yup": "0.32.11"
   },
   "dependencies": {
+    "hamburger-react": "2.4.1",
     "styled-normalize": "8.0.7"
   }
 }
