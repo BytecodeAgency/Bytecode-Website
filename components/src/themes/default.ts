@@ -1,4 +1,4 @@
-import breakpoints from './defaults/breakpoints'
+import breakpoints, { layout } from './defaults/breakpoints'
 import { typography } from './defaults/typography'
 
 const tokens = {
@@ -23,6 +23,7 @@ const theme = {
     name: 'light',
     tokens,
     breakpoints,
+    layout,
     typography,
 }
   

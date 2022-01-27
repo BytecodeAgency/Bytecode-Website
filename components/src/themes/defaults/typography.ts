@@ -1,7 +1,7 @@
 export const typography = {
     baseSize: 18,
     heading: {
-        font: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+        font: '"Avenir", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
         sizes: {
             h1: 3.556,
             h2: 2.667,
@@ -11,7 +11,7 @@ export const typography = {
         }
     },
     paragraph: {
-        font: 'Biotif',
+        font: '"Biotif", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
         lineHeight: 1.556,
         sizes: {
             small: .778,
