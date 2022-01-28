@@ -9,6 +9,10 @@ const Fonts = () => (
 			href="/fonts/biotif/Biotif.css"
 			rel="stylesheet"
 		/>
+		<link
+			href="/fonts/averta/Averta.css"
+			rel="stylesheet"
+		/>
 	</>
 );
 

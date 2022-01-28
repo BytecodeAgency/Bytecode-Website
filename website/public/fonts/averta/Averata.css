@@ -1,0 +1,8 @@
+
+@font-face {
+	font-family: 'Averta';
+	src: local('Averta SemiBold'), local('Averta-SemiBold'),
+		url('Averta-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}

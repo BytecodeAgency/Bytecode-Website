@@ -1,9 +1,10 @@
 import React from "react";
+import theme from "../../theme";
 import styled from "styled-components";
 
 const StyledParagraph = styled.div`
-    font-family: Biotif;
-    font-size: 18px;
+    font-family: ${theme.typography.paragraph.font};
+    font-size: ${theme.typography.paragraph.sizes.normal};
 `;
 
 export const Paragraph: React.FC<{ text: string }> = ({ text }) => (
@@ -18,7 +19,8 @@ export const Heading: React.FC<{ type: HeadingType, text: string }> = ({ type, t
 };
 
 const H1 = styled.h1`
-
+	font-family: ${theme.typography.heading.font}
+	font-size: ${theme.typography.heading.sizes.h1}
 `;
 const H2 = styled.h2`
 
