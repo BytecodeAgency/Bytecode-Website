@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import { Button } from "@bytecode/components";
+import { Button, InitialContainer } from "@bytecode/components";
 import MainLayout from "layout/MainLayout";
 
 const content = {
@@ -17,9 +17,9 @@ const Home: NextPage = () => {
 };
 
 const HomeBody = () => (
-	<>
+	<InitialContainer>
 		<Button>Hi</Button>
-	</>
+	</InitialContainer>
 );
 
 export default Home;
