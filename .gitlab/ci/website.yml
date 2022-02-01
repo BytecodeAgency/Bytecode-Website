@@ -1,0 +1,27 @@
+image: node:12-alpine
+stages:
+  - lint
+  - build
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - node_modules/
+
+.node_base: &node_base
+  before_script:
+    - apk add make nasm autoconf automake libtool dpkg pkgconfig libpng libpng-dev g++ yarn
+    - yarn install --frozen-lockfile
+    - yarn run build:components
+    - cd website
+
+lint_website:
+  <<: *node_base
+  stage: lint
+  script:
+    - yarn run lint
+
+build_website:
+  <<: *node_base
+  stage: build
+  script:
+    - yarn run build

@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { MenuContainer } from "../Container/Container";
 import theme from "../../theme";
 import ContactBox from "./ContactBox";
+import Logo from "../Branding/Branding";
 
 const MobileMenuBarTopContainer = styled(MenuContainer)`
     display: grid;
@@ -42,7 +43,7 @@ const ContactContainer = styled.div`
     grid-template-columns: 1fr 1fr;
 `;
 
-export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, Logo }) => {
+export const MobileMenu: React.FC<MenuInterface> = ({ navLinks }) => {
 	const [isOpen, setOpen] = useState(false);
 
 	const Opened = () => {
@@ -67,7 +68,7 @@ export const MobileMenu: React.FC<MenuInterface> = ({ navLinks, Logo }) => {
 		<>
 			<MobileMenuBarTopContainer background={isOpen ? theme.colors.white : undefined}>
 				<div>
-					<Logo />
+					<Logo color="black" />
 				</div>
 				<Hamburger toggled={isOpen} toggle={setOpen} />
 			</MobileMenuBarTopContainer>
