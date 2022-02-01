@@ -1,0 +1,10 @@
+image: node:12-alpine
+stages:
+  - setup
+  - build
+  - lint
+  - test
+  - publish
+
+include:
+  - local: '.gitlab/ci/*.yml'

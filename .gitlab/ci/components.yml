@@ -1,0 +1,39 @@
+image: node:12-alpine
+stages:
+  - lint
+  - build
+  - publish
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - node_modules/
+
+.node_base: &node_base
+  before_script:
+    - apk add make nasm autoconf automake libtool dpkg pkgconfig libpng libpng-dev g++
+    - yarn install --frozen-lockfile
+    - cd components
+
+lint_components:
+  <<: *node_base
+  stage: lint
+  script:
+    - yarn run lint
+
+pages_components:
+  <<: *node_base
+  stage: publish
+  except:
+    - main
+  script:
+    - ls
+    - yarn run build:storybook:ci
+    - mv ./public/ ../public/
+  artifacts:
+    paths:
+      - public
+  environment:
+    name: $CI_COMMIT_REF_NAME
+    url: $CI_JOB_URL/artifacts/file/build/index.html
+    auto_stop_in: 1 week # this does nothing other than cleaning up the reference in Gitlab environments

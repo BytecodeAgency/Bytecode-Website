@@ -5,13 +5,13 @@ import { DesktopMenu } from "./DesktopMenu";
 import { MenuInterface } from "./Menu.types";
 import { MobileMenu } from "./MobileMenu";
 
-const Menu: React.FC<MenuInterface> = ({ navLinks, Logo }) => {
+const Menu: React.FC<MenuInterface> = ({ navLinks }) => {
 	const device = useWindowSize();
 	if (!device.width || device.width > theme.breakpoints.xl) {
-		return <DesktopMenu navLinks={navLinks} Logo={Logo}/>;
+		return <DesktopMenu navLinks={navLinks} />;
 	}
 	return (
-		<MobileMenu navLinks={navLinks} Logo={Logo}/>
+		<MobileMenu navLinks={navLinks} />
 	);
 };
 

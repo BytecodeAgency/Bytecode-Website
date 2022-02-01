@@ -1,6 +1,7 @@
 import { breakpoints } from "./layout";
 import layout from "./layout";
 import typography from "./typography";
+import { ButtonTypeColors } from "../types/Button.types";
 
 const colors = {
 	// Brand
@@ -9,25 +10,42 @@ const colors = {
 	colorBrand3: "#093632",
 	colorBrand4: "#B791C4",
 
-	// Sub-colors
-	colorInfo: "#0B71A1",
-	colorInfoLight: "#D3F3FD",
-	colorWarning: "#FFBC2C",
-	colorWarningLight: "#FCF8DA",
-	colorError: "#F02B41",
-	colorErrorLight: "#FFDDE2",
-	colorSuccess: "#39870C",
-	colorSuccessLight: "#DCE8D1",
-
 	// Basic colors
-	black: "#1B1B1",
+	black: "#1B1B1B",
 	white: "#FFFFFF",
-	lightGray: "#F6F9F6"
+	lightGray: "#F6F9F6",
+  
+	// Sub-colors
+	info: "#0B71A1",
+	infoLight: "#D3F3FD",
+	warning: "#FFBC2C",
+	warningLight: "#FCF8DA",
+	error: "#F02B41",
+	errorLight: "#FFDDE2",
+	success: "#39870C",
+	successLight: "#DCE8D1",
+};
+
+const buttons : ButtonTypeColors = {
+	primary: {
+		background: colors.colorBrand4,
+		color: colors.white,
+		hoverBackground: colors.black,
+		hoverColor: colors.white,
+	},
+	secondary: {
+		background: colors.colorBrand3,
+		color: colors.white,
+		hoverBackground: colors.black,
+		hoverColor: colors.white,
+	}
 };
 
 const theme = {
-	name: "light",
-	colors,
+	colors: {
+		...colors,
+		buttons,
+	},
 	breakpoints,
 	layout,
 	typography,

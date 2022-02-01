@@ -21,7 +21,8 @@
     "lint": "eslint .",
     "test": "jest",
     "storybook": "start-storybook -p 6006 -s ./src",
-    "build-storybook": "build-storybook -s ./src"
+    "build:storybook": "build-storybook -s ./src",
+    "build:storybook:ci": "yarn build:storybook -o public/storybook"
   },
   "peerDependencies": {
     "next": "11.1.2",

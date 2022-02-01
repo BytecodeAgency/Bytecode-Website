@@ -1,7 +1,6 @@
 import React from "react";
 
 export interface MenuInterface {
-    Logo: React.FC;
     navLinks: NavLink[]
 }
 

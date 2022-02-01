@@ -15,9 +15,11 @@ dist
 
 npm-debug.log*
 
+
 # ide
 .idea
 **/*.swp
 
 # build
 /lib
+/public

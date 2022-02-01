@@ -2,6 +2,7 @@ import React from "react";
 import { MenuInterface } from "./Menu.types";
 import styled from "styled-components";
 import Spacer from "../Spacer/Spacer";
+import Logo from "../Branding/Branding";
 import theme from "../../theme";
 import { MenuContainer } from "../Container/Container";
 
@@ -17,10 +18,10 @@ const NavLinksContainer = styled.div`
     justify-content: end;
 `;
 
-export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks, Logo }) => (
+export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks }) => (
 	<DesktopMenuContainer>
 		<div>
-			<Logo />
+			<Logo color="black" />
 		</div>
 		<NavLinksContainer>
 			{navLinks.map((item) => (
