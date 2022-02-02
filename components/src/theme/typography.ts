@@ -3,11 +3,12 @@ const typography = {
 	heading: {
 		font: "\"Avenir\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
 		sizes: {
-			h1: 3.556,
-			h2: 2.667,
+			h1: "3.556em",
+			h2: "2.667em",
 			h3: 1.778,
 			h4: 1.333,
 			h5: 1,
+			subtitle: "1em"
 		}
 	},
 	paragraph: {
