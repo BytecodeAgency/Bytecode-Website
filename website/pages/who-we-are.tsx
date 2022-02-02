@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import {Heading, Paragraph, InitialContainer, theme, Container, Spacer, Eye, Book, Arrows, PeopleArrows, IconTextBlock} from "@bytecode/components";
+import {Heading, Paragraph, InitialContainer, theme, Container, Spacer, Eye, Book, Arrows, PeopleArrows, IconTextBlock, Subtitle} from "@bytecode/components";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
 const content = {
@@ -40,7 +40,7 @@ const Header = () => (
 	<InitialContainer background={theme.colors.colorBrand2}>
 		<HeaderContainer>
 			<StyledTitleTextBlock>
-				<Heading type="subtitle" text="Who are we?"/>
+				<Subtitle text="Who are we?"/>
 				<Heading type="h1" text="Meet the people in the team."/>
 				<Paragraph text="Learn what defines us as a team, as a company and who we personally are"/>
 			</StyledTitleTextBlock>
@@ -96,7 +96,7 @@ const WhatWeBring = () => (
 					With our guidance, you can avoid or overcome common pitfalls
 					that we have seen many founders get trapped in.
 					We love to share our knowledge through strategic sessions and online webinars."
-					/>
+				/>
 				<IconTextBlock
 					icon={PeopleArrows}
 					title="Personal"
@@ -105,7 +105,7 @@ const WhatWeBring = () => (
 					We tailor the experience and knowledge we have to your idea and product. 
 					In addition, we work closely together with you. 
 					Our team will complement yours, and take the role of technical lead."
-					/>
+				/>
 				<IconTextBlock
 					icon={Arrows}
 					title="Versatile"
@@ -113,11 +113,11 @@ const WhatWeBring = () => (
 					we support you throughout the whole process: strategizing, defining,
 					designing and only then developing.
 					We are flexible and adjust our work to fit the stage your startup is in."
-					/>
+				/>
 			</IconBlocksContainer>
 		</MainContainer1>
 	</Container>
-)
+);
 
 const MainContainer2 = styled.div`
 	display: grid;
@@ -126,11 +126,14 @@ const MainContainer2 = styled.div`
 	padding-bottom: 80px;
 `;
 
-const LeftColumn = styled.div``
+const LeftColumn = styled.div``;
 const LeftColumnContentContainer = styled.div`
-	padding: 10px;
-`
-const RightColumn = styled.div``
+	padding: 30px 0 0 20px;
+`;
+const MeetingImageContainer = styled.div`
+	margin-top: 50px;
+`;
+const RightColumn = styled.div``;
 
 const ThingsWeValue = () => (
 	<Container background={theme.colors.colorBrand3}>
@@ -146,12 +149,15 @@ const ThingsWeValue = () => (
 						how we would work together during the project, we present to you our values."
 						color="white"
 					/>
-					<Image
-						src="/images/who-are-we-working2.png"
-						width={648}
-						height={432}
-						alt="Members of Bytecode in a meeting"
-					/>
+					<MeetingImageContainer>
+						<Image
+							src="/images/who-are-we-working2.png"
+							width={648}
+							height={432}
+							alt="Members of Bytecode in a meeting"
+						/>
+					</MeetingImageContainer>
+
 				</LeftColumnContentContainer>
 			</LeftColumn>
 			<RightColumn>
@@ -159,7 +165,7 @@ const ThingsWeValue = () => (
 			</RightColumn>
 		</MainContainer2>
 	</Container>
-)
+);
 
 const WhoWeAreBody = () => (
 	<div>

@@ -14,7 +14,7 @@ export const Paragraph: React.FC<{ text: string, color?: ThemeColors }> = ({ tex
 	<StyledParagraph color={color}>{text}</StyledParagraph>
 );
 
-export type HeadingType = "h1" | "h2" | "h3" | "h4" | "h5" | "subtitle";
+export type HeadingType = "h1" | "h2" | "h3" | "h4" | "h5";
 
 export const Heading: React.FC<{ type: HeadingType, text: string, color?: ThemeColors }> = ({ type, text, color }) => {
 	const Element = lookup[type];
@@ -51,7 +51,15 @@ const H5 = styled.h5<TextStylingProps>`
 
 `;
 
-const Subtitle = styled.p<TextStylingProps>`
+const lookup: { [k in HeadingType]: React.FC<TextStylingProps> } = {
+	h1: H1,
+	h2: H2,
+	h3: H3,
+	h4: H4,
+	h5: H5,
+};
+
+const StyledSubtitle = styled.p<TextStylingProps>`
 	font-family: ${theme.typography.paragraph};
 	font-size: ${theme.typography.heading.sizes.subtitle};
 	font-style: normal;
@@ -59,11 +67,6 @@ const Subtitle = styled.p<TextStylingProps>`
 	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black}
 `;
 
-const lookup: { [k in HeadingType]: React.FC<TextStylingProps> } = {
-	h1: H1,
-	h2: H2,
-	h3: H3,
-	h4: H4,
-	h5: H5,
-	subtitle: Subtitle
-};
+export const Subtitle: React.FC<{text: string, color?: ThemeColors}> = ({text, color}) => (
+	<StyledSubtitle color={color}>{text}</StyledSubtitle>
+);
