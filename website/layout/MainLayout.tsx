@@ -1,7 +1,6 @@
 import React from "react";
 import { MainLayoutInterface } from "./Layout.types";
 import Head from "next/head";
-import Image from "next/image";
 import { GlobalStyles, Menu } from "@bytecode/components";
 import Link from "next/link";
 
@@ -33,11 +32,7 @@ const navLinks = navLinksHref.map((item) => ({
 	Link: () => (<Link href={item.href}>{item.name}</Link>)
 }));
 
-const Logo = () => (
-	<Image src="/images/logo.png" width={166} height={33} />
-);
-
-const MainLayout: React.FC<MainLayoutInterface> = ({ children, content, altBackgroundHeader }) => {
+const MainLayout: React.FC<MainLayoutInterface> = ({ children, content }) => {
 	return (
 		<>
 			<Head>
@@ -46,7 +41,7 @@ const MainLayout: React.FC<MainLayoutInterface> = ({ children, content, altBackg
 				<meta name="description" content={content.metaDescription} />
 			</Head>
 			<GlobalStyles />
-			<Menu Logo={Logo} navLinks={navLinks} />
+			<Menu navLinks={navLinks} />
 			<main>
 				{children}
 			</main>

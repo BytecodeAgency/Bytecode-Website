@@ -32,6 +32,14 @@ const typography = {
 			large: 0,
 		}   
 	},
+	button: {
+		font: "\"Biotif\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+		weight: 400,
+		sizes: {
+			text: 1,
+			icon: 1.5,
+		}
+	},
 	menu: {
 		mobile: 2
 	}
