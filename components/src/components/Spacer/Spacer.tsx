@@ -13,7 +13,7 @@ const SpacerStyling = styled.div<{ color: SpacerColor }>`
         height: 20px;
         width: 1px;
         position: absolute;
-        border-left: 1px solid black;
+        border-left: ${props => `1px solid ${props.color};`}
     }
 `;
 
