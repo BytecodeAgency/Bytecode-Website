@@ -119,10 +119,53 @@ const WhatWeBring = () => (
 	</Container>
 )
 
+const MainContainer2 = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-top:140px;
+	padding-bottom: 80px;
+`;
+
+const LeftColumn = styled.div``
+const LeftColumnContentContainer = styled.div`
+	padding: 10px;
+`
+const RightColumn = styled.div``
+
+const ThingsWeValue = () => (
+	<Container background={theme.colors.colorBrand3}>
+		<MainContainer2>
+			<LeftColumn>
+				<Spacer color="white"/>
+				<LeftColumnContentContainer>
+					<Heading type="h2" text="Things we value the most." color="white"/>
+					<Paragraph
+						text="Sometimes a narrow collaboration can be like a marriage.
+						Before you ‘sign the contract’, you want to know who the other person is
+						and what life together will look like. To give you a feeling and better understanding of
+						how we would work together during the project, we present to you our values."
+						color="white"
+					/>
+					<Image
+						src="/images/who-are-we-working2.png"
+						width={648}
+						height={432}
+						alt="Members of Bytecode in a meeting"
+					/>
+				</LeftColumnContentContainer>
+			</LeftColumn>
+			<RightColumn>
+
+			</RightColumn>
+		</MainContainer2>
+	</Container>
+)
+
 const WhoWeAreBody = () => (
 	<div>
 		<Header />
 		<WhatWeBring />
+		<ThingsWeValue />
 	</div>
 );
 
