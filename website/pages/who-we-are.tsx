@@ -1,10 +1,9 @@
 import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import {Heading, Paragraph, InitialContainer, theme, Container} from "@bytecode/components";
+import {Heading, Paragraph, InitialContainer, theme, Container, Spacer, Eye, Book, Arrows, PeopleArrows, IconTextBlock} from "@bytecode/components";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
-import Spacer from "@bytecode/components/dist/components/Spacer/Spacer";
 const content = {
 	title: "Who is Bytecode?",
 	metaDescription: "Bytecode is a technical partner and CTO for technology based start-ups."
@@ -63,11 +62,14 @@ const MainContainer1 = styled.div`
 `;
 const TitleContainer = styled.div`
 	width: 416px;
-	margin-left: 50px;
+	margin: 40px;
 `;
 
-const IconTextBlock = styled.div`
-		
+const IconBlocksContainer = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	padding-left: 200px;
 `;
 
 const WhatWeBring = () => (
@@ -77,7 +79,42 @@ const WhatWeBring = () => (
 			<TitleContainer>
 				<Heading type="h2" text="What we bring to the table."/>
 			</TitleContainer>
-			<div>iconboxes</div>
+			<IconBlocksContainer>
+				<IconTextBlock
+					title="Transparent"
+					text="We tell you what you can expect from us, and what we want from you.
+					We will give our honest opinion on your start-up idea and give tips to improve.
+					Only full transparency can help you really grow.
+					According to us, transparency is one of the core components of a successful working relationship."
+				   icon={Eye}
+				/>
+				<IconTextBlock
+					icon={Book}
+					title="Knowledgeable"
+					text="We are working closely together with start-ups for some time.
+					That is why we have the experience and skills to help you.
+					With our guidance, you can avoid or overcome common pitfalls
+					that we have seen many founders get trapped in.
+					We love to share our knowledge through strategic sessions and online webinars."
+					/>
+				<IconTextBlock
+					icon={PeopleArrows}
+					title="Personal"
+					text="Every start-up and founder is different. 
+					This is why we always evaluate your specific situation. 
+					We tailor the experience and knowledge we have to your idea and product. 
+					In addition, we work closely together with you. 
+					Our team will complement yours, and take the role of technical lead."
+					/>
+				<IconTextBlock
+					icon={Arrows}
+					title="Versatile"
+					text="Apart from “just” developing your product idea into a working and amazing product,
+					we support you throughout the whole process: strategizing, defining,
+					designing and only then developing.
+					We are flexible and adjust our work to fit the stage your startup is in."
+					/>
+			</IconBlocksContainer>
 		</MainContainer1>
 	</Container>
 )

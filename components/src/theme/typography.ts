@@ -5,19 +5,23 @@ const typography = {
 		sizes: {
 			h1: "3.556em",
 			h2: "2.667em",
-			h3: 1.778,
-			h4: 1.333,
-			h5: 1,
+			h3: "1.778em",
+			h4: "1.333em",
+			h5: "1em",
 			subtitle: "1em"
+		},
+		margins: "0.1em 0",
+		lineHeights: {
+			h4: "1.7em"
 		}
 	},
 	paragraph: {
 		font: "\"Biotif\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
-		lineHeight: 1.556,
+		lineHeight: "1.556em",
 		sizes: {
-			small: .778,
-			normal: 1,
-			large: 1.333,
+			small: ".778em",
+			normal: "1em",
+			large: "1.333em",
 		},
 		weights: {
 			normal: 400,

@@ -5,6 +5,7 @@ import styled from "styled-components";
 const StyledParagraph = styled.div`
     font-family: ${theme.typography.paragraph.font};
     font-size: ${theme.typography.paragraph.sizes.normal};
+	line-height: ${theme.typography.paragraph.lineHeight};
 `;
 
 export const Paragraph: React.FC<{ text: string }> = ({ text }) => (
@@ -21,18 +22,21 @@ export const Heading: React.FC<{ type: HeadingType, text: string }> = ({ type, t
 const H1 = styled.h1`
 	font-family: ${theme.typography.heading.font};
 	font-size: ${theme.typography.heading.sizes.h1};
-	font-weight: normal;
+	margin: ${theme.typography.heading.margins};
 `;
 const H2 = styled.h2`
 	font-family: ${theme.typography.heading.font};
 	font-size: ${theme.typography.heading.sizes.h2};
-	font-weight: normal;
+	margin: ${theme.typography.heading.margins};
 `;
 const H3 = styled.h3`
 
 `;
 const H4 = styled.h4`
-
+	font-family: ${theme.typography.heading.font};
+	font-size: ${theme.typography.heading.sizes.h4};
+	margin: ${theme.typography.heading.margins};
+	line-height: ${theme.typography.heading.lineHeights.h4};
 `;
 const H5 = styled.h5`
 
