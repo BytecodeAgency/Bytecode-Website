@@ -69,6 +69,6 @@ const StyledSubtitle = styled.p<TextStylingProps>`
 	font-weight: ${props => props.fontWeight ? theme.typography.paragraph.weights[props.fontWeight] : theme.typography.paragraph.weights.normal};
 `;
 
-export const Subtitle: React.FC<{text: string, color?: ThemeColors, fontWeight: FontWeight}> = ({text, color, fontWeight}) => (
+export const Subtitle: React.FC<{text: string, color?: ThemeColors, fontWeight?: FontWeight}> = ({text, color, fontWeight}) => (
 	<StyledSubtitle color={color} fontWeight={fontWeight}>{text}</StyledSubtitle>
 );
