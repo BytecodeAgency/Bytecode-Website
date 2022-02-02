@@ -56,7 +56,7 @@ const Header = () => (
 	</InitialContainer>
 );
 
-const MainContainer1 = styled.div`
+const WhatWeBringBlock = styled.div`
 	padding-top: 200px;
 	padding-left: 200px;
 	padding-bottom: 80px;
@@ -75,7 +75,7 @@ const IconBlocksContainer = styled.div`
 
 const WhatWeBring = () => (
 	<Container>
-		<MainContainer1>
+		<WhatWeBringBlock>
 			<Spacer color="black" />
 			<TitleContainer>
 				<Heading type="h2" text="What we bring to the table."/>
@@ -116,11 +116,11 @@ const WhatWeBring = () => (
 					We are flexible and adjust our work to fit the stage your startup is in."
 				/>
 			</IconBlocksContainer>
-		</MainContainer1>
+		</WhatWeBringBlock>
 	</Container>
 );
 
-const MainContainer2 = styled.div`
+const ValuesBlock = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	padding-top:140px;
@@ -141,12 +141,12 @@ const RightColumn = styled.div`
 	justify-content: flex-end;
 `;
 const SummationContainer = styled.div`
-	margin-top: 35px;
+	margin-top: 24px;
 `;
 
-const ThingsWeValue = () => (
+const Values = () => (
 	<Container background={theme.colors.colorBrand3}>
-		<MainContainer2>
+		<ValuesBlock>
 			<LeftColumn>
 				<Spacer color="white"/>
 				<LeftColumnContentContainer>
@@ -200,7 +200,45 @@ const ThingsWeValue = () => (
 					/>
 				</SummationContainer>
 			</RightColumn>
-		</MainContainer2>
+		</ValuesBlock>
+	</Container>
+);
+
+const TeamMembersBlock = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-top: 140px;
+	padding-bottom: 80px;
+`;
+const TeamLeftColumn = styled.div`
+	padding-left: 60px;
+	padding-right: 20px;
+	padding-top: 100px;
+`;
+const TeamRightColumn = styled.div`
+
+`;
+
+const TeamMembers = () => (
+	<Container>
+		<TeamMembersBlock>
+			<TeamLeftColumn>
+				<Subtitle text="The people that make it happen"/>
+				<Heading type="h2" text="Team members" />
+				<Paragraph
+					text="If you want to realize your dream, you need to have a good team.
+					That is why our team that consists out of developers, designers, strategists,
+					and marketers love to join your start-up project."
+				/>
+				<Paragraph
+					text="Who are the people that are responsible for
+					building the product of your dreams that fits your customers?"
+				/>
+			</TeamLeftColumn>
+			<TeamRightColumn>
+				team member components here
+			</TeamRightColumn>
+		</TeamMembersBlock>
 	</Container>
 );
 
@@ -208,7 +246,8 @@ const WhoWeAreBody = () => (
 	<div>
 		<Header />
 		<WhatWeBring />
-		<ThingsWeValue />
+		<Values />
+		<TeamMembers />
 	</div>
 );
 

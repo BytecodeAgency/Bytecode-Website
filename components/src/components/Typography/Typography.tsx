@@ -7,7 +7,8 @@ const StyledParagraph = styled.div<TextStylingProps>`
     font-family: ${theme.typography.paragraph.font};
     font-size: ${theme.typography.paragraph.sizes.normal};
 	line-height: ${theme.typography.paragraph.lineHeight};
-	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black}
+	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black};
+	margin-bottom: 24px;
 `;
 
 export const Paragraph: React.FC<{ text: string, color?: ThemeColors }> = ({ text, color }) => (
