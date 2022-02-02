@@ -14,6 +14,7 @@ export const Paragraph: React.FC<{ text: string, color?: ThemeColors }> = ({ tex
 	<StyledParagraph color={color}>{text}</StyledParagraph>
 );
 
+export type FontWeight = "normal" | "bold";
 export type HeadingType = "h1" | "h2" | "h3" | "h4" | "h5";
 
 export const Heading: React.FC<{ type: HeadingType, text: string, color?: ThemeColors }> = ({ type, text, color }) => {
@@ -23,6 +24,7 @@ export const Heading: React.FC<{ type: HeadingType, text: string, color?: ThemeC
 
 interface TextStylingProps{
 	color?: ThemeColors;
+	fontWeight?: FontWeight;
 }
 
 const H1 = styled.h1<TextStylingProps>`
@@ -62,11 +64,11 @@ const lookup: { [k in HeadingType]: React.FC<TextStylingProps> } = {
 const StyledSubtitle = styled.p<TextStylingProps>`
 	font-family: ${theme.typography.paragraph};
 	font-size: ${theme.typography.heading.sizes.subtitle};
-	font-style: normal;
 	margin-bottom: 0;
-	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black}
+	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black};
+	font-weight: ${props => props.fontWeight ? theme.typography.paragraph.weights[props.fontWeight] : theme.typography.paragraph.weights.normal};
 `;
 
-export const Subtitle: React.FC<{text: string, color?: ThemeColors}> = ({text, color}) => (
-	<StyledSubtitle color={color}>{text}</StyledSubtitle>
+export const Subtitle: React.FC<{text: string, color?: ThemeColors, fontWeight: FontWeight}> = ({text, color, fontWeight}) => (
+	<StyledSubtitle color={color} fontWeight={fontWeight}>{text}</StyledSubtitle>
 );

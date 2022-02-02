@@ -59,6 +59,7 @@ const Header = () => (
 const MainContainer1 = styled.div`
 	padding-top: 200px;
 	padding-left: 200px;
+	padding-bottom: 80px;
 `;
 const TitleContainer = styled.div`
 	width: 416px;
@@ -86,7 +87,7 @@ const WhatWeBring = () => (
 					We will give our honest opinion on your start-up idea and give tips to improve.
 					Only full transparency can help you really grow.
 					According to us, transparency is one of the core components of a successful working relationship."
-				   icon={Eye}
+					icon={Eye}
 				/>
 				<IconTextBlock
 					icon={Book}
@@ -133,7 +134,15 @@ const LeftColumnContentContainer = styled.div`
 const MeetingImageContainer = styled.div`
 	margin-top: 50px;
 `;
-const RightColumn = styled.div``;
+const RightColumn = styled.div`
+	padding-left: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+`;
+const SummationContainer = styled.div`
+	margin-top: 35px;
+`;
 
 const ThingsWeValue = () => (
 	<Container background={theme.colors.colorBrand3}>
@@ -157,11 +166,39 @@ const ThingsWeValue = () => (
 							alt="Members of Bytecode in a meeting"
 						/>
 					</MeetingImageContainer>
-
 				</LeftColumnContentContainer>
 			</LeftColumn>
 			<RightColumn>
-
+				<SummationContainer>
+					<Subtitle text="1." color="white" fontWeight="bold"/>
+					<Heading type="h4" color="white" text="We're all in this together."/>
+					<Paragraph
+						text="You know the users. We know tech stuff.
+						Together we understand a lot of things.
+						We believe the best work happens when we don’t think of ourselves as a client
+						and agency relationship but as one team."
+						color="white"
+					/>
+				</SummationContainer>
+				<SummationContainer>
+					<Subtitle text="2." color="white" fontWeight="bold"/>
+					<Heading type="h4" color="white" text="Do and learn."/>
+					<Paragraph
+						text="We believe that skills come with experience.
+						We alle learn more by doing and trying then sitting around and speculation."
+						color="white"
+					/>
+				</SummationContainer>
+				<SummationContainer>
+					<Subtitle text="3." color="white" fontWeight="bold"/>
+					<Heading type="h4" color="white" text="High in energy!"/>
+					<Paragraph
+						text="We don’t mean drinking coffee or energy drinks,
+						but we love to work with founders that are passionate about their idea.
+						Enthusiasm is catchy, so if you are willing to change the world, then so are we."
+						color="white"
+					/>
+				</SummationContainer>
 			</RightColumn>
 		</MainContainer2>
 	</Container>
