@@ -10,3 +10,4 @@ export * from "./components/Typography/Typography";
 export * from "./icons/icons";
 export {default as Spacer} from "./components/Spacer/Spacer";
 export {default as IconTextBlock} from "./components/IconTextBlock/IconTextBlock";
+export * from "./helpers/responsiveCss";

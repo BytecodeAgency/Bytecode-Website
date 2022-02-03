@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import {Heading, Paragraph, InitialContainer, theme, Container, Spacer, Eye, Book, Arrows, PeopleArrows, IconTextBlock, Subtitle} from "@bytecode/components";
+import {Heading, Paragraph, InitialContainer, theme, Container, Spacer, Eye, Book, Arrows, PeopleArrows, IconTextBlock, Subtitle, breakpointNameToPx, responsiveValuesCSS} from "@bytecode/components";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
 const content = {
@@ -27,18 +27,26 @@ const StyledTitleTextBlock = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding-bottom: 150px;
-	padding-right: 116px;
-	padding-top: 150px;
 `;
 const ImageContainer = styled.div`
 	position: relative;
-	top: 220px;
+	top: 100px;
 `;
 
-const Header = () => (
-	<InitialContainer background={theme.colors.colorBrand2}>
-		<HeaderContainer>
+const headerGridTemplate = {
+	xs: "1fr",
+	sm: "1fr",
+	md: "1fr 1fr",
+	lg: "1fr 1fr",
+	xl: "1fr 1fr",
+	xxl: "test"
+};
+
+const Header = () => {
+	const gridTemplateRows = responsiveValuesCSS("grid-template-rows", "", breakpointNameToPx(headerGridTemplate));
+	console.log(gridTemplateRows);
+	return (
+		<InitialContainer background={theme.colors.colorBrand2}>
 			<StyledTitleTextBlock>
 				<Subtitle text="Who are we?"/>
 				<Heading type="h1" text="Meet the people in the team."/>
@@ -52,9 +60,10 @@ const Header = () => (
 					alt="Members of Bytecode working"
 				/>
 			</ImageContainer>
-		</HeaderContainer>
-	</InitialContainer>
-);
+
+		</InitialContainer>
+	);
+};
 
 const MainContainer1 = styled.div`
 	padding-top: 200px;
@@ -207,8 +216,6 @@ const ThingsWeValue = () => (
 const WhoWeAreBody = () => (
 	<div>
 		<Header />
-		<WhatWeBring />
-		<ThingsWeValue />
 	</div>
 );
 

@@ -31,7 +31,8 @@ const H1 = styled.h1<TextStylingProps>`
 	font-family: ${theme.typography.heading.font};
 	font-size: ${theme.typography.heading.sizes.h1};
 	margin: ${theme.typography.heading.margins};
-	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black}
+	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black};
+	@media
 `;
 const H2 = styled.h2<TextStylingProps>`
 	font-family: ${theme.typography.heading.font};
