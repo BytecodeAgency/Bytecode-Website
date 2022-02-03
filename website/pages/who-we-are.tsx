@@ -19,7 +19,7 @@ const WhoWeAre: NextPage = () => {
 
 const HeaderContainer = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	align-items: center;
 `;

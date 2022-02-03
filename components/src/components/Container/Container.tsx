@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import layout, { BreakpointKeyValue, breakpoints } from "../../theme/layout";
+import layout from "../../theme/layout";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 
 const marginLeft = responsiveValuesCSS("padding-left", "px", breakpointNameToPx(layout.container.margin));
@@ -8,7 +8,7 @@ const marginRight = responsiveValuesCSS("padding-right", "px", breakpointNameToP
 const responsivePaddingsCSS = marginLeft + marginRight;
 
 export const Container = styled.div<{ background?: string }>`
-    ${responsivePaddingsCSS}
+    ${responsivePaddingsCSS};
     background-color: ${props => props.background ? props.background : "unset"}
 `;
 

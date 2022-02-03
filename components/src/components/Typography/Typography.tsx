@@ -2,6 +2,7 @@ import React from "react";
 import theme from "../../theme";
 import styled from "styled-components";
 import {ThemeColors} from "../../theme/colors.types";
+import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 
 const StyledParagraph = styled.div<TextStylingProps>`
     font-family: ${theme.typography.paragraph.font};
@@ -27,12 +28,13 @@ interface TextStylingProps{
 	fontWeight?: FontWeight;
 }
 
+const fontSizes = responsiveValuesCSS("font-size", "em", breakpointNameToPx(theme.typography.heading.sizes.h1));
+
 const H1 = styled.h1<TextStylingProps>`
+	${fontSizes};
 	font-family: ${theme.typography.heading.font};
-	font-size: ${theme.typography.heading.sizes.h1};
 	margin: ${theme.typography.heading.margins};
 	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black};
-	@media
 `;
 const H2 = styled.h2<TextStylingProps>`
 	font-family: ${theme.typography.heading.font};
