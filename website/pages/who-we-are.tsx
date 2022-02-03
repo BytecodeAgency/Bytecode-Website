@@ -19,19 +19,27 @@ const WhoWeAre: NextPage = () => {
 
 const IntroContainer = styled.div`
 	display: grid;
-	grid-template-columns: 3fr 1fr 1fr;
+	grid-template-columns: 3fr 1fr 1fr 1fr;
 	grid-template-rows: auto;
 	align-items: center;
 	grid-template-areas:
-		${"\"subtitle . . \" \"heading . . \" \"paragraph paragraph .\" \"image image image\""}
+		${"\"subtitle subtitle . .\" \"heading heading . .\" \"paragraph paragraph paragraph.\" \"image image image image\""}
 `;
-
+const imageHeightValues = {
+	xs: 300,
+	sm: 400,
+	md: 500,
+	lg: 300,
+	xl: 300,
+	xxl: 300
+};
+const imageHeights = responsiveValuesCSS("height", "px", breakpointNameToPx(imageHeightValues));
 const ImageContainer = styled.div`
+	${imageHeights};
 	position: relative;
-	top: 50px;
+	top: 25px;
 	left: calc(-50vw + 50%);
 	grid-area: image;
-	height: 200px;
 	width: 100vw;
 `;
 const StyledIntroSubTitle = styled(Subtitle)`
@@ -53,18 +61,18 @@ const Intro = () => (
 			<ImageContainer>
 				<Image
 					src="/images/who-we-are-working.png"
-					width={708}
-					height={460}
+					layout="fill"
 					alt="Members of Bytecode working"
+					objectFit="contain"
 				/>
 			</ImageContainer>
 		</IntroContainer>
 	</InitialContainer>
 );
 const paddingTopValues = {
-	xs: 170,
-	sm: 300,
-	md: 200,
+	xs: 80,
+	sm: 80,
+	md: 80,
 	lg: 200,
 	xl: 200,
 	xxl: 200
@@ -144,8 +152,8 @@ const ValuesContainer = styled.div`
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-rows: auto;
-	padding-top: 70px;
-	padding-bottom: 70px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 `;
 const StyledValuesHeading = styled(Heading)`
 	margin-top: 50px;
