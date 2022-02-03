@@ -17,7 +17,7 @@ const WhoWeAre: NextPage = () => {
 	);
 };
 
-const HeaderContainer = styled.div`
+const IntroContainer = styled.div`
 	display: grid;
 	grid-template-columns: 3fr 1fr 1fr;
 	grid-template-rows: auto;
@@ -25,16 +25,14 @@ const HeaderContainer = styled.div`
 	grid-template-areas:
 		${"\"subtitle . . \" \"heading . . \" \"paragraph paragraph .\" \"image image image\""}
 `;
-const StyledTitleTextBlock = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-`;
+
 const ImageContainer = styled.div`
 	position: relative;
 	top: 50px;
+	left: calc(-50vw + 50%);
 	grid-area: image;
 	height: 200px;
+	width: 100vw;
 `;
 const StyledIntroSubTitle = styled(Subtitle)`
 	grid-area: subtitle;
@@ -46,19 +44,9 @@ const StyledIntroParagraph = styled(Paragraph)`
 	grid-area: paragraph;
 `;
 
-
-const headerGridTemplate = {
-	xs: "1fr",
-	sm: "1fr",
-	md: "1fr 1fr",
-	lg: "1fr 1fr",
-	xl: "1fr 1fr",
-	xxl: "test"
-};
-
-const Header = () => (
+const Intro = () => (
 	<InitialContainer background={theme.colors.colorBrand2}>
-		<HeaderContainer>
+		<IntroContainer>
 			<StyledIntroSubTitle text="Who are we?"/>
 			<StyledIntroHeading type="h1" text="Meet the people in the team."/>
 			<StyledIntroParagraph text="Learn what defines use as a team, as a company and who we personally are" />
@@ -70,34 +58,40 @@ const Header = () => (
 					alt="Members of Bytecode working"
 				/>
 			</ImageContainer>
-		</HeaderContainer>
+		</IntroContainer>
 	</InitialContainer>
 );
 
-const MainContainer1 = styled.div`
+const CompetencesContainer = styled.div`
 	padding-top: 200px;
-	padding-left: 200px;
 	padding-bottom: 80px;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		${"\". spacer spacer\" \"title title .\" \"icon-block icon-block icon-block\""};
 `;
-const TitleContainer = styled.div`
-	width: 416px;
-	margin: 40px;
+const StyledCompetencesSpacer = styled(Spacer)`
+	grid-area: spacer;
+`;
+const StyledCompentencesHeading = styled(Heading)`
+	grid-area: title;
+	margin-top: 50px;
+	margin-bottom: 20px;
 `;
 
 const IconBlocksContainer = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	padding-left: 200px;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	grid-area: icon-block;
 `;
 
-const WhatWeBring = () => (
+const Competences = () => (
 	<Container>
-		<MainContainer1>
-			<Spacer color="black" />
-			<TitleContainer>
-				<Heading type="h2" text="What we bring to the table."/>
-			</TitleContainer>
+		<CompetencesContainer>
+			<StyledCompetencesSpacer color="black"/>
+			<StyledCompentencesHeading type="h2" text="What we bring to the table." />
 			<IconBlocksContainer>
 				<IconTextBlock
 					title="Transparent"
@@ -134,7 +128,7 @@ const WhatWeBring = () => (
 					We are flexible and adjust our work to fit the stage your startup is in."
 				/>
 			</IconBlocksContainer>
-		</MainContainer1>
+		</CompetencesContainer>
 	</Container>
 );
 
@@ -224,7 +218,8 @@ const ThingsWeValue = () => (
 
 const WhoWeAreBody = () => (
 	<div>
-		<Header />
+		<Intro />
+		<Competences />
 	</div>
 );
 

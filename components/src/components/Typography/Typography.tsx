@@ -29,17 +29,17 @@ interface TextStylingProps{
 	className?: string;
 }
 
-const fontSizes = responsiveValuesCSS("font-size", "em", breakpointNameToPx(theme.typography.heading.sizes.h1));
-
+const h1FontSizes = responsiveValuesCSS("font-size", "em", breakpointNameToPx(theme.typography.heading.sizes.h1));
+const h2FontSizes = responsiveValuesCSS("font-size", "em", breakpointNameToPx(theme.typography.heading.sizes.h2));
 const H1 = styled.h1<TextStylingProps>`
-	${fontSizes};
+	${h1FontSizes};
 	font-family: ${theme.typography.heading.font};
 	margin: ${theme.typography.heading.margins};
 	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black};
 `;
 const H2 = styled.h2<TextStylingProps>`
+	${h2FontSizes};
 	font-family: ${theme.typography.heading.font};
-	font-size: ${theme.typography.heading.sizes.h2};
 	margin: ${theme.typography.heading.margins};
 	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black}
 `;

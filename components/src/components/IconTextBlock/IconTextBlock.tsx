@@ -4,15 +4,17 @@ import {Heading, Paragraph} from "../Typography/Typography";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  padding: 5px 15px;
+  padding-right: 15px;
+	padding-bottom: 10px;
 `;
 const StyledTitle = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
 `;
-const TextContainer = styled.div`
-  padding-left: 10px;
+
+const StyledHeading = styled(Heading)`
+	padding-left: 10px;
 `;
 
 const IconTextBlock: React.FC<{icon: IconComponent; title: string; text: string}> = ({icon, title, text}) => {
@@ -21,7 +23,7 @@ const IconTextBlock: React.FC<{icon: IconComponent; title: string; text: string}
 		<StyledContainer>
 			<StyledTitle>
 				<Icon color="black" size={20}/>
-				<TextContainer><Heading type="h4" text={title}/></TextContainer>
+				<StyledHeading type="h4" text={title}/>
 			</StyledTitle>
 			<Paragraph text={text}/>
 		</StyledContainer>
