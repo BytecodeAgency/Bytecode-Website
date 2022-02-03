@@ -132,87 +132,72 @@ const Competences = () => (
 	</Container>
 );
 
-const MainContainer2 = styled.div`
+const ValuesContainer = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	padding-top:140px;
-	padding-bottom: 80px;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	padding-top: 70px;
+	padding-bottom: 70px;
 `;
-
-const LeftColumn = styled.div``;
-const LeftColumnContentContainer = styled.div`
-	padding: 30px 0 0 20px;
-`;
-const MeetingImageContainer = styled.div`
+const StyledValuesHeading = styled(Heading)`
 	margin-top: 50px;
 `;
-const RightColumn = styled.div`
-	padding-left: 80px;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
+const StyledValuesParagraph = styled(Paragraph)`
+	margin-bottom: 50px
 `;
 const SummationContainer = styled.div`
 	margin-top: 35px;
 `;
 
-const ThingsWeValue = () => (
+const Values = () => (
 	<Container background={theme.colors.colorBrand3}>
-		<MainContainer2>
-			<LeftColumn>
-				<Spacer color="white"/>
-				<LeftColumnContentContainer>
-					<Heading type="h2" text="Things we value the most." color="white"/>
-					<Paragraph
-						text="Sometimes a narrow collaboration can be like a marriage.
+		<ValuesContainer>
+			<Spacer color="white"/>
+			<StyledValuesHeading type="h2" text="Things we value the most." color="white"/>
+			<StyledValuesParagraph
+				text="Sometimes a narrow collaboration can be like a marriage.
 						Before you ‘sign the contract’, you want to know who the other person is
 						and what life together will look like. To give you a feeling and better understanding of
 						how we would work together during the project, we present to you our values."
-						color="white"
-					/>
-					<MeetingImageContainer>
-						<Image
-							src="/images/who-are-we-working2.png"
-							width={648}
-							height={432}
-							alt="Members of Bytecode in a meeting"
-						/>
-					</MeetingImageContainer>
-				</LeftColumnContentContainer>
-			</LeftColumn>
-			<RightColumn>
-				<SummationContainer>
-					<Subtitle text="1." color="white" fontWeight="bold"/>
-					<Heading type="h4" color="white" text="We're all in this together."/>
-					<Paragraph
-						text="You know the users. We know tech stuff.
+				color="white"
+			/>
+			<Image
+				src="/images/who-are-we-working2.png"
+				width={648}
+				height={432}
+				alt="Members of Bytecode in a meeting"
+			/>
+			<SummationContainer>
+				<Subtitle text="1." color="white" fontWeight="bold"/>
+				<Heading type="h4" color="white" text="We're all in this together."/>
+				<Paragraph
+					text="You know the users. We know tech stuff.
 						Together we understand a lot of things.
 						We believe the best work happens when we don’t think of ourselves as a client
 						and agency relationship but as one team."
-						color="white"
-					/>
-				</SummationContainer>
-				<SummationContainer>
-					<Subtitle text="2." color="white" fontWeight="bold"/>
-					<Heading type="h4" color="white" text="Do and learn."/>
-					<Paragraph
-						text="We believe that skills come with experience.
+					color="white"
+				/>
+			</SummationContainer>
+			<SummationContainer>
+				<Subtitle text="2." color="white" fontWeight="bold"/>
+				<Heading type="h4" color="white" text="Do and learn."/>
+				<Paragraph
+					text="We believe that skills come with experience.
 						We alle learn more by doing and trying then sitting around and speculation."
-						color="white"
-					/>
-				</SummationContainer>
-				<SummationContainer>
-					<Subtitle text="3." color="white" fontWeight="bold"/>
-					<Heading type="h4" color="white" text="High in energy!"/>
-					<Paragraph
-						text="We don’t mean drinking coffee or energy drinks,
+					color="white"
+				/>
+			</SummationContainer>
+			<SummationContainer>
+				<Subtitle text="3." color="white" fontWeight="bold"/>
+				<Heading type="h4" color="white" text="High in energy!"/>
+				<Paragraph
+					text="We don’t mean drinking coffee or energy drinks,
 						but we love to work with founders that are passionate about their idea.
 						Enthusiasm is catchy, so if you are willing to change the world, then so are we."
-						color="white"
-					/>
-				</SummationContainer>
-			</RightColumn>
-		</MainContainer2>
+					color="white"
+				/>
+			</SummationContainer>
+		</ValuesContainer>
 	</Container>
 );
 
@@ -220,6 +205,7 @@ const WhoWeAreBody = () => (
 	<div>
 		<Intro />
 		<Competences />
+		<Values />
 	</div>
 );
 
