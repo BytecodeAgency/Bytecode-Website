@@ -11,21 +11,22 @@ const StyledParagraph = styled.div<TextStylingProps>`
 	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black}
 `;
 
-export const Paragraph: React.FC<{ text: string, color?: ThemeColors }> = ({ text, color }) => (
-	<StyledParagraph color={color}>{text}</StyledParagraph>
+export const Paragraph: React.FC<{ text: string, color?: ThemeColors, className?: string }> = ({ text, color, className }) => (
+	<StyledParagraph className={className} color={color}>{text}</StyledParagraph>
 );
 
 export type FontWeight = "normal" | "bold";
 export type HeadingType = "h1" | "h2" | "h3" | "h4" | "h5";
 
-export const Heading: React.FC<{ type: HeadingType, text: string, color?: ThemeColors }> = ({ type, text, color }) => {
+export const Heading: React.FC<{ type: HeadingType, text: string, color?: ThemeColors, className?: string }> = ({ type, text, color, className }) => {
 	const Element = lookup[type];
-	return <Element color={color}>{text}</Element>;
+	return <Element className={className} color={color}>{text}</Element>;
 };
 
 interface TextStylingProps{
 	color?: ThemeColors;
 	fontWeight?: FontWeight;
+	className?: string;
 }
 
 const fontSizes = responsiveValuesCSS("font-size", "em", breakpointNameToPx(theme.typography.heading.sizes.h1));
@@ -72,6 +73,6 @@ const StyledSubtitle = styled.p<TextStylingProps>`
 	font-weight: ${props => props.fontWeight ? theme.typography.paragraph.weights[props.fontWeight] : theme.typography.paragraph.weights.normal};
 `;
 
-export const Subtitle: React.FC<{text: string, color?: ThemeColors, fontWeight?: FontWeight}> = ({text, color, fontWeight}) => (
-	<StyledSubtitle color={color} fontWeight={fontWeight}>{text}</StyledSubtitle>
+export const Subtitle: React.FC<{text: string, color?: ThemeColors, fontWeight?: FontWeight, className?: string}> = ({text, color, fontWeight, className}) => (
+	<StyledSubtitle className={className} color={color} fontWeight={fontWeight}>{text}</StyledSubtitle>
 );

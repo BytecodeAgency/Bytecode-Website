@@ -19,9 +19,11 @@ const WhoWeAre: NextPage = () => {
 
 const HeaderContainer = styled.div`
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 3fr 1fr 1fr;
 	grid-template-rows: auto;
 	align-items: center;
+	grid-template-areas:
+		${"\"subtitle . . \" \"heading . . \" \"paragraph paragraph .\" \"image image image\""}
 `;
 const StyledTitleTextBlock = styled.div`
 	display: flex;
@@ -30,8 +32,20 @@ const StyledTitleTextBlock = styled.div`
 `;
 const ImageContainer = styled.div`
 	position: relative;
-	top: 100px;
+	top: 50px;
+	grid-area: image;
+	height: 200px;
 `;
+const StyledIntroSubTitle = styled(Subtitle)`
+	grid-area: subtitle;
+`;
+const StyledIntroHeading = styled(Heading)`
+	grid-area: heading;
+`;
+const StyledIntroParagraph = styled(Paragraph)`
+	grid-area: paragraph;
+`;
+
 
 const headerGridTemplate = {
 	xs: "1fr",
@@ -42,16 +56,12 @@ const headerGridTemplate = {
 	xxl: "test"
 };
 
-const Header = () => {
-	const gridTemplateRows = responsiveValuesCSS("grid-template-rows", "", breakpointNameToPx(headerGridTemplate));
-	console.log(gridTemplateRows);
-	return (
-		<InitialContainer background={theme.colors.colorBrand2}>
-			<StyledTitleTextBlock>
-				<Subtitle text="Who are we?"/>
-				<Heading type="h1" text="Meet the people in the team."/>
-				<Paragraph text="Learn what defines us as a team, as a company and who we personally are"/>
-			</StyledTitleTextBlock>
+const Header = () => (
+	<InitialContainer background={theme.colors.colorBrand2}>
+		<HeaderContainer>
+			<StyledIntroSubTitle text="Who are we?"/>
+			<StyledIntroHeading type="h1" text="Meet the people in the team."/>
+			<StyledIntroParagraph text="Learn what defines use as a team, as a company and who we personally are" />
 			<ImageContainer>
 				<Image
 					src="/images/who-we-are-working.png"
@@ -60,10 +70,9 @@ const Header = () => {
 					alt="Members of Bytecode working"
 				/>
 			</ImageContainer>
-
-		</InitialContainer>
-	);
-};
+		</HeaderContainer>
+	</InitialContainer>
+);
 
 const MainContainer1 = styled.div`
 	padding-top: 200px;
