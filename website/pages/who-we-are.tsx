@@ -152,7 +152,7 @@ const SummationContainer = styled.div`
 const Values = () => (
 	<Container background={theme.colors.colorBrand3}>
 		<ValuesContainer>
-			<Spacer color="white"/>
+			<Spacer color="white" bold/>
 			<StyledValuesHeading type="h2" text="Things we value the most." color="white"/>
 			<StyledValuesParagraph
 				text="Sometimes a narrow collaboration can be like a marriage.
