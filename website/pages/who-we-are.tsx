@@ -61,9 +61,17 @@ const Intro = () => (
 		</IntroContainer>
 	</InitialContainer>
 );
-
+const paddingTopValues = {
+	xs: 170,
+	sm: 300,
+	md: 200,
+	lg: 200,
+	xl: 200,
+	xxl: 200
+};
+const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx(paddingTopValues));
 const CompetencesContainer = styled.div`
-	padding-top: 200px;
+	${paddingTop};
 	padding-bottom: 80px;
 	display: grid;
 	grid-template-columns: 1fr 3fr 1fr;

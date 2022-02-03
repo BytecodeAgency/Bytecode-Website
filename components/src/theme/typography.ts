@@ -5,7 +5,7 @@ const typography = {
 		sizes: {
 			h1: {
 				xs: 2.5,
-				sm: 3.556,
+				sm: 2.5,
 				md: 3.556,
 				lg: 3.556,
 				xl: 3.556,
