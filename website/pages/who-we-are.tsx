@@ -25,7 +25,7 @@ const introContainerResponsiveCSS = () => {
 	const gridColumns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(gridColumnValues));
 	const gridRowValues: BreakpointKeyValue = {
 		xs: "auto",
-		xl: "100px 130px 200px"
+		lg: "100px 130px 200px"
 	};
 	const gridRows = responsiveValuesCSS("grid-template-rows", "", breakpointNameToPx(gridRowValues));
 	const gridAreaValues: BreakpointKeyValue = {
@@ -52,8 +52,7 @@ const workingImageContainerResponsiveCSS = () => {
 		xs: 300,
 		sm: 400,
 		md: 500,
-		lg: 300,
-		xl: 400,
+		lg: 400,
 	};
 	const imageHeights = responsiveValuesCSS("height", "px", breakpointNameToPx(imageHeightValues));
 	const imageWidthValues: BreakpointKeyValue = {
@@ -70,8 +69,7 @@ const workingImageContainerResponsiveCSS = () => {
 	const left = responsiveValuesCSS("left", "", breakpointNameToPx(leftValues));
 	const topValues = {
 		xs: 25,
-		lg: 150,
-		xl: 200,
+		lg: 200,
 	};
 	const top = responsiveValuesCSS("top", "px", breakpointNameToPx(topValues));
 	return imageHeights + imageWidths + left + top;
@@ -122,9 +120,7 @@ const Intro = () => (
 const competencesContainerResponsiveCSS = () => {
 	const paddingTopValues: BreakpointKeyValue = {
 		xs: 80,
-		lg: 175,
-		xl: 200,
-		xxl: 200
+		lg: 200,
 	};
 	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx(paddingTopValues));
 
