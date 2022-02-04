@@ -17,7 +17,7 @@ const WhoWeAre: NextPage = () => {
 	);
 };
 
-const responsiveCSSIntroContainer = () => {
+const introContainerResponsiveCSS = () => {
 	const gridColumnValues: BreakpointKeyValue = {
 		xs: "3fr 1fr 1fr 1fr;",
 		lg: "1fr 1fr"
@@ -25,7 +25,7 @@ const responsiveCSSIntroContainer = () => {
 	const gridColumns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(gridColumnValues));
 	const gridRowValues: BreakpointKeyValue = {
 		xs: "auto",
-		lg: ""
+		xl: "100px 130px 200px"
 	};
 	const gridRows = responsiveValuesCSS("grid-template-rows", "", breakpointNameToPx(gridRowValues));
 	const gridAreaValues: BreakpointKeyValue = {
@@ -43,16 +43,17 @@ const responsiveCSSIntroContainer = () => {
 };
 
 const IntroContainer = styled.div`
-	${responsiveCSSIntroContainer};
+	${introContainerResponsiveCSS};
 	display: grid;
 	align-items: center;
 	`;
-const responsiveCSSImageContainer = () => {
+const workingImageContainerResponsiveCSS = () => {
 	const imageHeightValues: BreakpointKeyValue = {
 		xs: 300,
 		sm: 400,
 		md: 500,
 		lg: 300,
+		xl: 400,
 	};
 	const imageHeights = responsiveValuesCSS("height", "px", breakpointNameToPx(imageHeightValues));
 	const imageWidthValues: BreakpointKeyValue = {
@@ -70,13 +71,14 @@ const responsiveCSSImageContainer = () => {
 	const topValues = {
 		xs: 25,
 		lg: 150,
+		xl: 200,
 	};
 	const top = responsiveValuesCSS("top", "px", breakpointNameToPx(topValues));
 	return imageHeights + imageWidths + left + top;
 };
 
-const ImageContainer = styled.div`
-	${responsiveCSSImageContainer};
+const WorkingImageContainer = styled.div`
+	${workingImageContainerResponsiveCSS};
 	position: relative;
 	grid-area: image;
 `;
@@ -86,7 +88,7 @@ const StyledIntroSubTitle = styled(Subtitle)`
 const StyledIntroHeading = styled(Heading)`
 	grid-area: heading;
 `;
-const responsiveCSSIntroParagraph = () => {
+const introParagraphResponsiveCSS = () => {
 	const marginValues: BreakpointKeyValue = {
 		xs: 0,
 		lg: 100
@@ -96,7 +98,7 @@ const responsiveCSSIntroParagraph = () => {
 };
 
 const StyledIntroParagraph = styled(Paragraph)`
-	${responsiveCSSIntroParagraph};
+	${introParagraphResponsiveCSS};
 	grid-area: paragraph;
 `;
 
@@ -106,18 +108,18 @@ const Intro = () => (
 			<StyledIntroSubTitle text="Who are we?"/>
 			<StyledIntroHeading type="h1" text="Meet the people in the team."/>
 			<StyledIntroParagraph text="Learn what defines use as a team, as a company and who we personally are" />
-			<ImageContainer>
+			<WorkingImageContainer>
 				<Image
 					src="/images/who-we-are-working.png"
 					layout="fill"
 					alt="Members of Bytecode working"
 					objectFit="contain"
 				/>
-			</ImageContainer>
+			</WorkingImageContainer>
 		</IntroContainer>
 	</InitialContainer>
 );
-const responsiveCSSCompetencesContainer = () => {
+const competencesContainerResponsiveCSS = () => {
 	const paddingTopValues: BreakpointKeyValue = {
 		xs: 80,
 		lg: 175,
@@ -151,7 +153,7 @@ const responsiveCSSCompetencesContainer = () => {
 	return paddingTop + gridColumns + gridTemplateAreas + paddingBottom;
 };
 const CompetencesContainer = styled.div`
-	${responsiveCSSCompetencesContainer};
+	${competencesContainerResponsiveCSS};
 	padding-bottom: 80px;
 	display: grid;
 	grid-template-rows: auto;
@@ -159,13 +161,15 @@ const CompetencesContainer = styled.div`
 const StyledCompetencesSpacer = styled(Spacer)`
 	grid-area: spacer;
 `;
+const compentencesHeadingResponsiveCSS = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({xs: 0, lg: 40}));
 const StyledCompentencesHeading = styled(Heading)`
+	${compentencesHeadingResponsiveCSS};
 	grid-area: title;
 	margin-top: 50px;
 	margin-bottom: 20px;
 `;
 
-const responsiveCSSIconBlocksContainer = () => {
+const iconBlocksContainerResponsiveCSS = () => {
 	const values: BreakpointKeyValue = {
 		xs: "auto",
 		lg: "1fr 1fr"
@@ -175,7 +179,7 @@ const responsiveCSSIconBlocksContainer = () => {
 	return columns + rows;
 };
 const IconBlocksContainer = styled.div`
-	${responsiveCSSIconBlocksContainer};
+	${iconBlocksContainerResponsiveCSS};
 	display: grid;
 	grid-area: icon-block;
 `;
@@ -225,7 +229,7 @@ const Competences = () => (
 	</Container>
 );
 
-const responsiveCSSValuesContainer = () => {
+const valuesContainerResponsiveCSS = () => {
 	const columnValues: BreakpointKeyValue = {
 		xs: "auto",
 		lg: "1fr 1fr"
@@ -235,7 +239,7 @@ const responsiveCSSValuesContainer = () => {
 };
 
 const ValuesContainer = styled.div`
-	${responsiveCSSValuesContainer};
+	${valuesContainerResponsiveCSS};
 	display: grid;
 	grid-column-gap: 50px;
 	grid-template-rows: auto;
@@ -249,7 +253,7 @@ const valuesParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", 
 const StyledValuesParagraph = styled(Paragraph)`
 	${valuesParagraphResponsiveCSS};
 `;
-const summationContainerResponsiveCSS = () => responsiveValuesCSS("margin-top", "px", breakpointNameToPx({xs: 35, lg: 50}));
+const summationContainerResponsiveCSS = () => responsiveValuesCSS("margin-top", "px", breakpointNameToPx({xs: 35, lg: 20}));
 const SummationContainer = styled.div`
 	${summationContainerResponsiveCSS};
 `;
@@ -257,11 +261,21 @@ const MeetingImageContainer = styled.div`
 	height: 400px;
 	position: relative;
 `;
+const LeftColumn = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+`;
+const RightColumn = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+`;
 
 const Values = () => (
 	<Container background={theme.colors.colorBrand3}>
 		<ValuesContainer>
-			<div>
+			<LeftColumn>
 				<Spacer color="white" bold/>
 				<StyledValuesHeading type="h2" text="Things we value the most." color="white"/>
 				<StyledValuesParagraph
@@ -279,8 +293,8 @@ const Values = () => (
 						objectFit="contain"
 					/>
 				</MeetingImageContainer>
-			</div>
-			<div>
+			</LeftColumn>
+			<RightColumn>
 				<SummationContainer>
 					<Subtitle text="1." color="white" fontWeight="bold"/>
 					<Heading type="h4" color="white" text="We're all in this together."/>
@@ -311,7 +325,7 @@ const Values = () => (
 						color="white"
 					/>
 				</SummationContainer>
-			</div>
+			</RightColumn>
 
 		</ValuesContainer>
 	</Container>
