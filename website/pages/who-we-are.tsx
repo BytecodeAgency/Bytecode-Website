@@ -25,7 +25,8 @@ const introContainerResponsiveCSS = () => {
 	const gridColumns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(gridColumnValues));
 	const gridRowValues: BreakpointKeyValue = {
 		xs: "auto",
-		lg: "100px 130px 200px"
+		lg: "100px 130px 200px",
+		xl: "150px 130px 200px"
 	};
 	const gridRows = responsiveValuesCSS("grid-template-rows", "", breakpointNameToPx(gridRowValues));
 	const gridAreaValues: BreakpointKeyValue = {
@@ -46,13 +47,14 @@ const IntroContainer = styled.div`
 	${introContainerResponsiveCSS};
 	display: grid;
 	align-items: center;
-	`;
+`;
 const workingImageContainerResponsiveCSS = () => {
 	const imageHeightValues: BreakpointKeyValue = {
 		xs: 300,
 		sm: 400,
 		md: 500,
 		lg: 400,
+		xxl: 500,
 	};
 	const imageHeights = responsiveValuesCSS("height", "px", breakpointNameToPx(imageHeightValues));
 	const imageWidthValues: BreakpointKeyValue = {
@@ -132,7 +134,8 @@ const competencesContainerResponsiveCSS = () => {
 
 	const gridColumnValues: BreakpointKeyValue = {
 		xs: "1fr 3fr 1fr",
-		lg: "1fr 1fr 2fr 3fr",
+		lg: "200px 200px 100px 1fr",
+		xl: "250px 200px 200px 1fr",
 	};
 	const gridColumns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(gridColumnValues));
 
@@ -178,6 +181,7 @@ const IconBlocksContainer = styled.div`
 	${iconBlocksContainerResponsiveCSS};
 	display: grid;
 	grid-area: icon-block;
+	grid-column-gap: 60px;
 `;
 
 const Competences = () => (
@@ -231,23 +235,30 @@ const valuesContainerResponsiveCSS = () => {
 		lg: "1fr 1fr"
 	};
 	const columns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(columnValues));
-	return columns;
+	const gapValues: BreakpointKeyValue = {
+		xs: 50,
+		xxl: 100
+	};
+	const gap = responsiveValuesCSS("grid-column-gap", "px", breakpointNameToPx(gapValues));
+	return columns + gap;
 };
 
 const ValuesContainer = styled.div`
 	${valuesContainerResponsiveCSS};
 	display: grid;
-	grid-column-gap: 50px;
 	grid-template-rows: auto;
 	padding-top: 80px;
 	padding-bottom: 80px;
 `;
 const StyledValuesHeading = styled(Heading)`
 	margin-top: 50px;
+	padding-left: 20px;
 `;
-const valuesParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx({xs: 50, lg:0}));
+const valuesParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx({xs: 50, lg:0, xl: 10, xxl: 20}));
 const StyledValuesParagraph = styled(Paragraph)`
 	${valuesParagraphResponsiveCSS};
+	padding-left: 20px;
+	margin-top: 10px;
 `;
 const summationContainerResponsiveCSS = () => responsiveValuesCSS("margin-top", "px", breakpointNameToPx({xs: 35, lg: 20}));
 const SummationContainer = styled.div`

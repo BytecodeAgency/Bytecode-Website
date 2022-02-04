@@ -8,7 +8,7 @@ const typography = {
 				sm: 2.5,
 				md: 2.5,
 				lg: 3,
-				xl: 3,
+				xl: 3.556,
 				xxl: 3.556,
 			},
 			h2: {
@@ -16,7 +16,7 @@ const typography = {
 				sm: 2,
 				md: 2,
 				lg: 2,
-				xl: 2.3,
+				xl: 2.667,
 				xxl: 2.667,
 			},
 			h3: "1.778em",
