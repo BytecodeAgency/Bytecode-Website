@@ -117,23 +117,44 @@ const Intro = () => (
 		</IntroContainer>
 	</InitialContainer>
 );
-const paddingTopValues = {
-	xs: 80,
-	sm: 80,
-	md: 80,
-	lg: 200,
-	xl: 200,
-	xxl: 200
+const responsiveCSSCompetencesContainer = () => {
+	const paddingTopValues: BreakpointKeyValue = {
+		xs: 80,
+		lg: 175,
+		xl: 200,
+		xxl: 200
+	};
+	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx(paddingTopValues));
+
+	const paddingBottomValues: BreakpointKeyValue = {
+		xs: 80,
+		lg: 60
+	};
+	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx(paddingBottomValues));
+
+	const gridColumnValues: BreakpointKeyValue = {
+		xs: "1fr 3fr 1fr",
+		lg: "1fr 1fr 2fr 3fr",
+	};
+	const gridColumns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(gridColumnValues));
+
+	const gridTemplateAreaValues: BreakpointKeyValue = {
+		xs: "\". spacer spacer\" " +
+			"\"title title .\" " +
+			"\"icon-block icon-block icon-block\"",
+		lg: "\". spacer spacer spacer\" " +
+			"\". title title . \" " +
+			"\". . icon-block icon-block\"",
+	};
+	const gridTemplateAreas = responsiveValuesCSS("grid-template-areas", "", breakpointNameToPx(gridTemplateAreaValues));
+
+	return paddingTop + gridColumns + gridTemplateAreas + paddingBottom;
 };
-const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx(paddingTopValues));
 const CompetencesContainer = styled.div`
-	${paddingTop};
+	${responsiveCSSCompetencesContainer};
 	padding-bottom: 80px;
 	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
 	grid-template-rows: auto;
-	grid-template-areas: 
-		${"\". spacer spacer\" \"title title .\" \"icon-block icon-block icon-block\""};
 `;
 const StyledCompetencesSpacer = styled(Spacer)`
 	grid-area: spacer;
@@ -144,10 +165,18 @@ const StyledCompentencesHeading = styled(Heading)`
 	margin-bottom: 20px;
 `;
 
+const responsiveCSSIconBlocksContainer = () => {
+	const values: BreakpointKeyValue = {
+		xs: "auto",
+		lg: "1fr 1fr"
+	};
+	const columns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(values));
+	const rows = responsiveValuesCSS("grid-template-rows", "", breakpointNameToPx(values));
+	return columns + rows;
+};
 const IconBlocksContainer = styled.div`
+	${responsiveCSSIconBlocksContainer};
 	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: auto;
 	grid-area: icon-block;
 `;
 
