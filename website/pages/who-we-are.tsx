@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import {Heading, Paragraph, InitialContainer, theme, Container, Spacer, Eye, Book, Arrows, PeopleArrows, IconTextBlock, Subtitle, breakpointNameToPx, responsiveValuesCSS} from "@bytecode/components";
+import {Heading, Paragraph, InitialContainer, theme, Container, Spacer, Eye, Book, Arrows, PeopleArrows, IconTextBlock, Subtitle, breakpointNameToPx, responsiveValuesCSS, BreakpointKeyValue} from "@bytecode/components";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
 const content = {
@@ -25,13 +25,11 @@ const IntroContainer = styled.div`
 	grid-template-areas:
 		${"\"subtitle subtitle . .\" \"heading heading . .\" \"paragraph paragraph paragraph.\" \"image image image image\""}
 `;
-const imageHeightValues = {
+const imageHeightValues: BreakpointKeyValue = {
 	xs: 300,
 	sm: 400,
 	md: 500,
-	lg: 300,
-	xl: 300,
-	xxl: 300
+	lg: 400,
 };
 const imageHeights = responsiveValuesCSS("height", "px", breakpointNameToPx(imageHeightValues));
 const ImageContainer = styled.div`

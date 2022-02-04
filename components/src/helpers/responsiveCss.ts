@@ -26,3 +26,5 @@ export const breakpointNameToPx = (input: BreakpointKeyValue): { [K in number]: 
 		return { [newKey]: inputValue };
 	});
 };
+
+export type {BreakpointKeyValue};
