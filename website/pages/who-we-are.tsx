@@ -17,28 +17,68 @@ const WhoWeAre: NextPage = () => {
 	);
 };
 
-const IntroContainer = styled.div`
-	display: grid;
-	grid-template-columns: 3fr 1fr 1fr 1fr;
-	grid-template-rows: auto;
-	align-items: center;
-	grid-template-areas:
-		${"\"subtitle subtitle . .\" \"heading heading . .\" \"paragraph paragraph paragraph.\" \"image image image image\""}
-`;
-const imageHeightValues: BreakpointKeyValue = {
-	xs: 300,
-	sm: 400,
-	md: 500,
-	lg: 400,
+const responsiveCSSIntroContainer = () => {
+	const gridColumnValues: BreakpointKeyValue = {
+		xs: "3fr 1fr 1fr 1fr;",
+		lg: "1fr 1fr"
+	};
+	const gridColumns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(gridColumnValues));
+	const gridRowValues: BreakpointKeyValue = {
+		xs: "auto",
+		lg: ""
+	};
+	const gridRows = responsiveValuesCSS("grid-template-rows", "", breakpointNameToPx(gridRowValues));
+	const gridAreaValues: BreakpointKeyValue = {
+		xs: "\"subtitle subtitle . .\" " +
+			"\"heading heading . .\" " +
+			"\"paragraph paragraph paragraph.\" " +
+			"\"image image image image\"",
+		lg: "\"subtitle image\" " +
+			"\"heading image\" " +
+			"\"paragraph image\" "
+	};
+	const gridAreas = responsiveValuesCSS("grid-template-areas", "", breakpointNameToPx(gridAreaValues));
+
+	return gridColumns + gridAreas + gridRows;
 };
-const imageHeights = responsiveValuesCSS("height", "px", breakpointNameToPx(imageHeightValues));
+
+const IntroContainer = styled.div`
+	${responsiveCSSIntroContainer};
+	display: grid;
+	align-items: center;
+	`;
+const responsiveCSSImageContainer = () => {
+	const imageHeightValues: BreakpointKeyValue = {
+		xs: 300,
+		sm: 400,
+		md: 500,
+		lg: 300,
+	};
+	const imageHeights = responsiveValuesCSS("height", "px", breakpointNameToPx(imageHeightValues));
+	const imageWidthValues: BreakpointKeyValue = {
+		xs: "100vw",
+		lg: "100%",
+	};
+	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx(imageWidthValues));
+	const leftValues = {
+		xs: "calc(-50vw + 50%);",
+		lg: "32px",
+		xl: "48px",
+		xxl: "64px"
+	};
+	const left = responsiveValuesCSS("left", "", breakpointNameToPx(leftValues));
+	const topValues = {
+		xs: 25,
+		lg: 150,
+	};
+	const top = responsiveValuesCSS("top", "px", breakpointNameToPx(topValues));
+	return imageHeights + imageWidths + left + top;
+};
+
 const ImageContainer = styled.div`
-	${imageHeights};
+	${responsiveCSSImageContainer};
 	position: relative;
-	top: 25px;
-	left: calc(-50vw + 50%);
 	grid-area: image;
-	width: 100vw;
 `;
 const StyledIntroSubTitle = styled(Subtitle)`
 	grid-area: subtitle;
@@ -46,7 +86,17 @@ const StyledIntroSubTitle = styled(Subtitle)`
 const StyledIntroHeading = styled(Heading)`
 	grid-area: heading;
 `;
+const responsiveCSSIntroParagraph = () => {
+	const marginValues: BreakpointKeyValue = {
+		xs: 0,
+		lg: 100
+	};
+	const marginBottom = responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx(marginValues));
+	return marginBottom;
+};
+
 const StyledIntroParagraph = styled(Paragraph)`
+	${responsiveCSSIntroParagraph};
 	grid-area: paragraph;
 `;
 
