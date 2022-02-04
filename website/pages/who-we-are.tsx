@@ -225,9 +225,19 @@ const Competences = () => (
 	</Container>
 );
 
+const responsiveCSSValuesContainer = () => {
+	const columnValues: BreakpointKeyValue = {
+		xs: "auto",
+		lg: "1fr 1fr"
+	};
+	const columns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(columnValues));
+	return columns;
+};
+
 const ValuesContainer = styled.div`
+	${responsiveCSSValuesContainer};
 	display: grid;
-	grid-template-columns: auto;
+	grid-column-gap: 50px;
 	grid-template-rows: auto;
 	padding-top: 80px;
 	padding-bottom: 80px;
@@ -235,61 +245,74 @@ const ValuesContainer = styled.div`
 const StyledValuesHeading = styled(Heading)`
 	margin-top: 50px;
 `;
+const valuesParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx({xs: 50, lg:0}));
 const StyledValuesParagraph = styled(Paragraph)`
-	margin-bottom: 50px
+	${valuesParagraphResponsiveCSS};
 `;
+const summationContainerResponsiveCSS = () => responsiveValuesCSS("margin-top", "px", breakpointNameToPx({xs: 35, lg: 50}));
 const SummationContainer = styled.div`
-	margin-top: 35px;
+	${summationContainerResponsiveCSS};
+`;
+const MeetingImageContainer = styled.div`
+	height: 400px;
+	position: relative;
 `;
 
 const Values = () => (
 	<Container background={theme.colors.colorBrand3}>
 		<ValuesContainer>
-			<Spacer color="white" bold/>
-			<StyledValuesHeading type="h2" text="Things we value the most." color="white"/>
-			<StyledValuesParagraph
-				text="Sometimes a narrow collaboration can be like a marriage.
+			<div>
+				<Spacer color="white" bold/>
+				<StyledValuesHeading type="h2" text="Things we value the most." color="white"/>
+				<StyledValuesParagraph
+					text="Sometimes a narrow collaboration can be like a marriage.
 						Before you ‘sign the contract’, you want to know who the other person is
 						and what life together will look like. To give you a feeling and better understanding of
 						how we would work together during the project, we present to you our values."
-				color="white"
-			/>
-			<Image
-				src="/images/who-are-we-working2.png"
-				width={648}
-				height={432}
-				alt="Members of Bytecode in a meeting"
-			/>
-			<SummationContainer>
-				<Subtitle text="1." color="white" fontWeight="bold"/>
-				<Heading type="h4" color="white" text="We're all in this together."/>
-				<Paragraph
-					text="You know the users. We know tech stuff.
+					color="white"
+				/>
+				<MeetingImageContainer>
+					<Image
+						src="/images/who-are-we-working2.png"
+						layout="fill"
+						alt="Members of Bytecode in a meeting"
+						objectFit="contain"
+					/>
+				</MeetingImageContainer>
+			</div>
+			<div>
+				<SummationContainer>
+					<Subtitle text="1." color="white" fontWeight="bold"/>
+					<Heading type="h4" color="white" text="We're all in this together."/>
+					<Paragraph
+						text="You know the users. We know tech stuff.
 						Together we understand a lot of things.
 						We believe the best work happens when we don’t think of ourselves as a client
 						and agency relationship but as one team."
-					color="white"
-				/>
-			</SummationContainer>
-			<SummationContainer>
-				<Subtitle text="2." color="white" fontWeight="bold"/>
-				<Heading type="h4" color="white" text="Do and learn."/>
-				<Paragraph
-					text="We believe that skills come with experience.
+						color="white"
+					/>
+				</SummationContainer>
+				<SummationContainer>
+					<Subtitle text="2." color="white" fontWeight="bold"/>
+					<Heading type="h4" color="white" text="Do and learn."/>
+					<Paragraph
+						text="We believe that skills come with experience.
 						We alle learn more by doing and trying then sitting around and speculation."
-					color="white"
-				/>
-			</SummationContainer>
-			<SummationContainer>
-				<Subtitle text="3." color="white" fontWeight="bold"/>
-				<Heading type="h4" color="white" text="High in energy!"/>
-				<Paragraph
-					text="We don’t mean drinking coffee or energy drinks,
+						color="white"
+					/>
+				</SummationContainer>
+				<SummationContainer>
+					<Subtitle text="3." color="white" fontWeight="bold"/>
+					<Heading type="h4" color="white" text="High in energy!"/>
+					<Paragraph
+						text="We don’t mean drinking coffee or energy drinks,
 						but we love to work with founders that are passionate about their idea.
 						Enthusiasm is catchy, so if you are willing to change the world, then so are we."
-					color="white"
-				/>
-			</SummationContainer>
+						color="white"
+					/>
+				</SummationContainer>
+			</div>
+
 		</ValuesContainer>
 	</Container>
 );
