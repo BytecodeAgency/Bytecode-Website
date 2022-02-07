@@ -1,5 +1,5 @@
 export type BreakpointName = "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
-export type BreakpointKeyValue = { [K in BreakpointName]: number; } ;
+export type BreakpointKeyValue = { [K in BreakpointName]?: number | string; } ;
 
 const layout = {
 	gutter: 24,

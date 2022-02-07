@@ -3,8 +3,22 @@ const typography = {
 	heading: {
 		font: "\"Avenir\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
 		sizes: {
-			h1: "3.556em",
-			h2: "2.667em",
+			h1: {
+				xs: 2.5,
+				sm: 2.5,
+				md: 2.5,
+				lg: 3,
+				xl: 3.556,
+				xxl: 3.556,
+			},
+			h2: {
+				xs: 2,
+				sm: 2,
+				md: 2,
+				lg: 2,
+				xl: 2.667,
+				xxl: 2.667,
+			},
 			h3: "1.778em",
 			h4: "1.333em",
 			h5: "1em",
