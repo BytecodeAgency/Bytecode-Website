@@ -55,7 +55,10 @@ const H4 = styled.h4<TextStylingProps>`
 	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black}
 `;
 const H5 = styled.h5<TextStylingProps>`
-
+	font-family: ${theme.typography.heading.font};
+	font-size: ${theme.typography.heading.sizes.h5};
+	margin: ${theme.typography.heading.margins};
+	line-height: ${theme.typography.heading.lineHeights.h5};
 `;
 
 const lookup: { [k in HeadingType]: React.FC<TextStylingProps> } = {

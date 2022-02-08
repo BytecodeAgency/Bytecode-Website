@@ -5,6 +5,7 @@ export interface ButtonProps {
     text?: string;
     type: ButtonType;
     icon?: IconComponent;
+    onClick?: () => void;
 }
 
 export interface ButtonColorsProps {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
 import {
@@ -18,7 +18,7 @@ import {
 	responsiveValuesCSS,
 	BreakpointKeyValue,
 	TeamMember,
-	Member
+	Member, Popup
 } from "@bytecode/components";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
@@ -397,62 +397,106 @@ const memberList: Member[] = [
 	{
 		name: "Jeroen van Steijn",
 		jobTitle: "Co-Founder & Developer",
-		src: "jeroen"
+		src: "jeroen",
+		about: "Hi I am Jeroen, I am a co-founder of Bytecode and work as a full-stack developer. " +
+			"My colleagues describe me as sincere and kindhearted. " +
+			"My interests lie within politics and tech trends. " +
+			"In my spare time I am either playing soccer, video games or padel with Nick and Chris.",
+		focus: ["Development", "Back-end", "Bussiness Strategy"],
+		github: "https://bytecode.com",
+		email: "tiko@bytecode.nl",
+		linkedIn: "https://bytecode.com",
 	},
 	{
 		name: "Nick Broekarts",
 		jobTitle: "Sales & Marketing",
-		src: "nick"
+		src: "nick",
+		about: "Hi I am Nick, I am responsible for marketing and sales. " +
+			"Besides that, I help start-ups with their strategy and roadmap. " +
+			"My colleagues describe me as social and enthusiastic. " +
+			"When I am not working, I am mostly busy doing volunteer work (teaching what the Bible learns and supporting people). " +
+			"Besides that, I love to have dinner with friends or play sports.",
+		focus: ["Sales", "Marketing", "Bussiness Strategy"],
+		github: "https://bytecode.com",
+		email: "https://bytecode.com",
+		linkedIn: "https://bytecode.com",
 	},
 	{
 		name: "Christiaan Färber",
 		jobTitle: "Developer & UX",
-		src: "chris"
+		src: "chris",
+		about: "Hi I am Chris, I am a front-end developer and User Experience designer. " +
+			"My colleagues describe me as a go-getter with a big heart. " +
+			"My interest lie within finding good wines and philosophy. " +
+			"During my days off, I love to play with my cat Nietzsche and go to techno parties.",
+		focus: ["Development", "User Experience Design", "Bussiness Strategy"],
+		github: "https://bytecode.com",
+		email: "https://bytecode.com",
+		linkedIn: "https://bytecode.com",
 	},
 	{
 		name: "T'iko Alarcón Rivero",
 		jobTitle: "Developer",
-		src: "tiko"
+		src: "tiko",
+		about: "Hi, I am T’iko. I am a front-end developer. My colleagues describe me as skilled and a bit nerdy. " +
+			"That is because I love to play video games, especially League of Legends. " +
+			"I am in the final year of my education, and in my spare time, I play with my three longhaired cats.",
+		focus: ["Development"],
+		github: "https://bytecode.com",
+		email: "https://bytecode.com",
+		linkedIn: "https://bytecode.com",
 	},
 	{
 		name: "Suzanne de Vries",
 		jobTitle: "Marketing",
-		src: "suzanne"
+		src: "suzanne",
+		about: "TEXT STILL TO COME",
+		focus: ["Marketing"],
+		github: "https://bytecode.com",
+		email: "https://bytecode.com",
+		linkedIn: "https://bytecode.com",
 	}
 ];
 
 const TeamMembers = () => (
-	<Container>
-		<TeamMembersContainer>
-			<TeamMembersSpacer color="black" reverse/>
-			<TeamMembersLeftColumn>
-				<StyledMembersSubtitle text="The people that make it happen"/>
-				<Heading type="h2" text="Team members" />
-				<StyledMembersParagraph
-					text="If you want to realize your dream, you need to have a good team.
+	<>
+
+		<Container>
+			<TeamMembersContainer>
+				<TeamMembersSpacer color="black" reverse/>
+				<TeamMembersLeftColumn>
+					<StyledMembersSubtitle text="The people that make it happen"/>
+					<Heading type="h2" text="Team members" />
+					<StyledMembersParagraph
+						text="If you want to realize your dream, you need to have a good team.
 					That is why our team that consists out of developers, designers, strategists,
 					and marketers love to join your start-up project."
-				/>
-				<Paragraph
-					text="Who are the people that are responsible for
+					/>
+					<Paragraph
+						text="Who are the people that are responsible for
 					building the product of your dreams that fits your customers?"
-				/>
-			</TeamMembersLeftColumn>
+					/>
+				</TeamMembersLeftColumn>
 
-			<TeamMembersRightColumn>
-				{memberList.map(member=><TeamMember name={member.name} jobTitle={member.jobTitle} src={member.src}/>)}
-			</TeamMembersRightColumn>
-		</TeamMembersContainer>
-	</Container>
+				<TeamMembersRightColumn>
+					{memberList.map(member=><TeamMember member={member}/>)}
+				</TeamMembersRightColumn>
+			</TeamMembersContainer>
+		</Container>
+	</>
+
 );
+
+
 
 const WhoWeAreBody = () => (
 	<div>
-		<Intro />
-		<Competences />
-		<Values />
+		<Intro/>
+		<Competences/>
+		<Values/>
 		<TeamMembers />
 	</div>
 );
+
 
 export default WhoWeAre;
