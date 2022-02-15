@@ -51,7 +51,7 @@ const popupContentResponsiveCSS = () => {
 	const gridRowGap = responsiveValuesCSS("grid-row-gap", "px", breakpointNameToPx({xs: 20, md: 25}));
 	return gridTemplateArea + gridRowGap;
 };
-const PopupContent = styled.div`
+const PopupContent = styled(Container)`
 	${popupContentResponsiveCSS};
 	position: absolute;
 	top: 0;
@@ -65,11 +65,13 @@ const PopupContent = styled.div`
 
 const popupMenuResponsiveCSS = () => {
 	const position = responsiveValuesCSS("position", "", breakpointNameToPx({xs: "fixed", md: "static"}));
-	return position ;
+	const paddingRight = responsiveValuesCSS("padding-right", "px", breakpointNameToPx({xs: 12, md: 0}));
+	return position + paddingRight;
 };
 
-const PopupMenu = styled(Container)`
+const PopupMenu = styled.div`
 	${popupMenuResponsiveCSS};
+	padding-left: 0;
 	z-index: 9999;
 	display: grid;
 	grid-template-columns: 1fr 48px;
@@ -80,7 +82,7 @@ const PopupMenu = styled(Container)`
 	grid-area: menu;
 `;
 
-const styledImageResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({xs:100, md: 0}));
+const styledImageResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({xs:75, md: 0}));
 
 const StyledImage = styled.div`
 	${styledImageResponsiveCSS};
@@ -88,7 +90,6 @@ const StyledImage = styled.div`
 `;
 
 const TitleAndName = styled.div`
-	padding: 0 12px 0;
 	grid-area: title;
 `;
 const StyledName = styled(Heading)`
@@ -113,7 +114,6 @@ const AboutContainer = styled.div`
 const SocialsContainer = styled.div`
 	display: grid;
 	padding-right: 80px;
-	padding-left: 12px;
 	grid-template-columns: 113px 1fr;
 	grid-template-rows: 40px 1fr 1fr 1fr 3fr;
 	grid-column-gap: 20px;

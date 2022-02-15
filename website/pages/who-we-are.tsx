@@ -357,26 +357,46 @@ const Values = () => (
 
 
 const teamMembersContainerResponsiveCSS = () => {
-	const gridTemplateAreaValues: BreakpointKeyValue = {
-		xs: "\"spacer spacer .\"" +
-			"\"text text text\"" +
-			"\"members members members\""
-	};
-	const gridTemplateArea = responsiveValuesCSS("grid-template-areas", "", breakpointNameToPx(gridTemplateAreaValues));
 
-	return gridTemplateArea;
+	const gridTemplateArea = responsiveValuesCSS(
+		"grid-template-areas",
+		"",
+		breakpointNameToPx({
+			xs: "\"spacer spacer .\"" +
+				"\"text text text\"" +
+				"\"members members members\"",
+			lg: "\"text members\"" +
+				"\". members\""
+		}));
+	const gridTemplateColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "1fr 2fr 1fr",
+			lg: "1fr 1fr"
+		}));
+
+	return gridTemplateArea + gridTemplateColumns;
 };
 const TeamMembersContainer = styled.div`
 	${teamMembersContainerResponsiveCSS};
 	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
 	padding-top: 80px;
 	padding-bottom: 80px;
 `;
 const TeamMembersSpacer = styled(Spacer)`
 	grid-area: spacer;
 `;
+
+const teamMembersLeftColumnResponsiveCSS = responsiveValuesCSS(
+	"padding",
+	"",
+	breakpointNameToPx({
+		xs: "0",
+		lg: "50px 30px"
+	}));
 const TeamMembersLeftColumn = styled.div`
+	${teamMembersLeftColumnResponsiveCSS};
 	grid-area: text;
 `;
 const teamMembersRightColumnResponsiveCSS = responsiveValuesCSS(
@@ -392,13 +412,14 @@ const TeamMembersRightColumn = styled.div`
 	grid-area: members;
 	display: grid;
 	justify-items: center;
+	grid-column-gap: 20px;
 `;
 const StyledMembersSubtitle = styled(Subtitle)`
 	margin-top: 50px;
 `;
 const StyledMembersParagraph = styled(Paragraph)`
 	margin-top: 10px;
-	margin-bottom: 0;
+	margin-bottom: 10px;
 `;
 
 const memberList: Member[] = [
