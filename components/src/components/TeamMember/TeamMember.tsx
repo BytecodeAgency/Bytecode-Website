@@ -7,7 +7,6 @@ import {MenuContainer} from "../Container/Container";
 import Logo from "../Branding/Branding";
 import Hamburger from "hamburger-react";
 import Spacer from "../Spacer/Spacer";
-import Button from "../Button/Button";
 import {Envelope, Github, Linkedin} from "../../icons/icons";
 import SocialButton from "../SocialButton/SocialButton";
 
@@ -26,7 +25,6 @@ const MobilePopupMenu = styled(MenuContainer)`
     display: grid;
     grid-template-columns: 1fr 48px;
     padding-top: 25px;
-	
     height: 75px;
 	width: 100%;
 	align-items: center;

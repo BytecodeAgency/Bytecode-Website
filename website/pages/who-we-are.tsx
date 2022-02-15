@@ -379,10 +379,18 @@ const TeamMembersSpacer = styled(Spacer)`
 const TeamMembersLeftColumn = styled.div`
 	grid-area: text;
 `;
+const teamMembersRightColumnResponsiveCSS = responsiveValuesCSS(
+	"grid-template-columns",
+	"" ,
+	breakpointNameToPx({
+		xs: "1fr",
+		md: "1fr 1fr",
+	})
+);
 const TeamMembersRightColumn = styled.div`
+	${teamMembersRightColumnResponsiveCSS};
 	grid-area: members;
 	display: grid;
-	grid-template-columns: 1fr;
 	justify-items: center;
 `;
 const StyledMembersSubtitle = styled(Subtitle)`
@@ -479,7 +487,7 @@ const TeamMembers = () => (
 				</TeamMembersLeftColumn>
 
 				<TeamMembersRightColumn>
-					{memberList.map(member=><TeamMember member={member}/>)}
+					{memberList.map((member, index)=><TeamMember key={index} member={member}/>)}
 				</TeamMembersRightColumn>
 			</TeamMembersContainer>
 		</Container>
