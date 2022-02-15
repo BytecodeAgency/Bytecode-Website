@@ -3,12 +3,14 @@ import styled from "styled-components";
 import {Paragraph, Heading} from "../Typography/Typography";
 import theme from "../../theme";
 import Image from "next/image";
-import {MenuContainer} from "../Container/Container";
+import {Container} from "../Container/Container";
 import Logo from "../Branding/Branding";
 import Hamburger from "hamburger-react";
 import Spacer from "../Spacer/Spacer";
 import {Envelope, Github, Linkedin} from "../../icons/icons";
 import SocialButton from "../SocialButton/SocialButton";
+import {BreakpointKeyValue} from "../../theme/layout";
+import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 
 export interface Member {
     name: string;
@@ -21,18 +23,8 @@ export interface Member {
 	linkedIn?: string;
 }
 
-const MobilePopupMenu = styled(MenuContainer)`
-    display: grid;
-    grid-template-columns: 1fr 48px;
-    padding-top: 25px;
-    height: 75px;
-	width: 100%;
-	align-items: center;
-`;
-
 const PopupBackground = styled.div`
 	position: fixed;
-	overflow: auto;
 	top: 0;
 	left: 0;
 	height: 100%;
@@ -43,23 +35,89 @@ const PopupBackground = styled.div`
 	overflow: auto;
 	overscroll-behavior: none;
 `;
+const popupContentResponsiveCSS = () => {
+	const gridTemplateAreaValues: BreakpointKeyValue = {
+		xs: "\"menu menu\"" +
+			"\"image image\"" +
+			"\"title title\"" +
+			"\"about about\"" +
+			"\"socials socials\"",
+
+		md: "\"menu menu\"" +
+			"\"title image\"" +
+			"\"socials about\""
+	};
+	const gridTemplateArea = responsiveValuesCSS("grid-template-areas", "", breakpointNameToPx(gridTemplateAreaValues));
+	const gridRowGap = responsiveValuesCSS("grid-row-gap", "px", breakpointNameToPx({xs: 20, md: 25}));
+	return gridTemplateArea + gridRowGap;
+};
 const PopupContent = styled.div`
+	${popupContentResponsiveCSS};
 	position: absolute;
 	top: 0;
 	left: 0;
 	background-color: ${theme.colors.white};
 	//margin-top: 80px; for desktop sizes
 	z-index: 101;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 `;
+
+const popupMenuResponsiveCSS = () => {
+	const position = responsiveValuesCSS("position", "", breakpointNameToPx({xs: "fixed", md: "static"}));
+	return position ;
+};
+
+const PopupMenu = styled(Container)`
+	${popupMenuResponsiveCSS};
+	z-index: 9999;
+	display: grid;
+	grid-template-columns: 1fr 48px;
+	padding-top: 25px;
+	height: 75px;
+	width: 100%;
+	align-items: center;
+	grid-area: menu;
+`;
+
+const styledImageResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({xs:100, md: 0}));
+
+const StyledImage = styled.div`
+	${styledImageResponsiveCSS};
+	grid-area: image;
+`;
+
+const TitleAndName = styled.div`
+	padding: 0 12px 0;
+	grid-area: title;
+`;
+const StyledName = styled(Heading)`
+	font-family: ${theme.typography.paragraph.font};
+`;
+const JobTitle = styled(Paragraph)`
+	color: ${theme.colors.colorBrand4};
+	margin-bottom: 0;
+`;
+
+const aboutContainerResponsiveCSS = responsiveValuesCSS(
+	"padding-left",
+	"px",
+	breakpointNameToPx({
+		xs: 12,
+		md: 0,
+	}));
 const AboutContainer = styled.div`
-	padding: 20px 12px;
+	${aboutContainerResponsiveCSS};
+	grid-area: about;
 `;
 const SocialsContainer = styled.div`
 	display: grid;
 	padding-right: 80px;
+	padding-left: 12px;
 	grid-template-columns: 113px 1fr;
 	grid-template-rows: 40px 1fr 1fr 1fr 3fr;
 	grid-column-gap: 20px;
+	grid-area: socials
 `;
 const StyledSpacer = styled(Spacer)`
 	grid-column: 1 / span 2;
@@ -100,9 +158,6 @@ interface PopupProps {
 	closePopup: () => void;
 	popup: boolean;
 }
-const JobTitle = styled(Paragraph)`
-	color: ${theme.colors.colorBrand4};
-`;
 export const Popup: React.FC<PopupProps> = ({member, closePopup, popup}) => {
 	const {name, about, src, jobTitle} = member;
 	return (
@@ -111,16 +166,20 @@ export const Popup: React.FC<PopupProps> = ({member, closePopup, popup}) => {
 				popup ? (
 					<PopupBackground> {/*Add onclick for closing by clicking on background*/}
 						<PopupContent>
-							<MobilePopupMenu background={theme.colors.white}>
+							<PopupMenu background={theme.colors.white}>
 								<div>
 									<Logo color="black" />
 								</div>
 								<Hamburger toggled={true} onToggle={closePopup}/>
-							</MobilePopupMenu>
-							<Image src={`/images/member-${src}.png`} alt="profile picture" width={390} height={568.75}/>
-							<AboutContainer>
+							</PopupMenu>
+							<StyledImage>
+								<Image src={`/images/member-${src}.png`} alt="profile picture" width={390} height={568.75}/>
+							</StyledImage>
+							<TitleAndName>
 								<StyledName text={name} type="h4"/>
 								<JobTitle text={jobTitle}/>
+							</TitleAndName>
+							<AboutContainer>
 								<Paragraph text={about} />
 							</AboutContainer>
 							<Socials member={member} />
@@ -132,9 +191,6 @@ export const Popup: React.FC<PopupProps> = ({member, closePopup, popup}) => {
 	);
 };
 
-const StyledName = styled(Heading)`
-  	font-family: ${theme.typography.paragraph.font};
-`;
 interface TeamMemberProps{
 	member: Member;
 }
