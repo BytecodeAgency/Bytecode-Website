@@ -9,7 +9,6 @@ import Hamburger from "hamburger-react";
 import Spacer from "../Spacer/Spacer";
 import {Envelope, Github, Linkedin} from "../../icons/icons";
 import SocialButton from "../SocialButton/SocialButton";
-import {BreakpointKeyValue} from "../../theme/layout";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 import {useWindowSize} from "../../helpers/device";
 
@@ -24,6 +23,7 @@ export interface Member {
 	linkedIn?: string;
 }
 
+// TODO: try and fix scroll behaviour when there is no overflow
 const PopupBackground = styled.div`
 	position: fixed;
 	top: 0;
@@ -37,18 +37,20 @@ const PopupBackground = styled.div`
 	overscroll-behavior: none;
 `;
 const popupContentResponsiveCSS = () => {
-	const gridTemplateAreaValues: BreakpointKeyValue = {
-		xs: "\"menu menu\"" +
-			"\"image image\"" +
-			"\"title title\"" +
-			"\"about about\"" +
-			"\"socials socials\"",
+	const gridTemplateArea = responsiveValuesCSS(
+		"grid-template-areas",
+		"",
+		breakpointNameToPx({
+			xs: "\"menu menu\"" +
+				"\"image image\"" +
+				"\"title title\"" +
+				"\"about about\"" +
+				"\"socials socials\"",
 
-		md: "\"menu menu\"" +
-			"\"title image\"" +
-			"\"socials about\""
-	};
-	const gridTemplateArea = responsiveValuesCSS("grid-template-areas", "", breakpointNameToPx(gridTemplateAreaValues));
+			md: "\"menu menu\"" +
+				"\"title image\"" +
+				"\"socials about\""
+		}));
 	const gridRowGap = responsiveValuesCSS("grid-row-gap", "px", breakpointNameToPx({xs: 20, md: 25}));
 	const gridTemplateColumns = responsiveValuesCSS(
 		"grid-template-columns",
@@ -68,8 +70,7 @@ const popupContentResponsiveCSS = () => {
 	);
 	const top = responsiveValuesCSS("top", "%", breakpointNameToPx({xs: 0, xl: 10}));
 	const left = responsiveValuesCSS("left", "%", breakpointNameToPx({xs: 0, xl: 10}));
-	const height = responsiveValuesCSS("height", "", breakpointNameToPx({ xl: "1020px"}));
-	return gridTemplateArea + gridRowGap + gridTemplateColumns + gridTemplateRows + top + left + height;
+	return gridTemplateArea + gridRowGap + gridTemplateColumns + gridTemplateRows + top + left;
 };
 const PopupContent = styled(Container)`
 	${popupContentResponsiveCSS};

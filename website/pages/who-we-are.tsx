@@ -36,27 +36,34 @@ const WhoWeAre: NextPage = () => {
 };
 
 const introContainerResponsiveCSS = () => {
-	const gridColumnValues: BreakpointKeyValue = {
-		xs: "3fr 1fr 1fr 1fr;",
-		lg: "1fr 1fr"
-	};
-	const gridColumns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(gridColumnValues));
-	const gridRowValues: BreakpointKeyValue = {
-		xs: "auto",
-		lg: "100px 130px 200px",
-		xl: "150px 130px 200px"
-	};
-	const gridRows = responsiveValuesCSS("grid-template-rows", "", breakpointNameToPx(gridRowValues));
-	const gridAreaValues: BreakpointKeyValue = {
-		xs: "\"subtitle subtitle . .\" " +
-			"\"heading heading . .\" " +
-			"\"paragraph paragraph paragraph.\" " +
-			"\"image image image image\"",
-		lg: "\"subtitle image\" " +
-			"\"heading image\" " +
-			"\"paragraph image\" "
-	};
-	const gridAreas = responsiveValuesCSS("grid-template-areas", "", breakpointNameToPx(gridAreaValues));
+
+	const gridColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "3fr 1fr 1fr 1fr;",
+			lg: "1fr 1fr"
+		}));
+	const gridRows = responsiveValuesCSS(
+		"grid-template-rows",
+		"",
+		breakpointNameToPx({
+			xs: "auto",
+			lg: "100px 130px 200px",
+			xl: "150px 130px 200px"
+		}));
+	const gridAreas = responsiveValuesCSS(
+		"grid-template-areas",
+		"",
+		breakpointNameToPx({
+			xs: "\"subtitle subtitle . .\" " +
+				"\"heading heading . .\" " +
+				"\"paragraph paragraph paragraph.\" " +
+				"\"image image image image\"",
+			lg: "\"subtitle image\" " +
+				"\"heading image\" " +
+				"\"paragraph image\" "
+		}));
 
 	return gridColumns + gridAreas + gridRows;
 };
@@ -67,31 +74,27 @@ const IntroContainer = styled.div`
 	align-items: center;
 `;
 const workingImageContainerResponsiveCSS = () => {
-	const imageHeightValues: BreakpointKeyValue = {
-		xs: 300,
-		sm: 400,
-		md: 500,
-		lg: 400,
-		xxl: 500,
-	};
-	const imageHeights = responsiveValuesCSS("height", "px", breakpointNameToPx(imageHeightValues));
-	const imageWidthValues: BreakpointKeyValue = {
-		xs: "100vw",
-		lg: "100%",
-	};
-	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx(imageWidthValues));
-	const leftValues = {
-		xs: "calc(-50vw + 50%);",
-		lg: "32px",
-		xl: "48px",
-		xxl: "64px"
-	};
-	const left = responsiveValuesCSS("left", "", breakpointNameToPx(leftValues));
-	const topValues = {
-		xs: 25,
-		lg: 200,
-	};
-	const top = responsiveValuesCSS("top", "px", breakpointNameToPx(topValues));
+	const imageHeights = responsiveValuesCSS(
+		"height",
+		"px",
+		breakpointNameToPx({
+			xs: 300,
+			sm: 400,
+			md: 500,
+			lg: 400,
+			xxl: 500,
+		}));
+	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx({ xs: "100vw", lg: "100%" }));
+	const left = responsiveValuesCSS(
+		"left",
+		"",
+		breakpointNameToPx({
+			xs: "calc(-50vw + 50%);",
+			lg: "32px",
+			xl: "48px",
+			xxl: "64px"
+		}));
+	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 25, lg: 200}));
 	return imageHeights + imageWidths + left + top;
 };
 
@@ -106,14 +109,7 @@ const StyledIntroSubTitle = styled(Subtitle)`
 const StyledIntroHeading = styled(Heading)`
 	grid-area: heading;
 `;
-const introParagraphResponsiveCSS = () => {
-	const marginValues: BreakpointKeyValue = {
-		xs: 0,
-		lg: 100
-	};
-	const marginBottom = responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx(marginValues));
-	return marginBottom;
-};
+const introParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx({ xs: 0, lg: 100}));
 
 const StyledIntroParagraph = styled(Paragraph)`
 	${introParagraphResponsiveCSS};
@@ -138,34 +134,27 @@ const Intro = () => (
 	</InitialContainer>
 );
 const competencesContainerResponsiveCSS = () => {
-	const paddingTopValues: BreakpointKeyValue = {
-		xs: 80,
-		lg: 200,
-	};
-	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx(paddingTopValues));
-
-	const paddingBottomValues: BreakpointKeyValue = {
-		xs: 80,
-		lg: 60
-	};
-	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx(paddingBottomValues));
-
-	const gridColumnValues: BreakpointKeyValue = {
-		xs: "1fr 3fr 1fr",
-		lg: "200px 200px 100px 1fr",
-		xl: "250px 200px 200px 1fr",
-	};
-	const gridColumns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(gridColumnValues));
-
-	const gridTemplateAreaValues: BreakpointKeyValue = {
-		xs: "\". spacer spacer\" " +
-			"\"title title .\" " +
-			"\"icon-block icon-block icon-block\"",
-		lg: "\". spacer spacer spacer\" " +
-			"\". title title . \" " +
-			"\". . icon-block icon-block\"",
-	};
-	const gridTemplateAreas = responsiveValuesCSS("grid-template-areas", "", breakpointNameToPx(gridTemplateAreaValues));
+	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 80, lg: 200 }));
+	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx({ xs: 80, lg: 60}));
+	const gridColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "1fr 3fr 1fr",
+			lg: "200px 200px 100px 1fr",
+			xl: "250px 200px 200px 1fr",
+		}));
+	const gridTemplateAreas = responsiveValuesCSS(
+		"grid-template-areas",
+		"",
+		breakpointNameToPx({
+			xs: "\". spacer spacer\" " +
+				"\"title title .\" " +
+				"\"icon-block icon-block icon-block\"",
+			lg: "\". spacer spacer spacer\" " +
+				"\". title title . \" " +
+				"\". . icon-block icon-block\"",
+		}));
 
 	return paddingTop + gridColumns + gridTemplateAreas + paddingBottom;
 };
@@ -248,16 +237,8 @@ const Competences = () => (
 );
 
 const valuesContainerResponsiveCSS = () => {
-	const columnValues: BreakpointKeyValue = {
-		xs: "auto",
-		lg: "1fr 1fr"
-	};
-	const columns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(columnValues));
-	const gapValues: BreakpointKeyValue = {
-		xs: 50,
-		xxl: 100
-	};
-	const gap = responsiveValuesCSS("grid-column-gap", "px", breakpointNameToPx(gapValues));
+	const columns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx({ xs: "auto", lg: "1fr 1fr" }));
+	const gap = responsiveValuesCSS("grid-column-gap", "px", breakpointNameToPx({ xs: 50, xxl: 100 }));
 	return columns + gap;
 };
 
@@ -272,7 +253,15 @@ const StyledValuesHeading = styled(Heading)`
 	margin-top: 50px;
 	padding-left: 20px;
 `;
-const valuesParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx({xs: 50, lg:0, xl: 10, xxl: 20}));
+const valuesParagraphResponsiveCSS = () => responsiveValuesCSS(
+	"margin-bottom",
+	"px",
+	breakpointNameToPx({
+		xs: 50,
+		lg:0,
+		xl: 10,
+		xxl: 20
+	}));
 const StyledValuesParagraph = styled(Paragraph)`
 	${valuesParagraphResponsiveCSS};
 	padding-left: 20px;
@@ -357,7 +346,6 @@ const Values = () => (
 
 
 const teamMembersContainerResponsiveCSS = () => {
-
 	const gridTemplateArea = responsiveValuesCSS(
 		"grid-template-areas",
 		"",

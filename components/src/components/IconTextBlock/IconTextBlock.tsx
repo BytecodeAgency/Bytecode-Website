@@ -4,13 +4,13 @@ import {Heading, Paragraph} from "../Typography/Typography";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  padding-right: 15px;
+  	padding-right: 15px;
 	padding-bottom: 10px;
 `;
 const StyledTitle = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 `;
 
 const StyledHeading = styled(Heading)`

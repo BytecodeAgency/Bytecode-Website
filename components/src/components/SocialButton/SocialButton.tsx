@@ -29,7 +29,7 @@ interface SocialButtonProps {
 	mail?: boolean,
 	className?: string,
 }
-// TODO: create proper styling for non-solied social
+// TODO: create proper styling for non-solid social
 const SocialButton: React.FC<SocialButtonProps> = ({Icon, link, solid, mail, className}) =>{
 	const [isHovered, setIsHovered] = useState<boolean>(false);
 	const handleHover = () => setIsHovered(!isHovered);
