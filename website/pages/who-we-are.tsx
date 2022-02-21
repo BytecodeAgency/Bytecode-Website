@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
 import {
@@ -18,7 +18,7 @@ import {
 	responsiveValuesCSS,
 	BreakpointKeyValue,
 	TeamMember,
-	Member, Popup
+	Member,
 } from "@bytecode/components";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
