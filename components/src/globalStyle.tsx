@@ -4,7 +4,12 @@ import theme from "./theme";
 
 export default createGlobalStyle`
   ${normalize}
-  *,
+  *{
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  },
   *:before,
   *:after {
     box-sizing: border-box;
