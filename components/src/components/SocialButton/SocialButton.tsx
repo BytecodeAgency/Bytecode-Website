@@ -7,13 +7,13 @@ const StyledButton = styled.div<{solid?: boolean, className?: string}>`
   	background-color: ${props => props.solid ? `${theme.colors.buttons.primary.background}` : ""};
   	cursor: pointer;
 	color:  ${props => props.solid ? `${theme.colors.buttons.primary.color}` : `${theme.colors.black}`};
-	width: 20px;
-	height: 20px;
+	width: ${props => props.solid ? "20px" : "28px"};
+	height: ${props => props.solid ? "20px" : "28px"};
 	display: grid;
 	align-items: center;
-	padding: 6px;
+	padding: ${props => props.solid ? "6px" : "0"};
 	border: none;
-	border-radius: 20px;
+	border-radius: ${props => props.solid ? "20px" : ""};
 	transition: 0.3s;
 	&:hover {
 		background-color: ${theme.colors.black};
@@ -50,7 +50,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({Icon, link, solid, mail, cla
 			onClick={onClick}
 			solid={solid}
 			className={className}
-		><Icon color={!solid && !isHovered ? theme.colors.black : theme.colors.buttons.primary.color } size={20}/></StyledButton>
+		><Icon color={!solid && !isHovered ? theme.colors.black : theme.colors.buttons.primary.color } size={solid ? 20 : 24}/></StyledButton>
 	);
 };
 

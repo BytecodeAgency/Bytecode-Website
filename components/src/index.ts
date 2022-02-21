@@ -14,3 +14,4 @@ export * from "./helpers/responsiveCss";
 export {default as TeamMember, Popup} from "./components/TeamMember/TeamMember";
 export type {Member} from "./components/TeamMember/TeamMember";
 export {default as SocialButton} from "./components/SocialButton/SocialButton";
+export {default as Footer} from "./components/Footer/Footer";

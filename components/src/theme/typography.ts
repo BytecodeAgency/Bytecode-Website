@@ -26,6 +26,7 @@ const typography = {
 		},
 		margins: "0.1em 0",
 		lineHeights: {
+			h3: "1.3em",
 			h4: "1.7em",
 			h5: "1.4em"
 		}

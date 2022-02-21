@@ -12,8 +12,8 @@ const StyledParagraph = styled.div<TextStylingProps>`
 	margin-bottom: 24px;
 `;
 
-export const Paragraph: React.FC<{ text: string, color?: ThemeColors, className?: string }> = ({ text, color, className }) => (
-	<StyledParagraph className={className} color={color}>{text}</StyledParagraph>
+export const Paragraph: React.FC<{ text: string, color?: ThemeColors, className?: string, onClick?: () => void }> = ({ text, color, className, onClick }) => (
+	<StyledParagraph className={className} color={color} onClick={onClick}>{text}</StyledParagraph>
 );
 
 export type FontWeight = "normal" | "bold";
@@ -45,7 +45,10 @@ const H2 = styled.h2<TextStylingProps>`
 	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black}
 `;
 const H3 = styled.h3<TextStylingProps>`
-
+	font-family: ${theme.typography.heading.font};
+	font-size: ${theme.typography.heading.sizes.h3};
+	margin: ${theme.typography.heading.margins};
+	line-height: ${theme.typography.heading.lineHeights.h3};
 `;
 const H4 = styled.h4<TextStylingProps>`
 	font-family: ${theme.typography.heading.font};
