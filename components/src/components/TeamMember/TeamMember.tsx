@@ -11,6 +11,7 @@ import {Envelope, Github, Linkedin} from "../../icons/icons";
 import SocialButton from "../SocialButton/SocialButton";
 import {BreakpointKeyValue} from "../../theme/layout";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
+import {useWindowSize} from "../../helpers/device";
 
 export interface Member {
     name: string;
@@ -49,7 +50,26 @@ const popupContentResponsiveCSS = () => {
 	};
 	const gridTemplateArea = responsiveValuesCSS("grid-template-areas", "", breakpointNameToPx(gridTemplateAreaValues));
 	const gridRowGap = responsiveValuesCSS("grid-row-gap", "px", breakpointNameToPx({xs: 20, md: 25}));
-	return gridTemplateArea + gridRowGap;
+	const gridTemplateColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "1fr 1fr",
+			lg: "1fr 2fr",
+		}));
+	const gridTemplateRows = responsiveValuesCSS(
+		"grid-template-rows",
+		"",
+		breakpointNameToPx({
+			xs: "auto",
+			md: "50px auto",
+			xl: "48px auto"
+		})
+	);
+	const top = responsiveValuesCSS("top", "%", breakpointNameToPx({xs: 0, xl: 10}));
+	const left = responsiveValuesCSS("left", "%", breakpointNameToPx({xs: 0, xl: 10}));
+	const height = responsiveValuesCSS("height", "", breakpointNameToPx({ xl: "1020px"}));
+	return gridTemplateArea + gridRowGap + gridTemplateColumns + gridTemplateRows + top + left + height;
 };
 const PopupContent = styled(Container)`
 	${popupContentResponsiveCSS};
@@ -57,36 +77,56 @@ const PopupContent = styled(Container)`
 	top: 0;
 	left: 0;
 	background-color: ${theme.colors.white};
-	//margin-top: 80px; for desktop sizes
 	z-index: 101;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
 `;
 
-const popupMenuResponsiveCSS = () => {
-	const position = responsiveValuesCSS("position", "", breakpointNameToPx({xs: "fixed", md: "static"}));
-	const paddingRight = responsiveValuesCSS("padding-right", "px", breakpointNameToPx({xs: 12, md: 0}));
-	return position + paddingRight;
-};
-
-const PopupMenu = styled.div`
-	${popupMenuResponsiveCSS};
-	padding-left: 0;
+const MobilePopupMenu = styled.div`
+	position: fixed;
 	z-index: 9999;
-	display: grid;
-	grid-template-columns: 1fr 48px;
-	padding-top: 25px;
-	height: 75px;
+	display: flex;
+	justify-content: space-between;
 	width: 100%;
+	height: 75px;
 	align-items: center;
 	grid-area: menu;
+	top:0;
+	left:0;
+	background-color: ${theme.colors.white};
+`;
+
+const logoContainerResponsiveCSS = responsiveValuesCSS(
+	"padding-left",
+	"px",
+	breakpointNameToPx({
+		xs: 12,
+		md: 16,
+		lg: 32,
+	}));
+const LogoContainer = styled.div`
+	${logoContainerResponsiveCSS}
+`;
+
+const DesktopPopupMenu = styled.div`
+	height: 48px;
+	padding-top: 25px;
+	z-index: 9999;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	grid-area: menu;
+	background-color: ${theme.colors.white};
 `;
 
 const styledImageResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({xs:75, md: 0}));
 
 const StyledImage = styled.div`
 	${styledImageResponsiveCSS};
+	height: 500px;
+	width: 340px;
 	grid-area: image;
+	position: relative;
+	left: 0;
 `;
 
 const TitleAndName = styled.div`
@@ -100,21 +140,14 @@ const JobTitle = styled(Paragraph)`
 	margin-bottom: 0;
 `;
 
-const aboutContainerResponsiveCSS = responsiveValuesCSS(
-	"padding-left",
-	"px",
-	breakpointNameToPx({
-		xs: 12,
-		md: 0,
-	}));
 const AboutContainer = styled.div`
-	${aboutContainerResponsiveCSS};
+	padding-left: 0;
 	grid-area: about;
 `;
 const SocialsContainer = styled.div`
 	display: grid;
 	padding-right: 80px;
-	grid-template-columns: 113px 1fr;
+	grid-template-columns: 113px 200px;
 	grid-template-rows: 40px 1fr 1fr 1fr 3fr;
 	grid-column-gap: 20px;
 	grid-area: socials
@@ -145,7 +178,7 @@ const Socials: React.FC<{member: Member}> = ({member}) => (
 	<SocialsContainer>
 		<StyledSpacer color="black" reverse/>
 		<SocialsTitle type="h5" text="Focus area"/>
-		{member.focus.map(area => <SocialsFocusArea text={area}/>)}
+		{member.focus.map((area, index) => <SocialsFocusArea key={index} text={area}/>)}
 		<SocialsLinks>
 			{member.github && <SocialButton Icon={Github} link={member.github} solid />}
 			{member.email && <SocialButton Icon={Envelope} link={member.email} solid mail/>}
@@ -160,20 +193,33 @@ interface PopupProps {
 }
 export const Popup: React.FC<PopupProps> = ({member, closePopup, popup}) => {
 	const {name, about, src, jobTitle} = member;
+	const device = useWindowSize();
+	const PopupHeader = () => {
+		if (!device.width || (theme.breakpoints.xl && device.width > theme.breakpoints.xl)) {
+			return (
+				<DesktopPopupMenu>
+					<Hamburger toggled={true} onToggle={closePopup}/>
+				</DesktopPopupMenu>
+			);
+		}
+		return (
+			<MobilePopupMenu >
+				<LogoContainer>
+					<Logo color="black" />
+				</LogoContainer>
+				<Hamburger toggled={true} onToggle={closePopup}/>
+			</MobilePopupMenu>
+		);
+	};
 	return (
 		<>
 			{
 				popup ? (
 					<PopupBackground> {/*Add onclick for closing by clicking on background*/}
 						<PopupContent>
-							<PopupMenu background={theme.colors.white}>
-								<div>
-									<Logo color="black" />
-								</div>
-								<Hamburger toggled={true} onToggle={closePopup}/>
-							</PopupMenu>
+							<PopupHeader />
 							<StyledImage>
-								<Image src={`/images/member-${src}.png`} alt="profile picture" width={390} height={568.75}/>
+								<Image src={`/images/member-${src}.png`} alt="profile picture" layout="fill" objectFit="contain"/>
 							</StyledImage>
 							<TitleAndName>
 								<StyledName text={name} type="h4"/>
