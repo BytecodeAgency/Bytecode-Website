@@ -3,14 +3,28 @@ import styled from "styled-components";
 import {Paragraph} from "../Typography/Typography";
 import {FooterContent} from "../content";
 import Link from "next/link";
+import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
+
+const containerResponsiveCSS = responsiveValuesCSS(
+	"flex-direction",
+	"",
+	breakpointNameToPx({
+		xs: "column",
+		lg: "row"
+	})
+);
 
 const Container = styled.div`
+	${containerResponsiveCSS};
+	grid-area: terms;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-around;
 `;
 
 const StyledParagraph = styled(Paragraph)`
+	
 `;
 
 const TermsAndPolicies = () => {

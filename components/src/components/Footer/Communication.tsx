@@ -6,9 +6,11 @@ import {Paragraph} from "../Typography/Typography";
 import {FooterContent} from "../content";
 
 const Container = styled.div`
+	grid-area: communication;
 	display: flex;
 	flex-direction: column;
 	align-items: start;
+	margin-bottom: 20px;
 `;
 const StyledParagraph = styled(Paragraph)`
 	margin-top: 5px;

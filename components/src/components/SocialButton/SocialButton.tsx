@@ -7,13 +7,13 @@ const StyledButton = styled.div<{solid?: boolean, className?: string}>`
   	background-color: ${props => props.solid ? `${theme.colors.buttons.primary.background}` : ""};
   	cursor: pointer;
 	color:  ${props => props.solid ? `${theme.colors.buttons.primary.color}` : `${theme.colors.black}`};
-	width: ${props => props.solid ? "20px" : "28px"};
-	height: ${props => props.solid ? "20px" : "28px"};
-	display: grid;
+	width: ${props => props.solid ? "22px" : ""};
+	height: ${props => props.solid ? "22px" : ""};
+	display: inline-block;
 	align-items: center;
 	padding: ${props => props.solid ? "6px" : "0"};
 	border: none;
-	border-radius: ${props => props.solid ? "20px" : ""};
+	border-radius: ${props => props.solid ? "22px" : ""};
 	transition: 0.3s;
 	&:hover {
 		background-color: ${theme.colors.black};

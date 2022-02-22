@@ -6,9 +6,10 @@ import React from "react";
 
 const Container = styled.div`
 	display: flex;
+	grid-area: socials;
 `;
 const StyledSocialButton = styled(SocialButton)`
-	padding-right: 10px;
+	padding-right: 15px;
 `;
 
 const Socials = () => (

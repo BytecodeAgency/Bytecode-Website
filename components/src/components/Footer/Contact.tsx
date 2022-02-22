@@ -5,11 +5,23 @@ import Button from "../Button/Button";
 import {LongArrow} from "../../icons/icons";
 import Link from "next/link";
 import {FooterContent} from "../content";
+import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
+
+const containerResponsiveCSS = responsiveValuesCSS(
+	"max-width",
+	"px",
+	breakpointNameToPx({
+		lg: 370,
+	})
+);
 
 const Container = styled.div`
+	${containerResponsiveCSS};
+	grid-area: contact;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 20px;
 `;
 const Title = styled(Heading)`
 	margin-bottom: 15px;

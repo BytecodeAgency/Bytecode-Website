@@ -3,7 +3,9 @@ import styled from "styled-components";
 import {FooterContent} from "../content";
 import {Heading, Paragraph} from "../Typography/Typography";
 
-const Container = styled.div``;
+const Container = styled.div`
+	grid-area: address;
+`;
 const StyledParagraph = styled(Paragraph)`
 	margin-top: 5px;
 	margin-bottom: 0;
@@ -16,10 +18,10 @@ const Address = () => {
 	};
 
 	return (
-		<Container>
-			<Heading type="h4" text={"Office " + FooterContent.office1.name}/>
-			<StyledParagraph text={FooterContent.office1.address} onClick={goToMap} />
-			<StyledParagraph text={FooterContent.office1.zipCode} onClick={goToMap} />
+		<Container onClick={goToMap}>
+			<Heading type="h4" text={"Office " + FooterContent.office1.name} />
+			<StyledParagraph text={FooterContent.office1.address}  />
+			<StyledParagraph text={FooterContent.office1.zipCode} />
 		</Container>
 	);
 };
