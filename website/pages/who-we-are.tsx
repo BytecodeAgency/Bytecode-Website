@@ -372,7 +372,10 @@ const TeamMembersContainer = styled.div`
 	padding-top: 80px;
 	padding-bottom: 80px;
 `;
+
+const teamMembersSpacerResponsiveCSS = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));
 const TeamMembersSpacer = styled(Spacer)`
+	${teamMembersSpacerResponsiveCSS};
 	grid-area: spacer;
 `;
 
