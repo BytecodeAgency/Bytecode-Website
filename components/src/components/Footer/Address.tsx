@@ -5,6 +5,9 @@ import {Heading, Paragraph} from "../Typography/Typography";
 
 const Container = styled.div`
 	grid-area: address;
+	&:hover{
+		cursor: pointer;
+	}
 `;
 const StyledParagraph = styled(Paragraph)`
 	margin-top: 5px;

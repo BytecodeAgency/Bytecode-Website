@@ -24,7 +24,9 @@ const Container = styled.div`
 `;
 
 const StyledParagraph = styled(Paragraph)`
-	
+	&:hover{
+		cursor: pointer;
+	}
 `;
 
 const TermsAndPolicies = () => {
@@ -36,7 +38,7 @@ const TermsAndPolicies = () => {
 			<StyledParagraph text="Terms and conditions" onClick={goToTerms}/>
 			<Link href={FooterContent.links.privacyPolicy}><StyledParagraph text="Privacy Policy" /></Link>
 			<Link href={FooterContent.links.cookiePolicy}><StyledParagraph text="Cookie Policy" /></Link>
-			<StyledParagraph text="© 2022" />
+			<Paragraph text="© 2022" />
 		</Container>
 	);
 };

@@ -15,6 +15,9 @@ const Container = styled.div`
 const StyledParagraph = styled(Paragraph)`
 	margin-top: 5px;
 	margin-bottom: 0;
+	&:hover{
+		cursor: pointer;
+	}
 `;
 
 const Communication = () => {
@@ -27,7 +30,7 @@ const Communication = () => {
 	return (
 		<Container>
 			<IconTitle icon={Envelope} text="Direct communication"/>
-			<StyledParagraph text={FooterContent.email} onClick={goToMail}/>
+			<StyledParagraph text={FooterContent.email} onClick={goToMail} />
 			<StyledParagraph text={FooterContent.number} onClick={goToPhone}/>
 		</Container>
 	);

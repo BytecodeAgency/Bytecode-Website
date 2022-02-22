@@ -6,14 +6,15 @@ import styled from "styled-components";
 const StyledButton = styled.div<{solid?: boolean, className?: string}>`
   	background-color: ${props => props.solid ? `${theme.colors.buttons.primary.background}` : ""};
   	cursor: pointer;
-	color:  ${props => props.solid ? `${theme.colors.buttons.primary.color}` : `${theme.colors.black}`};
-	width: ${props => props.solid ? "22px" : ""};
-	height: ${props => props.solid ? "22px" : ""};
-	display: inline-block;
+	color:  ${props => props.solid ? `${theme.colors.buttons.primary.color}` : `${theme.colors.colorBrand3}`};
+	width: 24px;
+	height: 24px;
+	display: flex;
 	align-items: center;
-	padding: ${props => props.solid ? "6px" : "0"};
+	justify-content: center;
+	padding: 6px;
 	border: none;
-	border-radius: ${props => props.solid ? "22px" : ""};
+	border-radius: 30px;
 	transition: 0.3s;
 	&:hover {
 		background-color: ${theme.colors.black};
@@ -29,7 +30,7 @@ interface SocialButtonProps {
 	mail?: boolean,
 	className?: string,
 }
-// TODO: create proper styling for non-solid social
+// TODO: create proper styling for non-solid social hoven and click
 const SocialButton: React.FC<SocialButtonProps> = ({Icon, link, solid, mail, className}) =>{
 	const [isHovered, setIsHovered] = useState<boolean>(false);
 	const handleHover = () => setIsHovered(!isHovered);
@@ -50,7 +51,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({Icon, link, solid, mail, cla
 			onClick={onClick}
 			solid={solid}
 			className={className}
-		><Icon color={!solid && !isHovered ? theme.colors.black : theme.colors.buttons.primary.color } size={solid ? 20 : 24}/></StyledButton>
+		><Icon color={!solid && !isHovered ? theme.colors.black : theme.colors.buttons.primary.color } size={32}/></StyledButton>
 	);
 };
 
