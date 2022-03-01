@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
-import theme from "./theme/theme";
+import {theme} from "theme";
 
 export default createGlobalStyle`
   ${normalize}

@@ -1,7 +1,7 @@
 import { breakpoints } from "./layout";
 import layout from "./layout";
 import typography from "./typography";
-import { ButtonTypeColors } from "../types/Button.types";
+import { ButtonTypeColors } from "types/Button.types";
 
 const colors = {
 	// Brand

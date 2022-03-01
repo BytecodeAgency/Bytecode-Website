@@ -1,15 +1,10 @@
 import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import {Heading, Paragraph, InitialContainer, Container, Subtitle, Spacer} from "@bytecode/ui-library/components";
-import { Eye, Book, Arrows, PeopleArrows} from "@bytecode/ui-library/icons";
-import { TeamMember, Member, IconTextBlock} from "@bytecode/ui-library/containers";
-import {
-	theme,
-	breakpointNameToPx,
-	responsiveValuesCSS,
-	BreakpointKeyValue,
-} from "@bytecode/ui-library/utils";
+import { Heading, Paragraph, InitialContainer, Container, Subtitle, Spacer } from "@bytecode/ui-library/components";
+import { Eye, Book, Arrows, PeopleArrows } from "@bytecode/ui-library/icons";
+import { TeamMember, Member, IconTextBlock } from "@bytecode/ui-library/containers";
+import { theme, breakpointNameToPx, responsiveValuesCSS, BreakpointKeyValue } from "@bytecode/ui-library/utils";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
 const content = {

@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import Spacer from "../../../../components/Spacer";
-import {Heading, Paragraph} from "../../../../components";
+import Spacer from "components/Spacer";
+import {Heading, Paragraph} from "components/Typography";
 import React from "react";
 import {Member} from "../../TeamMember";
-import SocialButton from "../../../../components/SocialButton";
-import {Envelope, Github, Linkedin} from "../../../../icons";
+import SocialButton from "components/SocialButton";
+import {Envelope, Github, Linkedin} from "icons";
 
 type PopupSocialsProps = {
 	member: Member;

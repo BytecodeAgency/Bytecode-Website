@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import {theme} from "../../../../theme";
+import {theme} from "theme";
 import Hamburger from "hamburger-react";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../../../helpers/responsiveCss";
-import Logo from "../../../../components/Branding";
-import {isWindowDesktop} from "../../../../helpers/device";
+import {breakpointNameToPx, responsiveValuesCSS} from "helpers/responsiveCss";
+import Logo from "components/Branding";
+import {isWindowDesktop} from "helpers/device";
 
 type PopupHeaderProps = {
     closePopup: () => void;

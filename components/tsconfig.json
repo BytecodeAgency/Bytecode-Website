@@ -1,6 +1,15 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "icons": ["./src/icons"],
+      "components/*": ["./src/components/*"],
+      "sections/*": ["./src/sections/*"],
+      "containers/*": ["./src/containers/*"],
+      "theme": ["./src/theme"],
+      "types/*": ["./src/types/*"],
+      "helpers/*": ["./src/helpers/*"]
+    },
     "outDir": "./dist/",
     "sourceMap": true,
     "module": "es2015",

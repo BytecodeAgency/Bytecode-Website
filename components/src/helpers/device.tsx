@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {theme} from "../theme";
+import {theme} from "theme";
 
 interface WindowSize {
     width?: number

@@ -12,7 +12,7 @@
 export {default as Button } from "./Button";
 export * from "./Button";
 
-export {default as Branding} from "./Branding";
+export {default as Logo} from "./Branding";
 export * from "./Branding";
 
 export {default as IconTitle} from "./IconTitle";

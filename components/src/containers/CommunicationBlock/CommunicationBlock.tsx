@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import IconTitle from "../../components/IconTitle/IconTitle";
-import {Envelope} from "../../icons";
-import {Paragraph} from "../../components/Typography/Typography";
-import {footerContent} from "../../components/content";
+import IconTitle from "components/IconTitle";
+import {Envelope} from "icons";
+import {Paragraph} from "components/Typography";
+import {footerContent} from "components/content";
 
 const Container = styled.div`
 	grid-area: communication;

@@ -1,8 +1,7 @@
 import React from "react";
-
-import Logo, { Trademark } from "./Branding";
+import Logo, { Trademark } from "components/Branding";
 import styled from "styled-components";
-import { Arrows, LongArrow, Linkedin, Github, Cars, Envelope, Eye, Handshake, PeopleArrows, Train, Youtube } from "../../icons";
+import { Arrows, LongArrow, Linkedin, Github, Cars, Envelope, Eye, Handshake, PeopleArrows, Train, Youtube } from "icons";
 
 export default {
 	title: "Logo",

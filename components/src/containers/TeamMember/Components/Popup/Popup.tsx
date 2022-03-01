@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../../../helpers/responsiveCss";
-import {Container, Heading, Paragraph} from "../../../../components";
-import {theme} from "../../../../theme";
+import {breakpointNameToPx, responsiveValuesCSS} from "helpers/responsiveCss";
+import { Heading, Paragraph} from "components/Typography";
+import {Container} from "components/Container";
+import {theme} from "theme";
 import React from "react";
 import PopupSocials from "./PopupSocials";
 import PopupHeader from "./PopupHeader";

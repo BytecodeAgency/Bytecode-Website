@@ -1,4 +1,4 @@
-import {IconComponent} from "./icons.type";
+import {IconComponent} from "icons";
 import React from "react";
 
 export const Linkedin: IconComponent = ({ color, size }) => (

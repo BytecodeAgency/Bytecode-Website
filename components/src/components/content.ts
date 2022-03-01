@@ -15,5 +15,4 @@ export const footerContent = {
 		privacyPolicy: "/legal/privacy-policy",
 		cookiePolicy: "/legal/cookie-policy",
 	}
-
 };

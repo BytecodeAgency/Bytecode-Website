@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {Heading} from "../Typography/Typography";
-import { IconComponent } from "src/icons/icons.type";
+import {Heading} from "components/Typography";
+import { IconComponent } from "icons";
 
 const StyledTitle = styled.div`
 	display: flex;

@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import {Container} from "../../components/Container/Container";
+import {Container} from "components/Container";
 import Contact from "./Components/Contact";
-import CommunicationBlock from "../../containers/CommunicationBlock/CommunicationBlock";
-import AddressBlock from "../../containers/AddressBlock/AddressBlock";
+import CommunicationBlock from "containers/CommunicationBlock";
+import AddressBlock from "containers/AddressBlock";
 import TermsAndPolicies from "./Components/TermsAndPolicies";
 import Socials from "./Components/Socials";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
+import {breakpointNameToPx, responsiveValuesCSS} from "helpers/responsiveCss";
 
 const footerContainerResponsiveCSS = () => {
 	const gridTemplateAreas =  responsiveValuesCSS(
