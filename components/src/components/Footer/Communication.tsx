@@ -3,7 +3,7 @@ import styled from "styled-components";
 import IconTitle from "../IconTitle/IconTitle";
 import {Envelope} from "../../icons/icons";
 import {Paragraph} from "../Typography/Typography";
-import {FooterContent} from "../content";
+import {footerContent} from "../content";
 
 const Container = styled.div`
 	grid-area: communication;
@@ -22,16 +22,16 @@ const StyledParagraph = styled(Paragraph)`
 
 const Communication = () => {
 	const goToMail = () => {
-		window.location.href = "mailto:" + FooterContent.email;
+		window.location.href = "mailto:" + footerContent.email;
 	};
 	const goToPhone = () => {
-		window.location.href = "tel:" + FooterContent.number;
+		window.location.href = "tel:" + footerContent.number;
 	};
 	return (
 		<Container>
 			<IconTitle icon={Envelope} text="Direct communication"/>
-			<StyledParagraph text={FooterContent.email} onClick={goToMail} />
-			<StyledParagraph text={FooterContent.number} onClick={goToPhone}/>
+			<StyledParagraph text={footerContent.email} onClick={goToMail} />
+			<StyledParagraph text={footerContent.number} onClick={goToPhone}/>
 		</Container>
 	);
 };

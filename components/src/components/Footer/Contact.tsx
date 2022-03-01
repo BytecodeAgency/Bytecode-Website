@@ -4,7 +4,7 @@ import {Heading} from "../Typography/Typography";
 import Button from "../Button/Button";
 import {LongArrow} from "../../icons/icons";
 import Link from "next/link";
-import {FooterContent} from "../content";
+import {footerContent} from "../content";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 
 const containerResponsiveCSS = responsiveValuesCSS(
@@ -30,7 +30,7 @@ const Title = styled(Heading)`
 const Contact = () => {
 	return (
 		<Container>
-			<Title type="h3" text={FooterContent.slogan}/>
+			<Title type="h3" text={footerContent.slogan}/>
 			<Link href="/contact">
 				<Button type="secondary" text="Let us know!" icon={LongArrow} />
 			</Link>

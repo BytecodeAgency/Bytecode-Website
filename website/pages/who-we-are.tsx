@@ -458,9 +458,9 @@ const memberList: Member[] = [
 		name: "T'iko Alarcón Rivero",
 		jobTitle: "Developer",
 		src: "tiko",
-		about: "Hi, I am T’iko. I am a front-end developer. My colleagues describe me as skilled and a bit nerdy. " +
-			"That is because I love to play video games, especially League of Legends. " +
-			"I am in the final year of my education, and in my spare time, I play with my three longhaired cats.",
+		about: "Hi I am Tiko, I am a front-end developer. I’m currently in my final year of IT at the Hague University of Applied Sciences, " +
+			"where I’m currently busy founding my own startup company with a good friend of mine. I love solving puzzles, coding and design. " +
+			"In my free time I go for hikes and ride my roadbike through the dunes.",
 		focus: ["Development"],
 		github: "https://bytecode.com",
 		email: "https://bytecode.com",

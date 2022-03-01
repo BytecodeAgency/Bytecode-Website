@@ -1,4 +1,4 @@
-export const FooterContent = {
+export const footerContent = {
 	slogan: "What is your challenge or startup idea?",
 	email: "hello@bytecode.nl",
 	number: "015-2024222",
