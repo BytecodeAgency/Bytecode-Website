@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import theme from "../../theme";
+import {theme} from "../../theme";
 import { ButtonStyled } from "./Button.styling";
 import { ButtonProps } from "../../types/Button.types";
 

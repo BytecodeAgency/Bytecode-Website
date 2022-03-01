@@ -1,5 +1,5 @@
 import React, {FunctionComponent, useState} from "react";
-import theme from "../../theme";
+import {theme} from "../../theme";
 import {IconType} from "../../icons/icons.type";
 import styled from "styled-components";
 

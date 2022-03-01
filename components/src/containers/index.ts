@@ -1,0 +1,19 @@
+/*
+* Containers include:
+*   AddressBlock (Textblock with address and link to maps.google of the address)
+*   CommunicationBlock (Textblock with text and links for email and phone contact)
+*   IconTextBlock (Textblock with an Icontitle and a Paragraph)
+*   TeamMember (Container that displays a clickable image of a team member with a popup that dislays more information)
+ */
+
+export {default as AddressBlock} from "./AddressBlock";
+export * from "./AddressBlock";
+
+export {default as CommunicationBlock} from "./CommunicationBlock";
+export * from "./CommunicationBlock";
+
+export {default as IconTextBlock} from "./IconTextBlock";
+export * from "./IconTextBlock";
+
+export {default as TeamMember} from "./TeamMember";
+export * from "./TeamMember";

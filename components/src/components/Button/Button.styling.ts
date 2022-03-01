@@ -1,4 +1,4 @@
-import theme from "../../theme";
+import {theme} from "../../theme";
 import styled from "styled-components";
 import { ButtonStylingProps } from "../../types/Button.types";
 

@@ -1,9 +1,17 @@
 import React from "react";
-import theme from "../../theme";
+import {theme} from "../../theme";
 import { useWindowSize } from "../../helpers/device";
-import { DesktopMenu } from "./DesktopMenu";
-import { MenuInterface } from "./Menu.types";
-import { MobileMenu } from "./MobileMenu";
+import { DesktopMenu } from "./Components/DesktopMenu";
+import { MobileMenu } from "./Components/MobileMenu";
+
+export interface MenuInterface {
+	navLinks: NavLink[]
+}
+
+export interface NavLink {
+	name: string;
+	Link: React.FC;
+}
 
 const Menu: React.FC<MenuInterface> = ({ navLinks }) => {
 	const device = useWindowSize();

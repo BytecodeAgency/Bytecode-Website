@@ -1,7 +1,6 @@
 import React from "react";
-import theme from "../../theme";
+import {theme, ThemeColors} from "../../theme";
 import styled from "styled-components";
-import {ThemeColors} from "../../theme/colors.types";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 
 const StyledParagraph = styled.div<TextStylingProps>`

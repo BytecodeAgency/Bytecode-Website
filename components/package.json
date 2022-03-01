@@ -1,5 +1,5 @@
 {
-  "name": "@bytecode/components",
+  "name": "@bytecode/ui-library",
   "version": "0.1.0-alpha",
   "license": "SEE LICENSE IN LICENSE.md",
   "repository": {
@@ -10,6 +10,22 @@
     "access": "public"
   },
   "main": "./dist/index.js",
+  "exports": {
+    "./utils": "./dist/index.js",
+    "./components": "./dist/components/index.js",
+    "./containers": "./dist/containers/index.js",
+    "./sections": "./dist/sections/index.js",
+    "./icons": "./dist/icons/index.js"
+  },
+  "typesVersions": {
+    "*" : {
+      "utils": ["./dist/index.d.ts"],
+      "components": ["./dist/components/index.d.ts"],
+      "containers": ["./dist/containers/index.d.ts"],
+      "sections": ["./dist/sections/index.d.ts"],
+      "icons": ["./dist/icons/index.d.ts"]
+    }
+  },
   "types": "./dist/index.d.ts",
   "files": [
     "dist",

@@ -22,3 +22,5 @@ export const MenuContainer = styled(Container)`
 export const InitialContainer = styled(Container)`
     padding-top: 100px;
 `;
+
+export default Container;

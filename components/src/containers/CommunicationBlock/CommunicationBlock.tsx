@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import IconTitle from "../IconTitle/IconTitle";
-import {Envelope} from "../../icons/icons";
-import {Paragraph} from "../Typography/Typography";
-import {footerContent} from "../content";
+import IconTitle from "../../components/IconTitle/IconTitle";
+import {Envelope} from "../../icons";
+import {Paragraph} from "../../components/Typography/Typography";
+import {footerContent} from "../../components/content";
 
 const Container = styled.div`
 	grid-area: communication;
@@ -20,7 +20,7 @@ const StyledParagraph = styled(Paragraph)`
 	}
 `;
 
-const Communication = () => {
+const CommunicationBlock = () => {
 	const goToMail = () => {
 		window.location.href = "mailto:" + footerContent.email;
 	};
@@ -36,4 +36,4 @@ const Communication = () => {
 	);
 };
 
-export default Communication;
+export default CommunicationBlock;

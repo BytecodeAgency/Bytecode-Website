@@ -1,5 +1,5 @@
 import React from "react";
-import { Cars,Linkedin } from "../../icons/icons";
+import { Cars,Linkedin } from "../../icons";
 import styled from "styled-components";
 import Button from "./Button";
 
