@@ -1,7 +1,7 @@
 import React from "react";
 import { MainLayoutInterface } from "./Layout.types";
 import Head from "next/head";
-import { GlobalStyles, Menu } from "@bytecode/components";
+import { GlobalStyles, Menu, Footer } from "@bytecode/components";
 import Link from "next/link";
 
 const navLinksHref = [
@@ -45,6 +45,7 @@ const MainLayout: React.FC<MainLayoutInterface> = ({ children, content }) => {
 			<main>
 				{children}
 			</main>
+			<Footer />
 		</>
 	);
 };

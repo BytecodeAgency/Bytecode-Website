@@ -5,9 +5,13 @@
     "scripts": {
         "dev:components": "cd components && yarn dev",
         "dev:website": "cd website && yarn dev",
+        "lint:components": "cd components && yarn lint",
+        "lint:website": "cd website && yarn lint",
         "dev": "yarn dev:components & yarn dev:website",
         "build:components": "cd components && yarn build",
         "build:website": "cd website && yarn build",
-        "build": "yarn build:components & yarn build:website"
+        "build": "yarn build:components & yarn build:website",
+        "lint": "yarn lint:components & yarn lint:website",
+        "lint:fix": "yarn lint:components --fix & yarn lint:website --fix"
     }
 }

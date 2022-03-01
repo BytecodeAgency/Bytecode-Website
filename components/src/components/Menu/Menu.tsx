@@ -7,7 +7,7 @@ import { MobileMenu } from "./MobileMenu";
 
 const Menu: React.FC<MenuInterface> = ({ navLinks }) => {
 	const device = useWindowSize();
-	if (!device.width || device.width > theme.breakpoints.xl) {
+	if (!device.width || (theme.breakpoints.xl && device.width > theme.breakpoints.xl)) {
 		return <DesktopMenu navLinks={navLinks} />;
 	}
 	return (

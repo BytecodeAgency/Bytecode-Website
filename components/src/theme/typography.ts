@@ -3,20 +3,41 @@ const typography = {
 	heading: {
 		font: "\"Avenir\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
 		sizes: {
-			h1: 3.556,
-			h2: 2.667,
-			h3: 1.778,
-			h4: 1.333,
-			h5: 1,
+			h1: {
+				xs: 2.5,
+				sm: 2.5,
+				md: 2.5,
+				lg: 3,
+				xl: 3.556,
+				xxl: 3.556,
+			},
+			h2: {
+				xs: 2,
+				sm: 2,
+				md: 2,
+				lg: 2,
+				xl: 2.667,
+				xxl: 2.667,
+			},
+			h3: "1.778em",
+			h4: "1.333em",
+			h5: "1em",
+			subtitle: "1em"
+		},
+		margins: "0.1em 0",
+		lineHeights: {
+			h3: "1.3em",
+			h4: "1.7em",
+			h5: "1.4em"
 		}
 	},
 	paragraph: {
 		font: "\"Biotif\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
-		lineHeight: 1.556,
+		lineHeight: "1.556em",
 		sizes: {
-			small: .778,
-			normal: 1,
-			large: 1.333,
+			small: ".778em",
+			normal: "1em",
+			large: "1.333em",
 		},
 		weights: {
 			normal: 400,

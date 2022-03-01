@@ -10,4 +10,7 @@ Run the following command in this folder:
 
 ```
 yarn
+yarn dev
+yarn lint
+yarn lint:fix
 ```

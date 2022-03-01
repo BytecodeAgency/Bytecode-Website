@@ -14,6 +14,7 @@ const MobileMenuBarTopContainer = styled(MenuContainer)`
     padding-top: 25px;
     padding-right: 25px;
     height: 75px;
+	z-index: 90;
 `;
 
 const MobileMenuContainer = styled.div`

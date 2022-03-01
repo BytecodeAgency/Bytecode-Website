@@ -3,7 +3,7 @@ import theme from "../../theme";
 import { ButtonStyled } from "./Button.styling";
 import { ButtonProps } from "../../types/Button.types";
 
-const Button: React.FC<ButtonProps> = ({ text, type, icon }) => {
+const Button: React.FC<ButtonProps> = ({ text, type, icon, onClick }) => {
 
 	const [isHovered, setIshovered] = useState<boolean>(false);
 
@@ -39,7 +39,8 @@ const Button: React.FC<ButtonProps> = ({ text, type, icon }) => {
 			hoverBackground={hoverBackground}
 			hoverColor={hoverColor}
 			icon={icon}
-			text={text}>
+			text={text}
+			onClick={onClick}>
 			<RenderInnerContent />
 		</ButtonStyled>
 	);

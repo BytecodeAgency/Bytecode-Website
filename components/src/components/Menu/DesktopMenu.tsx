@@ -10,6 +10,7 @@ const DesktopMenuContainer = styled(MenuContainer)`
     display: grid;
     grid-template-columns: 200px 1fr;
     padding-top: 44px;
+	z-index: 90;
 `;
 
 const NavLinksContainer = styled.div`
