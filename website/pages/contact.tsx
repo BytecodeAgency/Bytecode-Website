@@ -85,7 +85,7 @@ const appointmentContainerResponsiveCSS = () => {
 		"",
 		breakpointNameToPx({
 			xs: "1fr",
-			lg:"2fr 1fr",
+			md: "1fr 300px",
 		})
 	);
 	const gridTemplateAreas = responsiveValuesCSS(
@@ -93,11 +93,14 @@ const appointmentContainerResponsiveCSS = () => {
 		"",
 		breakpointNameToPx({
 			xs: "\"meeting\""+
+				"\"button\""+
 				"\"communication\"",
-			lg: "\"meeting communication\""
+			md: "\"meeting communication\"" +
+				"\"button .\""
 		})
 	);
-	return paddingTop + paddingBottom + gridColumns + gridTemplateAreas;
+	const columnGap = responsiveValuesCSS("column-gap", "px", breakpointNameToPx({ md: 30, lg:130 }));
+	return paddingTop + paddingBottom + gridColumns + gridTemplateAreas + columnGap;
 };
 
 const AppointmentContainer = styled(Container)`
@@ -108,16 +111,23 @@ const AppointmentContainer = styled(Container)`
 
 const MeetingContainer = styled.div`
 	grid-area: meeting;
-	display: grid;
+`;
+
+const StyledMeetingButtonContainer = styled.div`
+	grid-area: button;
 	padding-bottom: 60px;
+	display: grid;
 `;
 
 const StyledMeetingButton = styled(Button)`
 	justify-self: end;
 `;
 
+const styledCommunicationBlockResponsiveCSS = responsiveValuesCSS("justify-self", "", breakpointNameToPx({xs: "start", md: "center"}));
 const StyledCommunicationBlock = styled(CommunicationBlock)`
+	${styledCommunicationBlockResponsiveCSS};
 	grid-area: communication;
+	align-self: center;
 `;
 
 const Appointment = () => (
@@ -129,8 +139,10 @@ const Appointment = () => (
 				Please don’t hesitate to book a meeting with as and see what we can do for you or together!"
 				color="white"
 			/>
-			<StyledMeetingButton type="primary" text="Plan a meeting" icon={LongArrow} />
 		</MeetingContainer>
+		<StyledMeetingButtonContainer>
+			<StyledMeetingButton type="primary" text="Plan a meeting" icon={LongArrow} />
+		</StyledMeetingButtonContainer>
 		<StyledCommunicationBlock color="white"/>
 	</AppointmentContainer>
 );
@@ -169,6 +181,7 @@ const StyledAddressBlock = styled(AddressBlock)`
 
 const RouteContainer = styled.div`
 	grid-area: route;
+	padding-top: 30px;
 `;
 
 const StyledRouteButton = styled(Button)`
