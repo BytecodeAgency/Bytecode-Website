@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import {Paragraph, Heading} from "components/Typography";
-import {theme} from "theme";
+import {Paragraph, Heading} from "../../components/Typography";
+import {theme} from "../../theme";
 import Image from "next/image";
 import Popup from "./Components/Popup";
 

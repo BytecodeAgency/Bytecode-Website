@@ -1,4 +1,4 @@
-import {BreakpointKeyValue, breakpoints} from "theme";
+import {BreakpointKeyValue, breakpoints} from "../theme";
 
 export const responsiveValuesCSS = (
 	cssProp = "margin", // the CSS property to apply to the breakpoints

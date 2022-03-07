@@ -1,7 +1,7 @@
 import React from "react";
-import { Cars,Linkedin } from "icons";
+import { Cars,Linkedin } from "../../icons";
 import styled from "styled-components";
-import Button from "components//Button";
+import Button from "../../components/Button";
 
 export default {
 	title: "Button",

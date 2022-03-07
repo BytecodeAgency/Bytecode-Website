@@ -1,10 +1,10 @@
 import React from "react";
 import { MenuInterface } from "../Menu";
 import styled from "styled-components";
-import Spacer from "components/Spacer";
-import Logo from "components/Branding";
-import {theme} from "theme";
-import { MenuContainer } from "components/Container";
+import Spacer from "../../../components/Spacer";
+import Logo from "../../../components/Branding";
+import {theme} from "../../../theme";
+import { MenuContainer } from "../../../components/Container";
 
 const DesktopMenuContainer = styled(MenuContainer)`
     display: grid;

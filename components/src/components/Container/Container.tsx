@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { layout }from "theme";
-import {breakpointNameToPx, responsiveValuesCSS} from "helpers/responsiveCss";
+import { layout }from "../../theme";
+import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 
 const marginLeft = responsiveValuesCSS("padding-left", "px", breakpointNameToPx(layout.container.margin));
 const marginRight = responsiveValuesCSS("padding-right", "px", breakpointNameToPx(layout.container.margin));

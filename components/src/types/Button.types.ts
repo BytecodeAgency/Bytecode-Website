@@ -1,4 +1,4 @@
-import { IconComponent } from "src/icons/icons.type";
+import { IconComponent } from "../icons/icons.type";
 export type ButtonType = "primary" | "secondary";
 
 export interface ButtonProps {

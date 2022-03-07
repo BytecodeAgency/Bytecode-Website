@@ -21,6 +21,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "module-alias": "^2.2.2",
     "next": "12",
     "next-transpile-modules": "^9.0.0",
     "react": "^17.0.2",

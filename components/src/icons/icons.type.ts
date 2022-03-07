@@ -1,4 +1,4 @@
-import { ThemeColors } from "theme";
+import { ThemeColors } from "../theme";
 
 export type IconSizes = 16 | 20 | 24 | 32 | 64;
 

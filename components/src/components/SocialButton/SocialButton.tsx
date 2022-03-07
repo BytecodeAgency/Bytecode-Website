@@ -1,6 +1,6 @@
 import React, {FunctionComponent, useState} from "react";
-import {theme} from "theme";
-import {IconType} from "icons";
+import {theme} from "../../theme";
+import {IconType} from "../../icons";
 import styled from "styled-components";
 
 const StyledButton = styled.div<{solid?: boolean, className?: string}>`

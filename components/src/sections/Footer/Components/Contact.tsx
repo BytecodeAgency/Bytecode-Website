@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import {Heading} from "components/Typography";
-import Button from "components/Button";
-import {LongArrow} from "icons";
+import {Heading} from "../../../components/Typography";
+import Button from "../../../components/Button";
+import {LongArrow} from "../../../icons";
 import Link from "next/link";
-import {footerContent} from "components/content";
-import {breakpointNameToPx, responsiveValuesCSS} from "helpers/responsiveCss";
+import {footerContent} from "../../../components/content";
+import {breakpointNameToPx, responsiveValuesCSS} from "../../../helpers/responsiveCss";
 
 const containerResponsiveCSS = responsiveValuesCSS(
 	"max-width",

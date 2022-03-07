@@ -1,8 +1,8 @@
 import React from "react";
-import { IconComponent } from "icons";
-import { Paragraph} from "components/Typography";
+import { IconComponent } from "../../icons";
+import { Paragraph} from "../../components/Typography";
 import styled from "styled-components";
-import IconTitle from "components/IconTitle";
+import IconTitle from "../../components/IconTitle";
 
 const StyledContainer = styled.div`
   	padding-right: 15px;

@@ -1,4 +1,4 @@
-import {IconComponent} from "icons";
+import {IconComponent} from "../icons";
 import React from "react";
 
 export const Book: IconComponent = ({ color, size }) => (

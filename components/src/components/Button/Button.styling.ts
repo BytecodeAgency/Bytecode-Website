@@ -1,6 +1,6 @@
-import {theme} from "theme";
+import {theme} from "../../theme";
 import styled from "styled-components";
-import { ButtonStylingProps } from "types/Button.types";
+import { ButtonStylingProps } from "../../types/Button.types";
 
 export const ButtonStyled = styled.div<ButtonStylingProps>`
     padding: 0 1em;

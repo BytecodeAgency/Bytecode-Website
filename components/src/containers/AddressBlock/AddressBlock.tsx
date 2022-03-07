@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {footerContent} from "components/content";
-import {Heading, Paragraph} from "components/Typography";
+import {footerContent} from "../../components/content";
+import {Heading, Paragraph} from "../../components/Typography";
 
 const Container = styled.div`
 	grid-area: address;
