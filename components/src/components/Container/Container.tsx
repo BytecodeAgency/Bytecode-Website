@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import layout from "../../theme/layout";
+import { layout }from "../../theme";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 
 const marginLeft = responsiveValuesCSS("padding-left", "px", breakpointNameToPx(layout.container.margin));
@@ -22,3 +22,5 @@ export const MenuContainer = styled(Container)`
 export const InitialContainer = styled(Container)`
     padding-top: 100px;
 `;
+
+export default Container;

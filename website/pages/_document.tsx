@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { GoogleTagManagerHead, GoogleTagManagerBody } from "helpers/tagManager";
+import { GoogleTagManagerHead, GoogleTagManagerBody } from "../helpers/tagManager";
 
 const Fonts = () => (
 	<>

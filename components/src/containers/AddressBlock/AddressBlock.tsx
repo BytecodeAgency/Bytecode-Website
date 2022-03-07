@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {footerContent} from "../content";
-import {Heading, Paragraph} from "../Typography/Typography";
+import {footerContent} from "../../components/content";
+import {Heading, Paragraph} from "../../components/Typography";
 
 const Container = styled.div`
 	grid-area: address;
@@ -14,8 +14,7 @@ const StyledParagraph = styled(Paragraph)`
 	margin-bottom: 0;
 `;
 
-
-const Address = () => {
+const AddressBlock = () => {
 	const goToMap = () => {
 		window.open("http://maps.google.com/?q=" + footerContent.office1.address + footerContent.office1.zipCode);
 	};
@@ -29,4 +28,4 @@ const Address = () => {
 	);
 };
 
-export default Address;
+export default AddressBlock;

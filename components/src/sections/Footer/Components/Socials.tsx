@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import SocialButton from "../SocialButton/SocialButton";
-import { Instagram, Linkedin, Youtube} from "../../icons/icons";
-import {footerContent} from "../content";
+import SocialButton from "../../../components/SocialButton";
+import { Instagram, Linkedin, Youtube} from "../../../icons";
+import {footerContent} from "../../../components/content";
 import React from "react";
 
 const Container = styled.div`

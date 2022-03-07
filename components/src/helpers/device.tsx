@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {theme} from "../theme";
 
 interface WindowSize {
     width?: number
@@ -22,4 +23,9 @@ export const useWindowSize = () => {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 	return windowSize;
+};
+
+export const isWindowDesktop = () => {
+	const width = useWindowSize().width;
+	return !width || (theme.breakpoints.xl && width > theme.breakpoints.xl);
 };

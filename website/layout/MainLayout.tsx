@@ -1,7 +1,8 @@
 import React from "react";
 import { MainLayoutInterface } from "./Layout.types";
 import Head from "next/head";
-import { GlobalStyles, Menu, Footer } from "@bytecode/components";
+import { GlobalStyles } from "@bytecode/ui-library/utils";
+import {Menu, Footer} from "@bytecode/ui-library/sections";
 import Link from "next/link";
 
 const navLinksHref = [

@@ -16,11 +16,12 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@bytecode/components": "0.1.0-alpha",
+    "@bytecode/ui-library": "0.1.0-alpha",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "module-alias": "^2.2.2",
     "next": "12",
     "next-transpile-modules": "^9.0.0",
     "react": "^17.0.2",

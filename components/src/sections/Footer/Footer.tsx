@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import {Container} from "../Container/Container";
-import Contact from "./Contact";
-import Communication from "./Communication";
-import Address from "./Address";
-import TermsAndPolicies from "./TermsAndPolicies";
-import Socials from "./Socials";
+import {Container} from "../../components/Container";
+import Contact from "./Components/Contact";
+import CommunicationBlock from "../../containers/CommunicationBlock";
+import AddressBlock from "../../containers/AddressBlock";
+import TermsAndPolicies from "./Components/TermsAndPolicies";
+import Socials from "./Components/Socials";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 
 const footerContainerResponsiveCSS = () => {
@@ -68,8 +68,8 @@ const FooterContainer = styled(Container)`
 const Footer = () => (
 	<FooterContainer>
 		<Contact />
-		<Communication />
-		<Address />
+		<CommunicationBlock />
+		<AddressBlock />
 		<Socials />
 		<TermsAndPolicies />
 	</FooterContainer>

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import {Paragraph} from "../Typography/Typography";
-import {footerContent} from "../content";
+import {Paragraph} from "../../../components/Typography";
+import {footerContent} from "../../../components/content";
 import Link from "next/link";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
+import {breakpointNameToPx, responsiveValuesCSS} from "../../../helpers/responsiveCss";
 
 const containerResponsiveCSS = responsiveValuesCSS(
 	"flex-direction",

@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import { Button, InitialContainer } from "@bytecode/components";
+import { InitialContainer, Button } from "@bytecode/ui-library/components";
 import MainLayout from "layout/MainLayout";
 
 const content = {
