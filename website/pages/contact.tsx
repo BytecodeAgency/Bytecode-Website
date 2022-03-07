@@ -1,7 +1,7 @@
 import React from "react";
 import {NextPage} from "next";
 import MainLayout from "../layout/MainLayout";
-import {Button, Container, Heading, InitialContainer, Paragraph} from "@bytecode/ui-library/components";
+import {Button, Container, Heading, InitialContainer, Paragraph, footerContent} from "@bytecode/ui-library/components";
 import { PageIntro } from "@bytecode/ui-library/sections";
 import {breakpointNameToPx, responsiveValuesCSS, theme} from "@bytecode/ui-library/utils";
 import styled from "styled-components";
@@ -176,17 +176,26 @@ const StyledRouteButton = styled(Button)`
 	margin-bottom: 20px;
 `;
 
-const AddressAndRoute = () => (
-	<AddressAndRouteContainer background={theme.colors.colorBrand2}>
-		<StyledAddressBlock large/>
-		<RouteContainer>
-			<Heading type="h3" text="Route"/>
-			<Paragraph text="Are you planning to drop by? Let us know and plan here your route!" />
-			<StyledRouteButton type="secondary" text="Public transport" icon={Train} />
-			<StyledRouteButton type="secondary" text="Plan route" icon={Cars} />
-		</RouteContainer>
-	</AddressAndRouteContainer>
-)
+const AddressAndRoute = () => {
+	const {city, address, number} = footerContent.office1;
+	const goToPublicTransportRoute = () => {
+		window.open("https://www.google.com/maps/dir/?api=1&destination=Bytecode+Digital+Agency+B.V.&travelmode=transit");
+	};
+	const goToMapsRoute = () => {
+		window.open("https://www.google.com/maps/dir/?api=1&destination=Bytecode+Digital+Agency+B.V.");
+	};
+	return(
+		<AddressAndRouteContainer background={theme.colors.colorBrand2}>
+			<StyledAddressBlock large/>
+			<RouteContainer>
+				<Heading type="h3" text="Route"/>
+				<Paragraph text="Are you planning to drop by? Let us know and plan here your route!"/>
+				<StyledRouteButton type="secondary" text="Public transport" icon={Train} onClick={goToPublicTransportRoute}/>
+				<StyledRouteButton type="secondary" text="Plan route" icon={Cars} onClick={goToMapsRoute}/>
+			</RouteContainer>
+		</AddressAndRouteContainer>
+	);
+};
 
 const ContactBody = () => (
 	<div>
