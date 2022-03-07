@@ -4,6 +4,7 @@ import IconTitle from "../../components/IconTitle";
 import {Envelope} from "../../icons";
 import {Paragraph} from "../../components/Typography";
 import {footerContent} from "../../components/content";
+import { ThemeColors } from "../../theme";
 
 const Container = styled.div`
 	grid-area: communication;
@@ -20,7 +21,11 @@ const StyledParagraph = styled(Paragraph)`
 	}
 `;
 
-const CommunicationBlock = () => {
+type CommunicationsBlockProps = {
+	color?: ThemeColors;
+}
+
+const CommunicationBlock = ({color = "black"}: CommunicationsBlockProps) => {
 	const goToMail = () => {
 		window.location.href = "mailto:" + footerContent.email;
 	};
@@ -29,9 +34,9 @@ const CommunicationBlock = () => {
 	};
 	return (
 		<Container>
-			<IconTitle icon={Envelope} text="Direct communication"/>
-			<StyledParagraph text={footerContent.email} onClick={goToMail} />
-			<StyledParagraph text={footerContent.number} onClick={goToPhone}/>
+			<IconTitle icon={Envelope} text="Direct communication" color={color}/>
+			<StyledParagraph text={footerContent.email} onClick={goToMail} color={color}/>
+			<StyledParagraph text={footerContent.number} onClick={goToPhone} color={color}/>
 		</Container>
 	);
 };
