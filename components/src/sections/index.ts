@@ -9,3 +9,6 @@ export * from "./Footer";
 
 export {default as Menu} from "./Menu";
 export * from "./Menu";
+
+export {default as PageIntro} from "./PageIntro";
+export * from "./PageIntro";
