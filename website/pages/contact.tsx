@@ -1,7 +1,7 @@
 import React from "react";
 import {NextPage} from "next";
 import MainLayout from "../layout/MainLayout";
-import {Button, Container, Heading, InitialContainer, Paragraph, footerContent} from "@bytecode/ui-library/components";
+import {Button, Container, Heading, InitialContainer, Paragraph} from "@bytecode/ui-library/components";
 import { PageIntro } from "@bytecode/ui-library/sections";
 import {breakpointNameToPx, responsiveValuesCSS, theme} from "@bytecode/ui-library/utils";
 import styled from "styled-components";
@@ -160,7 +160,7 @@ const Appointment = () => {
 		</Container>
 
 	);
-}
+};
 
 const addressAndRouteContainerResponsiveCSS = () => {
 	const padding = responsiveValuesCSS(
@@ -212,7 +212,6 @@ const StyledRouteButton = styled(Button)`
 `;
 
 const AddressAndRoute = () => {
-	const {city, address, number} = footerContent.office1;
 	const goToPublicTransportRoute = () => {
 		window.open("https://www.google.com/maps/dir/?api=1&destination=Bytecode+Digital+Agency+B.V.&travelmode=transit");
 	};
