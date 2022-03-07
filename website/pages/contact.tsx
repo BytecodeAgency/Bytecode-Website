@@ -165,7 +165,7 @@ const addressAndRouteContainerResponsiveCSS = () => {
 			xs: "120px 0 120px",
 			lg: "220px 50px 220px 50px"
 		})
-	)
+	);
 	const gridColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
@@ -184,7 +184,7 @@ const addressAndRouteContainerResponsiveCSS = () => {
 		})
 	);
 	return padding + gridColumns + gridTemplateAreas;
-}
+};
 
 const AddressAndRouteContainer = styled(Container)`
 	${addressAndRouteContainerResponsiveCSS};

@@ -60,7 +60,7 @@ const footerContainerResponsiveCSS = () => {
 			xs: 80,
 			lg: 150
 		})
-	)
+	);
 	return gridTemplateAreas + gridTemplateRows + gridColumnGaps + marginBottom + paddingTop;
 };
 
