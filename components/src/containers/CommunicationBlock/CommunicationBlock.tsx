@@ -23,9 +23,10 @@ const StyledParagraph = styled(Paragraph)`
 
 type CommunicationsBlockProps = {
 	color?: ThemeColors;
+	className?: string;
 }
 
-const CommunicationBlock = ({color = "black"}: CommunicationsBlockProps) => {
+const CommunicationBlock = ({color = "black", className}: CommunicationsBlockProps) => {
 	const goToMail = () => {
 		window.location.href = "mailto:" + footerContent.email;
 	};
@@ -33,7 +34,7 @@ const CommunicationBlock = ({color = "black"}: CommunicationsBlockProps) => {
 		window.location.href = "tel:" + footerContent.number;
 	};
 	return (
-		<Container>
+		<Container className={className}>
 			<IconTitle icon={Envelope} text="Direct communication" color={color}/>
 			<StyledParagraph text={footerContent.email} onClick={goToMail} color={color}/>
 			<StyledParagraph text={footerContent.number} onClick={goToPhone} color={color}/>
