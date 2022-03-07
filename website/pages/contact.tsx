@@ -8,6 +8,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import {AddressBlock, CommunicationBlock} from "@bytecode/ui-library/containers";
 import {LongArrow} from "@bytecode/ui-library/icons";
+import {Train, Cars} from "@bytecode/ui-library/icons";
 
 const content = {
 	title: "Contact us at Bytecode.",
@@ -43,7 +44,7 @@ const workingImageContainerResponsiveCSS = () => {
 			xl: "48px",
 			xxl: "64px"
 		}));
-	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 25, lg: 300}));
+	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 50, lg: 300}));
 	return imageHeights + imageWidths + left + top;
 };
 
@@ -78,7 +79,7 @@ const Intro = () => (
 
 const appointmentContainerResponsiveCSS = () => {
 	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 80, lg: 300}));
-	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx({ xs: 80, lg: 60}));
+	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx({ xs: 60, lg: 60}));
 	const gridColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
@@ -108,6 +109,7 @@ const AppointmentContainer = styled(Container)`
 const MeetingContainer = styled.div`
 	grid-area: meeting;
 	display: grid;
+	padding-bottom: 60px;
 `;
 
 const StyledMeetingButton = styled(Button)`
@@ -131,12 +133,66 @@ const Appointment = () => (
 		</MeetingContainer>
 		<StyledCommunicationBlock color="white"/>
 	</AppointmentContainer>
+);
+
+const addressAndRouteContainerResponsiveCSS = () => {
+	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 120, lg: 220}));
+	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx({ xs: 120, lg: 220}));
+	const gridColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "1fr",
+			lg:"1fr 1fr",
+		})
+	);
+	const gridTemplateAreas = responsiveValuesCSS(
+		"grid-template-areas",
+		"",
+		breakpointNameToPx({
+			xs: "\"address\""+
+				"\"route\"",
+			lg: "\"address route\""
+		})
+	);
+	return paddingTop + paddingBottom + gridColumns + gridTemplateAreas;
+}
+
+const AddressAndRouteContainer = styled(Container)`
+	${addressAndRouteContainerResponsiveCSS};
+	display: grid;
+`;
+
+const StyledAddressBlock = styled(AddressBlock)`
+	grid-area: address;
+`;
+
+const RouteContainer = styled.div`
+	grid-area: route;
+`;
+
+const StyledRouteButton = styled(Button)`
+	width: 215px;
+	margin-bottom: 20px;
+`;
+
+const AddressAndRoute = () => (
+	<AddressAndRouteContainer background={theme.colors.colorBrand2}>
+		<StyledAddressBlock large/>
+		<RouteContainer>
+			<Heading type="h3" text="Route"/>
+			<Paragraph text="Are you planning to drop by? Let us know and plan here your route!" />
+			<StyledRouteButton type="secondary" text="Public transport" icon={Train} />
+			<StyledRouteButton type="secondary" text="Plan route" icon={Cars} />
+		</RouteContainer>
+	</AddressAndRouteContainer>
 )
 
 const ContactBody = () => (
 	<div>
 		<Intro />
 		<Appointment />
+		<AddressAndRoute />
 	</div>
 );
 
