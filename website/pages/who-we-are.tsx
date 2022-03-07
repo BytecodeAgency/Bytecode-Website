@@ -310,7 +310,6 @@ const TeamMembersContainer = styled.div`
 	${teamMembersContainerResponsiveCSS};
 	display: grid;
 	padding-top: 80px;
-	padding-bottom: 80px;
 `;
 
 const teamMembersSpacerResponsiveCSS = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));
