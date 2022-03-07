@@ -137,25 +137,30 @@ const StyledCommunicationBlock = styled(CommunicationBlock)`
 	align-self: center;
 `;
 
-const Appointment = () => (
-	<Container background={theme.colors.colorBrand3}>
-		<AppointmentContainer>
-			<MeetingContainer>
-				<Heading type="h1" text="Book an appointment" color="white" />
-				<Paragraph
-					text="Do you have an idea you want to tell us about or discuss?
-				Please don’t hesitate to book a meeting with as and see what we can do for you or together!"
-					color="white"
-				/>
-			</MeetingContainer>
-			<StyledMeetingButtonContainer>
-				<StyledMeetingButton type="primary" text="Plan a meeting" icon={LongArrow} />
-			</StyledMeetingButtonContainer>
-			<StyledCommunicationBlock color="white"/>
-		</AppointmentContainer>
-	</Container>
+const Appointment = () => {
+	const goToMeetingPlanner = () => {
+		window.open("https://calendly.com/nickbroekarts-bytecode");
+	};
+	return(
+		<Container background={theme.colors.colorBrand3}>
+			<AppointmentContainer>
+				<MeetingContainer>
+					<Heading type="h1" text="Book an appointment" color="white"/>
+					<Paragraph
+						text="Do you have an idea you want to tell us about or discuss?
+						Please don’t hesitate to book a meeting with as and see what we can do for you or together!"
+						color="white"
+					/>
+				</MeetingContainer>
+				<StyledMeetingButtonContainer>
+					<StyledMeetingButton type="primary" text="Plan a meeting" icon={LongArrow} onClick={goToMeetingPlanner}/>
+				</StyledMeetingButtonContainer>
+				<StyledCommunicationBlock color="white"/>
+			</AppointmentContainer>
+		</Container>
 
-);
+	);
+}
 
 const addressAndRouteContainerResponsiveCSS = () => {
 	const padding = responsiveValuesCSS(
