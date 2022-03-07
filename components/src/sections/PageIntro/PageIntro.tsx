@@ -16,18 +16,19 @@ type PageIntroProps = {
 	subtitle: string;
 	title: string;
 	paragraph: string;
+	columnSizes?: string;
 	image?: ReactNode;
 	//link?: LinkProps; TODO: this variable will be added with the development of the cases page
 }
 
-const introContainerWithImageResponsiveCSS = () => {
+const introContainerWithImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 
 	const gridColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
 		breakpointNameToPx({
 			xs: "3fr 1fr 1fr 1fr;",
-			lg: "1fr 1fr"
+			lg: columnSizes
 		}));
 	const gridRows = responsiveValuesCSS(
 		"grid-template-rows",
@@ -53,8 +54,8 @@ const introContainerWithImageResponsiveCSS = () => {
 	return gridColumns + gridAreas + gridRows;
 };
 
-const IntroContainer = styled.div<{image?: boolean}>`
-	${props => props.image ? introContainerWithImageResponsiveCSS : ""};
+const IntroContainer = styled.div<{image?: boolean, columnSizes?: string}>`
+	${props => props.image ? introContainerWithImageResponsiveCSS(props.columnSizes) : ""};
 	display: grid;
 	align-items: center;
 `;
@@ -72,10 +73,10 @@ const StyledIntroParagraph = styled(Paragraph)`
 	grid-area: paragraph;
 `;
 
-const PageIntro = ({ subtitle, title, paragraph, image }: PageIntroProps) => {
+const PageIntro = ({ subtitle, title, paragraph, image, columnSizes }: PageIntroProps) => {
 
 	return(
-		<IntroContainer image={image != undefined}>
+		<IntroContainer image={image != undefined} columnSizes={columnSizes}>
 			<StyledIntroSubTitle text={subtitle}/>
 			<StyledIntroHeading type="h1" text={title}/>
 			<StyledIntroParagraph text={paragraph}/>

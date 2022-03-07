@@ -31,7 +31,7 @@ const workingImageContainerResponsiveCSS = () => {
 			xs: 300,
 			sm: 400,
 			md: 500,
-			lg: 400,
+			lg: 500,
 			xxl: 500,
 		}));
 	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx({ xs: "100vw", lg: "100%" }));
@@ -73,13 +73,20 @@ const Intro = () => (
 					</WorkingImageContainer>
 				)
 			}
+			columnSizes="3fr 5fr"
 		/>
 	</InitialContainer>
 );
 
 const appointmentContainerResponsiveCSS = () => {
-	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 80, lg: 300}));
-	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx({ xs: 60, lg: 60}));
+	const padding = responsiveValuesCSS(
+		"padding",
+		"",
+		breakpointNameToPx({
+			xs: "80px 0 60px 0",
+			lg: "400px 50px 60px 50px"
+		})
+	);
 	const gridColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
@@ -99,8 +106,8 @@ const appointmentContainerResponsiveCSS = () => {
 				"\"button .\""
 		})
 	);
-	const columnGap = responsiveValuesCSS("column-gap", "px", breakpointNameToPx({ md: 30, lg:130 }));
-	return paddingTop + paddingBottom + gridColumns + gridTemplateAreas + columnGap;
+	const columnGap = responsiveValuesCSS("column-gap", "px", breakpointNameToPx({ md: 30, lg:150, xl: 200, xxl: 300 }));
+	return padding + gridColumns + gridTemplateAreas + columnGap;
 };
 
 const AppointmentContainer = styled(Container)`
@@ -131,31 +138,40 @@ const StyledCommunicationBlock = styled(CommunicationBlock)`
 `;
 
 const Appointment = () => (
-	<AppointmentContainer background={theme.colors.colorBrand3}>
-		<MeetingContainer>
-			<Heading type="h1" text="Book an appointment" color="white" />
-			<Paragraph
-				text="Do you have an idea you want to tell us about or discuss?
+	<Container background={theme.colors.colorBrand3}>
+		<AppointmentContainer>
+			<MeetingContainer>
+				<Heading type="h1" text="Book an appointment" color="white" />
+				<Paragraph
+					text="Do you have an idea you want to tell us about or discuss?
 				Please don’t hesitate to book a meeting with as and see what we can do for you or together!"
-				color="white"
-			/>
-		</MeetingContainer>
-		<StyledMeetingButtonContainer>
-			<StyledMeetingButton type="primary" text="Plan a meeting" icon={LongArrow} />
-		</StyledMeetingButtonContainer>
-		<StyledCommunicationBlock color="white"/>
-	</AppointmentContainer>
+					color="white"
+				/>
+			</MeetingContainer>
+			<StyledMeetingButtonContainer>
+				<StyledMeetingButton type="primary" text="Plan a meeting" icon={LongArrow} />
+			</StyledMeetingButtonContainer>
+			<StyledCommunicationBlock color="white"/>
+		</AppointmentContainer>
+	</Container>
+
 );
 
 const addressAndRouteContainerResponsiveCSS = () => {
-	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 120, lg: 220}));
-	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx({ xs: 120, lg: 220}));
+	const padding = responsiveValuesCSS(
+		"padding",
+		"",
+		breakpointNameToPx({
+			xs: "120px 0 120px",
+			lg: "220px 50px 220px 50px"
+		})
+	)
 	const gridColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
 		breakpointNameToPx({
 			xs: "1fr",
-			lg:"1fr 1fr",
+			md:"1fr 1fr",
 		})
 	);
 	const gridTemplateAreas = responsiveValuesCSS(
@@ -164,10 +180,10 @@ const addressAndRouteContainerResponsiveCSS = () => {
 		breakpointNameToPx({
 			xs: "\"address\""+
 				"\"route\"",
-			lg: "\"address route\""
+			md: "\"address route\""
 		})
 	);
-	return paddingTop + paddingBottom + gridColumns + gridTemplateAreas;
+	return padding + gridColumns + gridTemplateAreas;
 }
 
 const AddressAndRouteContainer = styled(Container)`
@@ -179,9 +195,10 @@ const StyledAddressBlock = styled(AddressBlock)`
 	grid-area: address;
 `;
 
+const routeContainerResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({xs: 30, md: 0}));
 const RouteContainer = styled.div`
+	${routeContainerResponsiveCSS};
 	grid-area: route;
-	padding-top: 30px;
 `;
 
 const StyledRouteButton = styled(Button)`
@@ -198,15 +215,18 @@ const AddressAndRoute = () => {
 		window.open("https://www.google.com/maps/dir/?api=1&destination=Bytecode+Digital+Agency+B.V.");
 	};
 	return(
-		<AddressAndRouteContainer background={theme.colors.colorBrand2}>
-			<StyledAddressBlock large/>
-			<RouteContainer>
-				<Heading type="h3" text="Route"/>
-				<Paragraph text="Are you planning to drop by? Let us know and plan here your route!"/>
-				<StyledRouteButton type="secondary" text="Public transport" icon={Train} onClick={goToPublicTransportRoute}/>
-				<StyledRouteButton type="secondary" text="Plan route" icon={Cars} onClick={goToMapsRoute}/>
-			</RouteContainer>
-		</AddressAndRouteContainer>
+		<Container background={theme.colors.colorBrand2}>
+			<AddressAndRouteContainer>
+				<StyledAddressBlock large/>
+				<RouteContainer>
+					<Heading type="h3" text="Route"/>
+					<Paragraph text="Are you planning to drop by? Let us know and plan here your route!"/>
+					<StyledRouteButton type="secondary" text="Public transport" icon={Train} onClick={goToPublicTransportRoute}/>
+					<StyledRouteButton type="secondary" text="Plan route" icon={Cars} onClick={goToMapsRoute}/>
+				</RouteContainer>
+			</AddressAndRouteContainer>
+		</Container>
+
 	);
 };
 
