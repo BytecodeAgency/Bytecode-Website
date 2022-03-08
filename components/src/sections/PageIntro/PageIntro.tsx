@@ -21,7 +21,31 @@ const introContainerNoImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 			xs: "1fr",
 			lg: columnSizes
 		}));
-	return gridColumns;
+	const paddingTop = responsiveValuesCSS(
+		"padding-top",
+		"px",
+		breakpointNameToPx({
+			lg: 50,
+			xl: 160
+		})
+	);
+	const paddingBottom = responsiveValuesCSS(
+		"padding-bottom",
+		"px",
+		breakpointNameToPx({
+			lg: 50,
+			xl: 70,
+		})
+	);
+	const gridColumnGap = responsiveValuesCSS(
+		"grid-column-gap",
+		"px",
+		breakpointNameToPx({
+			lg: 60,
+			xxl: 100,
+		})
+	);
+	return gridColumns + paddingBottom + paddingTop + gridColumnGap;
 };
 
 const IntroContainer = styled.div<{image?: boolean, columnSizes?: string}>`
@@ -30,6 +54,7 @@ const IntroContainer = styled.div<{image?: boolean, columnSizes?: string}>`
 		: introContainerNoImageResponsiveCSS(props.columnSizes)};
 	display: grid;
 	align-items: center;
+	grid-column-gap: ${props => props.image ? "" : "60px"};
 `;
 
 const StyledIntroSubTitle = styled(Subtitle)`
@@ -49,7 +74,6 @@ const introParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "
 
 const StyledIntroParagraph = styled(Paragraph)`
 	${introParagraphResponsiveCSS};
-	grid-area: paragraph;
 `;
 
 type LeftColumnProps = {
@@ -65,6 +89,22 @@ const LeftColumn = ({subtitle, title, paragraph}: LeftColumnProps) => (
 	</div>
 );
 
+const rightColumnContainerResponsiveCSS = responsiveValuesCSS(
+	"margin-top",
+	"px",
+	breakpointNameToPx({
+		xs:0,
+		lg: 150,
+		xl: 100
+	})
+);
+const RightColumnContainer = styled.div`
+	${rightColumnContainerResponsiveCSS};
+	display: flex;
+	flex-direction: column;
+`;
+
+
 type RightColumnProps = {
 	image?: ReactNode;
 	link?: ReactNode;
@@ -78,12 +118,12 @@ const RightColumn = ({image, link, paragraph}: RightColumnProps) => {
 			</>
 		);
 	}
-	if(link && paragraph){
+	if(!image && paragraph){
 		return (
-			<div>
-				<StyledIntroParagraph text={paragraph}/>
+			<RightColumnContainer>
+				<Paragraph text={paragraph}/>
 				{ link }
-			</div>
+			</RightColumnContainer>
 		);
 	}
 	return null;
@@ -96,12 +136,13 @@ type PageIntroProps = {
 	columnSizes?: string;
 	image?: ReactNode;
 	link?: ReactNode;
+	className?: string;
 }
 
-const PageIntro = ({ subtitle, title, paragraph, image, columnSizes, link }: PageIntroProps) => {
+const PageIntro = ({ subtitle, title, paragraph, image, columnSizes, link, className }: PageIntroProps) => {
 
 	return(
-		<IntroContainer image={image != undefined} columnSizes={columnSizes}>
+		<IntroContainer image={image != undefined} columnSizes={columnSizes} className={className}>
 			<LeftColumn subtitle={subtitle} title={title} paragraph={image ? paragraph : undefined}/>
 			<RightColumn image={image} paragraph={paragraph} link={link} />
 		</IntroContainer>
