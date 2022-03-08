@@ -215,11 +215,26 @@ const ValuesRightColumn = styled.div`
 	justify-content: flex-end;
 `;
 
+const styledValuesSpacerResponsiveCSS = responsiveValuesCSS(
+	"margin-left",
+	"px",
+	breakpointNameToPx({
+		xs: 12,
+		md: 16,
+		lg: 0,
+		xl: 0,
+		xxl: 0
+	}));
+const StyledValuesSpacer = styled(Spacer)`
+	${styledValuesSpacerResponsiveCSS};
+	width: 100%;
+`;
+
 const Values = () => (
 	<Container background={theme.colors.colorBrand3}>
 		<ValuesContainer>
 			<ValuesLeftColumn>
-				<Spacer color="white" bold/>
+				<StyledValuesSpacer color="white" bold/>
 				<StyledValuesHeading type="h2" text="Things we value the most." color="white"/>
 				<StyledValuesParagraph
 					text="Sometimes a narrow collaboration can be like a marriage.
@@ -273,38 +288,62 @@ const Values = () => (
 	</Container>
 );
 
-
 const teamMembersContainerResponsiveCSS = () => {
-	const gridTemplateArea = responsiveValuesCSS(
-		"grid-template-areas",
-		"",
-		breakpointNameToPx({
-			xs: "\"spacer spacer .\"" +
-				"\"text text text\"" +
-				"\"members members members\"",
-			lg: "\"text members\"" +
-				"\". members\""
-		}));
-	const gridTemplateColumns = responsiveValuesCSS(
+	const gridColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
 		breakpointNameToPx({
-			xs: "1fr 2fr 1fr",
+			xs: "1fr",
 			lg: "1fr 1fr"
 		}));
-
-	return gridTemplateArea + gridTemplateColumns;
+	const paddingTop = responsiveValuesCSS(
+		"padding-top",
+		"px",
+		breakpointNameToPx({
+			xs:0,
+			lg: 80,
+			xl: 140,
+		})
+	);
+	const paddingRight = responsiveValuesCSS(
+		"padding-right",
+		"px",
+		breakpointNameToPx({
+			xs: 12,
+			md: 24,
+			lg: 0
+		})
+	);
+	const columnGap = responsiveValuesCSS(
+		"grid-column-gap",
+		"px",
+		breakpointNameToPx({
+			md: 50,
+			xl: 80
+		})
+	);
+	return gridColumns + paddingTop + paddingRight + columnGap;
 };
 const TeamMembersContainer = styled.div`
 	${teamMembersContainerResponsiveCSS};
 	display: grid;
-	padding-top: 80px;
 `;
 
-const teamMembersSpacerResponsiveCSS = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));
+const teamMembersSpacerResponsiveCSS = () => {
+	const display = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));
+	const marginLeft = responsiveValuesCSS(
+		"margin-left",
+		"px",
+		breakpointNameToPx({
+			xs: -12,
+			md: -24,
+		})
+	);
+	return display + marginLeft;
+};
 const TeamMembersSpacer = styled(Spacer)`
 	${teamMembersSpacerResponsiveCSS};
-	grid-area: spacer;
+	margin-top: 80px;
 `;
 
 const teamMembersLeftColumnResponsiveCSS = responsiveValuesCSS(
@@ -312,11 +351,12 @@ const teamMembersLeftColumnResponsiveCSS = responsiveValuesCSS(
 	"",
 	breakpointNameToPx({
 		xs: "0",
-		lg: "50px 30px"
+		lg: "50px 30px",
+		xl: "70px 50px",
+		xxl: "140px 60px"
 	}));
 const TeamMembersLeftColumn = styled.div`
 	${teamMembersLeftColumnResponsiveCSS};
-	grid-area: text;
 `;
 const teamMembersRightColumnResponsiveCSS = responsiveValuesCSS(
 	"grid-template-columns",
@@ -328,10 +368,11 @@ const teamMembersRightColumnResponsiveCSS = responsiveValuesCSS(
 );
 const TeamMembersRightColumn = styled.div`
 	${teamMembersRightColumnResponsiveCSS};
-	grid-area: members;
 	display: grid;
 	justify-items: center;
 	grid-column-gap: 20px;
+	height: 800px;
+	overflow: scroll;
 `;
 const StyledMembersSubtitle = styled(Subtitle)`
 	margin-top: 50px;
@@ -407,31 +448,28 @@ const memberList: Member[] = [
 ];
 
 const TeamMembers = () => (
-	<>
+	<Container>
+		<TeamMembersSpacer color="black" reverse/>
+		<TeamMembersContainer>
+			<TeamMembersLeftColumn>
+				<StyledMembersSubtitle text="The people that make it happen"/>
+				<Heading type="h2" text="Team members" />
+				<StyledMembersParagraph
+					text="If you want to realize your dream, you need to have a good team.
+				That is why our team that consists out of developers, designers, strategists,
+				and marketers love to join your start-up project."
+				/>
+				<Paragraph
+					text="Who are the people that are responsible for
+				building the product of your dreams that fits your customers?"
+				/>
+			</TeamMembersLeftColumn>
 
-		<Container>
-			<TeamMembersContainer>
-				<TeamMembersSpacer color="black" reverse/>
-				<TeamMembersLeftColumn>
-					<StyledMembersSubtitle text="The people that make it happen"/>
-					<Heading type="h2" text="Team members" />
-					<StyledMembersParagraph
-						text="If you want to realize your dream, you need to have a good team.
-					That is why our team that consists out of developers, designers, strategists,
-					and marketers love to join your start-up project."
-					/>
-					<Paragraph
-						text="Who are the people that are responsible for
-					building the product of your dreams that fits your customers?"
-					/>
-				</TeamMembersLeftColumn>
-
-				<TeamMembersRightColumn>
-					{memberList.map((member, index)=><TeamMember key={index} member={member}/>)}
-				</TeamMembersRightColumn>
-			</TeamMembersContainer>
-		</Container>
-	</>
+			<TeamMembersRightColumn>
+				{memberList.map((member, index)=><TeamMember key={index} member={member}/>)}
+			</TeamMembersRightColumn>
+		</TeamMembersContainer>
+	</Container>
 
 );
 
