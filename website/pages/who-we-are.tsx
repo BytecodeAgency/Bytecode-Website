@@ -22,34 +22,19 @@ const WhoWeAre: NextPage = () => {
 };
 
 const workingImageContainerResponsiveCSS = () => {
-	const imageHeights = responsiveValuesCSS(
-		"height",
-		"px",
-		breakpointNameToPx({
-			xs: 300,
-			sm: 400,
-			md: 500,
-			lg: 400,
-			xxl: 500,
-		}));
 	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx({ xs: "100vw", lg: "100%" }));
-	const left = responsiveValuesCSS(
-		"left",
-		"",
-		breakpointNameToPx({
-			xs: "calc(-50vw + 50%);",
-			lg: "32px",
-			xl: "48px",
-			xxl: "64px"
-		}));
-	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 25, lg: 200}));
-	return imageHeights + imageWidths + left + top;
+	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -12, md:-16, lg: 32, xl: 48, xxl: 64}));
+	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 25, lg: 150, xl: 200, xxl: 250}));
+	return imageWidths + top + marginLeft;
 };
 
 const WorkingImageContainer = styled.div`
 	${workingImageContainerResponsiveCSS};
 	position: relative;
-	grid-area: image;
+`;
+
+const StyledImage = styled.img`
+	width: 100%;
 `;
 
 const Intro = () => (
@@ -61,11 +46,9 @@ const Intro = () => (
 			image={
 				(
 					<WorkingImageContainer>
-						<Image
+						<StyledImage
 							src="/images/who-we-are-working.png"
-							layout="fill"
 							alt="Members of Bytecode working"
-							objectFit="contain"
 						/>
 					</WorkingImageContainer>
 				)

@@ -51,7 +51,6 @@ const workingImageContainerResponsiveCSS = () => {
 const WorkingImageContainer = styled.div`
 	${workingImageContainerResponsiveCSS};
 	position: relative;
-	grid-area: image;
 `;
 
 const Intro = () => (
@@ -160,7 +159,7 @@ const Appointment = () => {
 		</Container>
 
 	);
-}
+};
 
 const addressAndRouteContainerResponsiveCSS = () => {
 	const padding = responsiveValuesCSS(

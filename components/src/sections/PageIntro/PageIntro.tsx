@@ -3,26 +3,17 @@ import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveC
 import styled from "styled-components";
 import {Heading, Paragraph, Subtitle} from "../../components";
 
-/*
-type LinkProps = {
-	external?: boolean;
-	url: string;
-	text: string;
-	caption: string;
-}
-TODO: this type will be added with the development of the cases page
- */
-type PageIntroProps = {
-	subtitle: string;
-	title: string;
-	paragraph: string;
-	columnSizes?: string;
-	image?: ReactNode;
-	//link?: LinkProps; TODO: this variable will be added with the development of the cases page
-}
-
 const introContainerWithImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
-
+	const gridColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "1fr",
+			lg: columnSizes
+		}));
+	return gridColumns;
+};
+const introContainerNoImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 	const gridColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
@@ -55,16 +46,25 @@ const introContainerWithImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 };
 
 const IntroContainer = styled.div<{image?: boolean, columnSizes?: string}>`
-	${props => props.image ? introContainerWithImageResponsiveCSS(props.columnSizes) : ""};
+	${props => props.image 
+		? introContainerWithImageResponsiveCSS(props.columnSizes) 
+		: introContainerNoImageResponsiveCSS(props.columnSizes)};
 	display: grid;
 	align-items: center;
 `;
 
 const StyledIntroSubTitle = styled(Subtitle)`
-	grid-area: subtitle;
+	
 `;
+const styledIntroHeadingResponsiveCSS = responsiveValuesCSS(
+	"padding-right",
+	"%",
+	breakpointNameToPx({
+		xs: 30,
+		md: 0
+	}));
 const StyledIntroHeading = styled(Heading)`
-	grid-area: heading;
+	${styledIntroHeadingResponsiveCSS};
 `;
 const introParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx({ xs: 0, lg: 100}));
 
@@ -73,14 +73,63 @@ const StyledIntroParagraph = styled(Paragraph)`
 	grid-area: paragraph;
 `;
 
-const PageIntro = ({ subtitle, title, paragraph, image, columnSizes }: PageIntroProps) => {
+type LeftColumnProps = {
+	subtitle: string;
+	title: string;
+	paragraph?: string;
+};
+const LeftColumn = ({subtitle, title, paragraph}: LeftColumnProps) => (
+	<div>
+		<StyledIntroSubTitle text={subtitle} />
+		<StyledIntroHeading type="h1" text={title} />
+		{paragraph && <StyledIntroParagraph text={paragraph} />}
+	</div>
+);
+
+
+type RightColumnProps = {
+	image?: ReactNode;
+	link?: ReactNode;
+	paragraph?: string;
+};
+const RightColumn = ({image, link, paragraph}: RightColumnProps) => {
+	if(image){
+		return (
+			<>
+				{image}
+			</>
+		);
+	}
+	if(link && paragraph){
+		return (
+			<div>
+				<StyledIntroParagraph text={paragraph}/>
+				{ link }
+			</div>
+		);
+	}
+	return null;
+};
+
+/*
+
+TODO: this type will be added with the development of the cases page
+ */
+type PageIntroProps = {
+	subtitle: string;
+	title: string;
+	paragraph: string;
+	columnSizes?: string;
+	image?: ReactNode;
+	link?: ReactNode;
+}
+
+const PageIntro = ({ subtitle, title, paragraph, image, columnSizes, link }: PageIntroProps) => {
 
 	return(
 		<IntroContainer image={image != undefined} columnSizes={columnSizes}>
-			<StyledIntroSubTitle text={subtitle}/>
-			<StyledIntroHeading type="h1" text={title}/>
-			<StyledIntroParagraph text={paragraph}/>
-			{image}
+			<LeftColumn subtitle={subtitle} title={title} paragraph={image ? paragraph : undefined}/>
+			<RightColumn image={image} paragraph={paragraph} link={link} />
 		</IntroContainer>
 	);
 };
