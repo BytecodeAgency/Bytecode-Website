@@ -3,25 +3,8 @@ import {theme, ThemeColors} from "../../theme";
 import styled from "styled-components";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 
-const StyledParagraph = styled.div<TextStylingProps>`
-    font-family: ${theme.typography.paragraph.font};
-    font-size: ${props => props.large ? theme.typography.paragraph.sizes.large : theme.typography.paragraph.sizes.normal};
-	line-height: ${theme.typography.paragraph.lineHeight};
-	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black};
-	margin-bottom: 24px;
-`;
-
-export const Paragraph: React.FC<{ text: string, color?: ThemeColors, className?: string, onClick?: () => void, large?: boolean }> = ({ large, text, color, className, onClick }) => (
-	<StyledParagraph className={className} color={color} onClick={onClick} large={large}>{text}</StyledParagraph>
-);
-
 export type FontWeight = "normal" | "bold";
 export type HeadingType = "h1" | "h2" | "h3" | "h4" | "h5";
-
-export const Heading: React.FC<{ type: HeadingType, text: string, color?: ThemeColors, className?: string }> = ({ type, text, color, className }) => {
-	const Element = lookup[type];
-	return <Element className={className} color={color}>{text}</Element>;
-};
 
 interface TextStylingProps{
 	color?: ThemeColors;
@@ -29,6 +12,49 @@ interface TextStylingProps{
 	className?: string;
 	large?: boolean;
 }
+
+type TypographyProps = {
+	text: string;
+	color?: ThemeColors;
+	onClick?: () => void;
+	className?: string;
+}
+
+interface ParagraphProps extends TypographyProps {
+	large?: boolean;
+	fontWeight?: FontWeight;
+}
+
+interface SubtitleProps extends TypographyProps {
+	fontWeight?: FontWeight;
+}
+
+interface HeadingProps extends TypographyProps {
+	type: HeadingType;
+}
+
+const StyledParagraph = styled.div<TextStylingProps>`
+    font-family: ${theme.typography.paragraph.font};
+    font-size: ${props => props.large ? theme.typography.paragraph.sizes.large : theme.typography.paragraph.sizes.normal};
+	line-height: ${theme.typography.paragraph.lineHeight};
+	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black};
+	margin-bottom: 24px;
+	font-weight: ${props => props.fontWeight ? theme.typography.paragraph.weights[props.fontWeight] : theme.typography.paragraph.weights.normal};
+`;
+export const Paragraph = ({ large, text, color, className, onClick, fontWeight }: ParagraphProps) => (
+	<StyledParagraph
+		className={className}
+		color={color}
+		onClick={onClick}
+		large={large}
+		fontWeight={fontWeight}
+	>{text}</StyledParagraph>
+);
+
+export const Heading = ({ type, text, color, className }: HeadingProps) => {
+	const Element = lookup[type];
+	return <Element className={className} color={color}>{text}</Element>;
+};
 
 const h1FontSizes = responsiveValuesCSS("font-size", "em", breakpointNameToPx(theme.typography.heading.sizes.h1));
 const h2FontSizes = responsiveValuesCSS("font-size", "em", breakpointNameToPx(theme.typography.heading.sizes.h2));
@@ -80,6 +106,10 @@ const StyledSubtitle = styled.p<TextStylingProps>`
 	font-weight: ${props => props.fontWeight ? theme.typography.paragraph.weights[props.fontWeight] : theme.typography.paragraph.weights.normal};
 `;
 
-export const Subtitle: React.FC<{text: string, color?: ThemeColors, fontWeight?: FontWeight, className?: string}> = ({text, color, fontWeight, className}) => (
-	<StyledSubtitle className={className} color={color} fontWeight={fontWeight}>{text}</StyledSubtitle>
+export const Subtitle = ({text, color, fontWeight, className}: SubtitleProps) => (
+	<StyledSubtitle
+		className={className}
+		color={color}
+		fontWeight={fontWeight}
+	>{text}</StyledSubtitle>
 );

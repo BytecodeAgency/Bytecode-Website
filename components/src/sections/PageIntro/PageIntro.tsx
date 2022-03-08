@@ -18,31 +18,10 @@ const introContainerNoImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 		"grid-template-columns",
 		"",
 		breakpointNameToPx({
-			xs: "3fr 1fr 1fr 1fr;",
+			xs: "1fr",
 			lg: columnSizes
 		}));
-	const gridRows = responsiveValuesCSS(
-		"grid-template-rows",
-		"",
-		breakpointNameToPx({
-			xs: "auto",
-			lg: "100px 130px 200px",
-			xl: "150px 130px 200px"
-		}));
-	const gridAreas = responsiveValuesCSS(
-		"grid-template-areas",
-		"",
-		breakpointNameToPx({
-			xs: "\"subtitle subtitle . .\" " +
-				"\"heading heading . .\" " +
-				"\"paragraph paragraph paragraph.\" " +
-				"\"image image image image\"",
-			lg: "\"subtitle image\" " +
-				"\"heading image\" " +
-				"\"paragraph image\" "
-		}));
-
-	return gridColumns + gridAreas + gridRows;
+	return gridColumns;
 };
 
 const IntroContainer = styled.div<{image?: boolean, columnSizes?: string}>`
@@ -86,7 +65,6 @@ const LeftColumn = ({subtitle, title, paragraph}: LeftColumnProps) => (
 	</div>
 );
 
-
 type RightColumnProps = {
 	image?: ReactNode;
 	link?: ReactNode;
@@ -111,10 +89,6 @@ const RightColumn = ({image, link, paragraph}: RightColumnProps) => {
 	return null;
 };
 
-/*
-
-TODO: this type will be added with the development of the cases page
- */
 type PageIntroProps = {
 	subtitle: string;
 	title: string;
