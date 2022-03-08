@@ -57,67 +57,73 @@ const Intro = () => (
 	</InitialContainer>
 );
 const competencesContainerResponsiveCSS = () => {
-	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 80, lg: 200 }));
+	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 80, lg: 200, xl: 240, xxl: 300 }));
 	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx({ xs: 80, lg: 60}));
-	const gridColumns = responsiveValuesCSS(
-		"grid-template-columns",
-		"",
-		breakpointNameToPx({
-			xs: "1fr 3fr 1fr",
-			lg: "200px 200px 100px 1fr",
-			xl: "250px 200px 200px 1fr",
-		}));
-	const gridTemplateAreas = responsiveValuesCSS(
-		"grid-template-areas",
-		"",
-		breakpointNameToPx({
-			xs: "\". spacer spacer\" " +
-				"\"title title .\" " +
-				"\"icon-block icon-block icon-block\"",
-			lg: "\". spacer spacer spacer\" " +
-				"\". title title . \" " +
-				"\". . icon-block icon-block\"",
-		}));
-
-	return paddingTop + gridColumns + gridTemplateAreas + paddingBottom;
+	const paddingLeft = responsiveValuesCSS("padding-left", "%", breakpointNameToPx({ lg: 10, xl: 10}));
+	return paddingTop + paddingBottom + paddingLeft;
 };
+
 const CompetencesContainer = styled.div`
 	${competencesContainerResponsiveCSS};
-	padding-bottom: 80px;
-	display: grid;
-	grid-template-rows: auto;
 `;
+const styledCompetencesSpacerResponsiveCSS = responsiveValuesCSS(
+	"margin-left",
+	"px",
+	breakpointNameToPx({
+		xs: 12,
+		md: 16,
+		lg: 32,
+		xl: 48,
+		xxl: 64
+	}));
 const StyledCompetencesSpacer = styled(Spacer)`
-	grid-area: spacer;
+	${styledCompetencesSpacerResponsiveCSS};
+	width: 100%;
 `;
-const compentencesHeadingResponsiveCSS = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({xs: 0, lg: 40}));
+const spacerContainerResponsiveCSS = responsiveValuesCSS(
+	"padding-left",
+	"%",
+	breakpointNameToPx({
+		xs: 20,
+		md: 0
+	})
+);
+const SpacerContainer = styled.div`
+	${spacerContainerResponsiveCSS};
+`;
+const compentencesHeadingResponsiveCSS = () => {
+	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({xs: 0, md: 30, lg: 40, xl: 60}));
+	const width = responsiveValuesCSS("width", "%", breakpointNameToPx({xs: 90, lg: 35, xl: 40, xxl: 35}));
+	return marginLeft + width;
+};
 const StyledCompentencesHeading = styled(Heading)`
 	${compentencesHeadingResponsiveCSS};
-	grid-area: title;
-	margin-top: 50px;
+	margin-top: 30px;
 	margin-bottom: 20px;
 `;
 
 const iconBlocksContainerResponsiveCSS = () => {
 	const values: BreakpointKeyValue = {
 		xs: "auto",
-		lg: "1fr 1fr"
+		md: "1fr 1fr"
 	};
 	const columns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(values));
 	const rows = responsiveValuesCSS("grid-template-rows", "", breakpointNameToPx(values));
-	return columns + rows;
+	const paddingLeft = responsiveValuesCSS("padding-left", "%", breakpointNameToPx({xs:0, lg: 15, xl: 20}));
+	return columns + rows + paddingLeft;
 };
 const IconBlocksContainer = styled.div`
 	${iconBlocksContainerResponsiveCSS};
 	display: grid;
-	grid-area: icon-block;
-	grid-column-gap: 60px;
+	grid-column-gap: 20px;
 `;
 
 const Competences = () => (
 	<Container>
 		<CompetencesContainer>
-			<StyledCompetencesSpacer color="black"/>
+			<SpacerContainer>
+				<StyledCompetencesSpacer color="black"/>
+			</SpacerContainer>
 			<StyledCompentencesHeading type="h2" text="What we bring to the table." />
 			<IconBlocksContainer>
 				<IconTextBlock
