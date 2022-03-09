@@ -7,6 +7,7 @@ import { TeamMember, Member, IconTextBlock } from "@bytecode/ui-library/containe
 import { theme, breakpointNameToPx, responsiveValuesCSS, BreakpointKeyValue } from "@bytecode/ui-library/utils";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
+import {PageIntro} from "@bytecode/ui-library/sections";
 const content = {
 	title: "Who is Bytecode?",
 	metaDescription: "Bytecode is a technical partner and CTO for technology based start-ups."
@@ -20,44 +21,6 @@ const WhoWeAre: NextPage = () => {
 	);
 };
 
-const introContainerResponsiveCSS = () => {
-
-	const gridColumns = responsiveValuesCSS(
-		"grid-template-columns",
-		"",
-		breakpointNameToPx({
-			xs: "3fr 1fr 1fr 1fr;",
-			lg: "1fr 1fr"
-		}));
-	const gridRows = responsiveValuesCSS(
-		"grid-template-rows",
-		"",
-		breakpointNameToPx({
-			xs: "auto",
-			lg: "100px 130px 200px",
-			xl: "150px 130px 200px"
-		}));
-	const gridAreas = responsiveValuesCSS(
-		"grid-template-areas",
-		"",
-		breakpointNameToPx({
-			xs: "\"subtitle subtitle . .\" " +
-				"\"heading heading . .\" " +
-				"\"paragraph paragraph paragraph.\" " +
-				"\"image image image image\"",
-			lg: "\"subtitle image\" " +
-				"\"heading image\" " +
-				"\"paragraph image\" "
-		}));
-
-	return gridColumns + gridAreas + gridRows;
-};
-
-const IntroContainer = styled.div`
-	${introContainerResponsiveCSS};
-	display: grid;
-	align-items: center;
-`;
 const workingImageContainerResponsiveCSS = () => {
 	const imageHeights = responsiveValuesCSS(
 		"height",
@@ -88,34 +51,26 @@ const WorkingImageContainer = styled.div`
 	position: relative;
 	grid-area: image;
 `;
-const StyledIntroSubTitle = styled(Subtitle)`
-	grid-area: subtitle;
-`;
-const StyledIntroHeading = styled(Heading)`
-	grid-area: heading;
-`;
-const introParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx({ xs: 0, lg: 100}));
-
-const StyledIntroParagraph = styled(Paragraph)`
-	${introParagraphResponsiveCSS};
-	grid-area: paragraph;
-`;
 
 const Intro = () => (
 	<InitialContainer background={theme.colors.colorBrand2}>
-		<IntroContainer>
-			<StyledIntroSubTitle text="Who are we?"/>
-			<StyledIntroHeading type="h1" text="Meet the people in the team."/>
-			<StyledIntroParagraph text="Learn what defines use as a team, as a company and who we personally are" />
-			<WorkingImageContainer>
-				<Image
-					src="/images/who-we-are-working.png"
-					layout="fill"
-					alt="Members of Bytecode working"
-					objectFit="contain"
-				/>
-			</WorkingImageContainer>
-		</IntroContainer>
+		<PageIntro
+			subtitle="Who are we?"
+			title="Meet the people in the team."
+			paragraph="Learn what defines use as a team, as a company and who we personally are"
+			image={
+				(
+					<WorkingImageContainer>
+						<Image
+							src="/images/who-we-are-working.png"
+							layout="fill"
+							alt="Members of Bytecode working"
+							objectFit="contain"
+						/>
+					</WorkingImageContainer>
+				)
+			}
+		/>
 	</InitialContainer>
 );
 const competencesContainerResponsiveCSS = () => {
@@ -355,7 +310,6 @@ const TeamMembersContainer = styled.div`
 	${teamMembersContainerResponsiveCSS};
 	display: grid;
 	padding-top: 80px;
-	padding-bottom: 80px;
 `;
 
 const teamMembersSpacerResponsiveCSS = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));

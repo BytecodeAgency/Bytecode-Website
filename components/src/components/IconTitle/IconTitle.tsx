@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {Heading} from "../../components/Typography";
 import { IconComponent } from "../../icons";
+import {ThemeColors} from "../../theme";
 
 const StyledTitle = styled.div`
 	display: flex;
@@ -16,14 +17,15 @@ const StyledHeading = styled(Heading)`
 type IconTitleProps = {
     icon: IconComponent;
     text: string;
+	color?: ThemeColors;
 }
 
-const IconTitle = ({icon, text}: IconTitleProps) => {
+const IconTitle = ({icon, text, color="black"}: IconTitleProps) => {
 	const Icon = icon;
 	return (
 		<StyledTitle>
-			<Icon color="black" size={20}/>
-			<StyledHeading type="h4" text={text}/>
+			<Icon color={color} size={20}/>
+			<StyledHeading type="h4" text={text} color={color}/>
 		</StyledTitle>
 	);
 };

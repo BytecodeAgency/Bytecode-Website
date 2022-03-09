@@ -4,8 +4,10 @@ export const footerContent = {
 	number: "015-2024222",
 	office1: {
 		name: "The Hague",
-		address: "Wilhelmina van Pruisenweg 35, ",
-		zipCode: "2595 AN Den Haag",
+		address: "Wilhelmina van Pruisenweg",
+		number: "35",
+		zipCode: "2595 AN",
+		city: "Den Haag",
 	},
 	links: {
 		linkedin: "https://www.linkedin.com/company/bytecodeagency",

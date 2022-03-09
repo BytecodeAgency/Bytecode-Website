@@ -5,14 +5,14 @@ import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveC
 
 const StyledParagraph = styled.div<TextStylingProps>`
     font-family: ${theme.typography.paragraph.font};
-    font-size: ${theme.typography.paragraph.sizes.normal};
+    font-size: ${props => props.large ? theme.typography.paragraph.sizes.large : theme.typography.paragraph.sizes.normal};
 	line-height: ${theme.typography.paragraph.lineHeight};
 	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black};
 	margin-bottom: 24px;
 `;
 
-export const Paragraph: React.FC<{ text: string, color?: ThemeColors, className?: string, onClick?: () => void }> = ({ text, color, className, onClick }) => (
-	<StyledParagraph className={className} color={color} onClick={onClick}>{text}</StyledParagraph>
+export const Paragraph: React.FC<{ text: string, color?: ThemeColors, className?: string, onClick?: () => void, large?: boolean }> = ({ large, text, color, className, onClick }) => (
+	<StyledParagraph className={className} color={color} onClick={onClick} large={large}>{text}</StyledParagraph>
 );
 
 export type FontWeight = "normal" | "bold";
@@ -27,6 +27,7 @@ interface TextStylingProps{
 	color?: ThemeColors;
 	fontWeight?: FontWeight;
 	className?: string;
+	large?: boolean;
 }
 
 const h1FontSizes = responsiveValuesCSS("font-size", "em", breakpointNameToPx(theme.typography.heading.sizes.h1));

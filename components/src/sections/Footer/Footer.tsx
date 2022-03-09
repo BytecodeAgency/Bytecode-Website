@@ -53,8 +53,15 @@ const footerContainerResponsiveCSS = () => {
 			lg: 20
 		})
 	);
-
-	return gridTemplateAreas + gridTemplateRows + gridColumnGaps + marginBottom;
+	const paddingTop = responsiveValuesCSS(
+		"padding-top",
+		"px",
+		breakpointNameToPx({
+			xs: 80,
+			lg: 150
+		})
+	);
+	return gridTemplateAreas + gridTemplateRows + gridColumnGaps + marginBottom + paddingTop;
 };
 
 const FooterContainer = styled(Container)`
