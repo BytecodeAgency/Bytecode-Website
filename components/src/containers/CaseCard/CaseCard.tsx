@@ -34,7 +34,6 @@ const StyledImage = styled.img`
 	mask-position: center;
 `;
 
-
 const StyledSubtitle = styled(Subtitle)`
 	text-transform: capitalize;
 `;

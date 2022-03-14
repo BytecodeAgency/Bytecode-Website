@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {theme} from "../theme";
+import { BreakpointName, theme} from "../theme";
 
 interface WindowSize {
     width?: number
@@ -28,4 +28,9 @@ export const useWindowSize = () => {
 export const isWindowDesktop = () => {
 	const width = useWindowSize().width;
 	return !width || (theme.breakpoints.xl && width > theme.breakpoints.xl);
+};
+
+export const isWindowSizeBiggerThan = (size: BreakpointName) => {
+	const width = useWindowSize().width;
+	return !width || (theme.breakpoints[size] && width > theme.breakpoints[size]);
 };

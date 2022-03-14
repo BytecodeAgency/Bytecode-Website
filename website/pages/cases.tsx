@@ -4,8 +4,8 @@ import {NextPage} from "next";
 import MainLayout from "../layout/MainLayout";
 import {Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, Subtitle} from "@bytecode/ui-library/components";
 import {PageIntro} from "@bytecode/ui-library/sections";
-import {theme, breakpointNameToPx, responsiveValuesCSS} from "@bytecode/ui-library/utils";
-import {CaseCard} from "@bytecode/ui-library/containers";
+import {theme, breakpointNameToPx, responsiveValuesCSS, isWindowSizeBiggerThan} from "@bytecode/ui-library/utils";
+import { CaseCard } from "@bytecode/ui-library/containers";
 
 const content = {
 	title: "Cases of Bytecode",
@@ -110,12 +110,25 @@ const CasesOverviewContainer = styled.div`
 `;
 
 const CasesOverviewLeftColumn = styled.div`
-	display: grid;
+	display: flex;
+	flex-direction: column;
 `;
 
-const StyledArrowLink = styled(ArrowLink)`
-	justify-self: end;
+const LinkContainer = styled.div`
+	align-self: flex-end;
+`;
+
+const DesktopLinkParagraph = styled(Paragraph)`
+	margin: 10px 0;
+`;
+
+const DesktopArrowLink = styled(ArrowLink)`
 	margin-bottom: 60px;
+`;
+
+const MobileArrowLink = styled(ArrowLink)`
+	margin-bottom: 60px;
+	align-self: flex-end;
 `;
 
 const casesOverviewRightColumnResponsiveCSS = responsiveValuesCSS(
@@ -174,7 +187,16 @@ const CasesOverview = () => (
 			<CasesOverviewLeftColumn>
 				<Subtitle text="Selection of projects" />
 				<Heading type="h2" text="Take a look at a few projects we have worked on. Will yours be next?" />
-				<StyledArrowLink onClick={()=>console.log("goToServicesPage")} text="What we do" />
+
+				{
+					isWindowSizeBiggerThan("lg") ?
+						<LinkContainer>
+							<DesktopLinkParagraph text="Find out what we do" />
+							<DesktopArrowLink onClick={()=>console.log("goToServicesPage")} text="Our services" />
+						</LinkContainer>
+						: <MobileArrowLink onClick={()=>console.log("goToServicesPage")} text="What we do"/>
+				}
+
 			</CasesOverviewLeftColumn>
 			<CasesOverviewRightColumn>
 				{
