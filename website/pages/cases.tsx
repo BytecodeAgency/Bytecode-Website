@@ -81,8 +81,7 @@ const casesOverviewContainerResponsiveCSS = () => {
 		"",
 		breakpointNameToPx({
 			xs: "1fr",
-			lg: "1fr 650px",
-			xl: "1fr 650px",
+			lg: "1fr 680px",
 		}));
 	const paddingTop = responsiveValuesCSS(
 		"padding-top",
@@ -101,7 +100,15 @@ const casesOverviewContainerResponsiveCSS = () => {
 			xl: 80
 		})
 	);
-	return gridColumns + paddingTop  + columnGap;
+	const justifyItems = responsiveValuesCSS(
+		"justify-items",
+		"",
+		breakpointNameToPx({
+			xs: "center",
+			lg: "flex-start"
+		})
+	);
+	return gridColumns + paddingTop + columnGap + justifyItems;
 };
 const CasesOverviewContainer = styled.div`
 	${casesOverviewContainerResponsiveCSS};
@@ -143,10 +150,9 @@ const CasesOverviewRightColumn = styled.div`
 	${casesOverviewRightColumnResponsiveCSS};
 	display: grid;
 	justify-items: center;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
 	height: 800px;
 	overflow: scroll;
+	
 `;
 
 type Case = {
