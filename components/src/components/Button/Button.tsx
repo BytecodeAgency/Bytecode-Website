@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import {theme} from "../../theme";
 import { ButtonStyled } from "./Button.styling";
 import { ButtonProps } from "../../types/Button.types";
+import {WithStyle} from "../../types/utils";
 
-const Button: React.FC<ButtonProps> = ({ text, type, icon, onClick , className}) => {
+const Button = ({ text, type, icon, onClick , className}: WithStyle<ButtonProps>) => {
 
 	const [isHovered, setIshovered] = useState<boolean>(false);
 

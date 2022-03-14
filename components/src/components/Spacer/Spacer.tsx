@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {WithStyle} from "../../types/utils";
 
 const SpacerStyling = styled.div<{ color: SpacerColor, bold?: boolean, reverse?: boolean }>`
     width: 100%;
@@ -21,12 +22,11 @@ const SpacerStyling = styled.div<{ color: SpacerColor, bold?: boolean, reverse?:
 type SpacerColor = "black" | "white";
 interface SpacerProps {
     color: SpacerColor;
-    className?: string;
     bold?: boolean;
     reverse?: boolean
 }
 
-const Spacer: React.FC<SpacerProps> = ({ color, className, bold, reverse }) => {
+const Spacer = ({ color, className, bold, reverse }: WithStyle<SpacerProps>) => {
 	return <SpacerStyling className={className} color={color} bold={bold} reverse={reverse} />;
 };
 

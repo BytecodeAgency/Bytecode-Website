@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {footerContent} from "../../components/content";
 import {Heading, Paragraph} from "../../components/Typography";
+import {WithStyle} from "../../types/utils";
 
 const Container = styled.div`
 	grid-area: address;
@@ -15,11 +16,10 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 type AddressBlockProps = {
-	className?: string;
 	large?: boolean;
 }
 
-const AddressBlock = ({className, large}: AddressBlockProps) => {
+const AddressBlock = ({className, large}: WithStyle<AddressBlockProps>) => {
 	const {name, address, number, city, zipCode} = footerContent.office1;
 	const goToMap = () => {
 		window.open("https://www.google.com/maps/search/?api=1&query=Bytecode+Digital+Agency+B.V.");

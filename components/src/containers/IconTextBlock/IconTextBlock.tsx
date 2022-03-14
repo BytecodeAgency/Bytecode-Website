@@ -8,8 +8,12 @@ const StyledContainer = styled.div`
   	padding-right: 15px;
 	padding-bottom: 10px;
 `;
-
-const IconTextBlock: React.FC<{icon: IconComponent; title: string; text: string}> = ({icon, title, text}) => (
+type IconTextBlockProps = {
+	icon: IconComponent;
+	title: string;
+	text: string;
+};
+const IconTextBlock = ({icon, title, text}: IconTextBlockProps) => (
 	<StyledContainer>
 		<IconTitle icon={icon} text={title} />
 		<Paragraph text={text}/>

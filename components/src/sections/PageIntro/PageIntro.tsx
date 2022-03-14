@@ -2,6 +2,7 @@ import React, {ReactNode} from "react";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 import styled from "styled-components";
 import {Heading, Paragraph, Subtitle} from "../../components";
+import {WithStyle} from "../../types/utils";
 
 const introContainerWithImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 	const gridColumns = responsiveValuesCSS(
@@ -136,10 +137,9 @@ type PageIntroProps = {
 	columnSizes?: string;
 	image?: ReactNode;
 	link?: ReactNode;
-	className?: string;
 }
 
-const PageIntro = ({ subtitle, title, paragraph, image, columnSizes, link, className }: PageIntroProps) => {
+const PageIntro = ({ subtitle, title, paragraph, image, columnSizes, link, className }: WithStyle<PageIntroProps>) => {
 
 	return(
 		<IntroContainer image={image != undefined} columnSizes={columnSizes} className={className}>
