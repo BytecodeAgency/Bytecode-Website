@@ -8,7 +8,7 @@ const CaseCardContainer = styled.div`
 	border-radius: 10px;
 	height: 391px;
 	width: 272px;
-	filter: drop-shadow(15px 15px 10px rgba(0, 0, 0, 0.2));
+	filter: drop-shadow(15px 15px 10px rgba(0, 0, 0, 0.1));
 	overflow: visible;
 	margin-right: 30px;
 	margin-bottom: 30px;
