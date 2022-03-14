@@ -50,7 +50,7 @@ const CaseCard = ({ name, subtitle }:CaseCardProps) => (
 		</ImageContainer>
 		<div>
 			<StyledSubtitle fontWeight="bold" text={name} />
-			<Paragraph text={subtitle} />
+			<Paragraph text={subtitle} size="small" />
 		</div>
 	</CaseCardContainer>
 );

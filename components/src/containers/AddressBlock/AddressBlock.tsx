@@ -28,8 +28,8 @@ const AddressBlock = ({className, large}: WithStyle<AddressBlockProps>) => {
 	return (
 		<Container onClick={goToMap} className={className}>
 			<Heading type={large ? "h3" : "h4"} text={"Office " + name} />
-			<StyledParagraph text={address + " " + number + ", "} large={large} />
-			<StyledParagraph text={zipCode + " " + city} large={large} />
+			<StyledParagraph text={address + " " + number + ", "} size={large ? "large" : "normal"} />
+			<StyledParagraph text={zipCode + " " + city} size={large ? "large" : "normal"}/>
 		</Container>
 	);
 };

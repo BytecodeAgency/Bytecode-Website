@@ -6,11 +6,12 @@ import {WithStyle} from "../../types/utils";
 
 export type FontWeight = "normal" | "bold";
 export type HeadingType = "h1" | "h2" | "h3" | "h4" | "h5";
+export type Size = "small" | "normal" | "large";
 
 interface TextStylingProps{
 	color?: ThemeColors;
 	fontWeight?: FontWeight;
-	large?: boolean;
+	size?: Size;
 }
 
 type TypographyProps = {
@@ -20,7 +21,7 @@ type TypographyProps = {
 }
 
 interface ParagraphProps extends TypographyProps {
-	large?: boolean;
+	size?: Size;
 	fontWeight?: FontWeight;
 }
 
@@ -34,18 +35,18 @@ interface HeadingProps extends TypographyProps {
 
 const StyledParagraph = styled.div<WithStyle<TextStylingProps>>`
     font-family: ${theme.typography.paragraph.font};
-    font-size: ${props => props.large ? theme.typography.paragraph.sizes.large : theme.typography.paragraph.sizes.normal};
+    font-size: ${props => props.size ? theme.typography.paragraph.sizes[props.size] : theme.typography.paragraph.sizes.normal};
 	line-height: ${theme.typography.paragraph.lineHeight};
 	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black};
 	margin-bottom: 24px;
 	font-weight: ${props => props.fontWeight ? theme.typography.paragraph.weights[props.fontWeight] : theme.typography.paragraph.weights.normal};
 `;
-export const Paragraph = ({ large, text, color, className, onClick, fontWeight }: WithStyle<ParagraphProps>) => (
+export const Paragraph = ({  text, color, className, onClick, fontWeight, size }: WithStyle<ParagraphProps>) => (
 	<StyledParagraph
 		className={className}
 		color={color}
 		onClick={onClick}
-		large={large}
+		size={size}
 		fontWeight={fontWeight}
 	>{text}</StyledParagraph>
 );
