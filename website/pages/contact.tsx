@@ -5,7 +5,6 @@ import {Button, Container, Heading, InitialContainer, Paragraph} from "@bytecode
 import { PageIntro } from "@bytecode/ui-library/sections";
 import {breakpointNameToPx, responsiveValuesCSS, theme} from "@bytecode/ui-library/utils";
 import styled from "styled-components";
-import Image from "next/image";
 import {AddressBlock, CommunicationBlock} from "@bytecode/ui-library/containers";
 import {LongArrow} from "@bytecode/ui-library/icons";
 import {Train, Cars} from "@bytecode/ui-library/icons";
@@ -23,35 +22,20 @@ const Contact: NextPage = () => {
 	);
 };
 
-const workingImageContainerResponsiveCSS = () => {
-	const imageHeights = responsiveValuesCSS(
-		"height",
-		"px",
-		breakpointNameToPx({
-			xs: 300,
-			sm: 400,
-			md: 500,
-			lg: 500,
-			xxl: 500,
-		}));
+const introImageContainerResponsiveCSS = () => {
 	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx({ xs: "100vw", lg: "100%" }));
-	const left = responsiveValuesCSS(
-		"left",
-		"",
-		breakpointNameToPx({
-			xs: "calc(-50vw + 50%);",
-			lg: "32px",
-			xl: "48px",
-			xxl: "64px"
-		}));
-	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 50, lg: 300}));
-	return imageHeights + imageWidths + left + top;
+	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -12, md:-16, lg: 32, xl: 48, xxl: 64}));
+	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 50, lg: 300,}));
+	return imageWidths + top + marginLeft;
 };
 
-const WorkingImageContainer = styled.div`
-	${workingImageContainerResponsiveCSS};
+const IntroImageContainer = styled.div`
+	${introImageContainerResponsiveCSS};
 	position: relative;
-	grid-area: image;
+`;
+
+const StyledImage = styled.img`
+	width: 100%;
 `;
 
 const Intro = () => (
@@ -63,14 +47,12 @@ const Intro = () => (
 						Have a chat? Get in touch."
 			image={
 				(
-					<WorkingImageContainer>
-						<Image
+					<IntroImageContainer>
+						<StyledImage
 							src="/images/contact-header-big.png"
-							layout="fill"
 							alt="Members of Bytecode relaxing"
-							objectFit="contain"
 						/>
-					</WorkingImageContainer>
+					</IntroImageContainer>
 				)
 			}
 			columnSizes="3fr 5fr"
@@ -134,7 +116,7 @@ const styledCommunicationBlockResponsiveCSS = responsiveValuesCSS("justify-self"
 const StyledCommunicationBlock = styled(CommunicationBlock)`
 	${styledCommunicationBlockResponsiveCSS};
 	grid-area: communication;
-	align-self: center;
+	align-self: end;
 `;
 
 const Appointment = () => {
@@ -168,7 +150,8 @@ const addressAndRouteContainerResponsiveCSS = () => {
 		"",
 		breakpointNameToPx({
 			xs: "120px 0 120px",
-			lg: "220px 50px 220px 50px"
+			lg: "220px 0 220px 0",
+			xl: "220px 50 220px 50px"
 		})
 	);
 	const gridColumns = responsiveValuesCSS(
@@ -179,16 +162,7 @@ const addressAndRouteContainerResponsiveCSS = () => {
 			md:"1fr 1fr",
 		})
 	);
-	const gridTemplateAreas = responsiveValuesCSS(
-		"grid-template-areas",
-		"",
-		breakpointNameToPx({
-			xs: "\"address\""+
-				"\"route\"",
-			md: "\"address route\""
-		})
-	);
-	return padding + gridColumns + gridTemplateAreas;
+	return padding + gridColumns;
 };
 
 const AddressAndRouteContainer = styled(Container)`
@@ -196,19 +170,35 @@ const AddressAndRouteContainer = styled(Container)`
 	display: grid;
 `;
 
-const StyledAddressBlock = styled(AddressBlock)`
-	grid-area: address;
-`;
-
 const routeContainerResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({xs: 30, md: 0}));
 const RouteContainer = styled.div`
 	${routeContainerResponsiveCSS};
-	grid-area: route;
 `;
 
 const StyledRouteButton = styled(Button)`
-	width: 215px;
+	width: 190px;
 	margin-bottom: 20px;
+	margin-right: 20px;
+`;
+
+const RouteButtonContainer = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+`;
+
+const addressBlockContainerResponsiveCSS = responsiveValuesCSS(
+	"padding-left",
+	"px",
+	breakpointNameToPx({
+		xs: 0,
+		lg: 40,
+		xl: 60,
+		xxl: 80,
+	})
+);
+const AddressBlockContainer = styled.div`
+	${addressBlockContainerResponsiveCSS};
 `;
 
 const AddressAndRoute = () => {
@@ -221,12 +211,16 @@ const AddressAndRoute = () => {
 	return(
 		<Container background={theme.colors.colorBrand2}>
 			<AddressAndRouteContainer>
-				<StyledAddressBlock large/>
+				<AddressBlockContainer>
+					<AddressBlock large/>
+				</AddressBlockContainer>
 				<RouteContainer>
 					<Heading type="h3" text="Route"/>
 					<Paragraph text="Are you planning to drop by? Let us know and plan here your route!"/>
-					<StyledRouteButton type="secondary" text="Public transport" icon={Train} onClick={goToPublicTransportRoute}/>
-					<StyledRouteButton type="secondary" text="Plan route" icon={Cars} onClick={goToMapsRoute}/>
+					<RouteButtonContainer>
+						<StyledRouteButton type="secondary" text="Public transport" icon={Train} onClick={goToPublicTransportRoute}/>
+						<StyledRouteButton type="secondary" text="Plan route" icon={Cars} onClick={goToMapsRoute}/>
+					</RouteButtonContainer>
 				</RouteContainer>
 			</AddressAndRouteContainer>
 		</Container>

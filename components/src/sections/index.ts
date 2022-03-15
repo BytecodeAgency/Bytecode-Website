@@ -2,6 +2,7 @@
 * Sections include:
 *   Menu (header)
 *   Footer (Footer inlcuding some of its unique components)
+*   PageIntro (with or without image)
  */
 
 export {default as Footer} from "./Footer";

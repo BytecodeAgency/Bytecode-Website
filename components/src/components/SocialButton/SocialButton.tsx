@@ -2,6 +2,7 @@ import React, {FunctionComponent, useState} from "react";
 import {theme} from "../../theme";
 import {IconType} from "../../icons";
 import styled from "styled-components";
+import {WithStyle} from "../../types/utils";
 
 const StyledButton = styled.div<{solid?: boolean, className?: string}>`
   	background-color: ${props => props.solid ? `${theme.colors.buttons.primary.background}` : ""};
@@ -28,10 +29,9 @@ interface SocialButtonProps {
 	link?: string,
 	solid?: boolean,
 	mail?: boolean,
-	className?: string,
 }
 // TODO: create proper styling for non-solid social hoven and click
-const SocialButton: React.FC<SocialButtonProps> = ({Icon, link, solid, mail, className}) =>{
+const SocialButton = ({Icon, link, solid, mail, className}: WithStyle<SocialButtonProps>) =>{
 	const [isHovered, setIsHovered] = useState<boolean>(false);
 	const handleHover = () => setIsHovered(!isHovered);
 	const onClick = () => {

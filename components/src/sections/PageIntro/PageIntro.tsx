@@ -2,85 +2,149 @@ import React, {ReactNode} from "react";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 import styled from "styled-components";
 import {Heading, Paragraph, Subtitle} from "../../components";
+import {WithStyle} from "../../types/utils";
 
-/*
-type LinkProps = {
-	external?: boolean;
-	url: string;
-	text: string;
-	caption: string;
-}
-TODO: this type will be added with the development of the cases page
- */
+const introContainerWithImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
+	const gridColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "1fr",
+			lg: columnSizes
+		}));
+	return gridColumns;
+};
+const introContainerNoImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
+	const gridColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "1fr",
+			lg: columnSizes
+		}));
+	const paddingTop = responsiveValuesCSS(
+		"padding-top",
+		"px",
+		breakpointNameToPx({
+			lg: 50,
+			xl: 160
+		})
+	);
+	const paddingBottom = responsiveValuesCSS(
+		"padding-bottom",
+		"px",
+		breakpointNameToPx({
+			lg: 50,
+			xl: 70,
+		})
+	);
+	const gridColumnGap = responsiveValuesCSS(
+		"grid-column-gap",
+		"px",
+		breakpointNameToPx({
+			lg: 60,
+			xxl: 100,
+		})
+	);
+	return gridColumns + paddingBottom + paddingTop + gridColumnGap;
+};
+
+const IntroContainer = styled.div<{image?: boolean, columnSizes?: string}>`
+	${props => props.image 
+		? introContainerWithImageResponsiveCSS(props.columnSizes) 
+		: introContainerNoImageResponsiveCSS(props.columnSizes)};
+	display: grid;
+	align-items: center;
+	grid-column-gap: ${props => props.image ? "" : "60px"};
+`;
+
+const StyledIntroSubTitle = styled(Subtitle)`
+	
+`;
+const styledIntroHeadingResponsiveCSS = responsiveValuesCSS(
+	"padding-right",
+	"%",
+	breakpointNameToPx({
+		xs: 30,
+		md: 0
+	}));
+const StyledIntroHeading = styled(Heading)`
+	${styledIntroHeadingResponsiveCSS};
+`;
+const introParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx({ xs: 0, lg: 100}));
+
+const StyledIntroParagraph = styled(Paragraph)`
+	${introParagraphResponsiveCSS};
+`;
+
+type LeftColumnProps = {
+	subtitle: string;
+	title: string;
+	paragraph?: string;
+};
+const LeftColumn = ({subtitle, title, paragraph}: LeftColumnProps) => (
+	<div>
+		<StyledIntroSubTitle text={subtitle} />
+		<StyledIntroHeading type="h1" text={title} />
+		{paragraph && <StyledIntroParagraph text={paragraph} />}
+	</div>
+);
+
+const rightColumnContainerResponsiveCSS = responsiveValuesCSS(
+	"margin-top",
+	"px",
+	breakpointNameToPx({
+		xs:0,
+		lg: 150,
+		xl: 100
+	})
+);
+const RightColumnContainer = styled.div`
+	${rightColumnContainerResponsiveCSS};
+	display: flex;
+	flex-direction: column;
+`;
+
+
+type RightColumnProps = {
+	image?: ReactNode;
+	link?: ReactNode;
+	paragraph?: string;
+};
+const RightColumn = ({image, link, paragraph}: RightColumnProps) => {
+	if(image){
+		return (
+			<>
+				{image}
+			</>
+		);
+	}
+	if(!image && paragraph){
+		return (
+			<RightColumnContainer>
+				<Paragraph text={paragraph}/>
+				{ link }
+			</RightColumnContainer>
+		);
+	}
+	return null;
+};
+
 type PageIntroProps = {
 	subtitle: string;
 	title: string;
 	paragraph: string;
 	columnSizes?: string;
 	image?: ReactNode;
-	//link?: LinkProps; TODO: this variable will be added with the development of the cases page
+	link?: ReactNode;
 }
 
-const introContainerWithImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
-
-	const gridColumns = responsiveValuesCSS(
-		"grid-template-columns",
-		"",
-		breakpointNameToPx({
-			xs: "3fr 1fr 1fr 1fr;",
-			lg: columnSizes
-		}));
-	const gridRows = responsiveValuesCSS(
-		"grid-template-rows",
-		"",
-		breakpointNameToPx({
-			xs: "auto",
-			lg: "100px 130px 200px",
-			xl: "150px 130px 200px"
-		}));
-	const gridAreas = responsiveValuesCSS(
-		"grid-template-areas",
-		"",
-		breakpointNameToPx({
-			xs: "\"subtitle subtitle . .\" " +
-				"\"heading heading . .\" " +
-				"\"paragraph paragraph paragraph.\" " +
-				"\"image image image image\"",
-			lg: "\"subtitle image\" " +
-				"\"heading image\" " +
-				"\"paragraph image\" "
-		}));
-
-	return gridColumns + gridAreas + gridRows;
-};
-
-const IntroContainer = styled.div<{image?: boolean, columnSizes?: string}>`
-	${props => props.image ? introContainerWithImageResponsiveCSS(props.columnSizes) : ""};
-	display: grid;
-	align-items: center;
-`;
-
-const StyledIntroSubTitle = styled(Subtitle)`
-	grid-area: subtitle;
-`;
-const StyledIntroHeading = styled(Heading)`
-	grid-area: heading;
-`;
-const introParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx({ xs: 0, lg: 100}));
-
-const StyledIntroParagraph = styled(Paragraph)`
-	${introParagraphResponsiveCSS};
-	grid-area: paragraph;
-`;
-
-const PageIntro = ({ subtitle, title, paragraph, image, columnSizes }: PageIntroProps) => {
+const PageIntro = ({ subtitle, title, paragraph, image, columnSizes, link, className }: WithStyle<PageIntroProps>) => {
 
 	return(
-		<IntroContainer image={image != undefined} columnSizes={columnSizes}>
-			<StyledIntroSubTitle text={subtitle}/>
-			<StyledIntroHeading type="h1" text={title}/>
-			<StyledIntroParagraph text={paragraph}/>
-			{image}
+		<IntroContainer image={image != undefined} columnSizes={columnSizes} className={className}>
+			<LeftColumn subtitle={subtitle} title={title} paragraph={image ? paragraph : undefined}/>
+			<RightColumn image={image} paragraph={paragraph} link={link} />
 		</IntroContainer>
 	);
 };

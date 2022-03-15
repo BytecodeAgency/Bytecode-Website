@@ -20,7 +20,7 @@ const navLinksHref = [
 	},
 	{
 		name: "Our cases",
-		href: "/"
+		href: "/cases"
 	},
 	{
 		name: "Contact",

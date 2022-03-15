@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
 const HomeBody = () => (
 	<InitialContainer>
-		<Button type="primary">Hi</Button>
+		<Button type="primary" text="Hi"/>
 	</InitialContainer>
 );
 

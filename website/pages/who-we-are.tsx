@@ -22,34 +22,19 @@ const WhoWeAre: NextPage = () => {
 };
 
 const workingImageContainerResponsiveCSS = () => {
-	const imageHeights = responsiveValuesCSS(
-		"height",
-		"px",
-		breakpointNameToPx({
-			xs: 300,
-			sm: 400,
-			md: 500,
-			lg: 400,
-			xxl: 500,
-		}));
 	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx({ xs: "100vw", lg: "100%" }));
-	const left = responsiveValuesCSS(
-		"left",
-		"",
-		breakpointNameToPx({
-			xs: "calc(-50vw + 50%);",
-			lg: "32px",
-			xl: "48px",
-			xxl: "64px"
-		}));
-	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 25, lg: 200}));
-	return imageHeights + imageWidths + left + top;
+	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -12, md:-16, lg: 32, xl: 48, xxl: 64}));
+	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 25, lg: 150, xl: 200, xxl: 250}));
+	return imageWidths + top + marginLeft;
 };
 
 const WorkingImageContainer = styled.div`
 	${workingImageContainerResponsiveCSS};
 	position: relative;
-	grid-area: image;
+`;
+
+const StyledImage = styled.img`
+	width: 100%;
 `;
 
 const Intro = () => (
@@ -61,11 +46,9 @@ const Intro = () => (
 			image={
 				(
 					<WorkingImageContainer>
-						<Image
+						<StyledImage
 							src="/images/who-we-are-working.png"
-							layout="fill"
 							alt="Members of Bytecode working"
-							objectFit="contain"
 						/>
 					</WorkingImageContainer>
 				)
@@ -74,67 +57,73 @@ const Intro = () => (
 	</InitialContainer>
 );
 const competencesContainerResponsiveCSS = () => {
-	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 80, lg: 200 }));
+	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 80, lg: 200, xl: 240, xxl: 300 }));
 	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx({ xs: 80, lg: 60}));
-	const gridColumns = responsiveValuesCSS(
-		"grid-template-columns",
-		"",
-		breakpointNameToPx({
-			xs: "1fr 3fr 1fr",
-			lg: "200px 200px 100px 1fr",
-			xl: "250px 200px 200px 1fr",
-		}));
-	const gridTemplateAreas = responsiveValuesCSS(
-		"grid-template-areas",
-		"",
-		breakpointNameToPx({
-			xs: "\". spacer spacer\" " +
-				"\"title title .\" " +
-				"\"icon-block icon-block icon-block\"",
-			lg: "\". spacer spacer spacer\" " +
-				"\". title title . \" " +
-				"\". . icon-block icon-block\"",
-		}));
-
-	return paddingTop + gridColumns + gridTemplateAreas + paddingBottom;
+	const paddingLeft = responsiveValuesCSS("padding-left", "%", breakpointNameToPx({ lg: 10, xl: 10}));
+	return paddingTop + paddingBottom + paddingLeft;
 };
+
 const CompetencesContainer = styled.div`
 	${competencesContainerResponsiveCSS};
-	padding-bottom: 80px;
-	display: grid;
-	grid-template-rows: auto;
 `;
+const styledCompetencesSpacerResponsiveCSS = responsiveValuesCSS(
+	"margin-left",
+	"px",
+	breakpointNameToPx({
+		xs: 12,
+		md: 16,
+		lg: 32,
+		xl: 48,
+		xxl: 64
+	}));
 const StyledCompetencesSpacer = styled(Spacer)`
-	grid-area: spacer;
+	${styledCompetencesSpacerResponsiveCSS};
+	width: 100%;
 `;
-const compentencesHeadingResponsiveCSS = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({xs: 0, lg: 40}));
+const spacerContainerResponsiveCSS = responsiveValuesCSS(
+	"padding-left",
+	"%",
+	breakpointNameToPx({
+		xs: 20,
+		md: 0
+	})
+);
+const SpacerContainer = styled.div`
+	${spacerContainerResponsiveCSS};
+`;
+const compentencesHeadingResponsiveCSS = () => {
+	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({xs: 0, md: 30, lg: 40, xl: 60}));
+	const width = responsiveValuesCSS("width", "%", breakpointNameToPx({xs: 90, lg: 35, xl: 40, xxl: 35}));
+	return marginLeft + width;
+};
 const StyledCompentencesHeading = styled(Heading)`
 	${compentencesHeadingResponsiveCSS};
-	grid-area: title;
-	margin-top: 50px;
+	margin-top: 30px;
 	margin-bottom: 20px;
 `;
 
 const iconBlocksContainerResponsiveCSS = () => {
 	const values: BreakpointKeyValue = {
 		xs: "auto",
-		lg: "1fr 1fr"
+		md: "1fr 1fr"
 	};
 	const columns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(values));
 	const rows = responsiveValuesCSS("grid-template-rows", "", breakpointNameToPx(values));
-	return columns + rows;
+	const paddingLeft = responsiveValuesCSS("padding-left", "%", breakpointNameToPx({xs:0, lg: 15, xl: 20}));
+	return columns + rows + paddingLeft;
 };
 const IconBlocksContainer = styled.div`
 	${iconBlocksContainerResponsiveCSS};
 	display: grid;
-	grid-area: icon-block;
-	grid-column-gap: 60px;
+	grid-column-gap: 20px;
 `;
 
 const Competences = () => (
 	<Container>
 		<CompetencesContainer>
-			<StyledCompetencesSpacer color="black"/>
+			<SpacerContainer>
+				<StyledCompetencesSpacer color="black"/>
+			</SpacerContainer>
 			<StyledCompentencesHeading type="h2" text="What we bring to the table." />
 			<IconBlocksContainer>
 				<IconTextBlock
@@ -226,11 +215,26 @@ const ValuesRightColumn = styled.div`
 	justify-content: flex-end;
 `;
 
+const styledValuesSpacerResponsiveCSS = responsiveValuesCSS(
+	"margin-left",
+	"px",
+	breakpointNameToPx({
+		xs: 12,
+		md: 16,
+		lg: 0,
+		xl: 0,
+		xxl: 0
+	}));
+const StyledValuesSpacer = styled(Spacer)`
+	${styledValuesSpacerResponsiveCSS};
+	width: 100%;
+`;
+
 const Values = () => (
 	<Container background={theme.colors.colorBrand3}>
 		<ValuesContainer>
 			<ValuesLeftColumn>
-				<Spacer color="white" bold/>
+				<StyledValuesSpacer color="white" bold/>
 				<StyledValuesHeading type="h2" text="Things we value the most." color="white"/>
 				<StyledValuesParagraph
 					text="Sometimes a narrow collaboration can be like a marriage.
@@ -284,38 +288,62 @@ const Values = () => (
 	</Container>
 );
 
-
 const teamMembersContainerResponsiveCSS = () => {
-	const gridTemplateArea = responsiveValuesCSS(
-		"grid-template-areas",
-		"",
-		breakpointNameToPx({
-			xs: "\"spacer spacer .\"" +
-				"\"text text text\"" +
-				"\"members members members\"",
-			lg: "\"text members\"" +
-				"\". members\""
-		}));
-	const gridTemplateColumns = responsiveValuesCSS(
+	const gridColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
 		breakpointNameToPx({
-			xs: "1fr 2fr 1fr",
+			xs: "1fr",
 			lg: "1fr 1fr"
 		}));
-
-	return gridTemplateArea + gridTemplateColumns;
+	const paddingTop = responsiveValuesCSS(
+		"padding-top",
+		"px",
+		breakpointNameToPx({
+			xs:0,
+			lg: 80,
+			xl: 140,
+		})
+	);
+	const paddingRight = responsiveValuesCSS(
+		"padding-right",
+		"px",
+		breakpointNameToPx({
+			xs: 12,
+			md: 24,
+			lg: 0
+		})
+	);
+	const columnGap = responsiveValuesCSS(
+		"grid-column-gap",
+		"px",
+		breakpointNameToPx({
+			md: 50,
+			xl: 80
+		})
+	);
+	return gridColumns + paddingTop + paddingRight + columnGap;
 };
 const TeamMembersContainer = styled.div`
 	${teamMembersContainerResponsiveCSS};
 	display: grid;
-	padding-top: 80px;
 `;
 
-const teamMembersSpacerResponsiveCSS = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));
+const teamMembersSpacerResponsiveCSS = () => {
+	const display = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));
+	const marginLeft = responsiveValuesCSS(
+		"margin-left",
+		"px",
+		breakpointNameToPx({
+			xs: -12,
+			md: -24,
+		})
+	);
+	return display + marginLeft;
+};
 const TeamMembersSpacer = styled(Spacer)`
 	${teamMembersSpacerResponsiveCSS};
-	grid-area: spacer;
+	margin-top: 80px;
 `;
 
 const teamMembersLeftColumnResponsiveCSS = responsiveValuesCSS(
@@ -323,11 +351,12 @@ const teamMembersLeftColumnResponsiveCSS = responsiveValuesCSS(
 	"",
 	breakpointNameToPx({
 		xs: "0",
-		lg: "50px 30px"
+		lg: "50px 30px",
+		xl: "70px 50px",
+		xxl: "140px 60px"
 	}));
 const TeamMembersLeftColumn = styled.div`
 	${teamMembersLeftColumnResponsiveCSS};
-	grid-area: text;
 `;
 const teamMembersRightColumnResponsiveCSS = responsiveValuesCSS(
 	"grid-template-columns",
@@ -339,10 +368,11 @@ const teamMembersRightColumnResponsiveCSS = responsiveValuesCSS(
 );
 const TeamMembersRightColumn = styled.div`
 	${teamMembersRightColumnResponsiveCSS};
-	grid-area: members;
 	display: grid;
 	justify-items: center;
 	grid-column-gap: 20px;
+	height: 800px;
+	overflow: scroll;
 `;
 const StyledMembersSubtitle = styled(Subtitle)`
 	margin-top: 50px;
@@ -418,31 +448,28 @@ const memberList: Member[] = [
 ];
 
 const TeamMembers = () => (
-	<>
+	<Container>
+		<TeamMembersSpacer color="black" reverse/>
+		<TeamMembersContainer>
+			<TeamMembersLeftColumn>
+				<StyledMembersSubtitle text="The people that make it happen"/>
+				<Heading type="h2" text="Team members" />
+				<StyledMembersParagraph
+					text="If you want to realize your dream, you need to have a good team.
+				That is why our team that consists out of developers, designers, strategists,
+				and marketers love to join your start-up project."
+				/>
+				<Paragraph
+					text="Who are the people that are responsible for
+				building the product of your dreams that fits your customers?"
+				/>
+			</TeamMembersLeftColumn>
 
-		<Container>
-			<TeamMembersContainer>
-				<TeamMembersSpacer color="black" reverse/>
-				<TeamMembersLeftColumn>
-					<StyledMembersSubtitle text="The people that make it happen"/>
-					<Heading type="h2" text="Team members" />
-					<StyledMembersParagraph
-						text="If you want to realize your dream, you need to have a good team.
-					That is why our team that consists out of developers, designers, strategists,
-					and marketers love to join your start-up project."
-					/>
-					<Paragraph
-						text="Who are the people that are responsible for
-					building the product of your dreams that fits your customers?"
-					/>
-				</TeamMembersLeftColumn>
-
-				<TeamMembersRightColumn>
-					{memberList.map((member, index)=><TeamMember key={index} member={member}/>)}
-				</TeamMembersRightColumn>
-			</TeamMembersContainer>
-		</Container>
-	</>
+			<TeamMembersRightColumn>
+				{memberList.map((member, index)=><TeamMember key={index} member={member}/>)}
+			</TeamMembersRightColumn>
+		</TeamMembersContainer>
+	</Container>
 
 );
 

@@ -4,6 +4,7 @@
 *   CommunicationBlock (Textblock with text and links for email and phone contact)
 *   IconTextBlock (Textblock with an Icontitle and a Paragraph)
 *   TeamMember (Container that displays a clickable image of a team member with a popup that dislays more information)
+*   CaseCard (Container that displays a clickable image of a case image with a link to the single case page of that case)
  */
 
 export {default as AddressBlock} from "./AddressBlock";
@@ -17,3 +18,6 @@ export * from "./IconTextBlock";
 
 export {default as TeamMember} from "./TeamMember";
 export * from "./TeamMember";
+
+export {default as CaseCard} from "./CaseCard";
+export * from "./CaseCard";

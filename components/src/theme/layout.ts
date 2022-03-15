@@ -1,5 +1,6 @@
 export type BreakpointName = "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 export type BreakpointKeyValue = { [K in BreakpointName]?: number | string; } ;
+type AllBreakPointKeyValues = { [K in BreakpointName]: number | string; } ;
 
 const layout = {
 	gutter: 24,
@@ -32,7 +33,7 @@ const layout = {
 	},
 };
 
-export const breakpoints : BreakpointKeyValue = {
+export const breakpoints : AllBreakPointKeyValues = {
 	xs: 400, // mobile
 	sm: 576, // mobile landscape
 	md: 768, // tablets

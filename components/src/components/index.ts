@@ -1,5 +1,6 @@
 /*
 * Components include:
+*   ArrowLink
 *   Button (The normal button)
 *   Branding (Icons used for branding purposes)
 *   IconTitle (Heading preceded by an icon)
@@ -11,6 +12,9 @@
 
 export {default as Button } from "./Button";
 export * from "./Button";
+
+export {default as ArrowLink} from "./ArrowLink";
+export * from "./ArrowLink";
 
 export {default as Logo} from "./Branding";
 export * from "./Branding";
@@ -30,3 +34,5 @@ export {default as Container} from "./Container";
 export * from "./Container";
 
 export * from "./content";
+
+
