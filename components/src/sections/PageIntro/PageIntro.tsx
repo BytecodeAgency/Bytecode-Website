@@ -1,7 +1,7 @@
 import React, {ReactNode} from "react";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
 import styled from "styled-components";
-import {Heading, Paragraph, Subtitle} from "../../components";
+import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
+import {Container, Heading, Paragraph, Subtitle} from "../../components";
 import {WithStyle} from "../../types/utils";
 
 const introContainerWithImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
@@ -49,7 +49,7 @@ const introContainerNoImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 	return gridColumns + paddingBottom + paddingTop + gridColumnGap;
 };
 
-const IntroContainer = styled.div<{image?: boolean, columnSizes?: string}>`
+const IntroContainer = styled(Container)<{image?: boolean, columnSizes?: string}>`
 	${props => props.image 
 		? introContainerWithImageResponsiveCSS(props.columnSizes) 
 		: introContainerNoImageResponsiveCSS(props.columnSizes)};
