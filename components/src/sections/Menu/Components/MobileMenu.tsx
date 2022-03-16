@@ -18,14 +18,14 @@ const MobileMenuBarTopContainer = styled(MenuContainer)`
 `;
 
 const MobileMenuContainer = styled.div`
-    display: grid;
-    grid-template-rows: 1fr 200px;
-    height: calc(100vh - 100px);
-    width: 100vw;
-    position: absolute;
-    top: 75px;
-    left: 0;
-    background: white;
+	display: grid;
+	grid-template-rows: 1fr 200px;
+	height: calc(100vh - 75px);
+	width: 100vw;
+	position: fixed;
+	top: 75px;
+	left: 0;
+	background: white;
 	z-index: 9999;
 `;
 
