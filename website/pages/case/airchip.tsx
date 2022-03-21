@@ -1,7 +1,7 @@
 import React from "react";
 import {NextPage} from "next";
 import MainLayout from "../../layout/MainLayout";
-import {CaseIntro, CaseAbout} from "@bytecode/ui-library/sections";
+import {CaseIntro, CaseAbout, CaseQuote} from "@bytecode/ui-library/sections";
 import {Heading, Paragraph} from "@bytecode/ui-library/components";
 import styled from "styled-components";
 
@@ -90,6 +90,7 @@ const AirchipBody = () => (
 				"CMS"
 			]}
 		><AboutText /></CaseAbout>
+		<CaseQuote text="Een quote van ongeveer 3 regels maximaal zodat het visueel netjes blijft" />
 	</div>
 );
 
