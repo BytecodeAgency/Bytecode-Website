@@ -23,7 +23,8 @@ const imageColumnContainerResponsiveCSS = responsiveValuesCSS(
 	"px",
 	breakpointNameToPx({
 		xs: 70,
-		lg: 140
+		lg: 140,
+		xl: 210
 	})
 );
 
@@ -41,7 +42,8 @@ const logoContainerResponsiveCSS = responsiveValuesCSS(
 	"px",
 	breakpointNameToPx({
 		xs: 20,
-		lg: 40
+		lg: 40,
+		xxl: 60
 	})
 );
 const LogoContainer = styled.div`
