@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Paragraph} from "../../../components/Typography";
-import {footerContent} from "../../../components/content";
+import { links} from "../../../content/content";
 import Link from "next/link";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../../helpers/responsiveCss";
 
@@ -31,13 +31,13 @@ const StyledParagraph = styled(Paragraph)`
 
 const TermsAndPolicies = () => {
 	const goToTerms = () => {
-		window.open(footerContent.links.termsAndConditions, "_blank");
+		window.open(links.termsAndConditions, "_blank");
 	};
 	return (
 		<Container>
 			<StyledParagraph text="Terms and conditions" onClick={goToTerms}/>
-			<Link href={footerContent.links.privacyPolicy}><StyledParagraph text="Privacy Policy" /></Link>
-			<Link href={footerContent.links.cookiePolicy}><StyledParagraph text="Cookie Policy" /></Link>
+			<Link href={links.privacyPolicy}><StyledParagraph text="Privacy Policy" /></Link>
+			<Link href={links.cookiePolicy}><StyledParagraph text="Cookie Policy" /></Link>
 			<Paragraph text="© 2022" />
 		</Container>
 	);

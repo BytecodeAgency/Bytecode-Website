@@ -13,3 +13,5 @@ export * from "./Menu";
 
 export {default as PageIntro} from "./PageIntro";
 export * from "./PageIntro";
+
+export * from "./SingleCasePage";

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import SocialButton from "../../../components/SocialButton";
 import { Instagram, Linkedin, Youtube} from "../../../icons";
-import {footerContent} from "../../../components/content";
+import { links} from "../../../content/content";
 import React from "react";
 
 const Container = styled.div`
@@ -14,9 +14,9 @@ const StyledSocialButton = styled(SocialButton)`
 
 const Socials = () => (
 	<Container>
-		<StyledSocialButton Icon={Linkedin} link={footerContent.links.linkedin} />
-		<StyledSocialButton Icon={Youtube} link={footerContent.links.youtube} />
-		<StyledSocialButton Icon={Instagram} link={footerContent.links.instagram} />
+		<StyledSocialButton Icon={Linkedin} link={links.linkedin} />
+		<StyledSocialButton Icon={Youtube} link={links.youtube} />
+		<StyledSocialButton Icon={Instagram} link={links.instagram} />
 	</Container>
 );
 

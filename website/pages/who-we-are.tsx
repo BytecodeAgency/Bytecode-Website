@@ -3,8 +3,8 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { Heading, Paragraph, InitialContainer, Container, Subtitle, Spacer } from "@bytecode/ui-library/components";
 import { Eye, Book, Arrows, PeopleArrows } from "@bytecode/ui-library/icons";
-import { TeamMember, Member, IconTextBlock } from "@bytecode/ui-library/containers";
-import { theme, breakpointNameToPx, responsiveValuesCSS, BreakpointKeyValue } from "@bytecode/ui-library/utils";
+import { TeamMember, IconTextBlock } from "@bytecode/ui-library/containers";
+import { theme, breakpointNameToPx, responsiveValuesCSS, BreakpointKeyValue, employees } from "@bytecode/ui-library/utils";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
 import {PageIntro} from "@bytecode/ui-library/sections";
@@ -382,71 +382,6 @@ const StyledMembersParagraph = styled(Paragraph)`
 	margin-bottom: 10px;
 `;
 
-const memberList: Member[] = [
-	{
-		name: "Jeroen van Steijn",
-		jobTitle: "Co-Founder & Developer",
-		src: "jeroen",
-		about: "Hi I am Jeroen, I am a co-founder of Bytecode and work as a full-stack developer. " +
-			"My colleagues describe me as sincere and kindhearted. " +
-			"My interests lie within politics and tech trends. " +
-			"In my spare time I am either playing soccer, video games or padel with Nick and Chris.",
-		focus: ["Development", "Back-end", "Bussiness Strategy"],
-		github: "https://bytecode.com",
-		email: "tiko@bytecode.nl",
-		linkedIn: "https://bytecode.com",
-	},
-	{
-		name: "Nick Broekarts",
-		jobTitle: "Sales & Marketing",
-		src: "nick",
-		about: "Hi I am Nick, I am responsible for marketing and sales. " +
-			"Besides that, I help start-ups with their strategy and roadmap. " +
-			"My colleagues describe me as social and enthusiastic. " +
-			"When I am not working, I am mostly busy doing volunteer work (teaching what the Bible learns and supporting people). " +
-			"Besides that, I love to have dinner with friends or play sports.",
-		focus: ["Sales", "Marketing", "Bussiness Strategy"],
-		github: "https://bytecode.com",
-		email: "https://bytecode.com",
-		linkedIn: "https://bytecode.com",
-	},
-	{
-		name: "Christiaan Färber",
-		jobTitle: "Developer & UX",
-		src: "chris",
-		about: "Hi I am Chris, I am a front-end developer and User Experience designer. " +
-			"My colleagues describe me as a go-getter with a big heart. " +
-			"My interest lie within finding good wines and philosophy. " +
-			"During my days off, I love to play with my cat Nietzsche and go to techno parties.",
-		focus: ["Development", "User Experience Design", "Bussiness Strategy"],
-		github: "https://bytecode.com",
-		email: "https://bytecode.com",
-		linkedIn: "https://bytecode.com",
-	},
-	{
-		name: "T'iko Alarcón Rivero",
-		jobTitle: "Developer",
-		src: "tiko",
-		about: "Hi I am Tiko, I am a front-end developer. I’m currently in my final year of IT at the Hague University of Applied Sciences, " +
-			"where I’m currently busy founding my own startup company with a good friend of mine. I love solving puzzles, coding and design. " +
-			"In my free time I go for hikes and ride my roadbike through the dunes.",
-		focus: ["Development"],
-		github: "https://bytecode.com",
-		email: "https://bytecode.com",
-		linkedIn: "https://bytecode.com",
-	},
-	{
-		name: "Suzanne de Vries",
-		jobTitle: "Marketing",
-		src: "suzanne",
-		about: "TEXT STILL TO COME",
-		focus: ["Marketing"],
-		github: "https://bytecode.com",
-		email: "https://bytecode.com",
-		linkedIn: "https://bytecode.com",
-	}
-];
-
 const TeamMembers = () => (
 	<Container>
 		<TeamMembersSpacer color="black" reverse/>
@@ -466,7 +401,7 @@ const TeamMembers = () => (
 			</TeamMembersLeftColumn>
 
 			<TeamMembersRightColumn>
-				{memberList.map((member, index)=><TeamMember key={index} member={member}/>)}
+				{employees.map((member, index)=><TeamMember key={index} member={member}/>)}
 			</TeamMembersRightColumn>
 		</TeamMembersContainer>
 	</Container>

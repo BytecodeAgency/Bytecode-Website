@@ -100,7 +100,7 @@ interface PopupProps {
     popup: boolean;
 }
 const Popup: React.FC<PopupProps> = ({member, closePopup, popup}) => {
-	const {name, about, src, jobTitle} = member;
+	const {name, about, id, jobTitle} = member;
 
 	return (
 		<>
@@ -110,7 +110,7 @@ const Popup: React.FC<PopupProps> = ({member, closePopup, popup}) => {
 						<PopupContent>
 							<PopupHeader closePopup={closePopup}/>
 							<StyledImage>
-								<Image src={`/images/member-${src}.png`} alt="profile picture" layout="fill" objectFit="contain"/>
+								<Image src={`/images/member-${id}.png`} alt="profile picture" layout="fill" objectFit="contain"/>
 							</StyledImage>
 							<TitleAndName>
 								<StyledName text={name} type="h4"/>

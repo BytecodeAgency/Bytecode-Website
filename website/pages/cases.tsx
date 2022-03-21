@@ -4,7 +4,7 @@ import {NextPage} from "next";
 import MainLayout from "../layout/MainLayout";
 import {Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, Subtitle} from "@bytecode/ui-library/components";
 import {PageIntro} from "@bytecode/ui-library/sections";
-import {theme, breakpointNameToPx, responsiveValuesCSS, isWindowSizeBiggerThan} from "@bytecode/ui-library/utils";
+import {theme, breakpointNameToPx, responsiveValuesCSS, isWindowSizeBiggerThan, cases} from "@bytecode/ui-library/utils";
 import { CaseCard } from "@bytecode/ui-library/containers";
 
 const content = {
@@ -154,38 +154,6 @@ const CasesOverviewRightColumn = styled.div`
 	overflow: scroll;
 	
 `;
-
-type Case = {
-	name: string;
-	subtitle: string;
-}
-
-const cases: Case[] = [
-	{
-		name: "airchip",
-		subtitle: "No more queuing for a drink!"
-	},
-	{
-		name: "dearly",
-		subtitle: "Support for the loss of your loved one(s)"
-	},
-	{
-		name: "treats",
-		subtitle: "Discover tasty, healthy and ethical restaurants matching your food preferences and principles!"
-	},
-	{
-		name: "dawny",
-		subtitle: "Sleeptracking for healthy aging"
-	},
-	{
-		name: "styr",
-		subtitle: "Clear organisations and fair rewards"
-	},
-	{
-		name: "stamps",
-		subtitle: "..."
-	}
-];
 
 const CasesOverview = () => (
 	<Container background={theme.colors.colorBrand2}>
