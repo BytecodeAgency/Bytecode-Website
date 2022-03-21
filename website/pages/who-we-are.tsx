@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import { Heading, Paragraph, InitialContainer, Container, Subtitle, Spacer } from "@bytecode/ui-library/components";
+import { Heading, Paragraph, InitialContainer, Container, Subtitle, Spacer, FullWidthContainer } from "@bytecode/ui-library/components";
 import { Eye, Book, Arrows, PeopleArrows } from "@bytecode/ui-library/icons";
 import { TeamMember, IconTextBlock } from "@bytecode/ui-library/containers";
 import { theme, breakpointNameToPx, responsiveValuesCSS, BreakpointKeyValue, employees } from "@bytecode/ui-library/utils";
@@ -171,7 +171,7 @@ const valuesContainerResponsiveCSS = () => {
 	return columns + gap;
 };
 
-const ValuesContainer = styled.div`
+const ValuesContainer = styled(Container)`
 	${valuesContainerResponsiveCSS};
 	display: grid;
 	grid-template-rows: auto;
@@ -231,7 +231,7 @@ const StyledValuesSpacer = styled(Spacer)`
 `;
 
 const Values = () => (
-	<Container background={theme.colors.colorBrand3}>
+	<FullWidthContainer background={theme.colors.colorBrand3}>
 		<ValuesContainer>
 			<ValuesLeftColumn>
 				<StyledValuesSpacer color="white" bold/>
@@ -285,7 +285,7 @@ const Values = () => (
 				</SummationContainer>
 			</ValuesRightColumn>
 		</ValuesContainer>
-	</Container>
+	</FullWidthContainer>
 );
 
 const teamMembersContainerResponsiveCSS = () => {
@@ -327,19 +327,12 @@ const teamMembersContainerResponsiveCSS = () => {
 const TeamMembersContainer = styled.div`
 	${teamMembersContainerResponsiveCSS};
 	display: grid;
+	position: relative;
 `;
 
 const teamMembersSpacerResponsiveCSS = () => {
 	const display = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));
-	const marginLeft = responsiveValuesCSS(
-		"margin-left",
-		"px",
-		breakpointNameToPx({
-			xs: -12,
-			md: -24,
-		})
-	);
-	return display + marginLeft;
+	return display;
 };
 const TeamMembersSpacer = styled(Spacer)`
 	${teamMembersSpacerResponsiveCSS};
@@ -351,12 +344,13 @@ const teamMembersLeftColumnResponsiveCSS = responsiveValuesCSS(
 	"",
 	breakpointNameToPx({
 		xs: "0",
-		lg: "50px 30px",
-		xl: "70px 50px",
-		xxl: "140px 60px"
+		lg: "0 30px",
+		xl: "0 50px",
+		xxl: "0 60px"
 	}));
 const TeamMembersLeftColumn = styled.div`
 	${teamMembersLeftColumnResponsiveCSS};
+	position: relative;
 `;
 const teamMembersRightColumnResponsiveCSS = responsiveValuesCSS(
 	"grid-template-columns",
@@ -371,8 +365,6 @@ const TeamMembersRightColumn = styled.div`
 	display: grid;
 	justify-items: center;
 	grid-column-gap: 20px;
-	height: 800px;
-	overflow: scroll;
 `;
 const StyledMembersSubtitle = styled(Subtitle)`
 	margin-top: 50px;
@@ -381,23 +373,30 @@ const StyledMembersParagraph = styled(Paragraph)`
 	margin-top: 10px;
 	margin-bottom: 10px;
 `;
+const Sticky = styled.div`
+	position: sticky;
+	top: 120px;
+`;
+
 
 const TeamMembers = () => (
 	<Container>
 		<TeamMembersSpacer color="black" reverse/>
 		<TeamMembersContainer>
 			<TeamMembersLeftColumn>
-				<StyledMembersSubtitle text="The people that make it happen"/>
-				<Heading type="h2" text="Team members" />
-				<StyledMembersParagraph
-					text="If you want to realize your dream, you need to have a good team.
-				That is why our team that consists out of developers, designers, strategists,
-				and marketers love to join your start-up project."
-				/>
-				<Paragraph
-					text="Who are the people that are responsible for
-				building the product of your dreams that fits your customers?"
-				/>
+				<Sticky>
+					<StyledMembersSubtitle text="The people that make it happen"/>
+					<Heading type="h2" text="Team members" />
+					<StyledMembersParagraph
+						text="If you want to realize your dream, you need to have a good team.
+					That is why our team that consists out of developers, designers, strategists,
+					and marketers love to join your start-up project."
+					/>
+					<Paragraph
+						text="Who are the people that are responsible for
+					building the product of your dreams that fits your customers?"
+					/>
+				</Sticky>
 			</TeamMembersLeftColumn>
 
 			<TeamMembersRightColumn>

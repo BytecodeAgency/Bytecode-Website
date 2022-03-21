@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {NextPage} from "next";
 import MainLayout from "../layout/MainLayout";
-import {Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, Subtitle} from "@bytecode/ui-library/components";
+import {Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, Subtitle, FullWidthContainer} from "@bytecode/ui-library/components";
 import {PageIntro} from "@bytecode/ui-library/sections";
 import {theme, breakpointNameToPx, responsiveValuesCSS, isWindowSizeBiggerThan, cases} from "@bytecode/ui-library/utils";
 import { CaseCard } from "@bytecode/ui-library/containers";
@@ -110,7 +110,7 @@ const casesOverviewContainerResponsiveCSS = () => {
 	);
 	return gridColumns + paddingTop + columnGap + justifyItems;
 };
-const CasesOverviewContainer = styled.div`
+const CasesOverviewContainer = styled(Container)`
 	${casesOverviewContainerResponsiveCSS};
 	padding-bottom: 40px;
 	display: grid;
@@ -150,27 +150,29 @@ const CasesOverviewRightColumn = styled.div`
 	${casesOverviewRightColumnResponsiveCSS};
 	display: grid;
 	justify-items: center;
-	height: 800px;
-	overflow: scroll;
-	
+`;
+const Sticky = styled.div`
+	position: sticky;
+	top: 120px;
 `;
 
 const CasesOverview = () => (
-	<Container background={theme.colors.colorBrand2}>
+	<FullWidthContainer background={theme.colors.colorBrand2}>
 		<CasesOverviewContainer>
 			<CasesOverviewLeftColumn>
-				<Subtitle text="Selection of projects" />
-				<Heading type="h2" text="Take a look at a few projects we have worked on. Will yours be next?" />
+				<Sticky>
+					<Subtitle text="Selection of projects" />
+					<Heading type="h2" text="Take a look at a few projects we have worked on. Will yours be next?" />
 
-				{
-					isWindowSizeBiggerThan("lg") ?
-						<LinkContainer>
-							<DesktopLinkParagraph text="Find out what we do" />
-							<DesktopArrowLink onClick={()=>console.log("goToServicesPage")} text="Our services" />
-						</LinkContainer>
-						: <MobileArrowLink onClick={()=>console.log("goToServicesPage")} text="What we do"/>
-				}
-
+					{
+						isWindowSizeBiggerThan("lg") ?
+							<LinkContainer>
+								<DesktopLinkParagraph text="Find out what we do" />
+								<DesktopArrowLink onClick={()=>console.log("goToServicesPage")} text="Our services" />
+							</LinkContainer>
+							: <MobileArrowLink onClick={()=>console.log("goToServicesPage")} text="What we do"/>
+					}
+				</Sticky>
 			</CasesOverviewLeftColumn>
 			<CasesOverviewRightColumn>
 				{
@@ -178,7 +180,7 @@ const CasesOverview = () => (
 				}
 			</CasesOverviewRightColumn>
 		</CasesOverviewContainer>
-	</Container>
+	</FullWidthContainer>
 );
 
 const CasesBody = () => (

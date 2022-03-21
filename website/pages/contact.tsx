@@ -1,7 +1,7 @@
 import React from "react";
 import {NextPage} from "next";
 import MainLayout from "../layout/MainLayout";
-import {Button, Container, Heading, InitialContainer, Paragraph} from "@bytecode/ui-library/components";
+import {Button, Container, FullWidthContainer, Heading, InitialContainer, Paragraph} from "@bytecode/ui-library/components";
 import { PageIntro } from "@bytecode/ui-library/sections";
 import {breakpointNameToPx, responsiveValuesCSS, theme, links} from "@bytecode/ui-library/utils";
 import styled from "styled-components";
@@ -24,7 +24,7 @@ const Contact: NextPage = () => {
 
 const introImageContainerResponsiveCSS = () => {
 	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx({ xs: "100vw", lg: "100%" }));
-	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -12, md:-16, lg: 32, xl: 48, xxl: 64}));
+	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -24, md:-32, lg: 32, xl: 48, xxl: 64}));
 	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 50, lg: 300,}));
 	return imageWidths + top + marginLeft;
 };
@@ -124,7 +124,7 @@ const Appointment = () => {
 		window.open(links.meetingPlanner);
 	};
 	return(
-		<Container background={theme.colors.colorBrand3}>
+		<FullWidthContainer background={theme.colors.colorBrand3}>
 			<AppointmentContainer>
 				<MeetingContainer>
 					<Heading type="h1" text="Book an appointment" color="white"/>
@@ -139,7 +139,7 @@ const Appointment = () => {
 				</StyledMeetingButtonContainer>
 				<StyledCommunicationBlock color="white"/>
 			</AppointmentContainer>
-		</Container>
+		</FullWidthContainer>
 
 	);
 };
@@ -209,7 +209,7 @@ const AddressAndRoute = () => {
 		window.open(links.autoRoute);
 	};
 	return(
-		<Container background={theme.colors.colorBrand2}>
+		<FullWidthContainer background={theme.colors.colorBrand2}>
 			<AddressAndRouteContainer>
 				<AddressBlockContainer>
 					<AddressBlock large/>
@@ -223,7 +223,7 @@ const AddressAndRoute = () => {
 					</RouteButtonContainer>
 				</RouteContainer>
 			</AddressAndRouteContainer>
-		</Container>
+		</FullWidthContainer>
 
 	);
 };

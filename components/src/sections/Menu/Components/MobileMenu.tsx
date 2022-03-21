@@ -13,19 +13,20 @@ const MobileMenuBarTopContainer = styled(MenuContainer)`
     grid-template-columns: 1fr 60px;
     padding-top: 25px;
     padding-right: 25px;
-    height: 75px;
+    height: 50px;
 	z-index: 90;
 `;
 
 const MobileMenuContainer = styled.div`
-    display: grid;
-    grid-template-rows: 1fr 200px;
-    height: calc(100vh - 100px);
-    width: 100vw;
-    position: absolute;
-    top: 75px;
-    left: 0;
-    background: white;
+	display: grid;
+	grid-template-rows: 1fr 200px;
+	height: calc(100vh - 75px);
+	width: 100vw;
+	position: fixed;
+	top: 75px;
+	left: 0;
+	background: white;
+	z-index: 9999;
 `;
 
 const MenuList = styled.ul`

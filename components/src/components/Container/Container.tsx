@@ -7,19 +7,25 @@ const marginRight = responsiveValuesCSS("padding-right", "px", breakpointNameToP
 
 const responsivePaddingsCSS = marginLeft + marginRight;
 
-export const Container = styled.div<{ background?: string }>`
+export const FullWidthContainer = styled.div<{ background?: string }>`
     ${responsivePaddingsCSS};
     background-color: ${props => props.background ? props.background : "unset"}
 `;
 
-export const MenuContainer = styled(Container)`
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 9999;
+export const Container = styled(FullWidthContainer)`
+    max-width: 1350px;
+    margin: auto;
 `;
 
-export const InitialContainer = styled(Container)`
+export const MenuContainer = styled(FullWidthContainer)`
+    position: fixed;
+    top: 0;
+    width: 95%;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+`;
+
+export const InitialContainer = styled(FullWidthContainer)`
     padding-top: 100px;
 `;
 
