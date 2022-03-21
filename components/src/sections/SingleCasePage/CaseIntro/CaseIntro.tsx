@@ -11,23 +11,24 @@ type TextColumnProps = {
 	text: string;
 }
 const TextColumn = ({title, subtitle, text}: TextColumnProps) => (
-	<Container>
+	<InitialContainer>
 		<Subtitle text={subtitle} />
 		<Heading type="h1" text={title} />
 		<Paragraph text={text} />
-	</Container>
+	</InitialContainer>
 );
 
 const ImageColumnContainer = styled.div`
-	background: ${theme.colors.colorBrand2};
-	padding-top: 200px;
+	background: url(${"/images/case-header-line.svg"}) no-repeat right , ${theme.colors.colorBrand2};
+	background-size: 80% auto;
+	padding-top: 70px;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
 `;
 
 const LogoContainer = styled.div`
-	padding: 62px 52px;
+	margin: 20px 40px 50px 40px
 `;
 
 type ImageColumnProps = {
