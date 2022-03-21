@@ -1,5 +1,5 @@
-import React, {ReactNode} from "react";
-import {Container, Heading, InitialContainer, Paragraph, Subtitle} from "../../../components";
+import React from "react";
+import { Heading, InitialContainer, Paragraph, Subtitle} from "../../../components";
 import styled from "styled-components";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../../helpers";
 import {theme} from "../../../theme";
@@ -24,7 +24,7 @@ const imageColumnContainerResponsiveCSS = responsiveValuesCSS(
 	breakpointNameToPx({
 		xs: 70,
 		lg: 140,
-		xl: 210
+		xl: 210,
 	})
 );
 
