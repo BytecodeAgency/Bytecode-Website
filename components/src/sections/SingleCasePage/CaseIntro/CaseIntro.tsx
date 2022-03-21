@@ -36,8 +36,16 @@ const ImageColumnContainer = styled.div`
 	align-items: flex-end;
 `;
 
+const logoContainerResponsiveCSS = responsiveValuesCSS(
+	"margin",
+	"px",
+	breakpointNameToPx({
+		xs: 20,
+		lg: 40
+	})
+);
 const LogoContainer = styled.div`
-	margin: 20px;
+	${logoContainerResponsiveCSS};
 `;
 
 type ImageColumnProps = {
