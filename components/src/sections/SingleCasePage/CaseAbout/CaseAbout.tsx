@@ -22,7 +22,15 @@ const caseAboutContainerResponsiveCSS = () => {
 			lg: "1fr 1fr"
 		})
 	);
-	return gridAreas + gridColumns;
+	const background = responsiveValuesCSS(
+		"background",
+		"",
+		breakpointNameToPx({
+			xs: `url(${"/images/case-about-line.svg"}) no-repeat right top;`,
+			lg: `url(${"/images/case-about-line.svg"}) no-repeat right center;`
+		})
+	);
+	return gridAreas + gridColumns + background;
 };
 const CaseAboutContainer = styled(Container)`
 	${caseAboutContainerResponsiveCSS};
