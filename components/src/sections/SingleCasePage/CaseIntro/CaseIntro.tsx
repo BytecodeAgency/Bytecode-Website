@@ -19,7 +19,7 @@ const TextColumn = ({title, subtitle, text}: TextColumnProps) => (
 );
 
 const ImageColumnContainer = styled.div`
-	background: url(${"/images/case-header-line.svg"}) no-repeat right , ${theme.colors.colorBrand2};
+	background: url(${"/images/case-header-line.svg"}) no-repeat right top , ${theme.colors.colorBrand2};
 	background-size: 80% auto;
 	padding-top: 70px;
 	display: flex;
@@ -28,7 +28,7 @@ const ImageColumnContainer = styled.div`
 `;
 
 const LogoContainer = styled.div`
-	margin: 20px 40px 50px 40px
+	margin: 20px;
 `;
 
 type ImageColumnProps = {
