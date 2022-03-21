@@ -18,10 +18,19 @@ const TextColumn = ({title, subtitle, text}: TextColumnProps) => (
 	</InitialContainer>
 );
 
+const imageColumnContainerResponsiveCSS = responsiveValuesCSS(
+	"padding-top",
+	"px",
+	breakpointNameToPx({
+		xs: 70,
+		lg: 140
+	})
+);
+
 const ImageColumnContainer = styled.div`
+	${imageColumnContainerResponsiveCSS};
 	background: url(${"/images/case-header-line.svg"}) no-repeat right top , ${theme.colors.colorBrand2};
 	background-size: 80% auto;
-	padding-top: 70px;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
