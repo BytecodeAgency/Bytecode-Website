@@ -14,4 +14,7 @@ export * from "./Menu";
 export {default as PageIntro} from "./PageIntro";
 export * from "./PageIntro";
 
+export {default as SummationBlock} from "./SummationBlock";
+export * from "./SummationBlock";
+
 export * from "./SingleCasePage";

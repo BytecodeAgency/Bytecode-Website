@@ -7,7 +7,7 @@ import { TeamMember, IconTextBlock } from "@bytecode/ui-library/containers";
 import { theme, breakpointNameToPx, responsiveValuesCSS, BreakpointKeyValue, employees } from "@bytecode/ui-library/utils";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
-import {PageIntro} from "@bytecode/ui-library/sections";
+import {PageIntro, SummationBlock, SummationText} from "@bytecode/ui-library/sections";
 const content = {
 	title: "Who is Bytecode?",
 	metaDescription: "Bytecode is a technical partner and CTO for technology based start-ups."
@@ -165,127 +165,53 @@ const Competences = () => (
 	</Container>
 );
 
-const valuesContainerResponsiveCSS = () => {
-	const columns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx({ xs: "auto", lg: "1fr 1fr" }));
-	const gap = responsiveValuesCSS("grid-column-gap", "px", breakpointNameToPx({ xs: 50, xxl: 100 }));
-	return columns + gap;
-};
-
-const ValuesContainer = styled(Container)`
-	${valuesContainerResponsiveCSS};
-	display: grid;
-	grid-template-rows: auto;
-	padding-top: 80px;
-	padding-bottom: 80px;
-`;
-const StyledValuesHeading = styled(Heading)`
-	margin-top: 50px;
-	padding-left: 20px;
-`;
-const valuesParagraphResponsiveCSS = () => responsiveValuesCSS(
-	"margin-bottom",
-	"px",
-	breakpointNameToPx({
-		xs: 50,
-		lg:0,
-		xl: 10,
-		xxl: 20
-	}));
-const StyledValuesParagraph = styled(Paragraph)`
-	${valuesParagraphResponsiveCSS};
-	padding-left: 20px;
-	margin-top: 10px;
-`;
-const summationContainerResponsiveCSS = () => responsiveValuesCSS("margin-top", "px", breakpointNameToPx({xs: 35, lg: 20}));
-const SummationContainer = styled.div`
-	${summationContainerResponsiveCSS};
-`;
 const MeetingImageContainer = styled.div`
 	height: 400px;
 	position: relative;
 `;
-const ValuesLeftColumn = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-`;
-const ValuesRightColumn = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-`;
 
-const styledValuesSpacerResponsiveCSS = responsiveValuesCSS(
-	"margin-left",
-	"px",
-	breakpointNameToPx({
-		xs: 12,
-		md: 16,
-		lg: 0,
-		xl: 0,
-		xxl: 0
-	}));
-const StyledValuesSpacer = styled(Spacer)`
-	${styledValuesSpacerResponsiveCSS};
-	width: 100%;
-`;
+const summationText: SummationText[] = [
+	{
+		title: "We're all in this together.",
+		text: "You know the users. We know tech stuff. " +
+			"Together we understand a lot of things. " +
+			"We believe the best work happens when we don’t think of ourselves as a client " +
+			"and agency relationship but as one team."
+	},
+	{
+		title: "Do and learn.",
+		text: "We believe that skills come with experience. " +
+			"We alle learn more by doing and trying then sitting around and speculation."
+	},
+	{
+		title: "High in energy!",
+		text: "We don’t mean drinking coffee or energy drinks, " +
+			"but we love to work with founders that are passionate about their idea. " +
+			"Enthusiasm is catchy, so if you are willing to change the world, then so are we."
+	}
+];
 
 const Values = () => (
-	<FullWidthContainer background={theme.colors.colorBrand3}>
-		<ValuesContainer>
-			<ValuesLeftColumn>
-				<StyledValuesSpacer color="white" bold/>
-				<StyledValuesHeading type="h2" text="Things we value the most." color="white"/>
-				<StyledValuesParagraph
-					text="Sometimes a narrow collaboration can be like a marriage.
-						Before you ‘sign the contract’, you want to know who the other person is
-						and what life together will look like. To give you a feeling and better understanding of
-						how we would work together during the project, we present to you our values."
-					color="white"
+	<SummationBlock
+		title="Things we value the most."
+		titleText="Sometimes a narrow collaboration can be like a marriage.
+			Before you ‘sign the contract’, you want to know who the other person is
+			and what life together will look like. To give you a feeling and better understanding of
+			how we would work together during the project, we present to you our values."
+		summationText={summationText}
+		backgroundColor={theme.colors.colorBrand3}
+		textColor="white"
+		image={
+			<MeetingImageContainer>
+				<Image
+					src="/images/who-are-we-working2.png"
+					layout="fill"
+					alt="Members of Bytecode in a meeting"
+					objectFit="contain"
 				/>
-				<MeetingImageContainer>
-					<Image
-						src="/images/who-are-we-working2.png"
-						layout="fill"
-						alt="Members of Bytecode in a meeting"
-						objectFit="contain"
-					/>
-				</MeetingImageContainer>
-			</ValuesLeftColumn>
-			<ValuesRightColumn>
-				<SummationContainer>
-					<Subtitle text="1." color="white" fontWeight="bold"/>
-					<Heading type="h4" color="white" text="We're all in this together."/>
-					<Paragraph
-						text="You know the users. We know tech stuff.
-						Together we understand a lot of things.
-						We believe the best work happens when we don’t think of ourselves as a client
-						and agency relationship but as one team."
-						color="white"
-					/>
-				</SummationContainer>
-				<SummationContainer>
-					<Subtitle text="2." color="white" fontWeight="bold"/>
-					<Heading type="h4" color="white" text="Do and learn."/>
-					<Paragraph
-						text="We believe that skills come with experience.
-						We alle learn more by doing and trying then sitting around and speculation."
-						color="white"
-					/>
-				</SummationContainer>
-				<SummationContainer>
-					<Subtitle text="3." color="white" fontWeight="bold"/>
-					<Heading type="h4" color="white" text="High in energy!"/>
-					<Paragraph
-						text="We don’t mean drinking coffee or energy drinks,
-						but we love to work with founders that are passionate about their idea.
-						Enthusiasm is catchy, so if you are willing to change the world, then so are we."
-						color="white"
-					/>
-				</SummationContainer>
-			</ValuesRightColumn>
-		</ValuesContainer>
-	</FullWidthContainer>
+			</MeetingImageContainer>
+		}
+	/>
 );
 
 const teamMembersContainerResponsiveCSS = () => {

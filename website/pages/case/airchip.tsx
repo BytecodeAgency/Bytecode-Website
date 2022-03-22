@@ -1,7 +1,7 @@
 import React from "react";
 import {NextPage} from "next";
 import MainLayout from "../../layout/MainLayout";
-import {CaseIntro, CaseAbout, CaseQuote} from "@bytecode/ui-library/sections";
+import {CaseIntro, CaseAbout, CaseQuote, SummationBlock, SummationText} from "@bytecode/ui-library/sections";
 import {Heading, Paragraph} from "@bytecode/ui-library/components";
 import styled from "styled-components";
 
@@ -70,6 +70,33 @@ const AboutText = () => (
 	</AboutTextContainer>
 );
 
+const summationText: SummationText[] = [
+	{
+		title: "COVID-19",
+		text: "To summarise this challenge: the timing was just not right. " +
+			"Airchip had a lot of potential. The right team. A great product. " +
+			"And they had acquired some funding. But just when they were ready to launch at big events… Covid came. " +
+			"This made it impossible for Airchip to make revenue and improve their product."
+	},
+	{
+		title: "Finding the right tech team",
+		text: "Airchip has had its portion of difficulty finding the right people to build " +
+			"and improve their technically challenging product. The tech co-founder left Airchip, " +
+			"partly due to the financial challenge of Covid. Although their initial team had a lot of software experience, " +
+			"developing for a start-up was new to them, which created a lot of technical debt, " +
+			"making it hard to scale up. After the co-founder left, Airchip tried several persons to fulfill " +
+			"the role of a tech founder, " +
+			"but a great working match was never found… until Bytecode of course."
+	},
+	{
+		title: "User experience",
+		text: "Airchip has a lot of payment transactions. " +
+			"This made it crucial to have a solid and tested user flow. " +
+			"Despite the importance, not enough attention and detail had gone into this element. " +
+			"That is why some users experienced difficulty when trying to purchase something."
+	}
+];
+
 const AirchipBody = () => (
 	<div>
 		<CaseIntro
@@ -91,6 +118,13 @@ const AirchipBody = () => (
 			]}
 		><AboutText /></CaseAbout>
 		<CaseQuote text="Een quote van ongeveer 3 regels maximaal zodat het visueel netjes blijft" />
+		<SummationBlock
+			title="The challenges"
+			titleText="Airchip was in the post-MVP phase and had already gained some investment.
+				This was a very important step, but they also experienced some difficult challenges.
+				Here are the three most crucial ones:"
+			summationText={summationText}
+		/>
 	</div>
 );
 
