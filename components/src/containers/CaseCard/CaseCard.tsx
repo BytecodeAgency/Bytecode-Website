@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Paragraph, Subtitle} from "../../components";
+import {Paragraph, PhoneScreen, Subtitle} from "../../components";
 import {theme} from "../../theme";
 
 const CaseCardContainer = styled.div`
@@ -21,25 +21,10 @@ const CaseCardContainer = styled.div`
 	}
 `;
 
-const ImageContainer = styled.div`
-	background-image: url(${"/images/case-phone-background.png"});
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 240px;
-	filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.4));
-	align-self: center;
-`;
-
-const StyledImage = styled.img`
-	height: 240px;
-	mask-image: url(${"/images/case-phone-background.png"});
-	mask-repeat: no-repeat;
-	mask-position: center;
-`;
-
 const StyledSubtitle = styled(Subtitle)`
 	text-transform: capitalize;
 `;
+
 
 type CaseCardProps = {
 	name: string;
@@ -48,9 +33,7 @@ type CaseCardProps = {
 
 const CaseCard = ({ name, subtitle }:CaseCardProps) => (
 	<CaseCardContainer onClick={() => console.log(`go to /cases/${name}`)}>
-		<ImageContainer>
-			<StyledImage src={"/images/case-airchip.jpeg"} alt={`image of ${name} app`} />
-		</ImageContainer>
+		<PhoneScreen image="/images/case-airchip.jpeg" alt={`image of ${name} app`} height={240} />
 		<div>
 			<StyledSubtitle fontWeight="bold" text={name} />
 			<Paragraph text={subtitle} size="small" />
