@@ -124,12 +124,25 @@ const StyledCommunicationBlock = styled(CommunicationBlock)`
 	align-self: end;
 `;
 
+const styledAppointmentFullWidthContainerResponsiveCSS = responsiveValuesCSS(
+	"background",
+	"",
+	breakpointNameToPx({
+		xs: `url(${"/images/contact-line2-mobile.svg"}) no-repeat left top, ${theme.colors.colorBrand3};`,
+		lg: `url(${"/images/contact-line2.svg"}) no-repeat left top, ${theme.colors.colorBrand3};`
+	})
+);
+
+const StyledAppointmentFullWidthContainer = styled(FullWidthContainer)`
+	${styledAppointmentFullWidthContainerResponsiveCSS};
+`;
+
 const Appointment = () => {
 	const goToMeetingPlanner = () => {
 		window.open("https://calendly.com/nickbroekarts-bytecode");
 	};
 	return(
-		<FullWidthContainer background={theme.colors.colorBrand3}>
+		<StyledAppointmentFullWidthContainer>
 			<AppointmentContainer>
 				<MeetingContainer>
 					<Heading type="h1" text="Book an appointment" color="white"/>
@@ -144,7 +157,7 @@ const Appointment = () => {
 				</StyledMeetingButtonContainer>
 				<StyledCommunicationBlock color="white"/>
 			</AppointmentContainer>
-		</FullWidthContainer>
+		</StyledAppointmentFullWidthContainer>
 
 	);
 };
