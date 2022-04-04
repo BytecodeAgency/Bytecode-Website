@@ -2,8 +2,9 @@ import React from "react";
 import {NextPage} from "next";
 import MainLayout from "../../layout/MainLayout";
 import {CaseIntro, CaseAbout, CaseQuote, SummationBlock, SummationText, ScreensAndText} from "@bytecode/ui-library/sections";
-import {Heading, Paragraph} from "@bytecode/ui-library/components";
+import {Container, Heading, Paragraph} from "@bytecode/ui-library/components";
 import styled from "styled-components";
+import {theme} from "@bytecode/ui-library/utils";
 
 const content = {
 	title: "Airchip | Case",
@@ -96,6 +97,26 @@ const summationText: SummationText[] = [
 			"That is why some users experienced difficulty when trying to purchase something."
 	}
 ];
+
+const ScreensAndTextOneContainer = styled.div`
+	//background: url(${"/images/case-airchip-line1.svg"}) no-repeat left top, ${theme.colors.colorBrand2};
+	
+	
+`;
+
+const ScreensAndTextOne = () => (
+	<ScreensAndTextOneContainer>
+		<ScreensAndText
+			title="Shortest line and waiting time"
+			text="The main feature of Airchip is to order drinks and snacks from
+				your phone while dancing or partying. When your order is ready to pick up,
+				you get a notification to collect your order. To make sure the waiting time is as low as possible,
+				you can select from which location you want to order."
+			screenOne="/images/case-airchip.jpeg"
+			screenTwo="/images/case-airchip.jpeg"
+		/>
+	</ScreensAndTextOneContainer>
+);
 
 const AirchipBody = () => (
 	<div>

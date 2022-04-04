@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import {Container, Heading, Paragraph, PhoneScreen} from "../../../components";
+import {useWindowSize} from "../../../helpers";
+import {theme} from "../../../theme";
 
 const GridContainer = styled(Container)`
-  display: grid;
-  grid-template-columns: 1fr;
+  	display: grid;
+  	grid-template-columns: 1fr;
 	max-width: 800px;
 `;
 
@@ -30,17 +32,41 @@ type ScreensAndTextProps = {
     screenOne: string;
     screenTwo: string;
 }
-const ScreensAndText = ({title, text, screenOne, screenTwo}: ScreensAndTextProps) => (
-	<GridContainer>
-		<ImageContainer>
-			<PhoneScreen image={screenOne} alt="app" height={480} />
-			<PhoneScreen image={screenTwo} alt="app" height={480} />
-		</ImageContainer>
-		<TextContainer>
-			<StyledHeading type="h3" text={title} />
-			<Paragraph text={text} />
-		</TextContainer>
-	</GridContainer>
-);
+const ScreensAndText = ({title, text, screenOne, screenTwo}: ScreensAndTextProps) => {
+	const device = useWindowSize();
+	const ScreenImages = () => {
+		if (!device.width || (theme.breakpoints.md && device.width > theme.breakpoints.md)){
+			return (
+				<ImageContainer>
+					<PhoneScreen image={screenOne} alt="app" height={480}/>
+					<PhoneScreen image={screenTwo} alt="app" height={480}/>
+				</ImageContainer>
+			);
+		}
+		if (!device.width || (theme.breakpoints.sm && device.width > theme.breakpoints.sm)){
+			return (
+				<ImageContainer>
+					<PhoneScreen image={screenOne} alt="app" height={400}/>
+					<PhoneScreen image={screenTwo} alt="app" height={400}/>
+				</ImageContainer>
+			);
+		}
+		return (
+			<ImageContainer>
+				<PhoneScreen image={screenOne} alt="app" height={290}/>
+				<PhoneScreen image={screenTwo} alt="app" height={290}/>
+			</ImageContainer>
+		);
+	};
+	return(
+		<GridContainer>
+			<ScreenImages />
+			<TextContainer>
+				<StyledHeading type="h3" text={title}/>
+				<Paragraph text={text}/>
+			</TextContainer>
+		</GridContainer>
+	);
+};
 
 export default ScreensAndText;
