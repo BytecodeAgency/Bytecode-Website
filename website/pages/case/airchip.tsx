@@ -1,7 +1,7 @@
 import React from "react";
 import {NextPage} from "next";
 import MainLayout from "../../layout/MainLayout";
-import {CaseIntro, CaseAbout, CaseQuote, SummationBlock, SummationText} from "@bytecode/ui-library/sections";
+import {CaseIntro, CaseAbout, CaseQuote, SummationBlock, SummationText, ScreensAndText} from "@bytecode/ui-library/sections";
 import {Heading, Paragraph} from "@bytecode/ui-library/components";
 import styled from "styled-components";
 
@@ -124,6 +124,15 @@ const AirchipBody = () => (
 				This was a very important step, but they also experienced some difficult challenges.
 				Here are the three most crucial ones:"
 			summationText={summationText}
+		/>
+		<ScreensAndText
+			title="Shortest line and waiting time"
+			text="The main feature of Airchip is to order drinks and snacks from
+				your phone while dancing or partying. When your order is ready to pick up,
+				you get a notification to collect your order. To make sure the waiting time is as low as possible,
+				you can select from which location you want to order."
+			screenOne="/images/case-airchip.jpeg"
+			screenTwo="/images/case-airchip.jpeg"
 		/>
 	</div>
 );

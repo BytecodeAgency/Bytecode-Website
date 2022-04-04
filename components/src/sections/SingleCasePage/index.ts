@@ -6,3 +6,6 @@ export * from "./CaseAbout";
 
 export {default as CaseQuote} from "./CaseQuote";
 export * from "./CaseQuote";
+
+export {default as ScreensAndText} from "./ScreensAndText";
+export * from "./ScreensAndText";
