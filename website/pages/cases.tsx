@@ -156,6 +156,10 @@ const Sticky = styled.div`
 	top: 120px;
 `;
 
+const StyledFullWidthContainer = styled(FullWidthContainer)`
+	background: url(${"/images/cases-line.svg"}) no-repeat left center, ${theme.colors.colorBrand2};
+`;
+
 type Case = {
 	name: string;
 	subtitle: string;
@@ -189,7 +193,7 @@ const cases: Case[] = [
 ];
 
 const CasesOverview = () => (
-	<FullWidthContainer background={theme.colors.colorBrand2}>
+	<StyledFullWidthContainer>
 		<CasesOverviewContainer>
 			<CasesOverviewLeftColumn>
 				<Sticky>
@@ -212,7 +216,7 @@ const CasesOverview = () => (
 				}
 			</CasesOverviewRightColumn>
 		</CasesOverviewContainer>
-	</FullWidthContainer>
+	</StyledFullWidthContainer>
 );
 
 const CasesBody = () => (
