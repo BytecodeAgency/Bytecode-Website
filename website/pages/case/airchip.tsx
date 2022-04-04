@@ -2,7 +2,7 @@ import React from "react";
 import {NextPage} from "next";
 import MainLayout from "../../layout/MainLayout";
 import {CaseIntro, CaseAbout, CaseQuote, SummationBlock, SummationText, ScreensAndText} from "@bytecode/ui-library/sections";
-import { Heading, Paragraph} from "@bytecode/ui-library/components";
+import { Heading, Paragraph, Container} from "@bytecode/ui-library/components";
 import styled from "styled-components";
 import {breakpointNameToPx, responsiveValuesCSS, theme} from "@bytecode/ui-library/utils";
 import {layout} from "@bytecode/ui-library/utils";
@@ -159,6 +159,73 @@ const ScreensAndTextOne = () => (
 	</ScreensAndTextOneContainer>
 );
 
+const screensAndTextTwoContainerResponsiveCSS = () => {
+	const paddingTop = responsiveValuesCSS(
+		"padding-top",
+		"px",
+		breakpointNameToPx({
+			xs: 60,
+			md: 90,
+			xl: 150,
+			xxl: 200
+		})
+	);
+	const paddingBottom = responsiveValuesCSS(
+		"padding-bottom",
+		"px",
+		breakpointNameToPx({
+			xs: 60,
+			md: 90,
+			xl: 150,
+			xxl: 200
+		})
+	);
+	const paddingRight = responsiveValuesCSS(
+		"padding-right",
+		"px",
+		breakpointNameToPx({
+			...layout.container.margin,
+			xl: 120,
+			xxl: 200
+		})
+	);
+	const backgroundSize = responsiveValuesCSS(
+		"background-size",
+		"",
+		breakpointNameToPx({
+			xs: "65% auto",
+			sm: "55% auto",
+			lg: "30% auto"
+		})
+	);
+	return paddingRight + paddingBottom + paddingTop + backgroundSize;
+};
+
+const ScreensAndTextTwoContainer = styled(Container)`
+	${screensAndTextTwoContainerResponsiveCSS};
+	background: url(${"/images/case-airchip-line3.svg"}) no-repeat bottom left;
+	display: grid;
+	justify-items: flex-end;
+	background-origin: border-box;
+`;
+
+const ScreensAndTextTwo = () => (
+	<ScreensAndTextTwoContainer>
+		<ScreensAndText
+			title="Always ‘online’ And ready to order"
+			text="Festivals and events are amazing.
+				But sometimes a basic necessity of ours fails,
+				as the internet connection is often poor or not available.
+				To make sure you can always stay hydrated and energized, we used Bluetooth connections.
+				This enabled us to stay ‘online’ so that consumers could still purchase
+				and retailers would receive the orders.
+				That meant we were not dependent on networks."
+			screenOne="/images/case-airchip.jpeg"
+			screenTwo="/images/case-airchip.jpeg"
+		/>
+	</ScreensAndTextTwoContainer>
+);
+
 const AirchipBody = () => (
 	<div>
 		<CaseIntro
@@ -188,6 +255,7 @@ const AirchipBody = () => (
 			summationText={summationText}
 		/>
 		<ScreensAndTextOne />
+		<ScreensAndTextTwo />
 	</div>
 );
 

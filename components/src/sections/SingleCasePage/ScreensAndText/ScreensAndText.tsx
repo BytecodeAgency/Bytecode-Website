@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Heading, Paragraph, PhoneScreen} from "../../../components";
 import {useWindowSize} from "../../../helpers";
 import {theme} from "../../../theme";
+import {WithStyle} from "../../../types/utils";
 
 const GridContainer = styled.div`
   	display: grid;
@@ -32,7 +33,7 @@ type ScreensAndTextProps = {
     screenOne: string;
     screenTwo: string;
 }
-const ScreensAndText = ({title, text, screenOne, screenTwo}: ScreensAndTextProps) => {
+const ScreensAndText = ({title, text, screenOne, screenTwo, className}: WithStyle<ScreensAndTextProps>) => {
 	const device = useWindowSize();
 	const ScreenImages = () => {
 		if (!device.width || (theme.breakpoints.md && device.width > theme.breakpoints.md)){
@@ -59,7 +60,7 @@ const ScreensAndText = ({title, text, screenOne, screenTwo}: ScreensAndTextProps
 		);
 	};
 	return(
-		<GridContainer>
+		<GridContainer className={className}>
 			<ScreenImages />
 			<TextContainer>
 				<StyledHeading type="h3" text={title}/>
