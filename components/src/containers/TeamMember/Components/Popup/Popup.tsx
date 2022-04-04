@@ -6,7 +6,6 @@ import {theme} from "../../../../theme";
 import React from "react";
 import PopupSocials from "./PopupSocials";
 import PopupHeader from "./PopupHeader";
-import Image from "next/image";
 import {Member} from "../../TeamMember";
 
 const PopupBackground = styled.div`
@@ -69,13 +68,33 @@ const PopupContent = styled(Container)`
 
 const styledImageResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({xs:75, md: 0}));
 
-const StyledImage = styled.div`
+const imageOnionSide = [
+	{url:"top-left", background: "left top"},
+	{url: "top-right", background: "right top"},
+	{url: "bottom-right", background: "right bottom"}
+];
+const imageOnionColor = [
+	"green",
+	"pink"
+];
+
+const getRandomImageOnion = (name: string) => {
+	const color = imageOnionColor[Math.floor(Math.random()*imageOnionColor.length)];
+	const side = imageOnionSide[Math.floor(Math.random()*imageOnionSide.length)];
+	//const side = {url:"top-left", background: "left top", image: "left top"};
+	return `url(${`/images/image-vector-${side.url}-${color}.svg`}) no-repeat ${side.background}, url(${`/images/member-${name}.png`}) no-repeat ${side.background}`;
+};
+
+const StyledImage = styled.div<{name: string}>`
 	${styledImageResponsiveCSS};
-	height: 500px;
-	width: 340px;
+	height: 452px;
+	width: 312px;
 	grid-area: image;
 	position: relative;
 	left: 0;
+	bottom: 0;
+	background: ${ props => `${getRandomImageOnion(props.name)}`};
+	background-origin: content-box;
 `;
 
 const TitleAndName = styled.div`
@@ -109,9 +128,7 @@ const Popup: React.FC<PopupProps> = ({member, closePopup, popup}) => {
 					<PopupBackground> {/*Add onclick for closing by clicking on background*/}
 						<PopupContent>
 							<PopupHeader closePopup={closePopup}/>
-							<StyledImage>
-								<Image src={`/images/member-${src}.png`} alt="profile picture" layout="fill" objectFit="contain"/>
-							</StyledImage>
+							<StyledImage name={src}/>
 							<TitleAndName>
 								<StyledName text={name} type="h4"/>
 								<JobTitle text={jobTitle}/>
