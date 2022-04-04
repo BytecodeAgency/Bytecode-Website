@@ -62,9 +62,9 @@ const CaseAbout = ({expertises, deliverables, children}: WithChildren<CaseAboutP
 		{ children }
 		<RightColumn>
 			<StyledSubtitle fontWeight="bold" text="EXPERTISE" />
-			{expertises.map(expertise=><StyledParagraph text={expertise} />)}
+			{expertises.map((expertise, index)=><StyledParagraph key={index} text={expertise} />)}
 			<StyledSubtitle fontWeight="bold" text="DELIVERABLES" />
-			{deliverables.map(deliverable=><StyledParagraph text={deliverable} />)}
+			{deliverables.map((deliverable, index)=><StyledParagraph key={index} text={deliverable} />)}
 		</RightColumn>
 	</CaseAboutContainer>
 );
