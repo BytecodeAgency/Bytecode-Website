@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import {Container, Heading, Paragraph, PhoneScreen} from "../../../components";
+import { Heading, Paragraph, PhoneScreen} from "../../../components";
 import {useWindowSize} from "../../../helpers";
 import {theme} from "../../../theme";
 
-const GridContainer = styled(Container)`
+const GridContainer = styled.div`
   	display: grid;
   	grid-template-columns: 1fr;
 	max-width: 800px;

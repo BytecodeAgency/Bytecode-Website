@@ -2,9 +2,10 @@ import React from "react";
 import {NextPage} from "next";
 import MainLayout from "../../layout/MainLayout";
 import {CaseIntro, CaseAbout, CaseQuote, SummationBlock, SummationText, ScreensAndText} from "@bytecode/ui-library/sections";
-import {Container, Heading, Paragraph} from "@bytecode/ui-library/components";
+import { Heading, Paragraph} from "@bytecode/ui-library/components";
 import styled from "styled-components";
-import {theme} from "@bytecode/ui-library/utils";
+import {breakpointNameToPx, responsiveValuesCSS, theme} from "@bytecode/ui-library/utils";
+import {layout} from "@bytecode/ui-library/utils";
 
 const content = {
 	title: "Airchip | Case",
@@ -98,11 +99,51 @@ const summationText: SummationText[] = [
 	}
 ];
 
+const screensAndTextOneContainerResponsiveCSS = () => {
+	const paddingTopAndBottom = breakpointNameToPx({
+		xs: 60,
+		lg: 90,
+		xl: 150,
+		xxl: 200
+	});
+	const paddingTop = responsiveValuesCSS(
+		"padding-top",
+		"px",
+		paddingTopAndBottom
+	);
+	const paddingBottom = responsiveValuesCSS(
+		"padding-bottom",
+		"px",
+		paddingTopAndBottom
+	);
+	const paddingLeft = responsiveValuesCSS(
+		"padding-left",
+		"px",
+		breakpointNameToPx({
+			...layout.container.margin,
+			xl: 120,
+			xxl: 200
+		})
+	);
+	const backgroundSize = responsiveValuesCSS(
+		"background-size",
+		"",
+		breakpointNameToPx({
+			xs: "60% auto",
+			md: "50% auto",
+			lg: "40% auto"
+		})
+	);
+	return paddingLeft + paddingBottom + paddingTop + backgroundSize;
+};
+
 const ScreensAndTextOneContainer = styled.div`
-	//background: url(${"/images/case-airchip-line1.svg"}) no-repeat left top, ${theme.colors.colorBrand2};
-	
-	
+	${screensAndTextOneContainerResponsiveCSS};
+	background: url(${"/images/case-airchip-line1.svg"}) no-repeat left top, url(${"/images/case-airchip-line2.svg"}) no-repeat right bottom, ${theme.colors.colorBrand2};
+	display: grid;
+	justify-items: flex-start;
 `;
+
 
 const ScreensAndTextOne = () => (
 	<ScreensAndTextOneContainer>
@@ -146,15 +187,7 @@ const AirchipBody = () => (
 				Here are the three most crucial ones:"
 			summationText={summationText}
 		/>
-		<ScreensAndText
-			title="Shortest line and waiting time"
-			text="The main feature of Airchip is to order drinks and snacks from
-				your phone while dancing or partying. When your order is ready to pick up,
-				you get a notification to collect your order. To make sure the waiting time is as low as possible,
-				you can select from which location you want to order."
-			screenOne="/images/case-airchip.jpeg"
-			screenTwo="/images/case-airchip.jpeg"
-		/>
+		<ScreensAndTextOne />
 	</div>
 );
 
