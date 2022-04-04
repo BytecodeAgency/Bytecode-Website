@@ -56,6 +56,11 @@ const Intro = () => (
 		/>
 	</InitialContainer>
 );
+
+const StyledContainer = styled(Container)`
+	background: url(${"/images/who-we-are-line.svg"}) no-repeat left bottom;
+`;
+
 const competencesContainerResponsiveCSS = () => {
 	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 80, lg: 200, xl: 240, xxl: 300 }));
 	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx({ xs: 80, lg: 60}));
@@ -119,7 +124,7 @@ const IconBlocksContainer = styled.div`
 `;
 
 const Competences = () => (
-	<Container>
+	<StyledContainer>
 		<CompetencesContainer>
 			<SpacerContainer>
 				<StyledCompetencesSpacer color="black"/>
@@ -162,7 +167,7 @@ const Competences = () => (
 				/>
 			</IconBlocksContainer>
 		</CompetencesContainer>
-	</Container>
+	</StyledContainer>
 );
 
 const valuesContainerResponsiveCSS = () => {
