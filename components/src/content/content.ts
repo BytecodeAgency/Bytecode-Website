@@ -1,6 +1,7 @@
 import {Member} from "../containers";
 import {EmployeeName} from "./contentGenerics";
 
+
 // list of all employees
 export const employees: Member[] = [
 	{
@@ -70,6 +71,17 @@ export const employees: Member[] = [
 export const getEmployee = (name: EmployeeName): Member | undefined => (
 	employees.find(employee=>employee.id === name)
 );
+
+export const getEmployees = (names: EmployeeName[]): Member[] => {
+	const employeeList: Member[] = [];
+	names.forEach(name => {
+		const employee = getEmployee(name);
+		if(employee !== undefined){
+			employeeList.push(employee);
+		}
+	});
+	return employeeList;
+};
 
 export const footerContent = {
 	slogan: "What is your challenge or startup idea?",

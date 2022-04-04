@@ -1,11 +1,19 @@
 import React from "react";
 import {NextPage} from "next";
 import MainLayout from "../../layout/MainLayout";
-import {CaseIntro, CaseAbout, CaseQuote, SummationBlock, SummationText, ScreensAndText} from "@bytecode/ui-library/sections";
+import {
+	CaseIntro,
+	CaseAbout,
+	CaseQuote,
+	SummationBlock,
+	SummationText,
+	ScreensAndText,
+	TeamMembers
+} from "@bytecode/ui-library/sections";
 import { Heading, Paragraph, Container} from "@bytecode/ui-library/components";
 import styled from "styled-components";
-import {breakpointNameToPx, responsiveValuesCSS, theme} from "@bytecode/ui-library/utils";
-import {layout} from "@bytecode/ui-library/utils";
+import {breakpointNameToPx,  responsiveValuesCSS, theme} from "@bytecode/ui-library/utils";
+import {layout, getEmployees} from "@bytecode/ui-library/utils";
 
 const content = {
 	title: "Airchip | Case",
@@ -256,6 +264,7 @@ const AirchipBody = () => (
 		/>
 		<ScreensAndTextOne />
 		<ScreensAndTextTwo />
+		<TeamMembers members={getEmployees(["jeroen", "nick"])} />
 	</div>
 );
 
