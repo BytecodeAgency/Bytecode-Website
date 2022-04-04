@@ -25,7 +25,7 @@ const Contact: NextPage = () => {
 const introImageContainerResponsiveCSS = () => {
 	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx({ xs: "100vw", lg: "100%" }));
 	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -24, md:-32, lg: 32, xl: 48, xxl: 64}));
-	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 50, lg: 300,}));
+	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 50, lg: 200, xl: 230}));
 	return imageWidths + top + marginLeft;
 };
 
@@ -38,8 +38,13 @@ const StyledImage = styled.img`
 	width: 100%;
 `;
 
+const StyledInitialContainer = styled(InitialContainer)`
+	padding-right: 0;
+	background: url(${"/images/contact-line1.svg"}) no-repeat right center;
+`;
+
 const Intro = () => (
-	<InitialContainer>
+	<StyledInitialContainer>
 		<PageIntro
 			subtitle="Contact us"
 			title="There you are! Let's chat."
@@ -57,7 +62,7 @@ const Intro = () => (
 			}
 			columnSizes="3fr 5fr"
 		/>
-	</InitialContainer>
+	</StyledInitialContainer>
 );
 
 const appointmentContainerResponsiveCSS = () => {
@@ -201,6 +206,10 @@ const AddressBlockContainer = styled.div`
 	${addressBlockContainerResponsiveCSS};
 `;
 
+const StyledFullWidthContainer = styled(FullWidthContainer)`
+	background: url(${"/images/contact-line3.svg"}) no-repeat left bottom, ${theme.colors.colorBrand2};
+`;
+
 const AddressAndRoute = () => {
 	const goToPublicTransportRoute = () => {
 		window.open("https://www.google.com/maps/dir/?api=1&destination=Bytecode+Digital+Agency+B.V.&travelmode=transit");
@@ -209,7 +218,7 @@ const AddressAndRoute = () => {
 		window.open("https://www.google.com/maps/dir/?api=1&destination=Bytecode+Digital+Agency+B.V.");
 	};
 	return(
-		<FullWidthContainer background={theme.colors.colorBrand2}>
+		<StyledFullWidthContainer>
 			<AddressAndRouteContainer>
 				<AddressBlockContainer>
 					<AddressBlock large/>
@@ -223,7 +232,7 @@ const AddressAndRoute = () => {
 					</RouteButtonContainer>
 				</RouteContainer>
 			</AddressAndRouteContainer>
-		</FullWidthContainer>
+		</StyledFullWidthContainer>
 
 	);
 };
