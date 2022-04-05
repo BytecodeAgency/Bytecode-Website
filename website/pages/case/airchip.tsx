@@ -167,6 +167,29 @@ const ScreensAndTextOne = () => (
 	</ScreensAndTextOneContainer>
 );
 
+const screensAndTextTwoBackgrounResponsiveCSS = () => {
+	const background = responsiveValuesCSS(
+		"background",
+		"",
+		breakpointNameToPx({
+			lg: `url(${"/images/case-airchip-line3.svg"}) no-repeat bottom left`
+		})
+	);
+	const backgroundSize = responsiveValuesCSS(
+		"background-size",
+		"",
+		breakpointNameToPx({
+			lg: "30% auto",
+			xxl: "auto"
+		})
+	);
+	return background + backgroundSize;
+};
+
+const ScreensAndTextTwoBackground = styled.div`
+	${screensAndTextTwoBackgrounResponsiveCSS};
+`;
+
 const screensAndTextTwoContainerResponsiveCSS = () => {
 	const paddingTop = responsiveValuesCSS(
 		"padding-top",
@@ -197,48 +220,36 @@ const screensAndTextTwoContainerResponsiveCSS = () => {
 			xxl: 200
 		})
 	);
-	const backgroundSize = responsiveValuesCSS(
-		"background-size",
-		"",
-		breakpointNameToPx({
-			xs: "65% auto",
-			sm: "55% auto",
-			lg: "30% auto"
-		})
-	);
-	const background = responsiveValuesCSS(
-		"background",
-		"",
-		breakpointNameToPx({
-			lg: `url(${"/images/case-airchip-line3.svg"}) no-repeat bottom left`
-		})
-	);
-	return paddingRight + paddingBottom + paddingTop + backgroundSize + background;
+
+
+	return paddingRight + paddingBottom + paddingTop;
 };
 
 const ScreensAndTextTwoContainer = styled(Container)`
 	${screensAndTextTwoContainerResponsiveCSS};
 	display: grid;
-	justify-items: flex-end;
+	justify-items: center;
 	background-origin: border-box;
-	margin-left: 0;
 `;
 
 const ScreensAndTextTwo = () => (
-	<ScreensAndTextTwoContainer>
-		<ScreensAndText
-			title="Always ‘online’ And ready to order"
-			text="Festivals and events are amazing.
+	<ScreensAndTextTwoBackground>
+		<ScreensAndTextTwoContainer>
+			<ScreensAndText
+				title="Always ‘online’ And ready to order"
+				text="Festivals and events are amazing.
 				But sometimes a basic necessity of ours fails,
 				as the internet connection is often poor or not available.
 				To make sure you can always stay hydrated and energized, we used Bluetooth connections.
 				This enabled us to stay ‘online’ so that consumers could still purchase
 				and retailers would receive the orders.
 				That meant we were not dependent on networks."
-			screenOne="/images/iphone2.svg"
-			screenTwo="/images/iphone2.svg"
-		/>
-	</ScreensAndTextTwoContainer>
+				screenOne="/images/iphone2.svg"
+				screenTwo="/images/iphone2.svg"
+			/>
+		</ScreensAndTextTwoContainer>
+	</ScreensAndTextTwoBackground>
+
 );
 
 const AirchipBody = () => (
