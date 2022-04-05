@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading, Paragraph, PhoneScreen} from "../../../components";
-import {useWindowSize} from "../../../helpers";
-import {theme} from "../../../theme";
-import {WithStyle} from "../../../types/utils";
+import { Heading, Paragraph, PhoneScreen } from "../../../components";
+import { breakpointNameToPx, responsiveValuesCSS, useWindowSize } from "../../../helpers";
+import { theme } from "../../../theme";
+import { WithStyle } from "../../../types/utils";
 
 const GridContainer = styled.div`
   	display: grid;
@@ -18,9 +18,17 @@ const ImageContainer = styled.div`
 	gap: 40px;
 `;
 
+const textContainerResponsiveStyling = responsiveValuesCSS(
+	"grid-template-columns",
+	"",
+	breakpointNameToPx({
+		md: "2fr 3fr"
+	})
+);
+
 const TextContainer = styled.div`
+	${textContainerResponsiveStyling};
   	display: grid;
-	grid-template-columns: 2fr 3fr;
 	margin-top: 60px;
 `;
 
@@ -34,7 +42,7 @@ type ScreensAndTextProps = {
     screenOne: string;
     screenTwo: string;
 }
-const ScreensAndText = ({title, text, screenOne, screenTwo, className}: WithStyle<ScreensAndTextProps>) => {
+const ScreensAndText = ({ title, text, screenOne, screenTwo, className }: WithStyle<ScreensAndTextProps>) => {
 	const device = useWindowSize();
 	const ScreenImages = () => {
 		if (!device.width || (theme.breakpoints.md && device.width > theme.breakpoints.md)){
