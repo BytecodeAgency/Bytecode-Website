@@ -30,6 +30,8 @@ const Airchip: NextPage = () => {
 
 const AboutTextContainer = styled.div`
 	grid-area: text;
+	max-width: 750px;
+	justify-self: center;
 `;
 
 const AboutText = () => (
@@ -206,15 +208,22 @@ const screensAndTextTwoContainerResponsiveCSS = () => {
 			lg: "30% auto"
 		})
 	);
-	return paddingRight + paddingBottom + paddingTop + backgroundSize;
+	const background = responsiveValuesCSS(
+		"background",
+		"",
+		breakpointNameToPx({
+			lg: `url(${"/images/case-airchip-line3.svg"}) no-repeat bottom left`
+		})
+	);
+	return paddingRight + paddingBottom + paddingTop + backgroundSize + background;
 };
 
 const ScreensAndTextTwoContainer = styled(Container)`
 	${screensAndTextTwoContainerResponsiveCSS};
-	background: url(${"/images/case-airchip-line3.svg"}) no-repeat bottom left;
 	display: grid;
 	justify-items: flex-end;
 	background-origin: border-box;
+	margin-left: 0;
 `;
 
 const ScreensAndTextTwo = () => (

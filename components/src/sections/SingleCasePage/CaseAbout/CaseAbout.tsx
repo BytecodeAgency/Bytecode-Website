@@ -1,8 +1,9 @@
 import React from "react";
 import {WithChildren} from "../../../types/utils";
-import {Container, Paragraph, Subtitle} from "../../../components";
+import { Paragraph, Subtitle } from "../../../components";
 import styled from "styled-components";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../../helpers";
+import {layout} from "../../../theme";
 
 const caseAboutContainerResponsiveCSS = () => {
 	const gridAreas = responsiveValuesCSS(
@@ -26,13 +27,15 @@ const caseAboutContainerResponsiveCSS = () => {
 		"background",
 		"",
 		breakpointNameToPx({
-			xs: `url(${"/images/case-about-line.svg"}) no-repeat right top;`,
-			lg: `url(${"/images/case-about-line.svg"}) no-repeat right center;`
+			sm: `url(${"/images/case-about-portal.svg"}) no-repeat right top;`,
+			lg: `url(${"/images/case-about-portal.svg"}) no-repeat right center;`
 		})
 	);
-	return gridAreas + gridColumns + background;
+	const paddingLeft = responsiveValuesCSS("padding-left", "px", breakpointNameToPx(layout.container.margin));
+	const paddingRight = responsiveValuesCSS("padding-right", "px", breakpointNameToPx(layout.container.margin));
+	return gridAreas + gridColumns + background + paddingLeft + paddingRight;
 };
-const CaseAboutContainer = styled(Container)`
+const CaseAboutContainer = styled.div`
 	${caseAboutContainerResponsiveCSS};
 	display: grid;
 	padding-top: 90px;

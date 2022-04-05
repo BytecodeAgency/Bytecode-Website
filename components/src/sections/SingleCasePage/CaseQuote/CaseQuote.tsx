@@ -67,7 +67,7 @@ type CaseQuoteProps = {
 const CaseQuote = ({text}: CaseQuoteProps) => (
 	<StyledContainer>
 		<ImageContainer>
-			<Image src="/images/case-quote-line.svg" alt="profile picture" height={500} width={540}/>
+			<Image src="/images/case-quote-portal.svg" alt="profile picture" height={500} width={540}/>
 		</ImageContainer>
 		<QuoteText type="h2" text={`"${text}"`}/>
 	</StyledContainer>
