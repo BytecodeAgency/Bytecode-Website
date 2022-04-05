@@ -23,7 +23,7 @@ const WhoWeAre: NextPage = () => {
 
 const workingImageContainerResponsiveCSS = () => {
 	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx({ xs: "100vw", lg: "100%" }));
-	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -12, md:-16, lg: 32, xl: 48, xxl: 64}));
+	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -24, md:-32, lg: 32, xl: 48, xxl: 64}));
 	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 25, lg: 150, xl: 200, xxl: 250}));
 	return imageWidths + top + marginLeft;
 };
@@ -57,7 +57,7 @@ const Intro = () => (
 	</InitialContainer>
 );
 
-const StyledContainer = styled(Container)`
+const CompentencesBackground = styled.div`
 	background: url(${"/images/who-we-are-line.svg"}) no-repeat left bottom;
 `;
 
@@ -124,50 +124,53 @@ const IconBlocksContainer = styled.div`
 `;
 
 const Competences = () => (
-	<StyledContainer>
-		<CompetencesContainer>
-			<SpacerContainer>
-				<StyledCompetencesSpacer color="black"/>
-			</SpacerContainer>
-			<StyledCompentencesHeading type="h2" text="What we bring to the table." />
-			<IconBlocksContainer>
-				<IconTextBlock
-					title="Transparent"
-					text="We tell you what you can expect from us, and what we want from you.
+	<CompentencesBackground>
+		<Container>
+			<CompetencesContainer>
+				<SpacerContainer>
+					<StyledCompetencesSpacer color="black"/>
+				</SpacerContainer>
+				<StyledCompentencesHeading type="h2" text="What we bring to the table." />
+				<IconBlocksContainer>
+					<IconTextBlock
+						title="Transparent"
+						text="We tell you what you can expect from us, and what we want from you.
 					We will give our honest opinion on your start-up idea and give tips to improve.
 					Only full transparency can help you really grow.
 					According to us, transparency is one of the core components of a successful working relationship."
-					icon={Eye}
-				/>
-				<IconTextBlock
-					icon={Book}
-					title="Knowledgeable"
-					text="We are working closely together with start-ups for some time.
+						icon={Eye}
+					/>
+					<IconTextBlock
+						icon={Book}
+						title="Knowledgeable"
+						text="We are working closely together with start-ups for some time.
 					That is why we have the experience and skills to help you.
 					With our guidance, you can avoid or overcome common pitfalls
 					that we have seen many founders get trapped in.
 					We love to share our knowledge through strategic sessions and online webinars."
-				/>
-				<IconTextBlock
-					icon={PeopleArrows}
-					title="Personal"
-					text="Every start-up and founder is different. 
-					This is why we always evaluate your specific situation. 
-					We tailor the experience and knowledge we have to your idea and product. 
-					In addition, we work closely together with you. 
+					/>
+					<IconTextBlock
+						icon={PeopleArrows}
+						title="Personal"
+						text="Every start-up and founder is different.
+					This is why we always evaluate your specific situation.
+					We tailor the experience and knowledge we have to your idea and product.
+					In addition, we work closely together with you.
 					Our team will complement yours, and take the role of technical lead."
-				/>
-				<IconTextBlock
-					icon={Arrows}
-					title="Versatile"
-					text="Apart from “just” developing your product idea into a working and amazing product,
+					/>
+					<IconTextBlock
+						icon={Arrows}
+						title="Versatile"
+						text="Apart from “just” developing your product idea into a working and amazing product,
 					we support you throughout the whole process: strategizing, defining,
 					designing and only then developing.
 					We are flexible and adjust our work to fit the stage your startup is in."
-				/>
-			</IconBlocksContainer>
-		</CompetencesContainer>
-	</StyledContainer>
+					/>
+				</IconBlocksContainer>
+			</CompetencesContainer>
+		</Container>
+	</CompentencesBackground>
+
 );
 
 const valuesContainerResponsiveCSS = () => {

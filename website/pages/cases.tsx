@@ -156,8 +156,17 @@ const Sticky = styled.div`
 	top: 120px;
 `;
 
+const styledFullWidthContainerResponsiveCSS = responsiveValuesCSS(
+	"background",
+	"",
+	breakpointNameToPx({
+		xs: `url(${"/images/cases-line.svg"}) no-repeat left center, ${theme.colors.colorBrand2}`,
+		md: `url(${"/images/cases-line.svg"}) no-repeat left bottom, ${theme.colors.colorBrand2}`
+	})
+);
+
 const StyledFullWidthContainer = styled(FullWidthContainer)`
-	background: url(${"/images/cases-line.svg"}) no-repeat left center, ${theme.colors.colorBrand2};
+	${styledFullWidthContainerResponsiveCSS};
 `;
 
 type Case = {

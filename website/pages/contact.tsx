@@ -38,9 +38,16 @@ const StyledImage = styled.img`
 	width: 100%;
 `;
 
+const styledInitialContainerResponsiveCSS = responsiveValuesCSS(
+	"background",
+	"",
+	breakpointNameToPx({
+		lg: `url(${"/images/contact-line1.svg"}) no-repeat right center`
+	})
+);
 const StyledInitialContainer = styled(InitialContainer)`
+	${styledInitialContainerResponsiveCSS};
 	padding-right: 0;
-	background: url(${"/images/contact-line1.svg"}) no-repeat right center;
 `;
 
 const Intro = () => (

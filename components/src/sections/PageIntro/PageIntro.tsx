@@ -111,6 +111,7 @@ type RightColumnProps = {
 	link?: ReactNode;
 	paragraph?: string;
 };
+
 const RightColumn = ({image, link, paragraph}: RightColumnProps) => {
 	if(image){
 		return (
