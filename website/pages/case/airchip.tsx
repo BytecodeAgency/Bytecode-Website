@@ -30,8 +30,6 @@ const Airchip: NextPage = () => {
 
 const AboutTextContainer = styled.div`
 	grid-area: text;
-	max-width: 750px;
-	justify-self: center;
 `;
 
 const AboutText = () => (

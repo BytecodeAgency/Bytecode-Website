@@ -1,9 +1,22 @@
 import React from "react";
 import {WithChildren} from "../../../types/utils";
-import { Paragraph, Subtitle } from "../../../components";
+import {Container, Paragraph, Subtitle} from "../../../components";
 import styled from "styled-components";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../../helpers";
 import {layout} from "../../../theme";
+
+
+const containerWithBackgroundResponsiveCSS = responsiveValuesCSS(
+	"background",
+	"",
+	breakpointNameToPx({
+		sm: `url(${"/images/case-about-portal.svg"}) no-repeat right top;`,
+		lg: `url(${"/images/case-about-portal.svg"}) no-repeat right center;`
+	})
+);
+const ContainerWithBackground = styled.div`
+	${containerWithBackgroundResponsiveCSS};
+`;
 
 const caseAboutContainerResponsiveCSS = () => {
 	const gridAreas = responsiveValuesCSS(
@@ -23,19 +36,10 @@ const caseAboutContainerResponsiveCSS = () => {
 			lg: "1fr 1fr"
 		})
 	);
-	const background = responsiveValuesCSS(
-		"background",
-		"",
-		breakpointNameToPx({
-			sm: `url(${"/images/case-about-portal.svg"}) no-repeat right top;`,
-			lg: `url(${"/images/case-about-portal.svg"}) no-repeat right center;`
-		})
-	);
-	const paddingLeft = responsiveValuesCSS("padding-left", "px", breakpointNameToPx(layout.container.margin));
-	const paddingRight = responsiveValuesCSS("padding-right", "px", breakpointNameToPx(layout.container.margin));
-	return gridAreas + gridColumns + background + paddingLeft + paddingRight;
+	return gridAreas + gridColumns;
 };
-const CaseAboutContainer = styled.div`
+
+const CaseAboutContainer = styled(Container)`
 	${caseAboutContainerResponsiveCSS};
 	display: grid;
 	padding-top: 90px;
@@ -61,15 +65,18 @@ type CaseAboutProps = {
     deliverables: string[];
 };
 const CaseAbout = ({expertises, deliverables, children}: WithChildren<CaseAboutProps>) => (
-	<CaseAboutContainer>
-		{ children }
-		<RightColumn>
-			<StyledSubtitle fontWeight="bold" text="EXPERTISE" />
-			{expertises.map((expertise, index)=><StyledParagraph key={index} text={expertise} />)}
-			<StyledSubtitle fontWeight="bold" text="DELIVERABLES" />
-			{deliverables.map((deliverable, index)=><StyledParagraph key={index} text={deliverable} />)}
-		</RightColumn>
-	</CaseAboutContainer>
+	<ContainerWithBackground>
+		<CaseAboutContainer>
+			{ children }
+			<RightColumn>
+				<StyledSubtitle fontWeight="bold" text="EXPERTISE" />
+				{expertises.map((expertise, index)=><StyledParagraph key={index} text={expertise} />)}
+				<StyledSubtitle fontWeight="bold" text="DELIVERABLES" />
+				{deliverables.map((deliverable, index)=><StyledParagraph key={index} text={deliverable} />)}
+			</RightColumn>
+		</CaseAboutContainer>
+	</ContainerWithBackground>
+
 );
 
 export default CaseAbout;
