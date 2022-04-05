@@ -33,6 +33,5 @@ export * from "./Typography";
 export {default as Container} from "./Container";
 export * from "./Container";
 
-export * from "./content";
-
-
+export {default as PhoneScreen} from "./PhoneScreen";
+export * from "./PhoneScreen";
