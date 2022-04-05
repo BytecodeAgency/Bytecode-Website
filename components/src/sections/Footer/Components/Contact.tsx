@@ -7,6 +7,7 @@ import Link from "next/link";
 import { footerContent } from "../../../components/content";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers/responsiveCss";
 
+
 const containerResponsiveCSS = responsiveValuesCSS(
 	"max-width",
 	"px",

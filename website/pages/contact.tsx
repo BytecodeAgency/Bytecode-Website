@@ -3,7 +3,7 @@ import { NextPage } from "next";
 import MainLayout from "../layout/MainLayout";
 import { Button, Container, FullWidthContainer, Heading, InitialContainer, Paragraph } from "@bytecode/ui-library/components";
 import { PageIntro } from "@bytecode/ui-library/sections";
-import { breakpointNameToPx, responsiveValuesCSS, theme } from "@bytecode/ui-library/utils";
+import { breakpointNameToPx, responsiveValuesCSS, theme, links } from "@bytecode/ui-library/utils";
 import styled from "styled-components";
 import { AddressBlock, CommunicationBlock } from "@bytecode/ui-library/containers";
 import { LongArrow } from "@bytecode/ui-library/icons";
@@ -146,7 +146,7 @@ const StyledAppointmentFullWidthContainer = styled(FullWidthContainer)`
 
 const Appointment = () => {
 	const goToMeetingPlanner = () => {
-		window.open("https://calendly.com/nickbroekarts-bytecode");
+		window.open(links.meetingPlanner);
 	};
 	return(
 		<StyledAppointmentFullWidthContainer>
@@ -232,10 +232,10 @@ const StyledFullWidthContainer = styled(FullWidthContainer)`
 
 const AddressAndRoute = () => {
 	const goToPublicTransportRoute = () => {
-		window.open("https://www.google.com/maps/dir/?api=1&destination=Bytecode+Digital+Agency+B.V.&travelmode=transit");
+		window.open(links.publicTransportRoute);
 	};
 	const goToMapsRoute = () => {
-		window.open("https://www.google.com/maps/dir/?api=1&destination=Bytecode+Digital+Agency+B.V.");
+		window.open(links.autoRoute);
 	};
 	return(
 		<StyledFullWidthContainer>

@@ -4,11 +4,12 @@ import { Paragraph, Heading } from "../../components/Typography";
 import { theme } from "../../theme";
 import Image from "next/image";
 import Popup from "./Components/Popup";
+import { EmployeeName } from "../../content/contentGenerics";
 
 export interface Member {
     name: string;
     jobTitle: string;
-    src: string;
+    id: EmployeeName;
 	about: string;
 	focus: string[];
 	github?: string;
@@ -24,8 +25,9 @@ const StyledName = styled(Heading)`
 	font-family: ${theme.typography.paragraph.font};
 `;
 
+
 const TeamMember: React.FC<TeamMemberProps> = ({ member }) => {
-	const { src, name, jobTitle } = member;
+	const { id, name, jobTitle } = member;
 	const [popup, setPopup] = useState(false);
 	const openPopup = () => {
 		setPopup(true);
@@ -36,7 +38,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ member }) => {
 	return (
 		<div>
 			<Popup member={member} closePopup={closePopup} popup={popup}/>
-			<Image src={`/images/member-${src}.png`} alt="profile picture" width={312} height={455} onClick={openPopup}/>
+			<Image src={`/images/member-${id}.png`} alt="profile picture" width={312} height={455} onClick={openPopup}/>
 			<StyledName text={name} type="h4"/>
 			<Paragraph text={jobTitle}/>
 		</div>

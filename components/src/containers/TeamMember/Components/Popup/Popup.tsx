@@ -119,7 +119,7 @@ interface PopupProps {
     popup: boolean;
 }
 const Popup: React.FC<PopupProps> = ({ member, closePopup, popup }) => {
-	const { name, about, src, jobTitle } = member;
+	const { name, about, id, jobTitle } = member;
 
 	return (
 		<>
@@ -128,7 +128,7 @@ const Popup: React.FC<PopupProps> = ({ member, closePopup, popup }) => {
 					<PopupBackground> {/*Add onclick for closing by clicking on background*/}
 						<PopupContent>
 							<PopupHeader closePopup={closePopup}/>
-							<StyledImage name={src}/>
+							<StyledImage name={id}/>
 							<TitleAndName>
 								<StyledName text={name} type="h4"/>
 								<JobTitle text={jobTitle}/>
