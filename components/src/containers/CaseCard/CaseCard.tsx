@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {Paragraph, PhoneScreen, Subtitle} from "../../components";
 import {theme} from "../../theme";
+import Link from "next/link";
 
 const CaseCardContainer = styled.div`
 	background-color: ${theme.colors.white};
@@ -32,13 +33,15 @@ type CaseCardProps = {
 };
 
 const CaseCard = ({ name, subtitle }:CaseCardProps) => (
-	<CaseCardContainer onClick={() => console.log(`go to /cases/${name}`)}>
-		<PhoneScreen image="/images/case-airchip.jpeg" alt={`image of ${name} app`} height={240} />
-		<div>
-			<StyledSubtitle fontWeight="bold" text={name} />
-			<Paragraph text={subtitle} size="small" />
-		</div>
-	</CaseCardContainer>
+	<Link href={`/case/${name}`}>
+		<CaseCardContainer>
+			<PhoneScreen image="/images/iphone2.svg" alt={`image of ${name} app`} height={240} />
+			<div>
+				<StyledSubtitle fontWeight="bold" text={name} />
+				<Paragraph text={subtitle} size="small" />
+			</div>
+		</CaseCardContainer>
+	</Link>
 );
 
 export default CaseCard;
