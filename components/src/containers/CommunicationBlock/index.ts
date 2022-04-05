@@ -1,2 +1,2 @@
-export {default} from "./CommunicationBlock";
+export { default } from "./CommunicationBlock";
 export * from "./CommunicationBlock";

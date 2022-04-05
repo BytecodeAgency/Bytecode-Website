@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../../../helpers/responsiveCss";
-import { Heading, Paragraph} from "../../../../components/Typography";
-import {Container} from "../../../../components/Container";
-import {theme} from "../../../../theme";
+import { breakpointNameToPx, responsiveValuesCSS } from "../../../../helpers/responsiveCss";
+import { Heading, Paragraph } from "../../../../components/Typography";
+import { Container } from "../../../../components/Container";
+import { theme } from "../../../../theme";
 import React from "react";
 import PopupSocials from "./PopupSocials";
 import PopupHeader from "./PopupHeader";
-import {Member} from "../../TeamMember";
+import { Member } from "../../TeamMember";
 
 const PopupBackground = styled.div`
 	position: fixed;
@@ -35,7 +35,7 @@ const popupContentResponsiveCSS = () => {
                 "\"title image\"" +
                 "\"socials about\""
 		}));
-	const gridRowGap = responsiveValuesCSS("grid-row-gap", "px", breakpointNameToPx({xs: 20, md: 25}));
+	const gridRowGap = responsiveValuesCSS("grid-row-gap", "px", breakpointNameToPx({ xs: 20, md: 25 }));
 	const gridTemplateColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
@@ -52,8 +52,8 @@ const popupContentResponsiveCSS = () => {
 			xl: "48px auto"
 		})
 	);
-	const top = responsiveValuesCSS("top", "%", breakpointNameToPx({xs: 0, xl: 10}));
-	const left = responsiveValuesCSS("left", "%", breakpointNameToPx({xs: 0, xl: 10}));
+	const top = responsiveValuesCSS("top", "%", breakpointNameToPx({ xs: 0, xl: 10 }));
+	const left = responsiveValuesCSS("left", "%", breakpointNameToPx({ xs: 0, xl: 10 }));
 	return gridTemplateArea + gridRowGap + gridTemplateColumns + gridTemplateRows + top + left;
 };
 const PopupContent = styled(Container)`
@@ -66,12 +66,12 @@ const PopupContent = styled(Container)`
 	display: grid;
 `;
 
-const styledImageResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({xs:75, md: 0}));
+const styledImageResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs:75, md: 0 }));
 
 const imageOnionSide = [
-	{url:"top-left", background: "left top"},
-	{url: "top-right", background: "right top"},
-	{url: "bottom-right", background: "right bottom"}
+	{ url:"top-left", background: "left top" },
+	{ url: "top-right", background: "right top" },
+	{ url: "bottom-right", background: "right bottom" }
 ];
 const imageOnionColor = [
 	"green",
@@ -118,8 +118,8 @@ interface PopupProps {
     closePopup: () => void;
     popup: boolean;
 }
-const Popup: React.FC<PopupProps> = ({member, closePopup, popup}) => {
-	const {name, about, src, jobTitle} = member;
+const Popup: React.FC<PopupProps> = ({ member, closePopup, popup }) => {
+	const { name, about, src, jobTitle } = member;
 
 	return (
 		<>

@@ -1,8 +1,8 @@
-import React, {ReactNode} from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
-import {Container, Heading, Paragraph, Subtitle} from "../../components";
-import {WithStyle} from "../../types/utils";
+import { breakpointNameToPx, responsiveValuesCSS } from "../../helpers/responsiveCss";
+import { Container, Heading, Paragraph, Subtitle } from "../../components";
+import { WithStyle } from "../../types/utils";
 
 const introContainerWithImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 	const gridColumns = responsiveValuesCSS(
@@ -71,7 +71,7 @@ const styledIntroHeadingResponsiveCSS = responsiveValuesCSS(
 const StyledIntroHeading = styled(Heading)`
 	${styledIntroHeadingResponsiveCSS};
 `;
-const introParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx({ xs: 0, lg: 100}));
+const introParagraphResponsiveCSS = () => responsiveValuesCSS("margin-bottom", "px", breakpointNameToPx({ xs: 0, lg: 100 }));
 
 const StyledIntroParagraph = styled(Paragraph)`
 	${introParagraphResponsiveCSS};
@@ -82,7 +82,7 @@ type LeftColumnProps = {
 	title: string;
 	paragraph?: string;
 };
-const LeftColumn = ({subtitle, title, paragraph}: LeftColumnProps) => (
+const LeftColumn = ({ subtitle, title, paragraph }: LeftColumnProps) => (
 	<div>
 		<StyledIntroSubTitle text={subtitle} />
 		<StyledIntroHeading type="h1" text={title} />
@@ -112,7 +112,7 @@ type RightColumnProps = {
 	paragraph?: string;
 };
 
-const RightColumn = ({image, link, paragraph}: RightColumnProps) => {
+const RightColumn = ({ image, link, paragraph }: RightColumnProps) => {
 	if(image){
 		return (
 			<>

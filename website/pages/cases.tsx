@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import {NextPage} from "next";
+import { NextPage } from "next";
 import MainLayout from "../layout/MainLayout";
-import {Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, Subtitle, FullWidthContainer} from "@bytecode/ui-library/components";
-import {PageIntro} from "@bytecode/ui-library/sections";
-import {theme, breakpointNameToPx, responsiveValuesCSS, isWindowSizeBiggerThan} from "@bytecode/ui-library/utils";
+import { Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, Subtitle, FullWidthContainer } from "@bytecode/ui-library/components";
+import { PageIntro } from "@bytecode/ui-library/sections";
+import { theme, breakpointNameToPx, responsiveValuesCSS, isWindowSizeBiggerThan } from "@bytecode/ui-library/utils";
 import { CaseCard } from "@bytecode/ui-library/containers";
 
 const content = {
@@ -34,7 +34,7 @@ const LinkParagraph = styled(Paragraph)`
 `;
 
 const spacerResponsiveCSS = () => {
-	const display = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));
+	const display = responsiveValuesCSS("display", "", breakpointNameToPx({ lg: "none" }));
 	const marginLeft = responsiveValuesCSS(
 		"margin-left",
 		"px",

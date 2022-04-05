@@ -1,2 +1,2 @@
-export {default} from "./Spacer";
+export { default } from "./Spacer";
 export * from "./Spacer";

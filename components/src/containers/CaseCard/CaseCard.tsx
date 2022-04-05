@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {Paragraph, Subtitle} from "../../components";
-import {theme} from "../../theme";
+import { Paragraph, Subtitle } from "../../components";
+import { theme } from "../../theme";
 
 const CaseCardContainer = styled.div`
 	background-color: ${theme.colors.white};

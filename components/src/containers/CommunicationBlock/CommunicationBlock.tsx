@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import IconTitle from "../../components/IconTitle";
-import {Envelope} from "../../icons";
-import {Paragraph} from "../../components/Typography";
-import {footerContent} from "../../components/content";
+import { Envelope } from "../../icons";
+import { Paragraph } from "../../components/Typography";
+import { footerContent } from "../../components/content";
 import { ThemeColors } from "../../theme";
-import {WithStyle} from "../../types/utils";
+import { WithStyle } from "../../types/utils";
 
 const Container = styled.div`
 	grid-area: communication;
@@ -26,7 +26,7 @@ type CommunicationsBlockProps = {
 	color?: ThemeColors;
 }
 
-const CommunicationBlock = ({color = "black", className}: WithStyle<CommunicationsBlockProps>) => {
+const CommunicationBlock = ({ color = "black", className }: WithStyle<CommunicationsBlockProps>) => {
 	const goToMail = () => {
 		window.location.href = "mailto:" + footerContent.email;
 	};

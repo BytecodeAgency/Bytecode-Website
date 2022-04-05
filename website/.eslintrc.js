@@ -39,6 +39,11 @@ module.exports = {
 			"error",
 			"always"
 		],
+		"object-curly-spacing": [
+			2,
+			"always",
+			{ "objectsInObjects": false }
+		],
 		"react/prop-types": "off"
 	}
 };

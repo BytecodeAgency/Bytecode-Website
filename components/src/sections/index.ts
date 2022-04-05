@@ -5,11 +5,11 @@
 *   PageIntro (with or without image)
  */
 
-export {default as Footer} from "./Footer";
+export { default as Footer } from "./Footer";
 export * from "./Footer";
 
-export {default as Menu} from "./Menu";
+export { default as Menu } from "./Menu";
 export * from "./Menu";
 
-export {default as PageIntro} from "./PageIntro";
+export { default as PageIntro } from "./PageIntro";
 export * from "./PageIntro";

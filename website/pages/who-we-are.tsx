@@ -7,7 +7,7 @@ import { TeamMember, Member, IconTextBlock } from "@bytecode/ui-library/containe
 import { theme, breakpointNameToPx, responsiveValuesCSS, BreakpointKeyValue } from "@bytecode/ui-library/utils";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
-import {PageIntro} from "@bytecode/ui-library/sections";
+import { PageIntro } from "@bytecode/ui-library/sections";
 const content = {
 	title: "Who is Bytecode?",
 	metaDescription: "Bytecode is a technical partner and CTO for technology based start-ups."
@@ -23,8 +23,8 @@ const WhoWeAre: NextPage = () => {
 
 const workingImageContainerResponsiveCSS = () => {
 	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx({ xs: "100vw", lg: "100%" }));
-	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -24, md:-32, lg: 32, xl: 48, xxl: 64}));
-	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 25, lg: 150, xl: 200, xxl: 250}));
+	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -24, md:-32, lg: 32, xl: 48, xxl: 64 }));
+	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 25, lg: 150, xl: 200, xxl: 250 }));
 	return imageWidths + top + marginLeft;
 };
 
@@ -63,8 +63,8 @@ const CompentencesBackground = styled.div`
 
 const competencesContainerResponsiveCSS = () => {
 	const paddingTop = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 80, lg: 200, xl: 240, xxl: 300 }));
-	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx({ xs: 80, lg: 60}));
-	const paddingLeft = responsiveValuesCSS("padding-left", "%", breakpointNameToPx({ lg: 10, xl: 10}));
+	const paddingBottom = responsiveValuesCSS("padding-bottom", "px", breakpointNameToPx({ xs: 80, lg: 60 }));
+	const paddingLeft = responsiveValuesCSS("padding-left", "%", breakpointNameToPx({ lg: 10, xl: 10 }));
 	return paddingTop + paddingBottom + paddingLeft;
 };
 
@@ -97,8 +97,8 @@ const SpacerContainer = styled.div`
 	${spacerContainerResponsiveCSS};
 `;
 const compentencesHeadingResponsiveCSS = () => {
-	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({xs: 0, md: 30, lg: 40, xl: 60}));
-	const width = responsiveValuesCSS("width", "%", breakpointNameToPx({xs: 90, lg: 35, xl: 40, xxl: 35}));
+	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: 0, md: 30, lg: 40, xl: 60 }));
+	const width = responsiveValuesCSS("width", "%", breakpointNameToPx({ xs: 90, lg: 35, xl: 40, xxl: 35 }));
 	return marginLeft + width;
 };
 const StyledCompentencesHeading = styled(Heading)`
@@ -114,7 +114,7 @@ const iconBlocksContainerResponsiveCSS = () => {
 	};
 	const columns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx(values));
 	const rows = responsiveValuesCSS("grid-template-rows", "", breakpointNameToPx(values));
-	const paddingLeft = responsiveValuesCSS("padding-left", "%", breakpointNameToPx({xs:0, lg: 15, xl: 20}));
+	const paddingLeft = responsiveValuesCSS("padding-left", "%", breakpointNameToPx({ xs:0, lg: 15, xl: 20 }));
 	return columns + rows + paddingLeft;
 };
 const IconBlocksContainer = styled.div`
@@ -204,7 +204,7 @@ const StyledValuesParagraph = styled(Paragraph)`
 	padding-left: 20px;
 	margin-top: 10px;
 `;
-const summationContainerResponsiveCSS = () => responsiveValuesCSS("margin-top", "px", breakpointNameToPx({xs: 35, lg: 20}));
+const summationContainerResponsiveCSS = () => responsiveValuesCSS("margin-top", "px", breakpointNameToPx({ xs: 35, lg: 20 }));
 const SummationContainer = styled.div`
 	${summationContainerResponsiveCSS};
 `;
@@ -339,7 +339,7 @@ const TeamMembersContainer = styled.div`
 `;
 
 const teamMembersSpacerResponsiveCSS = () => {
-	const display = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));
+	const display = responsiveValuesCSS("display", "", breakpointNameToPx({ lg: "none" }));
 	return display;
 };
 const TeamMembersSpacer = styled(Spacer)`

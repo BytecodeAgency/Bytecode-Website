@@ -1,13 +1,13 @@
 import React from "react";
-import {NextPage} from "next";
+import { NextPage } from "next";
 import MainLayout from "../layout/MainLayout";
-import {Button, Container, FullWidthContainer, Heading, InitialContainer, Paragraph} from "@bytecode/ui-library/components";
+import { Button, Container, FullWidthContainer, Heading, InitialContainer, Paragraph } from "@bytecode/ui-library/components";
 import { PageIntro } from "@bytecode/ui-library/sections";
-import {breakpointNameToPx, responsiveValuesCSS, theme} from "@bytecode/ui-library/utils";
+import { breakpointNameToPx, responsiveValuesCSS, theme } from "@bytecode/ui-library/utils";
 import styled from "styled-components";
-import {AddressBlock, CommunicationBlock} from "@bytecode/ui-library/containers";
-import {LongArrow} from "@bytecode/ui-library/icons";
-import {Train, Cars} from "@bytecode/ui-library/icons";
+import { AddressBlock, CommunicationBlock } from "@bytecode/ui-library/containers";
+import { LongArrow } from "@bytecode/ui-library/icons";
+import { Train, Cars } from "@bytecode/ui-library/icons";
 
 const content = {
 	title: "Contact us at Bytecode.",
@@ -24,8 +24,8 @@ const Contact: NextPage = () => {
 
 const introImageContainerResponsiveCSS = () => {
 	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx({ xs: "100vw", lg: "100%" }));
-	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -24, md:-32, lg: 32, xl: 48, xxl: 64}));
-	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 50, lg: 200, xl: 230}));
+	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -24, md:-32, lg: 32, xl: 48, xxl: 64 }));
+	const top = responsiveValuesCSS("top", "px", breakpointNameToPx({ xs: 50, lg: 200, xl: 230 }));
 	return imageWidths + top + marginLeft;
 };
 
@@ -124,7 +124,7 @@ const StyledMeetingButton = styled(Button)`
 	justify-self: end;
 `;
 
-const styledCommunicationBlockResponsiveCSS = responsiveValuesCSS("justify-self", "", breakpointNameToPx({xs: "start", md: "center"}));
+const styledCommunicationBlockResponsiveCSS = responsiveValuesCSS("justify-self", "", breakpointNameToPx({ xs: "start", md: "center" }));
 const StyledCommunicationBlock = styled(CommunicationBlock)`
 	${styledCommunicationBlockResponsiveCSS};
 	grid-area: communication;
@@ -195,7 +195,7 @@ const AddressAndRouteContainer = styled(Container)`
 	display: grid;
 `;
 
-const routeContainerResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({xs: 30, md: 0}));
+const routeContainerResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs: 30, md: 0 }));
 const RouteContainer = styled.div`
 	${routeContainerResponsiveCSS};
 `;

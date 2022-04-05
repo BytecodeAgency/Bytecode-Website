@@ -1,8 +1,8 @@
 import React from "react";
-import {theme, ThemeColors} from "../../theme";
+import { theme, ThemeColors } from "../../theme";
 import styled from "styled-components";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers/responsiveCss";
-import {WithStyle} from "../../types/utils";
+import { breakpointNameToPx, responsiveValuesCSS } from "../../helpers/responsiveCss";
+import { WithStyle } from "../../types/utils";
 
 export type FontWeight = "normal" | "bold";
 export type HeadingType = "h1" | "h2" | "h3" | "h4" | "h5";
@@ -106,7 +106,7 @@ const StyledSubtitle = styled.p<WithStyle<TextStylingProps>>`
 	font-weight: ${props => props.fontWeight ? theme.typography.paragraph.weights[props.fontWeight] : theme.typography.paragraph.weights.normal};
 `;
 
-export const Subtitle = ({text, color, fontWeight, className}: WithStyle<SubtitleProps>) => (
+export const Subtitle = ({ text, color, fontWeight, className }: WithStyle<SubtitleProps>) => (
 	<StyledSubtitle
 		className={className}
 		color={color}
