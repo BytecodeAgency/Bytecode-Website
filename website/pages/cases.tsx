@@ -81,8 +81,7 @@ const casesOverviewContainerResponsiveCSS = () => {
 		"",
 		breakpointNameToPx({
 			xs: "1fr",
-			lg: "1fr 1fr",
-			xl: "1fr 680px",
+			lg: "400px auto",
 		}));
 	const paddingTop = responsiveValuesCSS(
 		"padding-top",
@@ -139,20 +138,11 @@ const MobileArrowLink = styled(ArrowLink)`
 	align-self: flex-end;
 `;
 
-const casesOverviewRightColumnResponsiveCSS = responsiveValuesCSS(
-	"grid-template-columns",
-	"",
-	breakpointNameToPx({
-		xs: "1fr",
-		md: "1fr 1fr",
-		lg: "1fr",
-		xl: "1fr 1fr"
-	})
-);
 const CasesOverviewRightColumn = styled.div`
-	${casesOverviewRightColumnResponsiveCSS};
-	display: grid;
-	justify-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 `;
 const Sticky = styled.div`
 	position: sticky;
