@@ -1,8 +1,8 @@
 import React from "react";
-import {WithChildren} from "../../../types/utils";
-import {Container, Paragraph, Subtitle} from "../../../components";
+import { WithChildren } from "../../../types/utils";
+import { Container, Paragraph, Subtitle } from "../../../components";
 import styled from "styled-components";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../../helpers";
+import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
 
 
 const containerWithBackgroundResponsiveCSS = responsiveValuesCSS(
@@ -63,7 +63,7 @@ type CaseAboutProps = {
     expertises: string[];
     deliverables: string[];
 };
-const CaseAbout = ({expertises, deliverables, children}: WithChildren<CaseAboutProps>) => (
+const CaseAbout = ({ expertises, deliverables, children }: WithChildren<CaseAboutProps>) => (
 	<ContainerWithBackground>
 		<CaseAboutContainer>
 			{ children }

@@ -1,2 +1,2 @@
-export {default} from "./CaseIntro";
+export { default } from "./CaseIntro";
 export * from "./CaseIntro";

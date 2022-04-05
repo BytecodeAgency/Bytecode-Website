@@ -1,7 +1,7 @@
 import React from "react";
-import {Heading} from "../../../components";
+import { Heading } from "../../../components";
 import styled from "styled-components";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../../helpers";
+import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
 import Image from "next/image";
 
 const styledContainerResponsiveCSS = () => {
@@ -64,7 +64,7 @@ const QuoteText = styled(Heading)`
 type CaseQuoteProps = {
     text: string;
 };
-const CaseQuote = ({text}: CaseQuoteProps) => (
+const CaseQuote = ({ text }: CaseQuoteProps) => (
 	<StyledContainer>
 		<ImageContainer>
 			<Image src="/images/case-quote-portal.svg" alt="profile picture" height={500} width={540}/>

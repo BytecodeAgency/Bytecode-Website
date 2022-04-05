@@ -1,5 +1,5 @@
 import React from "react";
-import {NextPage} from "next";
+import { NextPage } from "next";
 import MainLayout from "../../layout/MainLayout";
 import {
 	CaseIntro,
@@ -10,10 +10,10 @@ import {
 	ScreensAndText,
 	TeamMembers
 } from "@bytecode/ui-library/sections";
-import { Heading, Paragraph, Container} from "@bytecode/ui-library/components";
+import { Heading, Paragraph, Container } from "@bytecode/ui-library/components";
 import styled from "styled-components";
-import {breakpointNameToPx,  responsiveValuesCSS, theme} from "@bytecode/ui-library/utils";
-import {layout, getEmployees} from "@bytecode/ui-library/utils";
+import { breakpointNameToPx,  responsiveValuesCSS, theme } from "@bytecode/ui-library/utils";
+import { layout, getEmployees } from "@bytecode/ui-library/utils";
 
 const content = {
 	title: "Airchip | Case",

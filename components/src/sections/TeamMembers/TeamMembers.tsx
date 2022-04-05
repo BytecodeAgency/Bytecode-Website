@@ -1,8 +1,8 @@
 import React from "react";
-import {Member, TeamMember} from "../../containers";
-import {breakpointNameToPx,  responsiveValuesCSS} from "../../helpers";
+import { Member, TeamMember } from "../../containers";
+import { breakpointNameToPx,  responsiveValuesCSS } from "../../helpers";
 import styled from "styled-components";
-import {Heading, Paragraph, Subtitle, Container, Spacer} from "../../components";
+import { Heading, Paragraph, Subtitle, Container, Spacer } from "../../components";
 
 const teamMembersContainerResponsiveCSS = () => {
 	const gridColumns = responsiveValuesCSS(
@@ -47,7 +47,7 @@ const TeamMembersContainer = styled.div`
 `;
 
 const teamMembersSpacerResponsiveCSS = () => {
-	const display = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));
+	const display = responsiveValuesCSS("display", "", breakpointNameToPx({ lg: "none" }));
 	return display;
 };
 const TeamMembersSpacer = styled(Spacer)`
@@ -98,7 +98,7 @@ type TeamMembersProps = {
     members: Member[];
 }
 
-const TeamMembers = ({members}: TeamMembersProps) => (
+const TeamMembers = ({ members }: TeamMembersProps) => (
 	<Container>
 		<TeamMembersSpacer color="black" reverse/>
 		<TeamMembersContainer>

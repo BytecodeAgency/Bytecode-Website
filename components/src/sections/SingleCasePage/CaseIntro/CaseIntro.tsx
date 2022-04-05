@@ -1,8 +1,8 @@
 import React from "react";
-import { Heading, InitialContainer, Paragraph, Subtitle} from "../../../components";
+import { Heading, InitialContainer, Paragraph, Subtitle } from "../../../components";
 import styled from "styled-components";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../../helpers";
-import {theme} from "../../../theme";
+import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
+import { theme } from "../../../theme";
 import Image from "next/image";
 
 type TextColumnProps = {
@@ -10,7 +10,7 @@ type TextColumnProps = {
 	subtitle: string;
 	text: string;
 }
-const TextColumn = ({title, subtitle, text}: TextColumnProps) => (
+const TextColumn = ({ title, subtitle, text }: TextColumnProps) => (
 	<InitialContainer>
 		<Subtitle text={subtitle} />
 		<Heading type="h1" text={title} />
@@ -54,7 +54,7 @@ type ImageColumnProps = {
 	image: string;
 	logo: string;
 };
-const ImageColumn = ({image, logo}: ImageColumnProps) => (
+const ImageColumn = ({ image, logo }: ImageColumnProps) => (
 	<ImageColumnContainer>
 		<LogoContainer>
 			<Image src={`/images/${logo}`} alt="logo" height={55} width={75}/>
@@ -86,7 +86,7 @@ type CaseIntroProps = {
 	image: string;
 	logo: string;
 }
-const CaseIntro = ({title, subtitle, text, image, logo}: CaseIntroProps) => (
+const CaseIntro = ({ title, subtitle, text, image, logo }: CaseIntroProps) => (
 	<CaseIntroContainer>
 		<TextColumn title={title} subtitle={subtitle} text={text} />
 		<ImageColumn image={image} logo={logo} />
