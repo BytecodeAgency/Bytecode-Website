@@ -40,7 +40,7 @@ const spacerResponsiveCSS = () => {
 		"px",
 		breakpointNameToPx({
 			xs: 12,
-			md: 24,
+			md: 16,
 		})
 	);
 	return display + marginLeft;
