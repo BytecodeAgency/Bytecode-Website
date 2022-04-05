@@ -15,6 +15,7 @@ const ImageContainer = styled.div`
   	justify-self: center;
 	display: flex;
 	flex-direction: row;
+	gap: 40px;
 `;
 
 const TextContainer = styled.div`

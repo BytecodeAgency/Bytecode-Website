@@ -163,8 +163,8 @@ const ScreensAndTextOne = () => (
 				your phone while dancing or partying. When your order is ready to pick up,
 				you get a notification to collect your order. To make sure the waiting time is as low as possible,
 				you can select from which location you want to order."
-			screenOne="/images/case-airchip.jpeg"
-			screenTwo="/images/case-airchip.jpeg"
+			screenOne="/images/iphone2.svg"
+			screenTwo="/images/iphone2.svg"
 		/>
 	</ScreensAndTextOneContainer>
 );
@@ -237,8 +237,8 @@ const ScreensAndTextTwo = () => (
 				This enabled us to stay ‘online’ so that consumers could still purchase
 				and retailers would receive the orders.
 				That meant we were not dependent on networks."
-			screenOne="/images/case-airchip.jpeg"
-			screenTwo="/images/case-airchip.jpeg"
+			screenOne="/images/iphone2.svg"
+			screenTwo="/images/iphone2.svg"
 		/>
 	</ScreensAndTextTwoContainer>
 );
