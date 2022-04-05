@@ -3,7 +3,6 @@ import {WithChildren} from "../../../types/utils";
 import {Container, Paragraph, Subtitle} from "../../../components";
 import styled from "styled-components";
 import {breakpointNameToPx, responsiveValuesCSS} from "../../../helpers";
-import {layout} from "../../../theme";
 
 
 const containerWithBackgroundResponsiveCSS = responsiveValuesCSS(
