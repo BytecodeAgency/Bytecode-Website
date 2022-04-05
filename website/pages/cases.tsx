@@ -81,7 +81,8 @@ const casesOverviewContainerResponsiveCSS = () => {
 		"",
 		breakpointNameToPx({
 			xs: "1fr",
-			lg: "1fr 680px",
+			lg: "1fr 1fr",
+			xl: "1fr 680px",
 		}));
 	const paddingTop = responsiveValuesCSS(
 		"padding-top",
@@ -144,6 +145,8 @@ const casesOverviewRightColumnResponsiveCSS = responsiveValuesCSS(
 	breakpointNameToPx({
 		xs: "1fr",
 		md: "1fr 1fr",
+		lg: "1fr",
+		xl: "1fr 1fr"
 	})
 );
 const CasesOverviewRightColumn = styled.div`
