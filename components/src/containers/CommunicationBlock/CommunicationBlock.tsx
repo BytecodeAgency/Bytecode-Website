@@ -3,7 +3,7 @@ import styled from "styled-components";
 import IconTitle from "../../components/IconTitle";
 import { Envelope } from "../../icons";
 import { Paragraph } from "../../components/Typography";
-import { footerContent } from "../../components/content";
+import { footerContent } from "../../content";
 import { ThemeColors } from "../../theme";
 import { WithStyle } from "../../types/utils";
 

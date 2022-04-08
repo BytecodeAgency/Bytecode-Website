@@ -4,7 +4,7 @@ import { Heading } from "../../../components/Typography";
 import Button from "../../../components/Button";
 import { LongArrow } from "../../../icons";
 import Link from "next/link";
-import { footerContent } from "../../../components/content";
+import { footerContent } from "../../../content";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers/responsiveCss";
 
 
