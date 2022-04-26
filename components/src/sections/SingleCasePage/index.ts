@@ -1,11 +1,11 @@
-export {default as CaseIntro} from "./CaseIntro";
+export { default as CaseIntro } from "./CaseIntro";
 export * from "./CaseIntro";
 
-export {default as CaseAbout} from "./CaseAbout";
+export { default as CaseAbout } from "./CaseAbout";
 export * from "./CaseAbout";
 
-export {default as CaseQuote} from "./CaseQuote";
+export { default as CaseQuote } from "./CaseQuote";
 export * from "./CaseQuote";
 
-export {default as ScreensAndText} from "./ScreensAndText";
+export { default as ScreensAndText } from "./ScreensAndText";
 export * from "./ScreensAndText";

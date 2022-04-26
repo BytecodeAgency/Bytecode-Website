@@ -1,8 +1,8 @@
-import React, {ReactNode} from "react";
-import {FullWidthContainer, Heading, Paragraph, Container, Spacer, Subtitle} from "../../components";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../helpers";
+import React, { ReactNode } from "react";
+import { FullWidthContainer, Heading, Paragraph, Container, Spacer, Subtitle } from "../../components";
+import { breakpointNameToPx, responsiveValuesCSS } from "../../helpers";
 import styled from "styled-components";
-import {ThemeColors} from "../../theme";
+import { ThemeColors } from "../../theme";
 
 export type SummationText = {
     title: string;
@@ -48,7 +48,7 @@ const StyledTitleParagraph = styled(Paragraph)`
 	padding-left: 20px;
 	margin-top: 10px;
 `;
-const summationContainerResponsiveCSS = () => responsiveValuesCSS("margin-top", "px", breakpointNameToPx({xs: 35, lg: 20}));
+const summationContainerResponsiveCSS = () => responsiveValuesCSS("margin-top", "px", breakpointNameToPx({ xs: 35, lg: 20 }));
 const SummationContainer = styled.div`
 	${summationContainerResponsiveCSS};
 `;
@@ -86,7 +86,7 @@ type SingleSummationProps = {
 	color: ThemeColors;
 }
 
-const SingleSummation = ({index, title, text, color}: SingleSummationProps) => (
+const SingleSummation = ({ index, title, text, color }: SingleSummationProps) => (
 	<SummationContainer>
 		<Subtitle text={`${index}.`} color={color} fontWeight="bold"/>
 		<Heading type="h4" text={title} color={color} />
@@ -94,7 +94,7 @@ const SingleSummation = ({index, title, text, color}: SingleSummationProps) => (
 	</SummationContainer>
 );
 
-const SummationBlock = ({title, titleText, summationText, backgroundColor, textColor = "black", image}: SummationBlockProps) => (
+const SummationBlock = ({ title, titleText, summationText, backgroundColor, textColor = "black", image }: SummationBlockProps) => (
 	<FullWidthContainer background={backgroundColor}>
 		<SummationBlockContainer>
 			<LeftColumn>

@@ -7,17 +7,17 @@
 *   CaseCard (Container that displays a clickable image of a case image with a link to the single case page of that case)
  */
 
-export {default as AddressBlock} from "./AddressBlock";
+export { default as AddressBlock } from "./AddressBlock";
 export * from "./AddressBlock";
 
-export {default as CommunicationBlock} from "./CommunicationBlock";
+export { default as CommunicationBlock } from "./CommunicationBlock";
 export * from "./CommunicationBlock";
 
-export {default as IconTextBlock} from "./IconTextBlock";
+export { default as IconTextBlock } from "./IconTextBlock";
 export * from "./IconTextBlock";
 
-export {default as TeamMember} from "./TeamMember";
+export { default as TeamMember } from "./TeamMember";
 export * from "./TeamMember";
 
-export {default as CaseCard} from "./CaseCard";
+export { default as CaseCard } from "./CaseCard";
 export * from "./CaseCard";

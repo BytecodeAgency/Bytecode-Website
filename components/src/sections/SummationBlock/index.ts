@@ -1,2 +1,2 @@
-export {default} from "./SummationBlock";
+export { default } from "./SummationBlock";
 export * from "./SummationBlock";

@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import {theme} from "../../../../theme";
+import { theme } from "../../../../theme";
 import Hamburger from "hamburger-react";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../../../helpers/responsiveCss";
+import { breakpointNameToPx, responsiveValuesCSS } from "../../../../helpers/responsiveCss";
 import Logo from "../../../../components/Branding";
-import {isWindowDesktop} from "../../../../helpers/device";
+import { isWindowDesktop } from "../../../../helpers/device";
 
 type PopupHeaderProps = {
     closePopup: () => void;
@@ -20,7 +20,7 @@ const DesktopPopupMenu = styled.div`
 	grid-area: menu;
 	background-color: ${theme.colors.white};
 `;
-const DesktopPopupHeader = ({closePopup}:PopupHeaderProps) => (
+const DesktopPopupHeader = ({ closePopup }:PopupHeaderProps) => (
 	<DesktopPopupMenu>
 		<Hamburger toggled={true} onToggle={closePopup} />
 	</DesktopPopupMenu>
@@ -51,7 +51,7 @@ const logoContainerResponsiveCSS = responsiveValuesCSS(
 const LogoContainer = styled.div`
 	${logoContainerResponsiveCSS}
 `;
-const MobilePopupHeader = ({closePopup}: PopupHeaderProps) => (
+const MobilePopupHeader = ({ closePopup }: PopupHeaderProps) => (
 	<MobilePopupMenu >
 		<LogoContainer>
 			<Logo color="black" />
@@ -61,7 +61,7 @@ const MobilePopupHeader = ({closePopup}: PopupHeaderProps) => (
 );
 
 
-const PopupHeader = ({closePopup}: PopupHeaderProps) => isWindowDesktop()
+const PopupHeader = ({ closePopup }: PopupHeaderProps) => isWindowDesktop()
 	? <DesktopPopupHeader closePopup={closePopup}/>
 	: <MobilePopupHeader closePopup={closePopup} />
 ;

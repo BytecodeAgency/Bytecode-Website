@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {Paragraph} from "../Typography";
-import {DiagonalArrow} from "../../icons";
-import {WithStyle} from "../../types/utils";
+import { Paragraph } from "../Typography";
+import { DiagonalArrow } from "../../icons";
+import { WithStyle } from "../../types/utils";
 
 type ArrowLinkProps = {
     onClick: () => void;
@@ -24,7 +24,7 @@ const StyledParagraph = styled(Paragraph)`
 	padding-right: 5px;
 `;
 
-const ArrowLink = ({onClick, text, className}: WithStyle<ArrowLinkProps>) => (
+const ArrowLink = ({ onClick, text, className }: WithStyle<ArrowLinkProps>) => (
 	<ArrowLinkContainer onClick={onClick} className={className}>
 		<StyledParagraph fontWeight="bold" text={text} />
 		<DiagonalArrow color="black" size={24} />

@@ -1,2 +1,2 @@
-export {default} from "./TeamMembers";
+export { default } from "./TeamMembers";
 export * from "./TeamMembers";

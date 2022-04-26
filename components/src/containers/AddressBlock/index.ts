@@ -1,2 +1,2 @@
-export {default} from "./AddressBlock";
+export { default } from "./AddressBlock";
 export * from "./AddressBlock";

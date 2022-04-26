@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import {NextPage} from "next";
+import { NextPage } from "next";
 import MainLayout from "../layout/MainLayout";
-import {Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, Subtitle, FullWidthContainer} from "@bytecode/ui-library/components";
-import {PageIntro} from "@bytecode/ui-library/sections";
-import {theme, breakpointNameToPx, responsiveValuesCSS, isWindowSizeBiggerThan, cases} from "@bytecode/ui-library/utils";
+import { Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, Subtitle, FullWidthContainer } from "@bytecode/ui-library/components";
+import { PageIntro } from "@bytecode/ui-library/sections";
+import { theme, breakpointNameToPx, responsiveValuesCSS, isWindowSizeBiggerThan, cases } from "@bytecode/ui-library/utils";
 import { CaseCard } from "@bytecode/ui-library/containers";
 
 const content = {
@@ -34,13 +34,13 @@ const LinkParagraph = styled(Paragraph)`
 `;
 
 const spacerResponsiveCSS = () => {
-	const display = responsiveValuesCSS("display", "", breakpointNameToPx({lg: "none"}));
+	const display = responsiveValuesCSS("display", "", breakpointNameToPx({ lg: "none" }));
 	const marginLeft = responsiveValuesCSS(
 		"margin-left",
 		"px",
 		breakpointNameToPx({
 			xs: 12,
-			md: 24,
+			md: 16,
 		})
 	);
 	return display + marginLeft;
@@ -81,7 +81,7 @@ const casesOverviewContainerResponsiveCSS = () => {
 		"",
 		breakpointNameToPx({
 			xs: "1fr",
-			lg: "1fr 680px",
+			lg: "400px auto",
 		}));
 	const paddingTop = responsiveValuesCSS(
 		"padding-top",
@@ -138,26 +138,32 @@ const MobileArrowLink = styled(ArrowLink)`
 	align-self: flex-end;
 `;
 
-const casesOverviewRightColumnResponsiveCSS = responsiveValuesCSS(
-	"grid-template-columns",
-	"",
-	breakpointNameToPx({
-		xs: "1fr",
-		md: "1fr 1fr",
-	})
-);
 const CasesOverviewRightColumn = styled.div`
-	${casesOverviewRightColumnResponsiveCSS};
-	display: grid;
-	justify-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 `;
 const Sticky = styled.div`
 	position: sticky;
 	top: 120px;
 `;
 
+const styledFullWidthContainerResponsiveCSS = responsiveValuesCSS(
+	"background",
+	"",
+	breakpointNameToPx({
+		xs: `url(${"/images/cases-line.svg"}) no-repeat left center, ${theme.colors.colorBrand2}`,
+		md: `url(${"/images/cases-line.svg"}) no-repeat left bottom, ${theme.colors.colorBrand2}`
+	})
+);
+
+const StyledFullWidthContainer = styled(FullWidthContainer)`
+	${styledFullWidthContainerResponsiveCSS};
+`;
+
 const CasesOverview = () => (
-	<FullWidthContainer background={theme.colors.colorBrand2}>
+	<StyledFullWidthContainer>
 		<CasesOverviewContainer>
 			<CasesOverviewLeftColumn>
 				<Sticky>
@@ -180,7 +186,7 @@ const CasesOverview = () => (
 				}
 			</CasesOverviewRightColumn>
 		</CasesOverviewContainer>
-	</FullWidthContainer>
+	</StyledFullWidthContainer>
 );
 
 const CasesBody = () => (

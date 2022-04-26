@@ -1,13 +1,12 @@
 import styled from "styled-components";
-import {breakpointNameToPx, responsiveValuesCSS} from "../../../../helpers/responsiveCss";
-import { Heading, Paragraph} from "../../../../components/Typography";
-import {Container} from "../../../../components/Container";
-import {theme} from "../../../../theme";
+import { breakpointNameToPx, responsiveValuesCSS } from "../../../../helpers/responsiveCss";
+import { Heading, Paragraph } from "../../../../components/Typography";
+import { Container } from "../../../../components/Container";
+import { theme } from "../../../../theme";
 import React from "react";
 import PopupSocials from "./PopupSocials";
 import PopupHeader from "./PopupHeader";
-import Image from "next/image";
-import {Member} from "../../TeamMember";
+import { Member } from "../../TeamMember";
 
 const PopupBackground = styled.div`
 	position: fixed;
@@ -36,7 +35,7 @@ const popupContentResponsiveCSS = () => {
                 "\"title image\"" +
                 "\"socials about\""
 		}));
-	const gridRowGap = responsiveValuesCSS("grid-row-gap", "px", breakpointNameToPx({xs: 20, md: 25}));
+	const gridRowGap = responsiveValuesCSS("grid-row-gap", "px", breakpointNameToPx({ xs: 20, md: 25 }));
 	const gridTemplateColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
@@ -53,8 +52,8 @@ const popupContentResponsiveCSS = () => {
 			xl: "48px auto"
 		})
 	);
-	const top = responsiveValuesCSS("top", "%", breakpointNameToPx({xs: 0, xl: 10}));
-	const left = responsiveValuesCSS("left", "%", breakpointNameToPx({xs: 0, xl: 10}));
+	const top = responsiveValuesCSS("top", "%", breakpointNameToPx({ xs: 0, xl: 10 }));
+	const left = responsiveValuesCSS("left", "%", breakpointNameToPx({ xs: 0, xl: 10 }));
 	return gridTemplateArea + gridRowGap + gridTemplateColumns + gridTemplateRows + top + left;
 };
 const PopupContent = styled(Container)`
@@ -67,15 +66,35 @@ const PopupContent = styled(Container)`
 	display: grid;
 `;
 
-const styledImageResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({xs:75, md: 0}));
+const styledImageResponsiveCSS = responsiveValuesCSS("padding-top", "px", breakpointNameToPx({ xs:75, md: 0 }));
 
-const StyledImage = styled.div`
+const imageOnionSide = [
+	{ url:"top-left", background: "left top" },
+	{ url: "top-right", background: "right top" },
+	{ url: "bottom-right", background: "right bottom" }
+];
+const imageOnionColor = [
+	"green",
+	"pink"
+];
+
+const getRandomImageOnion = (name: string) => {
+	const color = imageOnionColor[Math.floor(Math.random()*imageOnionColor.length)];
+	const side = imageOnionSide[Math.floor(Math.random()*imageOnionSide.length)];
+	//const side = {url:"top-left", background: "left top", image: "left top"};
+	return `url(${`/images/image-vector-${side.url}-${color}.svg`}) no-repeat ${side.background}, url(${`/images/member-${name}.png`}) no-repeat ${side.background}`;
+};
+
+const StyledImage = styled.div<{name: string}>`
 	${styledImageResponsiveCSS};
-	height: 500px;
-	width: 340px;
+	height: 452px;
+	width: 312px;
 	grid-area: image;
 	position: relative;
 	left: 0;
+	bottom: 0;
+	background: ${ props => `${getRandomImageOnion(props.name)}`};
+	background-origin: content-box;
 `;
 
 const TitleAndName = styled.div`
@@ -99,8 +118,8 @@ interface PopupProps {
     closePopup: () => void;
     popup: boolean;
 }
-const Popup: React.FC<PopupProps> = ({member, closePopup, popup}) => {
-	const {name, about, id, jobTitle} = member;
+const Popup: React.FC<PopupProps> = ({ member, closePopup, popup }) => {
+	const { name, about, id, jobTitle } = member;
 
 	return (
 		<>
@@ -109,9 +128,7 @@ const Popup: React.FC<PopupProps> = ({member, closePopup, popup}) => {
 					<PopupBackground> {/*Add onclick for closing by clicking on background*/}
 						<PopupContent>
 							<PopupHeader closePopup={closePopup}/>
-							<StyledImage>
-								<Image src={`/images/member-${id}.png`} alt="profile picture" layout="fill" objectFit="contain"/>
-							</StyledImage>
+							<StyledImage name={id}/>
 							<TitleAndName>
 								<StyledName text={name} type="h4"/>
 								<JobTitle text={jobTitle}/>

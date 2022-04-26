@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import {Paragraph, Heading} from "../../components/Typography";
-import {theme} from "../../theme";
+import { Paragraph, Heading } from "../../components/Typography";
+import { theme } from "../../theme";
 import Image from "next/image";
 import Popup from "./Components/Popup";
-import {EmployeeName} from "../../content/contentGenerics";
+import { EmployeeName } from "../../content/contentGenerics";
 
 export interface Member {
     name: string;
@@ -25,8 +25,9 @@ const StyledName = styled(Heading)`
 	font-family: ${theme.typography.paragraph.font};
 `;
 
-const TeamMember: React.FC<TeamMemberProps> = ({member}) => {
-	const {id, name, jobTitle} = member;
+
+const TeamMember: React.FC<TeamMemberProps> = ({ member }) => {
+	const { id, name, jobTitle } = member;
 	const [popup, setPopup] = useState(false);
 	const openPopup = () => {
 		setPopup(true);

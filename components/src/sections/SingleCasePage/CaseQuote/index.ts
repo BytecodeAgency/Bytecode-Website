@@ -1,2 +1,2 @@
-export {default} from "./CaseQuote";
+export { default } from "./CaseQuote";
 export * from "./CaseQuote";

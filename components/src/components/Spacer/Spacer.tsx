@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {WithStyle} from "../../types/utils";
+import { WithStyle } from "../../types/utils";
 
 const SpacerStyling = styled.div<{ color: SpacerColor, bold?: boolean, reverse?: boolean }>`
     width: 100%;

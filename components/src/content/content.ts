@@ -1,5 +1,5 @@
-import {Member} from "../containers";
-import {EmployeeName} from "./contentGenerics";
+import { Member } from "../containers";
+import { EmployeeName } from "./contentGenerics";
 
 
 // list of all employees

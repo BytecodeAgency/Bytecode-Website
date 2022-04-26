@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {Paragraph, PhoneScreen, Subtitle} from "../../components";
-import {theme} from "../../theme";
+import { Paragraph, PhoneScreen, Subtitle } from "../../components";
+import { theme } from "../../theme";
 import Link from "next/link";
 
 const CaseCardContainer = styled.div`

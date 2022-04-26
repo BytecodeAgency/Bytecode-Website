@@ -1,6 +1,6 @@
 import React from "react";
 import { IconComponent } from "../../icons";
-import { Paragraph} from "../../components/Typography";
+import { Paragraph } from "../../components/Typography";
 import styled from "styled-components";
 import IconTitle from "../../components/IconTitle";
 
@@ -13,7 +13,7 @@ type IconTextBlockProps = {
 	title: string;
 	text: string;
 };
-const IconTextBlock = ({icon, title, text}: IconTextBlockProps) => (
+const IconTextBlock = ({ icon, title, text }: IconTextBlockProps) => (
 	<StyledContainer>
 		<IconTitle icon={icon} text={title} />
 		<Paragraph text={text}/>

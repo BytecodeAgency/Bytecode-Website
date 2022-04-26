@@ -1,4 +1,4 @@
-import {BreakpointKeyValue, breakpoints} from "../theme";
+import { BreakpointKeyValue, breakpoints } from "../theme";
 
 export const responsiveValuesCSS = (
 	cssProp = "margin", // the CSS property to apply to the breakpoints
@@ -11,10 +11,14 @@ export const responsiveValuesCSS = (
 			Object.keys(value)[0],
 			Object.values(value)[0].toString(),
 		];
+
+		if(screenBreakpoint === "400"){
+			return (mediaQueries + `${cssProp}: ${cssPropBreakpoint}${cssPropUnits};`);
+		}
 		return (mediaQueries + `
-      @media screen and (${mediaQueryType}: ${screenBreakpoint}px) {
-        ${cssProp}: ${cssPropBreakpoint}${cssPropUnits};
-      }
+		  @media screen and (${mediaQueryType}: ${screenBreakpoint}px) {
+			${cssProp}: ${cssPropBreakpoint}${cssPropUnits};
+		  }
       `);
 	}, "");
 	return breakpointProps as string;
@@ -27,4 +31,4 @@ export const breakpointNameToPx = (input: BreakpointKeyValue): { [K in number]: 
 	});
 };
 
-export type {BreakpointKeyValue};
+export type { BreakpointKeyValue };

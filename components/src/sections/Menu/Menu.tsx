@@ -1,5 +1,5 @@
 import React from "react";
-import {theme} from "../../theme";
+import { theme } from "../../theme";
 import { useWindowSize } from "../../helpers/device";
 import { DesktopMenu } from "./Components/DesktopMenu";
 import { MobileMenu } from "./Components/MobileMenu";

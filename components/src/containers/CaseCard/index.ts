@@ -1,2 +1,2 @@
-export {default} from "./CaseCard";
+export { default } from "./CaseCard";
 export * from "./CaseCard";

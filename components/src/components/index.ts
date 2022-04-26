@@ -10,28 +10,28 @@
 *   Container (All special div components)
 * */
 
-export {default as Button } from "./Button";
+export { default as Button } from "./Button";
 export * from "./Button";
 
-export {default as ArrowLink} from "./ArrowLink";
+export { default as ArrowLink } from "./ArrowLink";
 export * from "./ArrowLink";
 
-export {default as Logo} from "./Branding";
+export { default as Logo } from "./Branding";
 export * from "./Branding";
 
-export {default as IconTitle} from "./IconTitle";
+export { default as IconTitle } from "./IconTitle";
 export * from "./IconTitle";
 
-export {default as SocialButton} from "./SocialButton";
+export { default as SocialButton } from "./SocialButton";
 export * from "./SocialButton";
 
-export {default as Spacer} from "./Spacer";
+export { default as Spacer } from "./Spacer";
 export * from "./Spacer";
 
 export * from "./Typography";
 
-export {default as Container} from "./Container";
+export { default as Container } from "./Container";
 export * from "./Container";
 
-export {default as PhoneScreen} from "./PhoneScreen";
+export { default as PhoneScreen } from "./PhoneScreen";
 export * from "./PhoneScreen";

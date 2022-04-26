@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {footerContent, links} from "../../content/content";
-import {Heading, Paragraph} from "../../components/Typography";
-import {WithStyle} from "../../types/utils";
+import { footerContent, links } from "../../content/content";
+import { Heading, Paragraph } from "../../components/Typography";
+import { WithStyle } from "../../types/utils";
 
 const Container = styled.div`
 	grid-area: address;
@@ -19,8 +19,8 @@ type AddressBlockProps = {
 	large?: boolean;
 }
 
-const AddressBlock = ({className, large}: WithStyle<AddressBlockProps>) => {
-	const {name, address, number, city, zipCode} = footerContent.office1;
+const AddressBlock = ({ className, large }: WithStyle<AddressBlockProps>) => {
+	const { name, address, number, city, zipCode } = footerContent.office1;
 	const goToMap = () => {
 		window.open(links.mapsQuery);
 	};

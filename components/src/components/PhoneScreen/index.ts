@@ -1,2 +1,2 @@
-export {default} from "./PhoneScreen";
+export { default } from "./PhoneScreen";
 export * from "./PhoneScreen";

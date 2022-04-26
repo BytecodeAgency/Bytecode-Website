@@ -1,5 +1,5 @@
 import React from "react";
-import {theme, ThemeColors} from "../../theme";
+import { theme, ThemeColors } from "../../theme";
 
 interface Logo {
     color: ThemeColors;

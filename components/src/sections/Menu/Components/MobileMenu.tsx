@@ -4,7 +4,7 @@ import Hamburger from "hamburger-react";
 import { MenuInterface } from "../Menu";
 import styled from "styled-components";
 import { MenuContainer } from "../../../components/Container";
-import {theme} from "../../../theme";
+import { theme } from "../../../theme";
 import ContactBox from "./ContactBox";
 import Logo from "../../../components/Branding";
 

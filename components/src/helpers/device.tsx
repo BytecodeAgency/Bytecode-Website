@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BreakpointName, theme} from "../theme";
+import { BreakpointName, theme } from "../theme";
 
 interface WindowSize {
     width?: number

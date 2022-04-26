@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {Heading} from "../../components/Typography";
+import { Heading } from "../../components/Typography";
 import { IconComponent } from "../../icons";
-import {ThemeColors} from "../../theme";
+import { ThemeColors } from "../../theme";
 
 const StyledTitle = styled.div`
 	display: flex;
@@ -20,7 +20,7 @@ type IconTitleProps = {
 	color?: ThemeColors;
 }
 
-const IconTitle = ({icon, text, color="black"}: IconTitleProps) => {
+const IconTitle = ({ icon, text, color="black" }: IconTitleProps) => {
 	const Icon = icon;
 	return (
 		<StyledTitle>
