@@ -13,6 +13,9 @@ const CollapsibleTextContainer = styled.div`
 const TextContainer = styled.div`
 	border-bottom: black solid 2px;
 `;
+const StyledParagraph = styled(Paragraph)`
+	margin-bottom: 12px;
+`;
 
 type CollapsibleTextProps = {
     title: string;
@@ -26,8 +29,8 @@ const CollapsibleText = ({ title, description, color }:CollapsibleTextProps) => 
 	return(
 		<CollapsibleTextContainer>
 			<TextContainer>
-				<Paragraph fontWeight="bold" text={title} color={color}/>
-				{ open && <Paragraph text={description} color={color}/>}
+				<StyledParagraph fontWeight="bold" text={title} color={color}/>
+				{ open && <StyledParagraph text={description} color={color}/>}
 			</TextContainer>
 			<div onClick={collapse}>
 				{
