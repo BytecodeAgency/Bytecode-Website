@@ -56,8 +56,19 @@ const CoFounderHeading = styled(Heading)`
 	margin-bottom: 30px;
 `;
 
+const bytecodeAsCoFounderContainerResponsiveCSS = responsiveValuesCSS(
+	"padding-left",
+	"px",
+	breakpointNameToPx({
+		xl: 200
+	})
+);
+const BytecodeAsCoFounderContainer = styled(Container)`
+	${bytecodeAsCoFounderContainerResponsiveCSS};	
+`;
+
 const BytecodeAsCoFounder = () => (
-	<Container>
+	<BytecodeAsCoFounderContainer>
 		<StyledSpacer color="black" />
 		<CoFounderTextContainer>
 			<CoFounderHeading type="h2" text="Bytecode as tech co-founder & CTO" />
@@ -69,7 +80,7 @@ const BytecodeAsCoFounder = () => (
 				but aren’t always interested in your idea or the success."
 			/>
 		</CoFounderTextContainer>
-	</Container>
+	</BytecodeAsCoFounderContainer>
 );
 
 const whoWeAreContainerResponsiveCSS = () => {
