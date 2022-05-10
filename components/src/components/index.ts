@@ -35,3 +35,9 @@ export * from "./Container";
 
 export { default as PhoneScreen } from "./PhoneScreen";
 export * from "./PhoneScreen";
+
+export { default as UserPicture } from "./UserPictures";
+export * from "./UserPictures";
+
+export { default as TextBox } from "./TextBox";
+export * from "./TextBox";

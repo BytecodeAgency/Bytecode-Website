@@ -21,3 +21,6 @@ export * from "./TeamMember";
 
 export { default as CaseCard } from "./CaseCard";
 export * from "./CaseCard";
+
+export { default as MeetTheFoundersBox } from "./MeetTheFoundersBox";
+export * from "./MeetTheFoundersBox";

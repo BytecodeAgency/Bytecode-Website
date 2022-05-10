@@ -2,6 +2,7 @@ import { breakpoints } from "./layout";
 import layout from "./layout";
 import typography from "./typography";
 import { ButtonTypeColors } from "../types/Button.types";
+import { BoxesTypeColors } from "src/components/UserPictures/UserPicture.types";
 
 const colors = {
 	// Brand
@@ -14,7 +15,7 @@ const colors = {
 	black: "#1B1B1B",
 	white: "#FFFFFF",
 	lightGray: "#F6F9F6",
-  
+
 	// Sub-colors
 	info: "#0B71A1",
 	infoLight: "#D3F3FD",
@@ -26,7 +27,7 @@ const colors = {
 	successLight: "#DCE8D1",
 };
 
-const buttons : ButtonTypeColors = {
+const buttons: ButtonTypeColors = {
 	primary: {
 		background: colors.colorBrand4,
 		color: colors.white,
@@ -41,14 +42,41 @@ const buttons : ButtonTypeColors = {
 	}
 };
 
+const boxes: BoxesTypeColors = {
+	darkGreen: {
+		bgColor: colors.white,
+		shadowColor: colors.colorBrand1,
+		shadowColorHover: colors.black,
+	},
+	lightGreen: {
+		bgColor: colors.white,
+		shadowColor: colors.colorBrand2,
+		shadowColorHover: colors.black,
+	},
+	purple: {
+		bgColor: colors.white,
+		shadowColor: colors.colorBrand4,
+		shadowColorHover: colors.black,
+	}
+};
+
+const circles = {
+	top: "top: -3px; right: -6px;",
+	bottom: "bottom: -6px; right: -6px;"
+};
+
 const theme = {
 	colors: {
 		...colors,
 		buttons,
+		boxes,
 	},
 	breakpoints,
 	layout,
 	typography,
+	shadows: {
+		circles
+	}
 };
 
 export default theme;

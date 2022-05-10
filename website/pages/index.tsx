@@ -2,6 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import { InitialContainer } from "@bytecode/ui-library/components";
 import MainLayout from "layout/MainLayout";
+import { MeetTheFounders } from "@bytecode/ui-library/sections";
 
 const content = {
 	title: "Bytecode",
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
 
 const HomeBody = () => (
 	<InitialContainer>
+		<MeetTheFounders />
 	</InitialContainer>
 );
 
