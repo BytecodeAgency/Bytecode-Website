@@ -27,3 +27,6 @@ export * from "./CollapsibleText";
 
 export { default as IconSummaryBlock } from "./IconSummaryBlock";
 export * from "./IconSummaryBlock";
+
+export { default as MeetTheFoundersBox } from "./MeetTheFoundersBox";
+export * from "./MeetTheFoundersBox";

@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import { PageIntro } from "@bytecode/ui-library/sections";
+import { PageIntro, MeetTheFounders } from "@bytecode/ui-library/sections";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS, Employees, isWindowSizeBiggerThan, theme } from "@bytecode/ui-library/utils";
@@ -479,6 +479,7 @@ const HomeBody = () => (
 		<WhoIsBytecode />
 		<HowDoWeWanna />
 		<OurProcess />
+		<MeetTheFounders />
 	</div>
 );
 
