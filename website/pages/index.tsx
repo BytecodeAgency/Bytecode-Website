@@ -2,11 +2,20 @@ import React from "react";
 import type { NextPage } from "next";
 import { PageIntro } from "@bytecode/ui-library/sections";
 import MainLayout from "layout/MainLayout";
-import { Container, InitialContainer, Spacer, Heading, Paragraph, ArrowLink, FullWidthContainer } from "@bytecode/ui-library/components";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS, Employees, isWindowSizeBiggerThan, theme } from "@bytecode/ui-library/utils";
 import Image from "next/image";
-import { CollapsibleText } from "@bytecode/ui-library/containers";
+import { CollapsibleText, IconSummaryBlock } from "@bytecode/ui-library/containers";
+import {
+	ArrowLink,
+	Container,
+	InitialContainer,
+	Heading,
+	Paragraph,
+	Spacer,
+	FullWidthContainer
+} from "@bytecode/ui-library/components";
+import { Handshake, Tracking, List, PencilAndRuler, DeveloperMode  } from "@bytecode/ui-library/icons";
 
 const content = {
 	title: "Bytecode",
@@ -92,18 +101,18 @@ const bytecodeAsCoFounderContainerResponsiveCSS = responsiveValuesCSS(
 	"padding-left",
 	"px",
 	breakpointNameToPx({
-		xl: 200
+		xl: 0
 	})
 );
 const BytecodeAsCoFounderContainer = styled(Container)`
-	${bytecodeAsCoFounderContainerResponsiveCSS};	
+	${bytecodeAsCoFounderContainerResponsiveCSS};
 `;
 
 const BytecodeAsCoFounder = () => (
 	<BytecodeAsCoFounderContainer>
 		<StyledSpacer color="black" />
 		<CoFounderTextContainer>
-			<CoFounderHeading type="h2" text="Bytecode as tech co-founder & CTO" />
+			<CoFounderHeading type="h2" text="Bytecode as tech co-founder &amp; CTO" />
 			<Paragraph text="How do you create a software product with no software skills or knowledge?
 				What features do you integrate, and how do you test them?
 				Many tech start-up founders like you are trying to find the right tech person to develop their MVP.
@@ -160,18 +169,9 @@ const PicturesContainer = styled.div`
 
 const WhoWeAre = () => (
 	<WhoWeAreContainer>
-		<PicturesContainer>
-			{
-				Employees.map((employee, index) => (
-					isWindowSizeBiggerThan("xxl")
-						? <Image key={index} src={`/images/member-${employee}.png`} alt="profile picture" width={180} height={270} />
-						: <Image key={index} src={`/images/member-${employee}.png`} alt="profile picture" width={150} height={225} />
-				))
-			}
-		</PicturesContainer>
 		<WhoWeAreTextContainer>
 			<Heading type="h2" text="Who are we?" />
-			<Paragraph text="We want to be your tech co-founder & CTO.
+			<Paragraph text="We want to be your tech co-founder &amp; CTO.
 				Together with you, we build your start-up and digital product.
 				Our core expertise is designing and programming your MVP.
 				But before we develop anything, we work together with you to understand the ideal user experience and the user's goals.
@@ -186,6 +186,15 @@ const WhoWeAre = () => (
 				link="/who-we-are"
 			/>
 		</WhoWeAreTextContainer>
+		<PicturesContainer>
+			{
+				Employees.map((employee, index) => (
+					isWindowSizeBiggerThan("xxl")
+						? <Image key={index} src={`/images/member-${employee}.png`} alt="profile picture" width={180} height={270} />
+						: <Image key={index} src={`/images/member-${employee}.png`} alt="profile picture" width={150} height={225} />
+				))
+			}
+		</PicturesContainer>
 	</WhoWeAreContainer>
 );
 
@@ -205,14 +214,6 @@ const howDoWeWannaContainerResponsiveCSS = () => {
 			lg: `url(${"/images/home-line2.svg"}) no-repeat left bottom, ${theme.colors.colorBrand4};`
 		})
 	);
-	const backgroundSize = responsiveValuesCSS(
-		"background-size",
-		"",
-		breakpointNameToPx({
-			xs: "40%",
-			lg: "auto auto",
-		})
-	);
 	const minHeight = responsiveValuesCSS(
 		"min-height",
 		"px",
@@ -221,7 +222,7 @@ const howDoWeWannaContainerResponsiveCSS = () => {
 			lg: 700
 		})
 	);
-	return background + backgroundSize + minHeight;
+	return background + minHeight;
 };
 const HowDoWeWannaContainer = styled(FullWidthContainer)`
 	${howDoWeWannaContainerResponsiveCSS};
@@ -298,13 +299,186 @@ const HowDoWeWanna = () => (
 			</CollapsibleTextContainer>
 		</HowDoWeWannaContentContainer>
 	</HowDoWeWannaContainer>
+
 );
+
+
+const ProcessTextContainer = styled.div`
+	margin-bottom: 80px;
+`;
+
+const ProcessText = () => (
+	<ProcessTextContainer>
+		<Heading type="h2" text="Our process" />
+		<Paragraph text="Quisque ullamcorper nec tellus id consectetur.
+			Quisque in dui scelerisque, hendrerit nibh a, malesuada purus.
+			Vivamus arcu turpis, congue id nibh id, pharetra pharetra lacus."
+		/>
+		{/*TODO: change arrowlink to link to /services page*/}
+		<ArrowLink onClick={()=>console.log("go to /services")} text="See how we work" />
+	</ProcessTextContainer>
+);
+
+const StyledIconSummaryBlock = styled(IconSummaryBlock)`
+	align-self: start;
+`;
+
+const iconSummaryBlockContainerResponsiveCSS = responsiveValuesCSS(
+	"height",
+	"px",
+	breakpointNameToPx({
+		xs: 950,
+		md: 800
+	})
+);
+const IconSummaryBlockContainer = styled.div`
+	${iconSummaryBlockContainerResponsiveCSS};
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+`;
+
+const processSummaryContainerResponsiveCSS = () => {
+	const gridColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "130px 1fr",
+			md: "130px 500px"
+		})
+	);
+	const height = responsiveValuesCSS(
+		"height",
+		"px",
+		breakpointNameToPx({
+			xs: 950,
+			md: 800
+		})
+	);
+	return gridColumns + height;
+};
+
+const ProcessSummaryContainer = styled.div`
+	${processSummaryContainerResponsiveCSS};
+	display: grid;
+	align-content: start;
+`;
+
+const ProcessSummary = () => (
+	<ProcessSummaryContainer>
+		<Image src="/images/process-image.svg" alt="lines of process" height={754} width={83} />
+		<IconSummaryBlockContainer>
+			<StyledIconSummaryBlock
+				Icon={Handshake}
+				title="Introduction"
+				paragraph="Identify a problem, come up with a solution, and get acquainted with the market."
+			/>
+			<StyledIconSummaryBlock
+				Icon={Tracking}
+				title="Learn from our users"
+				list={[
+					"Send surveys",
+					"Perform interviews",
+					"Optimize and improve"
+				]}
+			/>
+			<StyledIconSummaryBlock
+				Icon={List}
+				title="Prioritize"
+				paragraph="Determine what to develop and what the user's minimal requirements are
+				to reach their goal."
+			/>
+			<StyledIconSummaryBlock
+				Icon={PencilAndRuler}
+				title="Visualize"
+				list={[
+					"Create a user flow and experience",
+					"Draft a user interface",
+					"Prototype"
+				]}
+			/>
+			<StyledIconSummaryBlock
+				Icon={DeveloperMode}
+				title="MVP Development"
+				paragraph="Create a first working version of your concept or add new features. 2-week sprints.
+				Alpha and beta tests. Deployment and live."
+			/>
+		</IconSummaryBlockContainer>
+	</ProcessSummaryContainer>
+
+);
+
+
+const processSpacerResponsiveCSS = () => {
+	const marginLeft = responsiveValuesCSS(
+		"margin-left",
+		"px",
+		breakpointNameToPx({
+			lg: 200
+		})
+	);
+	const marginBottom = responsiveValuesCSS(
+		"margin-bottom",
+		"px",
+		breakpointNameToPx({
+			xs: 40,
+			lg: 80
+		})
+	);
+	return marginBottom + marginLeft;
+};
+const ProcessSpacer = styled(Spacer)`
+	${processSpacerResponsiveCSS};
+`;
+
+const processContainerResponsiveCSS =  responsiveValuesCSS(
+	"background-size",
+	"",
+	breakpointNameToPx({
+		xs: "40%",
+		lg: "auto auto"
+	})
+);
+const ProcessContainer = styled(FullWidthContainer)`
+	${processContainerResponsiveCSS};
+	background: url(${"/images/home-process-line.svg"}) no-repeat top left;
+	padding-top: 80px;
+	padding-bottom: 80px;
+`;
+
+const ourProcessContainerResponsiveCSS = () => {
+	const gridColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "1fr",
+			lg: "1fr 1fr",
+		})
+	);
+	return gridColumns;
+};
+const OurProcessContainer = styled(Container)`
+	${ourProcessContainerResponsiveCSS};
+	display: grid;
+	grid-column-gap: 40px;
+`;
+const OurProcess = () => (
+	<ProcessContainer>
+		<ProcessSpacer bold/>
+		<OurProcessContainer>
+			<ProcessText />
+			<ProcessSummary />
+		</OurProcessContainer>
+	</ProcessContainer>
+);
+
 
 const HomeBody = () => (
 	<div>
 		<Intro />
 		<WhoIsBytecode />
 		<HowDoWeWanna />
+		<OurProcess />
 	</div>
 );
 

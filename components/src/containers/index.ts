@@ -24,3 +24,6 @@ export * from "./CaseCard";
 
 export { default as CollapsibleText } from "./CollapsibleText";
 export * from "./CollapsibleText";
+
+export { default as IconSummaryBlock } from "./IconSummaryBlock";
+export * from "./IconSummaryBlock";
