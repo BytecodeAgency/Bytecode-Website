@@ -1,6 +1,14 @@
 import React from "react";
 import type { NextPage } from "next";
-import { ArrowLink, Container, InitialContainer, Heading, Paragraph, Spacer } from "@bytecode/ui-library/components";
+import {
+	ArrowLink,
+	Container,
+	InitialContainer,
+	Heading,
+	Paragraph,
+	Spacer,
+	FullWidthContainer
+} from "@bytecode/ui-library/components";
 import { IconSummaryBlock } from "@bytecode/ui-library/containers";
 import { Handshake, Tracking, List, PencilAndRuler, DeveloperMode  } from "@bytecode/ui-library/icons";
 import MainLayout from "layout/MainLayout";
@@ -22,7 +30,7 @@ const Home: NextPage = () => {
 };
 
 const ProcessTextContainer = styled.div`
-	margin-bottom: 40px;
+	margin-bottom: 80px;
 `;
 
 const ProcessText = () => (
@@ -127,18 +135,41 @@ const ProcessSummary = () => (
 );
 
 
-const processSpacerResponsiveCSS = responsiveValuesCSS(
-	"display",
-	"",
-	breakpointNameToPx({
-		xs: "none",
-		lg: "block"
-	})
-);
+const processSpacerResponsiveCSS = () => {
+	const marginLeft = responsiveValuesCSS(
+		"margin-left",
+		"px",
+		breakpointNameToPx({
+			lg: 200
+		})
+	);
+	const marginBottom = responsiveValuesCSS(
+		"margin-bottom",
+		"px",
+		breakpointNameToPx({
+			xs: 40,
+			lg: 80
+		})
+	);
+	return marginBottom + marginLeft;
+};
 const ProcessSpacer = styled(Spacer)`
 	${processSpacerResponsiveCSS};
-	margin-left: 200px;
-	margin-bottom: 80px;
+`;
+
+const processContainerResponsiveCSS =  responsiveValuesCSS(
+	"background-size",
+	"",
+	breakpointNameToPx({
+		xs: "40%",
+		lg: "auto auto"
+	})
+);
+const ProcessContainer = styled(FullWidthContainer)`
+	${processContainerResponsiveCSS};
+	background: url(${"/images/home-process-line.svg"}) no-repeat top left;
+	padding-top: 80px;
+	padding-bottom: 80px;
 `;
 
 const ourProcessContainerResponsiveCSS = () => {
@@ -152,12 +183,7 @@ const ourProcessContainerResponsiveCSS = () => {
 	);
 	return gridColumns;
 };
-
-const ProcessContainer = styled(Container)`
-	padding-top: 80px;
-	padding-bottom: 80px;
-`;
-const OurProcessContainer = styled.div`
+const OurProcessContainer = styled(Container)`
 	${ourProcessContainerResponsiveCSS};
 	display: grid;
 	grid-column-gap: 40px;
