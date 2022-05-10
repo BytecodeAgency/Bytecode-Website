@@ -78,13 +78,13 @@ const StyledIntroParagraph = styled(Paragraph)`
 `;
 
 type LeftColumnProps = {
-	subtitle: string;
+	subtitle?: string;
 	title: string;
 	paragraph?: string;
 };
 const LeftColumn = ({ subtitle, title, paragraph }: LeftColumnProps) => (
 	<div>
-		<StyledIntroSubTitle text={subtitle} />
+		{subtitle && <StyledIntroSubTitle text={subtitle} /> }
 		<StyledIntroHeading type="h1" text={title} />
 		{paragraph && <StyledIntroParagraph text={paragraph} />}
 	</div>
@@ -132,7 +132,7 @@ const RightColumn = ({ image, link, paragraph }: RightColumnProps) => {
 };
 
 type PageIntroProps = {
-	subtitle: string;
+	subtitle?: string;
 	title: string;
 	paragraph: string;
 	columnSizes?: string;
