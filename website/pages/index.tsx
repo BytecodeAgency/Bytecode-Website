@@ -1,8 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
-import { ArrowLink, Container, InitialContainer, Heading, Paragraph } from "@bytecode/ui-library/components";
+import { ArrowLink, Container, InitialContainer, Heading, Paragraph, Spacer } from "@bytecode/ui-library/components";
 import { IconSummaryBlock } from "@bytecode/ui-library/containers";
-import { Book, Handshake, Tracking, List, PencilAndRuler, DeveloperMode, Handshake2  } from "@bytecode/ui-library/icons";
+import { Handshake, Tracking, List, PencilAndRuler, DeveloperMode  } from "@bytecode/ui-library/icons";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS } from "@bytecode/ui-library/utils";
@@ -21,8 +21,12 @@ const Home: NextPage = () => {
 	);
 };
 
+const ProcessTextContainer = styled.div`
+	margin-bottom: 40px;
+`;
+
 const ProcessText = () => (
-	<div>
+	<ProcessTextContainer>
 		<Heading type="h2" text="Our process" />
 		<Paragraph text="Quisque ullamcorper nec tellus id consectetur.
 			Quisque in dui scelerisque, hendrerit nibh a, malesuada purus.
@@ -30,24 +34,51 @@ const ProcessText = () => (
 		/>
 		{/*TODO: change arrowlink to link to /services page*/}
 		<ArrowLink onClick={()=>console.log("go to /services")} text="See how we work" />
-	</div>
+	</ProcessTextContainer>
 );
 
 const StyledIconSummaryBlock = styled(IconSummaryBlock)`
 	align-self: start;
 `;
 
+const iconSummaryBlockContainerResponsiveCSS = responsiveValuesCSS(
+	"height",
+	"px",
+	breakpointNameToPx({
+		xs: 950,
+		md: 800
+	})
+);
 const IconSummaryBlockContainer = styled.div`
+	${iconSummaryBlockContainerResponsiveCSS};
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 800px;
 `;
 
+const processSummaryContainerResponsiveCSS = () => {
+	const gridColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "130px 1fr",
+			md: "130px 500px"
+		})
+	);
+	const height = responsiveValuesCSS(
+		"height",
+		"px",
+		breakpointNameToPx({
+			xs: 950,
+			md: 800
+		})
+	);
+	return gridColumns + height;
+};
+
 const ProcessSummaryContainer = styled.div`
+	${processSummaryContainerResponsiveCSS};
 	display: grid;
-	grid-template-columns: 130px 500px;
-	height: 800px;
 	align-content: start;
 `;
 
@@ -95,6 +126,21 @@ const ProcessSummary = () => (
 	
 );
 
+
+const processSpacerResponsiveCSS = responsiveValuesCSS(
+	"display",
+	"",
+	breakpointNameToPx({
+		xs: "none",
+		lg: "block"
+	})
+);
+const ProcessSpacer = styled(Spacer)`
+	${processSpacerResponsiveCSS};
+	margin-left: 200px;
+	margin-bottom: 80px;
+`;
+
 const ourProcessContainerResponsiveCSS = () => {
 	const gridColumns = responsiveValuesCSS(
 		"grid-template-columns",
@@ -107,18 +153,23 @@ const ourProcessContainerResponsiveCSS = () => {
 	return gridColumns;
 };
 
-const OurProcessContainer = styled(Container)`
+const ProcessContainer = styled(Container)`
+	padding-top: 80px;
+	padding-bottom: 80px;
+`;
+const OurProcessContainer = styled.div`
 	${ourProcessContainerResponsiveCSS};
-	padding-top: 40px;
-	padding-bottom: 40px;
 	display: grid;
 	grid-column-gap: 40px;
 `;
 const OurProcess = () => (
-	<OurProcessContainer>
-		<ProcessText />
-		<ProcessSummary />
-	</OurProcessContainer>
+	<ProcessContainer>
+		<ProcessSpacer bold/>
+		<OurProcessContainer>
+			<ProcessText />
+			<ProcessSummary />
+		</OurProcessContainer>
+	</ProcessContainer>
 );
 
 const HomeBody = () => (
