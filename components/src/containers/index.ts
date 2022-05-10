@@ -21,3 +21,6 @@ export * from "./TeamMember";
 
 export { default as CaseCard } from "./CaseCard";
 export * from "./CaseCard";
+
+export { default as CollapsibleText } from "./CollapsibleText";
+export * from "./CollapsibleText";
