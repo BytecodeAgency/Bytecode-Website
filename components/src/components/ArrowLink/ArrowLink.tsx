@@ -3,10 +3,12 @@ import styled from "styled-components";
 import { Paragraph } from "../Typography";
 import { DiagonalArrow } from "../../icons";
 import { WithStyle } from "../../types/utils";
+import Link from "next/link";
 
 type ArrowLinkProps = {
-    onClick: () => void;
+    onClick?: () => void;
     text: string;
+	link?: string;
 }
 const ArrowLinkContainer = styled.div`
   	display: flex;
@@ -24,11 +26,20 @@ const StyledParagraph = styled(Paragraph)`
 	padding-right: 5px;
 `;
 
-const ArrowLink = ({ onClick, text, className }: WithStyle<ArrowLinkProps>) => (
-	<ArrowLinkContainer onClick={onClick} className={className}>
-		<StyledParagraph fontWeight="bold" text={text} />
-		<DiagonalArrow color="black" size={24} />
-	</ArrowLinkContainer>
+const ArrowLink = ({ onClick, text, className, link }: WithStyle<ArrowLinkProps>) => (
+	link ? (
+		<Link href={link}>
+			<ArrowLinkContainer className={className}>
+				<StyledParagraph fontWeight="bold" text={text} />
+				<DiagonalArrow color="black" size={24} />
+			</ArrowLinkContainer>
+		</Link>
+	) : (
+		<ArrowLinkContainer onClick={onClick} className={className}>
+			<StyledParagraph fontWeight="bold" text={text} />
+			<DiagonalArrow color="black" size={24} />
+		</ArrowLinkContainer>
+	)
 );
 
 export default ArrowLink;
