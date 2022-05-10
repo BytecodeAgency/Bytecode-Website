@@ -18,9 +18,13 @@ const Home: NextPage = () => {
 };
 
 const HomeBody = () => (
-	<InitialContainer>
+	<div>
+		<InitialContainer>
+			page heading
+		</InitialContainer>
 		<MeetTheFounders />
-	</InitialContainer>
+	</div>
+
 );
 
 export default Home;
