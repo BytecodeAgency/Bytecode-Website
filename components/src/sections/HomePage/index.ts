@@ -9,3 +9,6 @@ export * from "./WhoIsBytecode";
 
 export { default as WorkingTogether } from "./WorkingTogether";
 export * from "./WorkingTogether";
+
+export { default as OurProcess } from "./OurProcess";
+export * from "./OurProcess";
