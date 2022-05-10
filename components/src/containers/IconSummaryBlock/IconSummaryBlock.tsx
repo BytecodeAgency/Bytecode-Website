@@ -6,6 +6,7 @@ import { WithStyle } from "../../types/utils";
 
 const BulletText = styled(Paragraph)`
 	margin: 0;
+	padding-left: 10px;
 `;
 type BulletProps = {
 	text: string
