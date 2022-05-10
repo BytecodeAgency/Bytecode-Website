@@ -27,14 +27,19 @@ const BulletList = ({ list }: BulletListProps) => list ? (
 	</TextContainer>
 ) : null;
 
+const StyledParagraph = styled(Paragraph)`
+	margin-bottom: 0;
+`;
+
 type TextProps = {
 	text?: string;
 }
 const Text = ({ text }: TextProps) => text ? (
 	<TextContainer>
-		<Paragraph text={text} />
+		<StyledParagraph text={text} />
 	</TextContainer>
 ) : null;
+
 
 const IconSummaryBlockContainer = styled.div`
 	max-width: 500px;
