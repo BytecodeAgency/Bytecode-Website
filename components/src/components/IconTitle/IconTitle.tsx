@@ -11,8 +11,8 @@ const StyledTitle = styled.div<{ big?: boolean}>`
 `;
 
 const StyledHeading = styled(Heading)<{ big?: boolean }>`
-	padding-left: 10px;
-	${props => props.big && "line-height: 0.6"}
+	padding-left: ${props => props.big ? "20px" : "10px"};
+	${props => props.big && "line-height: 0.8"}
 `;
 
 type IconTitleProps = {
