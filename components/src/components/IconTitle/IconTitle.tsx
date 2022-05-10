@@ -24,7 +24,7 @@ const IconTitle = ({ icon, text, color="black" }: IconTitleProps) => {
 	const Icon = icon;
 	return (
 		<StyledTitle>
-			<Icon color={color} size={20}/>
+			<Icon color={color} size={24}/>
 			<StyledHeading type="h4" text={text} color={color}/>
 		</StyledTitle>
 	);

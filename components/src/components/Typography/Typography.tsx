@@ -37,6 +37,7 @@ const StyledParagraph = styled.div<WithStyle<TextStylingProps>>`
     font-family: ${theme.typography.paragraph.font};
     font-size: ${props => props.size ? theme.typography.paragraph.sizes[props.size] : theme.typography.paragraph.sizes.normal};
 	line-height: ${theme.typography.paragraph.lineHeight};
+	letter-spacing: 1.15px;
 	color: ${(props)=> props.color ? theme.colors[props.color] : theme.colors.black};
 	margin-bottom: 24px;
 	font-weight: ${props => props.fontWeight ? theme.typography.paragraph.weights[props.fontWeight] : theme.typography.paragraph.weights.normal};

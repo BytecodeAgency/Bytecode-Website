@@ -2,7 +2,7 @@ import React from "react";
 import { getEmployee } from "./content";
 import { TeamMember } from "../containers";
 
-export type EmployeeName = "jeroen" | "nick" | "chris" | "tiko" | "suzanne";
+export type EmployeeName = "jeroen" | "nick" | "chris" | "tiko" | "suzanne" | "nietzsche";
 
 type EmployeeProps = {
     name: EmployeeName

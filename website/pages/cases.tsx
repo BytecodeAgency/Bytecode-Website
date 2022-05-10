@@ -169,7 +169,6 @@ const CasesOverview = () => (
 				<Sticky>
 					<Subtitle text="Selection of projects" />
 					<Heading type="h2" text="Take a look at a few projects we have worked on. Will yours be next?" />
-
 					{
 						isWindowSizeBiggerThan("lg") ?
 							<LinkContainer>

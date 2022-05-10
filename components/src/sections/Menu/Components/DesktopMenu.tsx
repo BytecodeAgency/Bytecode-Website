@@ -14,22 +14,25 @@ const DesktopMenuContainer = styled(MenuContainer)`
     width: 90% !important;
 `;
 
-const NavLinksContainer = styled.div`
+const NavLinksContainer = styled.ul`
     display: flex;
     gap: ${theme.layout.gutter}px;
     justify-content: end;
 `;
 
-export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks }) => (
-	<DesktopMenuContainer>
+export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks }) => {
+
+	return (<DesktopMenuContainer>
 		<div>
 			<Logo color="black" />
 		</div>
-		<NavLinksContainer>
-			{navLinks.map((item) => (
-				<item.Link key={item.name} />
-			))}
-		</NavLinksContainer>
+		<div>
+			<NavLinksContainer>
+				{navLinks.map((item) => (
+					<item.Link key={item.name} />
+				))}
+			</NavLinksContainer>
+		</div>
 		<Spacer color="black" />
-	</DesktopMenuContainer>
-);
+	</DesktopMenuContainer>)
+};
