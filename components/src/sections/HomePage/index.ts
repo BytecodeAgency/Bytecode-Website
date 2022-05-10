@@ -6,3 +6,6 @@ export * from "./Intro";
 
 export { default as WhoIsBytecode } from "./WhoIsBytecode";
 export * from "./WhoIsBytecode";
+
+export { default as WorkingTogether } from "./WorkingTogether";
+export * from "./WorkingTogether";
