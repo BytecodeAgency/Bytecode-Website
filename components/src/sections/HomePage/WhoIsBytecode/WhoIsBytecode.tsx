@@ -54,7 +54,7 @@ const BytecodeAsCoFounderContainer = styled(Container)`
 
 const BytecodeAsCoFounder = () => (
 	<BytecodeAsCoFounderContainer>
-		<StyledSpacer color="black" />
+		<StyledSpacer />
 		<CoFounderTextContainer>
 			<CoFounderHeading type="h2" text="Bytecode as tech co-founder &amp; CTO" />
 			<Paragraph text="How do you create a software product with no software skills or knowledge?

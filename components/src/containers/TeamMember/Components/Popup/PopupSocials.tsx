@@ -42,7 +42,7 @@ const SocialsLinks = styled.div`
 `;
 const PopupSocials = ({ member }: PopupSocialsProps) => (
 	<SocialsContainer>
-		<StyledSpacer color="black" reverse/>
+		<StyledSpacer reverse/>
 		<SocialsTitle type="h5" text="Focus area"/>
 		{member.focus.map((area, index) => <SocialsFocusArea key={index} text={area}/>)}
 		<SocialsLinks>

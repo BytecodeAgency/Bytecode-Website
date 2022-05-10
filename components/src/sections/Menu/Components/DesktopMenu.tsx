@@ -30,6 +30,6 @@ export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks }) => (
 				<item.Link key={item.name} />
 			))}
 		</NavLinksContainer>
-		<Spacer color="black" />
+		<Spacer />
 	</DesktopMenuContainer>
 );

@@ -40,7 +40,7 @@ const StyledSpacer = styled(Spacer)`
 
 const MeetTheFounders: React.FC = () => (
 	<StyledContainer>
-		<StyledSpacer color="black" bold />
+		<StyledSpacer bold />
 		<StyledTitle type="h1" text="Meet the start-up founders!" />
 		<MeetTheFoundersContainer>
 			{

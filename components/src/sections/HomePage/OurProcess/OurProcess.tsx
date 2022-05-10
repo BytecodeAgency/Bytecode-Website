@@ -17,8 +17,7 @@ const ProcessText = () => (
 			Quisque in dui scelerisque, hendrerit nibh a, malesuada purus.
 			Vivamus arcu turpis, congue id nibh id, pharetra pharetra lacus."
 		/>
-		{/*TODO: change arrowlink to link to /services page*/}
-		<ArrowLink onClick={()=>console.log("go to /services")} text="See how we work" />
+		<ArrowLink link="/services" text="See how we work" />
 	</ProcessTextContainer>
 );
 

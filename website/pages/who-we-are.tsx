@@ -129,7 +129,7 @@ const Competences = () => (
 		<Container>
 			<CompetencesContainer>
 				<SpacerContainer>
-					<StyledCompetencesSpacer color="black"/>
+					<StyledCompetencesSpacer />
 				</SpacerContainer>
 				<StyledCompentencesHeading type="h2" text="What we bring to the table." />
 				<IconBlocksContainer>
