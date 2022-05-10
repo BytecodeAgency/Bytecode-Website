@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading, Paragraph, TextBox, UserPicture } from "../../components";
 import styled from "styled-components";
-import { Founder } from "src/sections/MeetTheFounders/data";
+import { Founder } from "src/sections/HomePage/MeetTheFounders/data";
 
 interface MeetTheFoundersBoxProps {
 	title?: string;

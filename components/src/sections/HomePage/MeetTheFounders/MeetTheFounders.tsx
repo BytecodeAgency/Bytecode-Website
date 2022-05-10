@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { MeetTheFoundersData } from "./data";
-import MeetTheFoundersBox from "../../containers/MeetTheFoundersBox/MeetTheFoundersBox";
-import { Container, Heading, Spacer } from "../../components";
-import { breakpointNameToPx, responsiveValuesCSS } from "../../helpers";
+import MeetTheFoundersBox from "../../../containers/MeetTheFoundersBox/MeetTheFoundersBox";
+import { Container, Heading, Spacer } from "../../../components";
+import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
 
 const MeetTheFoundersContainer = styled.div`
 	margin: 20px 0;

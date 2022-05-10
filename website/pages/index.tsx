@@ -1,6 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
-import { PageIntro, MeetTheFounders } from "@bytecode/ui-library/sections";
+import { MeetTheFounders, Intro } from "@bytecode/ui-library/home-page";
 import MainLayout from "layout/MainLayout";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS, Employees, isWindowSizeBiggerThan, theme } from "@bytecode/ui-library/utils";
@@ -9,7 +9,6 @@ import { CollapsibleText, IconSummaryBlock } from "@bytecode/ui-library/containe
 import {
 	ArrowLink,
 	Container,
-	InitialContainer,
 	Heading,
 	Paragraph,
 	Spacer,
@@ -29,36 +28,6 @@ const Home: NextPage = () => {
 		</MainLayout>
 	);
 };
-
-const introContainerResponsiveCSS = responsiveValuesCSS(
-	"background",
-	"",
-	breakpointNameToPx({
-		lg: `url(${"/images/home-intro-line.svg"}) no-repeat right bottom content-box, ${theme.colors.colorBrand2}`
-	})
-);
-
-const IntroContainer = styled(InitialContainer)`
-	${introContainerResponsiveCSS};
-	background-color: ${theme.colors.colorBrand2};
-	padding-right: 0;
-	padding-bottom: 40px;
-	padding-top: 140px;
-`;
-
-const Intro = () => (
-	<IntroContainer>
-		<PageIntro
-			title="Your startup partner for building software products"
-			paragraph="There are many variations of passages of Lorem Ipsum available,
-				but the majority have suffered alteration in some form, by injected humour,
-				or randomised words which don't look even slightly believable. "
-			image={
-				<Image src="/images/home-intro.svg" alt="members of bytecode" height={564} width={601} />
-			}
-		/>
-	</IntroContainer>
-);
 
 const WhoIsBytecodeContainer = styled(Container)`
 	padding-top: 40px;

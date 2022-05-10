@@ -24,6 +24,3 @@ export * from "./SingleCasePage";
 
 export { default as TeamMembers } from "./TeamMembers";
 export * from "./TeamMembers";
-
-export { default as MeetTheFounders } from "./MeetTheFounders";
-export * from "./MeetTheFounders";
