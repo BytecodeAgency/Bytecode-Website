@@ -24,9 +24,9 @@ const Youngpwr: NextPage = () => {
 };
 
 const intro: CaseIntroProps = {
-	title: "Platform for young entrepreneurs",
+	title: "Work(s) for your future",
 	subtitle: "Youngpwr",
-	text: "Supporting the growth of students with signs of entrepreneurial behavior",
+	text: "The first network that gives young people a kickstart as a young entrepreneur or employee",
 	image: "airchip-header.png",
 	logo: "airchip-logo.svg"
 };

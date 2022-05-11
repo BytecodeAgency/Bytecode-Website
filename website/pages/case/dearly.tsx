@@ -26,7 +26,7 @@ const Dearly: NextPage = () => {
 const intro: CaseIntroProps = {
 	title: "Supporting you through the grieving process",
 	subtitle: "Dearly",
-	text: "A new mobile application for social support and development",
+	text: "Normalise loss and grief and create more social awareness",
 	image: "airchip-header.png",
 	logo: "airchip-logo.svg"
 };

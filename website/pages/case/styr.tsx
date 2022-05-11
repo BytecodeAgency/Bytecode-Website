@@ -24,9 +24,9 @@ const Styr: NextPage = () => {
 };
 
 const intro: CaseIntroProps = {
-	title: "Automation for consultancy",
+	title: "Clear organisations and fair rewards",
 	subtitle: "Styr",
-	text: "By digitizing styrs job evaluation model we have automated work for their consultants. Now they can focus on their real passion.",
+	text: "A modern and practical tool for valuing and rewarding teams, roles and functions.",
 	image: "airchip-header.png",
 	logo: "airchip-logo.svg"
 };

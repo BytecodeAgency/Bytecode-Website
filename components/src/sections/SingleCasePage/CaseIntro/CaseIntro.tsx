@@ -3,6 +3,7 @@ import { Heading, InitialContainer, Paragraph, Subtitle } from "../../../compone
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
 import { theme } from "../../../theme";
+import { CaseIntroProps } from "../SingleCasePage.types";
 import Image from "next/image";
 
 type TextColumnProps = {
