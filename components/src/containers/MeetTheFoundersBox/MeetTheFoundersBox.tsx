@@ -1,12 +1,14 @@
 import React from "react";
-import { Heading, Paragraph, TextBox, UserPicture } from "../../components";
+import { ArrowLink, Heading, Paragraph, TextBox, UserPicture } from "../../components";
 import styled from "styled-components";
-import { Founder } from "src/sections/HomePage/MeetTheFounders/data";
+import { Founder } from "src/sections/HomePage/MeetTheFounders/MeetTheFounders.types";
+import Link from "next/link";
 
 interface MeetTheFoundersBoxProps {
 	title?: string;
 	paragraph: string;
-	founders?:  Founder[];
+	founders?: Founder[];
+	link: string;
 }
 
 const Container = styled.div`
@@ -22,7 +24,15 @@ const FoundersPictures = styled.div<{ countFounders: number; }>`
 	grid-gap: 8px;
 `;
 
-const MeetTheFoundersBox: React.FC<MeetTheFoundersBoxProps> = ({ title, paragraph, founders }) => {
+const Footer = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-end;
+	width: 100%;
+`;
+
+const MeetTheFoundersBox: React.FC<MeetTheFoundersBoxProps> = ({ title, paragraph, founders, link }) => {
 
 	const MaybeRenderUserPictures = () => {
 		if (founders) return <FoundersPictures countFounders={founders.length}>{founders.map(founder => <UserPicture key={founder.name} size={80} person={founder.name} color={founder.color} shadowPosition={founder.shadowPosition} />)}</FoundersPictures>;
@@ -31,13 +41,19 @@ const MeetTheFoundersBox: React.FC<MeetTheFoundersBoxProps> = ({ title, paragrap
 	};
 
 	return (
-		<Container>
-			<TextBox>
-				<MaybeRenderUserPictures />
-				{title && <Heading type="h3" text={title} />}
-				<Paragraph text={paragraph} />
-			</TextBox>
-		</Container>
+		<Link href={link}>
+			<Container>
+				<TextBox>
+					<MaybeRenderUserPictures />
+					{title && <Heading type="h3" text={title} />}
+					<Paragraph text={paragraph} />
+					{link &&
+						<Footer >
+							<ArrowLink link={link} text={"Read more"} />
+						</Footer>}
+				</TextBox>
+			</Container>
+		</Link>
 	);
 };
 

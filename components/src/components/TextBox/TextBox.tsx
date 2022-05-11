@@ -10,6 +10,11 @@ const TextBoxContainer = styled.div`
     border: 1px solid ${theme.colors.black};
     border-radius: 10px;
     box-shadow: 4px 4px rgba(37, 58, 143, 0.25);
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 6px 6px rgba(37, 58, 143, 0.25);
+    }
 `;
 
 interface TextBoxProps {

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { MeetTheFoundersData } from "./data";
 import MeetTheFoundersBox from "../../../containers/MeetTheFoundersBox/MeetTheFoundersBox";
 import { Container, Heading, Spacer } from "../../../components";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
+import { MeetTheFoundersData } from "../../../content";
 
 const MeetTheFoundersContainer = styled.div`
 	margin: 20px 0;
@@ -50,6 +50,7 @@ const MeetTheFounders: React.FC = () => (
 						title={card.company}
 						paragraph={card.discription}
 						founders={card.founders}
+						link={card.link}
 					/>)
 			}
 		</MeetTheFoundersContainer>
