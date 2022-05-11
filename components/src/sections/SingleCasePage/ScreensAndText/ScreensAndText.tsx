@@ -4,6 +4,7 @@ import { Heading, Paragraph, PhoneScreen } from "../../../components";
 import { breakpointNameToPx, responsiveValuesCSS, useWindowSize } from "../../../helpers";
 import { theme } from "../../../theme";
 import { WithStyle } from "../../../types/utils";
+import { ScreensAndTextProps } from "../SingleCasePage.types";
 
 const GridContainer = styled.div`
   	display: grid;
@@ -36,12 +37,6 @@ const StyledHeading = styled(Heading)`
 	margin-right: 30px
 `;
 
-type ScreensAndTextProps = {
-    title: string;
-    text: string;
-    screenOne: string;
-    screenTwo: string;
-}
 const ScreensAndText = ({ title, text, screenOne, screenTwo, className }: WithStyle<ScreensAndTextProps>) => {
 	const device = useWindowSize();
 	const ScreenImages = () => {

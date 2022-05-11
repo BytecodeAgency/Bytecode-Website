@@ -9,3 +9,6 @@ export * from "./CaseQuote";
 
 export { default as ScreensAndText } from "./ScreensAndText";
 export * from "./ScreensAndText";
+
+export * from "./SingleCasePage.types";
+export { default as SingleCasePage } from "./SingleCasePage";
