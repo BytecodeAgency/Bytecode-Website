@@ -55,8 +55,7 @@ const Intro = () => (
 		<PageIntro
 			subtitle="Contact us"
 			title="There you are! Let's chat."
-			paragraph="Interested in hiring us? Want to join the team?
-						Have a chat? Get in touch."
+			paragraph="Interested in working together? So are we! Tell us about your startup idea now."
 			image={
 				(
 					<IntroImageContainer>
@@ -152,10 +151,10 @@ const Appointment = () => {
 		<StyledAppointmentFullWidthContainer>
 			<AppointmentContainer>
 				<MeetingContainer>
-					<Heading type="h1" text="Book an appointment" color="white"/>
+					<Heading type="h1" text="Make an appointment now" color="white"/>
 					<Paragraph
-						text="Do you have an idea you want to tell us about or discuss?
-						Please don’t hesitate to book a meeting with as and see what we can do for you or together!"
+						text="Make an appointment for a free (online) consult with Nick or come to our office at The Hague Tech.
+							Let’s find out what we can accomplish together!"
 						color="white"
 					/>
 				</MeetingContainer>
@@ -245,7 +244,7 @@ const AddressAndRoute = () => {
 				</AddressBlockContainer>
 				<RouteContainer>
 					<Heading type="h3" text="Route"/>
-					<Paragraph text="Are you planning to drop by? Let us know and plan here your route!"/>
+					<Paragraph text="Are you planning to drop by? Let us know and plan your route!"/>
 					<RouteButtonContainer>
 						<StyledRouteButton type="secondary" text="Public transport" icon={Train} onClick={goToPublicTransportRoute}/>
 						<StyledRouteButton type="secondary" text="Plan route" icon={Cars} onClick={goToMapsRoute}/>

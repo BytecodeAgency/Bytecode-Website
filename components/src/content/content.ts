@@ -126,7 +126,7 @@ export const cases: Case[] = [
 	},
 	{
 		name: "treats",
-		subtitle: "Discover tasty, healthy and ethical restaurants matching your food preferences and principles!"
+		subtitle: "Discover tasty, healthy and ethical restaurants!"
 	},
 	{
 		name: "dawny",
@@ -138,7 +138,7 @@ export const cases: Case[] = [
 	},
 	{
 		name: "stamps",
-		subtitle: "..."
+		subtitle: "Enabling people to share their medical or health journey"
 	}
 ];
 
