@@ -2,13 +2,6 @@ import React from "react";
 import { NextPage } from "next";
 import MainLayout from "../../layout/MainLayout";
 import {
-	CaseIntro,
-	CaseAbout,
-	CaseQuote,
-	SummationBlock,
-	SummationText,
-	ScreensAndText,
-	TeamMembers,
 	CaseQuoteProps,
 	CaseIntroProps,
 	AboutProps,
@@ -16,10 +9,6 @@ import {
 	ScreensAndTextProps,
 	SingleCasePage,
 } from "@bytecode/ui-library/sections";
-import { Heading, Paragraph, Container } from "@bytecode/ui-library/components";
-import styled from "styled-components";
-import { breakpointNameToPx,  responsiveValuesCSS, theme } from "@bytecode/ui-library/utils";
-import { layout, getEmployees } from "@bytecode/ui-library/utils";
 
 const content = {
 	title: "Youngpwr | Case",
