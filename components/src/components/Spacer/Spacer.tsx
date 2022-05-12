@@ -26,7 +26,7 @@ interface SpacerProps {
     reverse?: boolean
 }
 
-const Spacer = ({ color, className, bold, reverse }: WithStyle<SpacerProps>) => {
+const Spacer = ({ color = "black", className, bold, reverse }: WithStyle<SpacerProps>) => {
 	return <SpacerStyling className={className} color={color} bold={bold} reverse={reverse} />;
 };
 

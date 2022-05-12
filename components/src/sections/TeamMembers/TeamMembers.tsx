@@ -100,7 +100,7 @@ type TeamMembersProps = {
 
 const TeamMembers = ({ members }: TeamMembersProps) => (
 	<Container>
-		<TeamMembersSpacer color="black" reverse/>
+		<TeamMembersSpacer reverse/>
 		<TeamMembersContainer>
 			<TeamMembersLeftColumn>
 				<Sticky>

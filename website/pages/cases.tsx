@@ -69,7 +69,7 @@ const Intro = () => (
 			)}
 		/>
 		<SpacerContainer>
-			<StyledSpacer color="black"/>
+			<StyledSpacer />
 		</SpacerContainer>
 	</InitialContainer>
 );

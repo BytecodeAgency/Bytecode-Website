@@ -15,7 +15,9 @@
     "./components": "./dist/components/index.js",
     "./containers": "./dist/containers/index.js",
     "./sections": "./dist/sections/index.js",
+    "./home-page": "./dist/sections/HomePage/index.js",
     "./icons": "./dist/icons/index.js"
+
   },
   "typesVersions": {
     "*": {
@@ -30,6 +32,9 @@
       ],
       "sections": [
         "./dist/sections/index.d.ts"
+      ],
+      "home-page": [
+        "./dist/sections/HomePage/index.d.ts"
       ],
       "icons": [
         "./dist/icons/index.d.ts"
