@@ -22,6 +22,7 @@ const FoundersPictures = styled.div<{ countFounders: number; }>`
 	display: grid;
 	grid-template-columns: repeat(${props => props.countFounders}, auto);
 	grid-gap: 8px;
+	align-items: center;
 `;
 
 const Footer = styled.div`
