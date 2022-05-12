@@ -5,22 +5,23 @@ import Hamburger from "hamburger-react";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../../helpers/responsiveCss";
 import Logo from "../../../../components/Branding";
 import { isWindowDesktop } from "../../../../helpers/device";
+import Link from "next/link";
 
 type PopupHeaderProps = {
-    closePopup: () => void;
+	closePopup: () => void;
 }
 
 const DesktopPopupMenu = styled.div`
 	height: 48px;
 	padding-top: 25px;
-	z-index: 9999;
+	z-index: 9998;
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 	grid-area: menu;
 	background-color: ${theme.colors.white};
 `;
-const DesktopPopupHeader = ({ closePopup }:PopupHeaderProps) => (
+const DesktopPopupHeader = ({ closePopup }: PopupHeaderProps) => (
 	<DesktopPopupMenu>
 		<Hamburger toggled={true} onToggle={closePopup} />
 	</DesktopPopupMenu>
@@ -28,7 +29,7 @@ const DesktopPopupHeader = ({ closePopup }:PopupHeaderProps) => (
 
 const MobilePopupMenu = styled.div`
 	position: fixed;
-	z-index: 9999;
+	z-index: 9998;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -53,17 +54,19 @@ const LogoContainer = styled.div`
 `;
 const MobilePopupHeader = ({ closePopup }: PopupHeaderProps) => (
 	<MobilePopupMenu >
-		<LogoContainer>
-			<Logo color="black" />
-		</LogoContainer>
-		<Hamburger toggled={true} onToggle={closePopup}/>
+		<Link href="/">
+			<LogoContainer>
+				<Logo color="black" />
+			</LogoContainer>
+		</Link>
+		<Hamburger toggled={true} onToggle={closePopup} />
 	</MobilePopupMenu>
 );
 
 
 const PopupHeader = ({ closePopup }: PopupHeaderProps) => isWindowDesktop()
-	? <DesktopPopupHeader closePopup={closePopup}/>
+	? <DesktopPopupHeader closePopup={closePopup} />
 	: <MobilePopupHeader closePopup={closePopup} />
-;
+	;
 
 export default PopupHeader;

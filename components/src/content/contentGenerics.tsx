@@ -7,7 +7,8 @@ export const Employees = [
 	"nick",
 	"chris",
 	"tiko",
-	"suzanne"
+	"suzanne",
+	"nietzsche"
 ];
 
 export type EmployeeName = typeof Employees[number];

@@ -14,7 +14,7 @@ const DesktopMenuContainer = styled(MenuContainer)`
     width: 90% !important;
 `;
 
-const NavLinksContainer = styled.div`
+const NavLinksContainer = styled.ul`
     display: flex;
     gap: ${theme.layout.gutter}px;
     justify-content: end;

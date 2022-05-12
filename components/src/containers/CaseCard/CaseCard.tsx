@@ -19,6 +19,7 @@ const CaseCardContainer = styled.div`
 	justify-content: space-between;
 	&:hover {
 		cursor: pointer;
+		transform: scale(1.02);
 	}
 `;
 

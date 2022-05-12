@@ -107,6 +107,7 @@ const StyledCompentencesHeading = styled(Heading)`
 	${compentencesHeadingResponsiveCSS};
 	margin-top: 30px;
 	margin-bottom: 20px;
+	padding-left: 20px;
 `;
 
 const iconBlocksContainerResponsiveCSS = () => {
@@ -197,10 +198,7 @@ const summationText: SummationText[] = [
 const Values = () => (
 	<SummationBlock
 		title="Things we value the most."
-		titleText="Sometimes a narrow collaboration can be like a marriage.
-			Before you ‘sign the contract’, you want to know who the other person is
-			and what life together will look like. To give you a feeling and better understanding of
-			how we would work together during the project, we present to you our values."
+		titleText="Sometimes a narrow collaboration can be like a marriage. Before you ‘sign the contract’, you want to know who the other person is and what life together will look like. To give you a feeling and better understanding of how we would work together during the project, we present to you our values."
 		summationText={summationText}
 		backgroundColor={theme.colors.colorBrand3}
 		textColor="white"
