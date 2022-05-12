@@ -170,7 +170,7 @@ const Members = ({ members }: CaseTeamMembersProps) => members ? (
 		{
 			members.map(member=>
 				<UserPicture
-					key={person}
+					key={member.person}
 					size={member.size}
 					color={member.color}
 					shadowPosition={member.shadowPosition}
