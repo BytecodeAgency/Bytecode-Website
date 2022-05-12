@@ -9,7 +9,7 @@ import {
 	SummationText,
 	ScreensAndText,
 } from "@bytecode/ui-library/sections";
-import { Heading, Paragraph, Container, UserPicture, TextBalloon } from "@bytecode/ui-library/components";
+import { Heading, Paragraph, Container, UserPicture } from "@bytecode/ui-library/components";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS, theme } from "@bytecode/ui-library/utils";
 import { layout } from "@bytecode/ui-library/utils";

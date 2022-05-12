@@ -21,7 +21,7 @@ const SpacerStyling = styled.div<{ color: SpacerColor, bold?: boolean, reverse?:
 
 type SpacerColor = "black" | "white";
 interface SpacerProps {
-    color: SpacerColor;
+    color?: SpacerColor;
     bold?: boolean;
     reverse?: boolean
 }
