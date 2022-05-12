@@ -126,21 +126,21 @@ export const cases: Case[] = [
 		subtitle: "Support for the loss of your loved one(s)"
 	},
 	{
-		name: "treats",
-		subtitle: "Discover tasty, healthy and ethical restaurants!"
-	},
-	{
-		name: "dawny",
-		subtitle: "Sleeptracking for healthy aging"
-	},
-	{
 		name: "styr",
 		subtitle: "Clear organisations and fair rewards"
 	},
 	{
 		name: "stamps",
 		subtitle: "Enabling people to share their medical or health journey"
-	}
+	},
+	{
+		name: "dawny",
+		subtitle: "Sleeptracking for healthy aging"
+	},
+	{
+		name: "youngpwr",
+		subtitle: "Work(s) for your future"
+	},
 ];
 
 
@@ -149,7 +149,7 @@ export const MeetTheFoundersData: MeetTheFoundersProps[] = [
 		company: "YoungPWR",
 		discription: "The platform for all young people from high school to university education. YoungPWR helps young adults to find paid learning projects (clients), a side job, or an internship.",
 		founders: [{
-			name: "suzan",
+			name: "suzanschouten",
 			color: "purple",
 			shadowPosition: "top",
 		}],
@@ -159,12 +159,12 @@ export const MeetTheFoundersData: MeetTheFoundersProps[] = [
 		company: "Stamps",
 		discription: "Facilitates people on their medical or health journey to share their stories with friends, family, and acquaintances. In this way, they can better experience the connecting power of openness and support.",
 		founders: [{
-			name: "tess",
+			name: "tessvanlogtestijn",
 			color: "lightGreen",
 			shadowPosition: "bottom",
 		},
 		{
-			name: "pien",
+			name: "pienvanlogtestijn",
 			color: "purple",
 			shadowPosition: "top",
 		}],
@@ -174,12 +174,12 @@ export const MeetTheFoundersData: MeetTheFoundersProps[] = [
 		company: "Dearly",
 		discription: "A social enterprise that strives to normalize loss and grief and create more social awareness in order to make the transition as a society to a caring community.",
 		founders: [{
-			name: "pieter",
+			name: "pietervanderoest",
 			color: "darkGreen",
 			shadowPosition: "top",
 		},
 		{
-			name: "quirine",
+			name: "quirinewissink",
 			color: "purple",
 			shadowPosition: "bottom",
 		}],
@@ -189,17 +189,17 @@ export const MeetTheFoundersData: MeetTheFoundersProps[] = [
 		company: "STYR",
 		discription: "Is an organizational consulting firm specialized in organizational design, job evaluation, and rewards.",
 		founders: [{
-			name: "jankees",
+			name: "jankeesvanhasselt",
 			color: "darkGreen",
 			shadowPosition: "top",
 		},
 		{
-			name: "elke",
+			name: "elkeschulting",
 			color: "lightGreen",
 			shadowPosition: "bottom",
 		},
 		{
-			name: "annemarie",
+			name: "annemariegeysen",
 			color: "purple",
 			shadowPosition: "top",
 		}],
@@ -209,12 +209,12 @@ export const MeetTheFoundersData: MeetTheFoundersProps[] = [
 		company: "Dawny",
 		discription: "A platform specifically made to integrate the input of different wearables. Dawny is designed to make the sleep of the very elderly visible through patterns. These patterns can predict the likelihood of (night) falls.",
 		founders: [{
-			name: "dave",
+			name: "daveschweitzer",
 			color: "darkGreen",
 			shadowPosition: "top",
 		},
 		{
-			name: "willy",
+			name: "willysiegel",
 			color: "lightGreen",
 			shadowPosition: "bottom",
 		}],
@@ -224,12 +224,12 @@ export const MeetTheFoundersData: MeetTheFoundersProps[] = [
 		company: "AirChip",
 		discription: "An app for ordering drinks and snacks via a mobile app at any event or festival. When an order is ready for pickup, users receive a notification.",
 		founders: [{
-			name: "jan",
+			name: "jantenkate",
 			color: "darkGreen",
 			shadowPosition: "top",
 		},
 		{
-			name: "daniel",
+			name: "danielvandrunen",
 			color: "purple",
 			shadowPosition: "bottom",
 		}],

@@ -132,18 +132,11 @@ const features: ScreensAndTextProps[] = [
 
 const members: CaseTeamMembersProps = [
 	{
-		person: "annemariegeysen",
+		person: "suzanschouten",
 		size: 120,
 		color: "purple",
 		shadowPosition: "top",
-		balloonText: "My name is Annemarie Geysen and CONTENT HERE"
-	},
-	{
-		person: "jankeesvanhasselt",
-		size: 120,
-		color: "lightGreen",
-		shadowPosition: "bottom",
-		balloonText: "Hello I'm Jan-Kees van Hasselt. and CONTENT HERE"
+		balloonText: "My name is Suzan Schouten  and CONTENT HERE"
 	},
 ];
 

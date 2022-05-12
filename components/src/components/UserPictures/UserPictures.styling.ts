@@ -46,12 +46,11 @@ export const Image = styled.img`
 `;
 
 export const Photo = styled.div<UserPictureStylingProps>`
-  margin-right: 20px;
   width: ${props => props.size}px;
   height: ${props => props.size}px;
   position: relative;
 `;
 
 export const Balloon = styled.div`
-
+  margin-left: 20px;
 `;

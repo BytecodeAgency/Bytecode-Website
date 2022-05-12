@@ -11,16 +11,12 @@ const navLinksHref = [
 		href: "/"
 	},
 	{
-		name: "Service",
-		href: "/"
-	},
-	{
-		name: "Team",
+		name: "Who we are",
 		href: "/who-we-are"
 	},
 	{
 		name: "Our cases",
-		href: "/cases"
+		href: "/our-cases"
 	},
 	{
 		name: "Contact",
