@@ -9,6 +9,7 @@ import {
 	ScreensAndTextProps,
 	SingleCasePage,
 } from "@bytecode/ui-library/sections";
+import { CaseTeamMembersProps } from "@bytecode/ui-library/dist/sections";
 
 const content = {
 	title: "Stamps | Case",
@@ -125,6 +126,30 @@ const features: ScreensAndTextProps[] = [
 	},
 ];
 
+const members: CaseTeamMembersProps = [
+	{
+		person: "annemariegeysen",
+		size: 120,
+		color: "purple",
+		shadowPosition: "top",
+		balloonText: "My name is Annemarie Geysen and CONTENT HERE"
+	},
+	{
+		person: "jankeesvanhasselt",
+		size: 120,
+		color: "lightGreen",
+		shadowPosition: "bottom",
+		balloonText: "Hello I'm Jan-Kees van Hasselt. and CONTENT HERE"
+	},
+	{
+		person: "elkeschulting",
+		size: 120,
+		color: "darkGreen",
+		shadowPosition: "top",
+		balloonText: "Hello I'm Elke Schulting. more content here"
+	}
+];
+
 const StampsBody= () => (
 	<SingleCasePage
 		intro={intro}
@@ -132,6 +157,7 @@ const StampsBody= () => (
 		quote={quote}
 		challenges={challenges}
 		features={features}
+		members={members}
 	/>
 );
 

@@ -66,13 +66,13 @@ const CaseTeamMembersContainer = styled(Container)`
 `;
 
 const MembersContainer = styled(Container) <{ countItems: number }>`
-    ${(props) => membersContainerResponsiveCSS(props.countItems)};
+	${(props) => membersContainerResponsiveCSS(props.countItems)};
 	margin: 0 auto;
 
-    display: grid;
-    gap: 2em;
+	display: grid;
+	gap: 2em;
 	justify-items: center;
-    align-items: end;
+	align-items: end;
 	background-origin: border-box;
 
 	text-align: center;
