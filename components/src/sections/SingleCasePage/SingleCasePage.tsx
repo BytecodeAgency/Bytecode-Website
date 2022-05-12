@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading, Paragraph, Container } from "../../components";
+import { Heading, Paragraph, Container, UserPicture } from "../../components";
 import {
 	CaseAbout,
 	CaseIntro,
@@ -8,9 +8,10 @@ import {
 	ScreensAndText,
 	TeamMembers,
 	SummationBlock,
-	SingleCasePageContent, AboutTextProps, ScreensAndTextProps
+	SingleCasePageContent, AboutTextProps, ScreensAndTextProps, CaseTeamMembersProps
 } from "../index";
 import { breakpointNameToPx, getEmployees, layout, responsiveValuesCSS, theme } from "../../index";
+import { CaseTeamMembers } from "../../containers";
 
 const screensAndTextOneContainerResponsiveCSS = () => {
 	const paddingTopAndBottom = breakpointNameToPx({
@@ -164,7 +165,23 @@ const AboutText = ({ introduction, clientNeeds }:AboutTextProps) => (
 	</AboutTextContainer>
 );
 
-const SingleCasePage = ({ intro, about, quote, challenges, features }: SingleCasePageContent) => (
+const Members = ({ members }: CaseTeamMembersProps) => members ? (
+	<CaseTeamMembers>
+		{
+			members.map(member=>
+				<UserPicture
+					size={member.size}
+					color={member.color}
+					shadowPosition={member.shadowPosition}
+					person={member.person}
+					balloonText={member.balloonText}
+				/>
+			)
+		}
+	</CaseTeamMembers>
+) : null;
+
+const SingleCasePage = ({ intro, about, quote, challenges, features, members }: SingleCasePageContent) => (
 	<div>
 		<CaseIntro
 			title={intro.title}
@@ -197,7 +214,7 @@ const SingleCasePage = ({ intro, about, quote, challenges, features }: SingleCas
 				}
 			})
 		}
-		<TeamMembers members={getEmployees(["jeroen", "nick"])} />
+		<Members members={members} />
 	</div>
 );
 

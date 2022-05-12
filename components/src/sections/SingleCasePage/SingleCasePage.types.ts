@@ -1,5 +1,6 @@
 import { ThemeColors } from "../../theme";
 import { ReactNode } from "react";
+import { UserPictureProps } from "../../components/UserPictures/UserPicture.types";
 
 export type CaseIntroProps = {
     title: string;
@@ -48,10 +49,15 @@ export type ScreensAndTextProps = {
     screenTwo: string;
 }
 
+export type CaseTeamMembersProps = {
+    members?: UserPictureProps[];
+}
+
 export type SingleCasePageContent = {
     intro: CaseIntroProps;
     about: AboutProps;
     quote: CaseQuoteProps;
     challenges: SummationBlockProps;
     features: ScreensAndTextProps[];
+    members?: CaseTeamMembersProps;
 }
