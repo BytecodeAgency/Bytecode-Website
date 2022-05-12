@@ -106,6 +106,7 @@ const StyledCompentencesHeading = styled(Heading)`
 	${compentencesHeadingResponsiveCSS};
 	margin-top: 30px;
 	margin-bottom: 20px;
+	padding-left: 20px;
 `;
 
 const iconBlocksContainerResponsiveCSS = () => {

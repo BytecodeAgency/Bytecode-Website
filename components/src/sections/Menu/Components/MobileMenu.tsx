@@ -26,7 +26,7 @@ const MobileMenuContainer = styled.div`
 	top: 75px;
 	left: 0;
 	background: white;
-	z-index: 9999;
+	z-index: 9998;
 `;
 
 const MenuList = styled.ul`

@@ -21,7 +21,7 @@ export const MenuContainer = styled(FullWidthContainer)`
     position: fixed;
     top: 0;
     width: 95%;
-    z-index: 9999;
+    z-index: 9998;
     backdrop-filter: blur(5px);
 `;
 

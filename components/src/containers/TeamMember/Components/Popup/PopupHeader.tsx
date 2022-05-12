@@ -14,7 +14,7 @@ type PopupHeaderProps = {
 const DesktopPopupMenu = styled.div`
 	height: 48px;
 	padding-top: 25px;
-	z-index: 9999;
+	z-index: 9998;
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
@@ -29,7 +29,7 @@ const DesktopPopupHeader = ({ closePopup }: PopupHeaderProps) => (
 
 const MobilePopupMenu = styled.div`
 	position: fixed;
-	z-index: 9999;
+	z-index: 9998;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;

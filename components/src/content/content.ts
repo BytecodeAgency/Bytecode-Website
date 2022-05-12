@@ -29,7 +29,7 @@ export const employees: Member[] = [
 		jobTitle: "Developer & UX",
 		id: "chris",
 		about: "Hi, I am Chris. I am a front-end developer and User Experience designer. My colleagues describe me as a go-getter with a big heart. My interest lies in finding good wines and philosophy. During my days off, I love to play with my cat Nietzsche and go to techno parties.",
-		focus: ["Development", "User Experience Design", "Bussiness Strategy"],
+		focus: ["Development", "UX Design", "Bussiness Strategy"],
 		github: "https://bytecode.com",
 		email: "https://bytecode.com",
 		linkedIn: "https://bytecode.com",
