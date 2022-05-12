@@ -41,3 +41,6 @@ export * from "./UserPictures";
 
 export { default as TextBox } from "./TextBox";
 export * from "./TextBox";
+
+export { default as TextBalloon } from "./TextBalloon";
+export * from "./TextBalloon";

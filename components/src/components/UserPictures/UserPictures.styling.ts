@@ -2,11 +2,11 @@ import { theme } from "../../theme";
 import styled from "styled-components";
 import { UserPictureStylingProps } from "./UserPicture.types";
 
-export const Container = styled.div<UserPictureStylingProps>`
+export const Container = styled.div`
   margin: 7px; 
-  width: ${props => props.size}px;
-  height: ${props => props.size}px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const UserPictureContainer = styled.figure<UserPictureStylingProps>`
@@ -43,4 +43,15 @@ export const ShadowContainer = styled.div<UserPictureStylingProps>`
 export const Image = styled.img`
   height: 100%;
   object-fit: contain;
+`;
+
+export const Photo = styled.div<UserPictureStylingProps>`
+  margin-right: 20px;
+  width: ${props => props.size}px;
+  height: ${props => props.size}px;
+  position: relative;
+`;
+
+export const Balloon = styled.div`
+
 `;

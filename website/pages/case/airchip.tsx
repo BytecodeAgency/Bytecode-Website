@@ -8,12 +8,12 @@ import {
 	SummationBlock,
 	SummationText,
 	ScreensAndText,
-	TeamMembers
 } from "@bytecode/ui-library/sections";
-import { Heading, Paragraph, Container } from "@bytecode/ui-library/components";
+import { Heading, Paragraph, Container, UserPicture, TextBalloon } from "@bytecode/ui-library/components";
 import styled from "styled-components";
-import { breakpointNameToPx,  responsiveValuesCSS, theme } from "@bytecode/ui-library/utils";
-import { layout, getEmployees } from "@bytecode/ui-library/utils";
+import { breakpointNameToPx, responsiveValuesCSS, theme } from "@bytecode/ui-library/utils";
+import { layout } from "@bytecode/ui-library/utils";
+import { CaseTeamMembers } from "@bytecode/ui-library/containers";
 
 const content = {
 	title: "Airchip | Case",
@@ -35,47 +35,14 @@ const AboutTextContainer = styled.div`
 const AboutText = () => (
 	<AboutTextContainer>
 		<Heading type="h2" text="How did it start?" />
-		<Paragraph text="What do you wanna be when you grow up? ‘a fireman’, ‘a policemen’, ‘a pilot’, ‘a doctor’.
-			It is difficult to make choices when you are young, especially ones who have a big influence on the
-			rest of your life. How can you find out where your passion lies as a high school or college student?"
-		/>
-		<Paragraph text="Suzan Schouten, who is the sole founder of Youngpwr,
-			has worked for a lot of publishers where children were the target group.
-			Many young adults and students are unemployed and do not know where their passion lies.
-			That is why Suzan wanted to create a platform where she could educate them to start their own business.
-			Besides that, she wanted to connect them to projects or companies to gain experience.
-			By doing so, they can explore where their interests and passions lie."
+		<Paragraph text="Daniel loves festivals. That is why he founded a full-service event agency. Ten years of experience in this sector now led to the creation of a new and exciting product: Airchip. Daniel aims to prevent queues at events by improving and changing the drink order process."
 		/>
 		<Heading type="h4" text="Client needs" />
-		<Paragraph text="Suzan was already working on Youngpwr for over a year before we got in contact with her.
-			She had already run a pilot in Noordwijk with some high school students.
-			This showed some potential for Youngpwr and established traction."
+		<Paragraph text="Before approaching us, Airchip already built and tested their MVP. Results were promising, and some revenue was created. However, the user experience was still lacking, and the backend needed major improvements to be able to scale up."
 		/>
-		<Paragraph text="Suzan her skills were especially focused on PR & communication,
-			and she knew the target group like the back of her hand.
-			But building a digital platform was something entirely new for her.
-			That is why Suzan needed not only a team that could develop the platform,
-			but also someone willing to be a strategic partner.
-			Of course, we wanted to help Suzan to realize her vision.
-			But the first strategic choice to make was a difficult one. We were wondering what to build first.
-			Should we focus on creating articles focused on becoming a freelancer?
-			Or should we focus on making matches between students and companies with relevant projects?"
+		<Paragraph text="Luciano, a co-founder of Bytecode, was put to the challenging task of creating a stable backend. Many people had worked on this backend, which resulted in an unstable codebase with many pivots still visible. During the following months, Luciano worked closely together with Airchip - as their interim CTO - and created a scalable and stable product. Unfortunately, unforeseen challenges meant the effects of the improvements could not be experienced yet (see below)."
 		/>
-		<Paragraph text="We decided to first focus on creating articles that would give insights
-			about how to start up your own business. When that was up and running,
-			we would focus on making a better matching ‘algorithm’."
-		/>
-		<Paragraph text="Luciano (co-founder Bytecode) focused on creating a solid back-end,
-			which would enable us to add more features in the future.
-			While doing so, Christiaan (front-end developer & UIX designer)
-			worked together with Suzan and a couple of designers from Youngpwr on the design.
-			While Jeroen (co-founder Bytecode) helped Luciano & Chris,
-			Suzan was mostly occupied with the overall marketing plan."
-		/>
-		<Paragraph text="When the platform came live, a lot of registrations occur,
-			but the real breakthrough didn’t happen. While some students have been helped to
-			explore their passion, and several projects have been performed by them,
-			Youngpwr is still searching for the right product-market fit."
+		<Paragraph text="Apart from Luciano’s work on the backend, our UIX guru Christiaan was busy working on the overall user experience. He made several UI and UX improvements to make Airchip more sensible and easy to use."
 		/>
 	</AboutTextContainer>
 );
@@ -83,27 +50,16 @@ const AboutText = () => (
 const summationText: SummationText[] = [
 	{
 		title: "COVID-19",
-		text: "To summarise this challenge: the timing was just not right. " +
-			"Airchip had a lot of potential. The right team. A great product. " +
-			"And they had acquired some funding. But just when they were ready to launch at big events… Covid came. " +
-			"This made it impossible for Airchip to make revenue and improve their product."
+		text: "Airchip was doing well and had much potential: the right team, a great product, some funding... but bad timing got in their way. Just when they were ready to launch at big events, COVID-19 hit. This made it impossible to make money and improve the product."
 	},
 	{
 		title: "Finding the right tech team",
-		text: "Airchip has had its portion of difficulty finding the right people to build " +
-			"and improve their technically challenging product. The tech co-founder left Airchip, " +
-			"partly due to the financial challenge of Covid. Although their initial team had a lot of software experience, " +
-			"developing for a start-up was new to them, which created a lot of technical debt, " +
-			"making it hard to scale up. After the co-founder left, Airchip tried several persons to fulfill " +
-			"the role of a tech founder, " +
-			"but a great working match was never found… until Bytecode of course."
+		text: "Until they found Bytecode, Airchip had its portion of difficulty finding the right people to build and improve their technically challenging product. Although their initial team had a lot of software experience, a lack of knowledge about startup development led to technical debt and difficulties scaling up. After their technical co-founder left, the search continued until we eventually got involved."
 	},
 	{
 		title: "User experience",
 		text: "Airchip has a lot of payment transactions. " +
-			"This made it crucial to have a solid and tested user flow. " +
-			"Despite the importance, not enough attention and detail had gone into this element. " +
-			"That is why some users experienced difficulty when trying to purchase something."
+			"Airchip users go through many payment transactions in the app. Therefore, it is crucial to have a solid and tested user flow. Based on feedback on the MVP, we started the project by optimizing the overall user experience. In hindsight, more attention should have gone to the UX before going live with the MVP."
 	}
 ];
 
@@ -156,11 +112,8 @@ const ScreensAndTextOneContainer = styled.div`
 const ScreensAndTextOne = () => (
 	<ScreensAndTextOneContainer>
 		<ScreensAndText
-			title="Shortest line and waiting time"
-			text="The main feature of Airchip is to order drinks and snacks from
-				your phone while dancing or partying. When your order is ready to pick up,
-				you get a notification to collect your order. To make sure the waiting time is as low as possible,
-				you can select from which location you want to order."
+			title="Short queues and short waiting times"
+			text="The main feature of Airchip is ordering drinks and snacks via a mobile app at any event or festival. When an order is ready for pickup, users receive a notification. To make sure the waiting time is as low as possible, users can select their pick-up location."
 			screenOne="/images/iphone2.svg"
 			screenTwo="/images/iphone2.svg"
 		/>
@@ -236,14 +189,8 @@ const ScreensAndTextTwo = () => (
 	<ScreensAndTextTwoBackground>
 		<ScreensAndTextTwoContainer>
 			<ScreensAndText
-				title="Always ‘online’ And ready to order"
-				text="Festivals and events are amazing.
-				But sometimes a basic necessity of ours fails,
-				as the internet connection is often poor or not available.
-				To make sure you can always stay hydrated and energized, we used Bluetooth connections.
-				This enabled us to stay ‘online’ so that consumers could still purchase
-				and retailers would receive the orders.
-				That meant we were not dependent on networks."
+				title="Always ‘online’ and ready to order"
+				text="What if the internet connection is poor or unavailable? Airchip uses Bluetooth connections to stay ‘online’, so that users can still purchase their drinks and snacks, and retailers still receive the orders."
 				screenOne="/images/iphone2.svg"
 				screenTwo="/images/iphone2.svg"
 			/>
@@ -257,7 +204,8 @@ const AirchipBody = () => (
 		<CaseIntro
 			title="Barman in your pants"
 			subtitle="Airchip"
-			text="No more queuing at a festival or event: order and pay via the Airchip app. Known from Dragons Den!"
+			text={"An app for ordering drinks and snacks via a mobile app at any event or festival." +
+				"When an order is ready for pickup, users receive a notification."}
 			image="airchip-header.png"
 			logo="airchip-logo.svg"
 		/>
@@ -272,17 +220,18 @@ const AirchipBody = () => (
 				"CMS"
 			]}
 		><AboutText /></CaseAbout>
-		<CaseQuote text="Een quote van ongeveer 3 regels maximaal zodat het visueel netjes blijft" />
+		<CaseQuote text="While working on Airchip we experienced firsthand how fragile a startup journey can be. Because of COVID-19, many events were canceled. This made it harder for Airchip to test and grow." />
 		<SummationBlock
 			title="The challenges"
-			titleText="Airchip was in the post-MVP phase and had already gained some investment.
-				This was a very important step, but they also experienced some difficult challenges.
-				Here are the three most crucial ones:"
+			titleText="Despite being in their post-MVP phase and gaining some investment, Airchip also experienced some difficult challenges. Three of the most crucial ones are listed here."
 			summationText={summationText}
 		/>
 		<ScreensAndTextOne />
 		<ScreensAndTextTwo />
-		<TeamMembers members={getEmployees(["jeroen", "nick"])} />
+		<CaseTeamMembers>
+			<UserPicture color="purple" person="jantenkate" size={120} shadowPosition={"top"} balloonText="My name is Daniel van Drunen and I'm an experienced event organizer"/>
+			<UserPicture color="lightGreen" person="danielvandrunen" size={120} shadowPosition={"bottom"} balloonText="Hello I'm Jan ten kate. Airchip's product owner with a background in industrial design engineering" /> 
+		</CaseTeamMembers>
 	</div>
 );
 
