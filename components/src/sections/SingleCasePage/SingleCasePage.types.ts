@@ -7,7 +7,13 @@ export type CaseIntroProps = {
     subtitle: string;
     text: string;
     image: string;
-    logo: string;
+    logo: Logoprops;
+}
+
+export type Logoprops = {
+    url: string;
+    width: number;
+    height: number;
 }
 
 export type CaseAboutProps = {

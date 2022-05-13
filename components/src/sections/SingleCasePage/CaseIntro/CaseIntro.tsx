@@ -54,11 +54,13 @@ const LogoContainer = styled.div`
 type ImageColumnProps = {
 	image: string;
 	logo: string;
+	height: number;
+	width: number;
 };
-const ImageColumn = ({ image, logo }: ImageColumnProps) => (
+const ImageColumn = ({ image, logo, height, width }: ImageColumnProps) => (
 	<ImageColumnContainer>
 		<LogoContainer>
-			<Image src={`/images/${logo}`} alt="logo" height={55} width={75}/>
+			<Image src={`/images/${logo}`} alt="logo" height={height} width={width} layout="intrinsic" />
 		</LogoContainer>
 		<Image src={`/images/${image}`} alt="image of application" width={492} height={744}/>
 	</ImageColumnContainer>
@@ -84,7 +86,7 @@ const CaseIntroContainer = styled.div`
 const CaseIntro = ({ title, subtitle, text, image, logo }: CaseIntroProps) => (
 	<CaseIntroContainer>
 		<TextColumn title={title} subtitle={subtitle} text={text} />
-		<ImageColumn image={image} logo={logo} />
+		<ImageColumn image={image} logo={logo.url} width={logo.width} height={logo.height} />
 	</CaseIntroContainer>
 );
 

@@ -28,8 +28,12 @@ const intro: CaseIntroProps = {
 	title: "Enabling people to share their medical or health journey",
 	subtitle: "Stamps",
 	text: "Write down how you are doing and keep everyone informed.",
-	image: "airchip-header.png",
-	logo: "airchip-logo.svg"
+	image: "stamps__landingpage.svg",
+	logo: {
+		url: "stamps__logo.svg",
+		width: 280,
+		height: 98,
+	}
 };
 const about: AboutProps = {
 	bullets: {
@@ -107,22 +111,22 @@ const features: ScreensAndTextProps[] = [
 		text: "People with a serious illness or difficult medical situation can create a journey to keep their network up-to-date. " +
 			"You can place updates (with photos) to show your followers how you are doing. " +
 			"This makes it much more convenient to communicate than having to reply through different channels. ",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/stamps__journey.svg",
+		screenTwo: "/images/stamps__writepost.svg"
 	},
 	{
 		title: "Follow a journey and interact",
 		text: "As a relative, friend, colleague, or neighbor you can follow the medical journey of the patient. " +
 			"You can reply to their post, react with an emoticon, and send gifts!",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/stamps__search.svg",
+		screenTwo: "/images/stamps__invite.svg"
 	},
 	{
 		title: "Send gifts",
 		text: "Through Stamps you can directly send a postcard or present. The gifts that are being bought via " +
 			"Stamps will make sure that you don’t forget to “send your love” and will help us to keep improving the app!",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/stamps__choosetypegift.svg",
+		screenTwo: "/images/stamps__choosegift.svg"
 	},
 ];
 
