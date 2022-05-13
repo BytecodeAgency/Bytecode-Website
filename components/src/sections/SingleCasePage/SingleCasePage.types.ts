@@ -7,6 +7,7 @@ export type CaseIntroProps = {
     subtitle: string;
     text: string;
     image: string;
+    color: string;
     logo: Logoprops;
 }
 

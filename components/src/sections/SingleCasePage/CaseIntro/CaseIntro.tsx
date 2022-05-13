@@ -19,34 +19,64 @@ const TextColumn = ({ title, subtitle, text }: TextColumnProps) => (
 	</InitialContainer>
 );
 
-const imageColumnContainerResponsiveCSS = responsiveValuesCSS(
-	"padding-top",
-	"px",
-	breakpointNameToPx({
-		xs: 70,
-		lg: 140,
-		xl: 210,
-	})
-);
+const imageColumnContainerResponsiveCSS = () => {
 
-const ImageColumnContainer = styled.div`
+	const paddingTop = responsiveValuesCSS(
+		"padding-top",
+		"px",
+		breakpointNameToPx({
+			xs: 70,
+			lg: 140,
+			xl: 210,
+		})
+	)
+
+	const paddingBottom = responsiveValuesCSS(
+		"padding-bottom",
+		"px",
+		breakpointNameToPx({
+			xs: 20,
+			lg: 40,
+			xl: 80,
+		})
+	)
+
+	return paddingTop + paddingBottom;
+};
+
+const ImageColumnContainer = styled.div<{bgColor: string}>`
 	${imageColumnContainerResponsiveCSS};
-	background: url(${"/images/case-header-line.svg"}) no-repeat right top , ${theme.colors.colorBrand2};
+	background: url(${"/images/case-header-line.svg"}) no-repeat right top , ${props => props.bgColor};
 	background-size: 80% auto;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
 `;
 
-const logoContainerResponsiveCSS = responsiveValuesCSS(
-	"margin",
+const logoContainerResponsiveCSS = () => {
+
+	const marginLeft = responsiveValuesCSS(
+	"margin-left",
 	"px",
 	breakpointNameToPx({
 		xs: 20,
 		lg: 40,
 		xxl: 60
 	})
-);
+	)
+
+	const marginRight = responsiveValuesCSS(
+		"margin-right",
+		"px",
+		breakpointNameToPx({
+			xs: 20,
+			lg: 40,
+			xxl: 60
+		})
+	)
+
+	return marginLeft + marginRight;
+}
 const LogoContainer = styled.div`
 	${logoContainerResponsiveCSS};
 `;
@@ -56,13 +86,14 @@ type ImageColumnProps = {
 	logo: string;
 	height: number;
 	width: number;
+	bgColor: string;
 };
-const ImageColumn = ({ image, logo, height, width }: ImageColumnProps) => (
-	<ImageColumnContainer>
+const ImageColumn = ({ image, logo, height, width, bgColor }: ImageColumnProps) => (
+	<ImageColumnContainer bgColor={bgColor}>
 		<LogoContainer>
 			<Image src={`/images/${logo}`} alt="logo" height={height} width={width} layout="intrinsic" />
 		</LogoContainer>
-		<Image src={`/images/${image}`} alt="image of application" width={492} height={744}/>
+		<Image src={`/images/${image}`} alt="image of application" width={246} height={372} />
 	</ImageColumnContainer>
 );
 
@@ -83,10 +114,10 @@ const CaseIntroContainer = styled.div`
 `;
 
 
-const CaseIntro = ({ title, subtitle, text, image, logo }: CaseIntroProps) => (
+const CaseIntro = ({ title, subtitle, text, image, logo, color }: CaseIntroProps) => (
 	<CaseIntroContainer>
 		<TextColumn title={title} subtitle={subtitle} text={text} />
-		<ImageColumn image={image} logo={logo.url} width={logo.width} height={logo.height} />
+		<ImageColumn image={image} logo={logo.url} width={logo.width} height={logo.height} bgColor={color} />
 	</CaseIntroContainer>
 );
 

@@ -29,10 +29,11 @@ const intro: CaseIntroProps = {
 	subtitle: "Airchip",
 	text: "A bartender in your pocket. Order and pay at your favourite festival!",
 	image: "airchip__chargeup.svg",
+	color: "#19084A",
 	logo: {
 		url: "airchip-logo.svg",
-		width: 80,
-		height: 80,
+		width: 50,
+		height: 50,
 	}
 };
 const about: AboutProps = {

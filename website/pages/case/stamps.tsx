@@ -29,6 +29,7 @@ const intro: CaseIntroProps = {
 	subtitle: "Stamps",
 	text: "Write down how you are doing and keep everyone informed.",
 	image: "stamps__landingpage.svg",
+	color: "#FF7D58",
 	logo: {
 		url: "stamps__logo.svg",
 		width: 280,
