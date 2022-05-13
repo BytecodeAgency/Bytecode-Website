@@ -9,8 +9,6 @@ import {
 	ScreensAndTextProps,
 	SingleCasePage,
 } from "@bytecode/ui-library/sections";
-import { UserPicture } from "@bytecode/ui-library/components";
-import { CaseTeamMembers } from "@bytecode/ui-library/containers";
 import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
 const content = {
@@ -25,15 +23,6 @@ const Airchip: NextPage = () => {
 		</MainLayout>
 	);
 };
-
-const TeamMembers = () => (
-	<div>
-		<CaseTeamMembers>
-			<UserPicture color="purple" person="jantenkate" size={120} shadowPosition={"top"} balloonText="My name is Daniel van Drunen and I'm an experienced event organizer" />
-			<UserPicture color="lightGreen" person="danielvandrunen" size={120} shadowPosition={"bottom"} balloonText="Hello I'm Jan ten kate. Airchip's product owner with a background in industrial design engineering" />
-		</CaseTeamMembers>
-	</div>
-);
 
 const intro: CaseIntroProps = {
 	title: "No more waiting in line for a drink!",
@@ -128,19 +117,19 @@ const features: ScreensAndTextProps[] = [
 
 const members: UserPictureProps[] = [
 	{
-			person: "jantenkate",
-			size: 120,
-			color: "purple",
-			shadowPosition: "top",
-			balloonText: "My name is Daniel van Drunen and I'm an experienced event organizer"
-		},
-		{
-			person: "danielvandrunen",
-			size: 120,
-			color: "lightGreen",
-			shadowPosition: "bottom",
-			balloonText: "Hello I'm Jan ten kate. Airchip's product owner with a background in industrial design engineering"
-		}
+		person: "jantenkate",
+		size: 120,
+		color: "purple",
+		shadowPosition: "top",
+		balloonText: "My name is Daniel van Drunen and I'm an experienced event organizer"
+	},
+	{
+		person: "danielvandrunen",
+		size: 120,
+		color: "lightGreen",
+		shadowPosition: "bottom",
+		balloonText: "Hello I'm Jan ten kate. Airchip's product owner with a background in industrial design engineering"
+	}
 ];
 
 const AirchipBody = () => (

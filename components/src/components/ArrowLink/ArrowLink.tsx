@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Paragraph } from "../Typography";
 import { DiagonalArrow } from "../../icons";
@@ -34,7 +34,7 @@ transform: rotate(${props => props.rotation ? 45 : 0}deg);
 const ArrowLink = ({ onClick, text, className, link }: WithStyle<ArrowLinkProps>) => {
 	const [isHover, setIsHover] = useState(false);
 
-	const Arrow = () => <ArrowContainer rotation={isHover}><DiagonalArrow color="black" size={24} /></ArrowContainer>
+	const Arrow = () => <ArrowContainer rotation={isHover}><DiagonalArrow color="black" size={24} /></ArrowContainer>;
 
 	return (
 		link ? (
@@ -54,7 +54,7 @@ const ArrowLink = ({ onClick, text, className, link }: WithStyle<ArrowLinkProps>
 				<Arrow />
 			</ArrowLinkContainer>
 		)
-	)
+	);
 };
 
 export default ArrowLink;

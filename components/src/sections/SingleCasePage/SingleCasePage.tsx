@@ -11,7 +11,6 @@ import {
 } from "../index";
 import { breakpointNameToPx, layout, responsiveValuesCSS, theme } from "../../index";
 import { CaseTeamMembers } from "../../containers";
-import { UserPictureProps } from "src/components/UserPictures/UserPicture.types";
 
 const screensAndTextOneContainerResponsiveCSS = () => {
 	const paddingTopAndBottom = breakpointNameToPx({

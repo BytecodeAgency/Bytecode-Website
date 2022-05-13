@@ -21,7 +21,7 @@ const PopupBackground = styled.div`
 	overscroll-behavior: none;
 `;
 const popupContentResponsiveCSS = () => {
-	const width = responsiveValuesCSS("width", "", breakpointNameToPx({ sm: '100%', md: '80%', lg: '700px'}))
+	const width = responsiveValuesCSS("width", "", breakpointNameToPx({ sm: "100%", md: "80%", lg: "700px" }));
 	const top = responsiveValuesCSS("top", "%", breakpointNameToPx({ xs: 0, xl: 5 }));
 	const right = responsiveValuesCSS("right", "%", breakpointNameToPx({ xs: 0, xl: 0 }));
 	return top + right + width;

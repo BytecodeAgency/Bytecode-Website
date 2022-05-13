@@ -70,7 +70,7 @@ export const MobileMenu: React.FC<MenuInterface> = ({ navLinks }) => {
 		<>
 			<MobileMenuBarTopContainer background={isOpen ? theme.colors.white : undefined}>
 				<div>
-						<Logo color="black" />
+					<Logo color="black" />
 				</div>
 				<Hamburger toggled={isOpen} toggle={setOpen} />
 			</MobileMenuBarTopContainer>

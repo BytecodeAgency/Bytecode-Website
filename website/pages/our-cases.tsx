@@ -132,11 +132,6 @@ const DesktopArrowLink = styled(ArrowLink)`
 	margin-bottom: 60px;
 `;
 
-const MobileArrowLink = styled(ArrowLink)`
-	margin-bottom: 60px;
-	align-self: flex-end;
-`;
-
 const CasesOverviewRightColumn = styled.div`
 	display: flex;
 	flex-direction: row;
