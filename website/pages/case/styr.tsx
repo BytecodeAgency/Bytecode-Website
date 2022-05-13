@@ -38,9 +38,10 @@ const about: AboutProps = {
 			"Development"
 		],
 		deliverables: [
-			"iOS application",
-			"Android application",
-			"CMS"
+			"MVP",
+			"Strategic advice",
+			"Product scope",
+			"UIX design"
 		]
 	},
 	text: {

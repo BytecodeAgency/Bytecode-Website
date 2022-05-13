@@ -35,12 +35,13 @@ const about: AboutProps = {
 	bullets: {
 		expertises: [
 			"CTO",
+			"UIX",
 			"Development"
 		],
 		deliverables: [
-			"iOS application",
-			"Android application",
-			"CMS"
+			"Improved user experience",
+			"Stable back-end",
+			"Scalability"
 		]
 	},
 	text: {
