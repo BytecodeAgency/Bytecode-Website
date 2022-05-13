@@ -59,5 +59,5 @@ export type SingleCasePageContent = {
     quote: CaseQuoteProps;
     challenges: SummationBlockProps;
     features: ScreensAndTextProps[];
-    members?: CaseTeamMembersProps;
+    members?: UserPictureProps[];
 }

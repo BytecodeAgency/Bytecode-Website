@@ -6,11 +6,10 @@ import {
 	CaseIntro,
 	CaseQuote,
 	ScreensAndText,
-	TeamMembers,
 	SummationBlock,
 	SingleCasePageContent, AboutTextProps, ScreensAndTextProps, CaseTeamMembersProps
 } from "../index";
-import { breakpointNameToPx, getEmployees, layout, responsiveValuesCSS, theme } from "../../index";
+import { breakpointNameToPx, layout, responsiveValuesCSS, theme } from "../../index";
 import { CaseTeamMembers } from "../../containers";
 
 const screensAndTextOneContainerResponsiveCSS = () => {

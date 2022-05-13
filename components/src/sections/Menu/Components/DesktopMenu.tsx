@@ -22,9 +22,9 @@ const NavLinksContainer = styled.ul`
 
 export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks }) => (
 	<DesktopMenuContainer>
-			<div>
-				<Logo color="black" />
-			</div>
+		<div>
+			<Logo color="black" />
+		</div>
 		<NavLinksContainer>
 			{navLinks.map((item) => (
 				<item.Link key={item.name} />

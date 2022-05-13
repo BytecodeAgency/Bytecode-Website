@@ -7,11 +7,9 @@ import {
 	AboutProps,
 	SummationBlockProps,
 	ScreensAndTextProps,
-	CaseTeamMembersProps,
 	SingleCasePage,
 } from "@bytecode/ui-library/sections";
-import { Heading, Paragraph, Container, UserPicture } from "@bytecode/ui-library/components";
-import { CaseTeamMembers } from "@bytecode/ui-library/containers";
+import {  UserPictureProps } from "@bytecode/ui-library/components";
 
 const content = {
 	title: "Airchip | Case",
@@ -25,15 +23,6 @@ const Airchip: NextPage = () => {
 		</MainLayout>
 	);
 };
-
-const TeamMembers = () => (
-	<div>
-		<CaseTeamMembers>
-			<UserPicture color="purple" person="jantenkate" size={120} shadowPosition={"top"} balloonText="My name is Daniel van Drunen and I'm an experienced event organizer"/>
-			<UserPicture color="lightGreen" person="danielvandrunen" size={120} shadowPosition={"bottom"} balloonText="Hello I'm Jan ten kate. Airchip's product owner with a background in industrial design engineering" /> 
-		</CaseTeamMembers>
-	</div>
-);
 
 const intro: CaseIntroProps = {
 	title: "No more waiting in line for a drink!",
@@ -126,7 +115,7 @@ const features: ScreensAndTextProps[] = [
 	},
 ];
 
-const members: CaseTeamMembersProps = [
+const members: UserPictureProps[] = [
 	{
 		person: "jantenkate",
 		size: 120,
