@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Paragraph } from "../../components";
+import { Container, Heading, Paragraph, Subtitle } from "../../components";
 import { theme } from "../../theme";
 import styled from "styled-components";
 import { CollapsibleText } from "../../containers";
@@ -19,6 +19,18 @@ const StyledCollapsibleText = styled(CollapsibleText)`
 	grid-column: 2;
 `;
 
+const FrequentlyAskedQuestionsTitle = styled.div`
+	grid-column: 2;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	&:after {
+		content: "";
+		display: block;
+		width: 30%;
+		border-bottom: 2px solid black;
+	}
+`;
+
 type FrequentlyAskedQuestionProps = {
 	title: string;
 	description: string;
@@ -33,8 +45,12 @@ const FrequentlyAskedQuestion = ({ title, description, index }: FrequentlyAskedQ
 
 export const FrequentlyAskedQuestionsText = () => (
 	<FAQTextContainer>
+		<FrequentlyAskedQuestionsTitle>
+			<Subtitle text="Can we help you?" />
+			<Heading type="h2" text="Frequently asked questions" />
+		</FrequentlyAskedQuestionsTitle>
 		{
-			FrequentlyAskedQuestionsContent.map((frequentlyAskedQuestion, index)=><FrequentlyAskedQuestion title={frequentlyAskedQuestion.question} description={frequentlyAskedQuestion.answer} index={index+1} />)
+			FrequentlyAskedQuestionsContent.map((frequentlyAskedQuestion, index)=><FrequentlyAskedQuestion key={index} title={frequentlyAskedQuestion.question} description={frequentlyAskedQuestion.answer} index={index+1} />)
 		}
 	</FAQTextContainer>
 );
