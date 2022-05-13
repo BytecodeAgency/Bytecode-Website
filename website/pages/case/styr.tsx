@@ -9,7 +9,7 @@ import {
 	ScreensAndTextProps,
 	SingleCasePage,
 } from "@bytecode/ui-library/sections";
-import { CaseTeamMembersProps } from "@bytecode/ui-library/dist/sections";
+import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
 const content = {
 	title: "Styr | Case",
@@ -129,7 +129,7 @@ const features: ScreensAndTextProps[] = [
 	},
 ];
 
-const members: CaseTeamMembersProps = [
+const members: UserPictureProps[] = [
 	{
 		person: "annemariegeysen",
 		size: 120,

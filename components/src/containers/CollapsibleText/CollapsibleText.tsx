@@ -48,8 +48,8 @@ const CollapsibleText = ({ title, description, color, className }:WithStyle<Coll
 			<Icon onClick={collapse}>
 				{
 					open
-						? <Minus color={color} size={32} />
-						: <Plus color={color} size={32} />
+						? <Minus color={color} size={24} />
+						: <Plus color={color} size={24} />
 				}
 			</Icon>
 		</CollapsibleTextContainer>

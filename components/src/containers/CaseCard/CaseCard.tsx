@@ -36,7 +36,7 @@ type CaseCardProps = {
 const CaseCard = ({ name, subtitle }:CaseCardProps) => (
 	<Link href={`/case/${name}`}>
 		<CaseCardContainer>
-			<PhoneScreen image="/images/iphone2.svg" alt={`image of ${name} app`} height={240} />
+			<PhoneScreen image="/images/dawny__case-iphone.svg" alt={`image of ${name} app`} height={240} />
 			<div>
 				<StyledSubtitle fontWeight="bold" text={name} />
 				<Paragraph text={subtitle} size="small" />

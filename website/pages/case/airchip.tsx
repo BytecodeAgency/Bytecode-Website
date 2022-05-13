@@ -7,11 +7,11 @@ import {
 	AboutProps,
 	SummationBlockProps,
 	ScreensAndTextProps,
-	CaseTeamMembersProps,
 	SingleCasePage,
 } from "@bytecode/ui-library/sections";
-import { Heading, Paragraph, Container, UserPicture } from "@bytecode/ui-library/components";
+import { UserPicture } from "@bytecode/ui-library/components";
 import { CaseTeamMembers } from "@bytecode/ui-library/containers";
+import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
 const content = {
 	title: "Airchip | Case",
@@ -29,8 +29,8 @@ const Airchip: NextPage = () => {
 const TeamMembers = () => (
 	<div>
 		<CaseTeamMembers>
-			<UserPicture color="purple" person="jantenkate" size={120} shadowPosition={"top"} balloonText="My name is Daniel van Drunen and I'm an experienced event organizer"/>
-			<UserPicture color="lightGreen" person="danielvandrunen" size={120} shadowPosition={"bottom"} balloonText="Hello I'm Jan ten kate. Airchip's product owner with a background in industrial design engineering" /> 
+			<UserPicture color="purple" person="jantenkate" size={120} shadowPosition={"top"} balloonText="My name is Daniel van Drunen and I'm an experienced event organizer" />
+			<UserPicture color="lightGreen" person="danielvandrunen" size={120} shadowPosition={"bottom"} balloonText="Hello I'm Jan ten kate. Airchip's product owner with a background in industrial design engineering" />
 		</CaseTeamMembers>
 	</div>
 );
@@ -126,21 +126,21 @@ const features: ScreensAndTextProps[] = [
 	},
 ];
 
-const members: CaseTeamMembersProps = [
+const members: UserPictureProps[] = [
 	{
-		person: "jantenkate",
-		size: 120,
-		color: "purple",
-		shadowPosition: "top",
-		balloonText: "My name is Daniel van Drunen and I'm an experienced event organizer"
-	},
-	{
-		person: "danielvandrunen",
-		size: 120,
-		color: "lightGreen",
-		shadowPosition: "bottom",
-		balloonText: "Hello I'm Jan ten kate. Airchip's product owner with a background in industrial design engineering"
-	}
+			person: "jantenkate",
+			size: 120,
+			color: "purple",
+			shadowPosition: "top",
+			balloonText: "My name is Daniel van Drunen and I'm an experienced event organizer"
+		},
+		{
+			person: "danielvandrunen",
+			size: 120,
+			color: "lightGreen",
+			shadowPosition: "bottom",
+			balloonText: "Hello I'm Jan ten kate. Airchip's product owner with a background in industrial design engineering"
+		}
 ];
 
 const AirchipBody = () => (

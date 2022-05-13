@@ -49,15 +49,11 @@ export type ScreensAndTextProps = {
     screenTwo: string;
 }
 
-export type CaseTeamMembersProps = {
-    members?: UserPictureProps[];
-}
-
 export type SingleCasePageContent = {
     intro: CaseIntroProps;
     about: AboutProps;
     quote: CaseQuoteProps;
     challenges: SummationBlockProps;
     features: ScreensAndTextProps[];
-    members?: CaseTeamMembersProps;
+    members: UserPictureProps[];
 }

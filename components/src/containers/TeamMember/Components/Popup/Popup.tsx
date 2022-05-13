@@ -21,9 +21,10 @@ const PopupBackground = styled.div`
 	overscroll-behavior: none;
 `;
 const popupContentResponsiveCSS = () => {
+	const width = responsiveValuesCSS("width", "", breakpointNameToPx({ sm: '100%', md: '80%', lg: '700px'}))
 	const top = responsiveValuesCSS("top", "%", breakpointNameToPx({ xs: 0, xl: 5 }));
 	const right = responsiveValuesCSS("right", "%", breakpointNameToPx({ xs: 0, xl: 0 }));
-	return top + right;
+	return top + right + width;
 };
 
 const popupLayoutResponsiveCSS = () => {
@@ -65,19 +66,20 @@ const PopupLayout = styled(Container)`
 	overflow: scroll;
 `;
 
-const PopupContent = styled(Container)`
+const PopupContent = styled.div`
 	${popupContentResponsiveCSS};
 	position: absolute;
 	background-color: ${theme.colors.white};
 	z-index: 101;
 	display: grid;
 	overflow: scroll;
+	
 	@media screen and (min-width: ${breakpoints.lg}px) {
-		animation: slide 2s forwards;
+		animation: slide 1s forwards;
 	}
 
 	@keyframes slide {
-		0% { right: -1500px; }
+		0% { right: -500px; }
 	}
 `;
 

@@ -57,13 +57,10 @@ export const employees: Member[] = [
 	},
 	{
 		name: "Nietsche the cat",
-		jobTitle: "Sleeping & cuddling",
+		jobTitle: "Sleeping & Cuddling",
 		id: "nietzsche",
-		about: "TEXT STILL TO COME",
-		focus: ["Sleeping, playing, eating and cuddles"],
-		github: "https://bytecode.com",
-		email: "https://bytecode.com",
-		linkedIn: "https://bytecode.com",
+		about: "Miauw, I am Nietzsche. I am responsible for all the cuddles at Bytecode. The people working at Bytecode are not just my colleagues but also my close friends! My father Christiaan brings me with him so now and then but only when its not to busy so I can sleep and relax when I'm there.",
+		focus: ["Sleeping, eating and cuddles"],
 	}
 ];
 

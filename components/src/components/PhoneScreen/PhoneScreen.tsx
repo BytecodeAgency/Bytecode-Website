@@ -25,7 +25,7 @@ type PhoneScreenProps = {
     height: number;
 };
 
-const PhoneScreen = ({ image, alt, height }: PhoneScreenProps) => (
+const  PhoneScreen = ({ image, alt, height }: PhoneScreenProps) => (
 	<ImageContainer height={height}>
 		<StyledImage src={image} alt={alt} height={height} />
 	</ImageContainer>
