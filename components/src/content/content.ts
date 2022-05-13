@@ -140,6 +140,8 @@ export const cases: Case[] = [
 	},
 ];
 
+export const getRandomCase = (): string => cases[Math.floor(Math.random()*cases.length)].name;
+
 
 export const MeetTheFoundersData: MeetTheFoundersProps[] = [
 	{

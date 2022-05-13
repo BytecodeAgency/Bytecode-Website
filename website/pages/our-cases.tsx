@@ -4,7 +4,7 @@ import { NextPage } from "next";
 import MainLayout from "../layout/MainLayout";
 import { Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, FullWidthContainer } from "@bytecode/ui-library/components";
 import { PageIntro } from "@bytecode/ui-library/sections";
-import { theme, breakpointNameToPx, responsiveValuesCSS, cases } from "@bytecode/ui-library/utils";
+import { theme, breakpointNameToPx, responsiveValuesCSS, cases, getRandomCase } from "@bytecode/ui-library/utils";
 import { CaseCard } from "@bytecode/ui-library/containers";
 
 const content = {
@@ -64,7 +64,7 @@ const Intro = () => (
 			link={(
 				<IntroLinkContainer>
 					<LinkParagraph text="Don't know what to read?" />
-					<ArrowLink text="Let us choose" onClick={()=>console.log("clicked")}/>
+					<ArrowLink text="Let us choose" link="randomCase"/>
 				</IntroLinkContainer>
 			)}
 		/>
@@ -164,7 +164,7 @@ const CasesOverview = () => (
 					<Heading type="h2" text="View a selection of our projects we have worked on. Will yours be next?" />
 					<LinkContainer>
 						<DesktopLinkParagraph text="Want to know what we do?" />
-						<DesktopArrowLink onClick={()=>console.log("goToServicesPage")} text="Learn more" />
+						<DesktopArrowLink link="/services" text="Learn more" />
 					</LinkContainer>
 				</Sticky>
 			</CasesOverviewLeftColumn>
