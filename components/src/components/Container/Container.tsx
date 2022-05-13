@@ -24,6 +24,7 @@ export const MenuContainer = styled.div`
     z-index: 9998;
     backdrop-filter: blur(5px);
     box-sizing: border-box;
+    width: 100%;
 `;
 
 export const InitialContainer = styled(FullWidthContainer)`

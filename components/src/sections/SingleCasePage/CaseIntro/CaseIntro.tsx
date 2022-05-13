@@ -91,12 +91,11 @@ type ImageColumnProps = {
 const ImageColumn = ({ image, logo, height, width, bgColor }: ImageColumnProps) => {
 
 	const RenderImage = () => {
-		if (image.type === DeviceTypes.laptop) return <LaptopScreen image={`/images/${image.url}`} alt="image of application" height={200} />;
+		if (image.type === DeviceTypes.laptop) return <LaptopScreen image={`/images/${image.url}`} alt="image of application" height={210} />;
 		return <Image src={`/images/${image.url}`} alt="image of application" width={246} height={372} />;
 	};
 
 	return (<ImageColumnContainer bgColor={bgColor}>
-
 		<RenderImage />
 		<LogoContainer>
 			<Image src={`/images/${logo}`} alt="logo" height={height} width={width} layout="intrinsic" />
