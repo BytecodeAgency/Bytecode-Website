@@ -28,7 +28,7 @@ const navLinksHref = [
 const navLinks = (router: string) => {
 	return navLinksHref.map((item) => ({
 		name: item.name,
-		Link: () => (<Link href={item.href}><span style={{ borderBottom: `2px solid ${router == item.href ? theme.colors.black : "transparent"}`, cursor: "pointer" }}>{item.name}</span></Link>)
+		Link: () => (<Link href={item.href} passHref><span style={{ borderBottom: `2px solid ${router == item.href ? theme.colors.black : "transparent"}`, cursor: "pointer" }}>{item.name}</span></Link>)
 	}));
 };
 

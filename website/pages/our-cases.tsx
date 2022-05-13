@@ -4,7 +4,7 @@ import { NextPage } from "next";
 import MainLayout from "../layout/MainLayout";
 import { Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, FullWidthContainer } from "@bytecode/ui-library/components";
 import { PageIntro } from "@bytecode/ui-library/sections";
-import { theme, breakpointNameToPx, responsiveValuesCSS, cases, getRandomCase } from "@bytecode/ui-library/utils";
+import { theme, breakpointNameToPx, responsiveValuesCSS, cases } from "@bytecode/ui-library/utils";
 import { CaseCard } from "@bytecode/ui-library/containers";
 
 const content = {
