@@ -4,11 +4,15 @@ import { theme } from "../../theme";
 import styled from "styled-components";
 import { CollapsibleText } from "../../containers";
 import { FrequentlyAskedQuestionsContent } from "../../content";
+import { breakpointNameToPx, isWindowSizeBiggerThan, responsiveValuesCSS } from "../../helpers";
+import Image from "next/image";
 
 const FAQTextContainer = styled.div`
 	display: grid;
 	grid-template-columns: 24px 1fr;
 	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+	padding: 160px 20px;
 `;
 
 const BulletText = styled(Paragraph)`
@@ -55,10 +59,44 @@ export const FrequentlyAskedQuestionsText = () => (
 	</FAQTextContainer>
 );
 
+const frequentlyAskedQuestionsContainerResponsiveCSS = () => {
+	const columns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "1fr",
+			lg: "360px 1fr"
+		})
+	);
+	const justifyContent = responsiveValuesCSS(
+		"justify-content",
+		"",
+		breakpointNameToPx({
+			xs: "center",
+			lg: "start"
+		})
+	);
+	return columns + justifyContent;
+};
+
+const FrequentlyAskedQuestionsContainer = styled.div`
+	${frequentlyAskedQuestionsContainerResponsiveCSS};
+	display: grid;
+	background-color: ${theme.colors.colorBrand2};
+`;
+
 const FrequentlyAskedQuestions = () => (
-	<Container background={theme.colors.colorBrand2}>
+	<FrequentlyAskedQuestionsContainer>
+		{
+			isWindowSizeBiggerThan("lg")
+			&& <Image
+				src="/images/faq-background.svg"
+				height={556}
+				width={360}
+			/>
+		}
 		<FrequentlyAskedQuestionsText />
-	</Container>
+	</FrequentlyAskedQuestionsContainer>
 );
 
 export default FrequentlyAskedQuestions;
