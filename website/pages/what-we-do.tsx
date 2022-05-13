@@ -95,7 +95,7 @@ const ServicesIntroduction = () => (
 				text="As you might already know, a startup journey isn’t set in stone.
 					Some workflows occur repeatedly. We would like to take you through four stages. The input is your idea.
 					The output: a working version that solves the problems of your users."
-			   color="white"
+				color="white"
 			/>
 			<Paragraph
 				text="Already have an MVP? That’s amazing! But perhaps you do not know how to proceed from there.
