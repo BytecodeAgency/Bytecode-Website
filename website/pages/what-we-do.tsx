@@ -60,8 +60,17 @@ const Intro = () => (
 	</IntroContainer>
 );
 
+const servicesIntroductionContainerResponsiveCSS = responsiveValuesCSS(
+	"background",
+	"",
+	breakpointNameToPx({
+		xs: `url(${"/images/what-we-do-line-light.svg"}) no-repeat left center, ${theme.colors.colorBrand1} content-box;`,
+		lg: `url(${"/images/what-we-do-line.svg"}) no-repeat left center, ${theme.colors.colorBrand1} content-box;`
+	})
+);
+
 const ServicesIntroductionContainer = styled.div`
-	background: url(${"/images/what-we-do-line.svg"}) no-repeat left center, ${theme.colors.colorBrand1} content-box;
+	${servicesIntroductionContainerResponsiveCSS};
 	padding: 80px 0;
 	display: grid;
 	justify-content: end;
