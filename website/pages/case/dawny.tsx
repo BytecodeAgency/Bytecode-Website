@@ -8,6 +8,7 @@ import {
 	SummationBlockProps,
 	ScreensAndTextProps,
 	SingleCasePage,
+	DeviceTypes,
 } from "@bytecode/ui-library/sections";
 import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
@@ -28,9 +29,16 @@ const intro: CaseIntroProps = {
 	title: "No more waiting in line for a drink!",
 	subtitle: "Airchip",
 	text: "A bartender in your pocket. Order and pay at your favourite festival!",
-	image: "airchip-header.png",
+	image: {
+		type: DeviceTypes.iphone,
+		url: "dawny__case.svg",
+	},
 	color: "#3779AE",
-	logo: "airchip-logo.svg"
+	logo: {
+		url: "dearly__logo.svg",
+		width: 50,
+		height: 50,
+	}
 };
 const about: AboutProps = {
 	bullets: {

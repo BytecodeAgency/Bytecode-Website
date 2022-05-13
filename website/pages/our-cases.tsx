@@ -170,7 +170,7 @@ const CasesOverview = () => (
 			</CasesOverviewLeftColumn>
 			<CasesOverviewRightColumn>
 				{
-					cases.map((caseCard, index)=><CaseCard name={caseCard.name} subtitle={caseCard.subtitle} key={index} />)
+					cases.map((caseCard, index)=><CaseCard name={caseCard.name} subtitle={caseCard.subtitle} image={caseCard.image} key={index} />)
 				}
 			</CasesOverviewRightColumn>
 		</CasesOverviewContainer>

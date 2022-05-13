@@ -1,9 +1,8 @@
 import React from "react";
-import { Heading, InitialContainer, Paragraph, Subtitle } from "../../../components";
+import { Heading, InitialContainer, LaptopScreen, Paragraph, Subtitle } from "../../../components";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
-import { theme } from "../../../theme";
-import { CaseIntroProps } from "../SingleCasePage.types";
+import { CaseIntroProps, DeviceProps, DeviceTypes } from "../SingleCasePage.types";
 import Image from "next/image";
 
 type TextColumnProps = {
@@ -29,7 +28,7 @@ const imageColumnContainerResponsiveCSS = () => {
 			lg: 140,
 			xl: 210,
 		})
-	)
+	);
 
 	const paddingBottom = responsiveValuesCSS(
 		"padding-bottom",
@@ -39,31 +38,32 @@ const imageColumnContainerResponsiveCSS = () => {
 			lg: 40,
 			xl: 80,
 		})
-	)
+	);
 
 	return paddingTop + paddingBottom;
 };
 
-const ImageColumnContainer = styled.div<{bgColor: string}>`
+const ImageColumnContainer = styled.div<{ bgColor: string }>`
 	${imageColumnContainerResponsiveCSS};
 	background: url(${"/images/case-header-line.svg"}) no-repeat right top , ${props => props.bgColor};
 	background-size: 80% auto;
-	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
+	display: grid;
+	grid-templates-columns: auto;
+	grid templates-rows: 1fr auto;
+	align-items: end;
 `;
 
 const logoContainerResponsiveCSS = () => {
 
 	const marginLeft = responsiveValuesCSS(
-	"margin-left",
-	"px",
-	breakpointNameToPx({
-		xs: 20,
-		lg: 40,
-		xxl: 60
-	})
-	)
+		"margin-left",
+		"px",
+		breakpointNameToPx({
+			xs: 20,
+			lg: 40,
+			xxl: 60
+		})
+	);
 
 	const marginRight = responsiveValuesCSS(
 		"margin-right",
@@ -73,29 +73,36 @@ const logoContainerResponsiveCSS = () => {
 			lg: 40,
 			xxl: 60
 		})
-	)
+	);
 
 	return marginLeft + marginRight;
-}
+};
 const LogoContainer = styled.div`
 	${logoContainerResponsiveCSS};
 `;
 
 type ImageColumnProps = {
-	image: string;
+	image: DeviceProps;
 	logo: string;
 	height: number;
 	width: number;
 	bgColor: string;
 };
-const ImageColumn = ({ image, logo, height, width, bgColor }: ImageColumnProps) => (
-	<ImageColumnContainer bgColor={bgColor}>
+const ImageColumn = ({ image, logo, height, width, bgColor }: ImageColumnProps) => {
+
+	const RenderImage = () => {
+		if (image.type === DeviceTypes.laptop) return <LaptopScreen image={`/images/${image.url}`} alt="image of application" height={200} />;
+		return <Image src={`/images/${image.url}`} alt="image of application" width={246} height={372} />;
+	};
+
+	return (<ImageColumnContainer bgColor={bgColor}>
+
+		<RenderImage />
 		<LogoContainer>
 			<Image src={`/images/${logo}`} alt="logo" height={height} width={width} layout="intrinsic" />
 		</LogoContainer>
-		<Image src={`/images/${image}`} alt="image of application" width={246} height={372} />
-	</ImageColumnContainer>
-);
+	</ImageColumnContainer>);
+};
 
 const caseIntroContainerResponsiveCSS = responsiveValuesCSS(
 	"grid-template-columns",

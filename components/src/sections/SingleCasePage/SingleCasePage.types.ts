@@ -2,14 +2,25 @@ import { ThemeColors } from "../../theme";
 import { ReactNode } from "react";
 import { UserPictureProps } from "../../components/UserPictures/UserPicture.types";
 
+export enum DeviceTypes {
+    laptop = "laptop",
+    iphone = "iphone"
+}
+
 export type CaseIntroProps = {
     title: string;
     subtitle: string;
     text: string;
-    image: string;
+    image: DeviceProps;
     color: string;
     logo: Logoprops;
 }
+
+export type DeviceProps = {
+    url: string;
+    type: DeviceTypes;
+}
+
 
 export type Logoprops = {
     url: string;
@@ -53,7 +64,7 @@ export type ScreensAndTextProps = {
     title: string;
     text: string;
     screenOne: string;
-    screenTwo: string;
+    screenTwo?: string;
 }
 
 export type SingleCasePageContent = {

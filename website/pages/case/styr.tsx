@@ -8,6 +8,7 @@ import {
 	SummationBlockProps,
 	ScreensAndTextProps,
 	SingleCasePage,
+	DeviceTypes,
 } from "@bytecode/ui-library/sections";
 import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
@@ -28,8 +29,16 @@ const intro: CaseIntroProps = {
 	title: "Clear organisations and fair rewards",
 	subtitle: "Styr",
 	text: "A modern and practical tool for valuing and rewarding teams, roles and functions.",
-	image: "airchip-header.png",
-	logo: "airchip-logo.svg"
+	image: {
+		type: DeviceTypes.laptop,
+		url: "styr__dashboard.png",
+	},
+	color: "#76B2AE",
+	logo: {
+		url: "styr__logo.svg",
+		width: 200,
+		height: 50,
+	}
 };
 const about: AboutProps = {
 	bullets: {
@@ -116,16 +125,14 @@ const features: ScreensAndTextProps[] = [
 			"This corresponds with the skills and experience that are required for the job function. " +
 			"By filling in a couple of questions, " +
 			"the STYR-allocator can produce a pay scale that is ‘fair’ and ‘suitable’.",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/styr__allocator.png",
 	},
 	{
 		title: "Job Matrix",
 		text: "Who do you need to hire? An organization has a lot of layers. How many ‘manual workers’, " +
 			"‘middle-managers’, and ‘top-managers’ are currently working in your organization? " +
 			"The job matrix gives you a clear overview of the utilization rate of all layers within the organization.",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/styr__jobmatrix.png",
 	},
 ];
 

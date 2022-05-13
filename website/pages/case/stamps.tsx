@@ -8,6 +8,7 @@ import {
 	SummationBlockProps,
 	ScreensAndTextProps,
 	SingleCasePage,
+	DeviceTypes,
 } from "@bytecode/ui-library/sections";
 import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
@@ -28,7 +29,10 @@ const intro: CaseIntroProps = {
 	title: "Enabling people to share their medical or health journey",
 	subtitle: "Stamps",
 	text: "Write down how you are doing and keep everyone informed.",
-	image: "stamps__landingpage.svg",
+	image: {
+		type: DeviceTypes.iphone,
+		url: "stamps__landingpage.svg",
+	},
 	color: "#FF7D58",
 	logo: {
 		url: "stamps__logo.svg",
