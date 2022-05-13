@@ -27,3 +27,6 @@ export * from "./TeamMembers";
 export { default as FrequentlyAskedQuestions } from "./FrequentlyAskedQuestions";
 export * from "./FrequentlyAskedQuestions";
 
+export { default as Service } from "./Service";
+export * from "./Service";
+

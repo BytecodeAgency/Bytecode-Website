@@ -2,7 +2,7 @@ import React from "react";
 import { NextPage } from "next";
 import MainLayout from "../layout/MainLayout";
 import { Container, InitialContainer, Heading, Paragraph, ArrowLink } from "@bytecode/ui-library/components";
-import { PageIntro } from "@bytecode/ui-library/sections";
+import { FrequentlyAskedQuestions, PageIntro, Service } from "@bytecode/ui-library/sections";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS, theme } from "@bytecode/ui-library/utils";
 
@@ -107,10 +107,78 @@ const ServicesIntroduction = () => (
 	</ServicesIntroductionContainer>
 );
 
+const Services = () => (
+	<div>
+		<Service
+			title="Think about product strategy."
+			type="Strategize"
+			description="The construction of your startup begins with a strategy for your product.
+				Together we will work towards a minimal viable product, which cannot be completed without a plan.
+				Additionally, you will need knowledge about your potential users or clients.
+				We analyze your business plan, idea, or concept, and take a look at the user research you may have already done."
+			deliverables={[
+				"Roadmap",
+				"Business model"
+			]}
+			image="/images/service-strategize.svg"
+			imageBackground="/images/service-line-right1.svg"
+		/>
+		<Service
+			title="Research and define user needs."
+			type="Define"
+			description="Building a product that people need is different from building a product they want.
+				A product that is not user-centered has little to no chance to succeed.
+				Talking with your users, learning about their needs and how they are going to use your product
+				will give you great insights and create a better problem-solution fit."
+			deliverables={[
+				"User insights",
+				"User needs",
+				"Product scope"
+			]}
+			image="/images/service-define.svg"
+			reverse
+			imageBackground="/images/service-line-left1.svg"
+		/>
+		<Service
+			title="Visualize user needs and prototype."
+			type="Design"
+			description="A product that looks good will attract users, but only a product that is understandable will ensure
+				they come back. Structuring your functionalities and placing them logically helps the user on their way.
+				Testing designs with users before optimizing the user interface will help you validate your product."
+			deliverables={[
+				"User flow",
+				"Low/mid/high fidelity design",
+				"Prototype"
+			]}
+			image="/images/service-design.svg"
+			imageBackground="/images/service-line-right2.svg"
+		/>
+		<Service
+			title="Building the digital product."
+			type="Develop"
+			description="Your roadmap is clear, the product scope is composed, and the design is ready.
+				Now it's time for some true craftsmanship - building the actual software product.
+				Our knowledge is broad. From AI to big data to algorithmes, we can help with more than just a
+				Wordpress website or ordinary dashboard. We work with two-week sprints,
+				including demo presentations for each sprint. Your product will also be beta and alpha tested
+				before being released to the “main public”."
+			deliverables={[
+				"Minimum Viable Product (MVP)",
+				"Proof of (your) concept"
+			]}
+			image="/images/service-develop.svg"
+			reverse
+			imageBackground="/images/service-line-left2.svg"
+		/>
+	</div>
+);
+
 const WhatWeDoBody = () => (
 	<div>
 		<Intro />
 		<ServicesIntroduction />
+		<Services />
+		<FrequentlyAskedQuestions />
 	</div>
 );
 
