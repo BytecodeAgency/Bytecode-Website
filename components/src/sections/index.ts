@@ -16,7 +16,6 @@ export * from "./Menu";
 export { default as PageIntro } from "./PageIntro";
 export * from "./PageIntro";
 
-
 export { default as SummationBlock } from "./SummationBlock";
 export * from "./SummationBlock";
 
@@ -24,4 +23,7 @@ export * from "./SingleCasePage";
 
 export { default as TeamMembers } from "./TeamMembers";
 export * from "./TeamMembers";
+
+export { default as FrequentlyAskedQuestions } from "./FrequentlyAskedQuestions";
+export * from "./FrequentlyAskedQuestions";
 

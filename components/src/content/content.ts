@@ -234,10 +234,46 @@ export const MeetTheFoundersData: MeetTheFoundersProps[] = [
 		}],
 		link: "/case/airchip"
 	},
-
-
 ];
 
+type FrequentlyAskedQuestion = {
+	question: string;
+	answer: string;
+}
+export const FrequentlyAskedQuestionsContent: FrequentlyAskedQuestion[] = [
+	{
+		question: "How much do you charge for a consultation?",
+		answer: "The first 2 to 3 consultations are free of charge. During these meetings, " +
+			"we want to establish a better understanding of your idea and the phase that you are in. " +
+			"We will then give feedback on your startup (idea) and help you to proceed. " +
+			"After those meetings, we will bill our hours based on our hourly rate. Our rate is currently 90 euro’s / hour."
+	},
+	{
+		question: "What can I expect of the costs when working with Bytecode?",
+		answer: "It depends on the phase that you are in. The costs of building an MVP can be anywhere from 10 to 25.000 euros. " +
+			"This is contingent upon the number of functionalities and the technical challenges within them. " +
+			"It also relies on how much time we will have to invest in matters such as user research and design. " +
+			"We are always in favor of keeping the scope of your MVP small so that you leave enough room in your budget to learn from your MVP and make improvements."
+	},
+	{
+		question: "Where can I find more about your experience working with startups?",
+		answer: "See our cases for more information about our startup projects."
+	},
+	{
+		question: "How are you different from a 'normal' software development agency?",
+		answer: "The main difference between us and digital agencies is that we focus on helping software startups. " +
+			"We have worked with many startup founders and have seen them overcome (or fall victim to) the same pitfalls over and over again. " +
+			"Because of that, we can help and guide you to build the right product. With our strategic advice and expertise in building MVPs and software in general, " +
+			"we believe that we can fulfill the role of a tech co-founder / interim CTO for many tech startups. " +
+			"That is also why we often invest in startups to become co-owner and enhance our collaboration."
+	},
+	{
+		question: "Why do you invest in startups?",
+		answer: "To strengthen the partnership that we want to establish with you. " +
+			"We want to increase the affordability of creating an MVP, and make investing for investors more attractive. " +
+			"It creates a situation in which we are more involved. We can guide you all the way until you want to build an in house tech team. "
+	}
+];
 
 
 
