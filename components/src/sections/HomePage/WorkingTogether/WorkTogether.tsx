@@ -9,7 +9,7 @@ const howDoWeWannaContainerResponsiveCSS = () => {
 		"background",
 		"",
 		breakpointNameToPx({
-			xs: `url(${"/images/home-line2-mobile.svg"}) no-repeat left bottom , ${theme.colors.colorBrand4};`,
+			xs: `url(${"/images/home-line2-mobile.svg"}) no-repeat left bottom, ${theme.colors.colorBrand4};`,
 			lg: `url(${"/images/home-line2.svg"}) no-repeat left bottom, ${theme.colors.colorBrand4};`
 		})
 	);
@@ -73,26 +73,20 @@ const HowDoWeWanna = () => (
 			<CollapsibleTextContainer>
 				<StyledCollapsibleText
 					title="As a team, no client-agency relationship"
-					description="Aenean vitae lectus non nulla pulvinar
-						imperdiet et at ligula. Cras mattis dui sed urna tempus feugiat. In sagittis,
-						mi iaculis cursus pharetra, magna ligula pulvinar augue, nec faucibus lacus arcu in nunc.
-						Aliquam dapibus posuere laoreet. Nullam vel diam id risus fringilla efficitur."
+					description="Creating one product team, together. No client-agency relationship.
+						This means a lot of transparency and working side by side to create a working version of your concept."
 					color="white"
 				/>
 				<StyledCollapsibleText
 					title="Learning and improving on the way"
-					description="Aenean vitae lectus non nulla pulvinar
-						imperdiet et at ligula. Cras mattis dui sed urna tempus feugiat. In sagittis,
-						mi iaculis cursus pharetra, magna ligula pulvinar augue, nec faucibus lacus arcu in nunc.
-						Aliquam dapibus posuere laoreet. Nullam vel diam id risus fringilla efficitur."
+					description="Learning from mistakes and improving as we go.
+						Sometimes we face a challenge we have not seen before. We believe failure and learning from it are essential."
 					color="white"
 				/>
 				<StyledCollapsibleText
-					title="We want to work with passionate founders who want to 'scratch their own itch'"
-					description="Aenean vitae lectus non nulla pulvinar
-						imperdiet et at ligula. Cras mattis dui sed urna tempus feugiat. In sagittis,
-						mi iaculis cursus pharetra, magna ligula pulvinar augue, nec faucibus lacus arcu in nunc.
-						Aliquam dapibus posuere laoreet. Nullam vel diam id risus fringilla efficitur."
+					title="Working with passionate founders"
+					description="Working with passionate founders who want to ‘scratch their own itch’.
+						This boosts our enthusiasm and drives us to help you fulfill your mission."
 					color="white"
 				/>
 			</CollapsibleTextContainer>

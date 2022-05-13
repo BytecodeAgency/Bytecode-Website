@@ -57,12 +57,11 @@ const BytecodeAsCoFounder = () => (
 		<StyledSpacer />
 		<CoFounderTextContainer>
 			<CoFounderHeading type="h2" text="Bytecode as tech co-founder &amp; CTO" />
-			<Paragraph text="How do you create a software product with no software skills or knowledge?
-				What features do you integrate, and how do you test them?
-				Many tech start-up founders like you are trying to find the right tech person to develop their MVP.
-				But finding one is a treasure hunt. Outsourcing is time-consuming, agencies are expensive,
-				and tech founders are rare and difficult to retain. Besides, outsourcing companies and agencies like your money,
-				but aren’t always interested in your idea or the success."
+			<Paragraph text="Many startup founders, like you, are trying to find the right technical partner to develop their MVP.
+				However, finding one is a treasure hunt. Agencies are expensive, tech founders are rare and difficult to retain,
+				and outsourcing is time-consuming. Besides, many “partners” are only in it for the money. But: here you are! You have found us.
+				Bytecode is a technical partner and CTO for startups that invest in your startup (idea).
+				We love to assist you through every stage of your journey with development, strategy, and design."
 			/>
 		</CoFounderTextContainer>
 	</BytecodeAsCoFounderContainer>
@@ -114,16 +113,15 @@ const PicturesContainer = styled.div`
 const WhoWeAre = () => (
 	<WhoWeAreContainer>
 		<WhoWeAreTextContainer>
-			<Heading type="h2" text="Who are we?" />
-			<Paragraph text="We want to be your tech co-founder &amp; CTO.
-				Together with you, we build your start-up and digital product.
-				Our core expertise is designing and programming your MVP.
-				But before we develop anything, we work together with you to understand the ideal user experience and the user's goals.
-				That enables us to create a product scope. With this input,
-				we develop functionalities and work towards a first working version of your concept."
+			<Heading type="h2" text="Software experts with a passion for startups" />
+			<Paragraph text="We understand that you want to have dedicated team members on who you can rely.
+				We imagine that you don’t have the resources to hire a whole team and a CTO.
+				That is why we would love to be your technical co-founder and CTO. We often invest in the startups we work with,
+				to strengthen our collaboration and ease your financial stress!
+				It makes MVP development more affordable and ensures you have a tech team that’s in it for the long run."
 			/>
-			<Paragraph text="To enhance our collaboration we often invest in the start-ups that we work with.
-				This makes it more affordable to create an MVP and ensures you have a tech team for the long term."
+			<Paragraph text="Together, let's find out the ideal user experience
+				and goals for your future customers and create your startup and digital product!"
 			/>
 			<MeetTheTeamButton
 				text="Meet the team"
