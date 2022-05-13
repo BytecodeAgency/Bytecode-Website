@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Heading, Paragraph, Subtitle } from "../../components";
+import { Heading, Paragraph, Subtitle } from "../../components";
 import { theme } from "../../theme";
 import styled from "styled-components";
 import { CollapsibleText } from "../../containers";
