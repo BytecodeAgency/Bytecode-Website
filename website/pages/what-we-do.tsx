@@ -1,10 +1,10 @@
 import React from "react";
 import { NextPage } from "next";
 import MainLayout from "../layout/MainLayout";
-import { InitialContainer } from "@bytecode/ui-library/components";
+import { Container, InitialContainer, Heading, Paragraph, ArrowLink } from "@bytecode/ui-library/components";
 import { PageIntro } from "@bytecode/ui-library/sections";
 import styled from "styled-components";
-import { breakpointNameToPx, responsiveValuesCSS } from "@bytecode/ui-library/utils";
+import { breakpointNameToPx, responsiveValuesCSS, theme } from "@bytecode/ui-library/utils";
 
 const content = {
 	title: "Services we provide",
@@ -60,10 +60,42 @@ const Intro = () => (
 	</IntroContainer>
 );
 
+const ServicesIntroductionContainer = styled.div`
+	background: url(${"/images/what-we-do-line.svg"}) no-repeat left center, ${theme.colors.colorBrand1} content-box;
+	padding: 80px 0;
+	display: grid;
+	justify-content: end;
+	align-content: center;
+	height: 600px;
+`;
+
+const TextContainer = styled(Container)`
+	max-width: 700px;
+	display: grid;
+`;
+
+const StyledArrowLink = styled(ArrowLink)`
+	justify-self: end;
+`;
+
 const ServicesIntroduction = () => (
-	<div>
-        introduction about services etc
-	</div>
+	<ServicesIntroductionContainer>
+		<TextContainer>
+			<Heading type="h2" text="Introduction about services" color="white" />
+			<Paragraph
+				text="As you might already know, a startup journey isn’t set in stone.
+					Some workflows occur repeatedly. We would like to take you through four stages. The input is your idea.
+					The output: a working version that solves the problems of your users."
+			   color="white"
+			/>
+			<Paragraph
+				text="Already have an MVP? That’s amazing! But perhaps you do not know how to proceed from there.
+					Don't worry, we will help you to collect feedback and improve the product."
+				color="white"
+			/>
+			<StyledArrowLink text="Speak with us" link="/contact" color="white"/>
+		</TextContainer>
+	</ServicesIntroductionContainer>
 );
 
 const WhatWeDoBody = () => (
