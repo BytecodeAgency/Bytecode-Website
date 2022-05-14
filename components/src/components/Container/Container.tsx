@@ -17,7 +17,7 @@ export const Container = styled(FullWidthContainer)`
     margin: auto;
 `;
 
-export const MenuContainer = styled.div`
+export const MenuContainer = styled(FullWidthContainer)`
     ${responsivePaddingsCSS};
     position: fixed;
     top: 0;
