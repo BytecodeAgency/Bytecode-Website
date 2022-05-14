@@ -8,6 +8,7 @@ import {
 	SummationBlockProps,
 	ScreensAndTextProps,
 	SingleCasePage,
+	DeviceTypes,
 } from "@bytecode/ui-library/sections";
 import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
@@ -28,8 +29,16 @@ const intro: CaseIntroProps = {
 	title: "No more waiting in line for a drink!",
 	subtitle: "Airchip",
 	text: "A bartender in your pocket. Order and pay at your favourite festival!",
-	image: "airchip-header.png",
-	logo: "airchip-logo.svg"
+	image: {
+		type: DeviceTypes.iphone,
+		url: "airchip__chargeup.svg",
+	},
+	color: "#19084A",
+	logo: {
+		url: "airchip-logo.svg",
+		width: 50,
+		height: 50,
+	}
 };
 const about: AboutProps = {
 	bullets: {
@@ -104,15 +113,15 @@ const features: ScreensAndTextProps[] = [
 		text: "The main feature of Airchip is ordering drinks and snacks via a mobile app at any event or festival. " +
 			"When an order is ready for pickup, users receive a notification. " +
 			"To make sure the waiting time is as low as possible, users can select their pick-up location.",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/airchip__chargeup.svg",
+		screenTwo: "/images/airchip__chargeupexplained.svg"
 	},
 	{
 		title: "Always ‘online’ and ready to order",
 		text: "What if the internet connection is poor or unavailable? Airchip uses Bluetooth connections to stay ‘online’, " +
 			"so that users can still purchase their drinks and snacks, and retailers still receive the orders.",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/airchip__location.svg",
+		screenTwo: "/images/airchip__recieved.svg"
 	},
 ];
 

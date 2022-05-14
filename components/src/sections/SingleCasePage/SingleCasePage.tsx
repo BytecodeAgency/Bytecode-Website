@@ -172,6 +172,7 @@ const SingleCasePage: React.FC<SingleCasePageContent> = ({ intro, about, quote, 
 			text={intro.text}
 			image={intro.image}
 			logo={intro.logo}
+			color={intro.color}
 		/>
 		<CaseAbout
 			expertises={about.bullets.expertises}
