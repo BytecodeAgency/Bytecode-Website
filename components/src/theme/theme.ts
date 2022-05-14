@@ -7,7 +7,7 @@ import { BoxesTypeColors } from "src/components/UserPictures/UserPicture.types";
 const colors = {
 	// Brand
 	colorBrand1: "#295D59",
-	colorBrand2: "#CDD7D1",
+	colorBrand2: "#DFE4E1",
 	colorBrand3: "#093632",
 	colorBrand4: "#B791C4",
 

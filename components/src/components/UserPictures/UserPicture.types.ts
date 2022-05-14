@@ -6,6 +6,7 @@ export interface UserPictureProps {
     color: BoxesType;
     person?: string;
     shadowPosition: ShadowPosition;
+    balloonText?: string;
 }
 
 export interface UserPictureColorsProps {

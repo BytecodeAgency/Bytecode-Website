@@ -12,7 +12,16 @@ const introContainerWithImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 			xs: "1fr",
 			lg: columnSizes
 		}));
-	return gridColumns;
+
+	const paddingTop = responsiveValuesCSS(
+		"padding-top",
+		"px",
+		breakpointNameToPx({
+			md: 50,
+			xl: 100
+		})
+	);
+	return gridColumns + paddingTop;
 };
 const introContainerNoImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 	const gridColumns = responsiveValuesCSS(

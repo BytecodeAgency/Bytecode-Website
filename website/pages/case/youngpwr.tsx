@@ -8,7 +8,9 @@ import {
 	SummationBlockProps,
 	ScreensAndTextProps,
 	SingleCasePage,
+	DeviceTypes,
 } from "@bytecode/ui-library/sections";
+import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
 const content = {
 	title: "Youngpwr | Case",
@@ -27,8 +29,16 @@ const intro: CaseIntroProps = {
 	title: "Work(s) for your future",
 	subtitle: "Youngpwr",
 	text: "The first network that gives young people a kickstart as a young entrepreneur or employee",
-	image: "airchip-header.png",
-	logo: "airchip-logo.svg"
+	image: {
+		type: DeviceTypes.laptop,
+		url: "styr__allocator.svg",
+	},
+	color: "#F2F6FB",
+	logo: {
+		url: "youngpwr__logo.svg",
+		width: 100,
+		height: 50,
+	}
 };
 const about: AboutProps = {
 	bullets: {
@@ -129,6 +139,16 @@ const features: ScreensAndTextProps[] = [
 	},
 ];
 
+const members: UserPictureProps[] = [
+	{
+		person: "suzanschouten",
+		size: 120,
+		color: "purple",
+		shadowPosition: "top",
+		balloonText: "My name is Suzan Schouten  and CONTENT HERE"
+	},
+];
+
 const YoungpwrBody= () => (
 	<SingleCasePage
 		intro={intro}
@@ -136,6 +156,7 @@ const YoungpwrBody= () => (
 		quote={quote}
 		challenges={challenges}
 		features={features}
+		members={members}
 	/>
 );
 

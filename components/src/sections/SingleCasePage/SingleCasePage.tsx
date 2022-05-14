@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading, Paragraph, Container } from "../../components";
+import { Heading, Paragraph, Container, UserPicture } from "../../components";
 import {
 	CaseAbout,
 	CaseIntro,
 	CaseQuote,
 	ScreensAndText,
-	TeamMembers,
 	SummationBlock,
-	SingleCasePageContent, AboutTextProps, ScreensAndTextProps
+	SingleCasePageContent, AboutTextProps, ScreensAndTextProps,
 } from "../index";
-import { breakpointNameToPx, getEmployees, layout, responsiveValuesCSS, theme } from "../../index";
+import { breakpointNameToPx, layout, responsiveValuesCSS, theme } from "../../index";
+import { CaseTeamMembers } from "../../containers";
 
 const screensAndTextOneContainerResponsiveCSS = () => {
 	const paddingTopAndBottom = breakpointNameToPx({
@@ -151,20 +151,20 @@ const AboutTextContainer = styled.div`
 	grid-area: text;
 `;
 
-const AboutText = ({ introduction, clientNeeds }:AboutTextProps) => (
+const AboutText = ({ introduction, clientNeeds }: AboutTextProps) => (
 	<AboutTextContainer>
 		<Heading type="h2" text="How did it start?" />
 		{
-			introduction.map((paragraph, index)=><Paragraph key={index} text={paragraph} />)
+			introduction.map((paragraph, index) => <Paragraph key={index} text={paragraph} />)
 		}
 		<Heading type="h4" text="Client needs" />
 		{
-			clientNeeds.map((paragraph, index)=><Paragraph key={index} text={paragraph} />)
+			clientNeeds.map((paragraph, index) => <Paragraph key={index} text={paragraph} />)
 		}
 	</AboutTextContainer>
 );
 
-const SingleCasePage = ({ intro, about, quote, challenges, features }: SingleCasePageContent) => (
+const SingleCasePage: React.FC<SingleCasePageContent> = ({ intro, about, quote, challenges, features, members }) => (
 	<div>
 		<CaseIntro
 			title={intro.title}
@@ -172,11 +172,12 @@ const SingleCasePage = ({ intro, about, quote, challenges, features }: SingleCas
 			text={intro.text}
 			image={intro.image}
 			logo={intro.logo}
+			color={intro.color}
 		/>
 		<CaseAbout
 			expertises={about.bullets.expertises}
 			deliverables={about.bullets.deliverables}
-		><AboutText introduction={about.text.introduction} clientNeeds={about.text.clientNeeds}/></CaseAbout>
+		><AboutText introduction={about.text.introduction} clientNeeds={about.text.clientNeeds} /></CaseAbout>
 		<CaseQuote text={quote.text} />
 		<SummationBlock
 			title={challenges.title}
@@ -186,7 +187,7 @@ const SingleCasePage = ({ intro, about, quote, challenges, features }: SingleCas
 		{
 			features.map((feature, index) => {
 				const { title, text, screenOne, screenTwo } = feature;
-				if(index % 2 == 0 || index == 0){
+				if (index % 2 == 0 || index == 0) {
 					return (
 						<ScreensAndTextOne title={title} text={text} screenOne={screenOne} screenTwo={screenTwo} />
 					);
@@ -197,7 +198,20 @@ const SingleCasePage = ({ intro, about, quote, challenges, features }: SingleCas
 				}
 			})
 		}
-		<TeamMembers members={getEmployees(["jeroen", "nick"])} />
+		<CaseTeamMembers>
+			{
+				members.map(member =>
+					<UserPicture
+						key={member.person}
+						size={member.size}
+						color={member.color}
+						shadowPosition={member.shadowPosition}
+						person={member.person}
+						balloonText={member.balloonText}
+					/>
+				)
+			}
+		</CaseTeamMembers>
 	</div>
 );
 

@@ -19,6 +19,7 @@ const CaseCardContainer = styled.div`
 	justify-content: space-between;
 	&:hover {
 		cursor: pointer;
+		transform: scale(1.02);
 	}
 `;
 
@@ -30,12 +31,13 @@ const StyledSubtitle = styled(Subtitle)`
 type CaseCardProps = {
 	name: string;
 	subtitle: string;
+	image: string;
 };
 
-const CaseCard = ({ name, subtitle }:CaseCardProps) => (
+const CaseCard = ({ name, subtitle, image }:CaseCardProps) => (
 	<Link href={`/case/${name}`}>
 		<CaseCardContainer>
-			<PhoneScreen image="/images/iphone2.svg" alt={`image of ${name} app`} height={240} />
+			<PhoneScreen image={`/images/${image}.svg`} alt={`image of ${name} app`} height={240} />
 			<div>
 				<StyledSubtitle fontWeight="bold" text={name} />
 				<Paragraph text={subtitle} size="small" />

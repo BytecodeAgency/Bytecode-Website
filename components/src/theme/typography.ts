@@ -33,7 +33,7 @@ const typography = {
 	},
 	paragraph: {
 		font: "\"Biotif\", system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
-		lineHeight: "1.556em",
+		lineHeight: "1.768em",
 		sizes: {
 			small: ".778em",
 			normal: "1em",

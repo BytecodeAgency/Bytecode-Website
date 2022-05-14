@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Paragraph } from "../Typography";
 import { DiagonalArrow } from "../../icons";
@@ -6,8 +6,8 @@ import { WithStyle } from "../../types/utils";
 import Link from "next/link";
 
 type ArrowLinkProps = {
-    onClick?: () => void;
-    text: string;
+	onClick?: () => void;
+	text: string;
 	link?: string;
 }
 const ArrowLinkContainer = styled.div`
@@ -26,20 +26,35 @@ const StyledParagraph = styled(Paragraph)`
 	padding-right: 5px;
 `;
 
-const ArrowLink = ({ onClick, text, className, link }: WithStyle<ArrowLinkProps>) => (
-	link ? (
-		<Link href={link}>
-			<ArrowLinkContainer className={className}>
+const ArrowContainer = styled.div<{ rotation: boolean }>`
+transform: rotate(${props => props.rotation ? 45 : 0}deg); 
+
+`;
+
+const ArrowLink = ({ onClick, text, className, link }: WithStyle<ArrowLinkProps>) => {
+	const [isHover, setIsHover] = useState(false);
+
+	const Arrow = () => <ArrowContainer rotation={isHover}><DiagonalArrow color="black" size={24} /></ArrowContainer>;
+
+	return (
+		link ? (
+			<Link href={link}>
+				<ArrowLinkContainer className={className}
+					onMouseEnter={() => setIsHover(true)}
+					onMouseLeave={() => setIsHover(false)}>
+					<StyledParagraph fontWeight="bold" text={text} />
+					<Arrow />
+				</ArrowLinkContainer>
+			</Link>
+		) : (
+			<ArrowLinkContainer onClick={onClick} className={className}
+				onMouseEnter={() => setIsHover(true)}
+				onMouseLeave={() => setIsHover(false)}>
 				<StyledParagraph fontWeight="bold" text={text} />
-				<DiagonalArrow color="black" size={24} />
+				<Arrow />
 			</ArrowLinkContainer>
-		</Link>
-	) : (
-		<ArrowLinkContainer onClick={onClick} className={className}>
-			<StyledParagraph fontWeight="bold" text={text} />
-			<DiagonalArrow color="black" size={24} />
-		</ArrowLinkContainer>
-	)
-);
+		)
+	);
+};
 
 export default ArrowLink;

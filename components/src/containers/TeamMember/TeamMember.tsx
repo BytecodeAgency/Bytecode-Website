@@ -7,9 +7,9 @@ import Popup from "./Components/Popup";
 import { EmployeeName } from "../../content/contentGenerics";
 
 export interface Member {
-    name: string;
-    jobTitle: string;
-    id: EmployeeName;
+	name: string;
+	jobTitle: string;
+	id: EmployeeName;
 	about: string;
 	focus: string[];
 	github?: string;
@@ -17,7 +17,7 @@ export interface Member {
 	linkedIn?: string;
 }
 
-interface TeamMemberProps{
+interface TeamMemberProps {
 	member: Member;
 }
 
@@ -25,6 +25,12 @@ const StyledName = styled(Heading)`
 	font-family: ${theme.typography.paragraph.font};
 `;
 
+const TeamMemberImage = styled(Image)`
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.02);
+	}
+`;
 
 const TeamMember: React.FC<TeamMemberProps> = ({ member }) => {
 	const { id, name, jobTitle } = member;
@@ -37,10 +43,10 @@ const TeamMember: React.FC<TeamMemberProps> = ({ member }) => {
 	};
 	return (
 		<div>
-			<Popup member={member} closePopup={closePopup} popup={popup}/>
-			<Image src={`/images/member-${id}.png`} alt="profile picture" width={312} height={455} onClick={openPopup}/>
-			<StyledName text={name} type="h4"/>
-			<Paragraph text={jobTitle}/>
+			<Popup member={member} closePopup={closePopup} popup={popup} />
+			<TeamMemberImage src={`/images/member-${id}.png`} alt="profile picture" width={312} height={455} onClick={openPopup} />
+			<StyledName text={name} type="h4" />
+			<Paragraph text={jobTitle} />
 		</div>
 	);
 };

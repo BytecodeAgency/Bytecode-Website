@@ -30,3 +30,6 @@ export * from "./IconSummaryBlock";
 
 export { default as MeetTheFoundersBox } from "./MeetTheFoundersBox";
 export * from "./MeetTheFoundersBox";
+
+export { default as CaseTeamMembers } from "./CaseTeamMembers";
+export * from "./CaseTeamMembers";

@@ -149,15 +149,24 @@ const ProcessContainer = styled(FullWidthContainer)`
 `;
 
 const ourProcessContainerResponsiveCSS = () => {
+	const padding = responsiveValuesCSS(
+		"padding",
+		"",
+		breakpointNameToPx({
+			xs: "40px 0 60px 0",
+			lg: "120px 70px 200px 100px",
+			xl: "120px 70px 200px 150px"
+		})
+	);
 	const gridColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
 		breakpointNameToPx({
 			xs: "1fr",
-			lg: "1fr 1fr",
+			lg: "1fr 2fr",
 		})
 	);
-	return gridColumns;
+	return gridColumns + padding;
 };
 const OurProcessContainer = styled(Container)`
 	${ourProcessContainerResponsiveCSS};
