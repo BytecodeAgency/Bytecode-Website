@@ -25,9 +25,8 @@ const Intro = () => (
 	<IntroContainer>
 		<PageIntro
 			title="Your startup partner for building software products"
-			paragraph="There are many variations of passages of Lorem Ipsum available,
-				but the majority have suffered alteration in some form, by injected humour,
-				or randomised words which don't look even slightly believable. "
+			paragraph="Building a successful startup is hard, but finding the right people to develop your software product is perhaps even more difficult.
+				That is why we offer a partnership with us. We are your technical co-founder & interim-CTO."
 			image={
 				<Image src="/images/home-intro.svg" alt="members of bytecode" height={564} width={601} />
 			}

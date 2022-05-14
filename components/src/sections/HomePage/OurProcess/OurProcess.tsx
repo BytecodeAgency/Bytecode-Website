@@ -13,9 +13,8 @@ const ProcessTextContainer = styled.div`
 const ProcessText = () => (
 	<ProcessTextContainer>
 		<Heading type="h2" text="Our process" />
-		<Paragraph text="Quisque ullamcorper nec tellus id consectetur.
-			Quisque in dui scelerisque, hendrerit nibh a, malesuada purus.
-			Vivamus arcu turpis, congue id nibh id, pharetra pharetra lacus."
+		<Paragraph text="What steps lead to a first working version of your concept?
+			How do you improve and optimize your MVP? The following steps will give you a clear overview of our process. "
 		/>
 		<ArrowLink link="/what-we-do" text="See how we work" />
 	</ProcessTextContainer>
