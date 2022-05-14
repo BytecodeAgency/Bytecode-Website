@@ -17,7 +17,7 @@ const ProcessText = () => (
 			Quisque in dui scelerisque, hendrerit nibh a, malesuada purus.
 			Vivamus arcu turpis, congue id nibh id, pharetra pharetra lacus."
 		/>
-		<ArrowLink link="/services" text="See how we work" />
+		<ArrowLink link="/what-we-do" text="See how we work" />
 	</ProcessTextContainer>
 );
 
