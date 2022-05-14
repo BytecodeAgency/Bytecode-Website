@@ -90,7 +90,7 @@ const StyledArrowLink = styled(ArrowLink)`
 const ServicesIntroduction = () => (
 	<ServicesIntroductionContainer>
 		<TextContainer>
-			<Heading type="h2" text="Introduction about services" color="white" />
+			<Heading type="h2" text="For all stages on the path to success" color="white" />
 			<Paragraph
 				text="As you might already know, a startup journey isn’t set in stone.
 					Some workflows occur repeatedly. We would like to take you through four stages. The input is your idea.
