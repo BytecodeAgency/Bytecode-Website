@@ -64,7 +64,7 @@ const Intro = () => (
 			link={(
 				<IntroLinkContainer>
 					<LinkParagraph text="Don't know what to read?" />
-					<ArrowLink text="Let us choose" link="randomCase"/>
+					<ArrowLink text="Let us choose" link={`/case/${cases[Math.floor(Math.random()*cases.length)].name}`}/>
 				</IntroLinkContainer>
 			)}
 		/>
@@ -128,7 +128,7 @@ const DesktopLinkParagraph = styled(Paragraph)`
 	margin: 10px 0;
 `;
 
-const DesktopArrowLink = styled(ArrowLink)`
+const StyledArrowLink = styled(ArrowLink)`
 	margin-bottom: 60px;
 `;
 
@@ -164,13 +164,13 @@ const CasesOverview = () => (
 					<Heading type="h2" text="View a selection of our projects we have worked on. Will yours be next?" />
 					<LinkContainer>
 						<DesktopLinkParagraph text="Want to know what we do?" />
-						<DesktopArrowLink link="/services" text="Learn more" />
+						<StyledArrowLink link="/services" text="Learn more" />
 					</LinkContainer>
 				</Sticky>
 			</CasesOverviewLeftColumn>
 			<CasesOverviewRightColumn>
 				{
-					cases.map((caseCard, index)=><CaseCard name={caseCard.name} subtitle={caseCard.subtitle} key={index} />)
+					cases.map((caseCard, index)=><CaseCard name={caseCard.name} subtitle={caseCard.subtitle} image={caseCard.image} key={index} />)
 				}
 			</CasesOverviewRightColumn>
 		</CasesOverviewContainer>

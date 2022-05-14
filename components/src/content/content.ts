@@ -111,32 +111,34 @@ export const links = {
 export type Case = {
 	name: string;
 	subtitle: string;
+	image: string;
 } // TODO: add more data for single case pages??
 
 export const cases: Case[] = [
 	{
 		name: "airchip",
-		subtitle: "No more queuing for a drink!"
+		subtitle: "No more queuing for a drink!",
+		image: "airchip__chargeup"
 	},
 	{
 		name: "dearly",
-		subtitle: "Support for the loss of your loved one(s)"
+		subtitle: "Support for the loss of your loved one(s)",
+		image: "dearly__home"
 	},
 	{
-		name: "styr",
-		subtitle: "Clear organisations and fair rewards"
+		name: "STYR",
+		subtitle: "Clear organisations and fair rewards",
+		image: "airchip__chargeup"
 	},
 	{
 		name: "stamps",
-		subtitle: "Enabling people to share their medical or health journey"
-	},
-	{
-		name: "dawny",
-		subtitle: "Sleeptracking for healthy aging"
+		subtitle: "Enabling people to share their medical or health journey",
+		image: "stamps__landingpage"
 	},
 	{
 		name: "youngpwr",
-		subtitle: "Work(s) for your future"
+		subtitle: "Work(s) for your future",
+		image: "stamps__landingpage"
 	},
 ];
 
