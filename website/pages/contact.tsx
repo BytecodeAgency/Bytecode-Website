@@ -42,7 +42,7 @@ const styledInitialContainerResponsiveCSS = responsiveValuesCSS(
 	"background",
 	"",
 	breakpointNameToPx({
-		lg: `url(${"/images/contact-line1.svg"}) no-repeat right center`
+		lg: `url(${"/images/contact-line1.svg"}) no-repeat right bottom`
 	})
 );
 const StyledInitialContainer = styled(InitialContainer)`
