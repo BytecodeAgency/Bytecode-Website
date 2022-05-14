@@ -64,7 +64,7 @@ const serviceContainerResponsiveCSS = (reverse?: boolean, imageBackground?: stri
 			"background",
 			"",
 			breakpointNameToPx({
-				xs: `url(${imageBackground}) no-repeat center ${reverse ? "left" : "right"}`
+				lg: `url(${imageBackground}) no-repeat center ${reverse ? "left" : "right"}`
 			})
 		);
 	}

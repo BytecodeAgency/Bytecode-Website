@@ -92,7 +92,10 @@ const quote: CaseQuoteProps = {
 
 const challenges: SummationBlockProps = {
 	title: "The Challenges",
-	titleText: "TBD",
+	titleText: "Youngpwr was founded by a solo founder who had no experience in developing tech products. " +
+		"In addition, the \"vacancy world\" is a competitive marketplace. " +
+		"This brought the following challenges with it:"
+	,
 	summationText: [
 		{
 			title: "Funding",
@@ -146,7 +149,7 @@ const members: UserPictureProps[] = [
 		size: 120,
 		color: "purple",
 		shadowPosition: "top",
-		balloonText: "My name is Suzan Schouten  and CONTENT HERE"
+		balloonText: "My name is Suzan Schouten and I'm a publisher at Sanoma."
 	},
 ];
 

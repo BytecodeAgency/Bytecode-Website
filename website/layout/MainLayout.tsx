@@ -20,6 +20,10 @@ const navLinksHref = [
 		href: "/our-cases"
 	},
 	{
+		name: "What we do",
+		href: "/what-we-do"
+	},
+	{
 		name: "Contact",
 		href: "/contact"
 	},

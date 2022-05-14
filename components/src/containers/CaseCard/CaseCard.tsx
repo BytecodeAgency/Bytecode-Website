@@ -35,7 +35,7 @@ type CaseCardProps = {
 };
 
 const CaseCard = ({ name, subtitle, image }:CaseCardProps) => (
-	<Link href={`/case/${name}`}>
+	<Link href={`/case/${name.toLowerCase()}`}>
 		<CaseCardContainer>
 			<PhoneScreen image={`/images/${image}.svg`} alt={`image of ${name} app`} height={240} />
 			<div>
