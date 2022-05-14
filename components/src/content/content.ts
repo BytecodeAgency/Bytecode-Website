@@ -11,9 +11,9 @@ export const employees: Member[] = [
 		id: "jeroen",
 		about: "Hi, I am Jeroen. I am a co-founder of Bytecode and work mainly as a full-stack developer. My colleagues describe me as sincere and kindhearted. I am a very broadly oriented person with interest in politics, technology, media, (motor) sports and much more. In my spare time, I am either playing soccer, video games such as League of Legends with T’iko, or padel with Nick and Chris.",
 		focus: ["Development", "Back-end", "Bussiness Strategy"],
-		github: "https://bytecode.com",
-		email: "tiko@bytecode.nl",
-		linkedIn: "https://bytecode.com",
+		email: "jeroen@bytecode.nl",
+		linkedIn: "https://www.linkedin.com/in/jjvansteijn/",
+		github: "https://github.com/JeroenVanSteijn"
 	},
 	{
 		name: "Nick Broekarts",
@@ -21,9 +21,8 @@ export const employees: Member[] = [
 		id: "nick",
 		about: "Hi, I am Nick. I am responsible for marketing and sales. Besides that, I help startups with their strategy and roadmap. My colleagues describe me as social and enthusiastic. When I am not working, I am mostly busy doing volunteer work (teaching what the Bible learns and supporting people). Besides that, I love to have dinner with friends or play sports.",
 		focus: ["Sales", "Marketing", "Bussiness Strategy"],
-		github: "https://bytecode.com",
-		email: "https://bytecode.com",
-		linkedIn: "https://bytecode.com",
+		email: "nick@bytecode.nl",
+		linkedIn: "https://www.linkedin.com/in/nickbroekarts/",
 	},
 	{
 		name: "Christiaan Färber",
@@ -31,9 +30,7 @@ export const employees: Member[] = [
 		id: "chris",
 		about: "Hi, I am Chris. I am a front-end developer and User Experience designer. My colleagues describe me as a go-getter with a big heart. My interest lies in finding good wines and philosophy. During my days off, I love to play with my cat Nietzsche and go to techno parties.",
 		focus: ["Development", "UX Design", "Bussiness Strategy"],
-		github: "https://bytecode.com",
-		email: "https://bytecode.com",
-		linkedIn: "https://bytecode.com",
+		email: "christiaan@bytecode.nl",
 	},
 	{
 		name: "T'iko Alarcón Rivero",
@@ -43,9 +40,8 @@ export const employees: Member[] = [
 			"where I’m currently busy founding my own start-up company with a good friend of mine. I love solving puzzles, coding and design. " +
 			"In my free time I go for hikes and ride my roadbike through the dunes.",
 		focus: ["Development"],
-		github: "https://bytecode.com",
-		email: "https://bytecode.com",
-		linkedIn: "https://bytecode.com",
+		email: "tiko@bytecode.nl",
+		linkedIn: "https://www.linkedin.com/in/tiko-alarcon-rivero-6722bb18a/",
 	},
 	{
 		name: "Suzanne de Vries",
@@ -53,9 +49,8 @@ export const employees: Member[] = [
 		id: "suzanne",
 		about: "Hi, I am Suzanne. I am responsible for marketing/communication and sales. My colleagues describe me as cheerful and caring. My interests lie with psychology, dancing and singing, and I am a huge animal lover.",
 		focus: ["Marketing"],
-		github: "https://bytecode.com",
-		email: "https://bytecode.com",
-		linkedIn: "https://bytecode.com",
+		email: "suzanne@bytecode.nl",
+		linkedIn: "https://www.linkedin.com/in/suzanne-de-vries-11b088149/",
 	},
 	{
 		name: "Nietsche the cat",
