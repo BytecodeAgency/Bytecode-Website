@@ -8,9 +8,12 @@ import { MeetTheFoundersData } from "../../../content";
 const MeetTheFoundersContainer = styled.div`
 	margin: 20px 0;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, 424px);
+	grid-template-columns: repeat(auto-fill, 100%);
 	gap: 1em;
 	justify-content: center;
+	@media (min-width: 424px){
+		grid-template-columns: repeat(auto-fill, 424px);
+	}
 `;
 
 const StyledContainer = styled(Container)`
@@ -33,14 +36,17 @@ const styledSpacerResponsiveCSS = responsiveValuesCSS(
 		xxl: 200
 	})
 );
-const StyledSpacer = styled(Spacer)`
+
+const StyledSpacerContainer = styled.div`
 	${styledSpacerResponsiveCSS};
 	margin-bottom: 80px;
 `;
 
 const MeetTheFounders: React.FC = () => (
 	<StyledContainer>
-		<StyledSpacer bold />
+		<StyledSpacerContainer>
+			<Spacer bold />
+		</StyledSpacerContainer>
 		<StyledTitle type="h1" text="Meet the start-up founders!" />
 		<MeetTheFoundersContainer>
 			{

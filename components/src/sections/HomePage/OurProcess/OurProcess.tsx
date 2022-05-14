@@ -22,6 +22,7 @@ const ProcessText = () => (
 
 const StyledIconSummaryBlock = styled(IconSummaryBlock)`
 	align-self: start;
+	margin-bottom: 20px;
 `;
 
 const iconSummaryBlockContainerResponsiveCSS = responsiveValuesCSS(
@@ -29,7 +30,7 @@ const iconSummaryBlockContainerResponsiveCSS = responsiveValuesCSS(
 	"px",
 	breakpointNameToPx({
 		xs: 950,
-		md: 800
+		sm: 800
 	})
 );
 const IconSummaryBlockContainer = styled.div`
@@ -53,7 +54,7 @@ const processSummaryContainerResponsiveCSS = () => {
 		"px",
 		breakpointNameToPx({
 			xs: 950,
-			md: 800
+			sm: 800
 		})
 	);
 	return gridColumns + height;
@@ -113,22 +114,15 @@ const ProcessSummary = () => (
 const processSpacerResponsiveCSS = () => {
 	const marginLeft = responsiveValuesCSS(
 		"margin-left",
-		"px",
+		"%",
 		breakpointNameToPx({
-			lg: 200
+			lg: 30
 		})
 	);
-	const marginBottom = responsiveValuesCSS(
-		"margin-bottom",
-		"px",
-		breakpointNameToPx({
-			xs: 40,
-			lg: 80
-		})
-	);
-	return marginBottom + marginLeft;
+	return marginLeft;
 };
-const ProcessSpacer = styled(Spacer)`
+
+const ProcessSpacerContainer = styled.div`
 	${processSpacerResponsiveCSS};
 `;
 
@@ -174,7 +168,9 @@ const OurProcessContainer = styled(Container)`
 `;
 const OurProcess = () => (
 	<ProcessContainer>
-		<ProcessSpacer bold/>
+		<ProcessSpacerContainer>
+			<Spacer bold />
+		</ProcessSpacerContainer>
 		<OurProcessContainer>
 			<ProcessText />
 			<ProcessSummary />

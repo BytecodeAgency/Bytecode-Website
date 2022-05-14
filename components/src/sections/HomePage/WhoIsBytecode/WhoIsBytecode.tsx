@@ -96,6 +96,7 @@ const WhoWeAreContainer = styled.div`
 const WhoWeAreTextContainer = styled.div`
 	align-self: center;
 	display: grid;
+	margin-bottom: 40px;
 `;
 
 const MeetTheTeamButton = styled(ArrowLink)`
