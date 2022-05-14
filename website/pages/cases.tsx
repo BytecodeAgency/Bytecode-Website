@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { NextPage } from "next";
 import MainLayout from "../layout/MainLayout";
-import { Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, Subtitle, FullWidthContainer } from "@bytecode/ui-library/components";
+import { Container, InitialContainer, ArrowLink, Paragraph, Spacer, Heading, FullWidthContainer } from "@bytecode/ui-library/components";
 import { PageIntro } from "@bytecode/ui-library/sections";
-import { theme, breakpointNameToPx, responsiveValuesCSS, isWindowSizeBiggerThan, cases } from "@bytecode/ui-library/utils";
+import { theme, breakpointNameToPx, responsiveValuesCSS, cases } from "@bytecode/ui-library/utils";
 import { CaseCard } from "@bytecode/ui-library/containers";
 
 const content = {
@@ -58,10 +58,9 @@ const Intro = () => (
 		<StyledPageIntro
 			subtitle="Our cases"
 			title="An overview of the projects we've worked on."
-			paragraph="Here you can read more about the start-up projects we have worked on,
-            scroll between the different projects, and learn about other peoples their start-up journeys.
-            Focus on how we have helped start-ups to build and validate their idea.
-            Or just be inspired by their ideas and solutions."
+			paragraph="Here you can read more about the startup projects we have worked on.
+				Scroll between the different projects, and learn about the startup journeys of others.
+				Or just be inspired by their ideas and solutions."
 			link={(
 				<IntroLinkContainer>
 					<LinkParagraph text="Don't know what to read?" />
@@ -167,17 +166,11 @@ const CasesOverview = () => (
 		<CasesOverviewContainer>
 			<CasesOverviewLeftColumn>
 				<Sticky>
-					<Subtitle text="Selection of projects" />
-					<Heading type="h2" text="Take a look at a few projects we have worked on. Will yours be next?" />
-
-					{
-						isWindowSizeBiggerThan("lg") ?
-							<LinkContainer>
-								<DesktopLinkParagraph text="Find out what we do" />
-								<DesktopArrowLink onClick={()=>console.log("goToServicesPage")} text="Our services" />
-							</LinkContainer>
-							: <MobileArrowLink onClick={()=>console.log("goToServicesPage")} text="What we do"/>
-					}
+					<Heading type="h2" text="View a selection of our projects we have worked on. Will yours be next?" />
+					<LinkContainer>
+						<DesktopLinkParagraph text="Want to know what we do?" />
+						<DesktopArrowLink onClick={()=>console.log("goToServicesPage")} text="Learn more" />
+					</LinkContainer>
 				</Sticky>
 			</CasesOverviewLeftColumn>
 			<CasesOverviewRightColumn>

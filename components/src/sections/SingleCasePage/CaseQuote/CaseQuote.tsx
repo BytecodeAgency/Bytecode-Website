@@ -3,6 +3,7 @@ import { Heading } from "../../../components";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
 import Image from "next/image";
+import { CaseQuoteProps } from "../SingleCasePage.types";
 
 const styledContainerResponsiveCSS = () => {
 	const gridColumns = responsiveValuesCSS(
@@ -61,9 +62,7 @@ const QuoteText = styled(Heading)`
 	place-self: center;
 `;
 
-type CaseQuoteProps = {
-    text: string;
-};
+
 const CaseQuote = ({ text }: CaseQuoteProps) => (
 	<StyledContainer>
 		<ImageContainer>

@@ -42,8 +42,9 @@ const Intro = () => (
 	<InitialContainer background={theme.colors.colorBrand2}>
 		<PageIntro
 			subtitle="Who are we?"
-			title="Meet the people in the team."
-			paragraph="Learn what defines use as a team, as a company and who we personally are"
+			title="Meet the people in the team"
+			paragraph="Want to know more about your potential startup team members?
+				Learn more about what we have to offer and our core values to achieve our shared mission."
 			image={
 				(
 					<WorkingImageContainer>
@@ -135,37 +136,31 @@ const Competences = () => (
 				<IconBlocksContainer>
 					<IconTextBlock
 						title="Transparent"
-						text="We tell you what you can expect from us, and what we want from you.
-					We will give our honest opinion on your start-up idea and give tips to improve.
-					Only full transparency can help you really grow.
-					According to us, transparency is one of the core components of a successful working relationship."
+						text="Transparency is one of the core components of a successful working relationship.
+						We tell you what you can expect from us, and what we want from you.
+						We will give our honest opinion on your startup idea and give tips to improve."
 						icon={Eye}
 					/>
 					<IconTextBlock
 						icon={Book}
 						title="Knowledgeable"
-						text="We are working closely together with start-ups for some time.
-					That is why we have the experience and skills to help you.
-					With our guidance, you can avoid or overcome common pitfalls
-					that we have seen many founders get trapped in.
-					We love to share our knowledge through strategic sessions and online webinars."
+						text="With our guidance, you can avoid or overcome common pitfalls
+							that we have seen many startup founders get trapped in.
+							We love to share our knowledge through strategic sessions and online webinars."
 					/>
 					<IconTextBlock
 						icon={PeopleArrows}
 						title="Personal"
-						text="Every start-up and founder is different.
-					This is why we always evaluate your specific situation.
-					We tailor the experience and knowledge we have to your idea and product.
-					In addition, we work closely together with you.
-					Our team will complement yours, and take the role of technical lead."
+						text="We tailor the startup experience and knowledge we have to your idea and product.
+							Every startup and founder is different.
+							Our team will complement yours and fulfill the role of a tech co-founder and CTO."
 					/>
 					<IconTextBlock
 						icon={Arrows}
 						title="Versatile"
 						text="Apart from “just” developing your product idea into a working and amazing product,
-					we support you throughout the whole process: strategizing, defining,
-					designing and only then developing.
-					We are flexible and adjust our work to fit the stage your startup is in."
+							we support you throughout the whole process: strategizing, defining, designing, and only then developing.
+							We are flexible and adjust our work to fit the stage your startup is in."
 					/>
 				</IconBlocksContainer>
 			</CompetencesContainer>
@@ -185,18 +180,17 @@ const summationText: SummationText[] = [
 		text: "You know the users. We know tech stuff. " +
 			"Together we understand a lot of things. " +
 			"We believe the best work happens when we don’t think of ourselves as a client " +
-			"and agency relationship but as one team."
+			"and agency relationship, but as one team."
 	},
 	{
 		title: "Do and learn.",
-		text: "We believe that skills come with experience. " +
-			"We alle learn more by doing and trying then sitting around and speculation."
+		text: "We believe that skills come with experience. We are not afraid to make mistakes and learn from them. " +
+			"Sometimes we figure out ways to do things better and faster. We don't get stuck in the old, we innovate."
 	},
 	{
 		title: "High in energy!",
-		text: "We don’t mean drinking coffee or energy drinks, " +
-			"but we love to work with founders that are passionate about their idea. " +
-			"Enthusiasm is catchy, so if you are willing to change the world, then so are we."
+		text: "We love to work with founders that are passionate about their idea. " +
+			"Enthusiasm is contagious, so if you are willing to change the world, then so are we!"
 	}
 ];
 

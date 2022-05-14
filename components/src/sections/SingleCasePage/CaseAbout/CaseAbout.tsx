@@ -3,6 +3,7 @@ import { WithChildren } from "../../../types/utils";
 import { Container, Paragraph, Subtitle } from "../../../components";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
+import { CaseAboutProps } from "../SingleCasePage.types";
 
 
 const containerWithBackgroundResponsiveCSS = responsiveValuesCSS(
@@ -59,10 +60,7 @@ const RightColumn = styled.div`
 	margin-bottom: 90px;
 `;
 
-type CaseAboutProps = {
-    expertises: string[];
-    deliverables: string[];
-};
+
 const CaseAbout = ({ expertises, deliverables, children }: WithChildren<CaseAboutProps>) => (
 	<ContainerWithBackground>
 		<CaseAboutContainer>

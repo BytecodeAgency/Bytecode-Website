@@ -1,21 +1,10 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { FullWidthContainer, Heading, Paragraph, Container, Spacer, Subtitle } from "../../components";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../helpers";
 import styled from "styled-components";
 import { ThemeColors } from "../../theme";
+import { SummationBlockProps } from "../SingleCasePage/SingleCasePage.types";
 
-export type SummationText = {
-    title: string;
-    text: string;
-};
-type SummationBlockProps = {
-    title: string;
-    titleText: string;
-    summationText: SummationText[];
-    backgroundColor?: string;
-    textColor?: ThemeColors;
-    image?: ReactNode;
-};
 
 const summmationBlockContainerResponsiveCSS = () => {
 	const columns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx({ xs: "auto", lg: "1fr 1fr" }));

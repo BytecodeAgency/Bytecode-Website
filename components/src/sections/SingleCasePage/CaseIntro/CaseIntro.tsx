@@ -3,6 +3,7 @@ import { Heading, InitialContainer, Paragraph, Subtitle } from "../../../compone
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
 import { theme } from "../../../theme";
+import { CaseIntroProps } from "../SingleCasePage.types";
 import Image from "next/image";
 
 type TextColumnProps = {
@@ -79,13 +80,7 @@ const CaseIntroContainer = styled.div`
 	grid-column-gap: 60px;
 `;
 
-type CaseIntroProps = {
-	title: string;
-	subtitle: string;
-	text: string;
-	image: string;
-	logo: string;
-}
+
 const CaseIntro = ({ title, subtitle, text, image, logo }: CaseIntroProps) => (
 	<CaseIntroContainer>
 		<TextColumn title={title} subtitle={subtitle} text={text} />
