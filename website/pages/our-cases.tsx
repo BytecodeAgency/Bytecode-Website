@@ -64,7 +64,7 @@ const Intro = () => (
 			link={(
 				<IntroLinkContainer>
 					<LinkParagraph text="Don't know what to read?" />
-					<ArrowLink text="Let us choose" link={`/case/${cases[Math.floor(Math.random()*cases.length)].name}`}/>
+					<ArrowLink text="Let us choose" link={`/case/${cases[Math.floor(Math.random()*cases.length)].name.toLowerCase()}`}/>
 				</IntroLinkContainer>
 			)}
 		/>
