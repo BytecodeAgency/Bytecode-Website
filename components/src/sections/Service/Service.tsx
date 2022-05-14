@@ -22,14 +22,25 @@ const DeliverablesTitle = styled(Paragraph)`
 	margin-bottom: 0;
 `;
 
-const styledImageResponsiveCSS = (reverse?: boolean) => responsiveValuesCSS(
-	"justify-self",
-	"",
-	breakpointNameToPx({
-		xs: "center",
-		lg: `${reverse ? "start" : "end"}`
-	})
-);
+const styledImageResponsiveCSS = (reverse?: boolean) => {
+	const justify = responsiveValuesCSS(
+		"justify-self",
+		"",
+		breakpointNameToPx({
+			xs: "center",
+			lg: `${reverse ? "start" : "end"}`
+		})
+	);
+	const width = responsiveValuesCSS(
+		"max-width",
+		"px",
+		breakpointNameToPx({
+			xs: 350,
+			sm: 600
+		})
+	);
+	return justify + width;
+};
 const StyledImage = styled.img<{reverse?: boolean}>`
 	${props => styledImageResponsiveCSS(props.reverse)};
 	grid-area: image;
