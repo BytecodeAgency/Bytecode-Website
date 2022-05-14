@@ -244,7 +244,7 @@ const AddressAndRoute = () => {
 				</AddressBlockContainer>
 				<RouteContainer>
 					<Heading type="h3" text="Route"/>
-					<Paragraph text="Are you planning to drop by? Let us know and plan your route!"/>
+					<Paragraph text="Are you planning to drop by? Let us know and plan your route here!"/>
 					<RouteButtonContainer>
 						<StyledRouteButton type="secondary" text="Public transport" icon={Train} onClick={goToPublicTransportRoute}/>
 						<StyledRouteButton type="secondary" text="Plan route" icon={Cars} onClick={goToMapsRoute}/>
