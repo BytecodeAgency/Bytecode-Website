@@ -74,7 +74,7 @@ const styledIntroHeadingResponsiveCSS = responsiveValuesCSS(
 	"padding-right",
 	"%",
 	breakpointNameToPx({
-		xs: 30,
+		sm: 30,
 		md: 0
 	}));
 const StyledIntroHeading = styled(Heading)`
