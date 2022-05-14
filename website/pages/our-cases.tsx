@@ -164,7 +164,7 @@ const CasesOverview = () => (
 					<Heading type="h2" text="View a selection of our projects we have worked on. Will yours be next?" />
 					<LinkContainer>
 						<DesktopLinkParagraph text="Want to know what we do?" />
-						<StyledArrowLink link="/services" text="Learn more" />
+						<StyledArrowLink link="/what-we-do" text="Learn more" />
 					</LinkContainer>
 				</Sticky>
 			</CasesOverviewLeftColumn>
