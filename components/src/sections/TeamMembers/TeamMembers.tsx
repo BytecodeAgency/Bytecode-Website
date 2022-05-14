@@ -107,11 +107,9 @@ const TeamMembers = ({ members }: TeamMembersProps) => (
 					<StyledMembersSubtitle text="The people that make it happen"/>
 					<Heading type="h2" text="Meet the team members" />
 					<StyledMembersParagraph
-						text="If you want to realize your dream, you need to have a good team. That is why our team consists of experienced developers, designers, strategists, and marketers who love to join your startup project. Who are the people responsible for building the product of your dreams that fits your customers?"
-					/>
-					<Paragraph
-						text="Who are the people responsible for
-					building the product of your dreams that fits your customers?"
+						text="If you want to realize your dream, you need to have a good team. That is why our team consists of experienced developers,
+							designers, strategists, and marketers who love to join your startup project.
+							Who are the people responsible for building the product of your dreams that fits your customers?"
 					/>
 				</Sticky>
 			</TeamMembersLeftColumn>
