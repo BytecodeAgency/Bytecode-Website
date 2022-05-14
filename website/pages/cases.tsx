@@ -128,13 +128,8 @@ const DesktopLinkParagraph = styled(Paragraph)`
 	margin: 10px 0;
 `;
 
-const DesktopArrowLink = styled(ArrowLink)`
+const StyledArrowLink = styled(ArrowLink)`
 	margin-bottom: 60px;
-`;
-
-const MobileArrowLink = styled(ArrowLink)`
-	margin-bottom: 60px;
-	align-self: flex-end;
 `;
 
 const CasesOverviewRightColumn = styled.div`
@@ -169,7 +164,7 @@ const CasesOverview = () => (
 					<Heading type="h2" text="View a selection of our projects we have worked on. Will yours be next?" />
 					<LinkContainer>
 						<DesktopLinkParagraph text="Want to know what we do?" />
-						<DesktopArrowLink onClick={()=>console.log("goToServicesPage")} text="Learn more" />
+						<StyledArrowLink onClick={()=>console.log("goToServicesPage")} text="Learn more" />
 					</LinkContainer>
 				</Sticky>
 			</CasesOverviewLeftColumn>
