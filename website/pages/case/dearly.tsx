@@ -26,7 +26,7 @@ const Dearly: NextPage = () => {
 };
 
 const intro: CaseIntroProps = {
-	title: "Supporting you through the grieving process",
+	title: "Making loss and grief reachable together",
 	subtitle: "Dearly",
 	text: "Normalise loss and grief and create more social awareness",
 	image: {
@@ -84,7 +84,7 @@ const about: AboutProps = {
 };
 
 const quote: CaseQuoteProps = {
-	text: "From this project, we learned about the importance of collecting feedback and measuring how your product is being used."
+	text: "We learned the importance of collecting feedback and measuring how your product is being used."
 };
 
 const challenges: SummationBlockProps = {

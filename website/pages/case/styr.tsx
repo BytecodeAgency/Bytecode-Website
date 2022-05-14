@@ -89,9 +89,7 @@ const about: AboutProps = {
 };
 
 const quote: CaseQuoteProps = {
-	text: "Always appoint someone who takes the role of product owner upon him. " +
-		"Even when working in a small team, there always has to be someone who stays in touch with the users, " +
-		"and can advocate their needs to the rest of the team."
+	text: "Always appoint someone who takes the role of product owner upon him. Even when working in a small team."
 };
 
 const challenges: SummationBlockProps = {

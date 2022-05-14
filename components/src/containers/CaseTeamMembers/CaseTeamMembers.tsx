@@ -33,13 +33,13 @@ const caseTeamMembersSectionResponsiveCSS = () => {
 	return paddingBottom + paddingTop + gridColumns;
 };
 
-const membersContainerResponsiveCSS = (count: number) => {
+const membersContainerResponsiveCSS = () => {
 	const gridColumns = responsiveValuesCSS(
 		"grid-template-columns",
 		"",
 		breakpointNameToPx({
 			xs: "auto",
-			sm: `repeat(${count}, auto)`
+			sm: "repeat(2, auto)"
 		})
 	);
 
@@ -66,7 +66,7 @@ const CaseTeamMembersContainer = styled(Container)`
 `;
 
 const MembersContainer = styled(Container) <{ countItems: number }>`
-	${(props) => membersContainerResponsiveCSS(props.countItems)};
+	${membersContainerResponsiveCSS};
 	margin: 0 auto;
 
 	display: grid;
