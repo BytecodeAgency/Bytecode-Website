@@ -13,7 +13,7 @@ const MobileMenuBarTopContainer = styled(MenuContainer)`
     grid-template-columns: 1fr 60px;
     padding-top: 25px;
     padding-right: 25px;
-    height: 50px;
+    height: 75px;
 	z-index: 90;
 `;
 

@@ -4,7 +4,6 @@ import { Paragraph } from "../Typography";
 import { DiagonalArrow } from "../../icons";
 import { WithStyle } from "../../types/utils";
 import Link from "next/link";
-import { getRandomCase } from "../../content";
 
 type ArrowLinkProps = {
 	onClick?: () => void;
@@ -34,12 +33,11 @@ const ArrowContainer = styled.div<{ rotation: boolean }>`
 
 const ArrowLink = ({ onClick, text, className, link, color="black" }: WithStyle<ArrowLinkProps>) => {
 	const [isHover, setIsHover] = useState(false);
-
 	const Arrow = () => <ArrowContainer rotation={isHover}><DiagonalArrow color={color} size={24} /></ArrowContainer>;
-	const randomCaseName = getRandomCase();
+
 	return (
 		link ? (
-			<Link href={link == "randomCase" ? `/case/${randomCaseName}` : link }>
+			<Link href={link}>
 				<ArrowLinkContainer
 					className={className}
 					onMouseEnter={() => setIsHover(true)}

@@ -11,7 +11,6 @@ export interface MenuInterface {
 export interface NavLink {
 	name: string;
 	Link: React.FC;
-	href: string;
 }
 
 const Menu: React.FC<MenuInterface> = ({ navLinks }) => {

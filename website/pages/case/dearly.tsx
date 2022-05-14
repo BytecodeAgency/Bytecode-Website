@@ -8,6 +8,7 @@ import {
 	SummationBlockProps,
 	ScreensAndTextProps,
 	SingleCasePage,
+	DeviceTypes,
 } from "@bytecode/ui-library/sections";
 import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
@@ -28,8 +29,16 @@ const intro: CaseIntroProps = {
 	title: "Supporting you through the grieving process",
 	subtitle: "Dearly",
 	text: "Normalise loss and grief and create more social awareness",
-	image: "airchip-header.png",
-	logo: "airchip-logo.svg"
+	image: {
+		type: DeviceTypes.iphone,
+		url: "dearly__home.svg",
+	},
+	color: "#FA3C60",
+	logo: {
+		url: "dearly__logo.svg",
+		width: 50,
+		height: 50,
+	}
 };
 const about: AboutProps = {
 	bullets: {
@@ -106,16 +115,16 @@ const features: ScreensAndTextProps[] = [
 		title: "Stories and articles",
 		text: "Grief and memory specialists have often experienced and/or gone through the process of grief themselves. " +
 			"Based on these experiences they create articles that meet the emotional and physical needs of the bereaved.",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/dearly__articles.svg",
+		screenTwo: "/images/dearly__article.svg"
 	},
 	{
 		title: "Buddies",
 		text: "Find a buddy through the app who is going through a similar process. " +
 			"You can connect with someone who has lost someone they were equally close to or who has lost their loved one in the same or similar way. " +
 			"Talk about your loss with someone who understands you.",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/dearly__buddies.svg",
+		screenTwo: "/images/dearly__buddieschat.svg"
 	},
 	{
 		title: "Professionals",
@@ -123,25 +132,25 @@ const features: ScreensAndTextProps[] = [
 			"At that point, it’s best to talk to a professional. To facilitate this, Dearly has a network of specialists in the field of grief in the app. " +
 			"Each with unique expertise. " +
 			"Through Dearly, you can quickly and easily get in touch with a professional.",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/dearly__prof.svg",
+		screenTwo: "/images/dearly__profsearch.svg"
 	},
 ];
 
 const members: UserPictureProps[] = [
 	{
-		person: "annemariegeysen",
+		person: "pietervanderoest",
 		size: 120,
 		color: "purple",
 		shadowPosition: "top",
-		balloonText: "My name is Annemarie Geysen and CONTENT HERE"
+		balloonText: "My name is Pieter and CONTENT HERE"
 	},
 	{
-		person: "jankeesvanhasselt",
+		person: "quirinewissink",
 		size: 120,
 		color: "lightGreen",
 		shadowPosition: "bottom",
-		balloonText: "Hello I'm Jan-Kees van Hasselt. and CONTENT HERE"
+		balloonText: "Hello I'm Quirine. and CONTENT HERE"
 	},
 ];
 
