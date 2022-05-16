@@ -5,6 +5,7 @@ import Spacer from "../../../components/Spacer";
 import Logo from "../../../components/Branding";
 import {  theme } from "../../../theme";
 import { MenuContainer } from "../../../components/Container";
+import Link from "next/link";
 
 const DesktopMenuContainer = styled(MenuContainer)`
     display: grid;
@@ -23,11 +24,17 @@ const NavLinksContainer = styled.ul`
     justify-content: end;
 `;
 
+const LogoContainer = styled.div`
+	cursor: pointer;
+`;
+
 export const DesktopMenu: React.FC<MenuInterface> = ({ navLinks }) => (
 	<DesktopMenuContainer>
-		<div>
-			<Logo color="black" />
-		</div>
+		<Link href="/">
+			<LogoContainer>
+				<Logo color="black" />
+			</LogoContainer>
+		</Link>
 		<NavLinksContainer>
 			{navLinks.map((item) => (
 				<item.Link key={item.name} />

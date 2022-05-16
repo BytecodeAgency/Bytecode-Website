@@ -7,6 +7,7 @@ import { MenuContainer } from "../../../components/Container";
 import { theme } from "../../../theme";
 import ContactBox from "./ContactBox";
 import Logo from "../../../components/Branding";
+import Link from "next/link";
 
 const MobileMenuBarTopContainer = styled(MenuContainer)`
     display: grid;
@@ -69,9 +70,11 @@ export const MobileMenu: React.FC<MenuInterface> = ({ navLinks }) => {
 	return (
 		<>
 			<MobileMenuBarTopContainer background={isOpen ? theme.colors.white : "transparant"}>
-				<div>
-					<Logo color="black" />
-				</div>
+				<Link href="/">
+					<div>
+						<Logo color="black" />
+					</div>
+				</Link>
 				<Hamburger toggled={isOpen} toggle={setOpen} />
 			</MobileMenuBarTopContainer>
 			{isOpen && <Opened />}
