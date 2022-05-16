@@ -36,7 +36,7 @@ const intro: CaseIntroProps = {
 	color: "#FF7D58",
 	logo: {
 		url: "stamps__logo.svg",
-		width: 280,
+		width: 200,
 		height: 98,
 	}
 };

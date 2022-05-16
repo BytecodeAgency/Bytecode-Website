@@ -5,6 +5,32 @@ import styled from "styled-components";
 import { ThemeColors } from "../../theme";
 import { SummationBlockProps } from "../SingleCasePage/SingleCasePage.types";
 
+const fullContainerResponsiveCSS = () => {
+	const display = responsiveValuesCSS(
+		"display",
+		"",
+		breakpointNameToPx({
+			xs: "none",
+			lg: "block"
+		})
+	);
+	return display;
+};
+
+const FullContainer = styled(FullWidthContainer)`
+	${fullContainerResponsiveCSS};
+	position: relative;
+	&:before{
+		content: "";
+		position: absolute;
+		bottom: 200px;
+		left: 0;
+		background: url(${"/images/case-qoute-portal.svg"}) no-repeat left center;
+		width: 500px;
+		height: 500px;
+		z-index: -1;
+	}
+`;
 
 const summmationBlockContainerResponsiveCSS = () => {
 	const columns = responsiveValuesCSS("grid-template-columns", "", breakpointNameToPx({ xs: "auto", lg: "1fr 1fr" }));
@@ -84,7 +110,7 @@ const SingleSummation = ({ index, title, text, color }: SingleSummationProps) =>
 );
 
 const SummationBlock = ({ title, titleText, summationText, backgroundColor, textColor = "black", image }: SummationBlockProps) => (
-	<FullWidthContainer background={backgroundColor}>
+	<FullContainer background={backgroundColor}>
 		<SummationBlockContainer>
 			<LeftColumn>
 				<StyledSpacer color={textColor === "white" ? "white" : "black"} bold/>
@@ -99,7 +125,7 @@ const SummationBlock = ({ title, titleText, summationText, backgroundColor, text
 				}
 			</RightColumn>
 		</SummationBlockContainer>
-	</FullWidthContainer>
+	</FullContainer>
 );
 
 export default SummationBlock;

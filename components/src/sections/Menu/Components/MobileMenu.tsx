@@ -10,20 +10,20 @@ import Logo from "../../../components/Branding";
 
 const MobileMenuBarTopContainer = styled(MenuContainer)`
     display: grid;
-    grid-template-columns: 1fr 60px;
+    grid-template-columns: 1fr 80px;
     padding-top: 25px;
     padding-right: 25px;
-    height: 75px;
+    height: 72px;
 	z-index: 90;
 `;
 
 const MobileMenuContainer = styled.div`
 	display: grid;
 	grid-template-rows: 1fr 200px;
-	height: calc(100vh - 75px);
+	height: calc(100vh - 72px);
 	width: 100vw;
 	position: fixed;
-	top: 75px;
+	top: 72px;
 	left: 0;
 	background: white;
 	z-index: 9998;
@@ -59,8 +59,8 @@ export const MobileMenu: React.FC<MenuInterface> = ({ navLinks }) => {
 					))}
 				</MenuList>
 				<ContactContainer>
-					<ContactBox icon="email" text="Send us an email" />
-					<ContactBox icon="email" text="Plan a meeting" />
+					<ContactBox icon="email" text="Send us an email" url="mailto: info@bytecode.nl" />
+					<ContactBox icon="email" text="Plan a meeting" url="https://calendly.com/nickbroekarts-bytecode" />
 				</ContactContainer>
 			</MobileMenuContainer>
 		);
@@ -68,7 +68,7 @@ export const MobileMenu: React.FC<MenuInterface> = ({ navLinks }) => {
 
 	return (
 		<>
-			<MobileMenuBarTopContainer background={isOpen ? theme.colors.white : undefined}>
+			<MobileMenuBarTopContainer background={isOpen ? theme.colors.white : "transparant"}>
 				<div>
 					<Logo color="black" />
 				</div>

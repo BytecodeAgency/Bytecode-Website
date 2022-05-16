@@ -9,7 +9,8 @@ const responsivePaddingsCSS = paddingLeft + paddingRight;
 
 export const FullWidthContainer = styled.div<{ background?: string }>`
     ${responsivePaddingsCSS};
-    background-color: ${props => props.background ? props.background : "unset"}
+    background-color: ${props => props.background ? props.background : "unset"};
+    postition: relative;
 `;
 
 export const Container = styled(FullWidthContainer)`

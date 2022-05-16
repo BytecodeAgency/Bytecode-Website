@@ -16,7 +16,7 @@ const caseTeamMembersSectionResponsiveCSS = () => {
 		"px",
 		breakpointNameToPx({
 			xs: 30,
-			md: 60,
+			md: 80,
 		})
 	);
 
