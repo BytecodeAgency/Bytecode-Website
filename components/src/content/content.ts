@@ -53,7 +53,7 @@ export const employees: Member[] = [
 		linkedIn: "https://www.linkedin.com/in/suzanne-de-vries-11b088149/",
 	},
 	{
-		name: "Nietsche the cat",
+		name: "Nietzsche the cat",
 		jobTitle: "Sleeping & Cuddling",
 		id: "nietzsche",
 		about: "Miauw, I am Nietzsche. I am responsible for all the cuddles at Bytecode. The people working at Bytecode are not just my colleagues, but also my close friends! " +
