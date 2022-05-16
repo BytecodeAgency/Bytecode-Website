@@ -210,21 +210,6 @@ export const MeetTheFoundersData: MeetTheFoundersProps[] = [
 		link: "/case/styr"
 	},
 	{
-		company: "Dawny",
-		discription: "A platform specifically made to integrate the input of different wearables. Dawny is designed to make the sleep of the very elderly visible through patterns. These patterns can predict the likelihood of (night) falls.",
-		founders: [{
-			name: "daveschweitzer",
-			color: "darkGreen",
-			shadowPosition: "top",
-		},
-		{
-			name: "willysiegel",
-			color: "lightGreen",
-			shadowPosition: "bottom",
-		}],
-		link: "/case/dawny"
-	},
-	{
 		company: "AirChip",
 		discription: "An app for ordering drinks and snacks via a mobile app at any event or festival. When an order is ready for pickup, users receive a notification.",
 		founders: [{
