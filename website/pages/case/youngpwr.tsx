@@ -87,7 +87,7 @@ const about: AboutProps = {
 };
 
 const quote: CaseQuoteProps = {
-	text: "While working on Youngpwr we learned how important it is to not only have an amazing idea but also to really get to know your users."
+	text: "While working on Youngpwr we learned how important it is to not only have an amazing idea, but to also really get to know your users."
 };
 
 const challenges: SummationBlockProps = {
