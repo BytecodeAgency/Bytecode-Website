@@ -56,10 +56,10 @@ const about: AboutProps = {
 	},
 	text: {
 		introduction: [
-			"Tess her mother Pien has been battling cancer for several years. " +
+			"Tess's mother Pien has been battling cancer for several years. " +
 			"Pien has a large circle of family, friends, colleagues, and acquaintances. " +
 			"But, when you are tackling a serious illness or have a difficult medical journey, " +
-			"you don’t have the energy to inform your loved ones. " +
+			"you don’t have the energy to inform all of your loved ones separately. " +
 			"Phone calls, emails, postcards, surprise visits, texts, carrier pigeons, and smoke signals. " +
 			"All these “communication channels” have to be maintained or answered. That is why Tess and " +
 			"Pien wanted to create one central communication platform where “writers” can inform their loved ones about their process. ",
@@ -73,13 +73,13 @@ const about: AboutProps = {
 			"After several strategic sessions, we agreed on what the minimum viable product was going to be. " +
 			"In the weeks that followed we worked on creating a solid back-end and front-end. " +
 			"We held 2 weekly sprints, including a demo. After 6 weeks, we started testing with users. " +
-			"First to make sure everything is working as it should, and next to see if there is a product-market fit and revenue model. ",
+			"First to make sure everything is working as it should, and next to see if there is a product-market fit and a working revenue model. ",
 		]
 	}
 };
 
 const quote: CaseQuoteProps = {
-	text: "Stamps taught us to really emphasize with users. Especially because of their difficult medical journeys."
+	text: "Stamps taught us to really empathise with users. Especially because of their difficult medical journeys."
 };
 
 const challenges: SummationBlockProps = {
