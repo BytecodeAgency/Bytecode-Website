@@ -1,6 +1,7 @@
 import { MeetTheFoundersProps } from "src/sections/HomePage/MeetTheFounders/MeetTheFounders.types";
 import { Member } from "../containers";
 import { EmployeeName } from "./contentGenerics";
+import { DeviceTypes } from "../sections";
 
 
 // list of all employees
@@ -108,33 +109,39 @@ export type Case = {
 	name: string;
 	subtitle: string;
 	image: string;
+	type: DeviceTypes;
 } // TODO: add more data for single case pages??
 
 export const cases: Case[] = [
 	{
 		name: "airchip",
 		subtitle: "No more queuing for a drink!",
-		image: "airchip__chargeup"
+		image: "airchip__chargeup",
+		type: "iphone"
 	},
 	{
 		name: "dearly",
 		subtitle: "Support for the loss of your loved one(s)",
-		image: "dearly__home"
+		image: "dearly__home",
+		type: "iphone"
 	},
 	{
 		name: "STYR",
 		subtitle: "Clear organisations and fair rewards",
-		image: "airchip__chargeup"
+		image: "styr__dashboard",
+		type: "laptop"
 	},
 	{
 		name: "stamps",
 		subtitle: "Enabling people to share their medical or health journey",
-		image: "stamps__landingpage"
+		image: "stamps__landingpage",
+		type: "iphone"
 	},
 	{
 		name: "youngpwr",
 		subtitle: "Work(s) for your future",
-		image: "stamps__landingpage"
+		image: "youngpwr__articles",
+		type: "laptop"
 	},
 ];
 

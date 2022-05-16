@@ -8,7 +8,6 @@ import {
 	SummationBlockProps,
 	ScreensAndTextProps,
 	SingleCasePage,
-	DeviceTypes,
 } from "@bytecode/ui-library/sections";
 import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
@@ -30,7 +29,7 @@ const intro: CaseIntroProps = {
 	subtitle: "Airchip",
 	text: "A bartender in your pocket. Order and pay at your favourite festival!",
 	image: {
-		type: DeviceTypes.iphone,
+		type: "iphone",
 		url: "airchip__chargeup.svg",
 	},
 	color: "#19084A",

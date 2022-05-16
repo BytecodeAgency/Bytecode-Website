@@ -8,7 +8,6 @@ import {
 	SummationBlockProps,
 	ScreensAndTextProps,
 	SingleCasePage,
-	DeviceTypes,
 } from "@bytecode/ui-library/sections";
 import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
@@ -30,7 +29,7 @@ const intro: CaseIntroProps = {
 	subtitle: "Styr",
 	text: "A modern and practical tool for valuing and rewarding teams, roles and functions.",
 	image: {
-		type: DeviceTypes.laptop,
+		type: "laptop",
 		url: "styr__dashboard.png",
 	},
 	color: "#76B2AE",

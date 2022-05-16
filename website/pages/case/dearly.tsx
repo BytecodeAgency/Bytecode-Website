@@ -8,7 +8,6 @@ import {
 	SummationBlockProps,
 	ScreensAndTextProps,
 	SingleCasePage,
-	DeviceTypes,
 } from "@bytecode/ui-library/sections";
 import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
@@ -30,7 +29,7 @@ const intro: CaseIntroProps = {
 	subtitle: "Dearly",
 	text: "Normalise loss and grief and create more social awareness",
 	image: {
-		type: DeviceTypes.iphone,
+		type: "iphone",
 		url: "dearly__home.svg",
 	},
 	color: "#FA3C60",

@@ -1,2 +1,2 @@
-export { default } from "./PhoneScreen";
-export * from "./PhoneScreen";
+export { default } from "./LaptopScreen";
+export * from "./LaptopScreen";

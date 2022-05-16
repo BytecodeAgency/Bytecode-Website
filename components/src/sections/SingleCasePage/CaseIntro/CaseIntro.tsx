@@ -2,7 +2,7 @@ import React from "react";
 import { Heading, InitialContainer, LaptopScreen, Paragraph, Subtitle } from "../../../components";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
-import { CaseIntroProps, DeviceProps, DeviceTypes } from "../SingleCasePage.types";
+import { CaseIntroProps, DeviceProps } from "../SingleCasePage.types";
 import Image from "next/image";
 
 type TextColumnProps = {
@@ -49,7 +49,7 @@ const ImageColumnContainer = styled.div<{ bgColor: string }>`
 	background-size: 80% auto;
 	display: grid;
 	grid-templates-columns: auto;
-	grid templates-rows: 1fr auto;
+	grid-templates-rows: 1fr auto;
 	align-items: end;
 `;
 
@@ -91,7 +91,7 @@ type ImageColumnProps = {
 const ImageColumn = ({ image, logo, height, width, bgColor }: ImageColumnProps) => {
 
 	const RenderImage = () => {
-		if (image.type === DeviceTypes.laptop) return <LaptopScreen image={`/images/${image.url}`} alt="image of application" height={210} />;
+		if (image.type === "laptop") return <LaptopScreen image={`/images/${image.url}`} alt="image of application" height={210} />;
 		return <Image src={`/images/${image.url}`} alt="image of application" width={246} height={372} />;
 	};
 

@@ -16,7 +16,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@bytecode/ui-library": "https://github.com/JeroenVanSteijn/components#7ec417e38cf5b4290afd44edd8c98ce7c7f6492e",
+    "@bytecode/ui-library": "0.1.0-alpha",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",

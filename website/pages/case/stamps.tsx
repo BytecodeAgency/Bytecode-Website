@@ -8,7 +8,6 @@ import {
 	SummationBlockProps,
 	ScreensAndTextProps,
 	SingleCasePage,
-	DeviceTypes,
 } from "@bytecode/ui-library/sections";
 import { UserPictureProps } from "@bytecode/ui-library/dist/components/UserPictures/UserPicture.types";
 
@@ -30,7 +29,7 @@ const intro: CaseIntroProps = {
 	subtitle: "Stamps",
 	text: "Write down how you are doing and keep everyone informed.",
 	image: {
-		type: DeviceTypes.iphone,
+		type: "iphone",
 		url: "stamps__landingpage.svg",
 	},
 	color: "#FF7D58",
