@@ -2,7 +2,6 @@ import React from "react";
 import { Heading } from "../../../components";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
-import Image from "next/image";
 import { CaseQuoteProps } from "../SingleCasePage.types";
 
 const styledContainerResponsiveCSS = () => {
@@ -11,7 +10,7 @@ const styledContainerResponsiveCSS = () => {
 		"",
 		breakpointNameToPx({
 			xs: "1fr",
-			md: "1fr 2fr"
+			md: "1fr 1fr"
 		})
 	);
 	const padding = responsiveValuesCSS(
@@ -28,48 +27,27 @@ const styledContainerResponsiveCSS = () => {
 };
 const StyledContainer = styled.div`
 	${styledContainerResponsiveCSS};
-	display: grid;
+	margin-left: auto;
 	padding: 60px 0;
 `;
 
-const quoteTextResponsiveCSS = responsiveValuesCSS(
-	"max-width",
-	"px",
-	breakpointNameToPx({
-		xs: 400,
-		sm: 500,
-		xl: 700
-	})
-);
-
-const imageContainerResponsiveCSS = responsiveValuesCSS(
-	"display",
-	"",
-	breakpointNameToPx({
-		xs: "none",
-		md: "block"
-	})
-);
-
-const ImageContainer = styled.div`
-	${imageContainerResponsiveCSS};
+const MainContainer = styled.div`
+	display: grid;
+	position: relative;
 `;
 
 const QuoteText = styled(Heading)`
-	${quoteTextResponsiveCSS};
-	
 	text-align: center;
 	place-self: center;
 `;
 
 
 const CaseQuote = ({ text }: CaseQuoteProps) => (
-	<StyledContainer>
-		<ImageContainer>
-			<Image src="/images/case-quote-portal.svg" alt="profile picture" height={500} width={540}/>
-		</ImageContainer>
-		<QuoteText type="h2" text={`"${text}"`}/>
-	</StyledContainer>
+	<MainContainer>
+		<StyledContainer>
+			<QuoteText type="h2" text={`"${text}"`} />
+		</StyledContainer>
+	</MainContainer>
 );
 
 export default CaseQuote;
