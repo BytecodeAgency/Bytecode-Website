@@ -21,12 +21,12 @@ const SpacerStyling = styled.div<{ color: SpacerColor, bold?: boolean, reverse?:
 
 type SpacerColor = "black" | "white";
 interface SpacerProps {
-    color: SpacerColor;
+    color?: SpacerColor;
     bold?: boolean;
     reverse?: boolean
 }
 
-const Spacer = ({ color, className, bold, reverse }: WithStyle<SpacerProps>) => {
+const Spacer = ({ color = "black", className, bold, reverse }: WithStyle<SpacerProps>) => {
 	return <SpacerStyling className={className} color={color} bold={bold} reverse={reverse} />;
 };
 

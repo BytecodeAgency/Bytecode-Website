@@ -21,3 +21,15 @@ export * from "./TeamMember";
 
 export { default as CaseCard } from "./CaseCard";
 export * from "./CaseCard";
+
+export { default as CollapsibleText } from "./CollapsibleText";
+export * from "./CollapsibleText";
+
+export { default as IconSummaryBlock } from "./IconSummaryBlock";
+export * from "./IconSummaryBlock";
+
+export { default as MeetTheFoundersBox } from "./MeetTheFoundersBox";
+export * from "./MeetTheFoundersBox";
+
+export { default as CaseTeamMembers } from "./CaseTeamMembers";
+export * from "./CaseTeamMembers";

@@ -2,14 +2,15 @@ import styled from "styled-components";
 import { layout }from "../../theme";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../helpers/responsiveCss";
 
-const marginLeft = responsiveValuesCSS("padding-left", "px", breakpointNameToPx(layout.container.margin));
-const marginRight = responsiveValuesCSS("padding-right", "px", breakpointNameToPx(layout.container.margin));
+const paddingLeft = responsiveValuesCSS("padding-left", "px", breakpointNameToPx(layout.container.margin));
+const paddingRight = responsiveValuesCSS("padding-right", "px", breakpointNameToPx(layout.container.margin));
 
-const responsivePaddingsCSS = marginLeft + marginRight;
+const responsivePaddingsCSS = paddingLeft + paddingRight;
 
 export const FullWidthContainer = styled.div<{ background?: string }>`
     ${responsivePaddingsCSS};
-    background-color: ${props => props.background ? props.background : "unset"}
+    background-color: ${props => props.background ? props.background : "unset"};
+    postition: relative;
 `;
 
 export const Container = styled(FullWidthContainer)`
@@ -18,11 +19,13 @@ export const Container = styled(FullWidthContainer)`
 `;
 
 export const MenuContainer = styled(FullWidthContainer)`
+    ${responsivePaddingsCSS};
     position: fixed;
     top: 0;
-    width: 95%;
-    z-index: 9999;
+    z-index: 9998;
     backdrop-filter: blur(5px);
+    box-sizing: border-box;
+    width: 100%;
 `;
 
 export const InitialContainer = styled(FullWidthContainer)`

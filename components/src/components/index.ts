@@ -35,3 +35,15 @@ export * from "./Container";
 
 export { default as PhoneScreen } from "./PhoneScreen";
 export * from "./PhoneScreen";
+
+export { default as LaptopScreen } from "./LaptopScreen";
+export * from "./LaptopScreen";
+
+export { default as UserPicture } from "./UserPictures";
+export * from "./UserPictures";
+
+export { default as TextBox } from "./TextBox";
+export * from "./TextBox";
+
+export { default as TextBalloon } from "./TextBalloon";
+export * from "./TextBalloon";

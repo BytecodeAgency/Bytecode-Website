@@ -12,7 +12,16 @@ const introContainerWithImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 			xs: "1fr",
 			lg: columnSizes
 		}));
-	return gridColumns;
+
+	const paddingTop = responsiveValuesCSS(
+		"padding-top",
+		"px",
+		breakpointNameToPx({
+			md: 50,
+			xl: 100
+		})
+	);
+	return gridColumns + paddingTop;
 };
 const introContainerNoImageResponsiveCSS = (columnSizes = "1fr 1fr") => {
 	const gridColumns = responsiveValuesCSS(
@@ -65,7 +74,7 @@ const styledIntroHeadingResponsiveCSS = responsiveValuesCSS(
 	"padding-right",
 	"%",
 	breakpointNameToPx({
-		xs: 30,
+		sm: 30,
 		md: 0
 	}));
 const StyledIntroHeading = styled(Heading)`
@@ -78,13 +87,13 @@ const StyledIntroParagraph = styled(Paragraph)`
 `;
 
 type LeftColumnProps = {
-	subtitle: string;
+	subtitle?: string;
 	title: string;
 	paragraph?: string;
 };
 const LeftColumn = ({ subtitle, title, paragraph }: LeftColumnProps) => (
 	<div>
-		<StyledIntroSubTitle text={subtitle} />
+		{subtitle && <StyledIntroSubTitle text={subtitle} /> }
 		<StyledIntroHeading type="h1" text={title} />
 		{paragraph && <StyledIntroParagraph text={paragraph} />}
 	</div>
@@ -132,7 +141,7 @@ const RightColumn = ({ image, link, paragraph }: RightColumnProps) => {
 };
 
 type PageIntroProps = {
-	subtitle: string;
+	subtitle?: string;
 	title: string;
 	paragraph: string;
 	columnSizes?: string;

@@ -1,0 +1,185 @@
+import React from "react";
+import { NextPage } from "next";
+import MainLayout from "../layout/MainLayout";
+import { Container, InitialContainer, Heading, Paragraph, ArrowLink } from "@bytecode/ui-library/components";
+import { FrequentlyAskedQuestions, PageIntro, Service } from "@bytecode/ui-library/sections";
+import styled from "styled-components";
+import { breakpointNameToPx, responsiveValuesCSS, theme } from "@bytecode/ui-library/utils";
+
+const content = {
+	title: "Services we provide",
+	metaDescription: "Bytecode is a technical partner and CTO for technology based start-ups."
+};
+
+const WhatWeDo: NextPage = () => {
+	return (
+		<MainLayout content={content}>
+			<WhatWeDoBody />
+		</MainLayout>
+	);
+};
+
+const introImageContainerResponsiveCSS = () => {
+	const imageWidths = responsiveValuesCSS("width", "", breakpointNameToPx({ xs: "100vw", lg: "100%" }));
+	const marginLeft = responsiveValuesCSS("margin-left", "px", breakpointNameToPx({ xs: -24, md:-32, lg: 32, xl: 48, xxl: 64 }));
+	return imageWidths + marginLeft;
+};
+
+const IntroImageContainer = styled.div`
+	${introImageContainerResponsiveCSS};
+	position: relative;
+`;
+
+const StyledImage = styled.img`
+	width: 100%;
+`;
+const IntroContainer = styled(InitialContainer)`
+	padding-right: 0;
+`;
+
+const Intro = () => (
+	<IntroContainer>
+		<PageIntro
+			title="Need help with your tech start-up?"
+			subtitle="What we do"
+			paragraph="Building a successful startup is hard, but finding the right people to build your software product
+				is perhaps even more difficult. We understand that you want to have dedicated team members on who you can rely.
+				We imagine that you don’t have the resources to hire a whole team and a CTO. That is why we offer a partnership with us.
+				We are your technical co-founder & interim-CTO."
+			image={
+				(
+					<IntroImageContainer>
+						<StyledImage
+							src="/images/who-are-we-working2.png"
+							alt="Members of Bytecode working"
+						/>
+					</IntroImageContainer>
+				)
+			}
+		/>
+	</IntroContainer>
+);
+
+const servicesIntroductionContainerResponsiveCSS = responsiveValuesCSS(
+	"background",
+	"",
+	breakpointNameToPx({
+		xs: `url(${"/images/what-we-do-line-light.svg"}) no-repeat left center, ${theme.colors.colorBrand1} content-box;`,
+		lg: `url(${"/images/what-we-do-line.svg"}) no-repeat left center, ${theme.colors.colorBrand1} content-box;`
+	})
+);
+
+const ServicesIntroductionContainer = styled.div`
+	${servicesIntroductionContainerResponsiveCSS};
+	padding: 80px 0;
+	display: grid;
+	justify-content: end;
+	align-content: center;
+	height: 600px;
+`;
+
+const TextContainer = styled(Container)`
+	max-width: 700px;
+	display: grid;
+`;
+
+const StyledArrowLink = styled(ArrowLink)`
+	justify-self: end;
+`;
+
+const ServicesIntroduction = () => (
+	<ServicesIntroductionContainer>
+		<TextContainer>
+			<Heading type="h2" text="For all stages on the path to success" color="white" />
+			<Paragraph
+				text="As you might already know, a startup journey isn’t set in stone.
+					Some workflows occur repeatedly. We would like to take you through four stages. The input is your idea.
+					The output: a working version that solves the problems of your users."
+				color="white"
+			/>
+			<Paragraph
+				text="Already have an MVP? That’s amazing! But perhaps you do not know how to proceed from there.
+					Don't worry, we will help you to collect feedback and improve the product."
+				color="white"
+			/>
+			<StyledArrowLink text="Speak with us" link="/contact" color="white"/>
+		</TextContainer>
+	</ServicesIntroductionContainer>
+);
+
+const Services = () => (
+	<div>
+		<Service
+			title="Think about product strategy."
+			type="Strategize"
+			description="The construction of your startup begins with a strategy for your product.
+				Together we will work towards a minimal viable product, which cannot be completed without a plan.
+				Additionally, you will need knowledge about your potential users or clients.
+				We analyze your business plan, idea, or concept, and take a look at the user research you may have already done."
+			deliverables={[
+				"Roadmap",
+				"Business model"
+			]}
+			image="/images/service-strategize.svg"
+			imageBackground="/images/service-line-right1.svg"
+		/>
+		<Service
+			title="Research and define user needs."
+			type="Define"
+			description="Building a product that people need is different from building a product they want.
+				A product that is not user-centered has little to no chance to succeed.
+				Talking with your users, learning about their needs and how they are going to use your product
+				will give you great insights and create a better problem-solution fit."
+			deliverables={[
+				"User insights",
+				"User needs",
+				"Product scope"
+			]}
+			image="/images/service-define.svg"
+			reverse
+			imageBackground="/images/service-line-left1.svg"
+		/>
+		<Service
+			title="Visualize user needs and prototype."
+			type="Design"
+			description="A product that looks good will attract users, but only a product that is understandable will ensure
+				they come back. Structuring your functionalities and placing them logically helps the user on their way.
+				Testing designs with users before optimizing the user interface will help you validate your product."
+			deliverables={[
+				"User flow",
+				"Low/mid/high fidelity design",
+				"Prototype"
+			]}
+			image="/images/service-design.svg"
+			imageBackground="/images/service-line-right2.svg"
+		/>
+		<Service
+			title="Building the digital product."
+			type="Develop"
+			description="Your roadmap is clear, the product scope is composed, and the design is ready.
+				Now it's time for some true craftsmanship - building the actual software product.
+				Our knowledge is broad. From AI to big data to algorithmes, we can help with more than just a
+				Wordpress website or ordinary dashboard. We work with two-week sprints,
+				including demo presentations for each sprint. Your product will also be beta and alpha tested
+				before being released to the “main public”."
+			deliverables={[
+				"Minimum Viable Product (MVP)",
+				"Proof of (your) concept"
+			]}
+			image="/images/service-develop.svg"
+			reverse
+			imageBackground="/images/service-line-left2.svg"
+		/>
+	</div>
+);
+
+const WhatWeDoBody = () => (
+	<div>
+		<Intro />
+		<ServicesIntroduction />
+		<Services />
+		<FrequentlyAskedQuestions />
+	</div>
+);
+
+export default WhatWeDo;

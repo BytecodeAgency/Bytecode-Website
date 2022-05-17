@@ -1,6 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
-import { InitialContainer } from "@bytecode/ui-library/components";
+import { MeetTheFounders, Intro, WhoIsBytecode, WorkingTogether, OurProcess } from "@bytecode/ui-library/home-page";
+import { FrequentlyAskedQuestions } from "@bytecode/ui-library/sections";
 import MainLayout from "layout/MainLayout";
 
 const content = {
@@ -17,8 +18,14 @@ const Home: NextPage = () => {
 };
 
 const HomeBody = () => (
-	<InitialContainer>
-	</InitialContainer>
+	<div>
+		<Intro />
+		<WhoIsBytecode />
+		<WorkingTogether />
+		<OurProcess />
+		<MeetTheFounders />
+		<FrequentlyAskedQuestions />
+	</div>
 );
 
 export default Home;

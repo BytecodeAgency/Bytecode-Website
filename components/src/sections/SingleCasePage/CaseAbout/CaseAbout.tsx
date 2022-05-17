@@ -3,13 +3,14 @@ import { WithChildren } from "../../../types/utils";
 import { Container, Paragraph, Subtitle } from "../../../components";
 import styled from "styled-components";
 import { breakpointNameToPx, responsiveValuesCSS } from "../../../helpers";
+import { CaseAboutProps } from "../SingleCasePage.types";
 
 
 const containerWithBackgroundResponsiveCSS = responsiveValuesCSS(
 	"background",
 	"",
 	breakpointNameToPx({
-		sm: `url(${"/images/case-about-portal.svg"}) no-repeat right top;`,
+		sm: `url(${"/images/case-about-portal.svg"}) no-repeat right 100px;`,
 		lg: `url(${"/images/case-about-portal.svg"}) no-repeat right center;`
 	})
 );
@@ -24,7 +25,7 @@ const caseAboutContainerResponsiveCSS = () => {
 		breakpointNameToPx({
 			xs: "\"expertise\"" +
 				"\"text\"",
-			lg: "\"text expertise\""
+			md: "\"text expertise\""
 		})
 	);
 	const gridColumns = responsiveValuesCSS(
@@ -32,7 +33,7 @@ const caseAboutContainerResponsiveCSS = () => {
 		"",
 		breakpointNameToPx({
 			xs: "1fr",
-			lg: "1fr 1fr"
+			md: "1fr 1fr"
 		})
 	);
 	return gridAreas + gridColumns;
@@ -41,6 +42,7 @@ const caseAboutContainerResponsiveCSS = () => {
 const CaseAboutContainer = styled(Container)`
 	${caseAboutContainerResponsiveCSS};
 	display: grid;
+	grid-gap: 60px;
 	padding-top: 90px;
 `;
 
@@ -53,25 +55,60 @@ const StyledSubtitle = styled(Subtitle)`
   margin-top: 25px;
 `;
 
+
+const caseExpertiseDeliverablesContainerResponsiveCSS = () => {
+	const gridColumns = responsiveValuesCSS(
+		"grid-template-columns",
+		"",
+		breakpointNameToPx({
+			xs: "1fr",
+			sm: "1fr 1fr",
+		})
+	);
+
+	const gridJustifyContent = responsiveValuesCSS(
+		"justify-content",
+		"",
+		breakpointNameToPx({
+			xs: "center",
+			sm: "start",
+		})
+	);
+
+
+	const gridGap = responsiveValuesCSS(
+		"grid-gap",
+		"",
+		breakpointNameToPx({
+			xs: "1em",
+			sm: "2em",
+			md: "3em"
+		})
+	);
+	return gridColumns + gridGap + gridJustifyContent;
+};
+
 const RightColumn = styled.div`
-	justify-self: center;
+	${caseExpertiseDeliverablesContainerResponsiveCSS};
+	display: grid;
 	grid-area: expertise;
 	margin-bottom: 90px;
 `;
 
-type CaseAboutProps = {
-    expertises: string[];
-    deliverables: string[];
-};
+
 const CaseAbout = ({ expertises, deliverables, children }: WithChildren<CaseAboutProps>) => (
 	<ContainerWithBackground>
 		<CaseAboutContainer>
 			{ children }
 			<RightColumn>
-				<StyledSubtitle fontWeight="bold" text="EXPERTISE" />
-				{expertises.map((expertise, index)=><StyledParagraph key={index} text={expertise} />)}
-				<StyledSubtitle fontWeight="bold" text="DELIVERABLES" />
-				{deliverables.map((deliverable, index)=><StyledParagraph key={index} text={deliverable} />)}
+				<div>
+					<StyledSubtitle fontWeight="bold" text="EXPERTISE" />
+					{expertises.map((expertise, index) => <StyledParagraph key={index} text={expertise} />)}
+				</div>
+				<div>
+					<StyledSubtitle fontWeight="bold" text="DELIVERABLES" />
+					{deliverables.map((deliverable, index) => <StyledParagraph key={index} text={deliverable} />)}
+				</div>
 			</RightColumn>
 		</CaseAboutContainer>
 	</ContainerWithBackground>

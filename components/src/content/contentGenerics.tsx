@@ -2,7 +2,16 @@ import React from "react";
 import { getEmployee } from "./content";
 import { TeamMember } from "../containers";
 
-export type EmployeeName = "jeroen" | "nick" | "chris" | "tiko" | "suzanne";
+export const Employees = [
+	"jeroen",
+	"nick",
+	"chris",
+	"tiko",
+	"suzanne",
+	"nietzsche"
+];
+
+export type EmployeeName = typeof Employees[number];
 
 type EmployeeProps = {
     name: EmployeeName
