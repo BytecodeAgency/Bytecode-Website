@@ -11,7 +11,7 @@ cache:
 
 .node_base: &node_base
   before_script:
-    - apk add make nasm autoconf automake libtool dpkg pkgconfig libpng libpng-dev g++
+    - apk add git make nasm autoconf automake libtool dpkg pkgconfig libpng libpng-dev g++
     - yarn install --frozen-lockfile
     - cd components
 
