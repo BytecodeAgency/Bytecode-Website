@@ -24,7 +24,7 @@ const Container = styled(FullWidthContainer)`
 		position: absolute;
 		bottom: 200px;
 		left: 0;
-		background: url(${"/images/case-qoute-portal.svg"}) no-repeat left center;
+		background: url(${"/images/case-quote-portal.svg"}) no-repeat left center;
 		width: 500px;
 		height: 500px;
 		z-index: -1;
