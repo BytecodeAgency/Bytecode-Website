@@ -21,7 +21,7 @@ interface TextBoxProps {
     children: React.ReactNode;
 }
 
-const TextBox: React.FC = ({ children }: WithStyle<TextBoxProps>) => {
+const TextBox: React.FC<{children: React.ReactNode}> = ({ children }: WithStyle<TextBoxProps>) => {
 	return <TextBoxContainer>{children}</TextBoxContainer>;
 };
 

@@ -12,6 +12,7 @@ interface TextStylingProps{
 	color?: ThemeColors;
 	fontWeight?: FontWeight;
 	size?: Size;
+	children: React.ReactNode;
 }
 
 type TypographyProps = {
