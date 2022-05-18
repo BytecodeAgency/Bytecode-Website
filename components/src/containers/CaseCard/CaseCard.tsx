@@ -39,7 +39,7 @@ type CaseCardProps = {
 	type: DeviceTypes;
 };
 
-const CaseCard = ({ name, subtitle, image, type }:CaseCardProps) => {
+const CaseCard = ({ name, subtitle, image, type }: CaseCardProps) => {
 	const RenderDevices = () => {
 		if(type === "laptop"){
 			return <LaptopScreenContainer>
