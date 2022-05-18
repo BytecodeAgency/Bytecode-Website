@@ -21,7 +21,7 @@ const Youngpwr: NextPage = () => {
 		<MainLayout content={content}>
 			<YoungpwrBody />
 		</MainLayout>
-	);
+	);	
 };
 
 const intro: CaseIntroProps = {
@@ -30,7 +30,7 @@ const intro: CaseIntroProps = {
 	text: "The first network that gives young people a kickstart as a young entrepreneur or employee",
 	image: {
 		type: "laptop",
-		url: "styr__allocator.svg",
+		url: "youngpwr__home.png",
 	},
 	color: "#F2F6FB",
 	logo: {
@@ -125,20 +125,17 @@ const features: ScreensAndTextProps[] = [
 		text: "Companies and individuals can place projects and internships on the platform. " +
 			"Registered students and young adults can apply to them. " +
 			"After a match, contact is directly between the company and the student.",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/youngpwr__jobboard.png",
 	},
 	{
 		title: "Articles, interviews, podcasts and webinars",
 		text: "We create and place content to help Youngpwrs start up their company and get the necassary info and help.",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/youngpwr__articles.png",
 	},
 	{
 		title: "Events",
 		text: "Youngpwr provides an overview of their organized or sponsored events. As a Youngpwr, you can attend them with a discount.",
-		screenOne: "/images/iphone2.svg",
-		screenTwo: "/images/iphone2.svg"
+		screenOne: "/images/youngpwr__events.png",
 	},
 ];
 

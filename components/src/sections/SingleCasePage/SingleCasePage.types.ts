@@ -2,7 +2,7 @@ import { ThemeColors } from "../../theme";
 import { ReactNode } from "react";
 import { UserPictureProps } from "../../components/UserPictures/UserPicture.types";
 
-export type DeviceTypes = "laptop" | "iphone"
+export type DeviceTypes =  "laptop" | "iphone";
 
 export type CaseIntroProps = {
     title: string;
