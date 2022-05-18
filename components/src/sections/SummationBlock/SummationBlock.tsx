@@ -24,7 +24,7 @@ const Container = styled(FullWidthContainer)`
 		position: absolute;
 		bottom: 200px;
 		left: 0;
-		background: url(${"/images/case-qoute-portal.svg"}) no-repeat left center;
+		background: url(${"/images/case-quote-portal.svg"}) no-repeat left center;
 		width: 500px;
 		height: 500px;
 		z-index: -1;
@@ -94,7 +94,7 @@ type SingleSummationProps = {
 
 const SingleSummation = ({ index, title, text, color }: SingleSummationProps) => (
 	<SummationContainer>
-		<Subtitle text={`${index}.`} color={color} fontWeight="bold"/>
+		<Subtitle text={`${index}.`} color={color} fontWeight="bold" />
 		<Heading type="h4" text={title} color={color} />
 		<Paragraph text={text} color={color} />
 	</SummationContainer>
@@ -104,15 +104,15 @@ const SummationBlock = ({ title, titleText, summationText, backgroundColor, text
 	<Container background={backgroundColor}>
 		<SummationBlockContainer>
 			<LeftColumn>
-				<StyledSpacer color={textColor === "white" ? "white" : "black"} bold/>
+				<StyledSpacer color={textColor === "white" ? "white" : "black"} bold />
 				<StyledTitle type="h2" text={title} color={textColor} />
 				<StyledTitleParagraph text={titleText} color={textColor} />
-				{ image }
+				{image}
 			</LeftColumn>
 			<RightColumn>
 				{
 					summationText.map((summation, index) =>
-						<SingleSummation key={index} index={index+1} title={summation.title} text={summation.text} color={textColor} />)
+						<SingleSummation key={index} index={index + 1} title={summation.title} text={summation.text} color={textColor} />)
 				}
 			</RightColumn>
 		</SummationBlockContainer>
