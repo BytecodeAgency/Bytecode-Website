@@ -3,7 +3,7 @@
 import React, { ReactElement } from "react";
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { GoogleTagManagerHead, GoogleTagManagerBody } from "../helpers/tagManager";
+import { GoogleTagManagerHead, GoogleTagManagerBody, DisableGatsbyHead } from "../helpers/tagManager";
 
 const Fonts = () => (
 	<>
@@ -50,6 +50,7 @@ export default class MyDocument extends Document {
 			<Html>
 				<Head>
 					<GoogleTagManagerHead />
+					<DisableGatsbyHead />
 					<Fonts />
 				</Head>
 				<body>

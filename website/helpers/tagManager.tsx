@@ -12,3 +12,14 @@ export const GoogleTagManagerHead = () => (
 export const GoogleTagManagerBody = () => (
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSSW3BX" height="0" width="0"></iframe></noscript>
 );
+
+export const DisableGatsbyHead = () => (
+	<script dangerouslySetInnerHTML={{
+		__html: `navigator.serviceWorker.getRegistrations().then(function(registrations) {
+			for(let registration of registrations) {
+			registration.unregister()
+			}
+		})`,
+	}}>
+	</script>
+);
