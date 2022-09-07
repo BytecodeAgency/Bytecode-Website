@@ -140,21 +140,21 @@ const members: UserPictureProps[] = [
 		size: 120,
 		color: "purple",
 		shadowPosition: "top",
-		balloonText: "My name is Annemarie Geysen and I'm an HR consultant, manager and director."
+		balloonText: "My name is Annemarie Geysen and I'm a partner at STYR."
 	},
 	{
 		person: "jankeesvanhasselt",
 		size: 120,
 		color: "lightGreen",
 		shadowPosition: "bottom",
-		balloonText: "Hello I'm Jan-Kees van Hasselt. I'm an HR consultant and manager"
+		balloonText: "Hello I'm Jan-Kees van Hasselt. I'm a partner at STYR"
 	},
 	{
 		person: "elkeschulting",
 		size: 120,
 		color: "darkGreen",
 		shadowPosition: "top",
-		balloonText: "Hello I'm Elke Schulting. I'm an HR consultant and manager."
+		balloonText: "Hello I'm Elke Schulting. I'm a partner at STYR."
 	}
 ];
 
